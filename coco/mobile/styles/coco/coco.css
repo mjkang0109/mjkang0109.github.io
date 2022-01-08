@@ -288,6 +288,16 @@ img {
     background-size: 7.24637681vw auto;
 }
 
+@media (min-width: 415px) {
+    .header-search .btn-search {
+        top: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        background-size: 30px auto;
+    }
+}
+
 .header-search .btn-search span {
     position: absolute;
     margin: -1px;

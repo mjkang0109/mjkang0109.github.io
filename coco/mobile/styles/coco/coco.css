@@ -170,7 +170,7 @@ img {
 .header .btn-category {
     width: 7.24637681vw;
     height: 7.24637681vw;
-    background: url("/images/coco/icon-category.svg") no-repeat 50% 50%;
+    background: url("../../images/coco/icon-category.svg") no-repeat 50% 50%;
     background-size: 7.24637681vw auto;
 }
 
@@ -199,7 +199,7 @@ img {
 .header .btn-search {
     width: 9.66183575vw;
     height: 9.66183575vw;
-    background: rgba(165, 165, 165, 0.08) url("/images/coco/icon-search.svg") no-repeat 50% 50%;
+    background: rgba(165, 165, 165, 0.08) url("../../images/coco/icon-search.svg") no-repeat 50% 50%;
     background-size: 7.24637681vw auto;
     border-radius: 4.83091787vw;
 }
@@ -1005,7 +1005,7 @@ img {
 .left-head .logo-wrapper .btn-close {
     width: 4.83091787vw;
     height: 4.83091787vw;
-    background: url("/images/coco/btn-close-category.svg") no-repeat 50% 50%;
+    background: url("../../images/coco/btn-close-category.svg") no-repeat 50% 50%;
 }
 
 @media (min-width: 415px) {

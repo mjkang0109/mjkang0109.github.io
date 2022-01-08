@@ -4,12 +4,14 @@
   var CONSTANTS = {
     CLASS: {
       TOGGLE: 'on',
-      LEFT_NAVIGATION: 'left-navigation'
+      LEFT_NAVIGATION: 'left-navigation',
+      IS_SEARCH: 'is-search'
     }
   };
   var classes = CONSTANTS.CLASS;
   var toggleClass = classes.TOGGLE,
-      leftNavigation = classes.LEFT_NAVIGATION;
+      leftNavigation = classes.LEFT_NAVIGATION,
+      isSearch = classes.IS_SEARCH;
 
   var visualSwiper = function visualSwiper() {
     var swiper = new Swiper('.visual-wrapper', {
@@ -75,6 +77,41 @@
     el.addEventListener('click', windowHandler);
   };
 
+  var bindSearch = function bindSearch(_ref2) {
+    var trigger = _ref2.trigger,
+        el = _ref2.el;
+
+    if (!trigger) {
+      return;
+    }
+
+    if (!el) {
+      return;
+    }
+
+    var setSearch = function setSearch() {
+      trigger.parentNode.classList.add(isSearch);
+      el.focus();
+      window.addEventListener('click', windowHandler);
+    };
+
+    var hideSearch = function hideSearch() {
+      trigger.parentNode.classList.remove(isSearch);
+      window.removeEventListener('click', windowHandler);
+    };
+
+    var windowHandler = function windowHandler(e) {
+      e.preventDefault();
+      var returnClasses = ['btn-search', 'input-search', 'btn-toggle-search'];
+
+      if (returnClasses.indexOf(e.target.className) === -1) {
+        return hideSearch();
+      }
+    };
+
+    trigger.addEventListener('click', setSearch);
+  };
+
   var bindTab = function bindTab() {
     var tabs = document.querySelectorAll('[role="tab"]');
 
@@ -107,6 +144,10 @@
     bindLeftCategory({
       trigger: document.querySelector('header .btn-category'),
       el: document.querySelector('.left-navigation')
+    });
+    bindSearch({
+      trigger: document.querySelector('header .btn-toggle-search'),
+      el: document.querySelector('header .input-search')
     });
     bindTab();
   };

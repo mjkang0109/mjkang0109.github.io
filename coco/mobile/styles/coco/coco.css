@@ -147,14 +147,33 @@ img {
     }
 }
 
-.header .link-home {
-    display: block;
+.header-items.is-search .header-logo,
+.header-items.is-search .btn-toggle-search {
+    display: none;
+}
+
+.header-items.is-search .header-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+}
+
+.header .link-home {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
 }
 
 .header .link-home img {
@@ -196,7 +215,7 @@ img {
     clip-path: inset(50%);
 }
 
-.header .btn-search {
+.header .btn-toggle-search {
     width: 9.66183575vw;
     height: 9.66183575vw;
     background: rgba(165, 165, 165, 0.08) url("../../images/coco/icon-search.svg") no-repeat 50% 50%;
@@ -205,7 +224,7 @@ img {
 }
 
 @media (min-width: 415px) {
-    .header .btn-search {
+    .header .btn-toggle-search {
         width: 40px;
         height: 40px;
         background-size: 30px auto;
@@ -213,7 +232,7 @@ img {
     }
 }
 
-.header .btn-search span {
+.header .btn-toggle-search span {
     position: absolute;
     margin: -1px;
     width: 1px;
@@ -225,6 +244,143 @@ img {
     clip: rect(0, 0, 0, 0);
     -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
+}
+
+.header-search {
+    display: none;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    padding-left: 2.89855072vw;
+}
+
+@media (min-width: 415px) {
+    .header-search {
+        padding-left: 12px;
+    }
+}
+
+.header-search label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+}
+
+.header-search label input::-webkit-search-decoration,
+.header-search label input::-webkit-search-cancel-button,
+.header-search label input::-webkit-search-results-button,
+.header-search label input::-webkit-search-results-decoration {
+    display: none;
+}
+
+.header-search .btn-search {
+    position: absolute;
+    top: 1.20772947vw;
+    right: 1.20772947vw;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
+    background: url("../../images/coco/icon-search.svg") no-repeat 50% 50%;
+    background-size: 7.24637681vw auto;
+}
+
+.header-search .btn-search span {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+.header-search .input-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    height: 9.66183575vw;
+    border-radius: 4.83091787vw;
+    border: none;
+    background-color: rgba(165, 165, 165, 0.08);
+    padding: 0 11.5942029vw 0 4.34782609vw;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+    color: #000;
+}
+
+@media (min-width: 415px) {
+    .header-search .input-search {
+        height: 40px;
+        border-radius: 20px;
+        padding: 0 48px 0 18px;
+        font-size: 14px;
+    }
+}
+
+.header-search .input-search::-webkit-input-placeholder {
+    color: #808080;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+}
+
+.header-search .input-search::-moz-placeholder {
+    color: #808080;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+}
+
+.header-search .input-search:-ms-input-placeholder {
+    color: #808080;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+}
+
+.header-search .input-search::-ms-input-placeholder {
+    color: #808080;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+}
+
+.header-search .input-search::placeholder {
+    color: #808080;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+}
+
+@media (min-width: 415px) {
+    .header-search .input-search::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+
+    .header-search .input-search::-moz-placeholder {
+        font-size: 14px;
+    }
+
+    .header-search .input-search:-ms-input-placeholder {
+        font-size: 14px;
+    }
+
+    .header-search .input-search::-ms-input-placeholder {
+        font-size: 14px;
+    }
+
+    .header-search .input-search::placeholder {
+        font-size: 14px;
+    }
 }
 
 .category {

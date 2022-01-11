@@ -5,13 +5,15 @@
     CLASS: {
       TOGGLE: 'on',
       LEFT_NAVIGATION: 'left-navigation',
-      IS_SEARCH: 'is-search'
+      IS_SEARCH: 'is-search',
+      DEPTH_CATEGORY: 'category-depth'
     }
   };
   var classes = CONSTANTS.CLASS;
   var toggleClass = classes.TOGGLE,
       leftNavigation = classes.LEFT_NAVIGATION,
-      isSearch = classes.IS_SEARCH;
+      isSearch = classes.IS_SEARCH,
+      depthCategory = classes.DEPTH_CATEGORY;
 
   var visualSwiper = function visualSwiper() {
     var swiper = new Swiper('.visual-wrapper', {
@@ -29,12 +31,40 @@
   };
 
   var fixSwiper = function fixSwiper() {
-    var swiper = new Swiper('.fix-item-wrapper', {
+    var swiper = new Swiper('.swiper-item-wrapper', {
       direction: 'horizontal',
-      wrapperClass: 'fix-items',
-      slideClass: 'item',
+      wrapperClass: 'swiper-items',
+      slideClass: 'swiper-item',
       slidesPerView: 'auto'
     });
+  };
+
+  var bindCategory = function bindCategory(e) {
+    if (!e) {
+      return document.querySelectorAll(".".concat(depthCategory, "-1 > li.on")).forEach(function (el) {
+        return el.classList.remove(toggleClass);
+      });
+    }
+
+    if (!e.target.parentNode.querySelector(".".concat(depthCategory, "-2"))) {
+      return;
+    }
+
+    if (e.target.tagName !== 'A') {
+      return;
+    }
+
+    e.preventDefault();
+
+    if (e.target.parentElement.getAttribute('class')) {
+      return e.target.parentElement.classList.remove(toggleClass);
+    }
+
+    if (e.target.parentNode.parentNode.querySelector(".".concat(toggleClass))) {
+      e.target.parentNode.parentNode.querySelector(".".concat(toggleClass)).classList.remove(toggleClass);
+    }
+
+    e.target.parentElement.classList.add(toggleClass);
   };
 
   var bindLeftCategory = function bindLeftCategory(_ref) {
@@ -57,6 +87,7 @@
         btn.removeEventListener('click', close);
       });
       trigger.addEventListener('click', open);
+      el.removeEventListener('click', bindCategory);
     };
 
     var open = function open() {
@@ -65,6 +96,7 @@
       btnClose.forEach(function (btn) {
         btn.addEventListener('click', close);
       });
+      el.addEventListener('click', bindCategory);
     };
 
     var windowHandler = function windowHandler(e) {
@@ -75,6 +107,7 @@
 
     trigger.addEventListener('click', open);
     el.addEventListener('click', windowHandler);
+    el.addEventListener('click', bindCategory);
   };
 
   var bindSearch = function bindSearch(_ref2) {
@@ -131,6 +164,7 @@
       });
       grandparent.parentNode.querySelector("#".concat(target.getAttribute('aria-controls'))).removeAttribute('hidden');
       grandparent.parentNode.querySelector("#".concat(target.getAttribute('aria-controls'))).classList.add(toggleClass);
+      bindCategory();
     };
 
     tabs.forEach(function (tab) {

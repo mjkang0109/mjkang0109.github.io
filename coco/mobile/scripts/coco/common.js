@@ -6,14 +6,16 @@
       TOGGLE: 'on',
       LEFT_NAVIGATION: 'left-navigation',
       IS_SEARCH: 'is-search',
-      DEPTH_CATEGORY: 'category-depth'
+      DEPTH_CATEGORY: 'category-depth',
+      SORT_ITEM: 'sort-item'
     }
   };
   var classes = CONSTANTS.CLASS;
   var toggleClass = classes.TOGGLE,
       leftNavigation = classes.LEFT_NAVIGATION,
       isSearch = classes.IS_SEARCH,
-      depthCategory = classes.DEPTH_CATEGORY;
+      depthCategory = classes.DEPTH_CATEGORY,
+      sortItem = classes.SORT_ITEM;
 
   var visualSwiper = function visualSwiper() {
     var swiper = new Swiper('.visual-wrapper', {
@@ -35,6 +37,15 @@
       direction: 'horizontal',
       wrapperClass: 'swiper-items',
       slideClass: 'swiper-item',
+      slidesPerView: 'auto'
+    });
+  };
+
+  var storeCategoriesSwiper = function storeCategoriesSwiper() {
+    var swiper = new Swiper('.store-categories-wrap', {
+      direction: 'horizontal',
+      wrapperClass: 'store-categories',
+      slideClass: 'store-category-item',
       slidesPerView: 'auto'
     });
   };
@@ -162,6 +173,14 @@
         p.classList.remove(toggleClass);
         p.setAttribute('hidden', true);
       });
+
+      if (target.getAttribute('aria-controls') === 'panel-all') {
+        return grandparent.parentNode.querySelectorAll('.panels [role="tabpanel"]').forEach(function (p) {
+          p.classList.add(toggleClass);
+          p.removeAttribute('hidden');
+        });
+      }
+
       grandparent.parentNode.querySelector("#".concat(target.getAttribute('aria-controls'))).removeAttribute('hidden');
       grandparent.parentNode.querySelector("#".concat(target.getAttribute('aria-controls'))).classList.add(toggleClass);
       bindCategory();
@@ -172,8 +191,47 @@
     });
   };
 
+  var bindDropdown = function bindDropdown() {
+    var close = function close(_ref3) {
+      var el = _ref3.el;
+      el.classList.remove(toggleClass);
+    };
+
+    var setSelected = function setSelected(e) {
+      e.target.parentElement.querySelectorAll('button.on').forEach(function (b) {
+        b.classList.remove(toggleClass);
+      });
+      e.target.classList.add(toggleClass);
+      e.target.parentElement.parentElement.querySelector('.btn-current span').textContent = e.target.querySelector('span').textContent;
+      close({
+        el: e.target.parentElement.parentElement
+      });
+    };
+
+    var toggleHandler = function toggleHandler(e) {
+      if (e.target.parentElement.className.indexOf(' on') > -1) {
+        return close({
+          el: e.target.parentElement
+        });
+      }
+
+      if (e.target.parentElement.className.indexOf('dropdown-items') > -1) {
+        e.target.parentElement.classList.add(toggleClass);
+      }
+
+      e.target.parentNode.querySelectorAll(".".concat(sortItem)).forEach(function (s) {
+        s.addEventListener('click', setSelected);
+      });
+    };
+
+    document.querySelectorAll('.dropdown-items').forEach(function (d) {
+      d.addEventListener('click', toggleHandler);
+    });
+  };
+
   var onInit = function onInit() {
     visualSwiper();
+    storeCategoriesSwiper();
     fixSwiper();
     bindLeftCategory({
       trigger: document.querySelector('header .btn-category'),
@@ -184,6 +242,7 @@
       el: document.querySelector('header .input-search')
     });
     bindTab();
+    bindDropdown();
   };
 
   if (document.readyState === 'complete') {

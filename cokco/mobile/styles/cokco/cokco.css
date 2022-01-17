@@ -28,6 +28,7 @@ button,
 span,
 textarea,
 p,
+em,
 label {
     font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", dotum, sans-serif;
 }
@@ -5952,6 +5953,7 @@ input[type="checkbox"] + label:before {
     height: 13.04347826vw;
     font-weight: 600;
     color: #16284c;
+    font-size: 4.34783vw;
 }
 
 .cokco-full .order-form h2 + .form-wrap {

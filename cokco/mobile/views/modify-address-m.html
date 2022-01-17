@@ -24,9 +24,9 @@
     <link rel="stylesheet" href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full current-cart">
+    <section class="cokco-full">
       <h1>
-        <strong>장바구니</strong>
+        <strong>배송지 변경</strong>
         <button type="button" class="btn-close">
           <span>닫기</span>
         </button>
@@ -34,21 +34,12 @@
       <div class="content">
         <div class="cokco-breadcrumb">
           <ol>
-            <li>장바구니</li>
+            <li>&gt;주문/결제</li>
           </ol>
         </div>
-        <div class="cart-wrap">
-          <div class="cart-check">
-            <div class="cart-all-check">
-              <input type="checkbox" id="check-all">
-              <label for="check-all">전체 선택</label>
-            </div>
-            <button type="button" class="btn-delete">
-              <span>선택 삭제</span>
-            </button>
-          </div>
-          <div class="cart-product">
-            <div class="cart-info">
+        <div class="order-wrap">
+          <div class="order-product">
+            <div class="order-info">
               <a href="./detail-m.html">
                 <div class="left">
                   <span class="img-wrap">
@@ -58,62 +49,60 @@
                 </div>
                 <div class="right">
                   <strong class="title">
-                    <span class="cart-category">[수전]</span>
+                    <span class="order-category">[수전]</span>
                     <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
                   </strong>
                   <div class="price-wrap">
-                    <span class="price-type">판매가</span>
+                    <span class="count">수량 1개</span>
+                    <span class="price-type">주문금액</span>
                     <em>83,000원</em>
                   </div>
                 </div>
               </a>
-              <div class="cart-product-check">
-                <input type="checkbox" id="check-1">
-                <label for="check-1">
-                  <span>상품 선택</span>
-                </label>
+              <div class="order-product-toggle">
+                <button type="button" class="btn-option-toggle"
+                  onclick="this.parentNode.parentElement.classList.toggle('on')">
+                  <span>옵션 확인</span>
+                </button>
               </div>
             </div>
-            <div class="cart-option">
-              <button type="button" class="btn-option-modify">
-                <span>선택옵션 변경</span>
-              </button>
-              <div class="cart-option-wrap">
-                <ul class="cart-options">
-                  <li class="cart-option-block">
+            <div class="order-option">
+              <div class="order-option-wrap">
+                <ul class="order-options">
+                  <li class="order-option-block">
                     <div class="option-title">적립 : 포인트 적립</div>
                     <div class="option-price point">(+830원)</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">할인 : 1+1할인</div>
                     <div class="option-price">+0원</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">추가선택 : 기본 화이트</div>
                     <div class="option-price">+0원</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">수량 : 1</div>
                     <div class="option-price">+0원</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">설치옵션 : 상품만 배송</div>
                     <div class="option-price">+0원</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">배송비 : 무료배송</div>
                     <div class="option-price">+0원</div>
                   </li>
+                  <li class="order-option-block">
+                    <div class="option-title">주문금액</div>
+                    <div class="option-price">83,000원</div>
+                  </li>
                 </ul>
-                <div class="cart-option-total">
-                  <strong>주문금액</strong>
-                  <em>83,000원</em>
-                </div>
               </div>
             </div>
           </div>
-          <div class="cart-product">
-            <div class="cart-info">
+          <div class="order-product">
+            <div class="order-info">
               <a href="./detail-m.html">
                 <div class="left">
                   <span class="img-wrap">
@@ -123,197 +112,133 @@
                 </div>
                 <div class="right">
                   <strong class="title">
-                    <span class="cart-category">[수전]</span>
+                    <span class="order-category">[수전]</span>
                     <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
                   </strong>
                   <div class="price-wrap">
-                    <span class="price-type">판매가</span>
+                    <span class="count">수량 1개</span>
+                    <span class="price-type">주문금액</span>
                     <em>83,000원</em>
                   </div>
                 </div>
               </a>
-              <div class="cart-product-check">
-                <input type="checkbox" id="check-2">
-                <label for="check-2">
-                  <span>상품 선택</span>
-                </label>
+              <div class="order-product-toggle">
+                <button type="button" class="btn-option-toggle"
+                  onclick="this.parentNode.parentNode.classList.toggle('on')">
+                  <span>옵션 확인</span>
+                </button>
               </div>
             </div>
-            <div class="cart-option">
-              <button type="button" class="btn-option-modify">
-                <span>선택옵션 변경</span>
-              </button>
-              <div class="cart-option-wrap">
-                <ul class="cart-options">
-                  <li class="cart-option-block">
+            <div class="order-option">
+              <div class="order-option-wrap">
+                <ul class="order-options">
+                  <li class="order-option-block">
                     <div class="option-title">적립 : 포인트 적립</div>
                     <div class="option-price point">(+830원)</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">할인 : 1+1할인</div>
                     <div class="option-price">+0원</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">추가선택 : 기본 화이트</div>
                     <div class="option-price">+0원</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">수량 : 1</div>
                     <div class="option-price">+0원</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">설치옵션 : 상품만 배송</div>
                     <div class="option-price">+0원</div>
                   </li>
-                  <li class="cart-option-block">
+                  <li class="order-option-block">
                     <div class="option-title">배송비 : 무료배송</div>
                     <div class="option-price">+0원</div>
                   </li>
+                  <li class="order-option-block">
+                    <div class="option-title">주문금액</div>
+                    <div class="option-price">83,000원</div>
+                  </li>
                 </ul>
-                <div class="cart-option-total">
-                  <strong>주문금액</strong>
-                  <em>83,000원</em>
-                </div>
               </div>
             </div>
           </div>
-          <div class="cart-option-modify">
-            <div class="option-item-wrap">
-              <button type="button" class="btn-current"
-                onclick="this.parentNode.classList.toggle('on')">
-                <span>추가 선택</span>
-              </button>
-              <div class="option-items">
-                <button type="button" class="option-item on">
-                  <span class="name">기본</span>
-                  <span class="price">+000,000원</span>
+          <div class="order-form">
+            <h2>주문자 정보</h2>
+            <div class="form-wrap">
+              <div class="title-wrap">
+                <strong class="title">주문자</strong>
+                <button type="button" class="btn-auto-complete">
+                  <span>내정보 불러오기</span>
                 </button>
-                <button type="button" class="option-item">
-                  <span class="name">색상변경</span>
-                  <span class="price">+000,000원</span>
-                </button>
-                <button type="button" class="option-item">
-                  <span class="name">형태/기능별</span>
-                  <span class="price">+000,000원</span>
-                </button>
-                <button type="button" class="option-item">
-                  <span class="name">추가상품</span>
-                  <span class="price">+000,000원</span>
+              </div>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="name" disabled placeholder="이름">
+                </label>
+              </div>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="cell" disabled placeholder="휴대폰번호">
+                </label>
+              </div>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="address-1" placeholder="주소">
+                </label>
+              </div>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="address-2" disabled placeholder="나머지">
+                </label>
+              </div>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="address-3" placeholder="우편번호">
+                </label>
+                <button type="button" class="btn-address">
+                  <span>우편번호 검색</span>
                 </button>
               </div>
             </div>
-            <div class="selected">
-              <ul>
-                <li>
-                  <strong class="title">선택된 옵션</strong>
-                  <span class="price">+0,000,000원</span>
-                  <button type="button" class="btn-delete">
-                    <span>옵션 삭제</span>
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div class="cart-option-quantity">
-              <div class="quantity">
-                <button type="button" class="btn-decrease">
-                  <span>감소</span>
-                </button>
-                <span class="amount">1</span>
-                <button type="button" class="btn-increase">
-                  <span>증가</span>
+            <div class="form-wrap">
+              <div class="title-wrap">
+                <strong class="title">배송지/설치 주소</strong>
+                <button type="button" class="btn-auto-complete">
+                  <span>고객정보 불러오기</span>
                 </button>
               </div>
-              <div class="price-wrap">
-                <span class="count">1개</span>
-                <span class="price">+0,000,000원</span>
-                <button type="button" class="btn-delete">
-                  <span>옵션 삭제</span>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="address-1" placeholder="주소">
+                </label>
+              </div>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="address-2" disabled placeholder="나머지">
+                </label>
+              </div>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="address-3" placeholder="우편번호">
+                </label>
+                <button type="button" class="btn-address">
+                  <span>우편번호 검색</span>
                 </button>
               </div>
-            </div>
-            <div class="option-item-wrap">
-              <button type="button" class="btn-current"
-                onclick="this.parentNode.classList.toggle('on')">
-                <span>추가 선택</span>
-              </button>
-              <div class="option-items">
-                <button type="button" class="option-item on">
-                  <span class="name">기본</span>
-                  <span class="price">+000,000원</span>
-                </button>
-                <button type="button" class="option-item">
-                  <span class="name">색상변경</span>
-                  <span class="price">+000,000원</span>
-                </button>
-                <button type="button" class="option-item">
-                  <span class="name">형태/기능별</span>
-                  <span class="price">+000,000원</span>
-                </button>
-                <button type="button" class="option-item">
-                  <span class="name">추가상품</span>
-                  <span class="price">+000,000원</span>
-                </button>
+              <div class="form-info">
+                <label>
+                  <input type="text" name="request" disabled placeholder="배송요청사항">
+                </label>
               </div>
-            </div>
-            <div class="selected">
-              <ul>
-                <li>
-                  <strong class="title">상품만 배송</strong>
-                  <span class="price">+0원</span>
-                  <button type="button" class="btn-delete">
-                    <span>옵션 삭제</span>
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div class="cart-option-total">
-              <strong>주문금액</strong>
-              <em>83,000원</em>
-            </div>
-            <div class="cart-option-modify-buttons">
-              <button type="button" class="btn-cancel">
-                <span>취소</span>
-              </button>
-              <button type="button" class="btn-confirm">
-                <span>확인</span>
-              </button>
-            </div>
-          </div>
-          <div class="cart-option-all">
-            <div class="cart-option-block">
-              <div class="option-title">총 판매가</div>
-              <div class="option-price">166,000원</div>
-            </div>
-            <div class="cart-option-block">
-              <div class="option-title">총 배송비</div>
-              <div class="option-price">+0원</div>
-            </div>
-            <div class="cart-option-block">
-              <div class="option-title">총 설치비</div>
-              <div class="option-price">+0원</div>
-            </div>
-            <div class="cart-option-block">
-              <div class="option-title">출장비 (설치상품 묶음)</div>
-              <div class="option-price">+0원</div>
-            </div>
-            <div class="cart-option-block">
-              <div class="option-title">총 할인 금액</div>
-              <div class="option-price">+0원</div>
-            </div>
-            <div class="cart-option-block">
-              <div class="option-title">적립금</div>
-              <div class="option-price point">(+830원)</div>
-            </div>
-            <div class="cart-option-total">
-              <strong>총 결제 금액 (2개)</strong>
-              <em>166,000원</em>
             </div>
           </div>
         </div>
       </div>
       <div class="full-fix">
         <button type="button" class="btn-confirm">
-          <span>상품주문</span>
+          <span>변경하기</span>
         </button>
       </div>
     </section>
@@ -371,7 +296,7 @@
           </a>
         </li>
         <li class="my">
-          <a href="./my.html">
+          <a href="./my-m.html">
             <strong class="title">마이페이지</strong>
           </a>
         </li>

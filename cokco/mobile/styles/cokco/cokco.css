@@ -2546,9 +2546,11 @@ input[type="checkbox"] + label:before {
     box-sizing: border-box;
     padding: 0 3.38164251vw;
     border: 1px solid #ccc;
+    border-radius: 0;
 }
 
 .form-info input:disabled {
+    opacity: 1;
     background-color: #f8f8f8;
 }
 

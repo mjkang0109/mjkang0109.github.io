@@ -359,66 +359,42 @@
       <h1>코코수리</h1>
       <div class="cokco-breadcrumb">
         <ol>
-          <li>마이페이지</li>
-          <li>쇼핑정보</li>
-          <li>주문배송</li>
+          <li>&gt; 마이페이지</li>
+          <li>수리신청 현황</li>
         </ol>
       </div>
-      <div class="my-shopping-tab">
-        <ul>
-          <li class="">
-            <a href="./my-shipping-m.html">
-              주문배송
-            </a>
-          </li>
-          <li class="on">
-            <a href="./my-cancel-m.html">
-              취소/반품/교환
-            </a>
-          </li>
-          <li class="">
-            <a href="./my-refund-m.html">
-              환불/입금내역
-            </a>
-          </li>
-          <li class="">
-            <a href="./wish-m.html">
-              찜리스트
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="my-order-list">
+      <div class="my-order-list fix-list">
         <h2>
-          <strong>주문취소/반품/교환</strong>
-          <button type="button" class="btn-refresh">
-            <span>새로고침</span>
-          </button>
-          <div class="sort-wrap">
-            <div class="sort dropdown-items">
-              <button type="button" class="btn-current btn-sort">
-                <span>조회기간</span>
-              </button>
-              <div class="sort-items">
-                <button type="button" class="sort-item">
-                  <span>전체(최신순)</span>
-                </button>
-                <button type="button" class="sort-item">
-                  <span>오늘</span>
-                </button>
-                <button type="button" class="sort-item">
-                  <span>일주일</span>
-                </button>
-                <button type="button" class="sort-item">
-                  <span>한달</span>
-                </button>
-                <button type="button" class="sort-item">
-                  <span>일년</span>
-                </button>
-              </div>
-            </div>
-          </div>
+          <strong>수리신청 현황</strong>
         </h2>
+        <div class="my-order-list-wrap step-fix">
+          <ol>
+            <li class="current">
+              <strong class="type">접수</strong>
+              <span class="count">1</span>
+            </li>
+            <li class="">
+              <strong class="type">대기</strong>
+              <span class="count">0</span>
+            </li>
+            <li class="">
+              <strong class="type">예약</strong>
+              <span class="count">0</span>
+            </li>
+            <li class="">
+              <strong class="type">진행중</strong>
+              <span class="count">0</span>
+            </li>
+            <li class="">
+              <strong class="type">완료</strong>
+              <span class="count">0</span>
+            </li>
+            <li class="">
+              <strong class="type">취소</strong>
+              <span class="count">0</span>
+            </li>
+          </ol>
+        </div>
         <div class="my-cancel">
           <div class="setPeriod">
             <label>
@@ -432,28 +408,29 @@
             </a>
           </div>
           <div class="cancel-wrap">
-            <strong class="type">취소/반품/교환</strong>
+            <strong class="type">취소</strong>
             <span class="count">0</span>
           </div>
         </div>
       </div>
-      <div class="my-simple">
-        <div class="my-cancel-tab">
-          <ul>
-            <li class="on"><a href="./my-cancel-m.html">신청내역</a></li>
-            <li class=""><a href="./my-cancel-process-m.html">처리현황</a></li>
-          </ul>
-        </div>
-        <div class="simple-list list-float">
+      <div class="my-simple my-simple-fix">
+        <div class="simple-list">
           <div class="simple-date">
-            <div class="date"><strong>날짜</strong><span>2022-01-01</span></div>
-            <div class="order-number"><strong>주문번호</strong><em>21122912191710009</em></div>
-            <div class="state"><strong>주문취소</strong><span>주문취소</span></div>
-            <div class="message"><strong>확인 리뷰</strong><span>입금 전 취소</span></div>
+            <div class="date"><strong>의뢰날짜</strong><span>2022-01-01</span></div>
+            <div class="order-number"><strong>구분</strong><em>21122912191710009</em></div>
+            <div class="location"><strong>요청지역</strong><span>경기도</span></div>
+            <div class="estimate"><strong>견적금액</strong><span>수리비 55,000원 / 설치비 0원 </span></div>
+            <div class="state"><strong>진행상황</strong><span>배송전 수리기사 배정대기 </span></div>
           </div>
           <div class="date-options">
             <button type="button" class="btn-cancel">
+              <span>접수취소</span>
+            </button>
+            <button type="button" class="btn-cancel">
               <span>상세</span>
+            </button>
+            <button type="button" class="btn-cancel">
+              <span>수리신청 수정</span>
             </button>
           </div>
           <ul class="simple-order">
@@ -477,6 +454,11 @@
                   </div>
                 </div>
               </a>
+              <div class="product-review">
+                <button type="button" class="btn-review">
+                  <span>후기</span>
+                </button>
+              </div>
             </li>
           </ul>
         </div>

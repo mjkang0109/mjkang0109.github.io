@@ -69,7 +69,7 @@ img {
 }
 
 .cokco-breadcrumb {
-    padding: 8px 16px;
+    padding: 1.93236715vw 3.8647343vw;
 }
 
 .cokco-breadcrumb ol {
@@ -82,15 +82,15 @@ img {
 }
 
 .cokco-breadcrumb li {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 3.8647343vw;
+    line-height: 5.79710145vw;
     font-weight: 400;
     color: #333;
 }
 
 .cokco-breadcrumb li + li:before {
     content: "\003e";
-    padding: 0 4px;
+    padding: 0 0.96618357vw;
 }
 
 .cokco h1 {
@@ -114,9 +114,9 @@ img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 50px;
-    padding: 0 16px;
-    margin-top: 10px;
+    height: 12.07729469vw;
+    padding: 0 3.8647343vw;
+    margin-top: 2.41545894vw;
     border-top: solid 4px #f4f4f4;
 }
 
@@ -124,15 +124,15 @@ img {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 4.34782609vw;
+    line-height: 5.31400966vw;
     font-weight: 600;
     color: #333;
 }
 
 .cokco .title-more a {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 500;
     color: #666;
 }
@@ -142,8 +142,8 @@ img {
 }
 
 .cokco .fix-banner {
-    padding: 0 16px;
-    margin-top: 10px;
+    padding: 0 3.8647343vw;
+    margin-top: 2.41545894vw;
 }
 
 .cokco .fix-banner h2 {
@@ -169,7 +169,7 @@ img {
 }
 
 .cokco .tile-item {
-    padding-bottom: 10px;
+    padding-bottom: 2.41545894vw;
 }
 
 input[type="checkbox"] {
@@ -181,7 +181,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked + label:before {
     background: url("../../images/cokco/icon-checked.svg") no-repeat 50% 50%;
-    background-size: 16px auto;
+    background-size: 3.8647343vw auto;
 }
 
 input[type="checkbox"] + label:before {
@@ -189,11 +189,11 @@ input[type="checkbox"] + label:before {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    width: 16px;
-    height: 16px;
+    width: 3.8647343vw;
+    height: 3.8647343vw;
     background: url("../../images/cokco/icon-check.svg") no-repeat 50% 50%;
-    background-size: 16px auto;
-    margin-right: 10px;
+    background-size: 3.8647343vw auto;
+    margin-right: 2.41545894vw;
 }
 
 /* common */
@@ -204,7 +204,7 @@ input[type="checkbox"] + label:before {
     width: 100%;
     background-color: #fff;
     z-index: 100;
-    padding-bottom: 11px;
+    padding-bottom: 2.65700483vw;
 }
 
 @media (min-width: 415px) {
@@ -223,8 +223,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 50px;
-    padding: 0 16px;
+    height: 12.07729469vw;
+    padding: 0 3.8647343vw;
 }
 
 @media (min-width: 415px) {
@@ -264,7 +264,7 @@ input[type="checkbox"] + label:before {
 }
 
 .header .link-home img {
-    width: 135px;
+    width: 32.60869565vw;
 }
 
 @media (min-width: 415px) {
@@ -274,10 +274,10 @@ input[type="checkbox"] + label:before {
 }
 
 .header .btn-category {
-    width: 30px;
-    height: 30px;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/icon-category.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 @media (min-width: 415px) {
@@ -303,11 +303,11 @@ input[type="checkbox"] + label:before {
 }
 
 .header .btn-toggle-search {
-    width: 40px;
-    height: 40px;
+    width: 9.66183575vw;
+    height: 9.66183575vw;
     background: rgba(165, 165, 165, 0.08) url("../../images/cokco/icon-search.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
-    border-radius: 20px;
+    background-size: 7.24637681vw auto;
+    border-radius: 4.83091787vw;
 }
 
 @media (min-width: 415px) {
@@ -339,7 +339,7 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     position: relative;
-    padding-left: 12px;
+    padding-left: 2.89855072vw;
 }
 
 @media (min-width: 415px) {
@@ -367,12 +367,12 @@ input[type="checkbox"] + label:before {
 
 .header-search .btn-search {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 30px;
-    height: 30px;
+    top: 1.20772947vw;
+    right: 1.20772947vw;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/icon-search.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 @media (min-width: 415px) {
@@ -407,14 +407,14 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     width: 100%;
-    height: 40px;
-    border-radius: 20px;
+    height: 9.66183575vw;
+    border-radius: 4.83091787vw;
     border: none;
     background-color: rgba(165, 165, 165, 0.08);
-    padding: 0 48px 0 18px;
+    padding: 0 11.5942029vw 0 4.34782609vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
     color: #000;
 }
@@ -430,31 +430,31 @@ input[type="checkbox"] + label:before {
 
 .header-search .input-search::-webkit-input-placeholder {
     color: #808080;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
 }
 
 .header-search .input-search::-moz-placeholder {
     color: #808080;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
 }
 
 .header-search .input-search:-ms-input-placeholder {
     color: #808080;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
 }
 
 .header-search .input-search::-ms-input-placeholder {
     color: #808080;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
 }
 
 .header-search .input-search::placeholder {
     color: #808080;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
 }
 
@@ -486,8 +486,8 @@ input[type="checkbox"] + label:before {
     display: flex;
     overflow: hidden;
     width: 100%;
-    height: 40px;
-    padding: 0 16px;
+    height: 9.66183575vw;
+    padding: 0 3.8647343vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -500,7 +500,7 @@ input[type="checkbox"] + label:before {
 }
 
 .category-index a {
-    padding: 12px 25px 9px;
+    padding: 2.89855072vw 6.03864734vw 2.17391304vw;
 }
 
 @media (min-width: 415px) {
@@ -510,7 +510,7 @@ input[type="checkbox"] + label:before {
 }
 
 .category-store a, .category-exhibition a {
-    padding: 12px 19px 9px;
+    padding: 2.89855072vw 4.58937198vw 2.17391304vw;
 }
 
 @media (min-width: 415px) {
@@ -520,7 +520,7 @@ input[type="checkbox"] + label:before {
 }
 
 .category-fix a, .category-app a {
-    padding: 12px 7px 9px;
+    padding: 2.89855072vw 1.69082126vw 2.17391304vw;
 }
 
 @media (min-width: 415px) {
@@ -552,7 +552,7 @@ input[type="checkbox"] + label:before {
     height: 100%;
     background-color: #ec7203;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 @media (min-width: 415px) {
@@ -568,8 +568,8 @@ input[type="checkbox"] + label:before {
 .category li a {
     position: relative;
     display: block;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 500;
     color: #333;
 }
@@ -683,14 +683,14 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 52px 0 12px;
-    font-size: 16px;
-    line-height: 19px;
+    padding: 12.56038647vw 0 2.89855072vw;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #999;
     font-weight: 500;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    background-size: 42px auto;
+    background-size: 10.14492754vw auto;
 }
 
 @media (min-width: 415px) {
@@ -726,7 +726,7 @@ input[type="checkbox"] + label:before {
 }
 
 .left-navigation .account-icon {
-    padding-right: 5px;
+    padding-right: 1.20772947vw;
 }
 
 @media (min-width: 415px) {
@@ -736,7 +736,7 @@ input[type="checkbox"] + label:before {
 }
 
 .left-navigation .account-icon img {
-    max-width: 20px;
+    max-width: 4.83091787vw;
 }
 
 @media (min-width: 415px) {
@@ -753,7 +753,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: calc(100% - 64px);
+    width: calc(100% - 15.4589372vw);
     height: 100%;
     background-color: #fff;
 }
@@ -778,11 +778,11 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 50px;
+    height: 12.07729469vw;
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 13px 0 17px;
+    padding: 0 3.14009662vw 0 4.10628019vw;
 }
 
 @media (min-width: 415px) {
@@ -793,7 +793,7 @@ input[type="checkbox"] + label:before {
 }
 
 .left-head .logo-wrapper img {
-    width: 135px;
+    width: 32.60869565vw;
     height: auto;
 }
 
@@ -804,8 +804,8 @@ input[type="checkbox"] + label:before {
 }
 
 .left-head .logo-wrapper .btn-close {
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/btn-close-category.svg") no-repeat 50% 50%;
 }
 
@@ -841,7 +841,7 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     border-top: solid 1px #fff;
-    padding: 10px 16px 10px 20px;
+    padding: 2.41545894vw 3.8647343vw 2.41545894vw 4.83091787vw;
 }
 
 @media (min-width: 415px) {
@@ -852,8 +852,8 @@ input[type="checkbox"] + label:before {
 
 .left-head .login-wrapper strong {
     color: #fff;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 3.8647343vw;
+    line-height: 5.79710145vw;
     font-weight: 400;
 }
 
@@ -868,12 +868,12 @@ input[type="checkbox"] + label:before {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    width: 120px;
-    padding: 8px 10px;
-    font-size: 16px;
-    line-height: 24px;
+    width: 28.98550725vw;
+    padding: 1.93236715vw 2.41545894vw;
+    font-size: 3.8647343vw;
+    line-height: 5.79710145vw;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     background-color: rgba(255, 255, 255, 0.3);
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -903,7 +903,7 @@ input[type="checkbox"] + label:before {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 10px;
+    padding-bottom: 2.41545894vw;
 }
 
 @media (min-width: 415px) {
@@ -916,7 +916,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    margin-left: 16px;
+    margin-left: 3.8647343vw;
 }
 
 @media (min-width: 415px) {
@@ -926,7 +926,7 @@ input[type="checkbox"] + label:before {
 }
 
 .left-head .account-nav li.account-wish a {
-    width: 60px;
+    width: 14.49275362vw;
 }
 
 @media (min-width: 415px) {
@@ -936,7 +936,7 @@ input[type="checkbox"] + label:before {
 }
 
 .left-head .account-nav li + li {
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 @media (min-width: 415px) {
@@ -946,7 +946,7 @@ input[type="checkbox"] + label:before {
 }
 
 .left-head .account-nav li:last-child {
-    margin-right: 16px;
+    margin-right: 3.8647343vw;
 }
 
 @media (min-width: 415px) {
@@ -959,12 +959,12 @@ input[type="checkbox"] + label:before {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    width: 120px;
-    padding: 8px 10px;
-    font-size: 16px;
-    line-height: 24px;
+    width: 28.98550725vw;
+    padding: 1.93236715vw 2.41545894vw;
+    font-size: 3.8647343vw;
+    line-height: 5.79710145vw;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     background-color: rgba(255, 255, 255, 0.3);
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1001,7 +1001,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 100px;
+    width: 24.15458937vw;
     overflow-y: auto;
     -ms-scroll-chaining: none;
     overscroll-behavior: contain;
@@ -1029,7 +1029,7 @@ input[type="checkbox"] + label:before {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: 100%;
-    height: 100px;
+    height: 24.15458937vw;
     background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
     -webkit-box-sizing: border-box;
@@ -1046,8 +1046,8 @@ input[type="checkbox"] + label:before {
 .left-body .body-left .btn-tab span,
 .left-body .body-left .link-tab span {
     color: #666;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 500;
     pointer-events: none;
 }
@@ -1097,12 +1097,12 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
-    height: 40px;
-    padding: 8px 16px 13px;
+    height: 9.66183575vw;
+    padding: 1.93236715vw 3.8647343vw 3.14009662vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 500;
     color: #666;
 }
@@ -1158,12 +1158,12 @@ input[type="checkbox"] + label:before {
 .left-body .body-right .category-depth-2:before {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 12px;
-    width: 20px;
-    height: 20px;
+    top: 2.41545894vw;
+    right: 2.89855072vw;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     pointer-events: none;
 }
 
@@ -1198,10 +1198,10 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    height: 40px;
+    height: 9.66183575vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .footer li {
@@ -1219,13 +1219,13 @@ input[type="checkbox"] + label:before {
     display: -ms-inline-flexbox;
     display: inline-flex;
     width: 1px;
-    height: 14px;
+    height: 3.38164251vw;
     margin: 0 12px;
 }
 
 .footer li a {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 3.38164251vw;
+    line-height: 4.83091787vw;
     font-weight: 400;
 }
 
@@ -1251,7 +1251,7 @@ input[type="checkbox"] + label:before {
 }
 
 .footer .customer {
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
     background-color: #f2f2f2;
     border-bottom: solid 1px #c4c4c4;
 }
@@ -1265,26 +1265,26 @@ input[type="checkbox"] + label:before {
 
 .footer .contact strong,
 .footer .contact a {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 3.38164251vw;
+    line-height: 4.83091787vw;
     color: #333;
     font-weight: 600;
 }
 
 .footer .contact a {
-    margin-left: 12px;
+    margin-left: 2.89855072vw;
 }
 
 .footer .time {
-    margin-top: 10px;
-    font-size: 12px;
-    line-height: 18px;
+    margin-top: 2.41545894vw;
+    font-size: 2.89855072vw;
+    line-height: 4.34782609vw;
     color: #333;
     font-weight: 400;
 }
 
 .footer .company {
-    padding: 12px 16px 28px;
+    padding: 2.89855072vw 3.8647343vw 6.76328502vw;
     background-color: #f2f2f2;
 }
 
@@ -1297,9 +1297,9 @@ input[type="checkbox"] + label:before {
 }
 
 .footer .people span {
-    margin-right: 16px;
-    font-size: 12px;
-    line-height: 18px;
+    margin-right: 3.8647343vw;
+    font-size: 2.89855072vw;
+    line-height: 4.34782609vw;
     color: #666;
     font-weight: 400;
 }
@@ -1308,25 +1308,25 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 2.89855072vw;
+    line-height: 4.34782609vw;
     color: #666;
     font-weight: 400;
     font-style: normal;
 }
 
 .footer .store-info {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 2.89855072vw;
+    line-height: 4.34782609vw;
     color: #666;
     font-weight: 400;
 }
 
 .footer .caution,
 .footer .copyright {
-    margin-top: 18px;
-    font-size: 10px;
-    line-height: 15px;
+    margin-top: 4.34782609vw;
+    font-size: 2.41545894vw;
+    line-height: 3.62318841vw;
     color: #666;
     font-weight: 400;
 }
@@ -1336,13 +1336,13 @@ input[type="checkbox"] + label:before {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: 50%;
-    padding: 0 10px;
+    padding: 0 2.41545894vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .product-item:nth-child(n+3) {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .product-item a {
@@ -1361,7 +1361,7 @@ input[type="checkbox"] + label:before {
     width: 100%;
     height: 0;
     padding-top: 100%;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .item-img-wrap:before {
@@ -1374,7 +1374,7 @@ input[type="checkbox"] + label:before {
     border: solid 1px #ddd;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     z-index: 1;
 }
 
@@ -1396,7 +1396,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 13px;
+    margin-top: 3.14009662vw;
 }
 
 .item-depth li {
@@ -1406,8 +1406,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
 }
 
@@ -1425,18 +1425,18 @@ input[type="checkbox"] + label:before {
     display: -ms-inline-flexbox;
     display: inline-flex;
     width: 2px;
-    height: 14px;
+    height: 3.38164251vw;
     background-color: #333;
-    margin: 0 4px;
+    margin: 0 0.96618357vw;
 }
 
 .item-title {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-top: 2px;
-    font-size: 14px;
-    line-height: 17px;
+    margin-top: 0.48309179vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
@@ -1449,8 +1449,8 @@ input[type="checkbox"] + label:before {
 
 .item-price em,
 .item-price span {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 3.8647343vw;
+    line-height: 5.79710145vw;
     font-weight: 600;
     color: #333;
 }
@@ -1459,18 +1459,18 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 11px;
+    margin-top: 2.65700483vw;
 }
 
 .item-percent {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 3.8647343vw;
+    line-height: 5.79710145vw;
     font-weight: 600;
     color: #e81a90;
 }
 
 .item-percent + .item-price {
-    padding-left: 10px;
+    padding-left: 2.41545894vw;
 }
 
 .item-badges {
@@ -1479,7 +1479,7 @@ input[type="checkbox"] + label:before {
     display: flex;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .item-badges li {
@@ -1492,13 +1492,13 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 42px;
-    height: 25px;
-    font-size: 10px;
-    line-height: 15px;
+    width: 10.14492754vw;
+    height: 6.03864734vw;
+    font-size: 2.41545894vw;
+    line-height: 3.62318841vw;
     color: #fff;
     font-weight: 400;
-    border-radius: 15px;
+    border-radius: 3.62318841vw;
     white-space: nowrap;
 }
 
@@ -1515,13 +1515,13 @@ input[type="checkbox"] + label:before {
 }
 
 .item-badges li + li {
-    margin-left: 3px;
+    margin-left: 0.72463768vw;
 }
 
 .swiper-item-wrapper {
     width: 100%;
     overflow: hidden;
-    padding: 0 16px 4px;
+    padding: 0 3.8647343vw 0.96618357vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -1536,11 +1536,11 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 160px;
+    width: 38.647343vw;
 }
 
 .swiper-items .swiper-item + li {
-    padding-left: 16px;
+    padding-left: 3.8647343vw;
 }
 
 .swiper-items a {
@@ -1559,10 +1559,10 @@ input[type="checkbox"] + label:before {
     display: inline-flex;
     overflow: hidden;
     position: relative;
-    width: 160px;
+    width: 38.647343vw;
     height: 0;
     padding-top: 100%;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .swiper-items .swiper-img-wrap:before {
@@ -1575,7 +1575,7 @@ input[type="checkbox"] + label:before {
     border: solid 1px #ebebeb;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     z-index: 1;
 }
 
@@ -1595,16 +1595,16 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     text-overflow: ellipsis;
     position: absolute;
-    top: 10px;
-    left: 10px;
-    max-width: calc(100% - 20px);
-    padding: 5px 7px;
-    border-radius: 15px;
+    top: 2.41545894vw;
+    left: 2.41545894vw;
+    max-width: calc(100% - 4.83091787vw);
+    padding: 1.20772947vw 1.69082126vw;
+    border-radius: 3.62318841vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 3.38164251vw;
+    line-height: 4.83091787vw;
     color: #16284c;
     font-weight: 600;
     z-index: 1;
@@ -1615,9 +1615,9 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    line-height: 20px;
+    margin-top: 2.41545894vw;
+    font-size: 3.38164251vw;
+    line-height: 4.83091787vw;
     color: #000;
     font-weight: 400;
 }
@@ -1627,14 +1627,14 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 3.38164251vw;
+    line-height: 4.83091787vw;
     color: #000;
     font-weight: 400;
 }
 
 .sort {
-    padding-right: 12px;
+    padding-right: 2.89855072vw;
 }
 
 .sort.on .btn-current span:after {
@@ -1646,13 +1646,13 @@ input[type="checkbox"] + label:before {
 
 .sort .btn-sort {
     position: relative;
-    padding: 5px;
+    padding: 1.20772947vw;
 }
 
 .sort .btn-sort span {
-    padding-right: 20px;
-    font-size: 14px;
-    line-height: 17px;
+    padding-right: 4.83091787vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 500;
     color: #666;
 }
@@ -1661,27 +1661,27 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     top: 50%;
-    right: 5px;
-    width: 16px;
-    height: 10px;
+    right: 1.20772947vw;
+    width: 3.8647343vw;
+    height: 2.41545894vw;
     background: url("../../images/cokco/icon-triangle-bottom.svg") no-repeat 50% 50%;
-    background-size: 16px auto;
+    background-size: 3.8647343vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
 .sort .sort-items {
     right: 0;
-    top: 39px;
-    min-width: 110px;
-    padding: 18px 16px 25px;
+    top: 9.42028986vw;
+    min-width: 26.57004831vw;
+    padding: 4.34782609vw 3.8647343vw 6.03864734vw;
     -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
 .sort .sort-items button span {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #000;
     font-weight: 400;
 }
@@ -1719,8 +1719,8 @@ input[type="checkbox"] + label:before {
 }
 
 .dropdown-items .sort-items button span {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #666;
     font-weight: 500;
     pointer-events: none;
@@ -1760,8 +1760,8 @@ input[type="checkbox"] + label:before {
 .thumbs-wrapper {
     overflow: hidden;
     width: 100%;
-    padding: 0 7px;
-    margin-top: 20px;
+    padding: 0 1.69082126vw;
+    margin-top: 4.83091787vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -1771,9 +1771,9 @@ input[type="checkbox"] + label:before {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     position: relative;
-    width: 80px;
-    height: 80px;
-    padding: 0 10px;
+    width: 19.3236715vw;
+    height: 19.3236715vw;
+    padding: 0 2.41545894vw;
     opacity: .5;
     -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
@@ -1787,8 +1787,8 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     top: 0;
-    left: 10px;
-    width: calc(100% - 20px);
+    left: 2.41545894vw;
+    width: calc(100% - 4.83091787vw);
     height: 100%;
     border: solid 1px #ccc;
     -webkit-box-sizing: border-box;
@@ -1798,8 +1798,8 @@ input[type="checkbox"] + label:before {
 .thumbs-item img {
     position: absolute;
     top: 0;
-    left: 10px;
-    width: calc(100% - 20px);
+    left: 2.41545894vw;
+    width: calc(100% - 4.83091787vw);
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
@@ -1818,8 +1818,8 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100px;
-    height: 40px;
+    width: 24.15458937vw;
+    height: 9.66183575vw;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1827,8 +1827,8 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 2.41545894vw;
+    border-radius: 0.96618357vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -1843,9 +1843,9 @@ input[type="checkbox"] + label:before {
 
 .quantity .btn-increase,
 .quantity .btn-decrease {
-    width: 20px;
-    height: 20px;
-    background-size: 20px auto;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
+    background-size: 4.83091787vw auto;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
@@ -1866,8 +1866,8 @@ input[type="checkbox"] + label:before {
 }
 
 .quantity .amount {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #666;
     font-weight: 400;
 }
@@ -1883,7 +1883,7 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    padding: 20px 0;
+    padding: 4.83091787vw 0;
     border-bottom: solid 1px #ccc;
 }
 
@@ -1894,18 +1894,18 @@ input[type="checkbox"] + label:before {
 }
 
 .review .right {
-    width: 90px;
-    padding: 0 5px;
+    width: 21.73913043vw;
+    padding: 0 1.20772947vw;
 }
 
 .review .right .img-wrap {
     display: block;
     overflow: hidden;
     position: relative;
-    width: 80px;
+    width: 19.3236715vw;
     height: 0;
-    padding-top: 80px;
-    border-radius: 5px;
+    padding-top: 19.3236715vw;
+    border-radius: 1.20772947vw;
     margin: 0 auto;
 }
 
@@ -1919,7 +1919,7 @@ input[type="checkbox"] + label:before {
     border: solid 1px #ddd;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 1.20772947vw;
     z-index: 1;
 }
 
@@ -1940,21 +1940,21 @@ input[type="checkbox"] + label:before {
 }
 
 .review .date-wrap .name + .date {
-    margin-left: 20px;
+    margin-left: 4.83091787vw;
 }
 
 .review .date-wrap .name,
 .review .date-wrap .date {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 2.89855072vw;
+    line-height: 3.38164251vw;
     color: #333;
     font-weight: 400;
 }
 
 .review .description {
-    margin-top: 2px;
-    font-size: 14px;
-    line-height: 17px;
+    margin-top: 0.48309179vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
@@ -1969,15 +1969,15 @@ input[type="checkbox"] + label:before {
     flex-direction: column;
     position: relative;
     width: 100%;
-    padding: 20px 0 0;
+    padding: 4.83091787vw 0 0;
 }
 
 .inquire li:before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 16px;
-    width: calc(100% - 32px);
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
     z-index: 1;
@@ -1985,7 +1985,7 @@ input[type="checkbox"] + label:before {
 
 .inquire li.on .answer {
     height: auto;
-    padding: 20px 16px;
+    padding: 4.83091787vw 3.8647343vw;
 }
 
 .inquire li.on .answer > div {
@@ -2018,13 +2018,13 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .inquire .answer {
     position: relative;
     height: 0;
-    margin-top: 20px;
+    margin-top: 4.83091787vw;
     background-color: #f8f8f8;
 }
 
@@ -2036,8 +2036,8 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     top: -1px;
-    left: 16px;
-    width: calc(100% - 32px);
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
     opacity: 0;
@@ -2046,12 +2046,12 @@ input[type="checkbox"] + label:before {
 .inquire .answer:after {
     content: "";
     position: absolute;
-    top: -20px;
-    right: 16px;
-    width: 20px;
-    height: 20px;
+    top: -4.83091787vw;
+    right: 3.8647343vw;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     pointer-events: none;
 }
 
@@ -2062,18 +2062,18 @@ input[type="checkbox"] + label:before {
 }
 
 .inquire .right {
-    width: 90px;
-    padding: 0 5px;
+    width: 21.73913043vw;
+    padding: 0 1.20772947vw;
 }
 
 .inquire .right .img-wrap {
     display: block;
     overflow: hidden;
     position: relative;
-    width: 80px;
+    width: 19.3236715vw;
     height: 0;
-    padding-top: 80px;
-    border-radius: 5px;
+    padding-top: 19.3236715vw;
+    border-radius: 1.20772947vw;
     margin: 0 auto;
 }
 
@@ -2087,7 +2087,7 @@ input[type="checkbox"] + label:before {
     border: solid 1px #ddd;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 1.20772947vw;
     z-index: 1;
 }
 
@@ -2111,23 +2111,23 @@ input[type="checkbox"] + label:before {
 }
 
 .inquire .date-wrap .name + .date {
-    margin-left: 20px;
+    margin-left: 4.83091787vw;
 }
 
 .inquire .date-wrap .name,
 .inquire .date-wrap .date {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 2.89855072vw;
+    line-height: 3.38164251vw;
     color: #333;
     font-weight: 400;
 }
 
 .inquire .date-wrap .type-question,
 .inquire .date-wrap .type-answer {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 2.89855072vw;
+    line-height: 3.38164251vw;
     font-weight: 400;
-    margin-right: 4px;
+    margin-right: 0.96618357vw;
 }
 
 .inquire .date-wrap .type-question {
@@ -2139,15 +2139,15 @@ input[type="checkbox"] + label:before {
 }
 
 .inquire .description {
-    margin-top: 2px;
-    font-size: 14px;
-    line-height: 17px;
+    margin-top: 0.48309179vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
 
 .form-wrap {
-    padding: 15px 16px 0;
+    padding: 3.62318841vw 3.8647343vw 0;
 }
 
 .form-wrap .title-wrap {
@@ -2160,25 +2160,25 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 2.41545894vw;
 }
 
 .form-wrap .title-wrap button {
-    height: 40px;
-    padding: 0 12px;
-    border-radius: 4px;
+    height: 9.66183575vw;
+    padding: 0 2.89855072vw;
+    border-radius: 0.96618357vw;
     border: 1px solid #ccc;
 }
 
 .form-wrap .title-wrap button span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #16284c;
     font-weight: 400;
     pointer-events: none;
 }
 
 .form-wrap .title {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #666;
 }
 
@@ -2187,7 +2187,7 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 15px 0 13px;
+    padding: 0 3.62318841vw 0 3.14009662vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
@@ -2200,7 +2200,7 @@ input[type="checkbox"] + label:before {
 }
 
 .form-wrap .option-item > span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #333;
     font-weight: 400;
     pointer-events: none;
@@ -2234,15 +2234,15 @@ input[type="checkbox"] + label:before {
     box-sizing: border-box;
     background-color: #f8f8f8;
     border: solid 1px #ccc;
-    padding: 16px 0;
+    padding: 3.8647343vw 0;
 }
 
 .form-wraps {
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
 }
 
 .form-wraps .detail-block {
-    padding: 10px 0;
+    padding: 2.41545894vw 0;
     border-bottom: solid 1px #ccc;
 }
 
@@ -2251,26 +2251,26 @@ input[type="checkbox"] + label:before {
 }
 
 .form-wraps .detail-block + .detail-block:last-child > .title {
-    padding-top: 3px;
+    padding-top: 0.72463768vw;
 }
 
 .form-wraps .detail-block + .detail-block > .title {
-    padding-top: 10px;
+    padding-top: 2.41545894vw;
 }
 
 .form-wrap .btn-current {
     position: relative;
     width: 100%;
-    height: 40px;
+    height: 9.66183575vw;
     text-align: left;
-    padding: 0 40px 0 13px;
+    padding: 0 9.66183575vw 0 3.14009662vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ccc;
 }
 
 .form-wrap .btn-current span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #666;
     font-weight: 400;
     pointer-events: none;
@@ -2280,11 +2280,11 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     top: 50%;
-    right: 10px;
-    width: 20px;
-    height: 20px;
+    right: 2.41545894vw;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -2303,7 +2303,7 @@ input[type="checkbox"] + label:before {
     width: 25%;
     height: 0;
     padding-top: 25%;
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .form-wrap .uploads button:first-child,
@@ -2336,14 +2336,14 @@ input[type="checkbox"] + label:before {
 
 .form-wrap .upload-item .btn-img-delete {
     position: absolute;
-    top: 24px;
+    top: 5.79710145vw;
     left: 50%;
-    width: 32px;
+    width: 7.7294686vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-top: 32px;
+    padding-top: 7.7294686vw;
     background: url("../../images/cokco/icon-img-delete-box.svg") no-repeat 50% 0;
-    background-size: 32px auto;
+    background-size: 7.7294686vw auto;
     margin-left: 0;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -2351,7 +2351,7 @@ input[type="checkbox"] + label:before {
 
 .form-wrap .upload-item .btn-img-delete span {
     position: relative;
-    font-size: 10px;
+    font-size: 2.41545894vw;
     color: #666;
     font-weight: 400;
     z-index: 1;
@@ -2359,7 +2359,7 @@ input[type="checkbox"] + label:before {
 
 .form-wrap .btn-upload-img {
     background: #ddd url("../../images/cokco/icon-img-plus.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .form-wrap .btn-upload-img span {
@@ -2368,9 +2368,9 @@ input[type="checkbox"] + label:before {
     top: 0;
     left: 0;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 14.49275362vw;
     pointer-events: none;
-    font-size: 10px;
+    font-size: 2.41545894vw;
     color: #666;
     font-weight: 400;
 }
@@ -2378,12 +2378,12 @@ input[type="checkbox"] + label:before {
 .form-request textarea {
     display: block;
     width: 100%;
-    height: 80px;
+    height: 19.3236715vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 13px 16px;
-    font-size: 14px;
-    line-height: 17px;
+    padding: 3.14009662vw 3.8647343vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
     border: 1px solid #ccc;
@@ -2429,8 +2429,8 @@ input[type="checkbox"] + label:before {
 
 .form-date .date-title,
 .form-date .time-title {
-    padding-right: 14px;
-    font-size: 14px;
+    padding-right: 3.38164251vw;
+    font-size: 3.38164251vw;
     color: #666;
     font-weight: 400;
     white-space: nowrap;
@@ -2438,23 +2438,23 @@ input[type="checkbox"] + label:before {
 
 .form-date .time-title {
     position: relative;
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .form-date .time-title:before {
     content: "";
     position: absolute;
-    left: -5px;
+    left: -1.20772947vw;
     top: 50%;
     width: 2px;
-    height: 20px;
+    height: 4.83091787vw;
     background-color: #ccc;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
 .form-date .link-calendar {
-    width: 30px;
+    width: 7.24637681vw;
 }
 
 .form-date .link-calendar img {
@@ -2462,16 +2462,16 @@ input[type="checkbox"] + label:before {
 }
 
 .form-date .input-date {
-    width: 100px;
-    height: 30px;
+    width: 24.15458937vw;
+    height: 7.24637681vw;
     border: solid 1px #ccc;
-    border-radius: 5px;
+    border-radius: 1.20772947vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
-    font-size: 12px;
+    font-size: 2.89855072vw;
     color: #333;
-    margin-right: 15px;
+    margin-right: 3.62318841vw;
 }
 
 .form-date .btn-prev,
@@ -2479,9 +2479,9 @@ input[type="checkbox"] + label:before {
     display: block;
     margin: 0 auto;
     width: 100%;
-    height: 20px;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .form-date .btn-prev span,
@@ -2506,7 +2506,7 @@ input[type="checkbox"] + label:before {
 }
 
 .form-date .option-item-wrap {
-    width: 90px;
+    width: 21.73913043vw;
 }
 
 .form-date .option-items {
@@ -2514,21 +2514,21 @@ input[type="checkbox"] + label:before {
 }
 
 .form-date .btn-current {
-    height: 30px;
-    padding: 0 20px 0 12px;
-    border-radius: 5px;
+    height: 7.24637681vw;
+    padding: 0 4.83091787vw 0 2.89855072vw;
+    border-radius: 1.20772947vw;
 }
 
 .form-date .btn-current span {
-    font-size: 12px;
+    font-size: 2.89855072vw;
     white-space: nowrap;
 }
 
 .form-date .btn-current span:after {
-    right: 5px;
-    width: 20px;
-    height: 20px;
-    background-size: 20px auto;
+    right: 1.20772947vw;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -2541,7 +2541,7 @@ input[type="checkbox"] + label:before {
 }
 
 .form-info + .form-info {
-    padding-top: 10px;
+    padding-top: 2.41545894vw;
 }
 
 .form-info strong {
@@ -2551,9 +2551,9 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 80px;
-    font-size: 14px;
-    line-height: 17px;
+    width: 19.3236715vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
 }
@@ -2567,12 +2567,12 @@ input[type="checkbox"] + label:before {
 .form-info input {
     display: block;
     width: 100%;
-    height: 40px;
-    font-size: 14px;
+    height: 9.66183575vw;
+    font-size: 3.38164251vw;
     font-weight: 400;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 14px;
+    padding: 0 3.38164251vw;
     border: 1px solid #ccc;
     border-radius: 0;
 }
@@ -2583,17 +2583,17 @@ input[type="checkbox"] + label:before {
 }
 
 .form-info .btn-address {
-    height: 40px;
-    padding: 0 20px;
+    height: 9.66183575vw;
+    padding: 0 4.83091787vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 0.96618357vw;
     border: 1px solid #ccc;
-    margin-left: 13px;
+    margin-left: 3.14009662vw;
 }
 
 .form-info .btn-address span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
     color: #16284c;
 }
@@ -2608,13 +2608,13 @@ input[type="checkbox"] + label:before {
 }
 
 .form-info-block + .form-info-block {
-    margin-top: 3px;
+    margin-top: 0.72463768vw;
 }
 
 .form-info-block strong,
 .form-info-block em {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
@@ -2639,9 +2639,9 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    height: 50px;
-    margin-top: 10px;
-    padding: 0 16px;
+    height: 12.07729469vw;
+    margin-top: 2.41545894vw;
+    padding: 0 3.8647343vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -2649,15 +2649,15 @@ input[type="checkbox"] + label:before {
 .comment h2:after {
     content: "";
     position: absolute;
-    left: 16px;
+    left: 3.8647343vw;
     bottom: 0;
-    width: calc(100% - 32px);
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
 }
 
 .comment h2 strong {
-    font-size: 20px;
+    font-size: 4.83091787vw;
     color: #333;
     font-weight: 600;
 }
@@ -2666,14 +2666,14 @@ input[type="checkbox"] + label:before {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #333;
     font-weight: 400;
 }
 
 .comment h2 span em {
-    margin-left: 4px;
-    font-size: 14px;
+    margin-left: 0.96618357vw;
+    font-size: 3.38164251vw;
     color: #ec7203;
     font-weight: 400;
 }
@@ -2684,7 +2684,7 @@ input[type="checkbox"] + label:before {
 
 .comment .inquire .answer {
     height: auto;
-    padding: 20px 16px;
+    padding: 4.83091787vw 3.8647343vw;
 }
 
 .comment .inquire .answer:before {
@@ -2706,8 +2706,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 10px 16px;
-    margin-top: 37px;
+    padding: 2.41545894vw 3.8647343vw;
+    margin-top: 8.93719807vw;
     border: 1px solid #ccc;
     background-color: #fff;
 }
@@ -2725,12 +2725,12 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    height: 50px;
+    height: 12.07729469vw;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0.96618357vw;
     background-color: #fff;
-    padding: 0 15px;
-    font-size: 14px;
+    padding: 0 3.62318841vw;
+    font-size: 3.38164251vw;
     color: #333;
 }
 
@@ -2755,15 +2755,15 @@ input[type="checkbox"] + label:before {
 }
 
 .comment-input .btn-comment {
-    height: 50px;
-    width: 70px;
-    border-radius: 10px;
+    height: 12.07729469vw;
+    width: 16.90821256vw;
+    border-radius: 2.41545894vw;
     background-color: #16284c;
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .comment-input .btn-comment span {
-    font-size: 17px;
+    font-size: 4.10628019vw;
     font-weight: 500;
     color: #fff;
 }
@@ -2771,8 +2771,8 @@ input[type="checkbox"] + label:before {
 /* main */
 .visual {
     position: relative;
-    padding: 0 16px;
-    min-height: 180px;
+    padding: 0 3.8647343vw;
+    min-height: 43.47826087vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -2821,7 +2821,7 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    bottom: 11px;
+    bottom: 2.65700483vw;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -2831,10 +2831,10 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 4px;
-    height: 4px;
+    width: 0.96618357vw;
+    height: 0.96618357vw;
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 0.96618357vw;
     border: 1px solid #c4c4c4;
 }
 
@@ -2854,14 +2854,14 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: calc(100% - 32px);
-    height: 40px;
-    padding: 0 20px 0 18px;
+    width: calc(100% - 7.7294686vw);
+    height: 9.66183575vw;
+    padding: 0 4.83091787vw 0 4.34782609vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 10px auto 0;
     border: 1px solid #d4d4d4;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .customer-info h2 {
@@ -2889,8 +2889,8 @@ input[type="checkbox"] + label:before {
 
 .customer-info .info span,
 .customer-info .info a {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 2.89855072vw;
+    line-height: 4.34782609vw;
 }
 
 .customer-info .info span {
@@ -2907,8 +2907,8 @@ input[type="checkbox"] + label:before {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 2.41545894vw;
+    line-height: 3.62318841vw;
     font-weight: 500;
     color: #000;
 }
@@ -2922,11 +2922,11 @@ input[type="checkbox"] + label:before {
 }
 
 .exhibitions li + li {
-    margin-top: 16px;
+    margin-top: 3.8647343vw;
 }
 
 .recommend-item {
-    padding-bottom: 10px;
+    padding-bottom: 2.41545894vw;
 }
 
 .recommend-item .title-more {
@@ -2940,21 +2940,21 @@ input[type="checkbox"] + label:before {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0 7px;
+    padding: 0 1.69082126vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 /* search */
 .search-form {
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
 }
 
 .search-form-wrap {
     position: relative;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px 19px 10px 22px;
+    padding: 2.41545894vw 4.58937198vw 2.41545894vw 5.31400966vw;
 }
 
 .search-form label {
@@ -2974,16 +2974,16 @@ input[type="checkbox"] + label:before {
 .search-form .input-search {
     display: block;
     width: 100%;
-    height: 40px;
+    height: 9.66183575vw;
     background: rgba(165, 165, 165, 0.08);
-    padding: 0 35px 0 18px;
+    padding: 0 8.45410628vw 0 4.34782609vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
-    border-radius: 20px;
+    border-radius: 4.83091787vw;
     border: none;
 }
 
@@ -3009,12 +3009,12 @@ input[type="checkbox"] + label:before {
 
 .search-form .btn-search {
     position: absolute;
-    top: 15px;
-    right: 24px;
-    width: 30px;
-    height: 30px;
+    top: 3.62318841vw;
+    right: 5.79710145vw;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/icon-search.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 .search-form .btn-search span {
@@ -3035,7 +3035,7 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 12px;
+    margin-top: 2.89855072vw;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -3048,8 +3048,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #666;
     font-weight: 500;
 }
@@ -3057,7 +3057,7 @@ input[type="checkbox"] + label:before {
 .search-category {
     position: relative;
     max-width: 50%;
-    padding: 0 5px 0 0;
+    padding: 0 1.20772947vw 0 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -3074,18 +3074,18 @@ input[type="checkbox"] + label:before {
 }
 
 .search-category + .search-category {
-    padding: 0 0 0 5px;
+    padding: 0 0 0 1.20772947vw;
 }
 
 .search-category + .search-category .sort-items {
-    left: 5px;
+    left: 1.20772947vw;
 }
 
 .search-category-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 10px 16px 16px;
+    padding: 2.41545894vw 3.8647343vw 3.8647343vw;
 }
 
 .search-category .btn-current {
@@ -3093,12 +3093,12 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    padding: 13px 20px 10px 10px;
+    padding: 3.14009662vw 4.83091787vw 2.41545894vw 2.41545894vw;
     border: solid 1px #c4c4c4;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     max-width: 100%;
-    min-width: 140px;
+    min-width: 33.81642512vw;
 }
 
 .search-category .btn-current span {
@@ -3106,9 +3106,9 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
-    padding-right: 10px;
-    font-size: 14px;
-    line-height: 17px;
+    padding-right: 2.41545894vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 500;
     color: #666;
 }
@@ -3116,22 +3116,22 @@ input[type="checkbox"] + label:before {
 .search-category .btn-current span:after {
     content: "";
     position: absolute;
-    top: 15px;
-    right: 10px;
-    width: 16px;
-    height: 10px;
+    top: 3.62318841vw;
+    right: 2.41545894vw;
+    width: 3.8647343vw;
+    height: 2.41545894vw;
     background: url("../../images/cokco/icon-triangle-bottom.svg") no-repeat 50% 50%;
-    background-size: 16px auto;
+    background-size: 3.8647343vw auto;
 }
 
 .search-category .sort-items {
-    width: calc(100% - 5px);
+    width: calc(100% - 1.20772947vw);
     border: solid 1px #ddd;
-    padding: 11px 10px 19px;
+    padding: 2.65700483vw 2.41545894vw 4.58937198vw;
 }
 
 .search-breadcrumb {
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .search-breadcrumb ol {
@@ -3144,15 +3144,15 @@ input[type="checkbox"] + label:before {
 }
 
 .search-breadcrumb li {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 3.8647343vw;
+    line-height: 5.79710145vw;
     font-weight: 400;
     color: #333;
 }
 
 .search-breadcrumb li + li:before {
     content: "\003e";
-    padding: 0 4px;
+    padding: 0 0.96618357vw;
 }
 
 /* store */
@@ -3168,8 +3168,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 70px;
-    padding: 4px;
+    width: 16.90821256vw;
+    padding: 0.96618357vw;
 }
 
 .store-category .img-wrap {
@@ -3196,9 +3196,9 @@ input[type="checkbox"] + label:before {
 
 .store-category .title {
     display: block;
-    margin-top: 1px;
-    font-size: 12px;
-    line-height: 18px;
+    margin-top: 0.24154589vw;
+    font-size: 2.89855072vw;
+    line-height: 4.34782609vw;
     font-weight: 500;
     color: #666;
     white-space: nowrap;
@@ -3213,12 +3213,12 @@ input[type="checkbox"] + label:before {
 
 .store-categories-wrap {
     overflow: hidden;
-    padding: 12px;
+    padding: 2.89855072vw;
 }
 
 /* exhibition */
 .exhibition-items {
-    padding-bottom: 10px;
+    padding-bottom: 2.41545894vw;
 }
 
 .exhibition-items .title-more {
@@ -3266,17 +3266,17 @@ input[type="checkbox"] + label:before {
 
 .fix-reference .title-more .input-search {
     display: block;
-    width: 150px;
+    width: 36.23188406vw;
     background-color: rgba(165, 165, 165, 0.08);
-    border-radius: 20px;
-    height: 40px;
+    border-radius: 4.83091787vw;
+    height: 9.66183575vw;
     border: none;
     text-align: center;
-    padding-right: 35px;
+    padding-right: 8.45410628vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
 }
@@ -3303,12 +3303,12 @@ input[type="checkbox"] + label:before {
 
 .fix-reference .title-more .btn-search {
     position: absolute;
-    top: 10px;
-    right: 22px;
-    width: 30px;
-    height: 30px;
+    top: 2.41545894vw;
+    right: 5.31400966vw;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/icon-search.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 .fix-reference .title-more .btn-search span {
@@ -3326,11 +3326,11 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-reference .link-write {
-    width: 30px;
-    height: 30px;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/btn-write.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
-    margin-left: 10px;
+    background-size: 7.24637681vw auto;
+    margin-left: 2.41545894vw;
 }
 
 .fix-reference .link-write span {
@@ -3355,13 +3355,13 @@ input[type="checkbox"] + label:before {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 16px 10px;
+    padding: 3.8647343vw 2.41545894vw;
     border-bottom: solid 1px #ddd;
 }
 
 .fix-reference .tabs .btn-tab {
-    padding: 8px 24px 5px;
-    border-radius: 10px;
+    padding: 1.93236715vw 5.79710145vw 1.20772947vw;
+    border-radius: 2.41545894vw;
     border: 1px solid rgba(112, 112, 112, 0.2);
 }
 
@@ -3375,20 +3375,20 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-reference .tabs .btn-tab + .btn-tab {
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .fix-reference .tabs .btn-tab span {
     white-space: nowrap;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #999;
     pointer-events: none;
 }
 
 .fix-reference .panels {
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
 }
 
 .fix-reference .panels .on {
@@ -3396,17 +3396,17 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-reference .panels .on + div {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .fix-reference .panels li {
     border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px 16px;
+    border-radius: 2.41545894vw;
+    padding: 4.83091787vw 3.8647343vw;
 }
 
 .fix-reference .panels li + li {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .fix-reference .panels li a {
@@ -3432,14 +3432,14 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    max-width: calc(100% - 128px);
+    max-width: calc(100% - 30.9178744vw);
 }
 
 .fix-reference .panels .right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100px;
+    width: 24.15458937vw;
 }
 
 .fix-reference .panels .date-wrap {
@@ -3449,14 +3449,14 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-reference .panels .date-wrap span {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 2.89855072vw;
+    line-height: 3.38164251vw;
     font-weight: 400;
     color: #333;
 }
 
 .fix-reference .panels .date-wrap span + span {
-    margin-left: 8px;
+    margin-left: 1.93236715vw;
 }
 
 .fix-reference .panels .name,
@@ -3465,9 +3465,9 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
-    margin-top: 2px;
-    font-size: 14px;
-    line-height: 17px;
+    margin-top: 0.48309179vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 600;
     color: #333;
 }
@@ -3477,9 +3477,9 @@ input[type="checkbox"] + label:before {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    margin-top: 2px;
-    line-height: 17px;
-    font-size: 14px;
+    margin-top: 0.48309179vw;
+    line-height: 4.10628019vw;
+    font-size: 3.38164251vw;
     color: #333;
     font-weight: 400;
 }
@@ -3491,7 +3491,7 @@ input[type="checkbox"] + label:before {
     width: 100%;
     height: 0;
     padding-top: 100%;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -3504,7 +3504,7 @@ input[type="checkbox"] + label:before {
     width: 100%;
     height: 100%;
     border: solid 1px #ebebeb;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .fix-reference .panels .img-wrap img {
@@ -3515,7 +3515,7 @@ input[type="checkbox"] + label:before {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .fix-reference .panels .img-wrap .badge {
@@ -3523,16 +3523,16 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     text-overflow: ellipsis;
     position: absolute;
-    top: 10px;
-    left: 6px;
-    max-width: calc(100% - 12px);
-    padding: 5px 7px;
-    border-radius: 15px;
+    top: 2.41545894vw;
+    left: 1.44927536vw;
+    max-width: calc(100% - 2.89855072vw);
+    padding: 1.20772947vw 1.69082126vw;
+    border-radius: 3.62318841vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 3.38164251vw;
+    line-height: 4.83091787vw;
     color: #16284c;
     font-weight: 600;
     z-index: 1;
@@ -3548,25 +3548,25 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-top: solid 4px #f4f4f4;
-    height: 54px;
+    height: 13.04347826vw;
 }
 
 .fix-form h2 strong {
-    font-size: 18px;
+    font-size: 4.34782609vw;
     font-weight: 600;
     color: #16284c;
 }
 
 .fix-form .btn-reset {
-    width: 30px;
-    height: 30px;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/icon-reset.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 .fix-form .btn-reset span {
@@ -3584,12 +3584,12 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-category {
-    padding: 13px 16px 10px;
+    padding: 3.14009662vw 3.8647343vw 2.41545894vw;
 }
 
 .fix-category h3 {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #666;
     font-weight: 600;
 }
@@ -3600,7 +3600,7 @@ input[type="checkbox"] + label:before {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
     border: 1px solid #ccc;
 }
 
@@ -3633,8 +3633,8 @@ input[type="checkbox"] + label:before {
 .fix-categories .img-wrap {
     display: block;
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 16.90821256vw;
+    height: 16.90821256vw;
     margin: 0 auto;
 }
 
@@ -3651,10 +3651,10 @@ input[type="checkbox"] + label:before {
 
 .fix-categories .name {
     display: block;
-    padding: 3px 0 12px;
+    padding: 0.72463768vw 0 2.89855072vw;
     text-align: center;
     white-space: nowrap;
-    font-size: 12px;
+    font-size: 2.89855072vw;
     color: #666;
     font-weight: 400;
 }
@@ -3666,9 +3666,9 @@ input[type="checkbox"] + label:before {
     position: sticky;
     bottom: 0;
     left: 0;
-    height: 75px;
-    padding: 10px 16px calc(constant(safe-area-inset-bottom));
-    padding: 10px 16px calc(env(safe-area-inset-bottom));
+    height: 18.11594203vw;
+    padding: 2.41545894vw 3.8647343vw calc(constant(safe-area-inset-bottom));
+    padding: 2.41545894vw 3.8647343vw calc(env(safe-area-inset-bottom));
     background-color: #fff;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -3676,40 +3676,40 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-form-fix .btn-cancel {
-    width: 100px;
-    height: 55px;
+    width: 24.15458937vw;
+    height: 13.28502415vw;
     background-color: #ccc;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .fix-form-fix .btn-cancel + .btn-confirm {
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .fix-form-fix .btn-cancel span {
     color: #fff;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 3.8647343vw;
 }
 
 .fix-form-fix .btn-confirm {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    width: 100px;
-    height: 55px;
+    width: 24.15458937vw;
+    height: 13.28502415vw;
     background-color: #16284c;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .fix-form-fix .btn-confirm span {
     color: #fff;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 3.8647343vw;
 }
 
 .fix-form-notice {
-    padding: 20px 16px 10px;
+    padding: 4.83091787vw 3.8647343vw 2.41545894vw;
 }
 
 .fix-form-notice li {
@@ -3718,28 +3718,28 @@ input[type="checkbox"] + label:before {
 
 .fix-form-notice li strong {
     color: #ec7203;
-    font-size: 12px;
+    font-size: 2.89855072vw;
     font-weight: 400;
 }
 
 .fix-form-notice li span {
-    font-size: 12px;
+    font-size: 2.89855072vw;
     font-weight: 400;
     color: #666;
 }
 
 .fix-form-notice li span + strong {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .fix-detail-category {
     background-color: #fff;
-    padding: 2px 16px 15px;
+    padding: 0.48309179vw 3.8647343vw 3.62318841vw;
 }
 
 .fix-detail-category .item-depth li {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #666;
     font-weight: 600;
 }
@@ -3759,67 +3759,67 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    padding: 0 16px 19px;
+    padding: 0 3.8647343vw 4.58937198vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #fff;
 }
 
 .fix-detail-date > strong {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #666;
     font-weight: 600;
 }
 
 .fix-detail-date .date strong,
 .fix-detail-date .time strong {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #666;
     font-weight: 400;
-    margin-right: 14px;
+    margin-right: 3.38164251vw;
 }
 
 .fix-detail-date .date span,
 .fix-detail-date .time span {
-    font-size: 12px;
+    font-size: 2.89855072vw;
     color: #333;
     font-weight: 400;
 }
 
 .fix-detail-date .date {
     position: relative;
-    padding-right: 40px;
+    padding-right: 9.66183575vw;
 }
 
 .fix-detail-date .date:after {
     content: "";
     position: absolute;
-    right: 20px;
+    right: 4.83091787vw;
     top: 50%;
     width: 2px;
-    height: 20px;
+    height: 4.83091787vw;
     background-color: #ccc;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
 .fix-detail-swiper {
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     background-color: #fff;
 }
 
 .fix-detail-description {
-    padding: 10px 16px 24px;
-    font-size: 14px;
-    line-height: 17px;
+    padding: 2.41545894vw 3.8647343vw 5.79710145vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
     background-color: #fff;
 }
 
 .fix-detail-description + .toggle-product {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 /* detail */
@@ -3841,14 +3841,14 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 16px;
-    margin-top: 25px;
+    padding: 0 3.8647343vw;
+    margin-top: 6.03864734vw;
 }
 
 .detail .title-wrap .type,
 .detail .title-wrap .name {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 4.83091787vw;
+    line-height: 5.79710145vw;
     color: #333;
 }
 
@@ -3869,7 +3869,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    margin-left: 19px;
+    margin-left: 4.58937198vw;
 }
 
 .detail .share {
@@ -3881,14 +3881,14 @@ input[type="checkbox"] + label:before {
     align-items: flex-start;
     position: absolute;
     top: 0;
-    right: 16px;
+    right: 3.8647343vw;
 }
 
 .detail .share .btn-share {
-    width: 30px;
-    height: 30px;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/icon-share.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 .detail .share .btn-share span {
@@ -3911,13 +3911,13 @@ input[type="checkbox"] + label:before {
 
 .detail .share .check-wish:checked + label:before {
     background: url("../../images/cokco/icon-wish-active-detail.svg") no-repeat 50% 50%;
-    background-size: 30px;
+    background-size: 7.24637681vw;
 }
 
 .detail .share .check-wish + label {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     font-size: 0;
 }
 
@@ -3926,18 +3926,18 @@ input[type="checkbox"] + label:before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/icon-wish-detail.svg") no-repeat 50% 50%;
-    background-size: 30px;
+    background-size: 7.24637681vw;
 }
 
 .detail .badge {
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .detail-info {
-    padding-bottom: 20px;
+    padding-bottom: 4.83091787vw;
     border-bottom: solid 1px #ccc;
 }
 
@@ -3946,14 +3946,14 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    padding: 0 16px;
-    margin-top: 20px;
+    padding: 0 3.8647343vw;
+    margin-top: 4.83091787vw;
 }
 
 .detail-info .price-wrap .percent,
 .detail-info .price-wrap .price {
-    font-size: 20px;
-    line-height: 29px;
+    font-size: 4.83091787vw;
+    line-height: 7.00483092vw;
     font-weight: 600;
 }
 
@@ -3962,16 +3962,16 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-info .price-wrap .percent + .price {
-    margin-left: 41px;
+    margin-left: 9.90338164vw;
 }
 
 .detail-info .price-wrap .price {
     color: #333;
-    padding-right: 70px;
+    padding-right: 16.90821256vw;
 }
 
 .detail-benefit {
-    padding: 13px 16px 10px;
+    padding: 3.14009662vw 3.8647343vw 2.41545894vw;
     border-bottom: solid 1px #ccc;
 }
 
@@ -3982,16 +3982,16 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-block .title {
-    width: 114px;
-    font-size: 16px;
-    line-height: 19px;
+    width: 27.53623188vw;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 600;
     color: #333;
     white-space: nowrap;
 }
 
 .detail .benefit + .benefit {
-    margin-top: 13px;
+    margin-top: 3.14009662vw;
 }
 
 .detail .benefits dl {
@@ -4001,11 +4001,11 @@ input[type="checkbox"] + label:before {
 }
 
 .detail .benefits dl + dl {
-    margin-top: 13px;
+    margin-top: 3.14009662vw;
 }
 
 .detail .benefits dt {
-    width: 105px;
+    width: 25.36231884vw;
 }
 
 .detail .benefits dt,
@@ -4020,13 +4020,13 @@ input[type="checkbox"] + label:before {
 .detail .benefits dt,
 .detail .benefits dd,
 .detail .benefits .caution {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
 }
 
 .detail .benefits .caution {
-    margin-top: 13px;
+    margin-top: 3.14009662vw;
     color: #999;
 }
 
@@ -4042,7 +4042,7 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 15px 0 13px;
+    padding: 0 3.62318841vw 0 3.14009662vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
@@ -4055,14 +4055,14 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-option .option-item > span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #333;
     font-weight: 400;
     pointer-events: none;
 }
 
 .detail-option .option-item .name {
-    width: 150px;
+    width: 36.23188406vw;
     text-align: left;
 }
 
@@ -4079,15 +4079,15 @@ input[type="checkbox"] + label:before {
     display: none;
     background-color: #f8f8f8;
     border: solid 1px #ccc;
-    padding: 16px 0;
+    padding: 3.8647343vw 0;
 }
 
 .detail-options {
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
 }
 
 .detail-options .detail-block {
-    padding: 10px 0;
+    padding: 2.41545894vw 0;
     border-bottom: solid 1px #ccc;
 }
 
@@ -4096,26 +4096,26 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-options .detail-block + .detail-block:last-child > .title {
-    padding-top: 3px;
+    padding-top: 0.72463768vw;
 }
 
 .detail-options .detail-block + .detail-block > .title {
-    padding-top: 10px;
+    padding-top: 2.41545894vw;
 }
 
 .detail-option .btn-current {
     position: relative;
     width: 100%;
-    height: 40px;
+    height: 9.66183575vw;
     text-align: left;
-    padding: 0 40px 0 13px;
+    padding: 0 9.66183575vw 0 3.14009662vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ccc;
 }
 
 .detail-option .btn-current span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #666;
     font-weight: 400;
     pointer-events: none;
@@ -4125,11 +4125,11 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     top: 50%;
-    right: 10px;
-    width: 20px;
-    height: 20px;
+    right: 2.41545894vw;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -4143,7 +4143,7 @@ input[type="checkbox"] + label:before {
     align-items: center;
     position: relative;
     width: 100%;
-    padding: 13px 0 0 15px;
+    padding: 3.14009662vw 0 0 3.62318841vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -4153,29 +4153,29 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     white-space: normal;
-    padding-right: 10px;
+    padding-right: 2.41545894vw;
 }
 
 .detail .selected .title,
 .detail .selected .price {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
 
 .detail .selected .price {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
 }
 
 .detail .selected .btn-delete {
     position: absolute;
-    top: calc(50% + 7px);
+    top: calc(50% + 1.69082126vw);
     right: 0;
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-close-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -4213,9 +4213,9 @@ input[type="checkbox"] + label:before {
 }
 
 .detail .quantity + .price-wrap .price {
-    padding-right: 20px;
-    font-size: 14px;
-    line-height: 17px;
+    padding-right: 4.83091787vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
@@ -4224,12 +4224,12 @@ input[type="checkbox"] + label:before {
     position: absolute;
     top: 50%;
     right: 0;
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     background: url("../../images/cokco/icon-close-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .detail .quantity + .price-wrap .btn-delete span {
@@ -4258,8 +4258,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #333;
     font-weight: 600;
 }
@@ -4269,8 +4269,8 @@ input[type="checkbox"] + label:before {
     bottom: 0;
     left: 0;
     background-color: #fff;
-    padding: 10px 16px calc(constant(safe-area-inset-bottom));
-    padding: 10px 16px calc(env(safe-area-inset-bottom));
+    padding: 2.41545894vw 3.8647343vw calc(constant(safe-area-inset-bottom));
+    padding: 2.41545894vw 3.8647343vw calc(env(safe-area-inset-bottom));
 }
 
 .detail-fix .btn-wrap {
@@ -4278,16 +4278,16 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 2.41545894vw;
 }
 
 .detail-fix .btn-cart {
-    width: 55px;
-    height: 55px;
+    width: 13.28502415vw;
+    height: 13.28502415vw;
     background: #ccc url("../../images/cokco/icon-bottom-cart.svg") no-repeat 50% 50%;
-    background-size: 55px auto;
-    border-radius: 10px;
-    margin-right: 27px;
+    background-size: 13.28502415vw auto;
+    border-radius: 2.41545894vw;
+    margin-right: 6.52173913vw;
 }
 
 .detail-fix .btn-cart span {
@@ -4310,14 +4310,14 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     width: 100%;
-    height: 55px;
+    height: 13.28502415vw;
     background-color: #16284C;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .detail-fix .btn-order span {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 600;
     color: #fff;
     pointer-events: none;
@@ -4331,10 +4331,10 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     position: sticky;
-    top: 50px;
+    top: 12.07729469vw;
     left: 0;
     width: 100%;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     z-index: 101;
@@ -4347,7 +4347,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    height: 50px;
+    height: 12.07729469vw;
 }
 
 .detail .tabs button.on span {
@@ -4359,7 +4359,7 @@ input[type="checkbox"] + label:before {
 }
 
 .detail .tabs button span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #333;
     font-weight: 400;
     pointer-events: none;
@@ -4371,7 +4371,7 @@ input[type="checkbox"] + label:before {
     left: 1px;
     bottom: 0;
     width: 100%;
-    height: 6px;
+    height: 1.44927536vw;
     background-color: #ec7203;
     opacity: 0;
     -webkit-transition: opacity .3s ease-in-out;
@@ -4384,7 +4384,7 @@ input[type="checkbox"] + label:before {
     left: -1px;
     top: 50%;
     width: 1px;
-    height: 20px;
+    height: 4.83091787vw;
     background-color: #666;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -4398,8 +4398,8 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     top: 0;
-    left: 22px;
-    width: calc(100% - 44px);
+    left: 5.31400966vw;
+    width: calc(100% - 10.62801932vw);
     height: 1px;
     background-color: #ccc;
 }
@@ -4425,19 +4425,19 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
-    height: 50px;
-    padding: 0 20px 0 22px;
+    height: 12.07729469vw;
+    padding: 0 4.83091787vw 0 5.31400966vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 4.83091787vw;
     font-weight: 600;
     color: #333;
 }
 
 .detail .panels h3 + .description {
-    padding: 3px 22px 10px;
-    font-size: 14px;
-    line-height: 17px;
+    padding: 0.72463768vw 5.31400966vw 2.41545894vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #666;
     font-weight: 400;
 }
@@ -4450,17 +4450,17 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 30px;
-    padding-right: 37px;
+    height: 7.24637681vw;
+    padding-right: 8.93719807vw;
     background-image: url("../../images/cokco/btn-write.svg");
     background-repeat: no-repeat;
     background-position: 100% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 .detail .panels .link-review span,
 .detail .panels .link-inquire span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 600;
     color: #16284c;
     pointer-events: none;
@@ -4473,7 +4473,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0 27px 0 22px;
+    padding: 0 6.52173913vw 0 5.31400966vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -4481,14 +4481,14 @@ input[type="checkbox"] + label:before {
 .detail .panels .subtitle .type,
 .detail .panels .subtitle .count,
 .detail .panels .subtitle .unit {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
 }
 
 .detail .panels .subtitle .count {
     color: #ec7203;
-    padding-left: 4px;
+    padding-left: 0.96618357vw;
 }
 
 .detail .panels .subtitle .type,
@@ -4510,8 +4510,8 @@ input[type="checkbox"] + label:before {
 
 .detail .panels .subtitle .description strong,
 .detail .panels .subtitle .description span {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #16284c;
 }
 
@@ -4524,8 +4524,8 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-review {
-    margin-top: 10px;
-    padding: 0 16px;
+    margin-top: 2.41545894vw;
+    padding: 0 3.8647343vw;
 }
 
 .detail-review .reviews {
@@ -4534,31 +4534,31 @@ input[type="checkbox"] + label:before {
 
 .detail-inquire {
     position: relative;
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .detail-inquire .inquires:before {
     content: "";
     position: absolute;
     top: 0;
-    left: 16px;
-    width: calc(100% - 32px);
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
 }
 
 .detail-recommend-item {
     position: relative;
-    padding-top: 10px;
-    margin-top: 10px;
+    padding-top: 2.41545894vw;
+    margin-top: 2.41545894vw;
 }
 
 .detail-recommend-item:before {
     content: "";
     position: absolute;
     top: 0;
-    left: 16px;
-    width: calc(100% - 32px);
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
 }
@@ -4578,13 +4578,13 @@ input[type="checkbox"] + label:before {
 }
 
 .my-shopping-tab {
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     background-color: #fff;
     border: solid 1px #ccc;
 }
 
 .my-shopping-tab + .my-order-list {
-    margin-top: 4px;
+    margin-top: 0.96618357vw;
     border-top: none;
 }
 
@@ -4606,7 +4606,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 50px;
+    height: 12.07729469vw;
 }
 
 .my-shopping-tab li {
@@ -4634,7 +4634,7 @@ input[type="checkbox"] + label:before {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 6px;
+    height: 1.44927536vw;
     background-color: #ec7203;
 }
 
@@ -4651,12 +4651,12 @@ input[type="checkbox"] + label:before {
     position: absolute;
     left: -1px;
     width: 1px;
-    height: 20px;
+    height: 4.83091787vw;
     background-color: #666;
 }
 
 .my-shopping-tab li a {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 500;
     color: #333;
 }
@@ -4665,9 +4665,9 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: calc(100% - 32px);
-    margin: 10px auto;
-    padding: 15px 16px;
+    width: calc(100% - 7.7294686vw);
+    margin: 2.41545894vw auto;
+    padding: 3.62318841vw 3.8647343vw;
     background-color: #fff;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -4675,7 +4675,7 @@ input[type="checkbox"] + label:before {
 }
 
 .my-point .point-wrap {
-    padding: 0 10px;
+    padding: 0 2.41545894vw;
 }
 
 .my-point .point-wrap > a {
@@ -4688,14 +4688,14 @@ input[type="checkbox"] + label:before {
 }
 
 .my-point .point-wrap .type {
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .my-point .point-wrap .type,
 .my-point .point-wrap .unit,
 .my-point .point-wrap em {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
 }
 
@@ -4706,12 +4706,12 @@ input[type="checkbox"] + label:before {
 
 .my-point .point-wrap em {
     color: #ec7203;
-    margin: 0 8px;
+    margin: 0 1.93236715vw;
 }
 
 .my-point .point-wrap .icon img {
     width: auto;
-    height: 30px;
+    height: 7.24637681vw;
 }
 
 .my-order-list {
@@ -4720,7 +4720,7 @@ input[type="checkbox"] + label:before {
 }
 
 .my-order-list.fix-list {
-    margin-top: 4px;
+    margin-top: 0.96618357vw;
     border-top: none;
 }
 
@@ -4731,11 +4731,11 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    height: 54px;
+    height: 13.04347826vw;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .my-order-list h2 + .my-cancel {
@@ -4743,17 +4743,17 @@ input[type="checkbox"] + label:before {
 }
 
 .my-order-list h2 strong {
-    font-size: 18px;
+    font-size: 4.34782609vw;
     font-weight: 600;
     color: #333;
 }
 
 .my-order-list h2 .btn-refresh {
-    width: 30px;
-    height: 30px;
+    width: 7.24637681vw;
+    height: 7.24637681vw;
     background: url("../../images/cokco/icon-reset.svg") no-repeat 50% 50%;
-    background-size: 30px auto;
-    margin-left: 7px;
+    background-size: 7.24637681vw auto;
+    margin-left: 1.69082126vw;
 }
 
 .my-order-list h2 .btn-refresh span {
@@ -4780,7 +4780,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 12px;
+    font-size: 2.89855072vw;
     color: #666;
     font-weight: 400;
 }
@@ -4798,25 +4798,25 @@ input[type="checkbox"] + label:before {
 }
 
 .my-order-list-wrap {
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .my-order-list-wrap.step-fix li:last-child:after {
     content: "";
     position: absolute;
-    top: 24px;
-    left: -8px;
-    width: 16px;
-    height: 16px;
+    top: 5.79710145vw;
+    left: -1.93236715vw;
+    width: 3.8647343vw;
+    height: 3.8647343vw;
     background: url("../../images/cokco/icon-bar.svg") no-repeat 50% 50%;
-    background-size: 16px auto;
+    background-size: 3.8647343vw auto;
 }
 
 .my-order-list-wrap ol {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 0 21px;
+    padding: 0 0 5.07246377vw;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
@@ -4845,12 +4845,12 @@ input[type="checkbox"] + label:before {
 .my-order-list-wrap li:after {
     content: "";
     position: absolute;
-    top: 24px;
-    left: -8px;
-    width: 16px;
-    height: 16px;
+    top: 5.79710145vw;
+    left: -1.93236715vw;
+    width: 3.8647343vw;
+    height: 3.8647343vw;
     background: url("../../images/cokco/icon-arrow-right.svg") no-repeat 50% 50%;
-    background-size: 16px auto;
+    background-size: 3.8647343vw auto;
 }
 
 .my-order-list-wrap li.current {
@@ -4861,9 +4861,9 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -12px;
-    width: 40px;
-    height: 40px;
+    bottom: -2.89855072vw;
+    width: 9.66183575vw;
+    height: 9.66183575vw;
     background-color: #fff5cf;
     border: solid 1px #ec7203;
     border-radius: 100%;
@@ -4887,17 +4887,17 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 64px;
-    font-size: 14px;
+    height: 15.4589372vw;
+    font-size: 3.38164251vw;
     color: #666;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 4.10628019vw;
 }
 
 .my-order-list-wrap .count {
     position: relative;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #666;
     font-weight: 400;
 }
@@ -4913,8 +4913,8 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    height: 50px;
-    padding: 0 16px;
+    height: 12.07729469vw;
+    padding: 0 3.8647343vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -4923,7 +4923,7 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 8px;
+    margin-left: 1.93236715vw;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -4931,8 +4931,8 @@ input[type="checkbox"] + label:before {
 
 .my-cancel .cancel-wrap .type,
 .my-cancel .cancel-wrap .count {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
 }
 
@@ -4960,34 +4960,34 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100px;
+    width: 24.15458937vw;
     position: relative;
 }
 
 .my-cancel .setPeriod label + label {
-    margin-left: 20px;
+    margin-left: 4.83091787vw;
 }
 
 .my-cancel .setPeriod label + label:before {
     content: "";
     position: absolute;
-    top: 2px;
-    left: -10px;
-    height: 26px;
-    width: 2px;
+    top: 0.48309179vw;
+    left: -2.41545894vw;
+    height: 6.28019324vw;
+    width: 0.48309179vw;
     background-color: #ccc;
 }
 
 .my-cancel .setPeriod label input {
     display: block;
     width: 100%;
-    height: 30px;
+    height: 7.24637681vw;
     border: solid 1px #ccc;
-    border-radius: 5px;
+    border-radius: 1.20772947vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
-    font-size: 12px;
+    font-size: 2.89855072vw;
     color: #333;
     font-weight: 400;
 }
@@ -4996,8 +4996,8 @@ input[type="checkbox"] + label:before {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    margin-left: 10px;
-    width: 30px;
+    margin-left: 2.41545894vw;
+    width: 7.24637681vw;
 }
 
 .my-cancel .setPeriod .link-calendar img {
@@ -5005,7 +5005,7 @@ input[type="checkbox"] + label:before {
 }
 
 .my-simple {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .my-simple h2 {
@@ -5018,21 +5018,21 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 16px;
-    height: 50px;
+    padding: 0 3.8647343vw;
+    height: 12.07729469vw;
     background-color: #fff;
     border-bottom: solid 1px #ccc;
 }
 
 .my-simple h2 strong {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 4.34782609vw;
+    line-height: 5.31400966vw;
     font-weight: 600;
 }
 
 .my-simple h2 a {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #666;
     font-weight: 400;
 }
@@ -5040,7 +5040,7 @@ input[type="checkbox"] + label:before {
 .my-simple .simple-list {
     background-color: #fff;
     border: 1px solid #ccc;
-    padding: 12px 16px 0;
+    padding: 2.89855072vw 3.8647343vw 0;
 }
 
 .my-simple .simple-list.list-float {
@@ -5048,19 +5048,19 @@ input[type="checkbox"] + label:before {
 }
 
 .my-simple .simple-list.list-float .simple-date {
-    padding-right: 70px;
-    padding-bottom: 17px;
+    padding-right: 16.90821256vw;
+    padding-bottom: 4.10628019vw;
 }
 
 .my-simple .simple-list.list-float .simple-date + .date-options {
     position: absolute;
-    right: 16px;
-    top: 55px;
+    right: 3.8647343vw;
+    top: 13.28502415vw;
     padding-top: 0;
 }
 
 .my-simple .simple-list + .simple-list {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .my-simple .simple-date > div:first-child {
@@ -5072,45 +5072,45 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    margin-top: 4px;
+    margin-top: 0.96618357vw;
 }
 
 .my-simple .simple-date span {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .my-simple .simple-date strong {
     white-space: nowrap;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 600;
 }
 
 .my-simple .simple-date .order-number em {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #ec7203;
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .my-simple .date-options {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 10px 0;
+    padding: 2.41545894vw 0;
 }
 
 .my-simple .date-options button {
-    height: 40px;
-    padding: 0 18px;
+    height: 9.66183575vw;
+    padding: 0 4.34782609vw;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-left: 10px;
+    border-radius: 1.20772947vw;
+    margin-left: 2.41545894vw;
 }
 
 .my-simple .date-options button:first-child {
@@ -5118,24 +5118,24 @@ input[type="checkbox"] + label:before {
 }
 
 .my-simple .date-options button span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #16284c;
 }
 
 .my-simple .simple-order {
     border-top: solid 1px #ccc;
-    padding-bottom: 10px;
+    padding-bottom: 2.41545894vw;
 }
 
 .my-simple .simple-order li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 10px;
+    padding-top: 2.41545894vw;
 }
 
 .my-simple .simple-order li + li {
-    padding-top: 20px;
+    padding-top: 4.83091787vw;
 }
 
 .my-simple .simple-order a {
@@ -5145,8 +5145,8 @@ input[type="checkbox"] + label:before {
 }
 
 .my-simple .simple-order a .left {
-    width: 80px;
-    margin-right: 20px;
+    width: 19.3236715vw;
+    margin-right: 4.83091787vw;
 }
 
 .my-simple .simple-order a .right {
@@ -5160,8 +5160,8 @@ input[type="checkbox"] + label:before {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 80px;
-    border-radius: 10px;
+    height: 19.3236715vw;
+    border-radius: 2.41545894vw;
 }
 
 .my-simple .simple-order .img-wrap:before {
@@ -5169,7 +5169,7 @@ input[type="checkbox"] + label:before {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ddd;
@@ -5195,7 +5195,7 @@ input[type="checkbox"] + label:before {
 }
 
 .my-simple .simple-order .order-category + .name {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .my-simple .simple-order .name,
@@ -5206,8 +5206,8 @@ input[type="checkbox"] + label:before {
 .my-simple .simple-order .order-category,
 .my-simple .simple-order .name,
 .my-simple .simple-order .count {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #333;
 }
 
@@ -5215,45 +5215,45 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 16px;
+    margin-top: 3.8647343vw;
 }
 
 .my-simple .simple-order .price-type,
 .my-simple .simple-order em {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 600;
     color: #333;
 }
 
 .my-simple .simple-order .count + .price-type {
-    margin-left: 8px;
+    margin-left: 1.93236715vw;
 }
 
 .my-simple .simple-order .price-type + em {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .my-simple .simple-order .product-review {
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .my-simple .simple-order .btn-review {
-    height: 30px;
-    padding: 0 13px;
-    border-radius: 5px;
+    height: 7.24637681vw;
+    padding: 0 3.14009662vw;
+    border-radius: 1.20772947vw;
     border: 1px solid #ccc;
 }
 
 .my-simple .simple-order .btn-review span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
     color: #16284c;
     white-space: nowrap;
 }
 
 .my-link {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
     background-color: #fff;
     border: solid 1px #ddd;
     border-bottom: none;
@@ -5276,13 +5276,13 @@ input[type="checkbox"] + label:before {
     display: flex;
     width: 100%;
     position: relative;
-    height: 40px;
+    height: 9.66183575vw;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     color: #666;
-    font-size: 16px;
+    font-size: 3.8647343vw;
     font-weight: 500;
 }
 
@@ -5294,11 +5294,11 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     top: 50%;
-    right: 16px;
-    width: 20px;
-    height: 20px;
+    right: 3.8647343vw;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom.svg") 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%) rotate(-90deg);
     transform: translateY(-50%) rotate(-90deg);
 }
@@ -5311,18 +5311,18 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 16px;
-    width: calc(100% - 32px);
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
 }
 
 .my-recent-item .recommend-item-wrapper {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .my-cancel-tab {
-    margin-top: -10px;
+    margin-top: -2.41545894vw;
 }
 
 .my-cancel-tab ul {
@@ -5359,14 +5359,14 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
-    height: 40px;
+    height: 9.66183575vw;
     color: #666;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     font-weight: 400;
 }
 
 .my-simple-item {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
     background-color: #fff;
 }
 
@@ -5374,15 +5374,15 @@ input[type="checkbox"] + label:before {
     position: relative;
     margin-top: 0;
     border-top: none;
-    margin-bottom: 10px;
+    margin-bottom: 2.41545894vw;
 }
 
 .my-simple-item .title-more:after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 16px;
-    width: calc(100% - 32px);
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
 }
@@ -5403,8 +5403,8 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
-    height: 40px;
-    padding: 5px 16px 0;
+    height: 9.66183575vw;
+    padding: 1.20772947vw 3.8647343vw 0;
     background-color: #fff;
 }
 
@@ -5414,7 +5414,7 @@ input[type="checkbox"] + label:before {
     left: 0;
     top: 0;
     width: 100%;
-    height: 4px;
+    height: 0.96618357vw;
     background-color: #f4f4f4;
     border-top: solid 1px #c4c4c4;
 }
@@ -5426,31 +5426,31 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
 
 .cart-check .btn-delete {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
     background: url("../../images/cokco/icon-img-delete.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .cart-check .btn-delete span {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
 
 .cart-product {
     background-color: #fff;
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
     border: solid 1px #ccc;
 }
 
 .cart-product + .cart-product {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .cart-info {
@@ -5470,8 +5470,8 @@ input[type="checkbox"] + label:before {
 }
 
 .cart-info > a .left {
-    width: 80px;
-    margin-right: 20px;
+    width: 19.3236715vw;
+    margin-right: 4.83091787vw;
 }
 
 .cart-info > a .right {
@@ -5485,8 +5485,8 @@ input[type="checkbox"] + label:before {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 80px;
-    border-radius: 10px;
+    height: 19.3236715vw;
+    border-radius: 2.41545894vw;
 }
 
 .cart-info .img-wrap:before {
@@ -5494,7 +5494,7 @@ input[type="checkbox"] + label:before {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ddd;
@@ -5520,7 +5520,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cart-info .cart-category + .name {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .cart-info .name {
@@ -5529,8 +5529,8 @@ input[type="checkbox"] + label:before {
 
 .cart-info .cart-category,
 .cart-info .name {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #333;
 }
 
@@ -5538,24 +5538,24 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 16px;
+    margin-top: 3.8647343vw;
 }
 
 .cart-info .price-type,
 .cart-info em {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 400;
     color: #333;
 }
 
 .cart-info .price-type + em {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .cart-info .cart-product-check {
-    width: 16px;
-    margin-left: 10px;
+    width: 3.8647343vw;
+    margin-left: 2.41545894vw;
 }
 
 .cart-info .cart-product-check label span {
@@ -5582,10 +5582,10 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 10px 10px 6px;
+    padding: 2.41545894vw 2.41545894vw 1.44927536vw;
     background-color: #f8f8f8;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 2.41545894vw;
+    margin-top: 2.41545894vw;
 }
 
 .cart-option-wrap {
@@ -5609,8 +5609,8 @@ input[type="checkbox"] + label:before {
 
 .cart-option-block .option-title,
 .cart-option-block .option-price {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #999;
     font-weight: 400;
 }
@@ -5621,23 +5621,23 @@ input[type="checkbox"] + label:before {
 }
 
 .cart-option-block + .cart-option-block {
-    margin-top: 3px;
+    margin-top: 0.72463768vw;
 }
 
 .cart-option .btn-option-modify {
-    height: 40px;
-    padding: 0 12px;
-    border-radius: 5px;
+    height: 9.66183575vw;
+    padding: 0 2.89855072vw;
+    border-radius: 1.20772947vw;
     border: 1px solid #ccc;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #fff;
-    margin-right: 10px;
+    margin-right: 2.41545894vw;
 }
 
 .cart-option .btn-option-modify span {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #16284c;
     font-weight: 400;
 }
@@ -5646,7 +5646,7 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 6px;
+    margin-top: 1.44927536vw;
     width: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -5658,14 +5658,14 @@ input[type="checkbox"] + label:before {
 
 .cart-option-total strong,
 .cart-option-total em {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 600;
     color: #333;
 }
 
 .cart-option-modify {
-    padding: 20px 16px;
+    padding: 4.83091787vw 3.8647343vw;
     border: 1px solid #ccc;
 }
 
@@ -5689,8 +5689,8 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    height: 40px;
-    padding-left: 12px;
+    height: 9.66183575vw;
+    padding-left: 2.89855072vw;
 }
 
 .cart-option-modify .selected li:last-child {
@@ -5699,24 +5699,24 @@ input[type="checkbox"] + label:before {
 
 .cart-option-modify .selected .title,
 .cart-option-modify .selected .price {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
 }
 
 .cart-option-modify .selected .price {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
 }
 
 .cart-option-modify .selected .btn-delete {
     position: absolute;
     top: 50%;
     right: 0;
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -5737,7 +5737,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cart-option-modify .cart-option-total {
-    margin-top: 13px;
+    margin-top: 3.14009662vw;
 }
 
 .cart-option-modify-buttons {
@@ -5747,19 +5747,19 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .cart-option-modify-buttons button {
-    width: 180px;
-    height: 55px;
-    border-radius: 10px;
+    width: 43.47826087vw;
+    height: 13.28502415vw;
+    border-radius: 2.41545894vw;
 }
 
 .cart-option-modify-buttons button span {
     color: #fff;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 3.8647343vw;
     pointer-events: none;
 }
 
@@ -5780,12 +5780,12 @@ input[type="checkbox"] + label:before {
     align-items: center;
     position: relative;
     width: 100%;
-    padding: 10px 0;
+    padding: 2.41545894vw 0;
     border-bottom: solid 1px #ccc;
 }
 
 .cart-option-quantity + .option-item-wrap {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .cart-option-quantity .quantity {
@@ -5793,7 +5793,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cart-option-quantity .price {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
 }
 
 .cart-option-quantity .price-wrap {
@@ -5813,13 +5813,13 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding-left: 20px;
+    padding-left: 4.83091787vw;
 }
 
 .cart-option-quantity .price,
 .cart-option-quantity .count {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
 }
@@ -5828,10 +5828,10 @@ input[type="checkbox"] + label:before {
     position: absolute;
     right: 0;
     top: 50%;
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -5852,20 +5852,20 @@ input[type="checkbox"] + label:before {
 }
 
 .cart-option-all {
-    margin-top: 7px;
-    padding: 13px 16px 11px;
+    margin-top: 1.69082126vw;
+    padding: 3.14009662vw 3.8647343vw 2.65700483vw;
     background-color: #fff;
 }
 
 .cart-option-all .cart-option-total {
-    margin-top: 15px;
+    margin-top: 3.62318841vw;
     border-top: solid 1px #ccc;
-    padding: 13px 0 8px;
+    padding: 3.14009662vw 0 1.93236715vw;
 }
 
 .wish-wrap {
     background-color: #f4f4f4;
-    padding-top: 4px;
+    padding-top: 0.96618357vw;
 }
 
 .wish-title {
@@ -5875,24 +5875,24 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    height: 54px;
+    height: 13.04347826vw;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     background-color: #fff;
     border-bottom: solid 1px #ccc;
 }
 
 .wish-title .btn-cart {
-    height: 30px;
-    padding-right: 40px;
+    height: 7.24637681vw;
+    padding-right: 9.66183575vw;
     background: url("../../images/cokco/icon-cart-circle.svg") no-repeat 100% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 .wish-title .btn-cart span {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
@@ -5908,8 +5908,8 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
-    height: 40px;
-    padding: 0 16px;
+    height: 9.66183575vw;
+    padding: 0 3.8647343vw;
     background-color: #fff;
 }
 
@@ -5920,26 +5920,26 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
 
 .wish-check .btn-delete {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
     background: url("../../images/cokco/icon-img-delete.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .wish-check .btn-delete span {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
 
 .wish-product {
     background-color: #fff;
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
     border: solid 1px #ccc;
 }
 
@@ -5955,7 +5955,7 @@ input[type="checkbox"] + label:before {
 }
 
 .wish-product + .wish-product {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .wish-info {
@@ -5975,8 +5975,8 @@ input[type="checkbox"] + label:before {
 }
 
 .wish-info > a .left {
-    width: 80px;
-    margin-right: 20px;
+    width: 19.3236715vw;
+    margin-right: 4.83091787vw;
 }
 
 .wish-info > a .right {
@@ -5990,8 +5990,8 @@ input[type="checkbox"] + label:before {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 80px;
-    border-radius: 10px;
+    height: 19.3236715vw;
+    border-radius: 2.41545894vw;
 }
 
 .wish-info .img-wrap:before {
@@ -5999,7 +5999,7 @@ input[type="checkbox"] + label:before {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ddd;
@@ -6025,7 +6025,7 @@ input[type="checkbox"] + label:before {
 }
 
 .wish-info .wish-category + .name {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .wish-info .name {
@@ -6034,8 +6034,8 @@ input[type="checkbox"] + label:before {
 
 .wish-info .wish-category,
 .wish-info .name {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #333;
 }
 
@@ -6043,19 +6043,19 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 16px;
+    margin-top: 3.8647343vw;
 }
 
 .wish-info .price-type,
 .wish-info em {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 400;
     color: #333;
 }
 
 .wish-info .price-type + em {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .wish-info .wish-product-check {
@@ -6069,8 +6069,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 16px;
-    margin-left: 10px;
+    width: 3.8647343vw;
+    margin-left: 2.41545894vw;
 }
 
 .wish-info .wish-product-check label span {
@@ -6088,10 +6088,10 @@ input[type="checkbox"] + label:before {
 }
 
 .wish-info .btn-option-toggle {
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .wish-info .btn-option-toggle span {
@@ -6117,10 +6117,10 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 10px 10px 6px;
+    padding: 2.41545894vw 2.41545894vw 1.44927536vw;
     background-color: #f8f8f8;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 2.41545894vw;
+    margin-top: 2.41545894vw;
 }
 
 .wish-option-wrap {
@@ -6144,8 +6144,8 @@ input[type="checkbox"] + label:before {
 
 .wish-option-block .option-title,
 .wish-option-block .option-price {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #999;
     font-weight: 400;
 }
@@ -6156,23 +6156,23 @@ input[type="checkbox"] + label:before {
 }
 
 .wish-option-block + .cart-option-block {
-    margin-top: 3px;
+    margin-top: 0.72463768vw;
 }
 
 .wish-option .btn-option-modify {
-    height: 40px;
-    padding: 0 12px;
-    border-radius: 5px;
+    height: 9.66183575vw;
+    padding: 0 2.89855072vw;
+    border-radius: 1.20772947vw;
     border: 1px solid #ccc;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #fff;
-    margin-right: 10px;
+    margin-right: 2.41545894vw;
 }
 
 .wish-option .btn-option-modify span {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #16284c;
     font-weight: 400;
 }
@@ -6181,7 +6181,7 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 6px;
+    margin-top: 1.44927536vw;
     width: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -6193,14 +6193,14 @@ input[type="checkbox"] + label:before {
 
 .wish-option-total strong,
 .wish-option-total em {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 600;
     color: #333;
 }
 
 .wish-option-modify {
-    padding: 20px 16px;
+    padding: 4.83091787vw 3.8647343vw;
     border: 1px solid #ccc;
 }
 
@@ -6224,8 +6224,8 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    height: 40px;
-    padding-left: 12px;
+    height: 9.66183575vw;
+    padding-left: 2.89855072vw;
 }
 
 .wish-option-modify .selected li:last-child {
@@ -6234,24 +6234,24 @@ input[type="checkbox"] + label:before {
 
 .wish-option-modify .selected .title,
 .wish-option-modify .selected .price {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
 }
 
 .wish-option-modify .selected .price {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
 }
 
 .wish-option-modify .selected .btn-delete {
     position: absolute;
     top: 50%;
     right: 0;
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -6272,7 +6272,7 @@ input[type="checkbox"] + label:before {
 }
 
 .wish-option-modify .wish-option-total {
-    margin-top: 13px;
+    margin-top: 3.14009662vw;
 }
 
 .wish-option-modify-buttons {
@@ -6282,19 +6282,19 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .wish-option-modify-buttons button {
-    width: 180px;
-    height: 55px;
-    border-radius: 10px;
+    width: 43.47826087vw;
+    height: 13.28502415vw;
+    border-radius: 2.41545894vw;
 }
 
 .wish-option-modify-buttons button span {
     color: #fff;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 3.8647343vw;
     pointer-events: none;
 }
 
@@ -6315,12 +6315,12 @@ input[type="checkbox"] + label:before {
     align-items: center;
     position: relative;
     width: 100%;
-    padding: 10px 0;
+    padding: 2.41545894vw 0;
     border-bottom: solid 1px #ccc;
 }
 
 .wish-option-quantity + .option-item-wrap {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .wish-option-quantity .quantity {
@@ -6328,7 +6328,7 @@ input[type="checkbox"] + label:before {
 }
 
 .wish-option-quantity .price {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
 }
 
 .wish-option-quantity .price-wrap {
@@ -6348,13 +6348,13 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding-left: 20px;
+    padding-left: 4.83091787vw;
 }
 
 .wish-option-quantity .price,
 .wish-option-quantity .count {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
 }
@@ -6363,10 +6363,10 @@ input[type="checkbox"] + label:before {
     position: absolute;
     right: 0;
     top: 50%;
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -6387,20 +6387,20 @@ input[type="checkbox"] + label:before {
 }
 
 .wish-option-all {
-    margin-top: 7px;
-    padding: 13px 16px 11px;
+    margin-top: 1.69082126vw;
+    padding: 3.14009662vw 3.8647343vw 2.65700483vw;
     background-color: #fff;
 }
 
 .wish-option-all .wish-option-total {
-    margin-top: 15px;
+    margin-top: 3.62318841vw;
     border-top: solid 1px #ccc;
-    padding: 13px 0 8px;
+    padding: 3.14009662vw 0 1.93236715vw;
 }
 
 .toggle-wrap {
     background-color: #f4f4f4;
-    padding-top: 4px;
+    padding-top: 0.96618357vw;
 }
 
 .toggle-title {
@@ -6410,24 +6410,24 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    height: 54px;
+    height: 13.04347826vw;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     background-color: #fff;
     border-bottom: solid 1px #ccc;
 }
 
 .toggle-title .btn-cart {
-    height: 30px;
-    padding-right: 40px;
+    height: 7.24637681vw;
+    padding-right: 9.66183575vw;
     background: url("../../images/cokco/icon-cart-circle.svg") no-repeat 100% 50%;
-    background-size: 30px auto;
+    background-size: 7.24637681vw auto;
 }
 
 .toggle-title .btn-cart span {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
@@ -6443,8 +6443,8 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
-    height: 40px;
-    padding: 0 16px;
+    height: 9.66183575vw;
+    padding: 0 3.8647343vw;
     background-color: #fff;
 }
 
@@ -6455,26 +6455,26 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
 
 .toggle-check .btn-delete {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
     background: url("../../images/cokco/icon-img-delete.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .toggle-check .btn-delete span {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
 
 .toggle-product {
     background-color: #fff;
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
     border: solid 1px #ccc;
 }
 
@@ -6490,7 +6490,7 @@ input[type="checkbox"] + label:before {
 }
 
 .toggle-product + .toggle-product {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .toggle-info {
@@ -6510,8 +6510,8 @@ input[type="checkbox"] + label:before {
 }
 
 .toggle-info > a .left {
-    width: 80px;
-    margin-right: 20px;
+    width: 19.3236715vw;
+    margin-right: 4.83091787vw;
 }
 
 .toggle-info > a .right {
@@ -6525,8 +6525,8 @@ input[type="checkbox"] + label:before {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 80px;
-    border-radius: 10px;
+    height: 19.3236715vw;
+    border-radius: 2.41545894vw;
 }
 
 .toggle-info .img-wrap:before {
@@ -6534,7 +6534,7 @@ input[type="checkbox"] + label:before {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ddd;
@@ -6560,7 +6560,7 @@ input[type="checkbox"] + label:before {
 }
 
 .toggle-info .toggle-category + .name {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .toggle-info .name {
@@ -6569,8 +6569,8 @@ input[type="checkbox"] + label:before {
 
 .toggle-info .toggle-category,
 .toggle-info .name {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #333;
 }
 
@@ -6578,19 +6578,19 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 16px;
+    margin-top: 3.8647343vw;
 }
 
 .toggle-info .price-type,
 .toggle-info em {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 400;
     color: #333;
 }
 
 .toggle-info .price-type + em {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .toggle-info .toggle-product-check {
@@ -6607,8 +6607,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-    width: 16px;
-    margin-left: 10px;
+    width: 3.8647343vw;
+    margin-left: 2.41545894vw;
 }
 
 .toggle-info .toggle-product-check label span {
@@ -6626,10 +6626,10 @@ input[type="checkbox"] + label:before {
 }
 
 .toggle-info .btn-option-toggle {
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .toggle-info .btn-option-toggle span {
@@ -6655,10 +6655,10 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 10px 10px 6px;
+    padding: 2.41545894vw 2.41545894vw 1.44927536vw;
     background-color: #f8f8f8;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 2.41545894vw;
+    margin-top: 2.41545894vw;
 }
 
 .toggle-option-wrap {
@@ -6682,8 +6682,8 @@ input[type="checkbox"] + label:before {
 
 .toggle-option-block .option-title,
 .toggle-option-block .option-price {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #999;
     font-weight: 400;
 }
@@ -6694,23 +6694,23 @@ input[type="checkbox"] + label:before {
 }
 
 .toggle-option-block + .cart-option-block {
-    margin-top: 3px;
+    margin-top: 0.72463768vw;
 }
 
 .toggle-option .btn-option-modify {
-    height: 40px;
-    padding: 0 12px;
-    border-radius: 5px;
+    height: 9.66183575vw;
+    padding: 0 2.89855072vw;
+    border-radius: 1.20772947vw;
     border: 1px solid #ccc;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #fff;
-    margin-right: 10px;
+    margin-right: 2.41545894vw;
 }
 
 .toggle-option .btn-option-modify span {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #16284c;
     font-weight: 400;
 }
@@ -6730,14 +6730,14 @@ input[type="checkbox"] + label:before {
 
 .toggle-option-total strong,
 .toggle-option-total em {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #999;
     font-weight: 400;
 }
 
 .toggle-option-modify {
-    padding: 20px 16px;
+    padding: 4.83091787vw 3.8647343vw;
     border: 1px solid #ccc;
 }
 
@@ -6761,8 +6761,8 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    height: 40px;
-    padding-left: 12px;
+    height: 9.66183575vw;
+    padding-left: 2.89855072vw;
 }
 
 .toggle-option-modify .selected li:last-child {
@@ -6771,24 +6771,24 @@ input[type="checkbox"] + label:before {
 
 .toggle-option-modify .selected .title,
 .toggle-option-modify .selected .price {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
 }
 
 .toggle-option-modify .selected .price {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
 }
 
 .toggle-option-modify .selected .btn-delete {
     position: absolute;
     top: 50%;
     right: 0;
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -6809,7 +6809,7 @@ input[type="checkbox"] + label:before {
 }
 
 .toggle-option-modify .toggle-option-total {
-    margin-top: 13px;
+    margin-top: 3.14009662vw;
 }
 
 .toggle-option-modify-buttons {
@@ -6819,19 +6819,19 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .toggle-option-modify-buttons button {
-    width: 180px;
-    height: 55px;
-    border-radius: 10px;
+    width: 43.47826087vw;
+    height: 13.28502415vw;
+    border-radius: 2.41545894vw;
 }
 
 .toggle-option-modify-buttons button span {
     color: #fff;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 3.8647343vw;
     pointer-events: none;
 }
 
@@ -6852,12 +6852,12 @@ input[type="checkbox"] + label:before {
     align-items: center;
     position: relative;
     width: 100%;
-    padding: 10px 0;
+    padding: 2.41545894vw 0;
     border-bottom: solid 1px #ccc;
 }
 
 .toggle-option-quantity + .option-item-wrap {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .toggle-option-quantity .quantity {
@@ -6865,7 +6865,7 @@ input[type="checkbox"] + label:before {
 }
 
 .toggle-option-quantity .price {
-    padding-right: 20px;
+    padding-right: 4.83091787vw;
 }
 
 .toggle-option-quantity .price-wrap {
@@ -6885,13 +6885,13 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding-left: 20px;
+    padding-left: 4.83091787vw;
 }
 
 .toggle-option-quantity .price,
 .toggle-option-quantity .count {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #333;
 }
@@ -6900,10 +6900,10 @@ input[type="checkbox"] + label:before {
     position: absolute;
     right: 0;
     top: 50%;
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -6924,15 +6924,15 @@ input[type="checkbox"] + label:before {
 }
 
 .toggle-option-all {
-    margin-top: 7px;
-    padding: 13px 16px 11px;
+    margin-top: 1.69082126vw;
+    padding: 3.14009662vw 3.8647343vw 2.65700483vw;
     background-color: #fff;
 }
 
 .toggle-option-all .toggle-option-total {
-    margin-top: 15px;
+    margin-top: 3.62318841vw;
     border-top: solid 1px #ccc;
-    padding: 13px 0 8px;
+    padding: 3.14009662vw 0 1.93236715vw;
 }
 
 /* popup */
@@ -6987,22 +6987,22 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 12.07729469vw;
     color: #fff;
-    font-size: 20px;
+    font-size: 4.83091787vw;
     font-weight: 400;
 }
 
 .cokco-full h1 .btn-close {
     position: absolute;
-    right: 13px;
+    right: 3.14009662vw;
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 38px;
-    height: 38px;
+    width: 9.17874396vw;
+    height: 9.17874396vw;
     background: url("../../images/cokco/icon-popup-close.svg") no-repeat 50% 50%;
-    background-size: 38px auto;
+    background-size: 9.17874396vw auto;
 }
 
 .cokco-full h1 .btn-close span {
@@ -7029,14 +7029,14 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 20px 16px;
+    padding: 4.83091787vw 3.8647343vw;
 }
 
 .cokco-full .inquire-type strong {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding-top: 13px;
+    padding-top: 3.14009662vw;
 }
 
 .cokco-full .option-item {
@@ -7044,7 +7044,7 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 15px 0 13px;
+    padding: 0 3.62318841vw 0 3.14009662vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
@@ -7057,19 +7057,19 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .option-item > span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #333;
     font-weight: 400;
     pointer-events: none;
 }
 
 .cokco-full .option-item .name {
-    width: 150px;
+    width: 36.23188406vw;
     text-align: left;
 }
 
 .cokco-full .option-item-wrap {
-    width: 300px;
+    width: 72.46376812vw;
 }
 
 .cokco-full .option-item-wrap.on .btn-current span:after {
@@ -7085,15 +7085,15 @@ input[type="checkbox"] + label:before {
     display: none;
     background-color: #f8f8f8;
     border: solid 1px #ccc;
-    padding: 16px 0;
+    padding: 3.8647343vw 0;
 }
 
 .cokco-fulls {
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
 }
 
 .cokco-fulls .detail-block {
-    padding: 10px 0;
+    padding: 2.41545894vw 0;
     border-bottom: solid 1px #ccc;
 }
 
@@ -7102,26 +7102,26 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-fulls .detail-block + .detail-block:last-child > .title {
-    padding-top: 3px;
+    padding-top: 0.72463768vw;
 }
 
 .cokco-fulls .detail-block + .detail-block > .title {
-    padding-top: 10px;
+    padding-top: 2.41545894vw;
 }
 
 .cokco-full .btn-current {
     position: relative;
     width: 100%;
-    height: 40px;
+    height: 9.66183575vw;
     text-align: left;
-    padding: 0 40px 0 13px;
+    padding: 0 9.66183575vw 0 3.14009662vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ccc;
 }
 
 .cokco-full .btn-current span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #666;
     font-weight: 400;
     pointer-events: none;
@@ -7131,35 +7131,35 @@ input[type="checkbox"] + label:before {
     content: "";
     position: absolute;
     top: 50%;
-    right: 10px;
-    width: 20px;
-    height: 20px;
+    right: 2.41545894vw;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
 .cokco-full .input-text {
     position: relative;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .cokco-full .input-textarea {
-    margin-top: 8px;
+    margin-top: 1.93236715vw;
 }
 
 .cokco-full .input-textarea textarea {
     display: block;
     width: 100%;
-    height: 200px;
+    height: 48.30917874vw;
     resize: none;
     border: solid 1px #ccc;
-    padding: 17px 15px;
+    padding: 4.10628019vw 3.62318841vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
 }
 
@@ -7193,16 +7193,16 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .input-title span {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
 
 .cokco-full .input-secret {
     position: absolute;
-    right: 16px;
-    bottom: -30px;
+    right: 3.8647343vw;
+    bottom: -7.24637681vw;
 }
 
 .cokco-full .input-secret label {
@@ -7212,15 +7212,15 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #666;
     font-weight: 500;
 }
 
 .cokco-full .upload-img {
-    padding: 0 16px;
-    margin-top: 10px;
+    padding: 0 3.8647343vw;
+    margin-top: 2.41545894vw;
 }
 
 .cokco-full .upload-img .uploads {
@@ -7230,17 +7230,17 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .upload-img .btn-upload-img {
-    width: 80px;
-    height: 80px;
-    padding-top: 58px;
+    width: 19.3236715vw;
+    height: 19.3236715vw;
+    padding-top: 14.00966184vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #ddd url("../../images/cokco/icon-img-plus.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .cokco-full .upload-img .btn-upload-img span {
-    font-size: 10px;
+    font-size: 2.41545894vw;
     color: #666;
     font-weight: 400;
 }
@@ -7250,24 +7250,24 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 19.3236715vw;
+    height: 19.3236715vw;
 }
 
 .cokco-full .upload-item .btn-img-delete {
     position: absolute;
-    top: 24px;
-    left: 24px;
-    width: 32px;
+    top: 5.79710145vw;
+    left: 5.79710145vw;
+    width: 7.7294686vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-top: 32px;
+    padding-top: 7.7294686vw;
     background: url("../../images/cokco/icon-img-delete-box.svg") no-repeat 50% 0;
-    background-size: 32px auto;
+    background-size: 7.7294686vw auto;
 }
 
 .cokco-full .upload-item .btn-img-delete span {
-    font-size: 10px;
+    font-size: 2.41545894vw;
     color: #666;
     font-weight: 400;
 }
@@ -7275,8 +7275,8 @@ input[type="checkbox"] + label:before {
 .cokco-full .upload-img-wrap {
     display: block;
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 19.3236715vw;
+    height: 19.3236715vw;
 }
 
 .cokco-full .upload-img-wrap img {
@@ -7293,22 +7293,22 @@ input[type="checkbox"] + label:before {
     position: sticky;
     bottom: 0;
     z-index: 10;
-    height: 70px;
+    height: 16.90821256vw;
     background-color: #fff;
-    padding: 0 16px calc(constant(safe-area-inset-bottom));
-    padding: 0 16px calc(env(safe-area-inset-bottom));
+    padding: 0 3.8647343vw calc(constant(safe-area-inset-bottom));
+    padding: 0 3.8647343vw calc(env(safe-area-inset-bottom));
 }
 
 .cokco-full .full-fix .btn-confirm {
     width: 100%;
-    height: 50px;
+    height: 12.07729469vw;
     background-color: #16284c;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 2.41545894vw;
+    margin-top: 2.41545894vw;
 }
 
 .cokco-full .full-fix .btn-confirm span {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #fff;
     font-weight: 600;
 }
@@ -7321,33 +7321,33 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    padding: 26px 16px 7px;
+    padding: 6.28019324vw 3.8647343vw 1.69082126vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .cokco-full .review-category {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 600;
 }
 
 .cokco-full .review-category + .review-title {
-    padding-left: 11px;
+    padding-left: 2.65700483vw;
 }
 
 .cokco-full .review-title {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #333;
     font-weight: 400;
 }
 
 .cokco-full .review-option {
-    padding: 0 16px 12px;
-    font-size: 14px;
+    padding: 0 3.8647343vw 2.89855072vw;
+    font-size: 3.38164251vw;
     color: #333;
     font-weight: 400;
 }
@@ -7358,18 +7358,18 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-wrap .btn-point,
 .cokco-full .order-wrap .btn-coupon {
-    height: 40px;
-    padding: 0 17px;
-    border-radius: 5px;
+    height: 9.66183575vw;
+    padding: 0 4.10628019vw;
+    border-radius: 1.20772947vw;
     border: solid 1px #ccc;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .cokco-full .order-wrap .btn-point span,
 .cokco-full .order-wrap .btn-coupon span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #16284c;
     font-weight: 400;
     pointer-events: none;
@@ -7382,21 +7382,21 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: calc(100% - 118px);
-    margin: 10px 0 0 96px;
+    width: calc(100% - 28.50241546vw);
+    margin: 2.41545894vw 0 0 23.1884058vw;
 }
 
 .cokco-full .order-wrap .form-notice strong,
 .cokco-full .order-wrap .form-notice em {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
 
 .cokco-full .order-wrap .form-notice p {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #999;
     font-weight: 400;
 }
@@ -7404,29 +7404,29 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-product {
     position: relative;
     background-color: #fff;
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
     border: solid 1px #ccc;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .cokco-full .order-product:first-child {
-    margin-top: 14px;
+    margin-top: 3.38164251vw;
 }
 
 .cokco-full .order-product:first-child:before {
     content: "";
     position: absolute;
     left: 0;
-    top: -14px;
+    top: -3.38164251vw;
     width: 100%;
-    height: 12px;
+    height: 2.89855072vw;
     background-color: #f4f4f4;
     border-top: solid 1px #c4c4c4;
 }
 
 .cokco-full .order-product + .order-product {
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
 }
 
 .cokco-full .order-info {
@@ -7455,8 +7455,8 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-info > a .left {
-    width: 80px;
-    margin-right: 20px;
+    width: 19.3236715vw;
+    margin-right: 4.83091787vw;
 }
 
 .cokco-full .order-info > a .right {
@@ -7470,8 +7470,8 @@ input[type="checkbox"] + label:before {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 80px;
-    border-radius: 10px;
+    height: 19.3236715vw;
+    border-radius: 2.41545894vw;
 }
 
 .cokco-full .order-info .img-wrap:before {
@@ -7479,7 +7479,7 @@ input[type="checkbox"] + label:before {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ddd;
@@ -7505,7 +7505,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-info .order-category + .name {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .cokco-full .order-info .name,
@@ -7516,8 +7516,8 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-info .order-category,
 .cokco-full .order-info .name,
 .cokco-full .order-info .count {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #333;
 }
 
@@ -7525,23 +7525,23 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 16px;
+    margin-top: 3.8647343vw;
 }
 
 .cokco-full .order-info .price-type,
 .cokco-full .order-info em {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 600;
     color: #333;
 }
 
 .cokco-full .order-info .count + .price-type {
-    margin-left: 8px;
+    margin-left: 1.93236715vw;
 }
 
 .cokco-full .order-info .price-type + em {
-    margin-left: 4px;
+    margin-left: 0.96618357vw;
 }
 
 .cokco-full .order-product-toggle {
@@ -7551,15 +7551,15 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-    width: 20px;
-    margin-left: 10px;
+    width: 4.83091787vw;
+    margin-left: 2.41545894vw;
 }
 
 .cokco-full .order-product-toggle .btn-option-toggle {
-    width: 20px;
-    height: 20px;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 4.83091787vw auto;
 }
 
 .cokco-full .order-product-toggle .btn-option-toggle span {
@@ -7578,9 +7578,9 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-option {
-    margin-top: 10px;
-    padding: 13px 14px 10px;
-    border-radius: 10px;
+    margin-top: 2.41545894vw;
+    padding: 3.14009662vw 3.38164251vw 2.41545894vw;
+    border-radius: 2.41545894vw;
     background-color: #f8f8f8;
 }
 
@@ -7594,20 +7594,20 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-option-block + .order-option-block {
-    margin-top: 3px;
+    margin-top: 0.72463768vw;
 }
 
 .cokco-full .order-option-block .option-title,
 .cokco-full .order-option-block .option-price {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #999;
     font-weight: 400;
 }
 
 .cokco-full .order-form {
-    margin-top: 10px;
-    padding-bottom: 9px;
+    margin-top: 2.41545894vw;
+    padding-bottom: 2.17391304vw;
     border: solid 1px #ccc;
     background-color: #fff;
 }
@@ -7621,12 +7621,12 @@ input[type="checkbox"] + label:before {
     align-items: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     width: 100%;
-    height: 54px;
+    height: 13.04347826vw;
     font-weight: 600;
     color: #16284c;
-    font-size: 18px;
+    font-size: 4.34782609vw;
 }
 
 .cokco-full .order-form h2 + .form-wrap {
@@ -7651,7 +7651,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-form .time-wrap .option-item-wrap {
-    width: 90px;
+    width: 21.73913043vw;
 }
 
 .cokco-full .order-form .time-wrap .option-items {
@@ -7659,21 +7659,21 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-form .time-wrap .btn-current {
-    height: 30px;
-    padding: 0 20px 0 12px;
-    border-radius: 5px;
+    height: 7.24637681vw;
+    padding: 0 4.83091787vw 0 2.89855072vw;
+    border-radius: 1.20772947vw;
 }
 
 .cokco-full .order-form .time-wrap .btn-current span {
-    font-size: 12px;
+    font-size: 2.89855072vw;
     white-space: nowrap;
 }
 
 .cokco-full .order-form .time-wrap .btn-current span:after {
-    right: 5px;
-    width: 20px;
-    height: 20px;
-    background-size: 20px auto;
+    right: 1.20772947vw;
+    width: 4.83091787vw;
+    height: 4.83091787vw;
+    background-size: 4.83091787vw auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -7695,22 +7695,22 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-discount h2 + .form-wrap {
-    padding-top: 10px;
+    padding-top: 2.41545894vw;
     margin-top: 0;
 }
 
 .cokco-full .order-discount .form-wrap {
     position: relative;
-    padding-top: 10px;
-    margin-top: 10px;
+    padding-top: 2.41545894vw;
+    margin-top: 2.41545894vw;
 }
 
 .cokco-full .order-discount .form-wrap:before {
     content: "";
     position: absolute;
     top: 0;
-    left: 16px;
-    width: calc(100% - 32px);
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
 }
@@ -7723,16 +7723,16 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
-    padding: 13px 16px 16px;
-    margin-top: 10px;
+    padding: 3.14009662vw 3.8647343vw 3.8647343vw;
+    margin-top: 2.41545894vw;
 }
 
 .cokco-full .order-total:before {
     content: "";
     position: absolute;
     top: 0;
-    left: 16px;
-    width: calc(100% - 32px);
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
 }
@@ -7740,8 +7740,8 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-total strong,
 .cokco-full .order-total em {
     font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     color: #333;
 }
 
@@ -7753,7 +7753,7 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
-    padding: 0 16px 13px;
+    padding: 0 3.8647343vw 3.14009662vw;
 }
 
 .cokco-full .order-agreement label {
@@ -7766,35 +7766,35 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-agreement label:before {
-    margin-top: 4px;
+    margin-top: 0.96618357vw;
 }
 
 .cokco-full .order-agreement label span {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 3.8647343vw;
+    line-height: 5.79710145vw;
     color: #333;
     font-weight: 400;
 }
 
 .cokco-full .order-term {
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .cokco-full .order-term-wrap {
     overflow-y: auto;
-    max-height: 76px;
+    max-height: 18.35748792vw;
     background-color: #f8f8f8;
-    padding: 13px 20px 8px;
+    padding: 3.14009662vw 4.83091787vw 1.93236715vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     font-weight: 400;
     color: #999;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
 }
 
 .cokco-full .order-payment, .cokco-full .order-bills {
@@ -7802,14 +7802,14 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-payment > .tabs, .cokco-full .order-bills > .tabs {
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
     border-bottom: solid 1px #ccc;
 }
 
 .cokco-full .order-payment > .tabs > .btn-tab, .cokco-full .order-bills > .tabs > .btn-tab {
     position: relative;
-    height: 40px;
-    margin-right: 10px;
+    height: 9.66183575vw;
+    margin-right: 2.41545894vw;
 }
 
 .cokco-full .order-payment > .tabs > .btn-tab.on span, .cokco-full .order-bills > .tabs > .btn-tab.on span {
@@ -7827,14 +7827,14 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-payment > .tabs > .btn-tab span, .cokco-full .order-bills > .tabs > .btn-tab span {
-    font-size: 16px;
+    font-size: 3.8647343vw;
     color: #666;
     font-weight: 600;
     pointer-events: none;
 }
 
 .cokco-full .order-payment > .panels, .cokco-full .order-bills > .panels {
-    padding: 10px 16px;
+    padding: 2.41545894vw 3.8647343vw;
 }
 
 .cokco-full .order-payment > .panels > div, .cokco-full .order-bills > .panels > div {
@@ -7846,17 +7846,17 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-payment .form-info > button, .cokco-full .order-bills .form-info > button {
-    height: 40px;
-    padding: 0 17px;
-    border-radius: 5px;
+    height: 9.66183575vw;
+    padding: 0 4.10628019vw;
+    border-radius: 1.20772947vw;
     border: solid 1px #ccc;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .cokco-full .order-payment .form-info > button span, .cokco-full .order-bills .form-info > button span {
-    font-size: 14px;
+    font-size: 3.38164251vw;
     color: #16284c;
     font-weight: 400;
     pointer-events: none;
@@ -7869,7 +7869,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-payment .form-info .option-item-wrap + label, .cokco-full .order-bills .form-info .option-item-wrap + label {
-    margin-left: 10px;
+    margin-left: 2.41545894vw;
 }
 
 .cokco-full .order-bills {
@@ -7883,7 +7883,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-radios {
     border-bottom: solid 1px #ccc;
     white-space: nowrap;
-    padding-bottom: 10px;
+    padding-bottom: 2.41545894vw;
 }
 
 .cokco-full .order-radios .radio-wrap {
@@ -7893,11 +7893,11 @@ input[type="checkbox"] + label:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 20px;
+    height: 4.83091787vw;
 }
 
 .cokco-full .order-radios .radio-wrap + .radio-wrap {
-    margin-left: 8px;
+    margin-left: 1.93236715vw;
 }
 
 .cokco-full .order-radios .radio-wrap input[type="radio"] {
@@ -7911,8 +7911,8 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-radios .radio-wrap input[type="radio"] + label {
     position: relative;
-    padding-left: 22px;
-    font-size: 16px;
+    padding-left: 5.31400966vw;
+    font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
 }
@@ -7922,8 +7922,8 @@ input[type="checkbox"] + label:before {
     position: absolute;
     left: 0;
     top: 50%;
-    width: 15px;
-    height: 15px;
+    width: 3.62318841vw;
+    height: 3.62318841vw;
     border: 1px solid #999;
     border-radius: 100%;
     -webkit-transform: translateY(-50%);
@@ -7934,7 +7934,7 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-radios-panels > div {
     display: none;
-    padding: 10px 0 0;
+    padding: 2.41545894vw 0 0;
 }
 
 .cokco-full .order-radios-panels > div.on {
@@ -7943,7 +7943,7 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-complete {
     position: relative;
-    padding-top: 5px;
+    padding-top: 1.20772947vw;
 }
 
 .cokco-full .order-complete:before {
@@ -7952,39 +7952,39 @@ input[type="checkbox"] + label:before {
     left: 0;
     top: 0;
     width: 100%;
-    height: 4px;
+    height: 0.96618357vw;
     background-color: #f4f4f4;
     border-top: solid 1px #c4c4c4;
 }
 
 .cokco-full .order-complete h2 {
     display: block;
-    padding: 25px 0;
+    padding: 6.03864734vw 0;
     text-align: center;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 3.8647343vw;
+    line-height: 4.58937198vw;
     font-weight: 600;
     color: #16284c;
 }
 
 .cokco-full .order-table {
-    padding: 3px 16px 12px;
+    padding: 0.72463768vw 3.8647343vw 2.89855072vw;
 }
 
 .cokco-full .order-table + .order-table {
-    margin-top: 23px;
+    margin-top: 5.55555556vw;
 }
 
 .cokco-full .order-table h3 {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 3.38164251vw;
+    line-height: 3.8647343vw;
     color: #666;
     font-weight: 600;
 }
 
 .cokco-full .order-table ul {
     display: block;
-    margin-top: 10px;
+    margin-top: 2.41545894vw;
     border: solid 1px #ccc;
 }
 
@@ -8014,11 +8014,11 @@ input[type="checkbox"] + label:before {
     align-self: stretch;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    width: 110px;
+    width: 26.57004831vw;
     background-color: #e1f1ff;
-    padding: 12px 10px;
-    font-size: 14px;
-    line-height: 17px;
+    padding: 2.89855072vw 2.41545894vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #16284c;
     font-weight: 500;
 }
@@ -8036,9 +8036,9 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding: 12px 10px;
-    font-size: 14px;
-    line-height: 17px;
+    padding: 2.89855072vw 2.41545894vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
 }
@@ -8053,28 +8053,28 @@ input[type="checkbox"] + label:before {
     -ms-flex-item-align: stretch;
     -ms-grid-row-align: stretch;
     align-self: stretch;
-    padding-right: 5px;
-    font-size: 12px;
-    line-height: 14px;
+    padding-right: 1.20772947vw;
+    font-size: 2.89855072vw;
+    line-height: 3.38164251vw;
     color: #333;
     font-weight: 400;
 }
 
 .cokco-full .order-table li .btn-copy {
-    width: 50px;
-    height: 30px;
-    font-size: 14px;
+    width: 12.07729469vw;
+    height: 7.24637681vw;
+    font-size: 3.38164251vw;
     font-weight: 500;
     color: #16284c;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0.96618357vw;
 }
 
 .calendar-days {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .calendar-days span {
@@ -8090,8 +8090,8 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    height: 54px;
-    font-size: 20px;
+    height: 13.04347826vw;
+    font-size: 4.83091787vw;
     color: #16284c;
     font-weight: 400;
 }
@@ -8102,7 +8102,7 @@ input[type="checkbox"] + label:before {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding: 0 16px;
+    padding: 0 3.8647343vw;
 }
 
 .calendar-dates button {
@@ -8117,7 +8117,7 @@ input[type="checkbox"] + label:before {
     align-items: center;
     position: relative;
     width: 14.28571429%;
-    height: 54px;
+    height: 13.04347826vw;
 }
 
 .calendar-dates button.start .bg:after, .calendar-dates button.end .bg:after {
@@ -8159,7 +8159,7 @@ input[type="checkbox"] + label:before {
 
 .calendar-dates button .num {
     position: relative;
-    font-size: 20px;
+    font-size: 4.83091787vw;
     color: #333;
     font-weight: 400;
     z-index: 1;

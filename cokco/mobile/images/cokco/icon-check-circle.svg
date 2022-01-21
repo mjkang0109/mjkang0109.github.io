@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="그룹_6563" data-name="그룹 6563" transform="translate(-183.25 -186.25)">
+    <circle id="타원_218" data-name="타원 218" cx="20" cy="20" r="20" transform="translate(183.25 186.25)" fill="#ec7203"/>
+    <g id="그룹_6562" data-name="그룹 6562" transform="translate(185.614 188.614)">
+      <rect id="사각형_2503" data-name="사각형 2503" width="34" height="34" transform="translate(0.635 34.636) rotate(-90)" fill="none"/>
+      <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M3.593,10.421l7.888-7.882a1.49,1.49,0,0,0-2.11-2.1L.434,9.366A1.487,1.487,0,0,0,.39,11.42L14.358,25.406a1.49,1.49,0,1,0,2.11-2.1Z" transform="translate(4.397 25.714) rotate(-90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -55,15 +55,26 @@
       wrapperClass: 'thumbs-items',
       slideClass: 'thumbs-item',
       slidesPerView: 'auto',
+      freeMode: true,
       watchSlidesProgress: true
     });
     var gallery = new Swiper('.gallery-wrapper', {
       wrapperClass: 'gallery-items',
       slideClass: 'gallery-item',
-      loop: true,
       slidesPerView: 'auto',
       thumbs: {
         swiper: thumbs
+      },
+      on: {
+        slideChange: function slideChange(a) {
+          if (a.activeIndex > 2) {
+            thumbs.slideTo(1);
+          }
+
+          if (a.activeIndex < 2) {
+            thumbs.slideTo(0);
+          }
+        }
       }
     });
   };

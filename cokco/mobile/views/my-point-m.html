@@ -29,7 +29,7 @@
   <body>
     <section class="cokco-full">
       <h1>
-        <strong>환불리스트</strong>
+        <strong>혜택관리</strong>
         <button type="button" class="btn-close">
           <span>닫기</span>
         </button>
@@ -37,37 +37,65 @@
       <div class="cokco-breadcrumb">
         <ol>
           <li>마이페이지</li>
-          <li>쇼핑정보</li>
-          <li>환불리스트</li>
+          <li>혜택관리</li>
         </ol>
+      </div>
+      <div class="my-point">
+        <div class="point-wrap">
+          <a href="#">
+            <span class="icon">
+              <img src="../images/cokco/icon-point.svg" alt="">
+            </span>
+            <span class="type">포인트</span>
+            <em>0</em>
+            <span class="unit">원</span>
+          </a>
+        </div>
       </div>
       <div class="my-menu-tab">
         <ul>
           <li class="">
-            <a href="./my-shipping-m.html">
-              주문배송
-            </a>
-          </li>
-          <li class="">
-            <a href="./my-cancel-m.html">
-              취소/반품/교환
+            <a href="./my-benefit-m.html">
+              쿠폰
             </a>
           </li>
           <li class="on">
-            <a href="./my-refund-m.html">
-              환불/입금내역
-            </a>
-          </li>
-          <li class="">
-            <a href="./wish-m.html">
-              찜리스트
+            <a href="./my-point-m.html">
+              포인트
             </a>
           </li>
         </ul>
       </div>
       <div class="my-order-list">
         <h2>
-          <strong>환불/입금 내역</strong>
+          <strong>조회일</strong>
+          <button type="button" class="btn-refresh">
+            <span>새로고침</span>
+          </button>
+          <div class="sort-wrap">
+            <div class="sort dropdown-items">
+              <button type="button" class="btn-current btn-sort">
+                <span>조회기간</span>
+              </button>
+              <div class="sort-items">
+                <button type="button" class="sort-item">
+                  <span>전체(최신순)</span>
+                </button>
+                <button type="button" class="sort-item">
+                  <span>오늘</span>
+                </button>
+                <button type="button" class="sort-item">
+                  <span>일주일</span>
+                </button>
+                <button type="button" class="sort-item">
+                  <span>한달</span>
+                </button>
+                <button type="button" class="sort-item">
+                  <span>일년</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </h2>
         <div class="my-info-dashboard">
           <div class="setPeriod">
@@ -79,53 +107,30 @@
             </label>
           </div>
           <div class="state-wrap">
-            <strong class="type">환불입금내역</strong>
-            <span class="count">0</span>
+            <strong class="type">포인트 </strong>
+            <span class="count"> 1</span>
+            <span class="unit">건</span>
           </div>
         </div>
       </div>
       <div class="my-simple">
-        <div class="my-cancel-tab">
-          <ul>
-            <li class=""><a href="./my-refund-m.html">환불 신청내역</a></li>
-            <li class="on"><a href="./my-refund-process-m.html">환불/입금 처리현황</a></li>
-          </ul>
-        </div>
-        <div class="simple-list list-float">
+        <div class="simple-list simple-benefit">
           <div class="simple-date">
-            <div class="date"><strong>날짜</strong><span>2022-01-01</span></div>
-            <div class="order-number"><strong>주문번호</strong><em>21122912191710009</em></div>
-            <div class="state"><strong>주문취소</strong><span>환불신청</span></div>
-            <div class="message"><strong>확인 리뷰</strong><span>해당사항 없음 입금전 주문취소완료 입금불가</span></div>
+            <div class="date"><strong>날짜</strong><span>2022-01-24</span></div>
+            <div class="state"><strong>구분</strong><span>[사용완료]</span></div>
+            <div class="state"><strong>내용</strong><span>주문시 포인트 0.2% 적립</span></div>
+            <div class="date"><strong>유효기간</strong><span>2022-01-24</span></div>
+            <div class="point minus"><strong>사용여부</strong><span>-200원</span></div>
           </div>
-          <div class="date-options">
-            <button type="button" class="btn-cancel">
-              <span>상세</span>
-            </button>
+        </div>
+        <div class="simple-list simple-benefit">
+          <div class="simple-date">
+            <div class="date"><strong>날짜</strong><span>2022-01-24</span></div>
+            <div class="state"><strong>구분</strong><span>[사용완료]</span></div>
+            <div class="state"><strong>내용</strong><span>주문시 포인트 0.2% 적립</span></div>
+            <div class="date"><strong>유효기간</strong><span>2022-01-24</span></div>
+            <div class="point"><strong>사용여부</strong><span>200원</span></div>
           </div>
-          <ul class="simple-order">
-            <li>
-              <a href="#">
-                <div class="left">
-                  <span class="img-wrap">
-                    <img src="https://via.placeholder.com/540"
-                      onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-                </div>
-                <div class="right">
-                  <strong class="title">
-                    <span class="order-category">[수전]</span>
-                    <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
-                  </strong>
-                  <div class="price-wrap">
-                    <span class="count">수량 1개</span>
-                    <span class="price-type">주문금액</span>
-                    <em>83,000원</em>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </section>

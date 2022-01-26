@@ -27,41 +27,59 @@
       href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full full-white">
+    <section class="cokco-full">
       <h1>
-        <button type="button" class="btn-back">
-          <span>뒤로가기</span>
+        <strong>쿠폰등록</strong>
+        <button type="button" class="btn-close">
+          <span>닫기</span>
         </button>
-        <strong>아이디 찾기</strong>
       </h1>
-      <div class="content">
-        <div class="cokco-breadcrumb">
-          <ol>
-            <li>회원 로그인</li>
-            <li>아이디 찾기</li>
-          </ol>
+      <div class="my-register">
+        <div class="my-register-notice">
+          발급 받으신 쿠폰 인증 번호를 아래에 입력해 주세요<br>
+          <span>(8자리~최대12자리)</span>
         </div>
-        <div class="member-wrap">
-          <div class="member-form">
-            <div class="member-title">
-              아이디를 잊으셨나요?<br>
-              이름과 가입시 이메일을 입력하세요
-            </div>
-            <div class="form-info">
-              <label><input type="text" required placeholder="이름"></label>
-            </div>
-            <div class="form-info">
-              <label><input type="text" required placeholder="가입 이메일"></label>
-            </div>
-            <div class="login-btn-wrap">
-              <button type="button" class="btn-match">
-                <span>찾기</span>
-              </button>
-            </div>
-          </div>
+        <div class="form-info">
+          <label>
+            <input type="text" required placeholder="쿠폰코드">
+          </label>
+        </div>
+        <div class="my-register-btn">
+          <button type="button" class="btn-confirm">
+            <span>등록</span>
+          </button>
         </div>
       </div>
     </section>
+    <nav class="navigation">
+      <ul class="navigations">
+        <li class="fix">
+          <a href="./fix-form-m.html">
+            <strong class="title">시공요청</strong>
+          </a>
+        </li>
+        <li class="cart">
+          <a href="./cart-m.html">
+            <strong class="title">장바구니</strong>
+          </a>
+        </li>
+        <li class="order">
+          <a href="./order-m.html">
+            <strong class="title">주문배송</strong>
+          </a>
+        </li>
+        <li class="my">
+          <a href="./my-m.html">
+            <strong class="title">마이페이지</strong>
+          </a>
+        </li>
+        <li class="customer">
+          <a href="./customer-m.html">
+            <strong class="title">고객센터</strong>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

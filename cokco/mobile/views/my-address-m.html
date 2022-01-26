@@ -27,9 +27,9 @@
       href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full">
+    <section class="cokco-full full-white">
       <h1>
-        <strong>환불리스트</strong>
+        <strong>회원정보</strong>
         <button type="button" class="btn-close">
           <span>닫기</span>
         </button>
@@ -37,93 +37,63 @@
       <div class="cokco-breadcrumb">
         <ol>
           <li>마이페이지</li>
-          <li>쇼핑정보</li>
-          <li>환불리스트</li>
+          <li>회원정보</li>
         </ol>
       </div>
       <div class="my-menu-tab">
         <ul>
           <li class="">
-            <a href="./my-shipping-m.html">
-              주문배송
+            <a href="./my-modify-m.html">
+              회원정보변경
             </a>
           </li>
           <li class="">
-            <a href="./my-cancel-m.html">
-              취소/반품/교환
+            <a href="./my-withdraw-m.html">
+              회원탈퇴
             </a>
           </li>
           <li class="on">
-            <a href="./my-refund-m.html">
-              환불/입금내역
-            </a>
-          </li>
-          <li class="">
-            <a href="./wish-m.html">
-              찜리스트
+            <a href="./my-address-m.html">
+              배송지 관리
             </a>
           </li>
         </ul>
       </div>
-      <div class="my-order-list">
+      <div class="my-address">
         <h2>
-          <strong>환불/입금 내역</strong>
+          <strong>배송지 관리</strong>
+          <button type="button" class="btn-address">
+            <span>추가</span>
+          </button>
         </h2>
-        <div class="my-info-dashboard">
-          <div class="setPeriod">
-            <label>
-              <input type="text" value="2022-01-01">
-            </label>
-            <label>
-              <input type="text" value="2022-01-01">
-            </label>
-          </div>
-          <div class="state-wrap">
-            <strong class="type">환불입금내역</strong>
-            <span class="count">0</span>
-          </div>
-        </div>
-      </div>
-      <div class="my-simple">
-        <div class="my-cancel-tab">
+        <div class="my-address-wrap">
+          <!-- 주소지 없는 경우 <ul></ul> 공백 없이 ul 태그만 노출 -->
           <ul>
-            <li class=""><a href="./my-refund-m.html">환불 신청내역</a></li>
-            <li class="on"><a href="./my-refund-process-m.html">환불/입금 처리현황</a></li>
-          </ul>
-        </div>
-        <div class="simple-list list-float">
-          <div class="simple-date">
-            <div class="date"><strong>날짜</strong><span>2022-01-01</span></div>
-            <div class="order-number"><strong>주문번호</strong><em>21122912191710009</em></div>
-            <div class="state"><strong>주문취소</strong><span>환불신청</span></div>
-            <div class="message"><strong>확인 리뷰</strong><span>해당사항 없음 입금전 주문취소완료 입금불가</span></div>
-          </div>
-          <div class="date-options">
-            <button type="button" class="btn-cancel">
-              <span>상세</span>
-            </button>
-          </div>
-          <ul class="simple-order">
             <li>
-              <a href="#">
-                <div class="left">
-                  <span class="img-wrap">
-                    <img src="https://via.placeholder.com/540"
-                      onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
+              <strong>주소지 이름</strong>
+              <div class="address-detail">
+                <div class="address-detail-wrap">
+                  <div class="address-cell">010-2222-3333</div>
+                  <div class="address-name">받는 사람 이름</div>
+                  <div class="address-text">서울특별시 광진구 구의동 234-1</div>
                 </div>
-                <div class="right">
-                  <strong class="title">
-                    <span class="order-category">[수전]</span>
-                    <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
-                  </strong>
-                  <div class="price-wrap">
-                    <span class="count">수량 1개</span>
-                    <span class="price-type">주문금액</span>
-                    <em>83,000원</em>
-                  </div>
+                <button type="button" class="btn-modify">
+                  <span>수정</span>
+                </button>
+              </div>
+            </li>
+            <li>
+              <strong>주소지 이름</strong>
+              <div class="address-detail">
+                <div class="address-detail-wrap">
+                  <div class="address-cell">010-2222-3333</div>
+                  <div class="address-name">받는 사람 이름</div>
+                  <div class="address-text">서울특별시 광진구 구의동 234-1</div>
                 </div>
-              </a>
+                <button type="button" class="btn-modify">
+                  <span>수정</span>
+                </button>
+              </div>
             </li>
           </ul>
         </div>

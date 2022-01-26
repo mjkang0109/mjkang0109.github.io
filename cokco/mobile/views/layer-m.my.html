@@ -29,39 +29,57 @@
   <body>
     <section class="cokco-full full-white">
       <h1>
-        <button type="button" class="btn-back">
-          <span>뒤로가기</span>
+        <strong>회원정보 변경완료</strong>
+        <button type="button" class="btn-close">
+          <span>닫기</span>
         </button>
-        <strong>아이디 찾기</strong>
       </h1>
-      <div class="content">
-        <div class="cokco-breadcrumb">
-          <ol>
-            <li>회원 로그인</li>
-            <li>아이디 찾기</li>
-          </ol>
-        </div>
-        <div class="member-wrap">
-          <div class="member-form">
-            <div class="member-title">
-              아이디를 잊으셨나요?<br>
-              이름과 가입시 이메일을 입력하세요
-            </div>
-            <div class="form-info">
-              <label><input type="text" required placeholder="이름"></label>
-            </div>
-            <div class="form-info">
-              <label><input type="text" required placeholder="가입 이메일"></label>
-            </div>
-            <div class="login-btn-wrap">
-              <button type="button" class="btn-match">
-                <span>찾기</span>
-              </button>
-            </div>
-          </div>
+      <div class="cokco-breadcrumb">
+        <ol>
+          <li>마이페이지</li>
+          <li>회원정보</li>
+          <li>회원정보 변경</li>
+          <li>완료</li>
+        </ol>
+      </div>
+      <div class="layer">
+        <div class="layer-text">
+          <span class="icon-check">
+            <img src="../images/cokco/icon-check-circle.svg" alt="">
+          </span>
+          <span>코코수리 </span><em> 회원정보</em><span>가 변경되었습니다.</span>
         </div>
       </div>
     </section>
+    <nav class="navigation">
+      <ul class="navigations">
+        <li class="fix">
+          <a href="./fix-form-m.html">
+            <strong class="title">시공요청</strong>
+          </a>
+        </li>
+        <li class="cart">
+          <a href="./cart-m.html">
+            <strong class="title">장바구니</strong>
+          </a>
+        </li>
+        <li class="order">
+          <a href="./order-m.html">
+            <strong class="title">주문배송</strong>
+          </a>
+        </li>
+        <li class="my">
+          <a href="./my-m.html">
+            <strong class="title">마이페이지</strong>
+          </a>
+        </li>
+        <li class="customer">
+          <a href="./customer-m.html">
+            <strong class="title">고객센터</strong>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

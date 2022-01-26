@@ -27,15 +27,76 @@
       href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full">
+    <section class="cokco-full full-white">
       <h1>
-        <strong>앱 소개</strong>
-        <button type="button" class="btn-close">
-          <span>닫기</span>
+        <button type="button" class="btn-back">
+          <span>뒤로가기</span>
         </button>
+        <strong>회원정보</strong>
       </h1>
-      <div class="company-image-wrap">
-        <img src="../images/cokco/company-info.png" alt="">
+      <div class="cokco-breadcrumb">
+        <ol>
+          <li>마이페이지</li>
+          <li>회원정보</li>
+          <li>회원정보 변경</li>
+        </ol>
+      </div>
+      <div class="my-info-form">
+        <h2>개인 회원정보 변경</h2>
+        <div class="my-info-form-wrap">
+          <div class="my-info-id">*아이디 : abcdef1234</div>
+          <div class="form-info">
+            <label>
+              <input type="password" placeholder="*비밀번호" required>
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="password" placeholder="*비밀번호 확인" required>
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" placeholder="*이름" required>
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" placeholder="*휴대폰 번호" required>
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" placeholder="*주소" required>
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" placeholder="나머지" required>
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" placeholder="우편번호" required>
+            </label>
+            <button type="button" class="btn-address">
+              <span>우편번호 검색</span>
+            </button>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" placeholder="이메일" required>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="my-info-btn">
+        <button type="button" class="btn-cancel">
+          <span>취소</span>
+        </button>
+        <button type="button" class="btn-confirm">
+          <span>정보수정</span>
+        </button>
       </div>
     </section>
     <nav class="navigation">

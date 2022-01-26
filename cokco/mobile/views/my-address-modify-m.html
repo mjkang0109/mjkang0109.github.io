@@ -27,15 +27,69 @@
       href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full">
+    <section class="cokco-full full-white">
       <h1>
-        <strong>앱 소개</strong>
+        <strong>배송지 정보</strong>
         <button type="button" class="btn-close">
           <span>닫기</span>
         </button>
       </h1>
-      <div class="company-image-wrap">
-        <img src="../images/cokco/company-info.png" alt="">
+      <div class="my-address-modify">
+        <div class="form-wrap">
+          <div class="title-wrap">
+            <strong class="title">배송지/설치 주소</strong>
+            <button type="button" class="btn-auto-complete">
+              <span>고객정보 불러오기</span>
+            </button>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" required placeholder="배송지 이름">
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" required placeholder="받는분 이름">
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" name="address-1" required placeholder="주소">
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" name="address-2" required placeholder="나머지">
+            </label>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" name="address-3" required placeholder="우편번호">
+            </label>
+            <button type="button" class="btn-address">
+              <span>우편번호 검색</span>
+            </button>
+          </div>
+          <div class="form-info">
+            <label>
+              <input type="text" required placeholder="휴대폰번호">
+            </label>
+          </div>
+        </div>
+        <div class="my-address-default">
+          <input type="checkbox" id="address-default">
+          <label for="address-default">
+            <span>기본배송지로 설정</span>
+          </label>
+        </div>
+        <div class="my-info-btn">
+          <button type="button" class="btn-cancel">
+            <span>삭제</span>
+          </button>
+          <button type="button" class="btn-confirm">
+            <span>적용</span>
+          </button>
+        </div>
       </div>
     </section>
     <nav class="navigation">

@@ -29,37 +29,57 @@
   <body>
     <section class="cokco-full full-white">
       <h1>
-        <button type="button" class="btn-back">
-          <span>뒤로가기</span>
+        <strong>문의작성</strong>
+        <button type="button" class="btn-close">
+          <span>닫기</span>
         </button>
-        <strong>아이디 찾기</strong>
       </h1>
       <div class="content">
-        <div class="cokco-breadcrumb">
-          <ol>
-            <li>회원 로그인</li>
-            <li>아이디 찾기</li>
-          </ol>
-        </div>
-        <div class="member-wrap">
-          <div class="member-form">
-            <div class="member-title">
-              아이디를 잊으셨나요?<br>
-              이름과 가입시 이메일을 입력하세요
-            </div>
-            <div class="form-info">
-              <label><input type="text" required placeholder="이름"></label>
-            </div>
-            <div class="form-info">
-              <label><input type="text" required placeholder="가입 이메일"></label>
-            </div>
-            <div class="login-btn-wrap">
-              <button type="button" class="btn-match">
-                <span>찾기</span>
+        <div class="inquire-type">
+          <strong class="inquire-type-title">문의유형</strong>
+          <div class="option-item-wrap">
+            <button type="button" class="btn-current"
+              onclick="this.parentNode.classList.toggle('on')">
+              <span>문의유형선택</span>
+            </button>
+            <div class="option-items">
+              <button type="button" class="option-item on">
+                <span>상품</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>배송</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>반품</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>교환</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>환불</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>기타</span>
               </button>
             </div>
           </div>
         </div>
+        <div class="input-text">
+          <div class="input-title">
+            <span class="name">작성자 아이디</span>
+            <span class="limit">50자내외</span>
+          </div>
+          <div class="input-textarea">
+            <label>
+              <textarea placeholder="이상품에 대한 문의내용을 작성해주세요&#13;&#10;50자내외"></textarea>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="full-fix">
+        <button type="button" class="btn-confirm">
+          <span>올리기</span>
+        </button>
       </div>
     </section>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

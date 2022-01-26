@@ -92,6 +92,21 @@ button span {
     padding: 1.93236715vw 3.8647343vw;
 }
 
+.cokco-breadcrumb + .layer {
+    position: relative;
+}
+
+.cokco-breadcrumb + .layer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.96618357vw;
+    background-color: #f4f4f4;
+    border-top: solid 1px #ccc;
+}
+
 .cokco-breadcrumb ol {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -228,6 +243,11 @@ input[type="checkbox"] + label:before {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+.cokco-full.full-white {
+    background-color: #fff;
 }
 
 .cokco-full.current-cart ~ .navigation .cart a:before {
@@ -243,6 +263,10 @@ input[type="checkbox"] + label:before {
 .cokco-full.current-cart ~ .navigation .cart a .title {
     color: #eb7203;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='그룹 4870' width='42' height='42'%3E%3Cpath data-name='사각형 1853' fill='none' d='M0 0h42v42H0z'/%3E%3Cpath data-name='Icon awesome-shopping-bag' d='M26.8 16.275V14.7a6.4 6.4 0 0 0-12.8 0v1.575H9.2v13.387a3.969 3.969 0 0 0 4 3.938h14.4a3.969 3.969 0 0 0 4-3.937V16.275ZM17.2 14.7a3.2 3.2 0 0 1 6.4 0v1.575h-6.4Zm8 5.906a1.181 1.181 0 1 1 1.2-1.181 1.191 1.191 0 0 1-1.2 1.181Zm-9.6 0a1.181 1.181 0 1 1 1.2-1.181 1.191 1.191 0 0 1-1.2 1.181Z' fill='%23EB7203'/%3E%3C/svg%3E");
+}
+
+.cokco-full .cokco-breadcrumb {
+    background-color: #fff;
 }
 
 .cokco-full .title-more {
@@ -771,7 +795,6 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
 }
 
 .cokco-full .order-info.on + .order-option {
@@ -1409,6 +1432,10 @@ input[type="checkbox"] + label:before {
     border-radius: 0.96618357vw;
 }
 
+.calendar {
+    background-color: #fff;
+}
+
 .calendar-month {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1615,30 +1642,35 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
     height: 100%;
 }
 
-.layer.only-text .layer-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.layer.only-text .layer-text span,
-.layer.only-text .layer-text em {
+.layer .layer-text span,
+.layer .layer-text em {
     font-size: 3.8647343vw;
     font-weight: 400;
 }
 
-.layer.only-text .layer-text em {
+.layer .layer-text em {
     color: #ec7203;
 }
 
-.layer.fix-message .layer-text em {
-    margin: 0 0.96618357vw;
+.layer .icon-check {
+    display: block;
+    padding-bottom: 3.62318841vw;
+}
+
+.layer .icon-check img {
+    margin: 0 auto;
+    width: 9.66183575vw;
+    height: auto;
 }
 
 /* common */
@@ -3825,11 +3857,11 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    height: 12.07729469vw;
-    margin-top: 2.41545894vw;
+    height: 14.49275362vw;
     padding: 0 3.8647343vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    border-top: solid 2.41545894vw #f4f4f4;
 }
 
 .comment h2:after {
@@ -3894,8 +3926,7 @@ input[type="checkbox"] + label:before {
     justify-content: space-between;
     padding: 2.41545894vw 3.8647343vw;
     margin-top: 8.93719807vw;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    background-color: #f4f4f4;
 }
 
 .comment-input label {
@@ -4111,6 +4142,14 @@ input[type="checkbox"] + label:before {
     margin-top: 3.8647343vw;
 }
 
+.exhibition-item {
+    background-color: #fff;
+}
+
+.exhibition-item.tile-item {
+    padding-bottom: 2.41545894vw;
+}
+
 .recommend-item {
     padding-bottom: 2.41545894vw;
 }
@@ -4217,6 +4256,10 @@ input[type="checkbox"] + label:before {
     clip-path: inset(50%);
 }
 
+.search-item .btn-current {
+    border: none;
+}
+
 .search-filter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4249,8 +4292,8 @@ input[type="checkbox"] + label:before {
 }
 
 .search-category.on .btn-current span:after {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
     -webkit-transform-origin: center;
     transform-origin: center;
 }
@@ -4302,12 +4345,14 @@ input[type="checkbox"] + label:before {
 .search-category .btn-current span:after {
     content: "";
     position: absolute;
-    top: 3.62318841vw;
+    top: 50%;
     right: 2.41545894vw;
     width: 3.8647343vw;
     height: 2.41545894vw;
     background: url("../../images/cokco/icon-triangle-bottom.svg") no-repeat 50% 50%;
     background-size: 3.8647343vw auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .search-category .sort-items {
@@ -4358,7 +4403,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.90821256vw;
+    width: 19.3236715vw;
     padding: 0 0.96618357vw;
 }
 
@@ -4382,6 +4427,7 @@ input[type="checkbox"] + label:before {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    background-color: transparent;
 }
 
 .store-category .title {
@@ -4809,6 +4855,10 @@ input[type="checkbox"] + label:before {
     z-index: 1;
 }
 
+.fix-form {
+    background-color: #fff;
+}
+
 .fix-form h2 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5003,6 +5053,10 @@ input[type="checkbox"] + label:before {
     margin-left: 0.96618357vw;
 }
 
+.fix-complete {
+    background-color: #fff;
+}
+
 .fix-complete-img img {
     width: 100%;
 }
@@ -5010,6 +5064,7 @@ input[type="checkbox"] + label:before {
 .fix-detail-category {
     background-color: #fff;
     padding: 0.48309179vw 3.8647343vw 3.62318841vw;
+    border-top: solid 1px #ccc;
 }
 
 .fix-detail-category .item-depth li {
@@ -5097,8 +5152,18 @@ input[type="checkbox"] + label:before {
     margin-top: 2.41545894vw;
 }
 
+.fix-reference-detail {
+    background-color: #fff;
+}
+
 .fix-reference-detail .title-more {
     margin-top: 0;
+}
+
+.fix-reference-detail .gallery-wrapper {
+    padding-right: 3.8647343vw;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .fix-reference-detail .gallery-item {
@@ -5223,6 +5288,10 @@ input[type="checkbox"] + label:before {
 }
 
 /* detail */
+.detail {
+    background-color: #fff;
+}
+
 .detail h2 {
     position: absolute;
     margin: -1px;
@@ -5977,26 +6046,25 @@ input[type="checkbox"] + label:before {
     border-bottom: solid 1px #ccc;
 }
 
-.my-shopping-tab {
+.my-menu-tab {
     padding: 0 3.8647343vw;
     background-color: #fff;
     border: solid 1px #ccc;
 }
 
-.my-shopping-tab + .my-order-list {
-    margin-top: 0.96618357vw;
+.my-menu-tab + .my-order-list {
     border-top: none;
 }
 
-.my-shopping-tab + .cart-wrap {
+.my-menu-tab + .cart-wrap {
     background-color: #f8f8f8;
 }
 
-.my-shopping-tab + .cart-wrap .cart-check:before {
+.my-menu-tab + .cart-wrap .cart-check:before {
     border-top: none;
 }
 
-.my-shopping-tab ul {
+.my-menu-tab ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6009,7 +6077,7 @@ input[type="checkbox"] + label:before {
     height: 12.07729469vw;
 }
 
-.my-shopping-tab li {
+.my-menu-tab li {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -6028,7 +6096,7 @@ input[type="checkbox"] + label:before {
     position: relative;
 }
 
-.my-shopping-tab li.on:after {
+.my-menu-tab li.on:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -6038,15 +6106,15 @@ input[type="checkbox"] + label:before {
     background-color: #ec7203;
 }
 
-.my-shopping-tab li.on a {
+.my-menu-tab li.on a {
     color: #ec7203;
 }
 
-.my-shopping-tab li:first-child:before {
+.my-menu-tab li:first-child:before {
     display: none;
 }
 
-.my-shopping-tab li:before {
+.my-menu-tab li:before {
     content: "";
     position: absolute;
     left: -1px;
@@ -6055,7 +6123,7 @@ input[type="checkbox"] + label:before {
     background-color: #666;
 }
 
-.my-shopping-tab li a {
+.my-menu-tab li a {
     font-size: 3.38164251vw;
     font-weight: 500;
     color: #333;
@@ -6065,13 +6133,33 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: calc(100% - 7.7294686vw);
+    height: 14.49275362vw;
     margin: 2.41545894vw auto;
-    padding: 3.62318841vw 3.8647343vw;
+    padding: 0 3.8647343vw;
     background-color: #fff;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: solid 1px #ccc;
+}
+
+.my-point.type-add {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.my-point.type-add .point-wrap {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.my-point.type-add ~ .my-order-list:before {
+    display: none;
 }
 
 .my-point .point-wrap {
@@ -6114,14 +6202,40 @@ input[type="checkbox"] + label:before {
     height: 7.24637681vw;
 }
 
+.my-point .add-link-wrap a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    justify-self: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 9.66183575vw;
+    padding: 0 2.89855072vw;
+    border: solid 1px #ccc;
+    border-radius: 1.20772947vw;
+}
+
+.my-point .add-link-wrap a span {
+    color: #16284c;
+    font-weight: 500;
+    font-size: 3.38164251vw;
+}
+
 .my-order-list {
     background-color: #fff;
     border: 1px solid #ccc;
 }
 
-.my-order-list.fix-list {
-    margin-top: 0.96618357vw;
-    border-top: none;
+.my-order-list:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.96618357vw;
+    background-color: #f4f4f4;
 }
 
 .my-order-list h2 {
@@ -6138,7 +6252,7 @@ input[type="checkbox"] + label:before {
     padding: 0 3.8647343vw;
 }
 
-.my-order-list h2 + .my-cancel {
+.my-order-list h2 + .my-info-dashboard {
     border-top: solid 1px #ccc;
 }
 
@@ -6195,6 +6309,10 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+}
+
+.my-order-list .btn-current {
+    border: none;
 }
 
 .my-order-list-wrap {
@@ -6302,7 +6420,7 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
-.my-cancel {
+.my-info-dashboard {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6319,7 +6437,7 @@ input[type="checkbox"] + label:before {
     box-sizing: border-box;
 }
 
-.my-cancel .cancel-wrap {
+.my-info-dashboard .state-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6329,22 +6447,28 @@ input[type="checkbox"] + label:before {
     align-items: center;
 }
 
-.my-cancel .cancel-wrap .type,
-.my-cancel .cancel-wrap .count {
+.my-info-dashboard .state-wrap .type,
+.my-info-dashboard .state-wrap .count,
+.my-info-dashboard .state-wrap .unit {
     font-size: 3.38164251vw;
     line-height: 4.10628019vw;
     font-weight: 400;
 }
 
-.my-cancel .cancel-wrap .type {
+.my-info-dashboard .state-wrap .type {
     color: #666;
+    white-space: nowrap;
 }
 
-.my-cancel .cancel-wrap .count {
+.my-info-dashboard .state-wrap .unit {
+    color: #333;
+}
+
+.my-info-dashboard .state-wrap .count {
     color: #ec7203;
 }
 
-.my-cancel .setPeriod {
+.my-info-dashboard .setPeriod {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -6356,19 +6480,19 @@ input[type="checkbox"] + label:before {
     align-items: center;
 }
 
-.my-cancel .setPeriod label {
+.my-info-dashboard .setPeriod label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 24.15458937vw;
+    width: 28.98550725vw;
     position: relative;
 }
 
-.my-cancel .setPeriod label + label {
+.my-info-dashboard .setPeriod label + label {
     margin-left: 4.83091787vw;
 }
 
-.my-cancel .setPeriod label + label:before {
+.my-info-dashboard .setPeriod label + label:before {
     content: "";
     position: absolute;
     top: 0.48309179vw;
@@ -6378,7 +6502,7 @@ input[type="checkbox"] + label:before {
     background-color: #ccc;
 }
 
-.my-cancel .setPeriod label input {
+.my-info-dashboard .setPeriod label input {
     display: block;
     width: 100%;
     height: 7.24637681vw;
@@ -6388,11 +6512,14 @@ input[type="checkbox"] + label:before {
     box-sizing: border-box;
     text-align: center;
     font-size: 2.89855072vw;
+    padding-left: 10.86956522vw;
     color: #333;
+    background: url("../../images/cokco/icon-calendar.svg") no-repeat 3.14009662vw 50%;
+    background-size: 7.24637681vw auto;
     font-weight: 400;
 }
 
-.my-cancel .setPeriod .link-calendar {
+.my-info-dashboard .setPeriod .link-calendar {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -6400,7 +6527,7 @@ input[type="checkbox"] + label:before {
     width: 7.24637681vw;
 }
 
-.my-cancel .setPeriod .link-calendar img {
+.my-info-dashboard .setPeriod .link-calendar img {
     width: 100%;
 }
 
@@ -6437,10 +6564,22 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.my-simple .btn-current {
+    border: none;
+}
+
 .my-simple .simple-list {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 2.89855072vw 3.8647343vw 0;
+}
+
+.my-simple .simple-list.simple-benefit {
+    padding-bottom: 5.79710145vw;
+}
+
+.my-simple .simple-list.simple-benefit + .simple-list {
+    margin-top: 2.41545894vw;
 }
 
 .my-simple .simple-list.list-float {
@@ -6456,11 +6595,7 @@ input[type="checkbox"] + label:before {
     position: absolute;
     right: 3.8647343vw;
     top: 13.28502415vw;
-    padding-top: 0;
-}
-
-.my-simple .simple-list + .simple-list {
-    margin-top: 2.41545894vw;
+    padding: 0;
 }
 
 .my-simple .simple-date > div:first-child {
@@ -6498,6 +6633,10 @@ input[type="checkbox"] + label:before {
     margin-left: 0.96618357vw;
 }
 
+.my-simple .simple-date .point.minus span {
+    color: #e81a1a;
+}
+
 .my-simple .date-options {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6531,7 +6670,6 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     padding-top: 2.41545894vw;
 }
 
@@ -6654,7 +6792,6 @@ input[type="checkbox"] + label:before {
 }
 
 .my-link {
-    margin-top: 2.41545894vw;
     background-color: #fff;
     border: solid 1px #ddd;
     border-bottom: none;
@@ -6687,10 +6824,6 @@ input[type="checkbox"] + label:before {
     font-weight: 500;
 }
 
-.my-link li a.info {
-    color: #333;
-}
-
 .my-link li a:after {
     content: "";
     position: absolute;
@@ -6704,11 +6837,16 @@ input[type="checkbox"] + label:before {
     transform: translateY(-50%) rotate(-90deg);
 }
 
-.my-recent-item h2 {
-    position: relative;
+.my-recent-item {
+    background-color: #fff;
 }
 
-.my-recent-item h2:before {
+.my-recent-item .title-more {
+    position: relative;
+    border-top: none;
+}
+
+.my-recent-item .title-more:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -6722,17 +6860,22 @@ input[type="checkbox"] + label:before {
     margin-top: 2.41545894vw;
 }
 
-.my-cancel-tab {
+.my-cancel-tab, .my-benefit-tab {
     margin-top: -2.41545894vw;
+    background-color: #fff;
 }
 
-.my-cancel-tab ul {
+.my-cancel-tab ~ .simple-benefit, .my-benefit-tab ~ .simple-benefit {
+    margin-top: 2.41545894vw;
+}
+
+.my-cancel-tab ul, .my-benefit-tab ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-.my-cancel-tab li {
+.my-cancel-tab li, .my-benefit-tab li {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -6740,16 +6883,16 @@ input[type="checkbox"] + label:before {
     border-top: none;
 }
 
-.my-cancel-tab li.on {
+.my-cancel-tab li.on, .my-benefit-tab li.on {
     background-color: #16284c;
     border-color: #16284c;
 }
 
-.my-cancel-tab li.on a {
+.my-cancel-tab li.on a, .my-benefit-tab li.on a {
     color: #fff;
 }
 
-.my-cancel-tab li a {
+.my-cancel-tab li a, .my-benefit-tab li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6786,6 +6929,520 @@ input[type="checkbox"] + label:before {
     width: calc(100% - 7.7294686vw);
     height: 1px;
     background-color: #ccc;
+}
+
+.my-info {
+    padding: 0 3.8647343vw;
+    background-color: #fff;
+    border-top: solid 2.41545894vw #f4f4f4;
+}
+
+.my-info h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 13.04347826vw;
+    font-size: 4.34782609vw;
+    font-weight: 600;
+    color: #333;
+    border-bottom: solid 1px #ccc;
+}
+
+.my-info-notice {
+    padding: 3.38164251vw 0 4.83091787vw;
+    font-size: 3.38164251vw;
+    color: #333;
+    font-weight: 400;
+    line-height: 4.10628019vw;
+}
+
+.my-info-notice span {
+    display: block;
+    color: #999;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+    line-height: 4.10628019vw;
+}
+
+.my-info-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4.83091787vw 0;
+}
+
+.my-info-btn button {
+    width: 100%;
+    height: 12.07729469vw;
+    background-color: #16284c;
+    border-radius: 2.41545894vw;
+}
+
+.my-info-btn button span {
+    font-size: 3.8647343vw;
+    color: #fff;
+    font-weight: 600;
+}
+
+.my-info-btn .btn-cancel {
+    width: 24.15458937vw;
+    margin-right: 2.41545894vw;
+    background-color: #ccc;
+}
+
+.my-info-form {
+    border-top: solid 1px #ccc;
+}
+
+.my-info-form + .my-info-form {
+    border-top: none;
+}
+
+.my-info-form h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: solid 0.96618357vw #f4f4f4;
+    padding: 0 3.8647343vw;
+    height: 12.07729469vw;
+    color: #16284c;
+    font-weight: 600;
+    font-size: 4.34782609vw;
+}
+
+.my-info-form + .my-info-btn {
+    padding: 4.83091787vw 3.8647343vw;
+}
+
+.my-info-form .my-info-id {
+    font-size: 3.38164251vw;
+    color: #16284C;
+    font-weight: 400;
+    padding-bottom: 4.83091787vw;
+}
+
+.my-info-form-wrap {
+    border: 1px solid #ccc;
+    padding: 5.79710145vw 3.8647343vw 3.14009662vw;
+}
+
+.my-address {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #f4f4f4;
+}
+
+.my-address h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 12.07729469vw;
+    padding: 0 3.8647343vw;
+    border-bottom: solid 1px #ccc;
+    background-color: #fff;
+}
+
+.my-address h2 strong {
+    font-size: 4.83091787vw;
+    font-weight: 600;
+    color: #333;
+}
+
+.my-address button {
+    height: 9.66183575vw;
+    padding: 0 4.34782609vw;
+    background-color: #fff;
+    border-radius: 1.20772947vw;
+    border: 1px solid #ccc;
+}
+
+.my-address button span {
+    font-size: 3.38164251vw;
+    color: #16284c;
+    font-weight: 500;
+}
+
+.my-address-wrap {
+    border-top: solid 2.41545894vw #f4f4f4;
+    background-color: #fff;
+}
+
+.my-address li {
+    padding: 3.62318841vw 3.8647343vw;
+    border-top: solid 1px #ccc;
+}
+
+.my-address li:last-child {
+    border-bottom: solid 1px #ccc;
+}
+
+.my-address li strong {
+    display: block;
+    font-size: 3.8647343vw;
+    font-weight: 600;
+    color: #333;
+}
+
+.my-address .address-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 4.83091787vw 1.93236715vw 3.62318841vw 5.55555556vw;
+    background-color: #f8f8f8;
+    border-radius: 2.41545894vw;
+}
+
+.my-address .address-detail-wrap > div {
+    color: #999;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+}
+
+.my-address .address-detail .btn-modify {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    padding: 0 3.14009662vw;
+}
+
+.my-address-modify {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #f4f4f4;
+}
+
+.my-address-modify:before {
+    content: "";
+    display: block;
+    height: 0.96618357vw;
+    background-color: #f4f4f4;
+    border-bottom: solid 1px #ccc;
+}
+
+.my-address-modify .form-wrap {
+    background-color: #fff;
+    padding-bottom: 3.14009662vw;
+    border: solid 1px #ccc;
+    border-top: none;
+}
+
+.my-address-modify .my-address-default {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 2.17391304vw 3.8647343vw 0;
+}
+
+.my-address-modify .my-address-default label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.my-address-modify .my-address-default label span {
+    font-size: 3.8647343vw;
+    color: #333;
+    font-weight: 400;
+}
+
+.my-address-modify .my-info-btn {
+    padding: 3.8647343vw;
+}
+
+.my-register {
+    padding: 3.14009662vw 3.8647343vw 3.8647343vw;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.my-register-notice {
+    font-size: 3.38164251vw;
+    color: #000;
+    font-weight: 400;
+    line-height: 4.10628019vw;
+    padding-bottom: 2.65700483vw;
+}
+
+.my-register-notice span {
+    color: #999;
+}
+
+.my-register-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3.62318841vw;
+}
+
+.my-register-btn .btn-confirm {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.my-register-btn button {
+    background-color: #16284c;
+    height: 12.07729469vw;
+    border-radius: 2.41545894vw;
+}
+
+.my-register-btn button span {
+    font-size: 3.8647343vw;
+    font-weight: 600;
+    color: #fff;
+}
+
+.my-register-result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 3.14009662vw 0 0;
+}
+
+.my-register-result strong {
+    font-size: 3.38164251vw;
+    font-weight: 400;
+    color: #e81a1a;
+    line-height: 4.10628019vw;
+}
+
+.withdraw-notice h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 9.66183575vw;
+    font-size: 3.8647343vw;
+    color: #333;
+    font-weight: 400;
+    border: 1px solid #ccc;
+    padding: 0 3.8647343vw;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.withdraw-text {
+    padding: 5.55555556vw 3.8647343vw 16.42512077vw;
+    color: #666;
+    font-size: 3.38164251vw;
+    font-weight: 400;
+    line-height: 4.10628019vw;
+}
+
+/* customer */
+.customer-banner img {
+    width: 100%;
+}
+
+.customer-list {
+    background-color: #fff;
+}
+
+.customer-list h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    height: 12.07729469vw;
+    padding: 0 4.83091787vw 0 5.31400966vw;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 4.83091787vw;
+    font-weight: 600;
+    color: #333;
+}
+
+.customer-list h3 + .description {
+    padding: 0.72463768vw 5.31400966vw 2.41545894vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
+    color: #666;
+    font-weight: 400;
+}
+
+.customer-list .link-review,
+.customer-list .link-inquire {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 7.24637681vw;
+    padding-right: 8.93719807vw;
+    background-image: url("../../images/cokco/btn-write.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 7.24637681vw auto;
+}
+
+.customer-list .link-review span,
+.customer-list .link-inquire span {
+    font-size: 3.38164251vw;
+    font-weight: 600;
+    color: #16284c;
+    pointer-events: none;
+}
+
+.customer-list .subtitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 6.52173913vw 0 5.31400966vw;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.customer-list .subtitle .type,
+.customer-list .subtitle .count,
+.customer-list .subtitle .unit {
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
+    font-weight: 400;
+}
+
+.customer-list .subtitle .count {
+    color: #ec7203;
+    padding-left: 0.96618357vw;
+}
+
+.customer-list .subtitle .type,
+.customer-list .subtitle .unit {
+    color: #333;
+}
+
+.customer-list .subtitle .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.customer-list .subtitle .description strong,
+.customer-list .subtitle .description span {
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
+    color: #16284c;
+}
+
+.customer-list .subtitle .description span {
+    font-weight: 400;
+}
+
+.customer-list .subtitle .description strong {
+    font-weight: 600;
+}
+
+.customer-faq {
+    padding: 5.55555556vw 3.8647343vw;
+}
+
+.customer-faq li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.customer-faq li + li {
+    margin-top: 5.55555556vw;
+}
+
+.customer-faq li a {
+    font-size: 3.38164251vw;
+    color: #666;
+    font-weight: 400;
+}
+
+.customer-faq li a:active {
+    color: #ec7203;
+}
+
+.customer-faq-detail:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.96618357vw;
+    background-color: #f4f4f4;
+    border-top: solid 1px #ccc;
+}
+
+.customer-faq-detail strong {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 12.07729469vw;
+    padding: 0 3.8647343vw;
+    font-size: 4.83091787vw;
+    font-weight: 600;
+    color: #333;
+}
+
+.customer-faq-detail .faq-img-wrap {
+    position: relative;
+}
+
+.customer-faq-detail .faq-img-wrap:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 3.8647343vw;
+    width: calc(100% - 7.7294686vw);
+    height: 1px;
+    background-color: #ccc;
+}
+
+.customer-faq-detail .faq-img-wrap img {
+    width: 100%;
+}
+
+.customer-faq-text {
+    white-space: pre-line;
+    font-size: 3.38164251vw;
+    color: #666;
+    line-height: 4.10628019vw;
+    padding: 0 3.8647343vw 5.55555556vw;
 }
 
 /* cart, wish */
@@ -7294,6 +7951,12 @@ input[type="checkbox"] + label:before {
     border-bottom: solid 1px #ccc;
 }
 
+.wish-title strong {
+    font-size: 4.34782609vw;
+    font-weight: 600;
+    color: #333;
+}
+
 .wish-title .btn-cart {
     height: 7.24637681vw;
     padding-right: 9.66183575vw;
@@ -7305,6 +7968,10 @@ input[type="checkbox"] + label:before {
     font-size: 3.8647343vw;
     color: #333;
     font-weight: 400;
+}
+
+.wish-title + .wish-product {
+    margin-top: 2.41545894vw;
 }
 
 .wish-check {
@@ -8364,6 +9031,10 @@ input[type="checkbox"] + label:before {
 }
 
 /* member */
+.member-wrap {
+    background-color: #fff;
+}
+
 .member-wrap:before {
     content: "";
     display: block;
@@ -8397,6 +9068,7 @@ input[type="checkbox"] + label:before {
 
 .member-wrap .member-form {
     padding: 4.83091787vw 3.8647343vw;
+    background-color: #fff;
 }
 
 .member-wrap .member-form-wrap {

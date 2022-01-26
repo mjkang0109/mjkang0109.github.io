@@ -1949,6 +1949,10 @@ input[type="checkbox"] + label:before {
     padding: 0 0 calc(env(safe-area-inset-bottom));
 }
 
+.navigation ~ .btn-top {
+    bottom: 21.73913vw;
+}
+
 .navigations {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3983,6 +3987,31 @@ input[type="checkbox"] + label:before {
     font-size: 4.10628019vw;
     font-weight: 500;
     color: #fff;
+}
+
+.btn-top {
+    position: fixed;
+    bottom: 9.42029vw;
+    right: 3.86473vw;
+    width: 12.07729vw;
+    height: 12.07729vw;
+    background: url("../../images/cokco/icon-top.svg") no-repeat 50% 50%;
+    background-size: 100% auto;
+    z-index: 10;
+    transform: rotate(-90deg);
+}
+
+.btn-top span {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
 }
 
 /* main */

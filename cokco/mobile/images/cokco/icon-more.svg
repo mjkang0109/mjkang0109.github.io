@@ -1,20 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
   <g id="그룹_6708" data-name="그룹 6708" transform="translate(0.039 0.315)">
-    <g id="타원_219" data-name="타원 219" transform="translate(-0.039 -0.315)" fill="#fff" stroke="#ddd" stroke-width="1">
-      <circle cx="40" cy="40" r="40" stroke="none"/>
-      <circle cx="40" cy="40" r="39.5" fill="none"/>
-    </g>
-    <g id="타원_220" data-name="타원 220" transform="translate(22.461 36.635)" fill="#16284c" stroke="#707070" stroke-width="1">
-      <ellipse cx="4" cy="3.5" rx="4" ry="3.5" stroke="none"/>
-      <ellipse cx="4" cy="3.5" rx="3.5" ry="3" fill="none"/>
-    </g>
-    <g id="타원_221" data-name="타원 221" transform="translate(35.961 36.635)" fill="#16284c" stroke="#707070" stroke-width="1">
-      <ellipse cx="4" cy="3.5" rx="4" ry="3.5" stroke="none"/>
-      <ellipse cx="4" cy="3.5" rx="3.5" ry="3" fill="none"/>
-    </g>
-    <g id="타원_222" data-name="타원 222" transform="translate(49.461 36.635)" fill="#16284c" stroke="#707070" stroke-width="1">
-      <ellipse cx="4" cy="3.5" rx="4" ry="3.5" stroke="none"/>
-      <ellipse cx="4" cy="3.5" rx="3.5" ry="3" fill="none"/>
+    <path id="패스_3332" data-name="패스 3332" d="M40,0A40,40,0,1,1,0,40,40,40,0,0,1,40,0Z" transform="translate(-0.039 -0.315)" fill="#f8f8f8"/>
+    <g id="그룹_6839" data-name="그룹 6839">
+      <circle id="타원_223" data-name="타원 223" cx="3" cy="3" r="3" transform="translate(25.961 36.685)" fill="#999"/>
+      <circle id="타원_224" data-name="타원 224" cx="3" cy="3" r="3" transform="translate(36.961 36.685)" fill="#999"/>
+      <circle id="타원_225" data-name="타원 225" cx="3" cy="3" r="3" transform="translate(47.961 36.685)" fill="#999"/>
     </g>
   </g>
 </svg>

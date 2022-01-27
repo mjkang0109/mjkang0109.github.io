@@ -3021,8 +3021,16 @@ input[type="checkbox"] + label:before {
     background-image: url("../../images/cokco/icon-plus.svg");
 }
 
+.quantity .btn-increase:active {
+    background-image: url("../../images/cokco/icon-plus-active.svg");
+}
+
 .quantity .btn-decrease {
     background-image: url("../../images/cokco/icon-minus.svg");
+}
+
+.quantity .btn-decrease:active {
+    background-image: url("../../images/cokco/icon-minus-active.svg");
 }
 
 .quantity .btn-increase,

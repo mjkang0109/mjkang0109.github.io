@@ -1862,7 +1862,7 @@ input[type="checkbox"] + label:before {
     padding: 12px 16px 9px;
 }
 
-.category-fix a, .category-app a {
+.category-fix a, .category-company a {
     padding: 12px 12px 9px;
 }
 

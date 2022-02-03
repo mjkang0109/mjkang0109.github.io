@@ -7532,11 +7532,7 @@ input[type="checkbox"] + label:before {
     border: solid 1px #ccc;
 }
 
-.cart-product.on + .cart-option-modify {
-    display: block;
-}
-
-.cart-product + .cart-option-modify + .cart-product {
+.cart-product + .cart-product {
     margin-top: 2.41545894vw;
 }
 
@@ -7675,6 +7671,11 @@ input[type="checkbox"] + label:before {
     margin-top: 2.41545894vw;
 }
 
+.cart-option .quantity {
+    background-color: #fff;
+    margin-right: 2.65700483vw;
+}
+
 .cart-option-wrap {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -7711,24 +7712,6 @@ input[type="checkbox"] + label:before {
     margin-top: 0.72463768vw;
 }
 
-.cart-option .btn-option-modify {
-    height: 9.66183575vw;
-    padding: 0 2.89855072vw;
-    border-radius: 1.20772947vw;
-    border: 1px solid #ccc;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: #fff;
-    margin-right: 2.41545894vw;
-}
-
-.cart-option .btn-option-modify span {
-    font-size: 3.38164251vw;
-    line-height: 4.10628019vw;
-    color: #16284c;
-    font-weight: 400;
-}
-
 .cart-option-total {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7749,114 +7732,6 @@ input[type="checkbox"] + label:before {
     line-height: 4.58937198vw;
     font-weight: 600;
     color: #333;
-}
-
-.cart-option-modify {
-    display: none;
-    padding: 4.83091787vw 3.8647343vw;
-    border: 1px solid #ccc;
-}
-
-.cart-option-modify .option-item-wrap {
-    width: 100%;
-    background-color: #fff;
-}
-
-.cart-option-modify .option-items {
-    background-color: #fff;
-}
-
-.cart-option-modify .selected li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    height: 9.66183575vw;
-    padding-left: 2.89855072vw;
-}
-
-.cart-option-modify .selected li:last-child {
-    border-bottom: solid 1px #ccc;
-}
-
-.cart-option-modify .selected .title,
-.cart-option-modify .selected .price {
-    font-size: 3.38164251vw;
-    line-height: 4.10628019vw;
-    font-weight: 400;
-    color: #333;
-}
-
-.cart-option-modify .selected .price {
-    padding-right: 4.83091787vw;
-}
-
-.cart-option-modify .selected .btn-delete {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 4.83091787vw;
-    height: 4.83091787vw;
-    background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 4.83091787vw auto;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.cart-option-modify .selected .btn-delete span {
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    pointer-events: none;
-}
-
-.cart-option-modify .cart-option-total {
-    margin-top: 3.14009662vw;
-}
-
-.cart-option-modify-buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-top: 2.41545894vw;
-}
-
-.cart-option-modify-buttons button {
-    width: 43.47826087vw;
-    height: 13.28502415vw;
-    border-radius: 2.41545894vw;
-}
-
-.cart-option-modify-buttons button span {
-    color: #fff;
-    font-weight: 600;
-    font-size: 3.8647343vw;
-    pointer-events: none;
-}
-
-.cart-option-modify-buttons .btn-cancel {
-    background-color: #ccc;
-}
-
-.cart-option-modify-buttons .btn-confirm {
-    background-color: #16284c;
 }
 
 .cart-option-quantity {
@@ -8275,24 +8150,6 @@ input[type="checkbox"] + label:before {
     margin-top: 0.72463768vw;
 }
 
-.wish-option .btn-option-modify {
-    height: 9.66183575vw;
-    padding: 0 2.89855072vw;
-    border-radius: 1.20772947vw;
-    border: 1px solid #ccc;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: #fff;
-    margin-right: 2.41545894vw;
-}
-
-.wish-option .btn-option-modify span {
-    font-size: 3.38164251vw;
-    line-height: 4.10628019vw;
-    color: #16284c;
-    font-weight: 400;
-}
-
 .wish-option-total {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8313,113 +8170,6 @@ input[type="checkbox"] + label:before {
     line-height: 4.58937198vw;
     font-weight: 600;
     color: #333;
-}
-
-.wish-option-modify {
-    padding: 4.83091787vw 3.8647343vw;
-    border: 1px solid #ccc;
-}
-
-.wish-option-modify .option-item-wrap {
-    width: 100%;
-    background-color: #fff;
-}
-
-.wish-option-modify .option-items {
-    background-color: #fff;
-}
-
-.wish-option-modify .selected li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    height: 9.66183575vw;
-    padding-left: 2.89855072vw;
-}
-
-.wish-option-modify .selected li:last-child {
-    border-bottom: solid 1px #ccc;
-}
-
-.wish-option-modify .selected .title,
-.wish-option-modify .selected .price {
-    font-size: 3.38164251vw;
-    line-height: 4.10628019vw;
-    font-weight: 400;
-    color: #333;
-}
-
-.wish-option-modify .selected .price {
-    padding-right: 4.83091787vw;
-}
-
-.wish-option-modify .selected .btn-delete {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 4.83091787vw;
-    height: 4.83091787vw;
-    background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 4.83091787vw auto;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.wish-option-modify .selected .btn-delete span {
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    pointer-events: none;
-}
-
-.wish-option-modify .wish-option-total {
-    margin-top: 3.14009662vw;
-}
-
-.wish-option-modify-buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-top: 2.41545894vw;
-}
-
-.wish-option-modify-buttons button {
-    width: 43.47826087vw;
-    height: 13.28502415vw;
-    border-radius: 2.41545894vw;
-}
-
-.wish-option-modify-buttons button span {
-    color: #fff;
-    font-weight: 600;
-    font-size: 3.8647343vw;
-    pointer-events: none;
-}
-
-.wish-option-modify-buttons .btn-cancel {
-    background-color: #ccc;
-}
-
-.wish-option-modify-buttons .btn-confirm {
-    background-color: #16284c;
 }
 
 .wish-option-quantity {
@@ -8813,24 +8563,6 @@ input[type="checkbox"] + label:before {
     margin-top: 0.72463768vw;
 }
 
-.toggle-option .btn-option-modify {
-    height: 9.66183575vw;
-    padding: 0 2.89855072vw;
-    border-radius: 1.20772947vw;
-    border: 1px solid #ccc;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: #fff;
-    margin-right: 2.41545894vw;
-}
-
-.toggle-option .btn-option-modify span {
-    font-size: 3.38164251vw;
-    line-height: 4.10628019vw;
-    color: #16284c;
-    font-weight: 400;
-}
-
 .toggle-option-total {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8850,113 +8582,6 @@ input[type="checkbox"] + label:before {
     line-height: 4.10628019vw;
     color: #999;
     font-weight: 400;
-}
-
-.toggle-option-modify {
-    padding: 4.83091787vw 3.8647343vw;
-    border: 1px solid #ccc;
-}
-
-.toggle-option-modify .option-item-wrap {
-    width: 100%;
-    background-color: #fff;
-}
-
-.toggle-option-modify .option-items {
-    background-color: #fff;
-}
-
-.toggle-option-modify .selected li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    height: 9.66183575vw;
-    padding-left: 2.89855072vw;
-}
-
-.toggle-option-modify .selected li:last-child {
-    border-bottom: solid 1px #ccc;
-}
-
-.toggle-option-modify .selected .title,
-.toggle-option-modify .selected .price {
-    font-size: 3.38164251vw;
-    line-height: 4.10628019vw;
-    font-weight: 400;
-    color: #333;
-}
-
-.toggle-option-modify .selected .price {
-    padding-right: 4.83091787vw;
-}
-
-.toggle-option-modify .selected .btn-delete {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 4.83091787vw;
-    height: 4.83091787vw;
-    background: url("../../images/cokco/icon-close-detail.svg") no-repeat 100% 50%;
-    background-size: 4.83091787vw auto;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.toggle-option-modify .selected .btn-delete span {
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    pointer-events: none;
-}
-
-.toggle-option-modify .toggle-option-total {
-    margin-top: 3.14009662vw;
-}
-
-.toggle-option-modify-buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-top: 2.41545894vw;
-}
-
-.toggle-option-modify-buttons button {
-    width: 43.47826087vw;
-    height: 13.28502415vw;
-    border-radius: 2.41545894vw;
-}
-
-.toggle-option-modify-buttons button span {
-    color: #fff;
-    font-weight: 600;
-    font-size: 3.8647343vw;
-    pointer-events: none;
-}
-
-.toggle-option-modify-buttons .btn-cancel {
-    background-color: #ccc;
-}
-
-.toggle-option-modify-buttons .btn-confirm {
-    background-color: #16284c;
 }
 
 .toggle-option-quantity {

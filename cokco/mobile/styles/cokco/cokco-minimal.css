@@ -2697,20 +2697,16 @@ input[type="checkbox"] + label:before {
     line-height: 3.62318841vw;
     color: #fff;
     font-weight: 400;
-    border-radius: 3.62318841vw;
+    border-radius: 0.96618357vw;
     white-space: nowrap;
 }
 
 .item-badges li.min, .item-badges li.discount {
-    background-color: #e81a90;
+    background-color: #ec7203;
 }
 
-.item-badges li.install {
-    background-color: #98c9f4;
-}
-
-.item-badges li.delivery {
-    background-color: #c4c4c4;
+.item-badges li.install, .item-badges li.delivery {
+    background-color: #ccc;
 }
 
 .item-badges li + li {

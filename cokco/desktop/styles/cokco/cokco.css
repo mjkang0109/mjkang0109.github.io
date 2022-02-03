@@ -5566,7 +5566,7 @@ input[type="checkbox"] + label:before {
     white-space: normal;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: 40px;
+    padding-left: 50px;
 }
 
 .my-wrap .title-more {
@@ -6403,13 +6403,13 @@ input[type="checkbox"] + label:before {
     display: block;
     width: 100%;
     color: #666;
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 28px;
+    line-height: 22px;
 }
 
 .my-link li + li {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .my-recent-item {

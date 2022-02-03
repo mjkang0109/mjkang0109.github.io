@@ -3786,8 +3786,7 @@ input[type="checkbox"] + label:before {
 }
 
 .form-info input:disabled {
-    opacity: 1;
-    background-color: #f8f8f8;
+    background-color: #fff;
 }
 
 .form-info .btn-address {

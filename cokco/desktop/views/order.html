@@ -331,7 +331,7 @@
                 </div>
                 <div class="form-info">
                   <label>
-                    <input type="text" name="address-1" required placeholder="주소">
+                    <input type="text" name="address-1" required disabled placeholder="주소">
                   </label>
                 </div>
                 <div class="form-info">
@@ -341,7 +341,7 @@
                 </div>
                 <div class="form-info">
                   <label>
-                    <input type="text" name="address-3" required placeholder="우편번호">
+                    <input type="text" name="address-3" required placeholder="우편번호" disabled>
                   </label>
                   <button type="button" class="btn-address">
                     <span>우편번호 검색</span>
@@ -356,17 +356,7 @@
               <div class="form-info-wrap">
                 <div class="form-info">
                   <label>
-                    <input type="text" required placeholder="배송지 이름">
-                  </label>
-                </div>
-                <div class="form-info">
-                  <label>
-                    <input type="text" required placeholder="받는분 이름">
-                  </label>
-                </div>
-                <div class="form-info">
-                  <label>
-                    <input type="text" name="address-1" required placeholder="주소">
+                    <input type="text" name="address-1" required disabled placeholder="주소">
                   </label>
                 </div>
                 <div class="form-info">
@@ -376,7 +366,7 @@
                 </div>
                 <div class="form-info">
                   <label>
-                    <input type="text" name="address-3" required placeholder="우편번호">
+                    <input type="text" name="address-3" required placeholder="우편번호" disabled>
                   </label>
                   <button type="button" class="btn-address">
                     <span>우편번호 검색</span>
@@ -384,7 +374,7 @@
                 </div>
                 <div class="form-info">
                   <label>
-                    <input type="text" required placeholder="휴대폰번호">
+                    <input type="text" required placeholder="배송요청사항">
                   </label>
                 </div>
               </div>
@@ -490,277 +480,55 @@
             </div>
           </div>
           <div class="order-form">
-            <h2>결제 수단</h2>
+            <h2>결제정보</h2>
             <div class="order-payment">
               <div class="tabs" role="tablist">
                 <button type="button" id="payment-tab-1" role="tab" class="btn-tab on"
-                  aria-selected="true" aria-controls="payment-panel-1" tabindex="0">
+                        aria-selected="true" aria-controls="payment-panel-1" tabindex="0">
                   <span>일반결제</span>
                 </button>
                 <button type="button" id="payment-tab-2" role="tab" class="btn-tab"
-                  aria-selected="false" aria-controls="payment-panel-2" tabindex="0">
+                        aria-selected="false" aria-controls="payment-panel-2" tabindex="0">
                   <span>에스크로</span>
                 </button>
               </div>
               <div class="panels">
-                <div id="payment-panel-1" role="tabpanel" tabindex="true" class="on"
-                  aria-labelledby="payment-tab-1">
+                <div id="payment-panel-1" role="tabpanel" tabindex="true" class="on empty"
+                     aria-labelledby="payment-tab-1">
                   <div class="order-radios radio-tabs">
                     <span class="radio-wrap">
                       <input type="radio" id="way-radio-1" class="radio- on" name="payment" checked
-                        aria-controls="way-panel-1">
-                      <label for="way-radio-1">무통장 입금</label>
+                             aria-controls="way-panel-1">
+                      <label for="way-radio-1">카드결제</label>
                     </span>
                     <span class="radio-wrap">
                       <input type="radio" id="way-radio-2" class="radio-" name="payment"
-                        aria-controls="way-panel-2">
+                             aria-controls="way-panel-2">
                       <label for="way-radio-2">계좌이체</label>
                     </span>
                     <span class="radio-wrap">
                       <input type="radio" id="way-radio-3" class="radio-" name="payment"
-                        aria-controls="way-panel-3">
-                      <label for="way-radio-3">가상계좌</label>
+                             aria-controls="way-panel-3">
+                      <label for="way-radio-3">무통장 입금</label>
                     </span>
                     <span class="radio-wrap">
                       <input type="radio" id="way-radio-4" class="radio-" name="payment"
-                        aria-controls="way-panel-4">
-                      <label for="way-radio-4">카드결제</label>
+                             aria-controls="way-panel-4">
+                      <label for="way-radio-4">가상계좌</label>
                     </span>
                   </div>
                   <div class="order-radios-panels radio-panels">
                     <div id="way-panel-1" class="on">
-                      <div class="order-form-wrap">
-                        <div class="form-info">
-                          <strong>무통장 입금</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼 유동적으로</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                     <div id="way-panel-2" class="">
-                      <div class="order-form-wrap">
-                        <div class="form-info">
-                          <strong>계좌이체</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼 유동적으로</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                     <div id="way-panel-3" class="">
                       <div class="order-form-wrap">
                         <div class="form-info">
-                          <strong>가상계좌</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼 유동적으로</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
+                          <strong>입금계좌</strong>
                           <div class="option-item-wrap">
                             <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
+                                    onclick="this.parentNode.classList.toggle('on')">
                               <span>국민은행 1234-1234-1234-123</span>
                             </button>
                             <div class="option-items">
@@ -777,152 +545,77 @@
                           </div>
                         </div>
                         <div class="form-info">
-                          <strong>타이틀</strong>
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
+                          <strong>입금자명</strong>
+                          <label>
+                            <input type="text" required placeholder="홍길동">
+                          </label>
                         </div>
                       </div>
                     </div>
                     <div id="way-panel-4" class="">
-                      <div class="order-form-wrap">
-                        <div class="form-info">
-                          <strong>카드결제</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼 유동적으로</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
                 <div id="payment-panel-2" role="tabpanel" tabindex="false" class=""
-                  aria-labelledby="payment-tab-2">
-                  <div class="order-form-wrap">에스크로</div>
+                     aria-labelledby="payment-tab-2">
+                  <div class="order-radios radio-tabs">
+                    <span class="radio-wrap">
+                      <input type="radio" id="way-radio-2-1" class="radio-2 on" name="payment-2"
+                             checked aria-controls="way-panel-2-1">
+                      <label for="way-radio-2-1">카드결제</label>
+                    </span>
+                    <span class="radio-wrap">
+                      <input type="radio" id="way-radio-2-2" class="radio-2" name="payment-2"
+                             aria-controls="way-panel-2-2">
+                      <label for="way-radio-2-2">계좌이체</label>
+                    </span>
+                    <span class="radio-wrap">
+                      <input type="radio" id="way-radio-2-3" class="radio-2" name="payment-2"
+                             aria-controls="way-panel-2-3">
+                      <label for="way-radio-2-3">가상계좌</label>
+                    </span>
+                  </div>
+                  <div class="order-radios-panels radio-panels">
+                    <div id="way-panel-2-1" class="on">
+                    </div>
+                    <div id="way-panel-2-2" class="">
+                    </div>
+                    <div id="way-panel-2-3" class="">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="order-bills">
               <div class="tabs" role="tablist">
                 <button type="button" id="bills-tab-1" role="tab" class="btn-tab on"
-                  aria-selected="true" aria-controls="bills-panel-1" tabindex="0">
-                  <span>현금영수증</span>
+                        aria-selected="true" aria-controls="bills-panel-1" tabindex="0">
+                  <span>미발행</span>
                 </button>
                 <button type="button" id="bills-tab-2" role="tab" class="btn-tab"
-                  aria-selected="false" aria-controls="bills-panel-2" tabindex="0">
-                  <span>세금계산서</span>
+                        aria-selected="false" aria-controls="bills-panel-2" tabindex="0">
+                  <span>현금영수증</span>
                 </button>
                 <button type="button" id="bills-tab-3" role="tab" class="btn-tab"
-                  aria-selected="false" aria-controls="bills-panel-3" tabindex="0">
-                  <span>미발행</span>
+                        aria-selected="false" aria-controls="bills-panel-3" tabindex="0">
+                  <span>세금계산서</span>
                 </button>
               </div>
               <div class="panels">
                 <div id="bills-panel-1" role="tabpanel" tabindex="true" class="on"
-                  aria-labelledby="bills-tab-1">
+                     aria-labelledby="bills-tab-1">
+                </div>
+                <div id="bills-panel-2" role="tabpanel" tabindex="false" class=""
+                     aria-labelledby="bills-tab-2">
                   <div class="order-radios radio-tabs">
                     <span class="radio-wrap">
                       <input type="radio" id="tax-radio-1" class="radio- on" name="tax" checked
-                        aria-controls="tax-panel-1">
+                             aria-controls="tax-panel-1">
                       <label for="tax-radio-1">소득공제</label>
                     </span>
                     <span class="radio-wrap">
                       <input type="radio" id="tax-radio-2" class="radio-" name="tax"
-                        aria-controls="tax-panel-2">
+                             aria-controls="tax-panel-2">
                       <label for="tax-radio-2">지출증빙</label>
                     </span>
                   </div>
@@ -930,273 +623,77 @@
                     <div id="tax-panel-1" class="on">
                       <div class="order-form-wrap">
                         <div class="form-info">
-                          <strong>소득공제</strong>
+                          <strong>휴대폰</strong>
                           <label>
-                            <input type="text" required placeholder="입금자명">
+                            <input type="text" required placeholder="010-1234-1234">
                           </label>
                         </div>
                         <div class="form-info">
-                          <strong>타이틀</strong>
+                          <strong>주민번호<br>(전체)</strong>
                           <label>
-                            <input type="text" required placeholder="입금자명">
+                            <input type="text" required placeholder="000000-0000000">
                           </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼 유동적으로</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
                     <div id="tax-panel-2" class="">
                       <div class="order-form-wrap">
                         <div class="form-info">
-                          <strong>지출증빙</strong>
                           <label>
-                            <input type="text" required placeholder="입금자명">
+                            <input type="text" required placeholder="사업자 번호">
                           </label>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <label>
-                            <input type="text" required placeholder="입금자명">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <label>
-                            <input type="text" required placeholder="사업자번호">
-                          </label>
-                          <button type="button">
-                            <span>버튼 유동적으로</span>
-                          </button>
-                        </div>
-                        <div class="form-info">
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-info">
-                          <strong>타이틀</strong>
-                          <div class="option-item-wrap">
-                            <button type="button" class="btn-current"
-                              onclick="this.parentNode.classList.toggle('on')">
-                              <span>국민은행 1234-1234-1234-123</span>
-                            </button>
-                            <div class="option-items">
-                              <button type="button" class="option-item on">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                              <button type="button" class="option-item">
-                                <span class="name">옵션정보 옵션정보 옵션정보</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="bills-panel-2" role="tabpanel" tabindex="false" class=""
-                  aria-labelledby="bills-tab-2">
-                  <div class="order-form-wrap">
-                    <div class="form-info">
-                      <strong>타이틀</strong>
-                      <label>
-                        <input type="text" required placeholder="입금자명">
-                      </label>
-                      <button type="button">
-                        <span>버튼</span>
-                      </button>
-                    </div>
-                    <div class="form-info">
-                      <strong>타이틀</strong>
-                      <label>
-                        <input type="text" required placeholder="입금자명">
-                      </label>
-                    </div>
-                    <div class="form-info">
-                      <label>
-                        <input type="text" required placeholder="사업자번호">
-                      </label>
-                    </div>
-                    <div class="form-info">
-                      <label>
-                        <input type="text" required placeholder="사업자번호">
-                      </label>
-                    </div>
-                    <div class="form-info">
-                      <label>
-                        <input type="text" required placeholder="사업자번호">
-                      </label>
-                      <button type="button">
-                        <span>버튼</span>
-                      </button>
-                    </div>
-                    <div class="form-info">
-                      <label>
-                        <input type="text" required placeholder="사업자번호">
-                      </label>
-                      <button type="button">
-                        <span>버튼 유동적으로</span>
-                      </button>
-                    </div>
-                    <div class="form-info">
-                      <div class="option-item-wrap">
-                        <button type="button" class="btn-current"
-                          onclick="this.parentNode.classList.toggle('on')">
-                          <span>국민은행 1234-1234-1234-123</span>
-                        </button>
-                        <div class="option-items">
-                          <button type="button" class="option-item on">
-                            <span class="name">옵션정보 옵션정보 옵션정보</span>
-                          </button>
-                          <button type="button" class="option-item">
-                            <span class="name">옵션정보 옵션정보 옵션정보</span>
-                          </button>
-                          <button type="button" class="option-item">
-                            <span class="name">옵션정보 옵션정보 옵션정보</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-info">
-                      <strong>타이틀</strong>
-                      <div class="option-item-wrap">
-                        <button type="button" class="btn-current"
-                          onclick="this.parentNode.classList.toggle('on')">
-                          <span>국민은행 1234-1234-1234-123</span>
-                        </button>
-                        <div class="option-items">
-                          <button type="button" class="option-item on">
-                            <span class="name">옵션정보 옵션정보 옵션정보</span>
-                          </button>
-                          <button type="button" class="option-item">
-                            <span class="name">옵션정보 옵션정보 옵션정보</span>
-                          </button>
-                          <button type="button" class="option-item">
-                            <span class="name">옵션정보 옵션정보 옵션정보</span>
-                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div id="bills-panel-3" role="tabpanel" tabindex="false" class=""
-                  aria-labelledby="bills-tab-3">
-                  <div class="order-form-wrap">미발행</div>
+                     aria-labelledby="bills-tab-3">
+                  <div class="order-form-wrap">
+                    <div class="form-info">
+                      <label>
+                        <input type="text" required placeholder="사업자 번호">
+                      </label>
+                    </div>
+                    <div class="form-info">
+                      <label>
+                        <input type="text" required placeholder="대표자명">
+                      </label>
+                    </div>
+                    <div class="form-info">
+                      <label>
+                        <input type="text" required placeholder="회사명">
+                      </label>
+                    </div>
+                    <div class="form-info">
+                      <label>
+                        <input type="text" required placeholder="종목">
+                      </label>
+                    </div>
+                    <div class="form-info">
+                      <label>
+                        <input type="text" required placeholder="업태">
+                      </label>
+                    </div>
+                    <div class="form-info">
+                      <label>
+                        <input type="text" required placeholder="사업자 주소">
+                      </label>
+                    </div>
+                    <div class="form-info">
+                      <label>
+                        <input type="text" required placeholder="나머지">
+                      </label>
+                    </div>
+                    <div class="form-info">
+                      <label>
+                        <input type="text" required placeholder="우편번호">
+                      </label>
+                      <button type="button">
+                        <span>우편번호 검색</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

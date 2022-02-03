@@ -969,9 +969,13 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-form {
     margin-top: 2.41545894vw;
-    padding-bottom: 2.17391304vw;
     border: solid 1px #ccc;
     background-color: #fff;
+    padding-bottom: 2.41545894vw;
+}
+
+.cokco-full .order-form:last-of-type {
+    padding-bottom: 0;
 }
 
 .cokco-full .order-form h2 {
@@ -1163,6 +1167,10 @@ input[type="checkbox"] + label:before {
     background-color: #fff;
 }
 
+.cokco-full .order-payment .order-form-wrap, .cokco-full .order-bills .order-form-wrap {
+    padding: 2.41545894vw 0;
+}
+
 .cokco-full .order-payment > .tabs, .cokco-full .order-bills > .tabs {
     padding: 0 3.8647343vw;
     border-bottom: solid 1px #ccc;
@@ -1196,7 +1204,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-payment > .panels, .cokco-full .order-bills > .panels {
-    padding: 2.41545894vw 3.8647343vw;
+    padding: 0 3.8647343vw;
 }
 
 .cokco-full .order-payment > .panels > div, .cokco-full .order-bills > .panels > div {
@@ -1245,7 +1253,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-radios {
     border-bottom: solid 1px #ccc;
     white-space: nowrap;
-    padding-bottom: 2.41545894vw;
+    padding: 2.41545894vw 0;
 }
 
 .cokco-full .order-radios .radio-wrap {
@@ -1296,7 +1304,6 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-radios-panels > div {
     display: none;
-    padding: 2.41545894vw 0 0;
 }
 
 .cokco-full .order-radios-panels > div.on {
@@ -1924,7 +1931,7 @@ input[type="checkbox"] + label:before {
 }
 
 .navigation ~ .btn-top {
-    bottom: 21.73913vw;
+    bottom: 21.73913043vw;
 }
 
 .navigations {
@@ -3521,6 +3528,7 @@ input[type="checkbox"] + label:before {
     box-sizing: border-box;
     border: solid 1px #ccc;
     z-index: 1;
+    pointer-events: none;
 }
 
 .form-wrap .upload-image .uploaded-item img {
@@ -3973,13 +3981,14 @@ input[type="checkbox"] + label:before {
 
 .btn-top {
     position: fixed;
-    bottom: 9.42029vw;
-    right: 3.86473vw;
-    width: 12.07729vw;
-    height: 12.07729vw;
+    bottom: 9.42028986vw;
+    right: 3.8647343vw;
+    width: 12.07729469vw;
+    height: 12.07729469vw;
     background: url("../../images/cokco/icon-top.svg") no-repeat 50% 50%;
     background-size: 100% auto;
     z-index: 10;
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
 
@@ -3993,6 +4002,7 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
 }
 

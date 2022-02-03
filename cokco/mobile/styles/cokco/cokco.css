@@ -961,9 +961,13 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-form {
     margin-top: 10px;
-    padding-bottom: 9px;
     border: solid 1px #ccc;
     background-color: #fff;
+    padding-bottom: 10px;
+}
+
+.cokco-full .order-form:last-of-type {
+    padding-bottom: 0;
 }
 
 .cokco-full .order-form h2 {
@@ -1155,6 +1159,10 @@ input[type="checkbox"] + label:before {
     background-color: #fff;
 }
 
+.cokco-full .order-payment .order-form-wrap, .cokco-full .order-bills .order-form-wrap {
+    padding: 10px 0;
+}
+
 .cokco-full .order-payment > .tabs, .cokco-full .order-bills > .tabs {
     padding: 0 16px;
     border-bottom: solid 1px #ccc;
@@ -1188,7 +1196,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .order-payment > .panels, .cokco-full .order-bills > .panels {
-    padding: 10px 16px;
+    padding: 0 16px;
 }
 
 .cokco-full .order-payment > .panels > div, .cokco-full .order-bills > .panels > div {
@@ -1237,7 +1245,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-radios {
     border-bottom: solid 1px #ccc;
     white-space: nowrap;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 
 .cokco-full .order-radios .radio-wrap {
@@ -1288,7 +1296,6 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-radios-panels > div {
     display: none;
-    padding: 10px 0 0;
 }
 
 .cokco-full .order-radios-panels > div.on {
@@ -3973,6 +3980,7 @@ input[type="checkbox"] + label:before {
     background: url("../../images/cokco/icon-top.svg") no-repeat 50% 50%;
     background-size: 100% auto;
     z-index: 10;
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
 
@@ -3986,6 +3994,7 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
 }
 

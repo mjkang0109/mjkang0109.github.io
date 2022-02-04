@@ -3871,8 +3871,13 @@ input[type="checkbox"] + label:before {
     background-color: #fff;
 }
 
+.fix-complete-img {
+    background-color: #f5851f;
+}
+
 .fix-complete-img img {
-    width: 100%;
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .fix-detail-category {

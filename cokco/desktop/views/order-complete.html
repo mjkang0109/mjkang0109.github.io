@@ -24,108 +24,172 @@
     <link rel="stylesheet" href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full">
-      <h1>
-        <strong>주문완료</strong>
-        <button type="button" class="btn-close">
-          <span>닫기</span>
-        </button>
-      </h1>
-      <div class="content">
-        <div class="cokco-breadcrumb">
-          <ol>
-            <li>주문완료</li>
-          </ol>
+    <header class="header">
+      <div class="header-items">
+        <div class="header-logo">
+          <a href="/" class="link-home">
+            <img src="../images/cokco/logo.svg" alt="코코수리 로고">
+          </a>
         </div>
-        <div class="order-complete">
-          <h2 class="order-completeessage">*주문이 정상적으로 완료되었습니다.<br>주문정보를 확인해주세요 </h2>
-          <div class="order-table">
-            <h3>주문상태 / 주문자정보</h3>
+        <div class="account-wrap">
+          <div class="account-nav">
             <ul>
-              <li>
-                <strong class="title">주문번호</strong>
-                <span class="desc">2112291219171009 </span>
+              <li class="">
+                <a href="./login.html">
+                  로그인
+                </a>
               </li>
-              <li>
-                <strong class="title">주문일자</strong>
-                <span class="desc">2022-01-01 12:12:12 </span>
+              <li class="">
+                <a href="./join-step-1.html">
+                  회원가입
+                </a>
               </li>
-              <li>
-                <strong class="title">주문자명</strong>
-                <span class="desc">홍00</span>
+              <li class="">
+                <a href="./inquire.html">
+                  고객센터
+                </a>
               </li>
-              <li>
-                <strong class="title">배송지</strong>
-                <span class="desc">경기도 00시 00동 000길 0
-                  00건물 0층</span>
+              <li class="">
+                <a href="./my.html">
+                  마이페이지
+                </a>
               </li>
             </ul>
           </div>
-          <div class="order-table">
-            <h3>주문상품정보 </h3>
-            <ul>
-              <li>
-                <strong class="title">주문상품명 </strong>
-                <span class="desc">S0851 그랑데 화이트 골드컵세면원홀 세면수전 외1</span>
-              </li>
-              <li>
-                <strong class="title">상품 옵션</strong>
-                <span class="desc">전체 0원</span>
-                <span class="option">(배송 0 / 추가 0 /설치옵션 0 )</span>
-              </li>
-              <li>
-                <strong class="title">할인/적립</strong>
-                <span class="desc">할인 0원 / 적립 +380원</span>
-              </li>
-              <li>
-                <strong class="title">결제금액 </strong>
-                <span class="desc">166,000원 </span>
-              </li>
-            </ul>
-          </div>
-          <div class="order-table">
-            <h3>결제정보</h3>
-            <ul>
-              <li>
-                <strong class="title">결제수단</strong>
-                <span class="desc">무통장입금 </span>
-              </li>
-              <li>
-                <strong class="title">입금기한 </strong>
-                <span class="desc">2022-00-00 23:59 까지 </span>
-              </li>
-              <li>
-                <strong class="title">계좌번호</strong>
-                <span class="desc">국민 585401-00-000000</span>
-                <button type="button" class="btn-copy">
-                  <span>복사</span>
-                </button>
-              </li>
-              <li>
-                <strong class="title">예금주</strong>
-                <span class="desc">꼬끼오 </span>
-              </li>
-              <li>
-                <strong class="title">입금금액</strong>
-                <span class="desc">166,000원 </span>
-              </li>
-              <li>
-                <strong class="title">입금상태</strong>
-                <span class="desc">미입금 </span>
-              </li>
-              <li>
-                <strong class="title">현금영수증</strong>
-                <span class="desc">v소득공제용 / 지출증빙용</span>
-              </li>
-              <li>
-                <strong class="title">세금계산서</strong>
-                <span class="desc">미발행 </span>
-              </li>
-            </ul>
+          <div class="header-search">
+            <label>
+              <input type="search" class="input-search" placeholder="검색어를 입력해주세요.">
+            </label>
+            <button type="button" class="btn-search" aria-expanded="false">
+              <span>검색</span>
+            </button>
           </div>
         </div>
       </div>
-      <div class="full-fix">
+      <div class="category">
+        <ul class="categories">
+          <li class="swiper category-index">
+            <a href="./index.html">
+              홈
+            </a>
+          </li>
+          <li class="swiper category-store">
+            <a href="./store.html">
+              스토어
+            </a>
+          </li>
+          <li class="swiper category-exhibition">
+            <a href="./exhibition.html">
+              기획전
+            </a>
+          </li>
+          <li class="swiper category-fix">
+            <a href="./fix.html">
+              수리사례
+            </a>
+          </li>
+          <li class="swiper category-company">
+            <a href="./company.html">
+              코코수리란
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="cokco">
+      <h1>코코수리</h1>
+      <div class="cokco-breadcrumb">
+        <ol>
+          <li>주문/결제</li>
+          <li>주문완료</li>
+        </ol>
+      </div>
+      <div class="order-complete">
+        <h2 class="order-complete-message">*주문이 정상적으로 완료되었습니다.<br>주문정보를 확인해주세요 </h2>
+        <div class="order-table">
+          <h3>주문상태 / 주문자정보</h3>
+          <ul>
+            <li>
+              <strong class="title">주문번호</strong>
+              <span class="desc">2112291219171009 </span>
+            </li>
+            <li>
+              <strong class="title">주문일자</strong>
+              <span class="desc">2022-01-01 12:12:12 </span>
+            </li>
+            <li>
+              <strong class="title">주문자명</strong>
+              <span class="desc">홍00</span>
+            </li>
+            <li>
+              <strong class="title">배송지</strong>
+              <span class="desc">경기도 00시 00동 000길 0
+                00건물 0층</span>
+            </li>
+          </ul>
+        </div>
+        <div class="order-table">
+          <h3>주문상품정보 </h3>
+          <ul>
+            <li>
+              <strong class="title">주문상품명 </strong>
+              <span class="desc">S0851 그랑데 화이트 골드컵세면원홀 세면수전 외1</span>
+            </li>
+            <li>
+              <strong class="title">상품 옵션</strong>
+              <span class="desc">전체 0원</span>
+              <span class="option">(배송 0 / 추가 0 /설치옵션 0 )</span>
+            </li>
+            <li>
+              <strong class="title">할인/적립</strong>
+              <span class="desc">할인 0원 / 적립 +380원</span>
+            </li>
+            <li>
+              <strong class="title">결제금액 </strong>
+              <span class="desc">166,000원 </span>
+            </li>
+          </ul>
+        </div>
+        <div class="order-table">
+          <h3>결제정보</h3>
+          <ul>
+            <li>
+              <strong class="title">결제수단</strong>
+              <span class="desc">무통장입금 </span>
+            </li>
+            <li>
+              <strong class="title">입금기한 </strong>
+              <span class="desc">2022-00-00 23:59 까지 </span>
+            </li>
+            <li>
+              <strong class="title">계좌번호</strong>
+              <span class="desc">국민 585401-00-000000</span>
+              <button type="button" class="btn-copy">
+                <span>복사</span>
+              </button>
+            </li>
+            <li>
+              <strong class="title">예금주</strong>
+              <span class="desc">꼬끼오 </span>
+            </li>
+            <li>
+              <strong class="title">입금금액</strong>
+              <span class="desc">166,000원 </span>
+            </li>
+            <li>
+              <strong class="title">입금상태</strong>
+              <span class="desc">미입금 </span>
+            </li>
+            <li>
+              <strong class="title">현금영수증</strong>
+              <span class="desc">v소득공제용 / 지출증빙용</span>
+            </li>
+            <li>
+              <strong class="title">세금계산서</strong>
+              <span class="desc">미발행 </span>
+            </li>
+          </ul>
+        </div>
         <button type="button" class="btn-confirm">
           <span>확인</span>
         </button>
@@ -174,9 +238,6 @@
         </div>
       </div>
     </footer>
-    <button type="button" class="btn-top">
-      <span>최상단으로 이동</span>
-    </button>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

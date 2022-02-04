@@ -78,7 +78,7 @@
               스토어
             </a>
           </li>
-          <li class="swiper on category-exhibition">
+          <li class="swiper category-exhibition">
             <a href="./exhibition.html">
               기획전
             </a>
@@ -194,15 +194,11 @@
               </div>
               <div class="benefit">
                 <div class="detail-block">
-                  <strong class="title">배송료</strong>
+                  <strong class="title">배송비</strong>
                   <div class="benefits">
                     <dl>
                       <dt>조건별 배송비</dt>
                       <dd>무료배송</dd>
-                    </dl>
-                    <dl>
-                      <dt>자체상품코드</dt>
-                      <dd>2100002933646</dd>
                     </dl>
                     <div class="caution">-제주도 / 도서산간 배송불가 </div>
                   </div>
@@ -210,49 +206,102 @@
               </div>
             </div>
             <div class="detail-options">
-              <div class="detail-block">
-                <strong class="title">추가옵션</strong>
-                <div class="detail-block-options">
-                  <div class="detail-option">
-                    <div class="option-item-wrap">
-                      <button type="button" class="btn-current"
-                        onclick="this.parentNode.classList.toggle('on')">
-                        <span>추가 선택</span>
-                      </button>
-                      <div class="option-items">
-                        <button type="button" class="option-item on">
-                          <span class="name">옵션명1</span>
-                          <span class="price">+000,000원</span>
+              <div class="detail-option-wrap">
+                <div class="detail-block">
+                  <strong class="title">추가옵션</strong>
+                  <div class="detail-block-options">
+                    <div class="detail-option">
+                      <div class="option-item-wrap">
+                        <button type="button" class="btn-current"
+                                onclick="this.parentNode.classList.toggle('on')">
+                          <span>추가옵션 선택</span>
                         </button>
-                        <button type="button" class="option-item">
-                          <span class="name">옵션명2</span>
-                          <span class="price">+000,000원</span>
-                        </button>
-                        <button type="button" class="option-item">
-                          <span class="name">옵션 명이 길 경우 명이 길 경우</span>
-                          <span class="price">+000,000원</span>
-                        </button>
-                        <button type="button" class="option-item">
-                          <span class="name">옵션 명이 길 경우</span>
-                          <span class="price">+000,000원</span>
-                        </button>
+                        <div class="option-items">
+                          <button type="button" class="option-item on">
+                            <span class="name">옵션명1</span>
+                            <span class="price">+0원</span>
+                          </button>
+                          <button type="button" class="option-item">
+                            <span class="name">옵션명2</span>
+                            <span class="price">+000,000원</span>
+                          </button>
+                          <button type="button" class="option-item">
+                            <span class="name">옵션 명이 길 경우 명이 길 경우</span>
+                            <span class="price">+000,000원</span>
+                          </button>
+                          <button type="button" class="option-item">
+                            <span class="name">옵션 명이 길 경우</span>
+                            <span class="price">+000,000원</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="selected">
+                        <ul>
+                          <li>
+                            <strong class="title">선택된 옵션</strong>
+                            <span class="price">+0,000,000원</span>
+                            <button type="button" class="btn-delete">
+                              <span>옵션 삭제</span>
+                            </button>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="selected">
-                      <ul>
-                        <li>
-                          <strong class="title">선택된 옵션</strong>
-                          <span class="price">+0,000,000원</span>
-                          <button type="button" class="btn-delete">
-                            <span>옵션 삭제</span>
+                  </div>
+                </div>
+                <div class="detail-block">
+                  <strong class="title">설치옵션</strong>
+                  <div class="detail-block-options">
+                    <div class="detail-option">
+                      <div class="option-item-wrap">
+                        <button type="button" class="btn-current"
+                                onclick="this.parentNode.classList.toggle('on')">
+                          <span>설치옵션 선택</span>
+                        </button>
+                        <div class="option-items">
+                          <button type="button" class="option-item on">
+                            <span class="name">옵션명1</span>
+                            <span class="price">+0원</span>
                           </button>
-                        </li>
-                      </ul>
+                          <button type="button" class="option-item">
+                            <span class="name">옵션명2</span>
+                            <span class="price">+000,000원</span>
+                          </button>
+                          <button type="button" class="option-item">
+                            <span class="name">옵션 명이 길 경우 명이 길 경우</span>
+                            <span class="price">+000,000원</span>
+                          </button>
+                          <button type="button" class="option-item">
+                            <span class="name">옵션 명이 길 경우</span>
+                            <span class="price">+000,000원</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="selected">
+                        <ul>
+                          <li>
+                            <strong class="title">선택된 옵션</strong>
+                            <span class="price">+0,000,000원</span>
+                            <button type="button" class="btn-delete">
+                              <span>옵션 삭제</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="detail-block">
+              <div class="detail-block option-add-price">
+                <strong class="title">상품금액</strong>
+                <div class="detail-block-options">
+                  <span class="price">+0,000,000원</span>
+                  <button type="button" class="btn-delete">
+                    <span>옵션 삭제</span>
+                  </button>
+                </div>
+              </div>
+              <div class="detail-block detail-option-quantity">
                 <strong class="title">수량선택</strong>
                 <div class="detail-block-options">
                   <div class="quantity">
@@ -265,57 +314,15 @@
                     </button>
                   </div>
                   <div class="price-wrap">
-                    <span class="price">+0,000,000원</span>
+                    <span class="price">2개</span>
                     <button type="button" class="btn-delete">
                       <span>옵션 삭제</span>
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="detail-block">
-                <strong class="title">설치옵션</strong>
-                <div class="detail-block-options">
-                  <div class="detail-option">
-                    <div class="option-item-wrap">
-                      <button type="button" class="btn-current"
-                        onclick="this.parentNode.classList.toggle('on')">
-                        <span>옵션 선택</span>
-                      </button>
-                      <div class="option-items">
-                        <button type="button" class="option-item on">
-                          <span class="name">옵션명1</span>
-                          <span class="price">+000,000원</span>
-                        </button>
-                        <button type="button" class="option-item">
-                          <span class="name">옵션명2</span>
-                          <span class="price">+000,000원</span>
-                        </button>
-                        <button type="button" class="option-item">
-                          <span class="name">옵션 명이 길 경우 명이 길 경우</span>
-                          <span class="price">+000,000원</span>
-                        </button>
-                        <button type="button" class="option-item">
-                          <span class="name">옵션 명이 길 경우</span>
-                          <span class="price">+000,000원</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="selected">
-                      <ul>
-                        <li>
-                          <strong class="title">선택된 옵션</strong>
-                          <span class="price">+0,000,000원</span>
-                          <button type="button" class="btn-delete">
-                            <span>옵션 삭제</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="detail-block">
-                <strong class="title">주문금액</strong>
+              <div class="detail-block detail-option-total">
+                <strong class="title">합계금액</strong>
                 <span class="total-price">0원</span>
               </div>
             </div>

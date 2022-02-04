@@ -1625,6 +1625,10 @@ input[type="checkbox"] + label:before {
     height: 100%;
 }
 
+.layer .layer-text {
+    text-align: center;
+}
+
 .layer .layer-text span,
 .layer .layer-text em {
     font-size: 16px;
@@ -1644,6 +1648,48 @@ input[type="checkbox"] + label:before {
     margin: 0 auto;
     width: 40px;
     height: auto;
+}
+
+.bottom-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 22px;
+    margin-bottom: 16px;
+    padding: 0 16px calc(constant(safe-area-inset-bottom));
+    padding: 0 16px calc(env(safe-area-inset-bottom));
+}
+
+.bottom-btn a,
+.bottom-btn button {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.bottom-btn a span,
+.bottom-btn button span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.bottom-btn a {
+    line-height: 53px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.bottom-btn .link-shopping {
+    background-color: #ccc;
+}
+
+.bottom-btn .link-cart {
+    background-color: #16284c;
 }
 
 /* common */
@@ -5458,8 +5504,9 @@ input[type="checkbox"] + label:before {
     display: flex;
 }
 
-.detail-block .title {
-    width: 114px;
+.detail-block > .title {
+    width: 82px;
+    padding-top: 2px;
     font-size: 16px;
     line-height: 19px;
     font-weight: 600;
@@ -5554,9 +5601,16 @@ input[type="checkbox"] + label:before {
 
 .detail-option .option-items {
     display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     background-color: #f8f8f8;
     border: solid 1px #ccc;
     padding: 16px 0;
+    z-index: 10;
 }
 
 .detail-options {
@@ -5568,16 +5622,84 @@ input[type="checkbox"] + label:before {
     border-bottom: solid 1px #ccc;
 }
 
-.detail-options .detail-block + .detail-block:last-child {
-    border-bottom: 0;
+.detail-options .detail-block.add-option > .title, .detail-options .detail-block.install-option > .title {
+    padding-top: 10px;
 }
 
-.detail-options .detail-block + .detail-block:last-child > .title {
-    padding-top: 3px;
+.detail-options .detail-block.add-option + .install-option {
+    padding-top: 0;
 }
 
 .detail-options .detail-block + .detail-block > .title {
     padding-top: 10px;
+}
+
+.detail-options .detail-block.option-add-price {
+    position: relative;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.detail-options .detail-block.option-add-price .title {
+    padding-top: 0;
+}
+
+.detail-options .detail-block.option-add-price .price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333;
+    font-weight: 400;
+}
+
+.detail-options .detail-block.option-add-price .price {
+    padding-right: 20px;
+}
+
+.detail-options .detail-block.option-add-price .btn-delete {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../../images/cokco/icon-close-detail.svg") no-repeat 50% 50%;
+    background-size: 20px auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.detail-options .detail-block.option-add-price .btn-delete span {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    pointer-events: none;
+}
+
+.detail-options .detail-block.detail-option-total {
+    border-bottom: 0;
+}
+
+.detail-options .detail-block.detail-option-total > .title {
+    padding-top: 3px;
+}
+
+.detail-options .detail-option-wrap {
+    border-bottom: 1px solid #ccc;
+}
+
+.detail-options .detail-option-wrap .detail-block {
+    border-bottom: none;
 }
 
 .detail-option .btn-current {

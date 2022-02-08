@@ -27,80 +27,79 @@
       href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full full-white">
+    <section class="cokco-full">
       <h1>
-        <button type="button" class="btn-back">
-          <span>뒤로가기</span>
+        <strong>마이페이지</strong>
+        <button type="button" class="btn-close">
+          <span>닫기</span>
         </button>
-        <strong>회원정보</strong>
       </h1>
-      <div class="cokco-breadcrumb">
-        <ol>
-          <li>마이페이지</li>
-          <li>회원정보</li>
-          <li>회원정보 변경</li>
-        </ol>
-      </div>
-      <div class="my-info-form">
-        <h2>개인 회원정보 변경</h2>
-        <div class="my-info-form-wrap">
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*비밀번호" value="아이디 : abcdef1234" disabled class="disabled-blue">
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="password" placeholder="*비밀번호" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="password" placeholder="*비밀번호 확인" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*이름" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*휴대폰 번호" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*주소" required disabled>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="나머지" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="우편번호" required disabled>
-            </label>
-            <button type="button" class="btn-address">
-              <span>우편번호 검색</span>
-            </button>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="이메일" required>
-            </label>
-          </div>
+      <div class="my-point">
+        <div class="point-wrap">
+          <a href="#">
+            <span class="icon">
+              <img src="../images/cokco/icon-coupon.svg" alt="">
+            </span>
+            <span class="type">쿠폰</span>
+            <em>0</em>
+            <span class="unit">장</span>
+          </a>
+        </div>
+        <div class="point-wrap">
+          <a href="#">
+            <span class="icon">
+              <img src="../images/cokco/icon-point.svg" alt="">
+            </span>
+            <span class="type">포인트</span>
+            <em>0</em>
+            <span class="unit">원</span>
+          </a>
         </div>
       </div>
-      <div class="my-info-btn">
-        <button type="button" class="btn-cancel">
-          <span>취소</span>
-        </button>
-        <button type="button" class="btn-confirm">
-          <span>정보수정</span>
-        </button>
+      <div class="my-link">
+        <ul>
+          <li>
+            <a href="./my-shipping-m.html" class="info">
+              쇼핑정보
+            </a>
+          </li>
+          <li>
+            <a href="./my-fix-m.html" class="">
+              수리신청 현황
+            </a>
+          </li>
+          <li>
+            <a href="./my-modify-m.html" class="">
+              회원정보
+            </a>
+          </li>
+          <li>
+            <a href="./my-benefit-m.html" class="">
+              혜택관리
+            </a>
+          </li>
+          <li>
+            <a href="./my-customer-m.html" class="">
+              고객센터
+            </a>
+          </li>
+          <li>
+            <a href="./my-inquire-m.html" class="">
+              나의 상품문의
+            </a>
+          </li>
+          <li>
+            <a href="./my-review-m.html" class="">
+              나의 상품후기
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="my-recent-item tile-item">
+        <h2 class="title-more">
+          <strong>최근 본 상품</strong>
+        </h2>
+        <div class="no-wrap">최근 본 상품이 없습니다.</div>
       </div>
     </section>
     <nav class="navigation">

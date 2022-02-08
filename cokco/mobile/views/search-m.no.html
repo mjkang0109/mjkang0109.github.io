@@ -29,78 +29,73 @@
   <body>
     <section class="cokco-full full-white">
       <h1>
-        <button type="button" class="btn-back">
-          <span>뒤로가기</span>
+        <strong>상품검색</strong>
+        <button type="button" class="btn-close">
+          <span>닫기</span>
         </button>
-        <strong>회원정보</strong>
       </h1>
-      <div class="cokco-breadcrumb">
-        <ol>
-          <li>마이페이지</li>
-          <li>회원정보</li>
-          <li>회원정보 변경</li>
-        </ol>
-      </div>
-      <div class="my-info-form">
-        <h2>개인 회원정보 변경</h2>
-        <div class="my-info-form-wrap">
-          <div class="form-info">
+      <div class="search-item tile-item">
+        <div class="search-form">
+          <div class="search-form-wrap">
             <label>
-              <input type="text" placeholder="*비밀번호" value="아이디 : abcdef1234" disabled class="disabled-blue">
+              <input type="search" class="input-search" placeholder="검색어를 입력해주세요.">
             </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="password" placeholder="*비밀번호" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="password" placeholder="*비밀번호 확인" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*이름" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*휴대폰 번호" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*주소" required disabled>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="나머지" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="우편번호" required disabled>
-            </label>
-            <button type="button" class="btn-address">
-              <span>우편번호 검색</span>
+            <button type="button" class="btn-search">
+              <span>검색</span>
             </button>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="이메일" required>
-            </label>
+            <div class="search-filter">
+              <input type="checkbox" id="checkbox-search-filter">
+              <label for="checkbox-search-filter">결과 내 재검색</label>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="my-info-btn">
-        <button type="button" class="btn-cancel">
-          <span>취소</span>
-        </button>
-        <button type="button" class="btn-confirm">
-          <span>정보수정</span>
-        </button>
+        <div class="search-category-wrap">
+          <div class="dropdown-items search-category depth-1">
+            <button type="button" class="btn-current">
+              <span>전체 카테고리</span>
+            </button>
+            <div class="sort-items">
+              <button type="button" class="sort-item">
+                <span>카테고리</span>
+              </button>
+              <button type="button" class="sort-item">
+                <span>카테고리</span>
+              </button>
+              <button type="button" class="sort-item">
+                <span>카테고리 명이 길 경우 명이 길 경우</span>
+              </button>
+              <button type="button" class="sort-item">
+                <span>카테고리 명이 길 경우</span>
+              </button>
+            </div>
+          </div>
+          <div class="dropdown-items search-category depth-2">
+            <button type="button" class="btn-current">
+              <span>상세 카테고리</span>
+            </button>
+            <div class="sort-items">
+              <button type="button" class="sort-item">
+                <span>카테고리</span>
+              </button>
+              <button type="button" class="sort-item">
+                <span>카테고리</span>
+              </button>
+              <button type="button" class="sort-item">
+                <span>카테고리 명이 길 경우 명이 길 경우</span>
+              </button>
+              <button type="button" class="sort-item">
+                <span>카테고리 명이 길 경우</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="search-breadcrumb">
+          <ol>
+            <li>카테고리명</li>
+            <li>카테고리명</li>
+          </ol>
+        </div>
+        <div class="no-wrap">해당하는 상품이 없습니다.</div>
       </div>
     </section>
     <nav class="navigation">

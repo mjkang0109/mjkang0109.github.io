@@ -393,6 +393,17 @@ input[type="checkbox"] + label:before {
     font-size: 16px;
 }
 
+.cokco-full .inquire-type .option-item-wrap {
+    position: relative;
+}
+
+.cokco-full .inquire-type .option-items {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
 .cokco-full .option-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3827,6 +3838,10 @@ input[type="checkbox"] + label:before {
     background-color: #fff;
 }
 
+.form-info input:disabled.disabled-blue {
+    color: #16284c;
+}
+
 .form-info .btn-address {
     height: 40px;
     padding: 0 20px;
@@ -4184,6 +4199,19 @@ input[type="checkbox"] + label:before {
     color: #000;
 }
 
+.exhibition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
 .exhibitions a {
     display: block;
 }
@@ -4225,6 +4253,20 @@ input[type="checkbox"] + label:before {
 }
 
 /* search */
+.search-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
 .search-form {
     padding: 10px 16px;
 }
@@ -4416,7 +4458,7 @@ input[type="checkbox"] + label:before {
 }
 
 .search-breadcrumb {
-    padding: 0 16px;
+    padding: 0 16px 10px;
 }
 
 .search-breadcrumb ol {
@@ -4438,6 +4480,10 @@ input[type="checkbox"] + label:before {
 .search-breadcrumb li + li:before {
     content: "\003e";
     padding: 0 4px;
+}
+
+.search-breadcrumb + .title-more {
+    margin-top: 0;
 }
 
 /* store */
@@ -4530,6 +4576,19 @@ input[type="checkbox"] + label:before {
     margin-top: 15px;
 }
 
+.store-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
 .store-detail .tabs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4603,6 +4662,19 @@ input[type="checkbox"] + label:before {
 /* fix */
 .fix-best-reference-item .title-more {
     margin-top: 0;
+}
+
+.fix-reference {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .fix-reference .title-more {
@@ -6123,7 +6195,6 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-review {
-    margin-top: 10px;
     padding: 0 16px;
 }
 
@@ -6133,7 +6204,6 @@ input[type="checkbox"] + label:before {
 
 .detail-inquire {
     position: relative;
-    margin-top: 10px;
 }
 
 .detail-inquire .inquires:before {
@@ -6663,6 +6733,17 @@ input[type="checkbox"] + label:before {
 
 .my-simple {
     margin-top: 10px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .my-simple h2 {
@@ -6884,6 +6965,8 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     margin-top: 16px;
 }
 
@@ -6893,6 +6976,12 @@ input[type="checkbox"] + label:before {
     line-height: 19px;
     font-weight: 600;
     color: #333;
+}
+
+.my-simple .simple-order .count,
+.my-simple .simple-order .price-type,
+.my-simple .simple-order .price-wrap em {
+    white-space: nowrap;
 }
 
 .my-simple .simple-order .count + .price-type {
@@ -6969,6 +7058,16 @@ input[type="checkbox"] + label:before {
 
 .my-recent-item {
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .my-recent-item .title-more {
@@ -7389,8 +7488,32 @@ input[type="checkbox"] + label:before {
     width: 100%;
 }
 
+.customer-inquire,
+.customer-review {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
 .customer-list {
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .customer-list h3 {
@@ -7452,7 +7575,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0 27px 0 22px;
+    padding: 0 27px 10px 22px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -7938,6 +8061,16 @@ input[type="checkbox"] + label:before {
 .wish-wrap {
     background-color: #f4f4f4;
     padding-top: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .wish-title {
@@ -8967,7 +9100,7 @@ input[type="checkbox"] + label:before {
     width: 1px;
     height: 12px;
     background-color: #16284c;
-    margin: 0 4px;
+    margin: 0 16px;
 }
 
 .member-wrap .login-links a {
@@ -9263,4 +9396,24 @@ input[type="checkbox"] + label:before {
 /* company */
 .company-image-wrap img {
     width: 100%;
+}
+
+.no-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    color: #000;
+    min-height: 132px;
 }

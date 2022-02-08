@@ -27,80 +27,50 @@
       href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full full-white">
+    <section class="cokco-full">
       <h1>
-        <button type="button" class="btn-back">
-          <span>뒤로가기</span>
+        <strong>찜리스트</strong>
+        <button type="button" class="btn-close">
+          <span>닫기</span>
         </button>
-        <strong>회원정보</strong>
       </h1>
       <div class="cokco-breadcrumb">
         <ol>
           <li>마이페이지</li>
-          <li>회원정보</li>
-          <li>회원정보 변경</li>
+          <li>쇼핑정보</li>
+          <li>찜리스트</li>
         </ol>
       </div>
-      <div class="my-info-form">
-        <h2>개인 회원정보 변경</h2>
-        <div class="my-info-form-wrap">
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*비밀번호" value="아이디 : abcdef1234" disabled class="disabled-blue">
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="password" placeholder="*비밀번호" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="password" placeholder="*비밀번호 확인" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*이름" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*휴대폰 번호" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*주소" required disabled>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="나머지" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="우편번호" required disabled>
-            </label>
-            <button type="button" class="btn-address">
-              <span>우편번호 검색</span>
-            </button>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="이메일" required>
-            </label>
-          </div>
-        </div>
+      <div class="my-menu-tab">
+        <ul>
+          <li class="">
+            <a href="./my-shipping-m.html">
+              주문배송
+            </a>
+          </li>
+          <li class="">
+            <a href="./my-cancel-m.html">
+              취소/반품/교환
+            </a>
+          </li>
+          <li class="">
+            <a href="./my-refund-m.html">
+              환불/입금내역
+            </a>
+          </li>
+          <li class="on">
+            <a href="./wish-m.html">
+              찜리스트
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="my-info-btn">
-        <button type="button" class="btn-cancel">
-          <span>취소</span>
-        </button>
-        <button type="button" class="btn-confirm">
-          <span>정보수정</span>
-        </button>
+      <div class="wish-wrap">
+        <h2 class="wish-title">
+          <strong>찜 리스트</strong>
+        </h2>
+        <!-- on 클래스로 옵션 노출/비노출 -->
+        <div class="no-wrap">해당하는 내역이 없습니다.</div>
       </div>
     </section>
     <nav class="navigation">

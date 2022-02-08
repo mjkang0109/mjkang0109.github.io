@@ -27,81 +27,97 @@
       href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full full-white">
+    <section class="cokco-full">
       <h1>
-        <button type="button" class="btn-back">
-          <span>뒤로가기</span>
+        <strong>혜택관리</strong>
+        <button type="button" class="btn-close">
+          <span>닫기</span>
         </button>
-        <strong>회원정보</strong>
       </h1>
       <div class="cokco-breadcrumb">
         <ol>
           <li>마이페이지</li>
-          <li>회원정보</li>
-          <li>회원정보 변경</li>
+          <li>혜택관리</li>
         </ol>
       </div>
-      <div class="my-info-form">
-        <h2>개인 회원정보 변경</h2>
-        <div class="my-info-form-wrap">
-          <div class="form-info">
+      <div class="my-point type-add">
+        <div class="point-wrap">
+          <a href="#">
+            <span class="icon">
+              <img src="../images/cokco/icon-coupon.svg" alt="">
+            </span>
+            <span class="type">쿠폰</span>
+            <em>0</em>
+            <span class="unit">장</span>
+          </a>
+        </div>
+        <div class="add-link-wrap">
+          <a href="./my-benefit-register-m.html" class="link-add">
+            <span>쿠폰 등록하기</span>
+          </a>
+        </div>
+      </div>
+      <div class="my-menu-tab">
+        <ul>
+          <li class="on">
+            <a href="./my-benefit-m.html">
+              쿠폰
+            </a>
+          </li>
+          <li class="">
+            <a href="./my-point-m.html">
+              포인트
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="my-order-list">
+        <h2>
+          <strong>발급일</strong>
+          <button type="button" class="btn-refresh">
+            <span>새로고침</span>
+          </button>
+          <div class="sort-wrap">
+            <div class="sort dropdown-items">
+              <button type="button" class="btn-current btn-sort">
+                <span>조회기간</span>
+              </button>
+              <div class="sort-items">
+                <button type="button" class="sort-item">
+                  <span>전체(최신순)</span>
+                </button>
+                <button type="button" class="sort-item">
+                  <span>오늘</span>
+                </button>
+                <button type="button" class="sort-item">
+                  <span>일주일</span>
+                </button>
+                <button type="button" class="sort-item">
+                  <span>한달</span>
+                </button>
+                <button type="button" class="sort-item">
+                  <span>일년</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </h2>
+        <div class="my-info-dashboard">
+          <div class="setPeriod">
             <label>
-              <input type="text" placeholder="*비밀번호" value="아이디 : abcdef1234" disabled class="disabled-blue">
+              <input type="text" value="2022-01-01">
+            </label>
+            <label>
+              <input type="text" value="2022-01-01">
             </label>
           </div>
-          <div class="form-info">
-            <label>
-              <input type="password" placeholder="*비밀번호" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="password" placeholder="*비밀번호 확인" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*이름" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*휴대폰 번호" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="*주소" required disabled>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="나머지" required>
-            </label>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="우편번호" required disabled>
-            </label>
-            <button type="button" class="btn-address">
-              <span>우편번호 검색</span>
-            </button>
-          </div>
-          <div class="form-info">
-            <label>
-              <input type="text" placeholder="이메일" required>
-            </label>
+          <div class="state-wrap">
+            <strong class="type">사용가능 쿠폰 </strong>
+            <span class="count"> 1</span>
           </div>
         </div>
       </div>
-      <div class="my-info-btn">
-        <button type="button" class="btn-cancel">
-          <span>취소</span>
-        </button>
-        <button type="button" class="btn-confirm">
-          <span>정보수정</span>
-        </button>
-      </div>
+      <div class="no-wrap">해당하는 내역이 없습니다. </div>
     </section>
     <nav class="navigation">
       <ul class="navigations">

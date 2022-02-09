@@ -24,35 +24,149 @@
     <link rel="stylesheet" href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full full-white">
-      <h1>
-        <strong>FAQ</strong>
-        <button type="button" class="btn-close">
-          <span>닫기</span>
-        </button>
-      </h1>
-      <div class="cokco-breadcrumb">
-        <ol>
-          <li>마이페이지</li>
-          <li>고객센터</li>
-          <li>FAQ</li>
-        </ol>
+    <header class="header">
+      <div class="header-items">
+        <div class="header-logo">
+          <a href="/" class="link-home">
+            <img src="../images/cokco/logo.svg" alt="코코수리 로고">
+          </a>
+        </div>
+        <div class="account-wrap">
+          <div class="account-nav">
+            <ul>
+              <li class="">
+                <a href="./login.html">
+                  로그인
+                </a>
+              </li>
+              <li class="">
+                <a href="./join-step-1.html">
+                  회원가입
+                </a>
+              </li>
+              <li class="">
+                <a href="./inquire.html">
+                  고객센터
+                </a>
+              </li>
+              <li class="">
+                <a href="./my.html">
+                  마이페이지
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-search">
+            <label>
+              <input type="search" class="input-search" placeholder="검색어를 입력해주세요.">
+            </label>
+            <button type="button" class="btn-search" aria-expanded="false">
+              <span>검색</span>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="customer-faq-detail">
-        <strong>배송은 얼마나 걸리나요?</strong>
-        <div class="customer-faq-text">배송관련안내 배송방법: 일반 택배상품
-          배송비: 무료
-          결제방식: 착불
-          도서산간 추가 배송비: 3,500원
-          배송불가 지역: 도서산간 지역 / 제주도
-          비례 배송비 : 주문상품 개수에 비례하여 배송비 부과<br>
-          반품배송비 : 편도 2,500원 (최초 배송비가 무료인 경우 5,000원
-          부과)
-          교환배송: 5,000원
-          보내실곳 : 경기 고양시 덕양구 권율대로 907 (KN빌딩) 6층
-          주식회사 꼬끼오</div>
-        <div class="faq-img-wrap">
-          <img src="../images/cokco/delivery-notice.jpg" alt="">
+      <div class="category">
+        <ul class="categories">
+          <li class="swiper category-index">
+            <a href="./index.html">
+              홈
+            </a>
+          </li>
+          <li class="swiper category-store">
+            <a href="./store.html">
+              스토어
+            </a>
+          </li>
+          <li class="swiper category-exhibition">
+            <a href="./exhibition.html">
+              기획전
+            </a>
+          </li>
+          <li class="swiper category-fix">
+            <a href="./fix.html">
+              수리사례
+            </a>
+          </li>
+          <li class="swiper category-company">
+            <a href="./company.html">
+              코코수리란
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="cokco my">
+      <h1>코코수리</h1>
+      <div class="my-wrap">
+        <div class="left">
+          <div class="my-link">
+            <ul>
+              <li class="">
+                <a href="./my.html" class="">
+                  마이페이지
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-shipping.html" class="info">
+                  쇼핑정보
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-fix.html" class="">
+                  수리신청 현황
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-modify.html" class="">
+                  회원정보
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-benefit.html" class="">
+                  혜택관리
+                </a>
+              </li>
+              <li class="on">
+                <a href="./inquire.html" class="">
+                  고객센터
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-inquire.html" class="">
+                  나의 상품문의
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-review.html" class="">
+                  나의 상품후기
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="cokco-breadcrumb">
+            <ol>
+              <li>마이페이지</li>
+              <li>고객센터</li>
+              <li>FAQ</li>
+            </ol>
+          </div>
+          <div class="customer-faq-detail">
+            <strong>배송은 얼마나 걸리나요?</strong>
+            <div class="customer-faq-text">배송관련안내 배송방법: 일반 택배상품
+              배송비: 무료
+              결제방식: 착불
+              도서산간 추가 배송비: 3,500원
+              배송불가 지역: 도서산간 지역 / 제주도
+              비례 배송비 : 주문상품 개수에 비례하여 배송비 부과<br><br>
+              반품배송비 : 편도 2,500원 (최초 배송비가 무료인 경우 5,000원 부과) 교환배송: 5,000원
+              보내실곳 : 경기 고양시 덕양구 권율대로 907 (KN빌딩) 6층 주식회사 꼬끼오</div>
+            <div class="faq-img-wrap">
+              <img src="../images/cokco/delivery-notice.jpg" alt="">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -99,9 +213,6 @@
         </div>
       </div>
     </footer>
-    <button type="button" class="btn-top">
-      <span>최상단으로 이동</span>
-    </button>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

@@ -34,22 +34,22 @@
         <div class="account-wrap">
           <div class="account-nav">
             <ul>
-              <li>
+              <li class="">
                 <a href="./login.html">
                   로그인
                 </a>
               </li>
-              <li>
+              <li class="">
                 <a href="./join-step-1.html">
                   회원가입
                 </a>
               </li>
-              <li>
+              <li class="">
                 <a href="./inquire.html">
                   고객센터
                 </a>
               </li>
-              <li>
+              <li class="">
                 <a href="./my.html">
                   마이페이지
                 </a>
@@ -213,7 +213,7 @@
                     <div class="detail-option">
                       <div class="option-item-wrap">
                         <button type="button" class="btn-current"
-                                onclick="this.parentNode.classList.toggle('on')">
+                          onclick="this.parentNode.classList.toggle('on')">
                           <span>추가옵션 선택</span>
                         </button>
                         <div class="option-items">
@@ -255,7 +255,7 @@
                     <div class="detail-option">
                       <div class="option-item-wrap">
                         <button type="button" class="btn-current"
-                                onclick="this.parentNode.classList.toggle('on')">
+                          onclick="this.parentNode.classList.toggle('on')">
                           <span>설치옵션 선택</span>
                         </button>
                         <div class="option-items">
@@ -354,11 +354,11 @@
             </button>
             <button type="button" id="detail-tab-4" role="tab" class="btn-tab" aria-selected="false"
               aria-controls="detail-panel-4" tabindex="0">
-              <span>후기</span>
+              <span>상품후기</span>
             </button>
             <button type="button" id="detail-tab-5" role="tab" class="btn-tab" aria-selected="false"
               aria-controls="detail-panel-5" tabindex="0">
-              <span>문의</span>
+              <span>상품문의</span>
             </button>
             <button type="button" id="detail-tab-6" role="tab" class="btn-tab" aria-selected="false"
               aria-controls="detail-panel-6" tabindex="0">
@@ -397,21 +397,15 @@
                 부과)<br>
                 교환배송: 5,000원<br>
                 보내실곳 : 경기 고양시 덕양구 권율대로 907 (KN빌딩) 6층<br>
-                주식회사 꼬끼오<br><br>
+                주식회사 꼬끼오<br><br><br><br><br>
                 반품/ 교환 사유에 따른 요청 가능 기간<br>
-                반품시 먼저 판매자와 연락하셔서 반품사유,택배시,배송비,반품지
-                주소 등을 협의하신 후 반품상품을 발송해 주시기 바랍니다.<br><br>
+                반품시 먼저 판매자와 연락하셔서 반품사유,택배시,배송비,반품지 주소 등을 협의하신 후 반품상품을 발송해 주시기 바랍니다.<br><br>
                 1.구매자 단순 변심은 숭품수령후 7일이내<br>
-                2. 표시/광고와 상이,상품하자의 경우 상품수령 후 3개월 이내
-                혹은 표시/광고와 다른 사실을 안날로부터 30일이내 둘 중 하나
-                경과 시 반품/교환 불가<br>
-                3.반품요청이 지난경우
-                판매자 정보: 꼬끼오<br>
-                대표: 유시만<br>
-                사업장 소재지 : 경기 고양시 덕양구 권율대로 907 (KM빌딩) 6층<br>
-                고객선터 전화번호: 031-0000-0000<br>
-                E- mail: cokcosuri@gmail.com<br>
-                사업자 등록번호: 128-86-03158<br>
+                2. 표시/광고와 상이,상품하자의 경우 상품수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안날로부터 30일이내 둘 중 하나 경과 시 반품/교환
+                불가 ...<br>
+                3.반품요청이 지난경우<br><br>
+                판매자 정보: 꼬끼오 대표: 유시만 사업장 소재지 : 경기 고양시 덕양구 권율대로 907 (KM빌딩) 6층<br>
+                고객선터 전화번호: 031-0000-0000 E- mail: cokcosuri@gmail.com 사업자 등록번호: 128-86-03158<br>
                 통신판매업 신고번호: 제2011-경기고양-1999호<br>
               </p>
             </div>
@@ -419,17 +413,21 @@
               aria-labelledby="detail-tab-4">
               <h3>
                 <strong>상품후기</strong>
-                <a href="./review-write.html" class="link-review">
-                  <span>후기작성</span>
-                </a>
               </h3>
               <div class="subtitle">
-                <span class="type">상품후기</span>
-                <em class="count">2</em>
-                <span class="unit">개</span>
+                <div class="all-count">
+                  <span class="type">상품후기</span>
+                  <em class="count">2</em>
+                  <span class="unit">개</span>
+                </div>
                 <div class="description">
                   <strong>상품후기</strong>
                   <span>를 작성하세요</span>
+                </div>
+                <div class="link-wrap">
+                  <a href="./review-write.html" class="link-review">
+                    <span>후기작성</span>
+                  </a>
                 </div>
               </div>
               <div class="review detail-review">
@@ -592,17 +590,21 @@
               aria-labelledby="detail-tab-5">
               <h3>
                 <strong>상품문의</strong>
-                <a href="./inquire-write.html" class="link-inquire">
-                  <span>문의작성</span>
-                </a>
               </h3>
               <div class="subtitle">
-                <span class="type">문의</span>
-                <em class="count">2</em>
-                <span class="unit">개</span>
+                <div class="all-count">
+                  <span class="type">문의</span>
+                  <em class="count">2</em>
+                  <span class="unit">개</span>
+                </div>
                 <div class="description">
                   <strong>상품문의</strong>
                   <span>를 작성하세요</span>
+                </div>
+                <div class="link-wrap">
+                  <a href="./inquire-write.html" class="link-inquire">
+                    <span>문의작성</span>
+                  </a>
                 </div>
               </div>
               <div class="inquire detail-inquire">
@@ -886,15 +888,13 @@
               aria-labelledby="detail-tab-6">
               <h3>추천상품</h3>
               <div class="subtitle">
-                <span class="type">추천상품</span>
-                <em class="count">2</em>
-                <span class="unit">개</span>
+                <div class="all-count">
+                  <span class="type">추천상품</span>
+                  <em class="count">2</em>
+                  <span class="unit">개</span>
+                </div>
               </div>
               <div class="recommend-item">
-                <h2 class="title-more">
-                  <strong>hidden</strong>
-                  <a href="./recommend.html">더보기</a>
-                </h2>
                 <div class="recommend-item-wrapper">
                   <ul class="recommend-items">
                     <li class="product-item">

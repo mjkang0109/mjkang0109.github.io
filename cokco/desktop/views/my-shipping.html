@@ -24,270 +24,384 @@
     <link rel="stylesheet" href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full">
-      <h1>
-        <strong>주문/배송</strong>
-        <button type="button" class="btn-close">
-          <span>닫기</span>
-        </button>
-      </h1>
-      <div class="cokco-breadcrumb">
-        <ol>
-          <li>마이페이지</li>
-          <li>쇼핑정보</li>
-          <li>주문배송</li>
-        </ol>
+    <header class="header">
+      <div class="header-items">
+        <div class="header-logo">
+          <a href="/" class="link-home">
+            <img src="../images/cokco/logo.svg" alt="코코수리 로고">
+          </a>
+        </div>
+        <div class="account-wrap">
+          <div class="account-nav">
+            <ul>
+              <li class="">
+                <a href="./login.html">
+                  로그인
+                </a>
+              </li>
+              <li class="">
+                <a href="./join-step-1.html">
+                  회원가입
+                </a>
+              </li>
+              <li class="">
+                <a href="./inquire.html">
+                  고객센터
+                </a>
+              </li>
+              <li class="">
+                <a href="./my.html">
+                  마이페이지
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-search">
+            <label>
+              <input type="search" class="input-search" placeholder="검색어를 입력해주세요.">
+            </label>
+            <button type="button" class="btn-search" aria-expanded="false">
+              <span>검색</span>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="myenu-tab">
-        <ul>
-          <li class="on">
-            <a href="./my-shipping.html">
-              주문배송
+      <div class="category">
+        <ul class="categories">
+          <li class="swiper category-index">
+            <a href="./index.html">
+              홈
             </a>
           </li>
-          <li class="">
-            <a href="./my-cancel.html">
-              취소/반품/교환
+          <li class="swiper category-store">
+            <a href="./store.html">
+              스토어
             </a>
           </li>
-          <li class="">
-            <a href="./my-refund.html">
-              환불/입금내역
+          <li class="swiper category-exhibition">
+            <a href="./exhibition.html">
+              기획전
             </a>
           </li>
-          <li class="">
-            <a href="./wish.html">
-              찜리스트
+          <li class="swiper category-fix">
+            <a href="./fix.html">
+              수리사례
+            </a>
+          </li>
+          <li class="swiper category-company">
+            <a href="./company.html">
+              코코수리란
             </a>
           </li>
         </ul>
       </div>
-      <div class="my-order-list">
-        <h2>
-          <strong>진행중인 주문</strong>
-          <button type="button" class="btn-refresh">
-            <span>새로고침</span>
-          </button>
-          <span class="desc">(최근 30일)</span>
-        </h2>
-        <div class="my-order-list-wrap">
-          <ol>
-            <li class="current">
-              <strong class="type">입금<br>대기</strong>
-              <span class="count">1</span>
-            </li>
-            <li class="">
-              <strong class="type">결제<br>완료</strong>
-              <span class="count">0</span>
-            </li>
-            <li class="">
-              <strong class="type">상품<br>준비중</strong>
-              <span class="count">0</span>
-            </li>
-            <li class="">
-              <strong class="type">배송중</strong>
-              <span class="count">0</span>
-            </li>
-            <li class="">
-              <strong class="type">배송<br>완료</strong>
-              <span class="count">0</span>
-            </li>
-            <li class="">
-              <strong class="type">구매<br>확정</strong>
-              <span class="count">0</span>
-            </li>
-          </ol>
-        </div>
-        <div class="my-info-dashboard">
-          <div class="setPeriod">
-            <label>
-              <input type="text" value="2022-01-01">
-            </label>
-            <label>
-              <input type="text" value="2022-01-01">
-            </label>
-          </div>
-          <div class="state-wrap">
-            <strong class="type">취소</strong>
-            <span class="count">0</span>
-          </div>
-          <div class="state-wrap">
-            <strong class="type">교환</strong>
-            <span class="count">0</span>
-          </div>
-          <div class="state-wrap">
-            <strong class="type">반품</strong>
-            <span class="count">0</span>
+    </header>
+    <section class="cokco my">
+      <h1>코코수리</h1>
+      <div class="my-wrap">
+        <div class="left">
+          <div class="my-link">
+            <ul>
+              <li class="">
+                <a href="./my.html" class="">
+                  마이페이지
+                </a>
+              </li>
+              <li class="on">
+                <a href="./my-shipping.html" class="info">
+                  쇼핑정보
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-fix.html" class="">
+                  수리신청 현황
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-modify.html" class="">
+                  회원정보
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-benefit.html" class="">
+                  혜택관리
+                </a>
+              </li>
+              <li class="">
+                <a href="./inquire.html" class="">
+                  고객센터
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-inquire.html" class="">
+                  나의 상품문의
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-review.html" class="">
+                  나의 상품후기
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div class="my-simple">
-        <h2>
-          <strong>주문목록/배송조회</strong>
-          <div class="sort dropdown-items">
-            <button type="button" class="btn-current btn-sort">
-              <span>조회기간</span>
-            </button>
-            <div class="sort-items">
-              <button type="button" class="sort-item">
-                <span>전체(최신순)</span>
-              </button>
-              <button type="button" class="sort-item">
-                <span>오늘</span>
-              </button>
-              <button type="button" class="sort-item">
-                <span>일주일</span>
-              </button>
-              <button type="button" class="sort-item">
-                <span>한달</span>
-              </button>
-              <button type="button" class="sort-item">
-                <span>일년</span>
-              </button>
+        <div class="right">
+          <div class="my-menu-tab">
+            <ul>
+              <li class="on">
+                <a href="./my-shipping.html">
+                  주문배송
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-cancel.html">
+                  취소/반품/교환
+                </a>
+              </li>
+              <li class="">
+                <a href="./my-refund.html">
+                  환불/입금내역
+                </a>
+              </li>
+              <li class="">
+                <a href="./wish.html">
+                  찜리스트
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="my-order-list">
+            <h2>
+              <span class="order-list-title">
+                <strong>진행중인 주문</strong>
+                <button type="button" class="btn-refresh">
+                  <span>새로고침</span>
+                </button>
+              </span>
+              <span class="desc">(최근 30일)</span>
+            </h2>
+            <div class="my-order-list-wrap">
+              <ol>
+                <li class="current">
+                  <strong class="type">입금대기</strong>
+                  <span class="count">1</span>
+                </li>
+                <li class="">
+                  <strong class="type">결제완료</strong>
+                  <span class="count">0</span>
+                </li>
+                <li class="">
+                  <strong class="type">상품준비중</strong>
+                  <span class="count">0</span>
+                </li>
+                <li class="">
+                  <strong class="type">배송중</strong>
+                  <span class="count">0</span>
+                </li>
+                <li class="">
+                  <strong class="type">배송완료</strong>
+                  <span class="count">0</span>
+                </li>
+                <li class="">
+                  <strong class="type">구매확정</strong>
+                  <span class="count">0</span>
+                </li>
+              </ol>
+            </div>
+            <div class="my-info-dashboard">
+              <div class="setPeriod">
+                <label>
+                  <input type="text" value="2022-01-01" disabled>
+                </label>
+                <label>
+                  <input type="text" value="2022-01-01" disabled>
+                </label>
+              </div>
+              <div class="states">
+                <div class="state-wrap">
+                  <strong class="type">취소</strong>
+                  <span class="count">0</span>
+                </div>
+                <div class="state-wrap">
+                  <strong class="type">교환</strong>
+                  <span class="count">0</span>
+                </div>
+                <div class="state-wrap">
+                  <strong class="type">반품</strong>
+                  <span class="count">0</span>
+                </div>
+              </div>
             </div>
           </div>
-        </h2>
-        <div class="simple-list">
-          <div class="simple-date">
-            <div class="date"><strong>주문날짜</strong><span>2022-01-01</span></div>
-            <div class="order-number"><strong>주문번호</strong><em>21122912191710009</em></div>
-          </div>
-          <div class="date-options">
-            <button type="button" class="btn-cancel">
-              <span>주문취소</span>
-            </button>
-            <button type="button" class="btn-cancel">
-              <span>상세</span>
-            </button>
-            <button type="button" class="btn-cancel">
-              <span>배송지 변경</span>
-            </button>
-          </div>
-          <ul class="simple-order">
-            <li>
-              <a href="#">
-                <div class="left">
-                  <span class="img-wrap">
-                    <img src="https://via.placeholder.com/540"
-                      onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
+          <div class="my-simple">
+            <h2>
+              <strong>주문목록/배송조회</strong>
+              <div class="sort dropdown-items">
+                <button type="button" class="btn-current btn-sort">
+                  <span>조회기간</span>
+                </button>
+                <div class="sort-items">
+                  <button type="button" class="sort-item">
+                    <span>전체(최신순)</span>
+                  </button>
+                  <button type="button" class="sort-item">
+                    <span>오늘</span>
+                  </button>
+                  <button type="button" class="sort-item">
+                    <span>일주일</span>
+                  </button>
+                  <button type="button" class="sort-item">
+                    <span>한달</span>
+                  </button>
+                  <button type="button" class="sort-item">
+                    <span>일년</span>
+                  </button>
                 </div>
-                <div class="right">
-                  <strong class="title">
-                    <span class="order-category">[수전]</span>
-                    <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
-                  </strong>
-                  <div class="price-wrap">
-                    <span class="count">수량 1개</span>
-                    <span class="price-type">주문금액</span>
-                    <em>83,000원</em>
-                  </div>
-                </div>
-              </a>
-              <div class="product-review">
-                <button type="button" class="btn-review">
-                  <span>후기</span>
+              </div>
+            </h2>
+            <div class="simple-list">
+              <div class="simple-date">
+                <div class="date"><strong>주문날짜</strong><span>2022-01-01</span></div>
+                <div class="order-number"><strong>주문번호</strong><em>21122912191710009</em></div>
+              </div>
+              <div class="date-options">
+                <button type="button" class="btn-cancel">
+                  <span>주문취소</span>
+                </button>
+                <button type="button" class="btn-cancel">
+                  <span>상세</span>
+                </button>
+                <button type="button" class="btn-cancel">
+                  <span>배송지 변경</span>
                 </button>
               </div>
-            </li>
-            <li>
-              <a href="#">
-                <div class="left">
-                  <span class="img-wrap">
-                    <img src="https://via.placeholder.com/540"
-                      onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-                </div>
-                <div class="right">
-                  <strong class="title">
-                    <span class="order-category">[수전]</span>
-                    <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
-                  </strong>
-                  <div class="price-wrap">
-                    <span class="count">수량 1개</span>
-                    <span class="price-type">주문금액</span>
-                    <em>83,000원</em>
+              <ul class="simple-order">
+                <li>
+                  <a href="#">
+                    <div class="left">
+                      <span class="img-wrap">
+                        <img src="https://via.placeholder.com/540/ffffff"
+                          onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                      </span>
+                    </div>
+                    <div class="right">
+                      <strong class="title">
+                        <span class="order-category">[수전]</span>
+                        <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
+                      </strong>
+                      <div class="price-wrap">
+                        <span class="count">수량 1개</span>
+                        <span class="price-type">주문금액</span>
+                        <em>83,000원</em>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product-review">
+                    <button type="button" class="btn-review">
+                      <span>후기</span>
+                    </button>
                   </div>
-                </div>
-              </a>
-              <div class="product-review">
-                <button type="button" class="btn-review">
-                  <span>후기</span>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="left">
+                      <span class="img-wrap">
+                        <img src="https://via.placeholder.com/540/ffffff"
+                          onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                      </span>
+                    </div>
+                    <div class="right">
+                      <strong class="title">
+                        <span class="order-category">[수전]</span>
+                        <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
+                      </strong>
+                      <div class="price-wrap">
+                        <span class="count">수량 1개</span>
+                        <span class="price-type">주문금액</span>
+                        <em>83,000원</em>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product-review">
+                    <button type="button" class="btn-review">
+                      <span>후기</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="simple-list">
+              <div class="simple-date">
+                <div class="date"><strong>주문날짜</strong><span>2022-01-01</span></div>
+                <div class="order-number"><strong>주문번호</strong><em>21122912191710009</em></div>
+              </div>
+              <div class="date-options">
+                <button type="button" class="btn-cancel">
+                  <span>주문취소</span>
+                </button>
+                <button type="button" class="btn-cancel">
+                  <span>상세</span>
+                </button>
+                <button type="button" class="btn-cancel">
+                  <span>배송지 변경</span>
                 </button>
               </div>
-            </li>
-          </ul>
-        </div>
-        <div class="simple-list">
-          <div class="simple-date">
-            <div class="date"><strong>주문날짜</strong><span>2022-01-01</span></div>
-            <div class="order-number"><strong>주문번호</strong><em>21122912191710009</em></div>
+              <ul class="simple-order">
+                <li>
+                  <a href="#">
+                    <div class="left">
+                      <span class="img-wrap">
+                        <img src="https://via.placeholder.com/540/ffffff"
+                          onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                      </span>
+                    </div>
+                    <div class="right">
+                      <strong class="title">
+                        <span class="order-category">[수전]</span>
+                        <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
+                      </strong>
+                      <div class="price-wrap">
+                        <span class="count">수량 1개</span>
+                        <span class="price-type">주문금액</span>
+                        <em>83,000원</em>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product-review">
+                    <button type="button" class="btn-review">
+                      <span>후기</span>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="left">
+                      <span class="img-wrap">
+                        <img src="https://via.placeholder.com/540/ffffff"
+                          onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                      </span>
+                    </div>
+                    <div class="right">
+                      <strong class="title">
+                        <span class="order-category">[수전]</span>
+                        <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
+                      </strong>
+                      <div class="price-wrap">
+                        <span class="count">수량 1개</span>
+                        <span class="price-type">주문금액</span>
+                        <em>83,000원</em>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product-review">
+                    <button type="button" class="btn-review">
+                      <span>후기</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="date-options">
-            <button type="button" class="btn-cancel">
-              <span>주문취소</span>
-            </button>
-            <button type="button" class="btn-cancel">
-              <span>상세</span>
-            </button>
-            <button type="button" class="btn-cancel">
-              <span>배송지 변경</span>
-            </button>
-          </div>
-          <ul class="simple-order">
-            <li>
-              <a href="#">
-                <div class="left">
-                  <span class="img-wrap">
-                    <img src="https://via.placeholder.com/540"
-                      onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-                </div>
-                <div class="right">
-                  <strong class="title">
-                    <span class="order-category">[수전]</span>
-                    <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
-                  </strong>
-                  <div class="price-wrap">
-                    <span class="count">수량 1개</span>
-                    <span class="price-type">주문금액</span>
-                    <em>83,000원</em>
-                  </div>
-                </div>
-              </a>
-              <div class="product-review">
-                <button type="button" class="btn-review">
-                  <span>후기</span>
-                </button>
-              </div>
-            </li>
-            <li>
-              <a href="#">
-                <div class="left">
-                  <span class="img-wrap">
-                    <img src="https://via.placeholder.com/540"
-                      onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-                </div>
-                <div class="right">
-                  <strong class="title">
-                    <span class="order-category">[수전]</span>
-                    <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
-                  </strong>
-                  <div class="price-wrap">
-                    <span class="count">수량 1개</span>
-                    <span class="price-type">주문금액</span>
-                    <em>83,000원</em>
-                  </div>
-                </div>
-              </a>
-              <div class="product-review">
-                <button type="button" class="btn-review">
-                  <span>후기</span>
-                </button>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
@@ -334,9 +448,6 @@
         </div>
       </div>
     </footer>
-    <button type="button" class="btn-top">
-      <span>최상단으로 이동</span>
-    </button>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

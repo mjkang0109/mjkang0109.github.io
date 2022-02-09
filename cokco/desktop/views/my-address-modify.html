@@ -24,67 +24,142 @@
     <link rel="stylesheet" href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full full-white">
-      <h1>
-        <strong>배송지 정보</strong>
-        <button type="button" class="btn-close">
-          <span>닫기</span>
-        </button>
-      </h1>
-      <div class="my-addressodify">
-        <div class="form-wrap">
-          <div class="title-wrap">
-            <strong class="title">배송지/설치 주소</strong>
+    <header class="header">
+      <div class="header-items">
+        <div class="header-logo">
+          <a href="/" class="link-home">
+            <img src="../images/cokco/logo.svg" alt="코코수리 로고">
+          </a>
+        </div>
+        <div class="account-wrap">
+          <div class="account-nav">
+            <ul>
+              <li class="">
+                <a href="./login.html">
+                  로그인
+                </a>
+              </li>
+              <li class="">
+                <a href="./join-step-1.html">
+                  회원가입
+                </a>
+              </li>
+              <li class="">
+                <a href="./inquire.html">
+                  고객센터
+                </a>
+              </li>
+              <li class="">
+                <a href="./my.html">
+                  마이페이지
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="form-info-wrap">
-            <div class="form-info">
-              <label>
-                <input type="text" required placeholder="배송지 이름">
-              </label>
-            </div>
-            <div class="form-info">
-              <label>
-                <input type="text" required placeholder="받는분 이름">
-              </label>
-            </div>
-            <div class="form-info">
-              <label>
-                <input type="text" name="address-1" required disabled placeholder="주소">
-              </label>
-            </div>
-            <div class="form-info">
-              <label>
-                <input type="text" name="address-2" required placeholder="나머지">
-              </label>
-            </div>
-            <div class="form-info">
-              <label>
-                <input type="text" name="address-3" required placeholder="우편번호" disabled>
-              </label>
-              <button type="button" class="btn-address">
-                <span>우편번호 검색</span>
-              </button>
-            </div>
-            <div class="form-info">
-              <label>
-                <input type="text" required placeholder="휴대폰번호">
-              </label>
-            </div>
+          <div class="header-search">
+            <label>
+              <input type="search" class="input-search" placeholder="검색어를 입력해주세요.">
+            </label>
+            <button type="button" class="btn-search" aria-expanded="false">
+              <span>검색</span>
+            </button>
           </div>
         </div>
-        <div class="my-address-default">
-          <input type="checkbox" id="address-default">
-          <label for="address-default">
-            <span>기본배송지로 설정</span>
-          </label>
-        </div>
-        <div class="my-info-btn">
-          <button type="button" class="btn-cancel">
-            <span>삭제</span>
-          </button>
-          <button type="button" class="btn-confirm">
-            <span>적용</span>
-          </button>
+      </div>
+      <div class="category">
+        <ul class="categories">
+          <li class="swiper category-index">
+            <a href="./index.html">
+              홈
+            </a>
+          </li>
+          <li class="swiper category-store">
+            <a href="./store.html">
+              스토어
+            </a>
+          </li>
+          <li class="swiper category-exhibition">
+            <a href="./exhibition.html">
+              기획전
+            </a>
+          </li>
+          <li class="swiper category-fix">
+            <a href="./fix.html">
+              수리사례
+            </a>
+          </li>
+          <li class="swiper category-company">
+            <a href="./company.html">
+              코코수리란
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="cokco">
+      <h1>코코수리</h1>
+      <div class="content">
+        <div class="full-gray">
+          <div class="my-address-modify">
+            <div class="close-type">
+              <h2>배송지 정보</h2>
+              <button type="button" class="btn-close"><span>닫기</span></button>
+              <div class="my-address-default">
+                <strong>배송지/설치주소</strong>
+                <button type="button" class="btn-load">고객정보 불러오기</button>
+                <div class="form-info">
+                  <label>
+                    <input type="text" required placeholder="배송지 이름">
+                  </label>
+                </div>
+                <div class="form-info">
+                  <label>
+                    <input type="text" required placeholder="받는분 이름">
+                  </label>
+                </div>
+                <div class="form-info">
+                  <label>
+                    <input type="text" name="address-1" required disabled placeholder="주소">
+                  </label>
+                  <button type="button" class="btn-auto-complete">
+                    <span>내정보 불러오기</span>
+                  </button>
+                </div>
+                <div class="form-info">
+                  <label>
+                    <input type="text" name="address-2" required placeholder="나머지">
+                  </label>
+                </div>
+                <div class="form-info">
+                  <label>
+                    <input type="text" name="address-3" required disabled placeholder="우편번호">
+                  </label>
+                  <button type="button" class="btn-address">
+                    <span>우편번호 검색</span>
+                  </button>
+                </div>
+                <div class="form-info">
+                  <label>
+                    <input type="text" required placeholder="휴대폰번호">
+                  </label>
+                </div>
+                <div class="address-default">
+                  <input type="checkbox" id="address-default">
+                  <label for="address-default">
+                    <span>기본배송지로 설정</span>
+                  </label>
+                </div>
+              </div>
+              <div class="close-type-button">
+                <button type="button" class="btn-cancel">
+                  <span>취소</span>
+                </button>
+                <button type="button" class="btn-confirm">
+                  <span>변경하기</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -131,9 +206,6 @@
         </div>
       </div>
     </footer>
-    <button type="button" class="btn-top">
-      <span>최상단으로 이동</span>
-    </button>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

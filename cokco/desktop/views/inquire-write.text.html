@@ -24,64 +24,177 @@
     <link rel="stylesheet" href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full full-white">
-      <h1>
-        <strong>문의작성</strong>
-        <button type="button" class="btn-close">
-          <span>닫기</span>
-        </button>
-      </h1>
-      <div class="content">
-        <div class="inquire-type">
-          <strong class="inquire-type-title">문의유형</strong>
-          <div class="option-item-wrap">
-            <button type="button" class="btn-current"
-              onclick="this.parentNode.classList.toggle('on')">
-              <span>문의유형선택</span>
+    <header class="header">
+      <div class="header-items">
+        <div class="header-logo">
+          <a href="/" class="link-home">
+            <img src="../images/cokco/logo.svg" alt="코코수리 로고">
+          </a>
+        </div>
+        <div class="account-wrap">
+          <div class="account-nav">
+            <ul>
+              <li class="">
+                <a href="./login.html">
+                  로그인
+                </a>
+              </li>
+              <li class="">
+                <a href="./join-step-1.html">
+                  회원가입
+                </a>
+              </li>
+              <li class="">
+                <a href="./inquire.html">
+                  고객센터
+                </a>
+              </li>
+              <li class="">
+                <a href="./my.html">
+                  마이페이지
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-search">
+            <label>
+              <input type="search" class="input-search" placeholder="검색어를 입력해주세요.">
+            </label>
+            <button type="button" class="btn-search" aria-expanded="false">
+              <span>검색</span>
             </button>
-            <div class="option-items">
-              <button type="button" class="option-item on">
-                <span>상품</span>
-              </button>
-              <button type="button" class="option-item">
-                <span>배송</span>
-              </button>
-              <button type="button" class="option-item">
-                <span>반품</span>
-              </button>
-              <button type="button" class="option-item">
-                <span>교환</span>
-              </button>
-              <button type="button" class="option-item">
-                <span>환불</span>
-              </button>
-              <button type="button" class="option-item">
-                <span>기타</span>
-              </button>
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <ul class="categories">
+          <li class="swiper category-index">
+            <a href="./index.html">
+              홈
+            </a>
+          </li>
+          <li class="swiper category-store">
+            <a href="./store.html">
+              스토어
+            </a>
+          </li>
+          <li class="swiper category-exhibition">
+            <a href="./exhibition.html">
+              기획전
+            </a>
+          </li>
+          <li class="swiper category-fix">
+            <a href="./fix.html">
+              수리사례
+            </a>
+          </li>
+          <li class="swiper category-company">
+            <a href="./company.html">
+              코코수리란
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="cokco">
+      <h1>코코수리</h1>
+      <div class="content full-gray">
+        <div class="close-type">
+          <h2>문의 작성</h2>
+          <button type="button" class="btn-close"><span>닫기</span></button>
+          <div class="close-type-content">
+            <div class="inquire-type">
+              <strong class="inquire-type-title">문의유형</strong>
+              <div class="option-item-wrap">
+                <button type="button" class="btn-current"
+                  onclick="this.parentNode.classList.toggle('on')">
+                  <span>문의유형선택</span>
+                </button>
+                <div class="option-items">
+                  <button type="button" class="option-item on">
+                    <span>상품</span>
+                  </button>
+                  <button type="button" class="option-item">
+                    <span>배송</span>
+                  </button>
+                  <button type="button" class="option-item">
+                    <span>반품</span>
+                  </button>
+                  <button type="button" class="option-item">
+                    <span>교환</span>
+                  </button>
+                  <button type="button" class="option-item">
+                    <span>환불</span>
+                  </button>
+                  <button type="button" class="option-item">
+                    <span>기타</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="input-text">
+              <div class="input-title">
+                <span class="name">작성자 아이디</span>
+                <span class="limit">50자내외</span>
+              </div>
+              <div class="input-textarea">
+                <label>
+                  <textarea placeholder="이상품에 대한 문의내용을 작성해주세요&#13;&#10;50자내외"></textarea>
+                </label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="input-text">
-          <div class="input-title">
-            <span class="name">작성자 아이디</span>
-            <span class="limit">50자내외</span>
-          </div>
-          <div class="input-textarea">
-            <label>
-              <textarea placeholder="이상품에 대한 문의내용을 작성해주세요&#13;&#10;50자내외"></textarea>
-            </label>
+          <div class="close-type-button">
+            <button type="button" class="btn-confirm">
+              <span>올리기</span>
+            </button>
           </div>
         </div>
-      </div>
-      <div class="full-fix">
-        <button type="button" class="btn-confirm">
-          <span>올리기</span>
-        </button>
       </div>
     </section>
-    <button type="button" class="btn-top">
-      <span>최상단으로 이동</span>
-    </button>
+    <footer class="footer">
+      <div class="info-wrap">
+        <div class="info">
+          <ul>
+            <li><a href="./company.html">회사소개</a></li>
+            <li><a href="#">매장안내</a></li>
+            <li><a href="#">마스터(수리기사)</a></li>
+            <li><a href="./app.html">앱소개 </a></li>
+          </ul>
+        </div>
+        <div class="terms">
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">이메일주소 무단 수집거부</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="company-wrap">
+        <div class="customer">
+          <div class="contact">
+            <strong>코코수리 고객센터</strong>
+            <a href="tel:1899-1692">1899-1692</a>
+            <span class="time">운영시간: 09:00~1800 점심시간 : 12:00~13:00(토요일,일요일/공휴일 휴무)</span>
+          </div>
+        </div>
+        <div class="company">
+          <div class="people">
+            <span>상호: 주식회사 꼬끼오</span>
+            <span>대표: 유시만</span>
+            <span>개인정보관리책임자: 이현주</span>
+            <address>소재지: 경기 고양시 덕양구 권율대로 907 (KN빌딩) 6층</address>
+          </div>
+          <div class="store-info">
+            <span>사업자등록번호: 128-86-03158 사업자정보확인</span>
+            <span>통신판매업 신고: 제2011-경기고양-1999호</span>
+          </div>
+          <div class="caution">코코수리는 온라인 마켓 플레이스만을 제공하며 수리&설치서비스의 분쟁과 책임 계약사항은 입점회사와 당사자간에 있습니다.
+          </div>
+          <div class="copyright">Copyright ⓒ 2018 COKCOSURI Co. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

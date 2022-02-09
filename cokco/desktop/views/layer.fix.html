@@ -24,16 +24,99 @@
     <link rel="stylesheet" href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full full-white">
-      <h1>
-        <strong>수리신청 완료</strong>
-        <button type="button" class="btn-close">
-          <span>닫기</span>
-        </button>
-      </h1>
-      <div class="layer">
+    <header class="header">
+      <div class="header-items">
+        <div class="header-logo">
+          <a href="/" class="link-home">
+            <img src="../images/cokco/logo.svg" alt="코코수리 로고">
+          </a>
+        </div>
+        <div class="account-wrap">
+          <div class="account-nav">
+            <ul>
+              <li class="">
+                <a href="./login.html">
+                  로그인
+                </a>
+              </li>
+              <li class="">
+                <a href="./join-step-1.html">
+                  회원가입
+                </a>
+              </li>
+              <li class="">
+                <a href="./inquire.html">
+                  고객센터
+                </a>
+              </li>
+              <li class="">
+                <a href="./my.html">
+                  마이페이지
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-search">
+            <label>
+              <input type="search" class="input-search" placeholder="검색어를 입력해주세요.">
+            </label>
+            <button type="button" class="btn-search" aria-expanded="false">
+              <span>검색</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <ul class="categories">
+          <li class="swiper category-index">
+            <a href="./index.html">
+              홈
+            </a>
+          </li>
+          <li class="swiper category-store">
+            <a href="./store.html">
+              스토어
+            </a>
+          </li>
+          <li class="swiper category-exhibition">
+            <a href="./exhibition.html">
+              기획전
+            </a>
+          </li>
+          <li class="swiper category-fix">
+            <a href="./fix.html">
+              수리사례
+            </a>
+          </li>
+          <li class="swiper category-company">
+            <a href="./company.html">
+              코코수리란
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="cokco">
+      <h1>코코수리</h1>
+      <div class="cokco-breadcrumb">
+        <ol>
+          <li>마이페이지</li>
+          <li>수리신청현황</li>
+          <li>수리신청 수정하기</li>
+        </ol>
+      </div>
+      <div class="layer fix">
         <div class="layer-text">
-          <span>수리신청 정보를 </span><em>수정 요청 </em><span>하였습니다.</span>
+          <span class="icon-check">
+            <img src="../images/cokco/icon-check-circle.svg" alt="">
+          </span>
+          <span>수리신청 정보를 <em>수정요청</em> 하였습니다.<br>
+            마이페이지 수리신청 현황으로 돌아갑니다.</span>
+        </div>
+        <div class="layer-button">
+          <button type="button" class="btn-confirm">
+            <span>확인</span>
+          </button>
         </div>
       </div>
     </section>
@@ -80,9 +163,6 @@
         </div>
       </div>
     </footer>
-    <button type="button" class="btn-top">
-      <span>최상단으로 이동</span>
-    </button>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

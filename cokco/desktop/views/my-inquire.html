@@ -24,305 +24,422 @@
     <link rel="stylesheet" href="../styles/cokco/cokco.css">
   </head>
   <body>
-    <section class="cokco-full">
-      <h1>
-        <strong>나의 상품문의</strong>
-        <button type="button" class="btn-close">
-          <span>닫기</span>
-        </button>
-      </h1>
-      <div class="customer-inquire">
-        <div class="customer-list">
-          <h3>
-            <strong>나의 상품문의</strong>
-            <a href="./inquire-write.html" class="link-inquire">
-              <span>문의작성</span>
-            </a>
-          </h3>
-          <div class="subtitle">
-            <span class="type">나의 문의</span>
-            <em class="count">2</em>
-            <span class="unit">개</span>
-            <div class="description">
-              <strong>상품문의</strong>
-              <span>를 작성하세요</span>
-            </div>
-          </div>
-          <div class="inquire detail-inquire">
-            <ul class="inquires">
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다.
-                      작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업
-                    내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다.</div>
-                </div>
+    <header class="header">
+      <div class="header-items">
+        <div class="header-logo">
+          <a href="/" class="link-home">
+            <img src="../images/cokco/logo.svg" alt="코코수리 로고">
+          </a>
+        </div>
+        <div class="account-wrap">
+          <div class="account-nav">
+            <ul>
+              <li class="">
+                <a href="./login.html">
+                  로그인
+                </a>
               </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">비밀글 입니다</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">비밀글 입니다</div>
-                </div>
+              <li class="">
+                <a href="./join-step-1.html">
+                  회원가입
+                </a>
               </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                </div>
+              <li class="">
+                <a href="./inquire.html">
+                  고객센터
+                </a>
               </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                </div>
-              </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                </div>
-              </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                </div>
-              </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                </div>
-              </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                </div>
-              </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                </div>
-              </li>
-              <li>
-                <div class="question" role="button"
-                  onclick="this.parentNode.classList.toggle('on');">
-                  <div class="left">
-                    <div class="date-wrap">
-                      <span class="type-question">Q</span>
-                      <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
-                      <span class="date">2022.12.2</span>
-                    </div>
-                    <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                  </div>
-                  <div class="right">
-                    <span class="img-wrap">
-                      <img src="https://via.placeholder.com/540"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </div>
-                </div>
-                <div class="answer">
-                  <div class="date-wrap">
-                    <span class="type-answer">A</span>
-                    <span class="name">상품관리자</span>
-                    <span class="date">2022.12.2</span>
-                  </div>
-                  <div class="description">작업 내용 텍스트가 노출됩니다.</div>
-                </div>
+              <li class="">
+                <a href="./my.html">
+                  마이페이지
+                </a>
               </li>
             </ul>
+          </div>
+          <div class="header-search">
+            <label>
+              <input type="search" class="input-search" placeholder="검색어를 입력해주세요.">
+            </label>
+            <button type="button" class="btn-search" aria-expanded="false">
+              <span>검색</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <ul class="categories">
+          <li class="swiper category-index">
+            <a href="./index.html">
+              홈
+            </a>
+          </li>
+          <li class="swiper category-store">
+            <a href="./store.html">
+              스토어
+            </a>
+          </li>
+          <li class="swiper category-exhibition">
+            <a href="./exhibition.html">
+              기획전
+            </a>
+          </li>
+          <li class="swiper category-fix">
+            <a href="./fix.html">
+              수리사례
+            </a>
+          </li>
+          <li class="swiper category-company">
+            <a href="./company.html">
+              코코수리란
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="cokco">
+      <h1>코코수리</h1>
+      <div class="my-wrap my">
+        <div class="left">
+          <div class="my-link">
+            <ul>
+              <li class="">
+                <a href="/views/my.html" class="">
+                  마이페이지
+                </a>
+              </li>
+              <li class="">
+                <a href="/views/my-shipping.html" class="info">
+                  쇼핑정보
+                </a>
+              </li>
+              <li class="">
+                <a href="/views/my-fix.html" class="">
+                  수리신청 현황
+                </a>
+              </li>
+              <li class="">
+                <a href="/views/my-modify.html" class="">
+                  회원정보
+                </a>
+              </li>
+              <li class="">
+                <a href="/views/my-benefit.html" class="">
+                  혜택관리
+                </a>
+              </li>
+              <li class="">
+                <a href="/views/inquire.html" class="">
+                  고객센터
+                </a>
+              </li>
+              <li class="on">
+                <a href="/views/my-inquire.html" class="">
+                  나의 상품문의
+                </a>
+              </li>
+              <li class="">
+                <a href="/views/my-review.html" class="">
+                  나의 상품후기
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="customer-inquire">
+            <div class="customer-list">
+              <h3>
+                <strong>나의 상품문의</strong>
+                <a href="/views/inquire-write.html" class="link-inquire">
+                  <span>문의작성</span>
+                </a>
+              </h3>
+              <div class="subtitle">
+                <span class="type">나의 문의</span>
+                <em class="count">2</em>
+                <span class="unit">개</span>
+                <div class="description">
+                  <strong>상품문의</strong>
+                  <span>를 작성하세요</span>
+                </div>
+              </div>
+              <div class="inquire detail-inquire">
+                <ul class="inquires">
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가
+                          노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다.
+                        작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다. 작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">비밀글 입니다</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">비밀글 입니다</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question" role="button"
+                      onclick="this.parentNode.classList.toggle('on');">
+                      <div class="left">
+                        <div class="date-wrap">
+                          <span class="type-question">Q</span>
+                          <span class="name">작성자 ID 작성자 ID 작성자 ID</span>
+                          <span class="date">2022.12.2</span>
+                        </div>
+                        <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                      </div>
+                      <div class="right">
+                        <span class="img-wrap">
+                          <img src="https://via.placeholder.com/540"
+                            onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <div class="answer">
+                      <div class="date-wrap">
+                        <span class="type-answer">A</span>
+                        <span class="name">상품관리자</span>
+                        <span class="date">2022.12.2</span>
+                      </div>
+                      <div class="description">작업 내용 텍스트가 노출됩니다.</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -331,10 +448,10 @@
       <div class="info-wrap">
         <div class="info">
           <ul>
-            <li><a href="./company.html">회사소개</a></li>
+            <li><a href="/views/company.html">회사소개</a></li>
             <li><a href="#">매장안내</a></li>
             <li><a href="#">마스터(수리기사)</a></li>
-            <li><a href="./app.html">앱소개 </a></li>
+            <li><a href="/views/app.html">앱소개 </a></li>
           </ul>
         </div>
         <div class="terms">
@@ -370,9 +487,6 @@
         </div>
       </div>
     </footer>
-    <button type="button" class="btn-top">
-      <span>최상단으로 이동</span>
-    </button>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

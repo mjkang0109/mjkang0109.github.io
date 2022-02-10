@@ -390,7 +390,7 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     font-weight: 600;
     color: #333;
 }
@@ -1239,7 +1239,7 @@ input[type="checkbox"] + label:before {
 .item-depth li {
     display: inline-block;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
 }
 
@@ -1268,7 +1268,7 @@ input[type="checkbox"] + label:before {
     display: block;
     margin-top: 2px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
     font-weight: 400;
 }
@@ -1735,7 +1735,7 @@ input[type="checkbox"] + label:before {
 .review .date-wrap .name,
 .review .date-wrap .date {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
     font-weight: 400;
     vertical-align: top;
@@ -1744,7 +1744,7 @@ input[type="checkbox"] + label:before {
 .review .description {
     margin-top: 2px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
     font-weight: 400;
 }
@@ -1801,7 +1801,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
 }
 
@@ -1833,7 +1833,7 @@ input[type="checkbox"] + label:before {
 .input-title span {
     display: table-cell;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
     font-weight: 400;
 }
@@ -2117,7 +2117,7 @@ input[type="checkbox"] + label:before {
 .inquire .description {
     margin-top: 2px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
     font-weight: 400;
 }
@@ -2740,7 +2740,7 @@ input[type="checkbox"] + label:before {
 .comment h2 span em {
     margin-left: 4px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #ec7203;
     font-weight: 400;
 }
@@ -3230,7 +3230,7 @@ input[type="checkbox"] + label:before {
 
 .search-filter span {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #666;
     font-weight: 500;
     vertical-align: middle;
@@ -3668,7 +3668,7 @@ input[type="checkbox"] + label:before {
     display: block;
     margin-top: 2px;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 29px;
     font-weight: 600;
     color: #333;
 }
@@ -3679,7 +3679,7 @@ input[type="checkbox"] + label:before {
     -webkit-line-clamp: 2;
     overflow: hidden;
     margin-top: 2px;
-    line-height: 24px;
+    line-height: 29px;
     font-size: 20px;
     color: #333;
     font-weight: 400;
@@ -4253,7 +4253,7 @@ input[type="checkbox"] + label:before {
     margin-top: 42px;
     white-space: pre-line;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 29px;
     font-weight: 400;
     color: #333;
 }
@@ -4484,7 +4484,7 @@ input[type="checkbox"] + label:before {
 .detail .benefits dd,
 .detail .benefits .caution {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     font-weight: 400;
 }
 
@@ -4573,7 +4573,7 @@ input[type="checkbox"] + label:before {
 
 .detail-options .detail-block.option-add-price .price {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
     font-weight: 400;
 }
@@ -4681,7 +4681,7 @@ input[type="checkbox"] + label:before {
 .detail .selected .title,
 .detail .selected .price {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
     font-weight: 400;
 }
@@ -4720,7 +4720,7 @@ input[type="checkbox"] + label:before {
 
 .detail .quantity .amount {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
 }
 
 .detail .quantity + .price-wrap {
@@ -4734,7 +4734,7 @@ input[type="checkbox"] + label:before {
 .detail .quantity + .price-wrap .price {
     padding-right: 37px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #333;
     font-weight: 400;
 }
@@ -4950,7 +4950,7 @@ input[type="checkbox"] + label:before {
 .detail .panels h3 + .description {
     padding: 15px 0 11px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #666;
     font-weight: 400;
 }
@@ -5001,7 +5001,7 @@ input[type="checkbox"] + label:before {
 .detail .panels .subtitle .count,
 .detail .panels .subtitle .unit {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     font-weight: 400;
 }
 
@@ -5022,7 +5022,7 @@ input[type="checkbox"] + label:before {
 .detail .panels .subtitle .description strong,
 .detail .panels .subtitle .description span {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #16284c;
 }
 
@@ -5120,7 +5120,7 @@ input[type="checkbox"] + label:before {
 .order-wrap .form-notice p {
     display: table-cell;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #999;
     font-weight: 400;
 }
@@ -5801,7 +5801,7 @@ input[type="checkbox"] + label:before {
 
 .my-wrap .item-depth li {
     font-size: 15px;
-    line-height: 22px;
+    line-height: 27px;
 }
 
 .my-wrap .item-depth li + li:before {
@@ -5811,7 +5811,7 @@ input[type="checkbox"] + label:before {
 
 .my-wrap .item-title {
     font-size: 15px;
-    line-height: 22px;
+    line-height: 27px;
 }
 
 .my-wrap .item-percent {
@@ -6697,7 +6697,7 @@ input[type="checkbox"] + label:before {
     color: #666;
     font-size: 18px;
     font-weight: 500;
-    line-height: 22px;
+    line-height: 27px;
 }
 
 .my-link li + li {
@@ -7259,7 +7259,7 @@ input[type="checkbox"] + label:before {
 .customer-list .subtitle .count,
 .customer-list .subtitle .unit {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     font-weight: 400;
 }
 
@@ -7282,7 +7282,7 @@ input[type="checkbox"] + label:before {
 .customer-list .subtitle .description strong,
 .customer-list .subtitle .description span {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 27px;
     color: #16284c;
 }
 

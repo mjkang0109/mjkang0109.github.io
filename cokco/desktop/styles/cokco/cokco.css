@@ -142,31 +142,87 @@ button span {
 }
 
 .cokco .fix-banner {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+    padding: 20px 16px;
+}
+
+.cokco .fix-banner ul {
     width: 1160px;
-    margin: 17px auto 0;
-    padding: 0 16px;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
 }
 
-.cokco .fix-banner h2 {
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
+.cokco .fix-banner li {
+    display: inline-block;
 }
 
-.cokco .fix-banner a {
+.cokco .fix-banner .max li a {
     display: block;
+    padding: 25px 0;
+    text-align: center;
 }
 
-.cokco .fix-banner img {
-    width: 100%;
+.cokco .fix-banner .max li {
+    width: 208px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+.cokco .fix-banner .max li + li {
+    margin-left: 20px;
+}
+
+.cokco .fix-banner .min li {
+    width: 346px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+.cokco .fix-banner .min li + li {
+    margin-left: 61px;
+}
+
+.cokco .fix-banner .min li a {
+    display: block;
+    padding: 25px 0 25px 40px;
+    text-align: left;
+}
+
+.cokco .fix-banner .img-wrap {
+    display: inline-block;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    vertical-align: middle;
+    border-radius: 100%;
+}
+
+.cokco .fix-banner .max .title {
+    font-size: 18px;
+    color: #16284C;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.cokco .fix-banner .min .title {
+    font-size: 20px;
+    color: #16284C;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+.cokco .fix-banner .title span {
+    display: inline-block;
+    vertical-align: center;
+    font-weight: 400;
+    margin-left: 12px;
 }
 
 .cokco .tile-item {
@@ -606,177 +662,126 @@ input[type="checkbox"] + label:before {
     font-weight: 600;
 }
 
-.calendar {
-    background-color: #fff;
+#ui-datepicker-div {
+    border: 1px solid #ccc;
+    padding: 0 20px 0;
 }
 
-.calendar-month {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+#ui-datepicker-div.ui-datepicker {
+    width: auto;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-title {
     height: 50px;
-    padding: 0 16px;
-}
-
-.calendar-month .btn-prev {
-    background-image: url("../../images/cokco/icon-arrow-bottom.svg");
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-.calendar-month .btn-next {
-    background-image: url("../../images/cokco/icon-arrow-bottom.svg");
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-
-.calendar-month button {
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 24px auto;
-}
-
-.calendar-month button span {
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-}
-
-.calendar-month .current {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.calendar-month .current > div {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.calendar-month .current > div em,
-.calendar-month .current > div span {
-    color: #333;
+    line-height: 48px;
+    font-size: 14px;
     font-weight: 500;
 }
 
-.calendar-month .current .month {
-    margin-left: 4px;
-}
-
-.calendar-month .current .month em,
-.calendar-month .current .month span {
+#ui-datepicker-div.ui-datepicker .ui-datepicker-title .ui-datepicker-month {
     font-size: 16px;
+    font-weight: 500;
 }
 
-.calendar-month .current .year em,
-.calendar-month .current .year span {
+#ui-datepicker-div.ui-datepicker .ui-datepicker-title .ui-datepicker-year {
     font-size: 14px;
+    font-weight: 500;
 }
 
-.calendar-days {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0 16px;
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header {
+    height: 50px;
+    padding: 0;
+    background-color: #fff;
+    border: none;
 }
 
-.calendar-days span {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev,
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next {
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev {
+    left: 5px;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next {
+    right: 5px;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev span,
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next span {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../images/cokco/icon-calendar-arrow.svg") no-repeat 50% 50%;
+    background-size: 14px auto;
+    margin: 0;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next span {
+    transform: rotate(180deg);
+}
+
+#ui-datepicker-div.ui-datepicker th {
+    width: 54px;
     height: 54px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+}
+
+#ui-datepicker-div.ui-datepicker th span {
     font-size: 20px;
-    color: #16284c;
     font-weight: 400;
 }
 
-.calendar-dates {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 0 16px;
+#ui-datepicker-div.ui-datepicker td {
+    padding: 0;
 }
 
-.calendar-dates button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    width: 14.28571429%;
-    height: 0;
-    padding-top: 14.28571429%;
+#ui-datepicker-div.ui-datepicker td a {
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    border: none;
+    line-height: 52px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    background: #fff;
 }
 
-.calendar-dates button.current .bg:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #98c9f4;
+#ui-datepicker-div.ui-datepicker .ui-state-highlight,
+#ui-datepicker-div.ui-datepicker .ui-widget-content .ui-state-highlight,
+#ui-datepicker-div.ui-datepicker .ui-widget-header .ui-state-highlight {
+    background-color: #fff;
     border-radius: 100%;
 }
 
-.calendar-dates button .num {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    font-size: 20px;
+#ui-datepicker-div.ui-state-active,
+#ui-datepicker-div.ui-widget-content .ui-state-active,
+#ui-datepicker-div.ui-widget-header .ui-state-active,
+#ui-datepicker-diva.ui-button:active,
+#ui-datepicker-div.ui-button:active,
+#ui-datepicker-div.ui-button.ui-state-active:hover {
+    background-color: #ddd;
     color: #333;
-    font-weight: 400;
-    z-index: 1;
+    border-radius: 100%;
 }
 
 /* common */
@@ -2510,6 +2515,7 @@ input[type="checkbox"] + label:before {
     color: #333;
     margin-right: 15px;
     padding-left: 64px;
+    cursor: pointer;
 }
 
 .form-date .btn-prev,
@@ -3789,21 +3795,17 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-categories {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
     font-size: 0;
     margin-top: 19px;
-    border: 1px solid #ccc;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .fix-categories li {
-    display: table-cell;
-    -webkit-box-sizing: border-box;
+    display: inline-block;
+    width: 116px;
+    vertical-align: top;
+    border: 1px solid #ccc;
     box-sizing: border-box;
-    border-left: 1px solid #ccc;
 }
 
 .fix-categories li.on {
@@ -3902,6 +3904,43 @@ input[type="checkbox"] + label:before {
 
 .fix-form-notice li span + strong {
     margin-left: 4px;
+}
+
+.fix-form-categories {
+    padding: 0 0 20px;
+}
+
+.fix-form-categories ul {
+    font-size: 0;
+}
+
+.fix-form-categories li {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.fix-form-categories li.on button {
+    border-color: #f5851f;
+    background-color: #f5851f;
+}
+
+.fix-form-categories li.on button span {
+    color: #fff;
+}
+
+.fix-form-categories button {
+    height: 40px;
+    padding: 0 31px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.fix-form-categories button span {
+    font-size: 16px;
+    color: #999;
 }
 
 .fix-complete {
@@ -7255,7 +7294,8 @@ input[type="checkbox"] + label:before {
     font-weight: 600;
 }
 
-.customer-inquire {
+.customer-inquire,
+.customer-review {
     margin-left: -10px;
 }
 
@@ -7937,7 +7977,7 @@ input[type="checkbox"] + label:before {
 
 .wish-wrap {
     min-height: 500px;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
     padding-top: 4px;
     margin-left: -50px;
 }
@@ -9210,4 +9250,44 @@ input[type="checkbox"] + label:before {
     background-color: #fff;
     padding: 39px 29px 0;
     border: 1px solid #ccc;
+}
+
+.no-wrap {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 108px 0 103px;
+    background-color: #F8F8F8;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.right .no-wrap {
+    width: 980px;
+    padding: 220px 0;
+
+}
+
+.my .recommend-item .no-wrap {
+    margin-left: -50px;
+    width: 980px;
+    padding: 220px 0;
+}
+
+.right .my-simple .no-wrap {
+    width: 100%;
+    margin-left: 0;
+    padding: 220px 0;
+}
+
+.right .my-address .no-wrap {
+    width: 100%;
+    margin-left: 0;
+    padding: 220px 0;
+}
+
+.right .inquire .no-wrap,
+.right .review .no-wrap {
+    margin-left: -40px;
+    padding: 220px 0;
 }

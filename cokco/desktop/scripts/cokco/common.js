@@ -257,6 +257,17 @@
     });
   };
 
+  var fixFormCategory = function () {
+    var handlerCategory = function (e) {
+      e.target.parentElement.parentElement.querySelector('.on').classList.remove('on');
+      e.target.parentElement.classList.add('on');
+    };
+
+    Array.prototype.slice.call(document.querySelectorAll('.fix-form-categories li')).forEach(function (c, index) {
+      c.addEventListener('click', handlerCategory);
+    });
+  };
+
   var onInit = function onInit() {
     visualSwiper();
     fixSwiper();
@@ -270,6 +281,7 @@
     });
     storeTabSwiper();
     fixTabSwiper();
+    fixFormCategory();
   };
 
   if (document.readyState === 'complete') {

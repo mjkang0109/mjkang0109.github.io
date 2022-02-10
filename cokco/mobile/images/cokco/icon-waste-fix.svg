@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="그룹_7802" data-name="그룹 7802" transform="translate(16998 -1589)">
+    <rect id="사각형_2205" data-name="사각형 2205" width="70" height="70" transform="translate(-16998 1589)" fill="none"/>
+    <g id="그룹_7801" data-name="그룹 7801" transform="translate(-2 -10.243)">
+      <g id="그룹_7799" data-name="그룹 7799" transform="translate(67.471 -6.889)">
+        <path id="패스_3443" data-name="패스 3443" d="M-23098.02,9848.374l-3.1,6s2.963-1.526,3.861-1.363.855,1.711,1.891,1.711,1.328-1.711,2.254-1.711.914,1.711,1.916,1.711,1.119-1.874,2.084-1.711l3.742,1.318-2.742-5.955Z" transform="translate(-40125.848 11475.854) rotate(180)" fill="#ececec" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_3175" data-name="패스 3175" d="M-23104.176,9873.818h3.922s5.771-4.063,8.186-8.382-1.826-21.672-1.826-21.672a72.916,72.916,0,0,0-12.49-1.286,63.734,63.734,0,0,0-11.986,1.286s-4.686,17.158-2.137,21.672,8.332,8.382,8.332,8.382h8Z" transform="translate(-40138.797 11501.945) rotate(180)" fill="#ececec" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_3180" data-name="패스 3180" d="M.332,1.338h2.82" transform="translate(-17038.527 1631.517) rotate(-65)" fill="none" stroke="#666" stroke-linecap="round" stroke-width="2"/>
+        <path id="패스_3445" data-name="패스 3445" d="M0,0H2.821" transform="translate(-17028.371 1631.951) rotate(-111)" fill="none" stroke="#666" stroke-linecap="round" stroke-width="2"/>
+        <path id="패스_3444" data-name="패스 3444" d="M0,.062H2.822" transform="translate(-17032.793 1631.91) rotate(-89)" fill="none" stroke="#666" stroke-linecap="round" stroke-width="2"/>
+        <path id="패스_3446" data-name="패스 3446" d="M0,.062H1.928" transform="translate(-17034.363 1627.244) rotate(-115)" fill="none" stroke="#666" stroke-linecap="round" stroke-width="2"/>
+        <path id="패스_3447" data-name="패스 3447" d="M0,.062H1.928" transform="translate(-17031.234 1627.127) rotate(-61)" fill="none" stroke="#666" stroke-linecap="round" stroke-width="2"/>
+      </g>
+      <g id="그룹_7800" data-name="그룹 7800" transform="translate(85.238 6.851)">
+        <path id="패스_3443-2" data-name="패스 3443" d="M2.091,0,0,4.054a8.219,8.219,0,0,1,2.609-.921c.607.111.578,1.156,1.277,1.156s.9-1.156,1.523-1.156S6.026,4.289,6.7,4.289,7.46,3.023,8.111,3.133l2.529.891L8.787,0Z" transform="translate(-17032.105 1625.421) rotate(180)" fill="#ececec" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_3175-2" data-name="패스 3175" d="M11.549,20.308H14.2s3.9-2.746,5.531-5.664S18.5,0,18.5,0a30.82,30.82,0,0,0-8.449-1.446A26.853,26.853,0,0,0,1.957,0S-1.209,11.594.514,14.644s5.63,5.664,5.63,5.664h5.405Z" transform="translate(-17027.238 1646.167) rotate(180)" fill="#ececec" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_3180-2" data-name="패스 3180" d="M0,0H1.906" transform="translate(-17039.514 1628.442) rotate(-65)" fill="none" stroke="#666" stroke-linecap="round" stroke-width="2"/>
+        <path id="패스_3445-2" data-name="패스 3445" d="M0,0H1.906" transform="translate(-17035.564 1628.442) rotate(-111)" fill="none" stroke="#666" stroke-linecap="round" stroke-width="2"/>
+      </g>
+      <path id="패스_3448" data-name="패스 3448" d="M-16973.82,1635.13s-1.777,2.693-1.508,4.524,2.584,2.8,2.584,2.8" transform="translate(-1 2.966)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_3449" data-name="패스 3449" d="M-16946.033,1641.223a3.712,3.712,0,0,1,.811,2.038,4.621,4.621,0,0,1-.811,2.209" transform="translate(-2423.257 10531.028) rotate(37)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_3450" data-name="패스 3450" d="M-16946.033,1641.223a2.487,2.487,0,0,1,.738,1.489,3.038,3.038,0,0,1-.738,1.614" transform="translate(-27312.707 15162.242) rotate(133)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

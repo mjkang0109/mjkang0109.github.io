@@ -118,7 +118,7 @@ button span {
 
 .cokco-breadcrumb li {
     font-size: 3.8647343vw;
-    line-height: 5.79710145vw;
+    line-height: 7.00483vw;
     font-weight: 400;
     color: #333;
 }
@@ -938,7 +938,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-info .name,
 .cokco-full .order-info .count {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #333;
 }
 
@@ -952,7 +952,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-info .price-type,
 .cokco-full .order-info em {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 600;
     color: #333;
 }
@@ -1166,7 +1166,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-total em {
     font-weight: 600;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #333;
 }
 
@@ -1199,7 +1199,7 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     font-size: 3.8647343vw;
-    line-height: 5.79710145vw;
+    line-height: 7.00483vw;
     color: #333;
     font-weight: 400;
 }
@@ -1390,7 +1390,7 @@ input[type="checkbox"] + label:before {
     padding: 6.03864734vw 0;
     text-align: center;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 600;
     color: #16284c;
 }
@@ -1975,15 +1975,15 @@ input[type="checkbox"] + label:before {
 }
 
 .category-index a {
-    padding: 2.89855072vw 3.8647343vw 2.17391304vw;
+    padding: 0 3.8647343vw;
 }
 
 .category-store a, .category-exhibition a {
-    padding: 2.89855072vw 3.8647343vw 2.17391304vw;
+    padding: 0 3.8647343vw;
 }
 
 .category-fix a, .category-company a {
-    padding: 2.89855072vw 2.89855072vw 2.17391304vw;
+    padding: 0 2.89855072vw;
 }
 
 .category .categories {
@@ -2019,8 +2019,9 @@ input[type="checkbox"] + label:before {
 .category li a {
     position: relative;
     display: block;
+    height: 9.66184vw;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 9.17874vw;
     font-weight: 500;
     color: #333;
 }
@@ -2133,7 +2134,7 @@ input[type="checkbox"] + label:before {
     justify-content: center;
     padding: 12.56038647vw 0 2.89855072vw;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #999;
     font-weight: 500;
     background-position: 50% 0;
@@ -2249,7 +2250,7 @@ input[type="checkbox"] + label:before {
 .left-head .login-wrapper strong {
     color: #fff;
     font-size: 3.8647343vw;
-    line-height: 5.79710145vw;
+    line-height: 7.00483vw;
     font-weight: 400;
 }
 
@@ -2316,7 +2317,7 @@ input[type="checkbox"] + label:before {
     width: 28.98550725vw;
     padding: 1.93236715vw 2.41545894vw;
     font-size: 3.8647343vw;
-    line-height: 5.79710145vw;
+    line-height: 7.00483vw;
     color: #fff;
     border-radius: 2.41545894vw;
     background-color: rgba(255, 255, 255, 0.3);
@@ -2378,7 +2379,7 @@ input[type="checkbox"] + label:before {
 .left-body .body-left .link-tab span {
     color: #666;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 500;
     pointer-events: none;
 }
@@ -2425,7 +2426,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 500;
     color: #666;
 }
@@ -2754,7 +2755,7 @@ input[type="checkbox"] + label:before {
 .item-price em,
 .item-price span {
     font-size: 3.8647343vw;
-    line-height: 5.79710145vw;
+    line-height: 7.00483vw;
     font-weight: 600;
     color: #333;
 }
@@ -2768,7 +2769,7 @@ input[type="checkbox"] + label:before {
 
 .item-percent {
     font-size: 3.8647343vw;
-    line-height: 5.79710145vw;
+    line-height: 7.00483vw;
     font-weight: 600;
     color: #ec7203;
 }
@@ -4528,7 +4529,7 @@ input[type="checkbox"] + label:before {
 
 .search-breadcrumb li {
     font-size: 3.8647343vw;
-    line-height: 5.79710145vw;
+    line-height: 7.00483vw;
     font-weight: 400;
     color: #333;
 }
@@ -5092,7 +5093,7 @@ input[type="checkbox"] + label:before {
 
 .fix-category h3 {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #666;
     font-weight: 600;
 }
@@ -5281,7 +5282,7 @@ input[type="checkbox"] + label:before {
 
 .fix-detail-category .item-depth li {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #666;
     font-weight: 600;
 }
@@ -5309,7 +5310,7 @@ input[type="checkbox"] + label:before {
 
 .fix-detail-date > strong {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #666;
     font-weight: 600;
 }
@@ -5529,7 +5530,7 @@ input[type="checkbox"] + label:before {
 .detail .title-wrap .type,
 .detail .title-wrap .name {
     font-size: 4.83091787vw;
-    line-height: 5.79710145vw;
+    line-height: 7.00483vw;
     color: #333;
 }
 
@@ -5666,7 +5667,7 @@ input[type="checkbox"] + label:before {
     width: 19.80676329vw;
     padding-top: 0.48309179vw;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 600;
     color: #333;
     white-space: nowrap;
@@ -6016,7 +6017,7 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #333;
     font-weight: 600;
 }
@@ -6074,7 +6075,7 @@ input[type="checkbox"] + label:before {
 
 .detail-fix .btn-order span {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 600;
     color: #fff;
     pointer-events: none;
@@ -6701,7 +6702,7 @@ input[type="checkbox"] + label:before {
 .my-order-list-wrap .count {
     position: relative;
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #666;
     font-weight: 400;
 }
@@ -7043,7 +7044,7 @@ input[type="checkbox"] + label:before {
 .my-simple .simple-order .name,
 .my-simple .simple-order .count {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #333;
 }
 
@@ -7059,7 +7060,7 @@ input[type="checkbox"] + label:before {
 .my-simple .simple-order .price-type,
 .my-simple .simple-order em {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 600;
     color: #333;
 }
@@ -7931,7 +7932,7 @@ input[type="checkbox"] + label:before {
 .cart-info .cart-category,
 .cart-info .name {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #333;
 }
 
@@ -7945,7 +7946,7 @@ input[type="checkbox"] + label:before {
 .cart-info .price-type,
 .cart-info em {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 400;
     color: #333;
 }
@@ -8047,7 +8048,7 @@ input[type="checkbox"] + label:before {
 .cart-option-total strong,
 .cart-option-total em {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 600;
     color: #333;
 }
@@ -8336,7 +8337,7 @@ input[type="checkbox"] + label:before {
 .wish-info .wish-category,
 .wish-info .name {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #333;
 }
 
@@ -8350,7 +8351,7 @@ input[type="checkbox"] + label:before {
 .wish-info .price-type,
 .wish-info em {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 400;
     color: #333;
 }
@@ -8495,7 +8496,7 @@ input[type="checkbox"] + label:before {
 .wish-option-total strong,
 .wish-option-total em {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 600;
     color: #333;
 }
@@ -8764,7 +8765,7 @@ input[type="checkbox"] + label:before {
 .toggle-info .toggle-category,
 .toggle-info .name {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     color: #333;
 }
 
@@ -8778,7 +8779,7 @@ input[type="checkbox"] + label:before {
 .toggle-info .price-type,
 .toggle-info em {
     font-size: 3.8647343vw;
-    line-height: 4.58937198vw;
+    line-height: 5.7971vw;
     font-weight: 400;
     color: #333;
 }

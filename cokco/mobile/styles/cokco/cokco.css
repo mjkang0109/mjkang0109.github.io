@@ -159,7 +159,7 @@ button span {
 
 .cokco .title-more a {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 500;
     color: #666;
 }
@@ -228,7 +228,7 @@ button span {
 .cokco .fix-banner .title {
     display: inline-block;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #16284C;
     vertical-align: middle;
     margin-left: 10px;
@@ -334,7 +334,7 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .title-more a {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 500;
     color: #666;
 }
@@ -572,7 +572,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
 }
 
@@ -607,7 +607,7 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .input-title span {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -626,7 +626,7 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #666;
     font-weight: 500;
 }
@@ -802,14 +802,14 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-wrap .form-notice strong,
 .cokco-full .order-wrap .form-notice em {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
 
 .cokco-full .order-wrap .form-notice p {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #999;
     font-weight: 400;
 }
@@ -930,7 +930,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-info .name,
 .cokco-full .order-info .count {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #333;
 }
 
@@ -944,7 +944,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-info .price-type,
 .cokco-full .order-info em {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 600;
     color: #333;
 }
@@ -1013,7 +1013,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-option-block .option-title,
 .cokco-full .order-option-block .option-price {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #999;
     font-weight: 400;
 }
@@ -1158,7 +1158,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .order-total em {
     font-weight: 600;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #333;
 }
 
@@ -1208,7 +1208,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #999;
     border-radius: 10px;
@@ -1382,7 +1382,7 @@ input[type="checkbox"] + label:before {
     padding: 25px 0;
     text-align: center;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 600;
     color: #16284c;
 }
@@ -1438,7 +1438,7 @@ input[type="checkbox"] + label:before {
     background-color: #e1f1ff;
     padding: 12px 10px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #16284c;
     font-weight: 500;
 }
@@ -1458,7 +1458,7 @@ input[type="checkbox"] + label:before {
     flex: 1;
     padding: 12px 10px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -1967,15 +1967,16 @@ input[type="checkbox"] + label:before {
 }
 
 .category-index a {
-    padding: 12px 16px 9px;
+    height: 40px;
+    padding: 0 16px;
 }
 
 .category-store a, .category-exhibition a {
-    padding: 12px 16px 9px;
+    padding: 0 16px;
 }
 
 .category-fix a, .category-company a {
-    padding: 12px 12px 9px;
+    padding: 0 12px;
 }
 
 .category .categories {
@@ -2012,7 +2013,7 @@ input[type="checkbox"] + label:before {
     position: relative;
     display: block;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 38px;
     font-weight: 500;
     color: #333;
 }
@@ -2125,7 +2126,7 @@ input[type="checkbox"] + label:before {
     justify-content: center;
     padding: 52px 0 12px;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #999;
     font-weight: 500;
     background-position: 50% 0;
@@ -2370,7 +2371,7 @@ input[type="checkbox"] + label:before {
 .left-body .body-left .link-tab span {
     color: #666;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 500;
     pointer-events: none;
 }
@@ -2417,7 +2418,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 500;
     color: #666;
 }
@@ -2703,7 +2704,7 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
 }
 
@@ -2732,7 +2733,7 @@ input[type="checkbox"] + label:before {
     text-overflow: ellipsis;
     margin-top: 2px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -2944,7 +2945,7 @@ input[type="checkbox"] + label:before {
 .sort .btn-sort span {
     padding-right: 20px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 500;
     color: #666;
 }
@@ -2973,7 +2974,7 @@ input[type="checkbox"] + label:before {
 
 .sort .sort-items button span {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #000;
     font-weight: 400;
 }
@@ -3012,7 +3013,7 @@ input[type="checkbox"] + label:before {
 
 .dropdown-items .sort-items button span {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #666;
     font-weight: 500;
     pointer-events: none;
@@ -3167,7 +3168,7 @@ input[type="checkbox"] + label:before {
 
 .quantity .amount {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #666;
     font-weight: 400;
 }
@@ -3254,7 +3255,7 @@ input[type="checkbox"] + label:before {
 .review .description {
     margin-top: 2px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -3441,7 +3442,7 @@ input[type="checkbox"] + label:before {
 .inquire .description {
     margin-top: 2px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -3683,7 +3684,7 @@ input[type="checkbox"] + label:before {
     box-sizing: border-box;
     padding: 13px 16px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
     border: 1px solid #ccc;
@@ -3853,7 +3854,7 @@ input[type="checkbox"] + label:before {
     align-items: center;
     width: 80px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #333;
 }
@@ -3922,7 +3923,7 @@ input[type="checkbox"] + label:before {
 .form-info-block strong,
 .form-info-block em {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -4349,7 +4350,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #333;
     border-radius: 20px;
@@ -4422,7 +4423,7 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #666;
     font-weight: 500;
 }
@@ -4481,7 +4482,7 @@ input[type="checkbox"] + label:before {
     display: block;
     padding-right: 10px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 500;
     color: #666;
 }
@@ -4670,7 +4671,7 @@ input[type="checkbox"] + label:before {
 .store-detail .tabs .btn-tab span {
     white-space: nowrap;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #999;
     pointer-events: none;
@@ -4767,7 +4768,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #333;
 }
@@ -4872,7 +4873,7 @@ input[type="checkbox"] + label:before {
 .fix-reference .tabs .btn-tab span {
     white-space: nowrap;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #999;
     pointer-events: none;
@@ -4958,7 +4959,7 @@ input[type="checkbox"] + label:before {
     display: block;
     margin-top: 2px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 600;
     color: #333;
 }
@@ -4969,7 +4970,7 @@ input[type="checkbox"] + label:before {
     -webkit-line-clamp: 2;
     overflow: hidden;
     margin-top: 2px;
-    line-height: 17px;
+    line-height: 20px;
     font-size: 14px;
     color: #333;
     font-weight: 400;
@@ -5084,7 +5085,7 @@ input[type="checkbox"] + label:before {
 
 .fix-category h3 {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #666;
     font-weight: 600;
 }
@@ -5272,7 +5273,7 @@ input[type="checkbox"] + label:before {
 
 .fix-detail-category .item-depth li {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #666;
     font-weight: 600;
 }
@@ -5300,7 +5301,7 @@ input[type="checkbox"] + label:before {
 
 .fix-detail-date > strong {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #666;
     font-weight: 600;
 }
@@ -5345,7 +5346,7 @@ input[type="checkbox"] + label:before {
 .fix-detail-description {
     padding: 10px 16px 24px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
     background-color: #fff;
@@ -5462,7 +5463,7 @@ input[type="checkbox"] + label:before {
     font-size: 14px;
     color: #333;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 20px;
 }
 
 .fix-reference-text .count,
@@ -5485,7 +5486,7 @@ input[type="checkbox"] + label:before {
     margin-top: 13px;
     white-space: pre-line;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #333;
 }
@@ -5520,7 +5521,7 @@ input[type="checkbox"] + label:before {
 .detail .title-wrap .type,
 .detail .title-wrap .name {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 29px;
     color: #333;
 }
 
@@ -5657,7 +5658,7 @@ input[type="checkbox"] + label:before {
     width: 82px;
     padding-top: 2px;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 600;
     color: #333;
     white-space: nowrap;
@@ -5694,7 +5695,7 @@ input[type="checkbox"] + label:before {
 .detail .benefits dd,
 .detail .benefits .caution {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
 }
 
@@ -5799,7 +5800,7 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -5907,7 +5908,7 @@ input[type="checkbox"] + label:before {
 .detail .selected .title,
 .detail .selected .price {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -5963,7 +5964,7 @@ input[type="checkbox"] + label:before {
 .detail .quantity + .price-wrap .price {
     padding-right: 20px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #333;
     font-weight: 400;
 }
@@ -6007,7 +6008,7 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #333;
     font-weight: 600;
 }
@@ -6065,7 +6066,7 @@ input[type="checkbox"] + label:before {
 
 .detail-fix .btn-order span {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 600;
     color: #fff;
     pointer-events: none;
@@ -6185,7 +6186,7 @@ input[type="checkbox"] + label:before {
 .detail .panels h3 + .description {
     padding: 3px 22px 10px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #666;
     font-weight: 400;
 }
@@ -6230,7 +6231,7 @@ input[type="checkbox"] + label:before {
 .detail .panels .subtitle .count,
 .detail .panels .subtitle .unit {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
 }
 
@@ -6259,7 +6260,7 @@ input[type="checkbox"] + label:before {
 .detail .panels .subtitle .description strong,
 .detail .panels .subtitle .description span {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #16284c;
 }
 
@@ -6460,7 +6461,7 @@ input[type="checkbox"] + label:before {
 .my-point .point-wrap .unit,
 .my-point .point-wrap em {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
 }
 
@@ -6686,13 +6687,13 @@ input[type="checkbox"] + label:before {
     font-size: 14px;
     color: #666;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 20px;
 }
 
 .my-order-list-wrap .count {
     position: relative;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #666;
     font-weight: 400;
 }
@@ -6728,7 +6729,7 @@ input[type="checkbox"] + label:before {
 .my-info-dashboard .state-wrap .count,
 .my-info-dashboard .state-wrap .unit {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
 }
 
@@ -6847,7 +6848,7 @@ input[type="checkbox"] + label:before {
 
 .my-simple h2 a {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #666;
     font-weight: 400;
 }
@@ -6900,7 +6901,7 @@ input[type="checkbox"] + label:before {
 
 .my-simple .simple-date span {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #333;
     margin-left: 4px;
@@ -6909,13 +6910,13 @@ input[type="checkbox"] + label:before {
 .my-simple .simple-date strong {
     white-space: nowrap;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 600;
 }
 
 .my-simple .simple-date .order-number em {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #ec7203;
     margin-left: 4px;
@@ -7034,7 +7035,7 @@ input[type="checkbox"] + label:before {
 .my-simple .simple-order .name,
 .my-simple .simple-order .count {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #333;
 }
 
@@ -7050,7 +7051,7 @@ input[type="checkbox"] + label:before {
 .my-simple .simple-order .price-type,
 .my-simple .simple-order em {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 600;
     color: #333;
 }
@@ -7262,7 +7263,7 @@ input[type="checkbox"] + label:before {
     font-size: 14px;
     color: #333;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 20px;
 }
 
 .my-info-notice span {
@@ -7270,7 +7271,7 @@ input[type="checkbox"] + label:before {
     color: #999;
     font-size: 14px;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 20px;
 }
 
 .my-info-btn {
@@ -7487,7 +7488,7 @@ input[type="checkbox"] + label:before {
     font-size: 14px;
     color: #000;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 20px;
     padding-bottom: 11px;
 }
 
@@ -7531,7 +7532,7 @@ input[type="checkbox"] + label:before {
     font-size: 14px;
     font-weight: 400;
     color: #e81a1a;
-    line-height: 17px;
+    line-height: 20px;
 }
 
 .withdraw-notice h2 {
@@ -7557,7 +7558,7 @@ input[type="checkbox"] + label:before {
     color: #666;
     font-size: 14px;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 20px;
 }
 
 /* customer */
@@ -7616,7 +7617,7 @@ input[type="checkbox"] + label:before {
 .customer-list h3 + .description {
     padding: 3px 22px 10px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #666;
     font-weight: 400;
 }
@@ -7661,7 +7662,7 @@ input[type="checkbox"] + label:before {
 .customer-list .subtitle .count,
 .customer-list .subtitle .unit {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
 }
 
@@ -7690,7 +7691,7 @@ input[type="checkbox"] + label:before {
 .customer-list .subtitle .description strong,
 .customer-list .subtitle .description span {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #16284c;
 }
 
@@ -7771,7 +7772,7 @@ input[type="checkbox"] + label:before {
     white-space: pre-line;
     font-size: 14px;
     color: #666;
-    line-height: 17px;
+    line-height: 20px;
     padding: 0 16px 23px;
 }
 
@@ -7922,7 +7923,7 @@ input[type="checkbox"] + label:before {
 .cart-info .cart-category,
 .cart-info .name {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #333;
 }
 
@@ -7936,7 +7937,7 @@ input[type="checkbox"] + label:before {
 .cart-info .price-type,
 .cart-info em {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 400;
     color: #333;
 }
@@ -8007,7 +8008,7 @@ input[type="checkbox"] + label:before {
 .cart-option-block .option-title,
 .cart-option-block .option-price {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #999;
     font-weight: 400;
 }
@@ -8038,7 +8039,7 @@ input[type="checkbox"] + label:before {
 .cart-option-total strong,
 .cart-option-total em {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 600;
     color: #333;
 }
@@ -8091,7 +8092,7 @@ input[type="checkbox"] + label:before {
 .cart-option-quantity .price,
 .cart-option-quantity .count {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #333;
 }
@@ -8327,7 +8328,7 @@ input[type="checkbox"] + label:before {
 .wish-info .wish-category,
 .wish-info .name {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #333;
 }
 
@@ -8341,7 +8342,7 @@ input[type="checkbox"] + label:before {
 .wish-info .price-type,
 .wish-info em {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 400;
     color: #333;
 }
@@ -8455,7 +8456,7 @@ input[type="checkbox"] + label:before {
 .wish-option-block .option-title,
 .wish-option-block .option-price {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #999;
     font-weight: 400;
 }
@@ -8486,7 +8487,7 @@ input[type="checkbox"] + label:before {
 .wish-option-total strong,
 .wish-option-total em {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 600;
     color: #333;
 }
@@ -8539,7 +8540,7 @@ input[type="checkbox"] + label:before {
 .wish-option-quantity .price,
 .wish-option-quantity .count {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #333;
 }
@@ -8755,7 +8756,7 @@ input[type="checkbox"] + label:before {
 .toggle-info .toggle-category,
 .toggle-info .name {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #333;
 }
 
@@ -8769,7 +8770,7 @@ input[type="checkbox"] + label:before {
 .toggle-info .price-type,
 .toggle-info em {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     font-weight: 400;
     color: #333;
 }
@@ -8868,7 +8869,7 @@ input[type="checkbox"] + label:before {
 .toggle-option-block .option-title,
 .toggle-option-block .option-price {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #999;
     font-weight: 400;
 }
@@ -8898,7 +8899,7 @@ input[type="checkbox"] + label:before {
 .toggle-option-total strong,
 .toggle-option-total em {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #999;
     font-weight: 400;
 }
@@ -8951,7 +8952,7 @@ input[type="checkbox"] + label:before {
 .toggle-option-quantity .price,
 .toggle-option-quantity .count {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
     color: #333;
 }
@@ -9190,14 +9191,14 @@ input[type="checkbox"] + label:before {
     padding: 3px 0 21px;
     font-size: 14px;
     color: #000;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
 }
 
 .member-wrap .member-title a {
     font-size: 14px;
     color: #16284c;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 600;
 }
 
@@ -9441,7 +9442,7 @@ input[type="checkbox"] + label:before {
     white-space: pre-line;
     color: #666;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     font-weight: 400;
 }
 

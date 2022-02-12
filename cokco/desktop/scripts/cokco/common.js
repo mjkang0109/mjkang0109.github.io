@@ -97,6 +97,22 @@
     });
   };
 
+  var communityThumbSwiper = function communityThumbSwiper() {
+    var gallery = new Swiper('.community-swiper-wrap .community-swiper-wrapper', {
+      wrapperClass: 'community-items',
+      slideClass: 'community-item',
+      slidesPerView: 1,
+      width: 650,
+      pagination: {
+        el: '.community-swiper-pagination',
+        clickable: true,
+        renderBullet: function renderBullet(index, className) {
+          return '<span class="' + className + '"><img src="https://via.placeholder.com/480" alt=""></span>';
+        }
+      }
+    });
+  };
+
   var bindCategory = function bindCategory(e) {
     if (!e) {
       return document.querySelectorAll(".".concat(depthCategory, "-1 > li.on")).forEach(function (el) {
@@ -257,22 +273,12 @@
     });
   };
 
-  var fixFormCategory = function () {
-    var handlerCategory = function (e) {
-      e.target.parentElement.parentElement.querySelector('.on').classList.remove('on');
-      e.target.parentElement.classList.add('on');
-    };
-
-    Array.prototype.slice.call(document.querySelectorAll('.fix-form-categories li')).forEach(function (c, index) {
-      c.addEventListener('click', handlerCategory);
-    });
-  };
-
   var onInit = function onInit() {
     visualSwiper();
     fixSwiper();
     thumbsSwiper();
     fixThumbSwiper();
+    communityThumbSwiper();
     bindTab();
     bindRadio();
     bindDropdown();
@@ -281,7 +287,6 @@
     });
     storeTabSwiper();
     fixTabSwiper();
-    fixFormCategory();
   };
 
   if (document.readyState === 'complete') {

@@ -640,12 +640,13 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .cokco-full .upload-img .btn-upload-img {
     width: 80px;
     height: 80px;
-    padding-top: 58px;
+    padding-top: 48px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #ddd url("../../images/cokco/icon-img-plus.svg") no-repeat 50% 50%;
@@ -690,6 +691,17 @@ input[type="checkbox"] + label:before {
     position: relative;
     width: 80px;
     height: 80px;
+}
+
+.cokco-full .upload-img-wrap:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
 }
 
 .cokco-full .upload-img-wrap img {
@@ -2093,20 +2105,20 @@ input[type="checkbox"] + label:before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='그룹 4859' width='42' height='42'%3E%3Cpath data-name='사각형 1855' fill='none' d='M0 0h42v42H0z'/%3E%3Cg data-name='그룹 4857'%3E%3Cg data-name='그룹 4858'%3E%3Cg data-name='그룹 4856'%3E%3Cg data-name='그룹 4852'%3E%3Cpath data-name='합치기 7' d='M21.862 33.6a1.862 1.862 0 0 1 0-3.724h1.676a1.862 1.862 0 0 1 1.656 1.01 5.363 5.363 0 0 0 3.666-.941 4.3 4.3 0 0 0 .877-1.931h-1.538V18.7h.019a12.656 12.656 0 0 0-.842-2.552c-1.444-3.11-4.659-3.275-6.212-3.275s-4.856.171-6.431 3.3a12.484 12.484 0 0 0-.934 2.527v9.31h-3.4a2 2 0 0 1-2-2V20.7a2 2 0 0 1 2-2h.135a15.005 15.005 0 0 1 1.159-3.32 10 10 0 0 1 9.472-5.78 9.557 9.557 0 0 1 9.274 5.807 14.7 14.7 0 0 1 1.027 3.3h.133a2 2 0 0 1 2 2v5.31a2 2 0 0 1-2 2h-.034a6.48 6.48 0 0 1-1.351 3.167c-.9 1.037-3.543 1.567-5.052 1.567v-.1a1.861 1.861 0 0 1-1.624.949Z' fill='%23EB7203'/%3E%3C/g%3E%3C/g%3E%3Cg data-name='그룹 4855' transform='translate(17.945 17.821)' fill='%23999'%3E%3Cpath data-name='패스 3062' d='M1.277 6.186a2.66 2.66 0 0 1 .12-.962A3.792 3.792 0 0 1 2.99 3.441a1.5 1.5 0 0 0 .451-1.16.892.892 0 0 0-.538-.783 1.925 1.925 0 0 0-2.024.4.764.764 0 0 1-.769-.28c-.3-.4.1-.875.1-.875a2.987 2.987 0 0 1 3.342-.4 2.186 2.186 0 0 1 1.282 1.855 2.719 2.719 0 0 1-1.048 2.317l-.02.013a2.7 2.7 0 0 0-1.02 1.023 2.853 2.853 0 0 0-.115.635Z'/%3E%3Ccircle data-name='타원 174' cx='.7' cy='.7' transform='translate(1.228 7.379)' r='.7'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.navigations .fix .title {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='그룹 5220' width='42' height='42'%3E%3Cpath data-name='사각형 1854' fill='none' d='M0 0h42v42H0z'/%3E%3Cpath data-name='Icon awesome-hammer' d='m33.985 19.259-1.04-1.1a.705.705 0 0 0-1.04 0l-.52.552-1.327-1.411a3.242 3.242 0 0 0-.751-3l-2.079-2.214a7.053 7.053 0 0 0-10.4 0l4.158 2.207a3.844 3.844 0 0 0 .267 3l3.059 3.169c.768.815 1.644.417 2.623.142l1.328 1.41-.52.552a.815.815 0 0 0 0 1.1l1.04 1.1a.705.705 0 0 0 1.04 0l4.158-4.415a.815.815 0 0 0 0-1.1Zm-13.172-.741c-.17-.18-.3-.159-.441-.362L9.511 27.339c-1.175 1.161-.107 2.685 1.031 3.891s2.7 2.1 3.771 1.1l9.329-10.924a5.268 5.268 0 0 1-.57-.491l-2.257-2.4Z' fill='%23999'/%3E%3C/svg%3E");
+.navigations .community .title {
+    background-image: url("../../images/cokco/icon-community.svg");
 }
 
-.navigations .fix a:active .title {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='그룹 5220' width='42' height='42'%3E%3Cpath data-name='사각형 1854' fill='none' d='M0 0h42v42H0z'/%3E%3Cpath data-name='Icon awesome-hammer' d='m33.985 19.259-1.04-1.1a.705.705 0 0 0-1.04 0l-.52.552-1.327-1.411a3.242 3.242 0 0 0-.751-3l-2.079-2.214a7.053 7.053 0 0 0-10.4 0l4.158 2.207a3.844 3.844 0 0 0 .267 3l3.059 3.169c.768.815 1.644.417 2.623.142l1.328 1.41-.52.552a.815.815 0 0 0 0 1.1l1.04 1.1a.705.705 0 0 0 1.04 0l4.158-4.415a.815.815 0 0 0 0-1.1Zm-13.172-.741c-.17-.18-.3-.159-.441-.362L9.511 27.339c-1.175 1.161-.107 2.685 1.031 3.891s2.7 2.1 3.771 1.1l9.329-10.924a5.268 5.268 0 0 1-.57-.491l-2.257-2.4Z' fill='%23EB7203'/%3E%3C/svg%3E");
+.navigations .community a:active .title {
+    background-image: url("../../images/cokco/icon-community-active.svg");
 }
 
 .navigations .my .title {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='그룹 4864' width='42' height='42'%3E%3Cpath data-name='사각형 1852' fill='none' d='M0 0h42v42H0z'/%3E%3Cpath data-name='Icon awesome-home' d='m19.701 15.892-9.668 7.955v8.6a.839.839 0 0 0 .839.839l5.874-.015a.839.839 0 0 0 .835-.839v-5.021a.839.839 0 0 1 .839-.839h3.355a.839.839 0 0 1 .839.839v5.013a.839.839 0 0 0 .839.841l5.872.016a.839.839 0 0 0 .839-.839v-8.595l-9.663-7.955a.639.639 0 0 0-.8 0Zm15.266 5.41-4.386-3.612v-7.26a.629.629 0 0 0-.629-.629h-2.935a.629.629 0 0 0-.629.629v3.806l-4.693-3.861a2.516 2.516 0 0 0-3.2 0L5.228 21.302a.629.629 0 0 0-.084.886l1.337 1.625a.629.629 0 0 0 .886.085l12.334-10.151a.639.639 0 0 1 .8 0L32.83 23.899a.629.629 0 0 0 .886-.084l1.337-1.625a.629.629 0 0 0-.089-.887Z' fill='%23999'/%3E%3C/svg%3E");
+    background-image: url("../../images/cokco/icon-mypage.svg");
 }
 
 .navigations .my a:active .title {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='그룹 4864' width='42' height='42'%3E%3Cpath data-name='사각형 1852' fill='none' d='M0 0h42v42H0z'/%3E%3Cpath data-name='Icon awesome-home' d='m19.701 15.892-9.668 7.955v8.6a.839.839 0 0 0 .839.839l5.874-.015a.839.839 0 0 0 .835-.839v-5.021a.839.839 0 0 1 .839-.839h3.355a.839.839 0 0 1 .839.839v5.013a.839.839 0 0 0 .839.841l5.872.016a.839.839 0 0 0 .839-.839v-8.595l-9.663-7.955a.639.639 0 0 0-.8 0Zm15.266 5.41-4.386-3.612v-7.26a.629.629 0 0 0-.629-.629h-2.935a.629.629 0 0 0-.629.629v3.806l-4.693-3.861a2.516 2.516 0 0 0-3.2 0L5.228 21.302a.629.629 0 0 0-.084.886l1.337 1.625a.629.629 0 0 0 .886.085l12.334-10.151a.639.639 0 0 1 .8 0L32.83 23.899a.629.629 0 0 0 .886-.084l1.337-1.625a.629.629 0 0 0-.089-.887Z' fill='%23EB7203'/%3E%3C/svg%3E");
+    background-image: url("../../images/cokco/icon-mypage-active.svg");
 }
 
 .navigations .order .title {
@@ -6222,7 +6234,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0 27px 0 22px;
+    padding: 0 27px 10px 22px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -6297,7 +6309,6 @@ input[type="checkbox"] + label:before {
 .detail-recommend-item {
     position: relative;
     padding-top: 10px;
-    margin-top: 10px;
 }
 
 .detail-recommend-item:before {
@@ -9494,4 +9505,450 @@ input[type="checkbox"] + label:before {
     font-size: 16px;
     color: #000;
     min-height: 132px;
+}
+
+.community {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.community h2 {
+    height: 50px;
+    line-height: 48px;
+    padding: 0 16px;
+    border-top: 4px solid #f4f4f4;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.community .link-write {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    width: 66px;
+    height: 30px;
+    line-height: 28px;
+    background: url("../../images/cokco/btn-write.svg") no-repeat 100% 50%;
+    background-size: auto 30px;
+    color: #16284c;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.community-search {
+    position: relative;
+    margin-top: 10px;
+    padding: 0 16px;
+}
+
+.community-search label {
+    position: relaitve;
+    display: block;
+}
+
+.community-search input[type="search"] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(165, 165, 165, 0.08);
+    border: none;
+    padding: 0 18px;
+    font-size: 14px;
+}
+
+.community-search .btn-search {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url("../../images/cokco/icon-search.svg") no-repeat 50% 50%;
+}
+
+.community-search .btn-search span {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+.community-location {
+    display: block;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 0 16px 23px;
+    margin-top: 21px;
+}
+
+.community-location ul {
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.community-location li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.community-location li:last-child {
+    margin-right: 16px;
+}
+
+.community-location .btn-location {
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    color: #999;
+    font-size: 14px;
+}
+
+.community-location .on .btn-location {
+    border-color: #ec7203;
+    color: #fff;
+    background-color: #ec7203;
+}
+
+.community-list {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #ddd;
+}
+
+.community-list ul {
+    width: 100%;
+}
+
+.community-list li {
+    padding: 0 16px;
+}
+
+.community-list li a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.community-list .location,
+.community-list .name,
+.community-list .title,
+.community-list .count,
+.community-list .date {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.community-list .title {
+    font-weight: 600;
+}
+
+.community-list .location + .title {
+    margin-left: 8px;
+}
+
+.community-list .name + .count {
+    margin-left: 16px;
+}
+
+.community-list .count + .date {
+    margin-left: 12px;
+}
+
+.community-detail .gallery-wrapper {
+    padding: 0 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.community-detail .gallery-item {
+    width: 382px;
+    height: 382px;
+    padding-right: 16px;
+    padding-top: 0;
+}
+
+.community-detail .gallery-item .img-wrap {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.community-detail .thumbs-wrapper {
+    margin-top: 10px;
+    padding: 0 11px;
+}
+
+.community-detail .thumbs-items {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.community-detail .thumbs-item {
+    overflow: hidden;
+    width: 85px;
+    height: 85px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.community-detail .thumbs-item:after {
+    left: 5px;
+    width: calc(100% - 10px);
+    border-radius: 10px;
+}
+
+.community-detail .thumbs-item img {
+    left: 5px;
+    width: calc(100% - 10px);
+    border-radius: 10px;
+}
+
+.community-detail .inquire .answer + .answer {
+    margin-top: 0;
+}
+
+.community-detail .comment h2 {
+    height: 50px;
+    border-top: none;
+}
+
+.community-detail .comment .inquire li {
+    padding-top: 10px;
+}
+
+.community-detail .comment .question {
+    position: relative;
+    padding: 0 60px 10px 16px;
+}
+
+.community-detail .comment .question .btn-reply {
+    position: absolute;
+    right: 16px;
+    bottom: 10px;
+    height: 30px;
+    padding: 0 7px;
+    font-size: 12px;
+    color: #16284c;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.community-detail .comment .answer {
+    margin-top: 0;
+    padding: 10px 24px;
+}
+
+.community-text {
+    position: relative;
+    padding: 10px 16px 28px;
+}
+
+.community-text .button-wrap {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+}
+
+.community-text .button-wrap button {
+    vertical-align: top;
+}
+
+.community-text .button-wrap .btn-modify {
+    height: 30px;
+    padding: 0 7px;
+    font-size: 12px;
+    color: #16284c;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-weight: 400;
+}
+
+.community-text .button-wrap .btn-modify + .btn-share {
+    margin-left: 10px;
+}
+
+.community-text .button-wrap .btn-share {
+    width: 30px;
+    height: 50px;
+    font-size: 14px;
+    color: #16284c;
+    font-weight: 400;
+    padding-top: 30px;
+    background: url("../../images/cokco/icon-share.svg") no-repeat 50% 0;
+    background-size: 30px auto;
+}
+
+.community-text .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 90px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    font-weight: 600;
+}
+
+.community-text .title + .id {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 13px;
+}
+
+.community-text .id,
+.community-text .count .type,
+.community-text .count .num,
+.community-text .date .num {
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.community-text .date-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.community-text .date-wrap .count,
+.community-text .date-wrap .date {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.community-text .date-wrap .count + .date,
+.community-text .date-wrap .date + .date {
+    margin-left: 8px;
+}
+
+.community-text .description {
+    margin-top: 13px;
+    white-space: pre-line;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+.community-write .location-type {
+    padding: 10px 16px;
+}
+
+.community-write .option-item-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.community-write .option-item-wrap .option-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.community-write .option-item-wrap .option-item {
+    height: 24px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.community-write .btn-current {
+    text-indent: 30px;
+    text-align: center;
+}
+
+.community-write .btn-current span:after {
+    background: url("../../images/cokco/icon-triangle-bottom.svg") no-repeat 50% 50%;
+    background-size: 16px auto;
+}
+
+.community-write .community-title {
+    padding: 10px 16px 20px;
+}
+
+.community-write .community-title .input-title {
+    margin-bottom: 10px;
+}
+
+.community-write .form-info input[type="text"]::placeholder {
+    color: #ccc;
+}
+
+.community-write .form-info input[type="text"] {
+    background-color: #fff;
+}
+
+.community-write .upload-item .btn-img-delete {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.community-write .upload-item .btn-img-delete span {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+.community-write .upload-item + .upload-item {
+    margin-left: 10px;
+}
+
+.community-write .upload-item:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.community-write .upload-item:nth-child(1n+5) {
+    margin-top: 10px;
+}
+
+.community-write .upload-item + .btn-upload-img {
+    margin-left: 10px;
+}
+
+.community-write .upload-item:nth-child(4n) + .btn-upload-img {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.community-write .upload-item:nth-child(1n+5) + .btn-upload-img {
+    margin-top: 10px;
 }

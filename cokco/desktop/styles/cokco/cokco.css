@@ -334,334 +334,6 @@ input[type="checkbox"] + label:before {
     vertical-align: middle;
 }
 
-/* popup */
-.cokco-full {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: #f4f4f4;
-}
-
-.cokco-full.full-white {
-    background-color: #fff;
-}
-
-.cokco-full.current-cart ~ .navigation .cart a:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #eb7203;
-}
-
-.cokco-full.current-cart ~ .navigation .cart a .title {
-    color: #eb7203;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='그룹 4870' width='42' height='42'%3E%3Cpath data-name='사각형 1853' fill='none' d='M0 0h42v42H0z'/%3E%3Cpath data-name='Icon awesome-shopping-bag' d='M26.8 16.275V14.7a6.4 6.4 0 0 0-12.8 0v1.575H9.2v13.387a3.969 3.969 0 0 0 4 3.938h14.4a3.969 3.969 0 0 0 4-3.937V16.275ZM17.2 14.7a3.2 3.2 0 0 1 6.4 0v1.575h-6.4Zm8 5.906a1.181 1.181 0 1 1 1.2-1.181 1.191 1.191 0 0 1-1.2 1.181Zm-9.6 0a1.181 1.181 0 1 1 1.2-1.181 1.191 1.191 0 0 1-1.2 1.181Z' fill='%23EB7203'/%3E%3C/svg%3E");
-}
-
-.cokco-full .cokco-breadcrumb {
-    background-color: #fff;
-}
-
-.cokco-full .title-more {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 50px;
-    padding: 0 16px;
-    margin-top: 10px;
-    border-top: solid 4px #f4f4f4;
-}
-
-.cokco-full .title-more strong {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 600;
-    color: #333;
-}
-
-.cokco-full .title-more a {
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 500;
-    color: #666;
-}
-
-.cokco-full h1 {
-    display: block;
-    position: sticky;
-    top: 0;
-    left: 0;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    background-color: #16284c;
-    z-index: 10;
-}
-
-.cokco-full h1 strong {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.cokco-full h1 .btn-close {
-    position: absolute;
-    right: 13px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 38px;
-    height: 38px;
-    background: url("../../images/cokco/icon-popup-close.svg") no-repeat 50% 50%;
-    background-size: 38px auto;
-}
-
-.cokco-full h1 .btn-close span {
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-}
-
-.cokco-full h1 .btn-back {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: url("../../images/cokco/icon-arrow-left-white.svg") no-repeat 50% 50%;
-    background-size: 40px auto;
-}
-
-.cokco-full h1 .btn-back span {
-    position: absolute;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-}
-
-.cokco-full .content {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-
-.cokco-full .input-text {
-    position: relative;
-    padding: 0 16px;
-}
-
-.cokco-full .input-textarea {
-    margin-top: 8px;
-}
-
-.cokco-full .input-textarea textarea {
-    display: block;
-    width: 100%;
-    height: 200px;
-    resize: none;
-    border: solid 1px #ccc;
-    padding: 17px 15px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 14px;
-    line-height: 17px;
-    color: #333;
-}
-
-.cokco-full .input-textarea textarea::-webkit-input-placeholder {
-    color: #ccc;
-}
-
-.cokco-full .input-textarea textarea::-moz-placeholder {
-    color: #ccc;
-}
-
-.cokco-full .input-textarea textarea:-ms-input-placeholder {
-    color: #ccc;
-}
-
-.cokco-full .input-textarea textarea::-ms-input-placeholder {
-    color: #ccc;
-}
-
-.cokco-full .input-textarea textarea::placeholder {
-    color: #ccc;
-}
-
-.cokco-full .input-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.cokco-full .input-title span {
-    font-size: 14px;
-    line-height: 17px;
-    color: #333;
-    font-weight: 400;
-}
-
-.cokco-full .input-secret {
-    position: absolute;
-    right: 16px;
-    bottom: -30px;
-}
-
-.cokco-full .input-secret label {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 14px;
-    line-height: 17px;
-    color: #666;
-    font-weight: 500;
-}
-
-.cokco-full .upload-img {
-    padding: 0 16px;
-    margin-top: 10px;
-}
-
-.cokco-full .upload-img .uploads {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.cokco-full .upload-img .btn-upload-img {
-    width: 80px;
-    height: 80px;
-    padding-top: 58px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background: #ddd url("../../images/cokco/icon-img-plus.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
-}
-
-.cokco-full .upload-img .btn-upload-img span {
-    font-size: 10px;
-    color: #666;
-    font-weight: 400;
-}
-
-.cokco-full .upload-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-.cokco-full .upload-item .btn-img-delete {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    width: 32px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding-top: 32px;
-    background: url("../../images/cokco/icon-img-delete-box.svg") no-repeat 50% 0;
-    background-size: 32px auto;
-}
-
-.cokco-full .upload-item .btn-img-delete span {
-    font-size: 10px;
-    color: #666;
-    font-weight: 400;
-}
-
-.cokco-full .upload-img-wrap {
-    display: block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-.cokco-full .upload-img-wrap img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-
-.cokco-full .full-fix {
-    position: sticky;
-    bottom: 0;
-    z-index: 10;
-    height: 70px;
-    background-color: #fff;
-    padding: 0 16px calc(constant(safe-area-inset-bottom));
-    padding: 0 16px calc(env(safe-area-inset-bottom));
-}
-
-.cokco-full .full-fix .btn-confirm {
-    width: 100%;
-    height: 50px;
-    background-color: #16284c;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-.cokco-full .full-fix .btn-confirm span {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 600;
-}
-
 #ui-datepicker-div {
     border: 1px solid #ccc;
     padding: 0 20px 0;
@@ -1829,7 +1501,7 @@ input[type="checkbox"] + label:before {
     width: 100%;
 }
 
-.input-title span {
+.input-title > span {
     display: table-cell;
     font-size: 18px;
     line-height: 27px;
@@ -1865,9 +1537,7 @@ input[type="checkbox"] + label:before {
 }
 
 .upload-img .uploads {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    font-size: 0;
 }
 
 .upload-img .btn-upload-img {
@@ -1887,6 +1557,8 @@ input[type="checkbox"] + label:before {
 }
 
 .upload-item {
+    display: inline-block;
+    vertical-align: top;
     position: relative;
     width: 110px;
     height: 110px;
@@ -9289,4 +8961,562 @@ input[type="checkbox"] + label:before {
 .right .review .no-wrap {
     margin-left: -40px;
     padding: 220px 0;
+}
+
+.community {
+    position: relative;
+}
+
+.community-wrap {
+    position: relative;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.community h2 {
+    height: 60px;
+    line-height: 58px;
+    font-size: 25px;
+}
+
+.community-subtitle {
+    position: absolute;
+    right: 0;
+    top: 62px;
+    font-size: 0;
+}
+
+.community-subtitle strong {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 48px;
+    color: #16284c;
+    font-weight: 400;
+}
+
+.community-subtitle strong em {
+    font-weight: 600;
+}
+
+.community-subtitle strong + .link-write {
+    margin-left: 20px;
+}
+
+.community .link-write {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 48px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 42px;
+    background: #16284c url("../../images/cokco/btn-write.svg") no-repeat 12px 50%;
+    background-size: auto 30px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.community-search {
+    position: relative;
+    width: 580px;
+    margin-top: 2px;
+}
+
+.community-search label {
+    position: relaitve;
+    display: block;
+}
+
+.community-search input[type="search"] {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgba(165, 165, 165, 0.08);
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+}
+
+.community-search .btn-search {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    width: 30px;
+    height: 30px;
+    background: url("../../images/cokco/icon-search.svg") no-repeat 50% 50%;
+    background-size: 30px auto;
+}
+
+.community-search .btn-search span {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+.community-location {
+    display: block;
+    padding: 0 0 20px;
+    margin-top: 7px;
+    border-bottom: 1px solid #ddd;
+}
+
+.community-location ul {
+    font-size: 0;
+}
+
+.community-location li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    margin-top: 13px;
+}
+
+.community-location li:last-child {
+    margin-right: 16px;
+}
+
+.community-location .btn-location {
+    height: 37px;
+    border-radius: 10px;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    color: #999;
+    font-size: 16px;
+    padding: 0 28px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.community-location .on .btn-location {
+    border-color: #ec7203;
+    color: #fff;
+    background-color: #ec7203;
+}
+
+.community-list {
+    padding-bottom: 75px;
+}
+
+.community-list.no {
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.community-list.no .no-wrap {
+    width: 100%;
+    padding: 190px 0;
+}
+
+.community-list ul {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.community-list li a {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0 10px;
+}
+
+.community-list li a > span,
+.community-list li a > strong {
+    display: table-cell;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.community-list .location,
+.community-list .name,
+.community-list .title,
+.community-list .count,
+.community-list .date {
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+}
+
+.community-list .location {
+    width: 84px;
+}
+
+.community-list .name {
+    width: 180px;
+    text-align: center;
+}
+
+.community-list .count,
+.community-list .date {
+    width: 100px;
+}
+
+.community-list .count {
+    text-align: center;
+}
+
+.community-list .title {
+    font-weight: 600;
+}
+
+.community-list .location + .title {
+    margin-left: 8px;
+}
+
+.community-list .name + .count {
+    margin-left: 16px;
+}
+
+.community-list .count + .date {
+    margin-left: 12px;
+}
+
+.community-swiper-wrap {
+    display: table;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.community-swiper-wrap > div {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.community-swiper-wrap .community-item-wrapper {
+    width: 650px;
+    overflow: hidden;
+}
+
+.community-swiper-wrap .community-swiper-wrapper {
+    width: 650px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.community-swiper-wrap .community-items {
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.community-swiper-wrap li {
+    display: inline-block;
+    position: relative;
+    width: 650px;
+    height: 650px;
+}
+
+.community-swiper-wrap .community-img-wrap {
+    display: block;
+    position: relative;
+    width: 650px;
+    height: 650px;
+    background-color: #ccc;
+}
+
+.community-swiper-wrap .community-img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.community-swiper-wrap .community-swiper-pagination {
+    padding-left: 28px;
+}
+
+.community-swiper-wrap .community-swiper-pagination span {
+    display: block;
+    position: relative;
+    width: 122px;
+    height: 122px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.community-swiper-wrap .community-swiper-pagination span.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.community-swiper-wrap .community-swiper-pagination span + span {
+    margin-top: 10px;
+}
+
+.community-swiper-wrap .community-swiper-pagination span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.community-detail .title-more {
+    border-bottom: 1px solid #ccc;
+    height: 80px;
+    width: 1160px;
+    margin: 0 auto 20px;
+}
+
+.community-detail .inquire .answer + .answer {
+    margin-top: 0;
+}
+
+.community-detail .comment {
+    border-top: none;
+}
+
+.community-detail .comment h2 {
+    padding: 0 40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 60px;
+    line-height: 58px;
+    border-top: none;
+}
+
+.community-detail .comment h2 span {
+    right: 40px;
+}
+
+.community-detail .comment .inquire li {
+    padding-top: 20px;
+}
+
+.community-detail .comment .question {
+    position: relative;
+    padding: 0 100px 20px 40px;
+}
+
+.community-detail .comment .question .btn-reply {
+    position: absolute;
+    right: 40px;
+    top: -4px;
+    height: 40px;
+    padding: 0 17px;
+    font-size: 14px;
+    color: #16284c;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.community-detail .comment .answer {
+    margin-top: 0;
+    padding: 20px 40px;
+}
+
+.community-text {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    padding: 29px 0 61px;
+}
+
+.community-text .button-wrap {
+    position: absolute;
+    top: 28px;
+    right: 0px;
+}
+
+.community-text .button-wrap button {
+    vertical-align: top;
+}
+
+.community-text .button-wrap .btn-modify {
+    height: 40px;
+    padding: 0 17px;
+    font-size: 14px;
+    color: #16284c;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-weight: 400;
+}
+
+.community-text .button-wrap .btn-modify + .btn-share {
+    margin-left: 20px;
+}
+
+.community-text .button-wrap .btn-share {
+    width: 40px;
+    height: 40px;
+    background: url("../../images/cokco/icon-share.svg") no-repeat 50% 0;
+    background-size: 40px auto;
+}
+
+.community-text .button-wrap .btn-share span {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+.community-text .title {
+    display: block;
+    padding-right: 150px;
+    font-size: 26px;
+    line-height: 38px;
+    color: #333;
+    font-weight: 600;
+}
+
+.community-text .id {
+    display: block;
+    margin-top: 16px;
+}
+
+.community-text .id,
+.community-text .count .type,
+.community-text .count .num,
+.community-text .date .num {
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.community-text .date-wrap .count,
+.community-text .date-wrap .date {
+    font-size: 0;
+}
+
+.community-text .date-wrap .count + .date,
+.community-text .date-wrap .date + .date {
+    margin-left: 8px;
+}
+
+.community-text .description {
+    margin-top: 42px;
+    white-space: pre-line;
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #333;
+}
+
+.community-write {
+    background-color: #fff;
+    padding: 20px 40px;
+}
+
+.community-write .option-item-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.community-write .option-item-wrap .option-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.community-write .option-item-wrap .option-item {
+    height: 27px;
+    text-align: center;
+}
+
+.community-write .option-item-wrap .option-item span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+}
+
+.community-write .btn-current {
+    padding-right: 54px;
+    height: 50px;
+    text-indent: 41px;
+    text-align: center;
+}
+
+.community-write .btn-current span {
+    font-size: 18px;
+}
+
+.community-write .btn-current span:after {
+    right: 24px;
+    width: 30px;
+    height: 30px;
+    background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
+    background-size: 30px auto;
+}
+
+.community-write .community-title {
+    padding: 20px 0 20px;
+}
+
+.community-write .community-title .input-title {
+    margin-bottom: 10px;
+}
+
+.community-write .input-text {
+    padding-top: 20px;
+}
+
+.community-write .upload-item .btn-img-delete {
+    right: 0;
+    top: 0;
+}
+
+.community-write .upload-item .btn-img-delete span {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+.community-write .upload-item + .upload-item {
+    margin-left: 20px;
+}
+
+.community-write .upload-item:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.community-write .upload-item:nth-child(1n+5) {
+    margin-top: 20px;
+}
+
+.community-write .upload-item + .btn-upload-img {
+    margin-left: 20px;
+}
+
+.community-write .upload-item:nth-child(4n) + .btn-upload-img {
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.community-write .upload-item:nth-child(1n+4) + .btn-upload-img {
+    margin-top: 20px;
 }

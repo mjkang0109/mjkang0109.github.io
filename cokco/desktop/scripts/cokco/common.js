@@ -42,16 +42,6 @@
     });
   };
 
-  var fixTabSwiper = function fixTabSwiper() {
-    var swiper = new Swiper('.fix-reference', {
-      direction: 'horizontal',
-      slideClass: 'btn-tab',
-      wrapperClass: 'tabs',
-      spaceBetween: 10,
-      slidesPerView: 'auto'
-    });
-  };
-
   var storeTabSwiper = function storeTabSwiper() {
     var swiper = new Swiper('.store-detail', {
       direction: 'horizontal',
@@ -286,7 +276,6 @@
       el: document.querySelectorAll('.quantity')
     });
     storeTabSwiper();
-    fixTabSwiper();
   };
 
   if (document.readyState === 'complete') {

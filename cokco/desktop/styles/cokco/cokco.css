@@ -93,7 +93,7 @@ button span {
 
 .cokco .title-more {
     position: relative;
-    height: 88px;
+    height: 80px;
     padding: 20px 60px 24px 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -3241,11 +3241,11 @@ input[type="checkbox"] + label:before {
 
 .fix-reference .title-more {
     position: relative;
+    padding-bottom: 14px;
 }
 
 .fix-reference .tabs {
-    padding: 20px 0;
-    white-space: nowrap;
+    padding: 0 0 20px;
     font-size: 0;
 }
 
@@ -3253,6 +3253,8 @@ input[type="checkbox"] + label:before {
     height: 37px;
     padding: 0 30px;
     border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     border: 1px solid rgba(112, 112, 112, 0.2);
 }
 

@@ -187,9 +187,10 @@
         <div class="form-wrap">
           <div class="title-wrap">
             <strong class="title">수리기사님 방문전 전달사항</strong>
+            <span class="limit"><span class="current">0</span>/<span class="max">500</span></span>
           </div>
           <label class="form-request">
-            <textarea placeholder="요청내용을 입력하세요 100자 내외"></textarea>
+            <textarea  onkeydown="resizeTextarea(this)" onkeyup="resizeTextarea(this)" placeholder="요청내용을 입력하세요"></textarea>
           </label>
         </div>
         <div class="form-wrap">
@@ -324,19 +325,26 @@
         <div class="form-wrap">
           <div class="title-wrap">
             <strong class="title">수리가 필요한 대상 사진</strong>
-            <button type="button" class="btn-add">
-              <span>추가</span>
-            </button>
           </div>
           <div class="upload-image">
             <div class="upload-images">
               <div class="uploaded-item">
-                <img src="https://via.placeholder.com/540"
+                <img src="https://via.placeholder.com/540x540/ffffff"
                   onerror="this.src = '../images/cokco/transparent.png'" alt="">
                 <button type="button" class="btn-image-delete">
                   <span>삭제</span>
                 </button>
               </div>
+              <div class="uploaded-item">
+                <img src="https://via.placeholder.com/540x540/ffffff"
+                  onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                <button type="button" class="btn-image-delete">
+                  <span>삭제</span>
+                </button>
+              </div>
+              <button type="button" class="btn-upload-img">
+                <span>사진 업로드</span>
+              </button>
             </div>
           </div>
         </div>

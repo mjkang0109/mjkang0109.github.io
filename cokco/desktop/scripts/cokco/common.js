@@ -72,32 +72,66 @@
   };
 
   var fixThumbSwiper = function fixThumbSwiper() {
+    var thumbs = new Swiper('.fix-thumb-wrapper', {
+      direction: 'vertical',
+      wrapperClass: 'fix-thumb-items',
+      slideClass: 'fix-thumb-item',
+      slidesPerView: 'auto',
+      width: 122,
+      spaceBetween: 10,
+      freeMode: true,
+      watchSlidesProgress: true
+    });
     var gallery = new Swiper('.fix-reference-swiper-wrap .fix-swiper-wrapper', {
       wrapperClass: 'fix-items',
       slideClass: 'fix-item',
       slidesPerView: 1,
       width: 650,
-      pagination: {
-        el: '.fix-swiper-pagination',
-        clickable: true,
-        renderBullet: function renderBullet(index, className) {
-          return '<span class="' + className + '"><img src="https://via.placeholder.com/480" alt=""></span>';
+      thumbs: {
+        swiper: thumbs
+      },
+      on: {
+        slideChange: function slideChange(a) {
+          if (a.activeIndex > 2) {
+            thumbs.slideTo(1);
+          }
+
+          if (a.activeIndex < 2) {
+            thumbs.slideTo(0);
+          }
         }
       }
     });
   };
 
   var communityThumbSwiper = function communityThumbSwiper() {
-    var gallery = new Swiper('.community-swiper-wrap .community-swiper-wrapper', {
+    var thumbs = new Swiper('.community-thumb-wrapper', {
+      direction: 'vertical',
+      wrapperClass: 'community-thumb-items',
+      slideClass: 'community-thumb-item',
+      slidesPerView: 'auto',
+      width: 122,
+      spaceBetween: 10,
+      freeMode: true,
+      watchSlidesProgress: true
+    });
+    var gallery = new Swiper('.community-swiper-wrapper', {
       wrapperClass: 'community-items',
       slideClass: 'community-item',
       slidesPerView: 1,
       width: 650,
-      pagination: {
-        el: '.community-swiper-pagination',
-        clickable: true,
-        renderBullet: function renderBullet(index, className) {
-          return '<span class="' + className + '"><img src="https://via.placeholder.com/480" alt=""></span>';
+      thumbs       : {
+        swiper: thumbs
+      },
+      on           : {
+        slideChange: function slideChange(a) {
+          if (a.activeIndex > 2) {
+            thumbs.slideTo(1);
+          }
+
+          if (a.activeIndex < 2) {
+            thumbs.slideTo(0);
+          }
         }
       }
     });
@@ -263,6 +297,33 @@
     });
   };
 
+  const mySwiper = function() {
+    var swiper = new Swiper('.img-swiper', {
+      direction: 'horizontal',
+      wrapperClass: 'images',
+      slideClass: 'image',
+      slidesPerView: 1,
+      width: 100,
+      on: {
+        init: function(swiper) {
+          if (!swiper) {
+            return;
+          }
+
+          swiper.$el[0].querySelector('.counter .total').textContent = swiper.slides.length;
+        },
+        slideChange: function slideChange(swiper) {
+          if (!swiper) {
+            return;
+          }
+          swiper.$el[0].querySelector('.counter .current').textContent = swiper.activeIndex + 1;
+        }
+      }
+
+    });
+  };
+
+
   var onInit = function onInit() {
     visualSwiper();
     fixSwiper();
@@ -275,7 +336,8 @@
     setQuantity({
       el: document.querySelectorAll('.quantity')
     });
-    storeTabSwiper();
+    mySwiper();
+
   };
 
   if (document.readyState === 'complete') {
@@ -284,3 +346,8 @@
     document.addEventListener('DOMContentLoaded', onInit);
   }
 })();
+
+var resizeTextarea = function(obj) {
+  obj.style.height = "1px";
+  obj.style.height = (12+obj.scrollHeight)+"px";
+}

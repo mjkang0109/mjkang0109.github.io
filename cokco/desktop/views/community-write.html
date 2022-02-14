@@ -178,8 +178,7 @@
             <div class="input-text community-title">
               <div class="input-title">
                 <span>제목</span>
-                <span class="limit"><span class="current">0</span> / <span
-                    class="max">20</span></span>
+                <span class="limit"><span class="current">0</span> / <span class="max">20</span></span>
               </div>
               <div class="form-info">
                 <label>
@@ -196,6 +195,7 @@
               <div class="input-textarea">
                 <label>
                   <textarea
+                    onkeydown="resizeTextarea(this)" onkeyup="resizeTextarea(this)"
                     placeholder="코코수리 이용및 게시글을 자유롭게 작성해주세요&#13;&#10;주의) 욕설/비방 등 부적절한 내용은 관리자에 의해&#13;&#10;삭제처리될 수 있습니다."></textarea>
                 </label>
               </div>

@@ -328,6 +328,31 @@
     });
   };
 
+  const mySwiper = () => {
+    var swiper = new Swiper('.img-swiper', {
+      direction: 'horizontal',
+      wrapperClass: 'images',
+      slideClass: 'image',
+      slidesPerView: 'auto',
+      on: {
+        init: (swiper) => {
+          if (!swiper) {
+            return;
+          }
+
+          swiper.$el[0].querySelector('.counter .total').textContent = swiper.slides.length;
+        },
+        slideChange: function slideChange(swiper) {
+          if (!swiper) {
+            return;
+          }
+            swiper.$el[0].querySelector('.counter .current').textContent = swiper.activeIndex + 1;
+        }
+      }
+
+    });
+  };
+
   var onInit = function onInit() {
     visualSwiper();
     storeCategoriesSwiper();
@@ -348,6 +373,7 @@
       el: document.querySelectorAll('.quantity')
     });
     fixFormCategory();
+    mySwiper();
   };
 
   if (document.readyState === 'complete') {
@@ -356,3 +382,8 @@
     document.addEventListener('DOMContentLoaded', onInit);
   }
 })();
+
+var resizeTextarea = function(obj) {
+  obj.style.height = "1px";
+  obj.style.height = (12+obj.scrollHeight)+"px";
+}

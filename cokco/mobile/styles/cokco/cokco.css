@@ -565,7 +565,7 @@ input[type="checkbox"] + label:before {
 .cokco-full .input-textarea textarea {
     display: block;
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     resize: none;
     border: solid 1px #ccc;
     padding: 17px 15px;
@@ -612,6 +612,14 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.cokco-full .input-title.bold {
+    padding-bottom: 12px;
+}
+
+.cokco-full .input-title.bold .name {
+    font-weight: 600;
+}
+
 .cokco-full .input-secret {
     position: absolute;
     right: 16px;
@@ -641,6 +649,51 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
+}
+
+.cokco-full .upload-img .uploads.inquire-uploads {
+    width: 70%;
+}
+
+.cokco-full .upload-img .upload-item + .upload-item {
+    margin-left: 10px;
+}
+
+.cokco-full .upload-img .inquire-uploads .upload-item:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.cokco-full .upload-img .inquire-uploads .upload-item:nth-child(1n+4) {
+    margin-top: 10px;
+}
+
+.cokco-full .upload-img .upload-item + .btn-upload-img {
+    margin-left: 10px;
+}
+
+.cokco-full .upload-img .inquire-uploads .upload-item:nth-child(3n) + .btn-upload-img {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.cokco-full .upload-img .inquire-uploads .upload-item:nth-child(1n+3) + .btn-upload-img {
+    margin-top: 10px;
+}
+
+.cokco-full .upload-image .btn-upload-img {
+    width: 88px;
+    height: 88px;
+    padding-top: 48px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ddd url("../../images/cokco/icon-img-plus.svg") no-repeat 50% 50%;
+    background-size: 20px auto;
+}
+
+.cokco-full .upload-image .btn-upload-img span {
+    font-size: 10px;
+    color: #666;
+    font-weight: 400;
 }
 
 .cokco-full .upload-img .btn-upload-img {
@@ -3285,6 +3338,120 @@ input[type="checkbox"] + label:before {
     padding: 20px 0 0;
 }
 
+.my-inquire .inquires li {
+    padding: 5px 0 0;
+}
+
+.my-inquire .reviews li {
+    padding-top: 5px;
+}
+
+.my-inquire .inquires li .title,
+.my-inquire .reviews li .title {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #333;
+}
+
+.my-inquire .inquires li .question {
+    min-height: 100px;
+}
+
+.my-inquire .inquires li .question .left,
+.my-inquire .reviews li .left {
+    align-self: flex-start;
+}
+
+.my-inquire .inquires li .right .img-swiper,
+.my-inquire .reviews li .right .img-swiper {
+    overflow: hidden;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 15px auto 0;
+}
+
+.my-inquire .inquires .img-swiper .counter,
+.my-inquire .reviews .img-swiper .counter {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 400;
+    padding: 1px 6px;
+    background-color: rgba(153, 153, 153, .5);
+    border-radius: 9px;
+}
+
+.my-inquire .inquires .img-swiper .counter > span,
+.my-inquire .reviews .img-swiper .counter > span {
+    font-size: 10px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.my-inquire .inquires li .right .img-swiper:before,
+.my-inquire .reviews li .right .img-swiper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    pointer-events: none;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.my-inquire .inquires li .right .img-swiper ul,
+.my-inquire .reviews li .right .img-swiper ul {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.my-inquire .inquires li .right .img-swiper li,
+.my-inquire .reviews li .right .img-swiper li {
+    flex: 1;
+    width: 100%;
+    padding: 0;
+}
+
+.my-inquire .inquires li .right .img-swiper .img-wrap,
+.my-inquire .reviews li .right .img-swiper .img-wrap {
+    border-radius: 0;
+}
+
+.my-inquire .inquires li .right .img-swiper .img-wrap:before,
+.my-inquire .reviews li .right .img-swiper .img-wrap:before {
+    display: none;
+}
+
+.my-inquire .inquires li .right .img-swiper .img-wrap img,
+.my-inquire .reviews li .right .img-swiper .img-wrap img {
+    border-radius: 0;
+}
+
+.my-inquire .btn-delete {
+    height: 25px;
+    font-size: 12px;
+    color: #16284c;
+    font-weight: 500;
+    padding: 0  19px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.my-inquire .inquire-check label {
+    font-size: 0;
+}
+
 .inquire li:before {
     content: "";
     position: absolute;
@@ -3386,7 +3553,7 @@ input[type="checkbox"] + label:before {
     width: 80px;
     height: 0;
     padding-top: 80px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 0 auto;
 }
 
@@ -3400,7 +3567,7 @@ input[type="checkbox"] + label:before {
     border: solid 1px #ddd;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 1;
 }
 
@@ -3495,6 +3662,13 @@ input[type="checkbox"] + label:before {
     color: #666;
 }
 
+.form-wrap .limit,
+.form-wrap .current,
+.form-wrap .max {
+    font-size: 16px;
+    color: #666;
+}
+
 .form-wrap .option-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3548,6 +3722,7 @@ input[type="checkbox"] + label:before {
     background-color: #f8f8f8;
     border: solid 1px #ccc;
     padding: 16px 0;
+    z-index: 10;
 }
 
 .form-wraps {
@@ -3606,8 +3781,7 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .form-wrap .upload-images > button,
@@ -3691,7 +3865,7 @@ input[type="checkbox"] + label:before {
 .form-request textarea {
     display: block;
     width: 100%;
-    height: 80px;
+    min-height: 80px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 13px 16px;
@@ -7664,6 +7838,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    align-items: center;
     padding: 0 27px 10px 22px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;

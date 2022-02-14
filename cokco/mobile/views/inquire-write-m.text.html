@@ -65,13 +65,13 @@
           </div>
         </div>
         <div class="input-text">
-          <div class="input-title">
-            <span class="name">작성자 아이디</span>
-            <span class="limit">50자내외</span>
+          <div class="input-title bold">
+            <span class="name">문의글 작성</span>
+            <span class="limit"><span class="current">0</span>/<span class="max">500</span></span>
           </div>
           <div class="input-textarea">
             <label>
-              <textarea placeholder="이상품에 대한 문의내용을 작성해주세요&#13;&#10;50자내외"></textarea>
+              <textarea  onkeydown="resizeTextarea(this)" onkeyup="resizeTextarea(this)" placeholder="이상품에 대한 문의내용을 작성해주세요"></textarea>
             </label>
           </div>
         </div>

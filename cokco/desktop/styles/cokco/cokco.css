@@ -1465,7 +1465,7 @@ input[type="checkbox"] + label:before {
 .input-textarea textarea {
     display: block;
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     resize: none;
     border: solid 1px #ccc;
     padding: 26px 22px;
@@ -1556,12 +1556,36 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.upload-image .btn-upload-img {
+    width: 110px;
+    height: 110px;
+    padding-top: 60px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ddd url("../../images/cokco/icon-img-plus.svg") no-repeat 50% 50%;
+    background-size: 28px auto;
+}
+
+.upload-image .btn-upload-img span {
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
+}
+
 .upload-item {
     display: inline-block;
     vertical-align: top;
     position: relative;
     width: 110px;
     height: 110px;
+}
+
+.upload-item + .upload-item {
+    margin-left: 10px;
+}
+
+.upload-item + .btn-upload-img {
+    margin-left: 10px;
 }
 
 .upload-item .btn-img-delete {
@@ -1764,7 +1788,7 @@ input[type="checkbox"] + label:before {
 .inquire .date-wrap .name,
 .inquire .date-wrap .date {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: #333;
     font-weight: 400;
 }
@@ -1805,7 +1829,7 @@ input[type="checkbox"] + label:before {
 .inquire-type strong {
     width: 100px;
     padding-top: 13px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .inquire-type .option-item-wrap {
@@ -1835,6 +1859,108 @@ input[type="checkbox"] + label:before {
     z-index: 10;
     padding: 25px 0;
 }
+
+.my-inquire .question > .right {
+    vertical-align: middle;
+}
+
+.my-inquire.customer-inquire .subtitle .description {
+    top: inherit;
+    bottom: 0;
+}
+
+.my-inquire .btn-delete {
+    height: 40px;
+    padding: 0 17px;
+    font-size: 14px;
+    color:#16284C;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.my-inquire .inquire-check label {
+    display: block;
+    font-size: 0;
+    margin-bottom: 10px;
+}
+
+.my-inquire .title {
+    display: block;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+    color: #333;
+}
+
+.my-inquire .img-swiper {
+    display: block;
+    position: relative;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.my-inquire .img-swiper:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.my-inquire .img-swiper ul {
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.my-inquire .img-swiper li {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.my-inquire .right .img-wrap {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+}
+
+.my-inquire .right .img-wrap:before {
+    display: none;
+}
+
+.my-inquire .img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.my-inquire .counter {
+    position: absolute;
+    right: 6px;
+    bottom: 5px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1px 8px 0;
+    background-color: rgba(153, 153, 153, .5);
+}
+
 
 .form-wrap {
     display: table;
@@ -1994,7 +2120,6 @@ input[type="checkbox"] + label:before {
 
 .form-wrap .upload-image-wrap > div {
     width: 100%;
-    padding-left: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -2076,13 +2201,17 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.form-request {
+    position: relative;
+}
+
 .form-request textarea {
     display: block;
     width: 100%;
-    height: 80px;
+    min-height: 100px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 13px 16px;
+    padding: 13px 16px 30px;
     font-size: 16px;
     line-height: 19px;
     color: #333;
@@ -2090,6 +2219,19 @@ input[type="checkbox"] + label:before {
     border: 1px solid #ccc;
     resize: none;
     background-color: #f8f8f8;
+}
+
+.form-request .limit {
+    position: absolute;
+    right: 25px;
+    bottom: 9px;
+    font-size: 16px;
+    color: #666;
+}
+
+.form-request .limit > span {
+    font-size: 16px;
+    color: #666;
 }
 
 .form-request textarea::-webkit-input-placeholder {
@@ -3417,6 +3559,11 @@ input[type="checkbox"] + label:before {
     margin: 0 auto;
 }
 
+.fix-form .form-wrap {
+    padding-right: 280px;
+    box-sizing: border-box;
+}
+
 .fix-form h2 {
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -3750,6 +3897,7 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-reference-detail {
+    position: relative;
     width: 1160px;
     margin: 0 auto;
     padding-bottom: 120px;
@@ -3801,14 +3949,9 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-reference-swiper-wrap {
-    display: table;
-    width: 800px;
-    margin: 0 auto;
-}
-
-.fix-reference-swiper-wrap > div {
-    display: table-cell;
-    vertical-align: top;
+    width: 650px;
+    padding-right: 150px;
+    margin: 20px auto 0;
 }
 
 .fix-reference-swiper-wrap .fix-item-wrapper {
@@ -3880,6 +4023,75 @@ input[type="checkbox"] + label:before {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.fix-thumb-wrapper {
+    position: absolute;
+    top: 100px;
+    right: 180px;
+    width: 122px;
+    height: 650px;
+    overflow: hidden;
+}
+
+.fix-thumb-wrapper,
+.community-thumb-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 122px;
+    height: 650px;
+    overflow: hidden;
+}
+
+.fix-thumb-wrapper a,
+.community-thumb-wrapper a {
+    display: block;
+}
+
+.fix-thumb-wrapper li,
+.community-thumb-wrapper li {
+    display: block;
+    opacity: .5;
+}
+
+.fix-thumb-wrapper li.swiper-slide-thumb-active,
+.community-thumb-wrapper li.swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.fix-thumb-wrapper .fix-img-wrap,
+.community-thumb-wrapper .community-img-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 122px;
+}
+
+.fix-thumb-wrapper .fix-img-wrap:before,
+.community-thumb-wrapper .community-img-wrap:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    pointer-events: none;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.fix-thumb-wrapper .fix-img-wrap img,
+.community-thumb-wrapper .community-img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -5083,6 +5295,14 @@ input[type="checkbox"] + label:before {
     padding-top: 25%;
 }
 
+.order-form .form-request {
+    padding-right: 50px;
+}
+
+.order-form .form-request .limit {
+    right: 66px;
+}
+
 .order-discount {
     padding-bottom: 20px;
 }
@@ -5516,6 +5736,14 @@ input[type="checkbox"] + label:before {
 
 .my-wrap .item-badges li + li {
     margin-left: 5px;
+}
+
+.my-wrap .inquire {
+    margin-left: -40px;
+}
+
+.my-wrap .right .inquire .no-wrap {
+    margin-left: 0;
 }
 
 .my-menu-tab {
@@ -9195,6 +9423,7 @@ input[type="checkbox"] + label:before {
 }
 
 .community-swiper-wrap .community-item-wrapper {
+    position: relative;
     width: 650px;
     overflow: hidden;
 }
@@ -9210,14 +9439,14 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
 }
 
-.community-swiper-wrap li {
+.community-swiper-wrapper li {
     display: inline-block;
     position: relative;
     width: 650px;
     height: 650px;
 }
 
-.community-swiper-wrap .community-img-wrap {
+.community-swiper-wrapper .community-img-wrap {
     display: block;
     position: relative;
     width: 650px;
@@ -9225,7 +9454,7 @@ input[type="checkbox"] + label:before {
     background-color: #ccc;
 }
 
-.community-swiper-wrap .community-img-wrap img {
+.community-swiper-wrapper .community-img-wrap img {
     position: absolute;
     top: 0;
     left: 0;
@@ -9235,11 +9464,11 @@ input[type="checkbox"] + label:before {
     object-fit: cover;
 }
 
-.community-swiper-wrap .community-swiper-pagination {
+.community-swiper-wrapper .community-swiper-pagination {
     padding-left: 28px;
 }
 
-.community-swiper-wrap .community-swiper-pagination span {
+.community-swiper-wrapper .community-swiper-pagination span {
     display: block;
     position: relative;
     width: 122px;
@@ -9248,15 +9477,15 @@ input[type="checkbox"] + label:before {
     cursor: pointer;
 }
 
-.community-swiper-wrap .community-swiper-pagination span.swiper-pagination-bullet-active {
+.community-swiper-wrapper .community-swiper-pagination span.swiper-pagination-bullet-active {
     opacity: 1;
 }
 
-.community-swiper-wrap .community-swiper-pagination span + span {
+.community-swiper-wrapper .community-swiper-pagination span + span {
     margin-top: 10px;
 }
 
-.community-swiper-wrap .community-swiper-pagination span img {
+.community-swiper-wrapper .community-swiper-pagination span img {
     position: absolute;
     top: 0;
     left: 0;

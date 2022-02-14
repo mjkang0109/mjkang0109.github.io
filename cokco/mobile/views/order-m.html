@@ -172,9 +172,6 @@
             <div class="form-wrap">
               <div class="title-wrap">
                 <strong class="title">현장이미지</strong>
-                <button type="button" class="btn-add">
-                  <span>추가</span>
-                </button>
               </div>
               <div class="upload-image">
                 <div class="upload-images">
@@ -185,16 +182,28 @@
                       <span>삭제</span>
                     </button>
                   </div>
+                  <div class="uploaded-item">
+                    <img src="https://via.placeholder.com/540"
+                      onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                    <button type="button" class="btn-image-delete">
+                      <span>삭제</span>
+                    </button>
+                  </div>
+                  <button type="button" class="btn-upload-img">
+                    <span>사진 업로드</span>
+                  </button>
                 </div>
               </div>
             </div>
             <div class="form-wrap">
               <div class="title-wrap">
                 <strong class="title">요청내용</strong>
+                <span class="limit"><span class="current">0</span>/<span class="max">500</span></span>
               </div>
               <label class="form-request">
                 <textarea
-                  placeholder="요청내용을 입력하세요 100자 내외&#13;&#10;예 ) 조립요청, 기존 설치된것 철거"></textarea>
+                  placeholder="요청내용을 입력하세요&#13;&#10;예 ) 조립요청, 기존 설치된것 철거"
+                  onkeydown="resizeTextarea(this)" onkeyup="resizeTextarea(this)"></textarea>
               </label>
             </div>
             <div class="form-wrap">

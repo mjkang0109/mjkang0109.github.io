@@ -1581,11 +1581,11 @@ input[type="checkbox"] + label:before {
 }
 
 .upload-item + .upload-item {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .upload-item + .btn-upload-img {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .upload-item .btn-img-delete {

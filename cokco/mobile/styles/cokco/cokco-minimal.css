@@ -3871,6 +3871,30 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.form-wrap .option-item-wrap.bank-account {
+    width: 38.647343vw;
+    margin-left: 2.89855072vw;
+}
+
+.form-wrap .my-form-desc {
+    padding: 2.89855072vw 0 3.38164251vw;
+    font-size: 3.38164251vw;
+    line-height: 4.10628019vw;
+    color: #333;
+    font-weight: 400;
+}
+
+.form-wrap .my-form-textarea textarea {
+    min-height: 48.31vw;
+}
+
+.form-line {
+    height: 8.21vw;
+    border-bottom: solid 1px #ccc;
+    font-size: 3.86vw;
+    color: #333;
+}
+
 .form-request textarea {
     display: block;
     width: 100%;
@@ -7080,6 +7104,48 @@ input[type="checkbox"] + label:before {
     right: 3.8647343vw;
     top: 13.28502415vw;
     padding: 0;
+}
+
+.my-simple.my-shipping .simple-order > li {
+    position: relative;
+    width: calc(100% - 19.3236715vw);
+}
+
+.my-simple.my-shipping .simple-order > li .right {
+    position: relative;
+    padding-bottom: 7.24637681vw;
+}
+
+.my-simple.my-shipping .simple-order > li .right .price-wrap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.my-simple.my-shipping .simple-order > li + li .product-review {
+    top: 4.83091787vw;
+}
+
+.my-simple.my-shipping .simple-order .product-review {
+    position: absolute;
+    top: 2.41545894vw;
+    left: 100%;
+    width: 19.3236715vw;
+    text-align: right;
+    margin-left: 0;
+}
+
+.my-simple.my-shipping .simple-order .product-review button + button {
+    margin-top: 2.41545894vw;;
+}
+
+.my-simple.my-shipping .simple-order .btn-cancel {
+    height: 7.24637681vw;
+    font-size: 2.89855072vw;
+    color: #16284C;
+    border-radius: 0.96618357vw;
+    border: 1px solid #ccc;
+    padding: 0 1.20772947vw;
 }
 
 .my-simple .simple-date > div:first-child {

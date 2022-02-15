@@ -102,137 +102,125 @@
     </header>
     <section class="cokco">
       <h1>코코수리</h1>
-      <div class="fix-reference-detail">
-        <h2 class="title-more">
-          <strong>수리사례 보기</strong>
-          <a href="./fix.html">목록보기</a>
-        </h2>
-        <div class="fix-reference-swiper-wrap fix-gallery-swiper">
-          <div class="fix-item-wrapper">
-            <div class="fix-swiper-wrapper">
-              <ul class="fix-items">
-                <li class="fix-item">
-                  <a href="#">
-                    <span class="fix-img-wrap">
-                      <img src="https://dvia.placeholder.com/480"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </a>
-                </li>
-                <li class="fix-item">
-                  <a href="#">
-                    <span class="fix-img-wrap">
-                      <img src="https://via.placeholder.com/480"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </a>
-                </li>
-                <li class="fix-item">
-                  <a href="#">
-                    <span class="fix-img-wrap">
-                      <img src="https://via.placeholder.com/480"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </a>
-                </li>
-                <li class="fix-item">
-                  <a href="#">
-                    <span class="fix-img-wrap">
-                      <img src="https://via.placeholder.com/480"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </a>
-                </li>
-                <li class="fix-item">
-                  <a href="#">
-                    <span class="fix-img-wrap">
-                      <img src="https://via.placeholder.com/480"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </a>
-                </li>
-                <li class="fix-item">
-                  <a href="#">
-                    <span class="fix-img-wrap">
-                      <img src="https://via.placeholder.com/480"
-                        onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                    </span>
-                  </a>
-                </li>
-              </ul>
+      <div class="cokco-breadcrumb">
+        <ol>
+          <li>마이페이지</li>
+          <li>쇼핑정보</li>
+          <li>주문배송</li>
+          <li>교환/반품 신청</li>
+        </ol>
+      </div>
+      <div class="full-gray">
+        <div class="close-type order-wrap my-cancel-form">
+          <h2>교환/반품 신청</h2>
+          <button type="button" class="btn-close"><span>닫기</span></button>
+          <div class="order-product">
+            <div class="order-info">
+              <a href="./detail.html">
+                <div class="left">
+                  <span class="img-wrap">
+                    <img src="https://via.placeholder.com/540"
+                      onerror="this.src = '../images/cokco/transparent.png'" alt="">
+                  </span>
+                </div>
+                <div class="right">
+                  <strong class="title">
+                    <span class="order-category">[수전]</span>
+                    <span class="name">S0851 그랑데 화이트 골드컵세면원홀 세면수전</span>
+                  </strong>
+                  <div class="price-wrap">
+                    <span class="count">수량 1개</span>
+                    <span class="price-type">주문금액</span>
+                    <em>83,000원</em>
+                  </div>
+                </div>
+              </a>
+              <div class="order-product-toggle">
+                <button type="button" class="btn-option-toggle"
+                  onclick="this.parentNode.parentElement.classList.toggle('on')">
+                  <span>옵션 확인</span>
+                </button>
+              </div>
+            </div>
+            <div class="order-option">
+              <div class="order-option-wrap">
+                <ul class="order-options">
+                  <li class="order-option-block">
+                    <div class="option-title">적립 : 포인트 적립</div>
+                    <div class="option-price point">(+830원)</div>
+                  </li>
+                  <li class="order-option-block">
+                    <div class="option-title">할인 : 1+1할인</div>
+                    <div class="option-price">+0원</div>
+                  </li>
+                  <li class="order-option-block">
+                    <div class="option-title">추가선택 : 기본 화이트</div>
+                    <div class="option-price">+0원</div>
+                  </li>
+                  <li class="order-option-block">
+                    <div class="option-title">수량 : 1</div>
+                    <div class="option-price">+0원</div>
+                  </li>
+                  <li class="order-option-block">
+                    <div class="option-title">설치옵션 : 상품만 배송</div>
+                    <div class="option-price">+0원</div>
+                  </li>
+                  <li class="order-option-block">
+                    <div class="option-title">배송비 : 무료배송</div>
+                    <div class="option-price">+0원</div>
+                  </li>
+                  <li class="order-option-block">
+                    <div class="option-title">주문금액</div>
+                    <div class="option-price">83,000원</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="order-form">
+            <h2>교환/반품 신청내용</h2>
+            <div class="form-wrap">
+              <div class="title-wrap">
+                <strong class="title">신청상품</strong>
+              </div>
+              <div class="form-info-wrap">
+                <div class="form-info">
+                  <label>
+                    <input type="text" required placeholder="계좌번호" disabled value="S0851 그랑데 화이트 골드컵 세면원홀 세면수전">
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-wrap refund-request">
+              <div class="title-wrap">
+                <strong class="title">신청내용</strong>
+              </div>
+              <label class="form-request">
+                <textarea
+                  onkeydown="resizeTextarea(this)" onkeyup="resizeTextarea(this)"
+                  placeholder="관리자에게 전달하실내용이 있다면 입력해주세요 "></textarea>
+                <span class="limit"><span class="current">0</span> / <span  class="max">500</span></span>
+              </label>
+            </div>
+            <div class="form-wrap">
+              <div class="title-wrap">
+                <strong class="title"> </strong>
+              </div>
+              <div class="form-info-wrap">
+                <div class="form-info">
+                  <div class="my-form-desc">*위 정보를 다시 한번 정확하게 신청해주세요 관리자 확인 후 처리를 도와드립니다.</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="fix-thumb-wrapper">
-          <ul class="fix-thumb-items">
-            <li class="fix-thumb-item">
-              <a href="#">
-                  <span class="fix-img-wrap">
-                    <img src="https://dvia.placeholder.com/480"
-                         onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-              </a>
-            </li>
-            <li class="fix-thumb-item">
-              <a href="#">
-                  <span class="fix-img-wrap">
-                    <img src="https://via.placeholder.com/480x480/ffffff"
-                         onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-              </a>
-            </li>
-            <li class="fix-thumb-item">
-              <a href="#">
-                  <span class="fix-img-wrap">
-                    <img src="https://via.placeholder.com/480"
-                         onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-              </a>
-            </li>
-            <li class="fix-thumb-item">
-              <a href="#">
-                  <span class="fix-img-wrap">
-                    <img src="https://via.placeholder.com/480"
-                         onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-              </a>
-            </li>
-            <li class="fix-thumb-item">
-              <a href="#">
-                  <span class="fix-img-wrap">
-                    <img src="https://via.placeholder.com/480"
-                         onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-              </a>
-            </li>
-            <li class="fix-thumb-item">
-              <a href="#">
-                  <span class="fix-img-wrap">
-                    <img src="https://via.placeholder.com/480"
-                         onerror="this.src = '../images/cokco/transparent.png'" alt="">
-                  </span>
-              </a>
-            </li>
-          </ul>
+        <div class="btn-wrap">
+          <button type="button" class="btn-cancel">
+            <span>취소</span>
+          </button>
+          <button type="button" class="btn-confirm">
+            <span>교환/반품 신청</span>
+          </button>
         </div>
-        <div class="fix-reference-text">
-          <strong class="title">세면대 수리 약 30년 사용한 욕실 수도관 및 수전 교체 공사</strong>
-          <span class="id">작성자 ID</span>
-          <div class="date-wrap">
-            <span class="count">
-              <span class="type">조회</span>
-              <span class="num">10</span>
-            </span>
-            <span class="date">
-              <span class="num">2022.1.22</span>
-            </span>
-          </div>
-          <div class="description">수리100% 만족 정확하게 빠른 작업 문제점개선 확실한 수리시공완료...
-            서울시 관악구에 있는 30년된 주택입니다. 건축이후 단 한번도
-            수리나 리모델링을 하지 않아 30년전 당시 지어졌던 그대로의 모습입니다.<br>
-            수도관이나 벽체 등이 매우 노후되고 약해져 있어서 교체시공을
-            하는 데 어려움이 있었지만 보시는 바와 같이 시공을 마친 후의 모습은 고객님을 매우 만족시킬 수 있었습니다.<br>
-            언제든 코코수리에 문의하시면 48 시간 이내에 고객님의 집으로 달려갑니다.</div>
         </div>
       </div>
     </section>

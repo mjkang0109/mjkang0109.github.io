@@ -3809,7 +3809,25 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-detail-category-wrap + .fix-reference-swiper-wrap {
+    position: relative;
     margin-top: 20px;
+}
+
+.fix-detail-category-wrap + .fix-reference-swiper-wrap .fix-swiper-wrapper {
+    position: relative;
+    border-radius: 0;
+}
+
+.fix-detail-category-wrap + .fix-reference-swiper-wrap .fix-swiper-wrapper:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
 .fix-detail-category .item-depth {
@@ -3996,6 +4014,9 @@ input[type="checkbox"] + label:before {
 }
 
 .fix-reference-swiper-wrap .fix-swiper-pagination {
+    position: absolute;
+    right: 0;
+    top: 0;
     padding-left: 28px;
 }
 
@@ -4006,6 +4027,18 @@ input[type="checkbox"] + label:before {
     height: 122px;
     opacity: .5;
     cursor: pointer;
+}
+
+.fix-reference-swiper-wrap .fix-swiper-pagination span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
 .fix-reference-swiper-wrap .fix-swiper-pagination span.swiper-pagination-bullet-active {
@@ -4036,7 +4069,6 @@ input[type="checkbox"] + label:before {
     overflow: hidden;
 }
 
-.fix-thumb-wrapper,
 .community-thumb-wrapper {
     position: absolute;
     top: 0;
@@ -5303,6 +5335,85 @@ input[type="checkbox"] + label:before {
     right: 66px;
 }
 
+.close-type.my-cancel-form .order-form {
+    padding-right: 80px;
+}
+
+.my-cancel-form h2 {
+    height: auto;
+    padding-bottom: 19px;
+}
+
+.my-cancel-form .form-wrap {
+    border-top: none;
+    padding: 6px 0 5px;
+}
+
+.my-cancel-form .order-form .form-wrap .form-info-wrap {
+    padding-right: 0;
+}
+
+.my-cancel-form .option-item-wrap.bank-account .btn-current {
+    width: 240px;
+    margin-left: 20px;
+}
+
+.my-cancel-form .form-wrap .option-item-wrap.on .option-items {
+    width: calc(100% - 20px);
+    left: 20px;
+}
+
+.my-cancel-form .form-wrap .btn-current span:after {
+    width: 30px;
+    height: 30px;
+    background-size: 30px auto;
+}
+
+.order-wrap.my-cancel-form .btn-wrap {
+    width: 680px;
+    font-size: 0;
+    padding-bottom: 0;
+}
+
+.order-wrap.my-cancel-form .btn-cancel {
+    width: 130px;
+    background-color: #ccc;
+}
+
+.order-wrap.my-cancel-form .btn-confirm {
+    width: 530px;
+    margin-left: 20px;
+}
+
+.my-cancel-form .order-form .form-request {
+    padding-right: 0;
+}
+
+.my-cancel-form .order-form .form-request textarea {
+    min-height: 200px;
+}
+
+.my-cancel-form .order-form .form-request .limit {
+    right: 20px;
+}
+
+.my-form-desc {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    font-weight: 400;
+    padding-top: 15px;
+}
+
+.form-line {
+    height: 36px;
+    padding-top: 2px;
+    border-bottom: solid 1px #ccc;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+}
+
 .order-discount {
     padding-bottom: 20px;
 }
@@ -6567,6 +6678,9 @@ input[type="checkbox"] + label:before {
     position: absolute;
     top: 10px;
     right: 0;
+}
+
+.my-simple .simple-order .product-review button + button {
     margin-left: 10px;
 }
 
@@ -6577,7 +6691,15 @@ input[type="checkbox"] + label:before {
     border: 1px solid #ccc;
 }
 
-.my-simple .simple-order .btn-review span {
+.my-simple .simple-order .btn-cancel {
+    height: 30px;
+    padding: 0 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.my-simple .simple-order .btn-review span,
+.my-simple .simple-order .btn-cancel span {
     font-size: 14px;
     font-weight: 400;
     color: #16284c;
@@ -8925,27 +9047,36 @@ input[type="checkbox"] + label:before {
     width: 100%;
 }
 
-.layer.fix .layer-text, .layer.my .layer-text {
+.layer.fix .layer-text, .layer.my .layer-text, .layer.cart .layer-text {
     width: 1160px;
     margin: 0 auto;
     border: 1px solid #ccc;
     padding: 50px 0 74px;
 }
 
-.layer.fix .layer-button, .layer.my .layer-button {
+.layer.fix .layer-button, .layer.my .layer-button, .layer.cart .layer-button {
     margin-top: 20px;
     text-align: center;
     padding-bottom: 507px;
+    font-size: 0;
 }
 
-.layer.fix .layer-button button, .layer.my .layer-button button {
+.layer.fix .layer-button button, .layer.my .layer-button button, .layer.cart .layer-button button {
     width: 240px;
     height: 71px;
     background-color: #16284c;
     border-radius: 10px;
 }
 
-.layer.fix .layer-button button span, .layer.my .layer-button button span {
+.layer.cart .layer-button .btn-shopping {
+    background-color: #ccc;
+}
+
+.layer.cart .layer-button button + button {
+    margin-left: 20px;
+}
+
+.layer.fix .layer-button button span, .layer.my .layer-button button span, .layer.cart .layer-button button span {
     font-size: 20px;
     font-weight: 600;
     color: #fff;
@@ -9144,6 +9275,10 @@ input[type="checkbox"] + label:before {
 
 .close-type .order-form {
     padding: 18px 0;
+}
+
+.close-type.order-wrap {
+    width: 760px;
 }
 
 .layer-type-content {

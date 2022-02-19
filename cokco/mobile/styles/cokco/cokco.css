@@ -169,12 +169,12 @@ button span {
 }
 
 .cokco .fix-banner {
-    border-top: 1px solid #ccc;
-    margin-top: 2.41545894vw;
+    margin-top: 16px;
 }
 
 .cokco .fix-banner h2 {
     margin-top: 0;
+    border-top: none;
 }
 
 .cokco .fix-banner ul {
@@ -202,8 +202,16 @@ button span {
     width: 44.69vw;
 }
 
+.cokco .fix-banner li:nth-child(4) a {
+    padding-left: 7.49vw;
+}
+
+.cokco .fix-banner li:nth-child(5) a {
+    padding-left: 6.52vw;
+}
+
 .cokco .fix-banner li:nth-child(1n+4) .title {
-    margin-left: 4.83vw;
+    margin-left: 5.31vw;
 }
 
 .cokco .fix-banner li:nth-child(1n+4) .title span {
@@ -242,21 +250,12 @@ button span {
 
 .cokco .fix-banner .title {
     display: inline-block;
-    font-size: 3.38164251vw;
-    line-height: 4.10628019vw;
+    font-size: 5.80vw;
+    line-height: 8.70vw;
     color: #16284C;
     vertical-align: middle;
-    margin-left: 1.21vw;
+    margin-left: 2.66vw;
     text-align: left;
-}
-
-.cokco .fix-banner .title span {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    vertical-align: center;
-    font-weight: 400;
-    margin-top: 1.20772947vw;
 }
 
 .cokco .tile-item {
@@ -2738,6 +2737,23 @@ input[type="checkbox"] + label:before {
     padding-left: 10px;
 }
 
+.store-recommend-item .title-more {
+    border-top: none;
+}
+
+.store-recommend-item .item-badges {
+    flex-wrap: wrap;
+    margin-top: 9px;
+}
+
+.store-recommend-item .item-badges li {
+    width: 52px;
+    height: 22px;
+    margin-left: 0;
+    margin-right: 1px;
+    margin-top: 1px;
+}
+
 .item-badges {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4227,7 +4243,6 @@ input[type="checkbox"] + label:before {
 /* main */
 .visual {
     position: relative;
-    padding: 0 16px;
     min-height: 180px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -5777,7 +5792,6 @@ input[type="checkbox"] + label:before {
 
 .detail-block > .title {
     width: 82px;
-    padding-top: 2px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
@@ -5894,7 +5908,7 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-options .detail-block.add-option > .title, .detail-options .detail-block.install-option > .title {
-    padding-top: 10px;
+    padding-top: 8px;
 }
 
 .detail-options .detail-block.add-option + .install-option {
@@ -5963,10 +5977,38 @@ input[type="checkbox"] + label:before {
 
 .detail-options .detail-block.detail-option-total > .title {
     padding-top: 3px;
+    color: #2E4E8E;
 }
 
 .detail-options .detail-option-wrap {
     border-bottom: 1px solid #ccc;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block > .title {
+    padding-top: 8px;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block:first-child {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block:first-child > .title {
+    padding-top: 10px;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block:last-child {
+    padding-bottom: 12px;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block + .detail-block {
+    padding-top: 0;
+}
+
+.detail-options .selected-option-price .selected .price {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
 }
 
 .detail-options .detail-option-wrap .detail-block {
@@ -6016,6 +6058,15 @@ input[type="checkbox"] + label:before {
     padding: 13px 0 0 15px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.detail .selected-option li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.detail .selected-option li .price {
+    padding-right: 0;
 }
 
 .detail .selected .title {
@@ -6090,6 +6141,10 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.detail .quantity + .price-wrap.selected-price .price {
+    padding-right: 0;
+}
+
 .detail .quantity + .price-wrap .btn-delete {
     position: absolute;
     top: 50%;
@@ -6130,7 +6185,7 @@ input[type="checkbox"] + label:before {
     flex: 1;
     font-size: 16px;
     line-height: 24px;
-    color: #333;
+    color: #2E4E8E;
     font-weight: 600;
 }
 
@@ -6246,18 +6301,6 @@ input[type="checkbox"] + label:before {
     opacity: 0;
     -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
-}
-
-.detail .tabs button + button span:before {
-    content: "";
-    position: absolute;
-    left: -1px;
-    top: 50%;
-    width: 1px;
-    height: 20px;
-    background-color: #666;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 .detail .panels > div .admin-img-wrap {

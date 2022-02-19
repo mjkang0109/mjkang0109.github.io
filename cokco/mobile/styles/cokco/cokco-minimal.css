@@ -177,12 +177,12 @@ button span {
 }
 
 .cokco .fix-banner {
-    border-top: 1px solid #ccc;
-    margin-top: 2.41545894vw;
+    margin-top: 3.86vw;
 }
 
 .cokco .fix-banner h2 {
     margin-top: 0;
+    border-top: none;
 }
 
 .cokco .fix-banner ul {
@@ -210,8 +210,16 @@ button span {
     width: 44.69vw;
 }
 
+.cokco .fix-banner li:nth-child(4) a {
+    padding-left: 7.49vw;
+}
+
+.cokco .fix-banner li:nth-child(5) a {
+    padding-left: 6.52vw;
+}
+
 .cokco .fix-banner li:nth-child(1n+4) .title {
-    margin-left: 4.83vw;
+    margin-left: 5.31vw;
 }
 
 .cokco .fix-banner li:nth-child(1n+4) .title span {
@@ -250,21 +258,12 @@ button span {
 
 .cokco .fix-banner .title {
     display: inline-block;
-    font-size: 3.38164251vw;
-    line-height: 4.10628019vw;
+    font-size: 5.80vw;
+    line-height: 8.70vw;
     color: #16284C;
     vertical-align: middle;
-    margin-left: 1.21vw;
+    margin-left: 2.66vw;
     text-align: left;
-}
-
-.cokco .fix-banner .title span {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    vertical-align: center;
-    font-weight: 400;
-    margin-top: 1.20772947vw;
 }
 
 .cokco .tile-item {
@@ -2747,6 +2746,23 @@ input[type="checkbox"] + label:before {
     padding-left: 2.41545894vw;
 }
 
+.store-recommend-item .title-more {
+    border-top: none;
+}
+
+.store-recommend-item .item-badges {
+    flex-wrap: wrap;
+    margin-top: 2.17vw;
+}
+
+.store-recommend-item .item-badges li {
+    width: 12.56vw;
+    height: 5.31vw;
+    margin-left: 0;
+    margin-right: 1px;
+    margin-top: 1px;
+}
+
 .item-badges {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4236,7 +4252,6 @@ input[type="checkbox"] + label:before {
 /* main */
 .visual {
     position: relative;
-    padding: 0 3.8647343vw;
     min-height: 43.47826087vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -5787,7 +5802,6 @@ input[type="checkbox"] + label:before {
 
 .detail-block > .title {
     width: 19.80676329vw;
-    padding-top: 0.48309179vw;
     font-size: 3.8647343vw;
     line-height: 5.7971vw;
     font-weight: 600;
@@ -5904,7 +5918,7 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-options .detail-block.add-option > .title, .detail-options .detail-block.install-option > .title {
-    padding-top: 2.41545894vw;
+    padding-top: 1.93vw;
 }
 
 .detail-options .detail-block.add-option + .install-option {
@@ -5973,10 +5987,38 @@ input[type="checkbox"] + label:before {
 
 .detail-options .detail-block.detail-option-total > .title {
     padding-top: 0.72463768vw;
+    color: #2E4E8E;
 }
 
 .detail-options .detail-option-wrap {
     border-bottom: 1px solid #ccc;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block > .title {
+    padding-top: 1.93vw;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block:first-child {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block:first-child > .title {
+    padding-top: 2.42vw;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block:last-child {
+    padding-bottom: 2.9vw;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block + .detail-block {
+    padding-top: 0;
+}
+
+.detail-options .selected-option-price .selected .price {
+    font-size: 3.86vw;
+    font-weight: 600;
+    line-height: 5.80vw;
 }
 
 .detail-options .detail-option-wrap .detail-block {
@@ -6026,6 +6068,15 @@ input[type="checkbox"] + label:before {
     padding: 3.14009662vw 0 0 3.62318841vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.detail .selected-option li {
+    padding-top: 2.42vw;
+    padding-bottom: 2.42vw;
+}
+
+.detail .selected-option li .price {
+    padding-right: 0;
 }
 
 .detail .selected .title {
@@ -6100,6 +6151,10 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.detail .quantity + .price-wrap.selected-price .price {
+    padding-right: 0;
+}
+
 .detail .quantity + .price-wrap .btn-delete {
     position: absolute;
     top: 50%;
@@ -6140,7 +6195,7 @@ input[type="checkbox"] + label:before {
     flex: 1;
     font-size: 3.8647343vw;
     line-height: 5.7971vw;
-    color: #333;
+    color: #2E4E8E;
     font-weight: 600;
 }
 
@@ -6256,18 +6311,6 @@ input[type="checkbox"] + label:before {
     opacity: 0;
     -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
-}
-
-.detail .tabs button + button span:before {
-    content: "";
-    position: absolute;
-    left: -1px;
-    top: 50%;
-    width: 1px;
-    height: 4.83091787vw;
-    background-color: #666;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 .detail .panels > div .admin-img-wrap {

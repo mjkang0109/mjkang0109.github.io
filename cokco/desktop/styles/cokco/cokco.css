@@ -142,7 +142,6 @@ button span {
 }
 
 .cokco .fix-banner {
-    border-top: 1px solid #ccc;
     padding: 0 16px 0;
 }
 
@@ -179,11 +178,11 @@ button span {
 }
 
 .cokco .fix-banner li:nth-child(4) .title {
-    margin-left: 78px;
+    margin-left: 128px;
 }
 
 .cokco .fix-banner li:nth-child(5) .title {
-    margin-left: 87px;
+    margin-left: 110px;
 }
 
 .cokco .fix-banner li:nth-child(4n) {
@@ -211,10 +210,10 @@ button span {
 }
 
 .cokco .fix-banner .title {
-    font-size: 34px;
+    font-size: 50px;
     color: #16284C;
     vertical-align: middle;
-    margin-left: 27px;
+    margin-left: 33px;
 }
 
 .cokco .fix-banner .title span {
@@ -4474,6 +4473,14 @@ input[type="checkbox"] + label:before {
     border-bottom: solid 1px #ccc;
 }
 
+.detail-options .detail-block.detail-option-total {
+    border-bottom: none;
+}
+
+.detail-options .detail-block.detail-option-total .title {
+    color: #2E4E8E;
+}
+
 .detail-options .detail-block + .detail-block:last-child {
     border-bottom: 0;
 }
@@ -4546,7 +4553,15 @@ input[type="checkbox"] + label:before {
 }
 
 .detail-options .detail-option-wrap .detail-block > .title {
-    padding-top: 20px;
+    padding-top: 15px;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block > .title {
+    padding-top: 16px;
+}
+
+.detail-options .detail-option-wrap.selected-option-wrap .detail-block {
+    padding: 0;
 }
 
 .detail-option .btn-current {
@@ -4587,6 +4602,23 @@ input[type="checkbox"] + label:before {
     padding: 20px 0 0 25px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.detail .selected-option-wrap .selected li {
+    padding: 16px 0 16px 25px;
+}
+
+.detail .selected-option-wrap .selected .btn-delete {
+    top: 50%;
+}
+
+.detail .selected-option-price li .price {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.detail .selected.selected-option .price {
+    padding-right: 0;
 }
 
 .detail .selected li > strong,
@@ -4654,6 +4686,10 @@ input[type="checkbox"] + label:before {
     vertical-align: middle;
 }
 
+.detail .selected-option-wrap .quantity + .price-wrap .price {
+    padding-right: 0;
+}
+
 .detail .quantity + .price-wrap .price {
     padding-right: 37px;
     font-size: 18px;
@@ -4693,7 +4729,7 @@ input[type="checkbox"] + label:before {
     width: 100%;
     font-size: 24px;
     line-height: 29px;
-    color: #333;
+    color: #2E4E8E;
     font-weight: 600;
     text-align: right;
 }
@@ -4813,18 +4849,6 @@ input[type="checkbox"] + label:before {
     opacity: 0;
     -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
-}
-
-.detail .tabs button + button span:before {
-    content: "";
-    position: absolute;
-    left: -1px;
-    top: 50%;
-    width: 1px;
-    height: 20px;
-    background-color: #666;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 .detail .panels {

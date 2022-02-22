@@ -1890,6 +1890,7 @@ input[type="checkbox"] + label:before {
     color: #333;
 }
 
+.detail .img-swiper,
 .my-inquire .img-swiper {
     display: block;
     position: relative;
@@ -1898,6 +1899,7 @@ input[type="checkbox"] + label:before {
     border-radius: 10px;
 }
 
+.detail .img-swiper:after,
 .my-inquire .img-swiper:after {
     content: "";
     position: absolute;
@@ -1911,11 +1913,13 @@ input[type="checkbox"] + label:before {
     pointer-events: none;
 }
 
+.detail .img-swiper ul,
 .my-inquire .img-swiper ul {
     white-space: nowrap;
     font-size: 0;
 }
 
+.detail .img-swiper li,
 .my-inquire .img-swiper li {
     display: inline-block;
     vertical-align: top;
@@ -1925,6 +1929,7 @@ input[type="checkbox"] + label:before {
     cursor: pointer;
 }
 
+.detail .right .img-wrap,
 .my-inquire .right .img-wrap {
     display: block;
     position: relative;
@@ -1933,10 +1938,12 @@ input[type="checkbox"] + label:before {
     border-radius: 0;
 }
 
+.detail .right .img-wrap:before,
 .my-inquire .right .img-wrap:before {
     display: none;
 }
 
+.detail .img-wrap img,
 .my-inquire .img-wrap img {
     position: absolute;
     top: 0;
@@ -1947,6 +1954,7 @@ input[type="checkbox"] + label:before {
     border-radius: 0;
 }
 
+.detail .counter,
 .my-inquire .counter {
     position: absolute;
     right: 6px;

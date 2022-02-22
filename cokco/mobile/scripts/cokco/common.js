@@ -181,7 +181,6 @@
 
       grandparent.parentNode.querySelector("#".concat(target.getAttribute('aria-controls'))).removeAttribute('hidden');
       grandparent.parentNode.querySelector("#".concat(target.getAttribute('aria-controls'))).classList.add(toggleClass);
-      bindCategory();
     };
 
     tabs.forEach(function (tab) {

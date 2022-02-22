@@ -36,6 +36,7 @@ button,
 span,
 strong,
 textarea,
+input,
 p,
 em,
 label {
@@ -935,6 +936,7 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
 }
 
 .cokco-full .order-info.on + .order-option {
@@ -954,6 +956,7 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
 }
 
 .cokco-full .order-info > a .left {
@@ -3292,6 +3295,8 @@ input[type="checkbox"] + label:before {
     align-self: flex-start;
 }
 
+.detail .inquires li .right .img-swiper,
+.detail .reviews li .right .img-swiper,
 .my-inquire .inquires li .right .img-swiper,
 .my-inquire .reviews li .right .img-swiper {
     overflow: hidden;
@@ -3302,6 +3307,8 @@ input[type="checkbox"] + label:before {
     margin: 3.62318841vw auto 0;
 }
 
+.detail .inquires .img-swiper .counter,
+.detail .reviews .img-swiper .counter,
 .my-inquire .inquires .img-swiper .counter,
 .my-inquire .reviews .img-swiper .counter {
     position: absolute;
@@ -3315,6 +3322,8 @@ input[type="checkbox"] + label:before {
     border-radius: 2.17391304vw;
 }
 
+.detail .inquires .img-swiper .counter > span,
+.detail .reviews .img-swiper .counter > span,
 .my-inquire .inquires .img-swiper .counter > span,
 .my-inquire .reviews .img-swiper .counter > span {
     font-size: 2.41545894vw;
@@ -3322,6 +3331,8 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.detail .inquires li .right .img-swiper:before,
+.detail .reviews li .right .img-swiper:before,
 .my-inquire .inquires li .right .img-swiper:before,
 .my-inquire .reviews li .right .img-swiper:before {
     content: "";
@@ -3337,6 +3348,8 @@ input[type="checkbox"] + label:before {
     z-index: 1;
 }
 
+.detail .inquires li .right .img-swiper ul,
+.detail .reviews li .right .img-swiper ul,
 .my-inquire .inquires li .right .img-swiper ul,
 .my-inquire .reviews li .right .img-swiper ul {
     flex: 1;
@@ -3344,6 +3357,8 @@ input[type="checkbox"] + label:before {
     justify-content: flex-start;
 }
 
+.detail .inquires li .right .img-swiper li,
+.detail .reviews li .right .img-swiper li,
 .my-inquire .inquires li .right .img-swiper li,
 .my-inquire .reviews li .right .img-swiper li {
     flex: 1;
@@ -3351,16 +3366,22 @@ input[type="checkbox"] + label:before {
     padding: 0;
 }
 
+.detail .inquires li .right .img-swiper .img-wrap,
+.detail .reviews li .right .img-swiper .img-wrap,
 .my-inquire .inquires li .right .img-swiper .img-wrap,
 .my-inquire .reviews li .right .img-swiper .img-wrap {
     border-radius: 0;
 }
 
+.detail .inquires li .right .img-swiper .img-wrap:before,
+.detail .reviews li .right .img-swiper .img-wrap:before,
 .my-inquire .inquires li .right .img-swiper .img-wrap:before,
 .my-inquire .reviews li .right .img-swiper .img-wrap:before {
     display: none;
 }
 
+.detail .inquires li .right .img-swiper .img-wrap img,
+.detail .reviews li .right .img-swiper .img-wrap img,
 .my-inquire .inquires li .right .img-swiper .img-wrap img,
 .my-inquire .reviews li .right .img-swiper .img-wrap img {
     border-radius: 0;
@@ -3569,6 +3590,16 @@ input[type="checkbox"] + label:before {
     -ms-flex-align: center;
     align-items: center;
     padding-bottom: 2.41545894vw;
+}
+
+.form-wrap .title-wrap .align-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.form-wrap .title-wrap button + button {
+    margin-left: 2.42vw;
 }
 
 .form-wrap .title-wrap button {
@@ -3909,8 +3940,9 @@ input[type="checkbox"] + label:before {
 }
 
 .form-date .input-date {
-    width: 24.15458937vw;
+    width: 28.98vw;
     height: 7.24637681vw;
+    padding-left: 9.66vw;
     border: solid 1px #ccc;
     border-radius: 1.20772947vw;
     -webkit-box-sizing: border-box;
@@ -3919,6 +3951,12 @@ input[type="checkbox"] + label:before {
     font-size: 2.89855072vw;
     color: #333;
     margin-right: 3.62318841vw;
+    background: url("../../images/cokco/icon-calendar.svg") no-repeat 2.42vw 50%;
+    background-size: 7.25vw auto;
+}
+
+.form-date + .form-date {
+    margin-top: 2.42vw;
 }
 
 .form-date .btn-prev,

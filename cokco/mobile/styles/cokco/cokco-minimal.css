@@ -372,7 +372,7 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     background-color: #16284c;
-    z-index: 10;
+    z-index: 11;
 }
 
 .cokco-full h1 strong {
@@ -634,6 +634,10 @@ input[type="checkbox"] + label:before {
     line-height: 4.10628019vw;
     color: #333;
     font-weight: 400;
+}
+
+.cokco-full .input-title .limit {
+    white-space: nowrap;
 }
 
 .cokco-full .input-title.bold {
@@ -3305,6 +3309,7 @@ input[type="checkbox"] + label:before {
     height: 19.3236715vw;
     border-radius: 2.41545894vw;
     margin: 3.62318841vw auto 0;
+    transform: translate3d(0, 0, 0);
 }
 
 .detail .inquires .img-swiper .counter,
@@ -4650,7 +4655,8 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    padding: 3.14009662vw 4.83091787vw 2.41545894vw 2.41545894vw;
+    padding: 0 4.83091787vw 0 2.41545894vw;
+    align-items: center;
     border: solid 1px #c4c4c4;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -5892,6 +5898,10 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     position: relative;
+}
+
+.detail-option .option-item-wrap {
+    width: 100%;
 }
 
 .detail-option .option-item {
@@ -10192,7 +10202,7 @@ input[type="checkbox"] + label:before {
 }
 
 .community-write .upload-item:nth-child(4n) + .btn-upload-img {
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-top: 2.41545894vw;
 }
 

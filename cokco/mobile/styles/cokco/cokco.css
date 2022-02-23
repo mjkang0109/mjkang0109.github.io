@@ -364,7 +364,7 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     background-color: #16284c;
-    z-index: 10;
+    z-index: 11;
 }
 
 .cokco-full h1 strong {
@@ -498,7 +498,7 @@ input[type="checkbox"] + label:before {
 }
 
 .cokco-full .option-item-wrap {
-    width: 300px;
+    width: 72.46376812vw;
 }
 
 .cokco-full .option-item-wrap.on .btn-current span:after {
@@ -628,6 +628,10 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
+.cokco-full .input-title .limit {
+    white-space: nowrap;
+}
+
 .cokco-full .input-title.bold {
     padding-bottom: 12px;
 }
@@ -665,10 +669,11 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
+    max-width: 360px;
 }
 
 .cokco-full .upload-img .uploads.inquire-uploads {
-    width: 70%;
+    max-width: 330px;
 }
 
 .cokco-full .upload-img .upload-item + .upload-item {
@@ -3298,6 +3303,7 @@ input[type="checkbox"] + label:before {
     height: 80px;
     border-radius: 10px;
     margin: 15px auto 0;
+    transform: translate3d(0, 0, 0);
 }
 
 .detail .inquires .img-swiper .counter,
@@ -4643,7 +4649,8 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    padding: 13px 20px 10px 10px;
+    padding: 0 20px 0 10px;
+    align-items: center;
     border: solid 1px #c4c4c4;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -5884,6 +5891,10 @@ input[type="checkbox"] + label:before {
     -ms-flex: 1;
     flex: 1;
     position: relative;
+}
+
+.detail-option .option-item-wrap {
+    width: 100%;
 }
 
 .detail-option .option-item {
@@ -10168,7 +10179,7 @@ input[type="checkbox"] + label:before {
 }
 
 .community-write .upload-item:nth-child(4n+1) {
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
 .community-write .upload-item:nth-child(1n+5) {
@@ -10180,7 +10191,7 @@ input[type="checkbox"] + label:before {
 }
 
 .community-write .upload-item:nth-child(4n) + .btn-upload-img {
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-top: 10px;
 }
 

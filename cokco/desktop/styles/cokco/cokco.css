@@ -5852,8 +5852,38 @@ input[type="checkbox"] + label:before {
 
 .cokco-breadcrumb + .my-wrap .right:only-child {
     display: block;
-    width: 980px;
+    width: 760px;
     margin: 0 auto;
+    padding-left: 0;
+}
+
+.cokco-breadcrumb + .my-wrap .right:only-child .my-info {
+    margin-left: 0;
+}
+
+.cokco-breadcrumb + .my-wrap .right:only-child .my-address-wrap {
+    padding: 9px 0 0 0;
+}
+
+.cokco-breadcrumb + .my-wrap .right:only-child .my-address li {
+    padding: 8px 18px 13px 36px;
+}
+
+.cokco-breadcrumb + .my-wrap .right:only-child .btn-address {
+    right: 12px;
+}
+
+.cokco-breadcrumb + .my-wrap .right:only-child .btn-select,
+.cokco-breadcrumb + .my-wrap .right:only-child .btn-modify {
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+}
+
+.cokco-breadcrumb + .my-wrap h2 {
+    width: 100%;
+    margin-left: 0;
+    text-indent: 40px;
 }
 
 .my-wrap > .left {
@@ -7146,7 +7176,7 @@ input[type="checkbox"] + label:before {
 
 .my-address .address-detail-wrap {
     font-size: 0;
-    margin-top: 17px;
+    margin-top: 9px;
 }
 
 .my-address .address-detail-wrap > div {

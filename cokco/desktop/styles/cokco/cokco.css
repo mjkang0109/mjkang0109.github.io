@@ -5102,6 +5102,10 @@ input[type="checkbox"] + label:before {
     padding-top: 20px;
 }
 
+.order-wrap .close-type {
+    width: 100%;
+}
+
 .order-wrap .form-notice {
     display: table;
     width: 520px;

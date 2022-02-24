@@ -15,6 +15,7 @@
     <meta property="og:url" content="" name="og:url">
     <meta property="og:site_name" content="코코수리" name="og:site_name">
     <meta property="og:type" content="website" name="og:type">
+    <meta name = "format-detection" content = "telephone=no">
     <title>코코수리</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,66 +30,55 @@
   <body>
     <section class="cokco-full">
       <h1>
-        <strong>작업신청 현황</strong>
+        <strong>배송지 선택</strong>
         <button type="button" class="btn-close">
           <span>닫기</span>
         </button>
       </h1>
       <div class="cokco-breadcrumb">
         <ol>
-          <li>&gt; 마이페이지</li>
-          <li>작업신청 현황</li>
+          <li>&gt;주문/결제</li>
+          <li>배송지 선택</li>
         </ol>
       </div>
-      <div class="my-order-list fix-list">
+      <div class="my-address">
         <h2>
-          <strong>작업신청 현황</strong>
+          <strong>배송지 선택</strong>
+          <button type="button" class="btn-address">
+            <span>추가</span>
+          </button>
         </h2>
-        <div class="my-order-list-wrap step-fix">
-          <ol>
-            <li class="current">
-              <strong class="type">접수</strong>
-              <span class="count">1</span>
+        <div class="my-address-wrap">
+          <ul>
+            <li>
+              <strong>주소지 이름</strong>
+              <div class="address-detail">
+                <div class="address-detail-wrap">
+                  <div class="address-cell">010-2222-3333</div>
+                  <div class="address-name">받는 사람 이름</div>
+                  <div class="address-text">서울특별시 광진구 구의동 234-1</div>
+                </div>
+                <button type="button" class="btn-select">
+                  <span>선택</span>
+                </button>
+              </div>
             </li>
-            <li class="">
-              <strong class="type">대기</strong>
-              <span class="count">0</span>
+            <li>
+              <strong>주소지 이름</strong>
+              <div class="address-detail">
+                <div class="address-detail-wrap">
+                  <div class="address-cell">010-2222-3333</div>
+                  <div class="address-name">받는 사람 이름</div>
+                  <div class="address-text">서울특별시 광진구 구의동 234-1</div>
+                </div>
+                <button type="button" class="btn-select">
+                  <span>선택</span>
+                </button>
+              </div>
             </li>
-            <li class="">
-              <strong class="type">예약</strong>
-              <span class="count">0</span>
-            </li>
-            <li class="">
-              <strong class="type">진행중</strong>
-              <span class="count">0</span>
-            </li>
-            <li class="">
-              <strong class="type">완료</strong>
-              <span class="count">0</span>
-            </li>
-            <li class="">
-              <strong class="type">취소</strong>
-              <span class="count">0</span>
-            </li>
-          </ol>
-        </div>
-        <div class="my-info-dashboard">
-          <div class="setPeriod">
-            <label>
-              <input type="text" value="2022-01-01">
-            </label>
-            <label>
-              <input type="text" value="2022-01-01">
-            </label>
-          </div>
-          <div class="state-wrap">
-            <strong class="type">취소</strong>
-            <span class="count">0</span>
-          </div>
+          </ul>
         </div>
       </div>
-      <div class="no-wrap">해당하는 내역이 없습니다. </div>
-
     </section>
     <nav class="navigation">
       <ul class="navigations">
@@ -120,11 +110,6 @@
         </li>
       </ul>
     </nav>
-      <button
-    type="button"
-    class="btn-top">
-    <span>최상단으로 이동</span>
-  </button>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
   </body>

@@ -1106,7 +1106,7 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .order-form {
     margin-top: 2.41545894vw;
-    border: solid 1px #ccc;
+    border-top: solid 1px #ccc;
     background-color: #fff;
     padding-bottom: 2.41545894vw;
 }
@@ -7589,6 +7589,15 @@ input[type="checkbox"] + label:before {
     padding: 5.79710145vw 3.8647343vw 3.14009662vw;
 }
 
+.cokco-breadcrumb + .my-address:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2.42vw;
+    border-top: 1px solid #C4C4C4;
+    background-color: #F8F8F8;
+}
+
 .my-address {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -7671,7 +7680,8 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
-.my-address .address-detail .btn-modify {
+.my-address .address-detail .btn-modify,
+.my-address .address-detail .btn-select {
     -ms-flex-item-align: end;
     align-self: flex-end;
     padding: 0 3.14009662vw;
@@ -9975,13 +9985,33 @@ input[type="checkbox"] + label:before {
 
 .community-detail .comment .question {
     position: relative;
-    padding: 0 14.49275362vw 2.41545894vw 3.8647343vw;
+    padding: 0 28.99vw 2.41545894vw 3.8647343vw;
 }
 
-.community-detail .comment .question .btn-reply {
+.community-detail .comment .question .button-wrap {
     position: absolute;
     right: 3.8647343vw;
     bottom: 2.41545894vw;
+    font-size: 0;
+}
+
+.community-detail .comment .answer {
+    position: relative;
+}
+
+.community-detail .comment .answer button {
+    font-size: 3.38vw;
+    color: #ccc;
+}
+
+.community-detail .comment .answer .button-wrap {
+    position: absolute;
+    right: 3.86vw;
+    top: 1.45vw;
+    font-size: 0;
+}
+
+.community-detail .comment .question button {
     height: 7.24637681vw;
     padding: 0 1.69082126vw;
     font-size: 2.89855072vw;
@@ -9989,6 +10019,55 @@ input[type="checkbox"] + label:before {
     font-weight: 500;
     border: 1px solid #ccc;
     border-radius: 1.20772947vw;
+}
+
+.community-detail .comment .question .button-wrap button + button {
+    margin-left: 2.42vw;
+}
+
+.community-detail .comment-input {
+    position: relative;
+}
+
+.community-detail .comment-input label > span {
+    position: absolute;
+    top: 50%;
+    left: 7.49vw;
+    transform: translateY(-50%);
+    font-size: 3.38vw;
+    line-height: 4.83vw;
+    color: #ccc;
+}
+
+.community-detail .comment-input label > span em {
+    color: #EC7203;
+    font-size: 3.38vw;
+    line-height: 4.83vw;
+}
+
+.community-detail .comment-input button {
+    width: 12.08vw;
+    height: 12.08vw;
+    border-radius: 2.42vw;
+    font-size: 0;
+}
+
+.community-detail .comment-input button + button {
+    margin-left: 1.21vw;
+}
+
+.community-detail .comment-input .btn-comment {
+    background: #16284C url("../../images/cokco/btn-write.svg") no-repeat 50% 50%;
+    background-size: 12.08vw auto;
+}
+
+.community-detail .comment-input .btn-change {
+    background: #ccc url("../../images/cokco/icon-change.svg") no-repeat 50% 50%;
+    background-size: 12.08vw auto;
+}
+
+.community-detail .comment-input button span {
+    font-size: 0;
 }
 
 .community-detail .comment .answer {

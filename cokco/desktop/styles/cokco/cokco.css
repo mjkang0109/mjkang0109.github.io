@@ -2406,6 +2406,32 @@ input[type="checkbox"] + label:before {
     vertical-align: top;
 }
 
+.form-info > .button-wrap {
+    display: table-cell;
+}
+
+.form-info > .button-wrap {
+    display: table-cell;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.form-info > .button-wrap > button {
+    height: 50px;
+    padding: 0 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+}
+
+.form-info > .button-wrap > button span {
+    font-size: 16px;
+    color: #16284c;
+    font-weight: 400;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
 .form-info > button {
     height: 50px;
     padding: 0 28px;
@@ -2567,7 +2593,6 @@ input[type="checkbox"] + label:before {
 }
 
 .comment .inquire .question {
-    pointer-events: none;
     cursor: default;
 }
 
@@ -2586,6 +2611,27 @@ input[type="checkbox"] + label:before {
 
 .comment .inquire .answer > div {
     opacity: 1;
+}
+
+.comment-input.comment-reply label {
+    position: relative;
+    width: 730px;
+}
+
+.comment-input.comment-reply label > span {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    line-height: 24px;
+    color: #ccc;
+}
+
+.comment-input.comment-reply label > span em {
+    font-size: 16px;
+    line-height: 24px;
+    color: #EC7203;
 }
 
 .comment-input {
@@ -2609,9 +2655,7 @@ input[type="checkbox"] + label:before {
 }
 
 .comment-input input {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -2654,7 +2698,37 @@ input[type="checkbox"] + label:before {
     background: #16284c url("../../images/cokco/icon-write.svg") no-repeat 29px 50%;
 }
 
-.comment-input .btn-comment span {
+.comment-input .btn-change {
+    height: 60px;
+    width: 160px;
+    border-radius: 10px;
+    margin-left: 20px;
+    text-align: left;
+    padding-left: 56px;
+    background: #ccc url("../../images/cokco/icon-change.svg") no-repeat 10px 50%;
+}
+
+.comment-input .button-wrap {
+    display: table-cell;
+    font-size: 0;
+    vertical-align: top;
+}
+
+.comment-input .button-wrap button {
+    display: inline-block;
+    height: 60px;
+    width: 160px;
+    border-radius: 10px;
+    margin-left: 20px;
+    text-align: left;
+    padding-left: 56px;
+}
+
+.comment-input .button-wrap button + button {
+    margin-left: 10px;
+}
+
+.comment-input button span {
     font-size: 20px;
     font-weight: 500;
     color: #fff;
@@ -5767,6 +5841,17 @@ input[type="checkbox"] + label:before {
     vertical-align: top;
 }
 
+.cokco-breadcrumb + .my-wrap {
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+.cokco-breadcrumb + .my-wrap .right:only-child {
+    display: block;
+    width: 980px;
+    margin: 0 auto;
+}
+
 .my-wrap > .left {
     width: 180px;
     border-right: 1px solid #ccc;
@@ -7012,6 +7097,7 @@ input[type="checkbox"] + label:before {
     font-weight: 500;
 }
 
+.my-address .btn-select,
 .my-address .btn-modify {
     position: absolute;
     bottom: 13px;
@@ -7023,6 +7109,7 @@ input[type="checkbox"] + label:before {
     border: 1px solid #ccc;
 }
 
+.my-address .btn-select span,
 .my-address .btn-modify span {
     font-size: 14px;
     color: #16284c;
@@ -9685,13 +9772,21 @@ input[type="checkbox"] + label:before {
 
 .community-detail .comment .question {
     position: relative;
-    padding: 0 100px 20px 40px;
+    padding: 0 182px 20px 40px;
 }
 
-.community-detail .comment .question .btn-reply {
+.community-detail .comment .question .button-wrap {
     position: absolute;
     right: 40px;
     top: -4px;
+    font-size: 0;
+}
+
+.community-detail .comment .question .button-wrap button + button {
+    margin-left: 10px;
+}
+
+.community-detail .comment .question .button-wrap button {
     height: 40px;
     padding: 0 17px;
     font-size: 14px;

@@ -187,49 +187,36 @@ button span {
 }
 
 .cokco .fix-banner ul {
-    width: 92.2705314vw;
     margin: 0 auto;
     font-size: 0;
     text-align: center;
     padding: 0 3.8647343vw 2.41545894vw;
+    box-sizing: border-box;
 }
 
 .cokco .fix-banner li {
     display: inline-block;
-    width: 28.98550725vw;
-    height: 28.98550725vw;
+    width: 29.95vw;
+    height: 29.95vw;
     background-color: #fff;
-    border-radius: 1.20772947vw;
+    border-radius: 4.83vw;
     margin-top: 2.41545894vw;
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
 .cokco .fix-banner li:nth-child(1n+4) {
     width: 44.69vw;
+    height: 24.15vw;
 }
 
-.cokco .fix-banner li:nth-child(4) a {
-    padding-left: 7.49vw;
-}
-
-.cokco .fix-banner li:nth-child(5) a {
-    padding-left: 6.52vw;
-}
-
-.cokco .fix-banner li:nth-child(1n+4) .title {
-    margin-left: 5.31vw;
-}
-
-.cokco .fix-banner li:nth-child(1n+4) .title span {
-    display: inline-block;
-    margin-left: .97vw;
+.cokco .fix-banner li:nth-child(1n+4) a {
+    padding: 3.86vw 0 2.42vw;
 }
 
 .cokco .fix-banner li + li {
-    margin-left: 2.41545894vw;
+    margin-left: .97vw;
 }
 
 .cokco .fix-banner li:nth-child(4) {
@@ -238,33 +225,36 @@ button span {
 
 .cokco .fix-banner li a {
     display: block;
-    padding: 9.66vw 0 9.66vw 2.42vw;
-    text-align: left;
+    height: 100%;
+    padding: 6.04vw 0 6.04vw;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .cokco .fix-banner .img-wrap {
     display: inline-block;
     overflow: hidden;
-    width: 9.66183575vw;
-    height: 9.66183575vw;
+    width: 12.08vw;
+    height: 12.08vw;
     position: relative;
-    vertical-align: middle;
+    vertical-align: top;
     border-radius: 100%;
+    background-color: #fff;
 }
 
 .cokco .fix-banner .img-wrap img {
     width: 100%;
     height: 100%;
+    background-color: #fff;
 }
 
 .cokco .fix-banner .title {
-    display: inline-block;
-    font-size: 5.80vw;
-    line-height: 8.70vw;
-    color: #16284C;
+    display: block;
+    font-size: 3.86vw;
+    line-height: 5.80vw;
+    color: #333;
     vertical-align: middle;
-    margin-left: 2.66vw;
-    text-align: left;
+    text-align: center;
 }
 
 .cokco .tile-item {
@@ -4374,17 +4364,14 @@ input[type="checkbox"] + label:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: calc(100% - 7.7294686vw);
-    height: 9.66183575vw;
-    padding: 0 4.83091787vw 0 4.34782609vw;
+    padding: 0 3.86vw 2.42vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 10px auto 0;
-    border: 1px solid #d4d4d4;
-    border-radius: 2.41545894vw;
+    margin: 4.83vw auto 0;
 }
 
 .customer-info h2 {
@@ -4412,8 +4399,8 @@ input[type="checkbox"] + label:before {
 
 .customer-info .info span,
 .customer-info .info a {
-    font-size: 2.89855072vw;
-    line-height: 4.34782609vw;
+    font-size: 3.38vw;
+    line-height: 4.83vw;
 }
 
 .customer-info .info span {
@@ -4430,8 +4417,8 @@ input[type="checkbox"] + label:before {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    font-size: 2.41545894vw;
-    line-height: 3.62318841vw;
+    font-size: 2.90vw;
+    line-height: 4.35vw;
     font-weight: 500;
     color: #000;
 }

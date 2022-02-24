@@ -158,37 +158,19 @@ button span {
 
 .cokco .fix-banner li {
     display: inline-block;
-    width: 380px;
-    height: 220px;
+    width: 224px;
+    height: 224px;
     vertical-align: top;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    text-align: center;
 }
 
 .cokco .fix-banner li a {
     display: block;
-    padding: 70px 0 70px 40px;
+    padding: 45px 0 20px;
 }
-
-.cokco .fix-banner li:nth-child(1n+4) {
-    width: 570px;
-    margin-top: 12px;
-    margin-left: 0;
-}
-
-.cokco .fix-banner li:nth-child(4) .title {
-    margin-left: 128px;
-}
-
-.cokco .fix-banner li:nth-child(5) .title {
-    margin-left: 110px;
-}
-
-.cokco .fix-banner li:nth-child(4n) {
-    margin-right: 20px;
-}
-
 
 .cokco .fix-banner li + li {
     margin-left: 10px;
@@ -197,8 +179,8 @@ button span {
 .cokco .fix-banner .img-wrap {
     display: inline-block;
     overflow: hidden;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: relative;
     vertical-align: middle;
     border-radius: 100%;
@@ -207,13 +189,16 @@ button span {
 .cokco .fix-banner .img-wrap img {
     width: 100%;
     height: 100%;
+    background-color: #fff;
 }
 
 .cokco .fix-banner .title {
-    font-size: 50px;
-    color: #16284C;
+    display: block;
+    font-size: 40px;
+    line-height: 59px;
+    color: #333;
     vertical-align: middle;
-    margin-left: 33px;
+    text-align: center;
 }
 
 .cokco .fix-banner .title span {
@@ -2792,13 +2777,9 @@ input[type="checkbox"] + label:before {
 
 .customer-info {
     width: 1160px;
-    height: 68px;
-    padding: 11px 35px 12px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 19px auto 0;
-    border: 1px solid #d4d4d4;
-    border-radius: 10px;
+    margin: 30px auto 9px;
 }
 
 .customer-info h2 {
@@ -2828,7 +2809,7 @@ input[type="checkbox"] + label:before {
 .customer-info .info span,
 .customer-info .info a {
     font-size: 30px;
-    line-height: 48px;
+    line-height: 45px;
 }
 
 .customer-info .info span {
@@ -2842,8 +2823,8 @@ input[type="checkbox"] + label:before {
 }
 
 .customer-info .open-hour {
-    font-size: 20px;
-    line-height: 29px;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 500;
     color: #000;
 }

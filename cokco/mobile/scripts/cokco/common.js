@@ -321,6 +321,29 @@
     });
   };
 
+  const layer = ({
+    trigger,
+    el
+  }) => {
+    if (!trigger && !el) {
+      return;
+    }
+
+    const onOpen = () => {
+      el.classList.add('on');
+      document.querySelector('body').classList.add('fixed');
+    };
+
+    const onClose = () => {
+      el.classList.remove('on');
+      document.querySelector('body').classList.remove('fixed');
+    }
+
+    trigger.addEventListener('click', onOpen);
+    el.querySelector('.btn-close').addEventListener('click', onClose);
+
+  };
+
   var onInit = function onInit() {
     visualSwiper();
     storeCategoriesSwiper();
@@ -342,6 +365,10 @@
     });
     fixFormCategory();
     mySwiper();
+    layer({
+      trigger: document.querySelector('.detail .link-review'),
+      el: document.querySelector('.popup-review')
+    })
   };
 
   if (document.readyState === 'complete') {

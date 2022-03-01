@@ -378,7 +378,8 @@ input[type="checkbox"] + label:before {
     font-weight: 400;
 }
 
-.cokco-full h1 .btn-close {
+.cokco-full h1 .btn-close,
+.cokco-full h1 .popup-close {
     position: absolute;
     right: 13px;
     top: 50%;
@@ -390,7 +391,8 @@ input[type="checkbox"] + label:before {
     background-size: 38px auto;
 }
 
-.cokco-full h1 .btn-close span {
+.cokco-full h1 .btn-close span,
+.cokco-full h1 .popup-close span {
     position: absolute;
     margin: -1px;
     width: 1px;

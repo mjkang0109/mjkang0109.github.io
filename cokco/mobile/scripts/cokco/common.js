@@ -334,13 +334,7 @@
       document.querySelector('body').classList.add('fixed');
     };
 
-    const onClose = () => {
-      el.classList.remove('on');
-      document.querySelector('body').classList.remove('fixed');
-    }
-
     trigger.addEventListener('click', onOpen);
-    el.querySelector('.btn-close').addEventListener('click', onClose);
 
   };
 
@@ -381,4 +375,9 @@
 var resizeTextarea = function(obj) {
   obj.style.height = "1px";
   obj.style.height = (12+obj.scrollHeight)+"px";
+}
+
+const onClosePopup = (trigger) => {
+  trigger.parentElement.parentElement.classList.remove('on');
+  document.querySelector('body').classList.remove('fixed');
 }

@@ -539,9 +539,9 @@
               aria-labelledby="detail-tab-5">
               <h3>
                 <strong>상품문의</strong>
-                <a href="./inquire-write-m.html" class="link-inquire">
+                <button type="button" class="link-inquire">
                   <span>문의작성</span>
-                </a>
+                </button>
               </h3>
               <div class="subtitle">
                 <span class="type">문의</span>
@@ -1515,8 +1515,10 @@
         </div>
       </div>
     </section>
+    <!-- full layer -->
     <section
-      class="cokco-full full-white popup popup-review">
+      class="cokco-full full-white popup popup-review"
+      style="display: none">
       <h1>
         <strong>후기작성</strong>
         <button
@@ -1584,6 +1586,107 @@
         </button>
       </div>
     </section>
+    <!-- full layer end -->
+    <!-- small layer -->
+    <section
+      class="cokco-full full-white popup-small popup-inquire"
+      style="display: none;">
+      <h1>
+        <strong>문의작성</strong>
+        <button
+          type="button"
+          class="btn-close"
+          onclick="onClosePopup(this)">
+          <span>닫기</span>
+        </button>
+      </h1>
+      <div class="content">
+        <div class="inquire-type">
+          <strong class="inquire-type-title">문의유형</strong>
+          <div class="option-item-wrap">
+            <button type="button" class="btn-current"
+                    onclick="this.parentNode.classList.toggle('on')">
+              <span>문의유형선택</span>
+            </button>
+            <div class="option-items">
+              <button type="button" class="option-item on">
+                <span>상품</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>배송</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>반품</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>교환</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>환불</span>
+              </button>
+              <button type="button" class="option-item">
+                <span>기타</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="input-text">
+          <div class="input-title">
+            <span class="name">작성자 아이디</span>
+            <span class="limit"><span class="current">0</span>/<span class="max">100</span></span>
+          </div>
+          <div class="input-textarea">
+            <label>
+              <textarea  onkeydown="resizeTextarea(this)" onkeyup="resizeTextarea(this)" placeholder="이상품에 대한 문의내용을 작성해주세요"></textarea>
+            </label>
+          </div>
+          <div class="input-secret">
+            <input type="checkbox" id="check-secret">
+            <label for="check-secret">비밀글</label>
+          </div>
+        </div>
+        <div class="upload-img">
+          <div class="uploads inquire-uploads">
+            <div class="upload-item">
+              <span class="upload-img-wrap">
+                <img src="https://via.placeholder.com/540"
+                     onerror="this.src = '../images/cokco/transparent.png'" alt="">
+              </span>
+              <button type="button" class="btn-img-delete">
+                <span>삭제</span>
+              </button>
+            </div>
+            <div class="upload-item">
+              <span class="upload-img-wrap">
+                <img src="https://via.placeholder.com/540"
+                     onerror="this.src = '../images/cokco/transparent.png'" alt="">
+              </span>
+              <button type="button" class="btn-img-delete">
+                <span>삭제</span>
+              </button>
+            </div>
+            <div class="upload-item">
+              <span class="upload-img-wrap">
+                <img src="https://via.placeholder.com/540"
+                     onerror="this.src = '../images/cokco/transparent.png'" alt="">
+              </span>
+              <button type="button" class="btn-img-delete">
+                <span>삭제</span>
+              </button>
+            </div>
+            <button type="button" class="btn-upload-img">
+              <span>사진 업로드</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="full-fix">
+        <button type="button" class="btn-confirm">
+          <span>올리기</span>
+        </button>
+      </div>
+    </section>
+    <!-- small layer end -->
       <button
     type="button"
     class="btn-top">

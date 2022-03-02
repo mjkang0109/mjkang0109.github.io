@@ -323,19 +323,22 @@
 
   const layer = ({
     trigger,
-    el
+    el,
+    type
   }) => {
     if (!trigger && !el) {
       return;
     }
 
+    const isSmall = type !== undefined && type === 'small';
     const onOpen = () => {
+      el.style.display = 'flex';
       el.classList.add('on');
-      document.querySelector('body').classList.add('fixed');
+
+      document.querySelector('body').classList.add(isSmall ? 'fixedBg' : 'fixed');
     };
 
     trigger.addEventListener('click', onOpen);
-
   };
 
   var onInit = function onInit() {
@@ -361,8 +364,20 @@
     mySwiper();
     layer({
       trigger: document.querySelector('.detail .link-review'),
-      el: document.querySelector('.popup-review')
-    })
+      el: document.querySelector('.popup-review'),
+      type: 'small'
+    });
+
+    layer({
+      trigger: document.querySelector('.detail .link-inquire'),
+      el: document.querySelector('.popup-inquire'),
+      type: 'small'
+    });
+
+    layer({
+      trigger: document.querySelector('.store-recommend-item .btn-product-layer'),
+      el: document.querySelector('.popup-detail')
+    });
   };
 
   if (document.readyState === 'complete') {
@@ -377,7 +392,11 @@ var resizeTextarea = function(obj) {
   obj.style.height = (12+obj.scrollHeight)+"px";
 }
 
-const onClosePopup = (trigger) => {
+const onClosePopup = (trigger, type) => {
+  const isSmall = type !== undefined && type === 'small';
+
   trigger.parentElement.parentElement.classList.remove('on');
-  document.querySelector('body').classList.remove('fixed');
+  trigger.parentElement.parentElement.style.display = 'none';
+
+  document.querySelector('body').classList.remove(isSmall ? 'fixedBg' : 'fixed');
 }

@@ -15,8 +15,20 @@ body {
     min-height: 100%;
 }
 
-body.fixed {
+body.fixed,
+body.fixedBg {
     overflow: hidden;
+}
+
+body.fixedBg:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 201;
 }
 
 body {
@@ -10283,22 +10295,48 @@ input[type="checkbox"] + label:before {
 }
 
 .popup {
-    display: none;
+    overflow-y: auto;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    max-height: 100%;
     background-color: #fff;
     z-index: 200;
 }
 
 .popup h1 {
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 
 .popup.on {
-    display: flex;
+    animation: fadeUp .3s ease-in-out;
+}
+
+.popup-small {
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    max-height: calc(100% - 35.75vw);
+    background-color: #fff;
+    z-index: 202;
+}
+
+.popup-small h1 {
+    position: sticky;
+    top: 0;
+}
+
+.popup-small .full-fix {
+    padding-bottom: 5.31vw;
+}
+
+.popup-small.on {
     animation: fadeUp .3s ease-in-out;
 }
 

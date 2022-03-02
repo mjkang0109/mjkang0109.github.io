@@ -333,7 +333,10 @@
     const isSmall = type !== undefined && type === 'small';
     const onOpen = () => {
       el.style.display = 'flex';
-      el.classList.add('on');
+
+      setTimeout(() => {
+        el.classList.add('on');
+      }, 0);
 
       document.querySelector('body').classList.add(isSmall ? 'fixedBg' : 'fixed');
     };

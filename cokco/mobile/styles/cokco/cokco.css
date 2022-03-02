@@ -10293,6 +10293,8 @@ input[type="checkbox"] + label:before {
     max-height: 100%;
     background-color: #fff;
     z-index: 200;
+    opacity: 0;
+    transform: translateY(200px);
 }
 
 .popup h1 {
@@ -10301,7 +10303,9 @@ input[type="checkbox"] + label:before {
 }
 
 .popup.on {
-    animation: fadeUp .3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .3s ease-in-out;
 }
 
 .popup-small {
@@ -10314,6 +10318,8 @@ input[type="checkbox"] + label:before {
     max-height: calc(100% - 148px);
     background-color: #fff;
     z-index: 202;
+    opacity: 0;
+    transform: translateY(200px);
 }
 
 .popup-small h1 {
@@ -10326,7 +10332,9 @@ input[type="checkbox"] + label:before {
 }
 
 .popup-small.on {
-    animation: fadeUp .3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .3s ease-in-out;
 }
 
 @keyframes fadeUp {

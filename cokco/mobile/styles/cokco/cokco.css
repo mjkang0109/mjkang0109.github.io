@@ -10295,6 +10295,7 @@ input[type="checkbox"] + label:before {
     z-index: 200;
     opacity: 0;
     transform: translate3d(0, 200px, 0);
+    transition: all .3s ease-in-out;
 }
 
 .popup h1 {
@@ -10305,7 +10306,6 @@ input[type="checkbox"] + label:before {
 .popup.on {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    transition: all .3s ease-in-out;
 }
 
 .popup-small {
@@ -10320,6 +10320,7 @@ input[type="checkbox"] + label:before {
     z-index: 202;
     opacity: 0;
     transform: translate3d(0, 200px, 0);
+    transition: all .3s ease-in-out;
 }
 
 .popup-small h1 {
@@ -10334,7 +10335,6 @@ input[type="checkbox"] + label:before {
 .popup-small.on {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    transition: all .3s ease-in-out;
 }
 
 @keyframes fadeUp {

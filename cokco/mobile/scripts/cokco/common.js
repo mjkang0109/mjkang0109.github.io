@@ -336,7 +336,7 @@
 
       setTimeout(() => {
         el.classList.add('on');
-      }, 0);
+      }, 10);
 
       document.querySelector('body').classList.add(isSmall ? 'fixedBg' : 'fixed');
     };

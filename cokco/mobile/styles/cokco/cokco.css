@@ -2855,7 +2855,7 @@ input[type="checkbox"] + label:before {
     width: 38.647343vw;
     height: 0;
     padding-top: 100%;
-    border-radius: 10px;
+    border-radius: 2.42vw;
 }
 
 .swiper-items .swiper-img-wrap:before {

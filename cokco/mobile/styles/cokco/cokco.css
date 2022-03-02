@@ -2868,7 +2868,7 @@ input[type="checkbox"] + label:before {
     border: solid 1px #ebebeb;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 2.41545894vw;
     z-index: 1;
 }
 

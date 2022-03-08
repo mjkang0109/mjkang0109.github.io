@@ -3399,7 +3399,7 @@ input[type="checkbox"] + label:before {
     font-size: 12px;
     color: #16284c;
     font-weight: 500;
-    padding: 0  19px;
+    padding: 0 19px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -7833,8 +7833,28 @@ input[type="checkbox"] + label:before {
 }
 
 /* customer */
+.customer-banner {
+    position: relative;
+    text-align: center;
+}
+
 .customer-banner img {
     width: 100%;
+}
+
+.customer-banner a {
+    position: absolute;
+    top: 23.43vw;
+    left: 50%;
+    font-size: 3.86vw;
+    line-height: 5.8vw;
+    background-color: #16284C;
+    border: 1px solid #E1F1FF;
+    font-weight: 500;
+    padding: 0 9.66vw;
+    color: #fff;
+    border-radius: 2.42vw;
+    transform: translateX(-50%);
 }
 
 .customer-inquire,

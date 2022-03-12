@@ -489,12 +489,17 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 3.62318841vw 0 3.14009662vw;
+    padding: 2.42vw 3.38vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    border-top: 1px solid #fff;
+}
+
+.cokco-full .option-item + .option-item {
+    border-top: 1px solid #ccc;
 }
 
 .cokco-full .option-item.on > span {
@@ -524,13 +529,16 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .option-item-wrap.on .option-items {
     display: block;
+    overflow-y: auto;
+    max-height: 49.52vw;
+    overscroll-behavior: contain;
+    box-sizing: border-box;
 }
 
 .cokco-full .option-items {
     display: none;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: solid 1px #ccc;
-    padding: 3.8647343vw 0;
 }
 
 .cokco-fulls {
@@ -2975,7 +2983,7 @@ input[type="checkbox"] + label:before {
     right: 0;
     top: 9.42028986vw;
     min-width: 26.57004831vw;
-    padding: 4.34782609vw 3.8647343vw 6.03864734vw;
+    padding: .72vw 3.14vw;
     -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
@@ -3013,6 +3021,10 @@ input[type="checkbox"] + label:before {
     display: block;
     width: 100%;
     text-align: left;
+}
+
+.dropdown-items .sort-items button + button {
+    margin-top: 3px;
 }
 
 .dropdown-items .sort-items button.on span {
@@ -3646,12 +3658,17 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 3.62318841vw 0 3.14009662vw;
+    padding: 2.42vw 3.38vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    border-top: 1px solid #fff;
+}
+
+.form-wrap .option-item + .option-item {
+    border-top: 1px solid #ccc;
 }
 
 .form-wrap .option-item.on > span {
@@ -3691,10 +3708,9 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: solid 1px #ccc;
-    padding: 3.8647343vw 0;
-    z-index: 10;
+    z-index: 20;
 }
 
 .form-wraps {
@@ -4005,6 +4021,27 @@ input[type="checkbox"] + label:before {
 
 .form-date .option-item-wrap {
     width: 21.73913043vw;
+}
+
+.form-date .date-wrap .option-item-wrap .option-items {
+    max-height: 28.99vw;
+    background-color: #F8F8F8;
+}
+
+.form-date .option-item-wrap .option-item {
+    padding: 0 2.17vw;
+}
+
+.form-date .option-item-wrap .option-item.on span {
+    color: #EC7203;
+}
+
+.form-date .option-item-wrap .option-item span {
+    color: #999;
+}
+
+.form-date .option-item-wrap .option-item + .option-item {
+    border-top: none;
 }
 
 .form-date .option-items {
@@ -5914,7 +5951,6 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 3.62318841vw 0 3.14009662vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
@@ -5955,9 +5991,8 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: solid 1px #ccc;
-    padding: 3.8647343vw 0;
     z-index: 10;
 }
 
@@ -10231,18 +10266,6 @@ input[type="checkbox"] + label:before {
     z-index: 10;
 }
 
-.community-write .option-item-wrap .option-item {
-    height: 5.79710145vw;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.community-write .btn-current {
-    text-indent: 7.24637681vw;
-    text-align: center;
-}
-
 .community-write .btn-current span:after {
     background: url("../../images/cokco/icon-triangle-bottom.svg") no-repeat 50% 50%;
     background-size: 3.8647343vw auto;
@@ -10294,7 +10317,7 @@ input[type="checkbox"] + label:before {
 }
 
 .community-write .upload-item:nth-child(4n+1) {
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
 .community-write .upload-item:nth-child(1n+5) {

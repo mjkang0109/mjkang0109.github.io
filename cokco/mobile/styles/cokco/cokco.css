@@ -481,12 +481,17 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 15px 0 13px;
+    padding: 10px 12px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    border-top: 1px solid #fff;
+}
+
+.cokco-full .option-item + .option-item {
+    border-top: 1px solid #ccc;
 }
 
 .cokco-full .option-item.on > span {
@@ -516,13 +521,16 @@ input[type="checkbox"] + label:before {
 
 .cokco-full .option-item-wrap.on .option-items {
     display: block;
+    overflow-y: auto;
+    max-height: 205px;
+    overscroll-behavior: contain;
+    box-sizing: border-box;
 }
 
 .cokco-full .option-items {
     display: none;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: solid 1px #ccc;
-    padding: 16px 0;
 }
 
 .cokco-fulls {
@@ -2967,7 +2975,7 @@ input[type="checkbox"] + label:before {
     right: 0;
     top: 39px;
     min-width: 110px;
-    padding: 18px 16px 25px;
+    padding: 3px 13px;
     -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
@@ -3005,6 +3013,10 @@ input[type="checkbox"] + label:before {
     display: block;
     width: 100%;
     text-align: left;
+}
+
+.dropdown-items .sort-items button + button {
+    margin-top: 3px;
 }
 
 .dropdown-items .sort-items button.on span {
@@ -3640,12 +3652,17 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 15px 0 13px;
+    padding: 10px 14px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    border-top: 1px solid #fff;
+}
+
+.form-wrap .option-item + .option-item {
+    border-top: 1px solid #ccc;
 }
 
 .form-wrap .option-item.on > span {
@@ -3685,10 +3702,9 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: solid 1px #ccc;
-    padding: 16px 0;
-    z-index: 10;
+    z-index: 20;
 }
 
 .form-wraps {
@@ -3999,6 +4015,27 @@ input[type="checkbox"] + label:before {
 
 .form-date .option-item-wrap {
     width: 90px;
+}
+
+.form-date .date-wrap .option-item-wrap .option-items {
+    max-height: 120px;
+    background-color: #F8F8F8;
+}
+
+.form-date .option-item-wrap .option-item {
+    padding: 0 9px;
+}
+
+.form-date .option-item-wrap .option-item.on span {
+    color: #EC7203;
+}
+
+.form-date .option-item-wrap .option-item span {
+    color: #999;
+}
+
+.form-date .option-item-wrap .option-item + .option-item {
+    border-top: none;
 }
 
 .form-date .option-items {
@@ -5907,7 +5944,6 @@ input[type="checkbox"] + label:before {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 0 15px 0 13px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
@@ -5948,9 +5984,8 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: solid 1px #ccc;
-    padding: 16px 0;
     z-index: 10;
 }
 
@@ -10222,18 +10257,6 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     z-index: 10;
-}
-
-.community-write .option-item-wrap .option-item {
-    height: 24px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.community-write .btn-current {
-    text-indent: 30px;
-    text-align: center;
 }
 
 .community-write .btn-current span:after {

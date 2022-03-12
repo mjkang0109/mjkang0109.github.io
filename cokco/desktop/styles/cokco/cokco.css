@@ -218,12 +218,18 @@ button span {
 .cokco .option-item {
     display: table;
     width: 100%;
-    padding: 0 15px 0 13px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    text-align: left;
+    padding: 10px 14px;
+    border-top: 1px solid #fff;
+}
+
+.cokco .option-item + .option-item {
+    border-top: solid 1px #ccc;
 }
 
 .cokco .option-item.on > span {
@@ -253,9 +259,11 @@ button span {
 
 .cokco .option-items {
     display: none;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: solid 1px #ccc;
-    padding: 16px 0;
+    max-height: 235px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .cokco .btn-current {
@@ -281,10 +289,10 @@ button span {
     position: absolute;
     top: 50%;
     right: 10px;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 30px auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -1163,6 +1171,10 @@ input[type="checkbox"] + label:before {
     text-align: left;
 }
 
+.dropdown-items .sort-items button + button {
+    margin-top: 3px;
+}
+
 .dropdown-items .sort-items button.on span {
     color: #ec7203;
 }
@@ -1823,10 +1835,6 @@ input[type="checkbox"] + label:before {
     height: 50px;
 }
 
-.inquire-type .option-item-wrap .option-item {
-    padding: 0 19px;
-}
-
 .inquire-type .option-item-wrap .option-item > span {
     font-size: 18px;
 }
@@ -1839,7 +1847,6 @@ input[type="checkbox"] + label:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     z-index: 10;
-    padding: 25px 0;
 }
 
 .my-inquire .question > .right {
@@ -1978,7 +1985,7 @@ input[type="checkbox"] + label:before {
 
 .form-wrap .option-item {
     width: 100%;
-    padding: 0 15px 0 13px;
+    padding: 10px 14px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: left;
@@ -2021,9 +2028,8 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: solid 1px #ccc;
-    padding: 16px 0;
     z-index: 2;
 }
 
@@ -2071,10 +2077,10 @@ input[type="checkbox"] + label:before {
     position: absolute;
     top: 50%;
     right: 10px;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;
-    background-size: 20px auto;
+    background-size: 30px auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -2368,11 +2374,17 @@ input[type="checkbox"] + label:before {
 
 .form-date .option-items {
     padding: 0;
+    background-color: #F8F8F8;
+    max-height: 156px;
+}
+
+.form-date .option-items .option-item {
+    padding: 0 9px;
+    border: 0;
 }
 
 .form-date .option-item .name {
     display: block;
-    text-align: center;
 }
 
 .form-date .btn-current {
@@ -4486,7 +4498,6 @@ input[type="checkbox"] + label:before {
 .detail-option .option-item {
     display: table;
     width: 100%;
-    padding: 0 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: left;
@@ -4526,9 +4537,7 @@ input[type="checkbox"] + label:before {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f8f8f8;
     border: solid 1px #ccc;
-    padding: 28px 0 36px;
     z-index: 10;
 }
 
@@ -5368,6 +5377,19 @@ input[type="checkbox"] + label:before {
     width: 530px;
     margin: 0 auto;
     padding: 21px 0 21px;
+}
+
+.order-form-wrap .option-item-wrap.on {
+    position: relative;
+}
+
+.order-form-wrap .option-item-wrap.on .option-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
 }
 
 .order-form h2 {
@@ -9950,11 +9972,6 @@ input[type="checkbox"] + label:before {
     z-index: 10;
 }
 
-.community-write .option-item-wrap .option-item {
-    height: 27px;
-    text-align: center;
-}
-
 .community-write .option-item-wrap .option-item span {
     display: inline-block;
     vertical-align: top;
@@ -9964,8 +9981,6 @@ input[type="checkbox"] + label:before {
 .community-write .btn-current {
     padding-right: 54px;
     height: 50px;
-    text-indent: 41px;
-    text-align: center;
 }
 
 .community-write .btn-current span {
@@ -9973,7 +9988,6 @@ input[type="checkbox"] + label:before {
 }
 
 .community-write .btn-current span:after {
-    right: 24px;
     width: 30px;
     height: 30px;
     background: url("../../images/cokco/icon-arrow-bottom-detail.svg") no-repeat 50% 50%;

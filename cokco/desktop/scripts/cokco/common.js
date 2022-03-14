@@ -354,7 +354,7 @@
       el: document.querySelectorAll('.quantity')
     });
     mySwiper();
-
+    storeTabSwiper();
   };
 
   if (document.readyState === 'complete') {

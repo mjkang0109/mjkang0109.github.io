@@ -98,7 +98,7 @@
       freeMode: true,
       watchSlidesProgress: true
     });
-    var gallery = new Swiper('.fix-gallery-swiper .fix-swiper-wrapper', {
+    var gallery = new Swiper('.fix-swiper-wrapper', {
       wrapperClass: 'fix-items',
       slideClass: 'fix-item',
       slidesPerView: 1,
@@ -344,7 +344,7 @@
     visualSwiper();
     fixSwiper();
     thumbsSwiper();
-    fixThumbSwiper();
+    // fixThumbSwiper();
     fixDetailSwiper();
     communityThumbSwiper();
     bindTab();

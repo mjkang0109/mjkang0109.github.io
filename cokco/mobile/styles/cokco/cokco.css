@@ -194,9 +194,75 @@ button span {
     border-top: none;
 }
 
+.cokco .fix-banner ul {
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+    padding: 0 16px 2.41545894vw;
+    box-sizing: border-box;
+}
 
-.cokco .fix-banner img {
-    width:100%;
+.cokco .fix-banner li {
+    display: inline-block;
+    width: 29.95vw;
+    height: 29.95vw;
+    background-color: #fff;
+    border-radius: 4.83vw;
+    margin-top: 2.41545894vw;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
+}
+
+.cokco .fix-banner li:nth-child(1n+4) {
+    width: 44.69vw;
+    height: 24.15vw;
+}
+
+.cokco .fix-banner li:nth-child(1n+4) a {
+    padding: 3.86vw 0 2.42vw;
+}
+
+.cokco .fix-banner li + li {
+    margin-left: .97vw;
+}
+
+.cokco .fix-banner li:nth-child(4) {
+    margin-left: 0;
+}
+
+.cokco .fix-banner li a {
+    display: block;
+    height: 100%;
+    padding: 6.04vw 0 6.04vw;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cokco .fix-banner .img-wrap {
+    display: inline-block;
+    overflow: hidden;
+    width: 12.08vw;
+    height: 12.08vw;
+    position: relative;
+    vertical-align: top;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.cokco .fix-banner .img-wrap img {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.cokco .fix-banner .title {
+    display: block;
+    font-size: 3.86vw;
+    line-height: 5.80vw;
+    color: #333;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .cokco .tile-item {
@@ -4354,7 +4420,7 @@ input[type="checkbox"] + label:before {
     padding: 0 16px 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
 }
 
 .customer-info h2 {
@@ -4388,15 +4454,12 @@ input[type="checkbox"] + label:before {
 
 .customer-info .info span {
     font-weight: 400;
-    padding-right:10px;
 }
 
 .customer-info .info a {
     font-weight: 600;
-    color: #fff;
-    background:#2A4572;
-    padding: 0 10px;
-    border-radius:50px;
+    color: #ec7203;
+    padding-left: 4px;
 }
 
 .customer-info .open-hour {
@@ -5252,7 +5315,7 @@ input[type="checkbox"] + label:before {
     font-weight: 600;
 }
 
-.fix-categories,.fix-service {
+.fix-categories {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5262,11 +5325,7 @@ input[type="checkbox"] + label:before {
     /*border: 1px solid #ccc;*/
 }
 
-.fix-service {
-    margin-bottom:11px;
-}
-
-.fix-categories li,.fix-service li {
+.fix-categories li {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -5280,11 +5339,11 @@ input[type="checkbox"] + label:before {
     border: 1px solid #ccc;
 }
 
-.fix-categories li.on,.fix-service li.on {
+.fix-categories li.on {
     background-color: #98c9f4;
 }
 
-.fix-categories .img-wrap,.fix-service .img-wrap {
+.fix-categories .img-wrap {
     display: block;
     position: relative;
     width: 70px;
@@ -5303,18 +5362,7 @@ input[type="checkbox"] + label:before {
     object-fit: cover;
 }
 
-.fix-service .img-wrap img {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    background-color: transparent;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-
-.fix-categories .name,.fix-service .name {
+.fix-categories .name {
     display: block;
     padding: 3px 0 12px;
     text-align: center;

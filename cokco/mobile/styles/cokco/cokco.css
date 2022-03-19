@@ -194,75 +194,13 @@ button span {
     border-top: none;
 }
 
-.cokco .fix-banner ul {
-    margin: 0 auto;
-    font-size: 0;
-    text-align: center;
-    padding: 0 16px 2.41545894vw;
-    box-sizing: border-box;
-}
-
-.cokco .fix-banner li {
-    display: inline-block;
-    width: 29.95vw;
-    height: 29.95vw;
-    background-color: #fff;
-    border-radius: 4.83vw;
-    margin-top: 2.41545894vw;
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    box-sizing: border-box;
-}
-
-.cokco .fix-banner li:nth-child(1n+4) {
-    width: 44.69vw;
-    height: 24.15vw;
-}
-
-.cokco .fix-banner li:nth-child(1n+4) a {
-    padding: 3.86vw 0 2.42vw;
-}
-
-.cokco .fix-banner li + li {
-    margin-left: .97vw;
-}
-
-.cokco .fix-banner li:nth-child(4) {
-    margin-left: 0;
-}
-
-.cokco .fix-banner li a {
+.cokco .fix-banner a {
     display: block;
-    height: 100%;
-    padding: 6.04vw 0 6.04vw;
-    text-align: center;
-    box-sizing: border-box;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
 }
 
-.cokco .fix-banner .img-wrap {
-    display: inline-block;
-    overflow: hidden;
-    width: 12.08vw;
-    height: 12.08vw;
-    position: relative;
-    vertical-align: top;
-    border-radius: 100%;
-    background-color: #fff;
-}
-
-.cokco .fix-banner .img-wrap img {
+.cokco .fix-banner a img {
     width: 100%;
-    height: 100%;
-    background-color: #fff;
-}
-
-.cokco .fix-banner .title {
-    display: block;
-    font-size: 3.86vw;
-    line-height: 5.80vw;
-    color: #333;
-    vertical-align: middle;
-    text-align: center;
 }
 
 .cokco .tile-item {
@@ -4444,6 +4382,7 @@ input[type="checkbox"] + label:before {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    align-items: center;
 }
 
 .customer-info .info span,
@@ -4458,8 +4397,13 @@ input[type="checkbox"] + label:before {
 
 .customer-info .info a {
     font-weight: 600;
-    color: #ec7203;
-    padding-left: 4px;
+    color: #fff;
+    padding: 0 8px;
+    margin-left: 4px;
+    line-height: 28px;
+    background-color: #2E4E8E;
+    border-radius: 14px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
 }
 
 .customer-info .open-hour {

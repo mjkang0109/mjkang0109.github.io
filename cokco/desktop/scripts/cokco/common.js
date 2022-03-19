@@ -22,6 +22,9 @@
       direction: 'horizontal',
       wrapperClass: 'visual-banners',
       slideClass: 'swiper',
+      autoplay: {
+        delay: 3000,
+      },
       slidesPerView: 1,
       spaceBetween: 10,
       pagination: {

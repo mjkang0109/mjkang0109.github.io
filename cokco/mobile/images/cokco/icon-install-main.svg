@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-  <g id="그룹_8387" data-name="그룹 8387" transform="translate(17008 21530)">
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="그룹_8467" data-name="그룹 8467" transform="translate(17018 21540)">
     <g id="그룹_8335" data-name="그룹 8335" transform="translate(-17005 -21530)">
       <g id="그룹_8334" data-name="그룹 8334" transform="translate(0 0)">
         <path id="합치기_117" data-name="합치기 117" d="M2.4,0,3.889.614V2.656L2.4,3.286ZM0,3.269V0H2.4V3.269Z" transform="translate(37.613 11.771)" fill="#333"/>
@@ -20,6 +20,6 @@
         <path id="사각형_2777_-_윤곽선-2" data-name="사각형 2777 - 윤곽선" d="M0,0A5.177,5.177,0,0,1,4.928,5.394v5.394A5.177,5.177,0,0,1,0,16.182Z" transform="translate(4.928 21.905) rotate(180)" fill="#ec7203"/>
       </g>
     </g>
-    <rect id="사각형_2953" data-name="사각형 2953" width="50" height="50" transform="translate(-17008 -21530)" fill="none"/>
+    <rect id="사각형_2953" data-name="사각형 2953" width="70" height="70" transform="translate(-17018 -21540)" fill="none"/>
   </g>
 </svg>

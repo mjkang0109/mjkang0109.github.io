@@ -1,9 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-  <g id="그룹_8388" data-name="그룹 8388" transform="translate(16873 21530)">
-    <g id="그룹_8336" data-name="그룹 8336" transform="translate(-16868.818 -21517.482)">
-      <path id="합치기_94" data-name="합치기 94" d="M12.148,17.7V15.6H2a2,2,0,0,1-2-2V6.8a2,2,0,0,1,2-2H12.148V2.7A2.7,2.7,0,0,1,16.187.36l8.057,7.5c1.55,1.549,1.552,3.137,0,4.688l-8.057,7.5A2.694,2.694,0,0,1,12.148,17.7Z" transform="translate(16.202 4.649)" fill="#98c9f4"/>
-      <path id="합치기_95" data-name="합치기 95" d="M12.148,17.7V15.6H2a2,2,0,0,1-2-2V6.8a2,2,0,0,1,2-2H12.148V2.7A2.7,2.7,0,0,1,16.187.36l8.057,7.5c1.55,1.549,1.552,3.137,0,4.688l-8.057,7.5A2.694,2.694,0,0,1,12.148,17.7Z" transform="translate(25.407 20.4) rotate(-180)" fill="#16284c"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="116" viewBox="0 0 116 116">
+  <g id="그룹_8688" data-name="그룹 8688" transform="translate(-18061.999 17554)">
+    <g id="그룹_8687" data-name="그룹 8687">
+      <g id="그룹_8681" data-name="그룹 8681" transform="translate(18062.088 -17554)">
+        <rect id="사각형_2197" data-name="사각형 2197" width="116" height="116" transform="translate(-0.089)" fill="none"/>
+      </g>
+      <g id="그룹_8686" data-name="그룹 8686" transform="translate(18081.842 -17533.684)">
+        <g id="그룹_8336" data-name="그룹 8336" transform="translate(6.382 19.106)">
+          <path id="합치기_94" data-name="합치기 94" d="M18.542,27.01v-3.2H2a2,2,0,0,1-2-2V9.327a2,2,0,0,1,2-2H18.542v-3.2A4.121,4.121,0,0,1,24.707.548L37,11.991c2.364,2.364,2.368,4.787,0,7.155l-12.3,11.442a4.112,4.112,0,0,1-6.165-3.577Z" transform="translate(24.73 7.096)" fill="#98c9f4"/>
+          <path id="합치기_95" data-name="합치기 95" d="M18.542,27.01v-3.2H2a2,2,0,0,1-2-2V9.327a2,2,0,0,1,2-2H18.542v-3.2A4.121,4.121,0,0,1,24.707.548L37,11.991c2.364,2.364,2.368,4.787,0,7.155l-12.3,11.442a4.112,4.112,0,0,1-6.165-3.577Z" transform="translate(38.779 31.137) rotate(-180)" fill="#16284c"/>
+        </g>
+      </g>
     </g>
-    <rect id="사각형_2954" data-name="사각형 2954" width="50" height="50" transform="translate(-16873 -21530)" fill="none"/>
   </g>
 </svg>

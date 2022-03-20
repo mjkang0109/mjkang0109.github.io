@@ -9,6 +9,10 @@ textarea {
     font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", dotum, sans-serif;
 }
 
+body {
+    word-break: break-all;
+}
+
 img {
     display: block;
 }
@@ -143,6 +147,9 @@ button span {
 
 .cokco .fix-banner {
     padding: 0 16px 0;
+    width: 1160px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .cokco .fix-banner h2 {

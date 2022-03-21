@@ -2737,13 +2737,17 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: center;
     justify-content: center;
     width: 42px;
-    height: 25px;
     font-size: 10px;
     line-height: 15px;
     color: #fff;
     font-weight: 400;
     border-radius: 4px;
     white-space: nowrap;
+}
+
+.item-badges li img {
+    width: 100%;
+    height: auto;
 }
 
 .item-badges li.min, .item-badges li.discount {

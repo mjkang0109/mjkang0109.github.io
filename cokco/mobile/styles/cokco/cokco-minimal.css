@@ -2745,7 +2745,6 @@ input[type="checkbox"] + label:before {
     -ms-flex-pack: center;
     justify-content: center;
     width: 10.14492754vw;
-    height: 6.03864734vw;
     font-size: 2.41545894vw;
     line-height: 3.62318841vw;
     color: #fff;
@@ -2754,12 +2753,9 @@ input[type="checkbox"] + label:before {
     white-space: nowrap;
 }
 
-.item-badges li.min, .item-badges li.discount {
-    background-color: #ec7203;
-}
-
-.item-badges li.install, .item-badges li.delivery {
-    background-color: #ccc;
+.item-badges li img {
+    width: 100%;
+    height: auto;
 }
 
 .item-badges li + li {

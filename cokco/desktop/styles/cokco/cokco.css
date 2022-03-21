@@ -146,7 +146,6 @@ button span {
 }
 
 .cokco .fix-banner {
-    padding: 0 16px 0;
     width: 1160px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -933,7 +932,6 @@ input[type="checkbox"] + label:before {
 .item-badges li {
     display: inline-block;
     width: 70px;
-    height: 30px;
     font-size: 14px;
     line-height: 28px;
     color: #fff;
@@ -945,12 +943,8 @@ input[type="checkbox"] + label:before {
     text-align: center;
 }
 
-.item-badges li.min, .item-badges li.discount {
-    background-color: #ec7203;
-}
-
-.item-badges li.install, .item-badges li.delivery {
-    background-color: #ccc;
+.item-badges li img {
+    width: 100%;
 }
 
 .item-badges li + li {

@@ -546,5 +546,23 @@
     </footer>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../scripts/cokco/common.js"></script>
+  <script>
+    var fixThumbSwiper = function fixThumbSwiper() {
+      var gallery = new Swiper('.fix-reference-swiper-wrap .fix-swiper-wrapper', {
+        wrapperClass: 'fix-items',
+        slideClass: 'fix-item',
+        slidesPerView: 1,
+        width: 650,
+        pagination: {
+          el: '.fix-swiper-pagination',
+          clickable: true,
+          renderBullet: function renderBullet(index, className) {
+            return '<span class="' + className + '"><img src="https://via.placeholder.com/480x400/ffffff" alt=""></span>';
+          }
+        }
+      });
+    };
+    fixThumbSwiper();
+  </script>
   </body>
 </html>

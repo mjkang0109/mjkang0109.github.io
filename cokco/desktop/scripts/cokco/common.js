@@ -74,22 +74,6 @@
     });
   };
 
-  var fixThumbSwiper = function fixThumbSwiper() {
-    var gallery = new Swiper('.fix-reference-swiper-wrap .fix-swiper-wrapper', {
-      wrapperClass: 'fix-items',
-      slideClass: 'fix-item',
-      slidesPerView: 1,
-      width: 650,
-      pagination: {
-        el: '.fix-swiper-pagination',
-        clickable: true,
-        renderBullet: function renderBullet(index, className) {
-          return '<span class="' + className + '"><img src="https://via.placeholder.com/480x400/ffffff" alt=""></span>';
-        }
-      }
-    });
-  };
-
   var fixDetailSwiper = function fixDetailSwiper() {
     var thumbs = new Swiper('.fix-thumb-wrapper', {
       direction: 'vertical',

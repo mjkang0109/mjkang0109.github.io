@@ -2999,6 +2999,10 @@ input[type="checkbox"] + label:before {
     object-fit: cover;
 }
 
+.gallery-item.img-contain img {
+    object-fit: contain;
+}
+
 .gallery-items {
     display: -webkit-box;
     display: -ms-flexbox;

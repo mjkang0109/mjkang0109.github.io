@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "./../components/reset" as reset;
+@use "./../components/mixin" as m;
+
+@include m.respond-to(map.get(m.$min, 1024)) {
+    body {
+        background-color: #fff;
+    }
+}
+
+@include m.respond-to(map.get(m.$max, 1023)) {
+    body {
+        background-color: #d8d8d8;
+    }
+}

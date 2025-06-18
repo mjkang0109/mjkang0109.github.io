@@ -1,0 +1,229 @@
+<head>
+    <title>국제환경규제 사전대응 지원시스템 - 분석보고서</title>
+    <!-- 헤더영역 시작 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="<%= path.styles %>/css/sub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+          integrity="sha384-96FX9FfXS2YbmorgxmaX5hbk2sam6fwUuOVssT4VGrPi3n3VMj2MIeB7R4f7vjj4" crossorigin="anonymous">
+    <!--
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH %>/styles/compass/compass<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+    <script type="text/javascript" src="<%= path.scripts %>/js/aos.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/jquery-migrate-1.4.1.min.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/common-scroll.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/rightMenu.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/util.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/content.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/userPageUtil.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/userAjaxUtil.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/top.js"></script>
+    <link href="<%= path.styles %>/css/datepicker4.css" rel="stylesheet">
+    <script type="text/javascript" src="<%= path.scripts %>/js/moment.min.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/bootstrap-datepicker.kr.js"></script>
+    <script type="text/javascript" src="<%= path.scripts %>/js/bootstrap-datetimepicker.min.js"></script>
+    <!--dtree-->
+    <link href="<%= path.styles %>/css/dtree.css" rel="stylesheet">
+    <script type="text/javascript" src="<%= path.scripts %>/js/dtree.js"></script>
+    <script type="text/javascript">
+        var _$ = jQuery.noConflict();
+
+        var _csrf = '';
+        var _csrf_header = '';
+
+        _$(document).ready(function () {
+            ajaxUtil.setup(_csrf_header, _csrf);
+
+            var item = document.getElementsByClassName('item');
+            var btn = document.getElementsByClassName('btn');
+
+            // btn 클릭 이벤트
+            for (var i = 0; i < btn.length; i++) {
+                btn[i].addEventListener('click', accordion);
+            }
+
+            //btn 클릭시 할 일
+            //부모요소인 item의 클래스네임 이용
+            //모든 item의 클래스네임을 close로 설정
+            //클릭한 btn의 item 클래스 네임이 'item close'일 때만 'item open'으로 변경
+            function accordion() {
+                var itemClass = this.parentNode.className;
+                for (var i = 0; i < item.length; i++) {
+                    if (item[i].className == 'item open')
+                        item[i].className = 'item close';
+                }
+                if (itemClass == 'item close') {
+                    this.parentNode.className = 'item open';
+                }
+            }
+
+            if ("object" === typeof window["main"]) {
+                main.run();
+            }
+        });
+
+        var printArea = function () {
+            var printWindow = null;
+            printWindow = window.open('', 'print', 'width=800, height=600');
+
+            self.focus();
+            printWindow.document.open();
+            printWindow.document.write('<html><head>');
+            printWindow.document.write('<title>분석보고서</title>');
+            printWindow.document.write('<link rel="stylesheet" type="text/css" href="<%= path.styles %>/css/sub.css"></head>');
+            printWindow.document.write('<body style="width: 800px;">');
+            printWindow.document.write(document.getElementById('printArea').innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+
+            setTimeout(function () {
+                printWindow.print();
+                printWindow.close();
+            }, 1000);
+        }
+
+        var changeSC = function (k) {
+            if (k) {
+                k = k.replace(/\\/g, '');
+                k = k.replace(/'/g, '');
+                k = k.replace(/`/g, '');
+            }
+
+            return k;
+        }
+    </script>
+    <!--
+    <script type="text/javascript">
+
+    var omitformtags=["input", "textarea", "select"];
+
+    omitformtags=omitformtags.join("|");
+
+    function disableselect(e){
+        if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1) return false;
+    }
+
+    function reEnable(){
+        return true;
+    }
+
+    if (typeof document.onselectstart!="undefined") {
+        document.oncontextmenu=function(){return false;}
+    } else {
+        document.onmousedown=disableselect;
+        document.onmouseup=reEnable;
+    }
+    </script>
+
+
+    <script type="text/javascript">
+        document.oncontextmenu = function() {return false;}
+    </script>
+
+
+    <script>
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'c') {
+            event.preventDefault();
+            alert('Ctrl+C is disabled on this page.');
+        }
+    });
+    </script>
+    -->
+    <!-- 헤더영역 끝 -->
+    <script type="text/javascript">
+        var main = {
+            run        : function () {
+                this.registEvent();
+                this.init.setDefault();
+                this.init.setAttachFiles();
+            },
+            registEvent: function () {
+
+                _$('#btnList').click(function () {
+                    main.proc.goListPage();
+                });
+
+                _$('#linkNext').click(function () {
+                    var anaSeq = '';
+                    if (anaSeq == '' || anaSeq == '0') {
+                        return;
+                    }
+                    main.proc.goPage(anaSeq);
+                });
+
+                _$('#linkPrev').click(function () {
+                    var anaSeq = '';
+                    if (anaSeq == '' || anaSeq == '0') {
+                        return;
+                    }
+                    main.proc.goPage(anaSeq);
+                });
+
+            },
+            init       : {
+                setDefault    : function () {
+                    var anaRegdt = '';
+                    if (anaRegdt != null && anaRegdt != 'null') {
+                        anaRegdt = anaRegdt.substring(0, 10);
+                    } else {
+                        anaRegdt = '';
+                    }
+                    _$('#anaRegdt').html(anaRegdt);
+                },
+                setAttachFiles: function () {
+                    /*
+                    * 첨부파일 초기화 (푸터 함수 호출)
+                    * 게시판 아이디 : AS-IS 파일 저장폴더 조회
+                    * 다운로드 로그를 남기는 게시판의 경우 logId 값 필요
+                    */
+                    attach.init('report', '01014');
+
+                    var fileKey1 = '';
+                    var fileKey2 = '';
+                    var fileKey3 = '';
+                    var fileName1 = '';
+                    var fileName2 = '';
+                    var fileName3 = '';
+
+                    fileKey1 = '9F20ED65-AA7B-4196-BE52-4C86E679027E.pdf';
+                    fileKey2 = '';
+                    fileKey3 = '';
+
+                    fileName1 = '1EU배터리규정의전기차배터리탄소발자국산정방법론에대한의견제출안내서10924001.pdf';
+                    fileName2 = '';
+                    fileName3 = '';
+
+                    attach.setFile(_$('input[name="anaAddfile1"]').parent(), fileKey1, fileName1);
+                    attach.setFile(_$('input[name="anaAddfile2"]').parent(), fileKey2, fileName2);
+                    attach.setFile(_$('input[name="anaAddfile3"]').parent(), fileKey3, fileName3);
+                }
+            },
+            proc       : {
+                goListPage: function () {
+                    location.href = '/analysisReport/list?' + _$('#searchForm').serialize();
+                },
+                goPage    : function (anaSeq) {
+                    location.href = '/analysisReport/view?anaSeq=' + anaSeq + '&' + _$('#searchForm').serialize();
+                },
+                getDate   : function (date) {
+                    var date = new Date(date);
+                    var y = date.getFullYear();
+                    var m = ('0' + (date.getMonth() + 1)).slice(-2);
+                    var d = ('0' + date.getDate()).slice(-2);
+
+                    return y + "-" + m + "-" + d;
+                }
+            }
+        };
+    </script>
+</head>

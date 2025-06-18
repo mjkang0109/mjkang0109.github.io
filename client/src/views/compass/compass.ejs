@@ -1,0 +1,65 @@
+---
+group: compass
+state:
+    default: 제도소개
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%
+isLocal = process.env.NODE_ENV === 'development';
+
+hosting = 'https://www.compass.or.kr';
+
+path = {
+    styles : hosting,
+    scripts: hosting,
+    images : hosting,
+};
+%>
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_head`, {}); %>
+<body>
+    <div class="wrap">
+        <!-- 상단메뉴영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_header`, {}); %>
+        <!--모바일 MENUAREA-->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_mobileHeader`, {}); %>
+        <div class="totladim" style="display: none; opacity: 0.8;"></div>
+        <!-- 상단메뉴영역 끝 -->
+        <div class="container">
+            <!-- 타이틀영역 시작 -->
+            <div class="sub-visual7">
+                <div class="inner7">
+                    <h2>제도소개</h2>
+                    <div class="print-box">
+                        <!-- <button><img src="<%= path.images %>/image/site/link.svg"></button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- 타이틀영역 끝 -->
+            <div class="inner sub-contents-box">
+                <!-- 왼쪽메뉴영역 시작 -->
+                <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_leftNav`, {}); %>
+                <!-- 왼쪽메뉴영역 끝 -->
+                <div class="sub-contents">
+                    <div class="right-fixed">
+                        <div class="right-top">
+                            <a href=""><span>TOP</span></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <span class="loc_pdr10"><img src="<%= path.images %>/image/site/icon_home.png" alt="홈"></span>
+                        <span>국제통용 발자국 검증제도</span> <span class="location-dep">제도 소개</span>
+                    </div>
+                    <div class="lci_area mt-30">
+                        <h3>제도소개</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_footer`, {}); %>
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_layers`, {}); %>
+        <!-- 푸터영역 끝 -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!-- 파일첨부 모달 -->
+<div class="window" id="attachModal" style="height: 250px; display:none; ">
+    <div class="layer_area">
+        <div class="layer_top">
+            <span class="layer_tit">파일 업로드</span>
+            <a
+                    class="close" href="#">닫기
+            </a>
+        </div>
+        <div class="layer_cont">
+            <div class="form-write">
+                <dl>
+                    <dd>
+                        업로드할 파일을 선택해 주십시오.
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <form method="POST" enctype="multipart/form-data" id="attachFileForm">
+                            <input type="hidden" id="boardType" name="boardType" value=""/>
+                            <input type="hidden" id="logId" name="logId" value=""/>
+                            <input type="hidden" id="fileInputName" name="fileInputName" value=""/>
+                            <input type="file" id="attachFileName" name="attachFileName">
+                        </form>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 다운로드 폼 -->
+<form name="downform" action="/attach/download" method="post">
+    <input type="hidden" name="_csrf" value=""/>
+    <input type="hidden" name="boardType"/>
+    <input type="hidden" name="fileKey"/>
+    <input type="hidden" name="fileName"/>
+    <input type="hidden" name="logId"/>
+</form>
+<script type="text/javascript">
+    var attach = {
+        boardType  : '',
+        logId      : '',
+        init       : function (boardType, logId) {
+            this.boardType = boardType;
+            this.logId = logId;
+            this.registEvent();
+        },
+        registEvent: function () {
+            _$('.selectFile').click(function () {
+                /*모달 초기화*/
+                _$("#boardType").val(attach.boardType);
+                _$("#logId").val(attach.logId);
+                _$('#fileInputName').val(_$(this).parent().find('input').attr('name'));
+                _$("#attachFileName").val('');
+
+                var maskHeight = _$(document).height();
+                var maskWidth = _$(window).width();
+
+                _$('#mask').css({'width': maskWidth, 'height': maskHeight});
+                _$('#mask').fadeIn(1000);
+                _$('#mask').fadeTo("slow", 0.8);
+                _$('#attachModal').show();
+            });
+
+            _$('.attachDownload').click(function (e) {
+                e.preventDefault();
+                var fileKey = _$(this).parent().parent().find('input').val();
+                var fileName = _$(this).text();
+
+                var frm = document.downform;
+                frm.boardType.value = attach.boardType;
+                frm.fileKey.value = fileKey;
+                frm.fileName.value = fileName;
+                frm.logId.value = attach.logId;
+                frm.submit();
+            });
+
+            _$('.attachDownloadWithLogin').click(function (e) {
+                e.preventDefault();
+                var fileKey = _$(this).parent().parent().find('input').val();
+                var fileName = _$(this).text();
+
+                if (!confirm('회원가입 후 로그인해야 다운로드 할 수 있습니다. \r\n지금 로그인 하시겠습니까?')) {
+                    return;
+                } else {
+                    location.href = '/user/login';
+                    return;
+                }
+
+                var msg = '';
+
+                if (attach.boardType == 'report') {
+                    var param = [];
+                    param.push({name: 'downFilename', value: encodeURI(fileName)});
+                    var url = '/attach/analysisReportListDownCheck';
+
+                    _$.ajax({
+                        url        : url,
+                        type       : 'GET',
+                        dataType   : 'json',
+                        contentType: 'application/x-www-form-urlencoded',
+                        data       : param,
+                        success    : function (res) {
+                            if (res.totCnt > 0) {
+                                msg = msg = '분석보고서를 내려 받으시겠습니까?';
+                            } else {
+                                msg = '분석보고서 내려 받기는 COMPASS 10 포인트가 필요 합니다. 계속 하시겠습니까?';
+                            }
+
+                            if (confirm(msg)) {
+                                var frm = document.downform;
+                                frm.boardType.value = attach.boardType;
+                                frm.fileKey.value = fileKey;
+                                frm.fileName.value = fileName;
+                                frm.logId.value = attach.logId;
+                                frm.submit();
+                            }
+                        }
+                    });
+
+                    return;
+                }
+
+                if (attach.boardType == 'legislation') {
+                    msg = '법률전문(국문번역본) 내려 받기는 COMPASS 10 포인트가 필요 합니다. 계속 하시겠습니까?';
+                } else if (attach.boardType == 'edu') {
+                    msg = '교육 신청시 COMPASS ' + point + ' 포인트가 필요 합니다. 계속 하시겠습니까?';
+                } else if (attach.boardType == 'library' || attach.boardType == 'eudata') {
+                    msg = '자료 내려 받기는 COMPASS 10 포인트가 필요 합니다. 계속 하시겠습니까?';
+                } else if (attach.boardType == 'book') {
+                    msg = '출판물 받기는 COMPASS 30 포인트가 필요 합니다. 계속 하시겠습니까?';
+                }
+
+                if (msg && !confirm(msg)) {
+                    return;
+                }
+
+                var frm = document.downform;
+                frm.boardType.value = attach.boardType;
+                frm.fileKey.value = fileKey;
+                frm.fileName.value = fileName;
+                frm.logId.value = attach.logId;
+                frm.submit();
+            });
+
+            _$('.attachRemove').click(function (e) {
+                e.preventDefault();
+                _$(this).parent().parent().find('input').val('');
+                _$(this).parent().find('a').text('');
+                _$(this).parent().hide();
+            });
+
+            _$('#attachFileName').change(function () {
+                if (_$('#attachFileName').val() != '') {
+                    var obj = _$('input[type="file"]')[0];
+
+                    var file_kind = obj.value.lastIndexOf('.');
+                    var file_name = obj.value.substring(file_kind + 1, obj.length);
+                    var file_type = file_name.toLowerCase();
+                    var check_file_type = new Array();
+                    check_file_type = ['jpg', 'gif', 'png', 'jpeg', 'bmp', 'tif', 'doc', 'docx', 'hwp', 'pdf',
+                        'xls', 'xlsx', 'csv', 'ppt', 'pptx', 'txt', 'xml', 'htm', 'html', 'css',
+                        'ico', 'svg', 'tiff', 'webp', 'zip'];
+
+                    if (check_file_type.indexOf(file_type) == -1) {
+                        alert('지원되지 않는 파일형식입니다.');
+                        return false;
+                    }
+
+                    var data = new FormData(_$('#attachFileForm')[0]);
+                    _$.ajax({
+                        type       : "POST",
+                        enctype    : 'multipart/form-data',
+                        url        : "/attach/upload",
+                        data       : data,
+                        processData: false,
+                        contentType: false,
+                        cache      : false,
+                        timeout    : 600000,
+                        success    : function (res) {
+                            _$('#mask, #attachModal').hide();
+                            console.log("res: ", res);
+
+                            if (!res.success) {
+                                alert(res.message);
+                                return;
+                            }
+
+                            if (res.list && res.list.length > 0) {
+                                var item = res.list[0];
+                                var fileInputName = item.fileInputName;
+                                var fileName = item.fileName;
+                                var fileKey = item.fileKey;
+
+                                attach.setFile(_$('input[name="' + fileInputName + '"]').parent(), fileKey, fileName);
+                            }
+                        },
+                        error      : function (xhr, status, error) {
+                            alert('파일 업로드 오류: ' + xhr.responseJSON.message);
+                            _$('#mask, #attachModal').hide();
+                            console.log(xhr);
+                        }
+                    })
+                }
+            });
+        },
+        setFile    : function (obj, fileKey, fileName) {
+            if (fileKey != '') {
+                obj.find('input').val(fileKey);
+                if (fileName != '') {
+                    obj.find('a').text(fileName);
+                } else {
+                    obj.find('a').text(fileKey);
+                }
+                obj.find('span').show();
+            } else {
+                obj.find('input').val('');
+                obj.find('span').hide();
+            }
+        },
+        doDownload : function (fileKey, fileName) {
+            var frm = document.downform;
+            frm.boardType.value = attach.boardType;
+            frm.logId.value = attach.logId;
+            frm.fileKey.value = fileKey;
+            if (fileName) {
+                frm.fileName.value = fileName;
+            } else {
+                frm.fileName.value = fileKey;
+            }
+            frm.submit();
+        }
+    }
+</script>
+<!-- 파일첨부 -->

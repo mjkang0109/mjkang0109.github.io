@@ -1,6 +1,8 @@
 @use "sass:map";
 @use "./../components/mixin" as m;
 
+$imgPath: "../../images/compass";
+
 /*
 @include m.respond-to(map.get(m.$min, 768)) {
 }
@@ -8,6 +10,19 @@
 @include m.respond-to(map.get(m.$max, 767)) {
 }
 */
+
+.a11y {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 
 .search-period {
     display: flex;
@@ -85,6 +100,123 @@
     }
 }
 
-.icon-files {
+.tb-author {
+    width: 200px;
+    @include m.respond-to(map.get(m.$max, 767)) {
+        display: none;
+    }
+}
+
+.compass-tab {
+    #menu-list {
+        display: flex;
+
+        @include m.respond-to(map.get(m.$max, 767)) {
+            flex-direction: column;
+        }
+
+        > li {
+            @include m.respond-to(map.get(m.$min, 768)) {
+                flex: 1;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.document-info {
+    display: flex;
+    align-items: center;
+    background-color: #f3f9ff;
+    border: solid 1px #d5e5f4;
+    @include m.respond-to(map.get(m.$min, 768)) {
+        padding: 40px 36px 30px 40px;
+    }
+
+    @include m.respond-to(map.get(m.$max, 767)) {
+        flex-direction: column;;
+        padding: 30px 20px;
+    }
+
+    .icon-info {
+        flex-shrink: 0;
+        width: 101px;
+        height: 100px;
+        background-image: url("#{$imgPath}/icon-document.png");
+    }
+
+    .info-item {
+        position: relative;
+        padding-left: 10px;
+        font-size: 16px;
+        line-height: 26px;
+
+        &:before {
+            content: "\00b7";
+            position: absolute;
+            top: 2px;
+            left: 0;
+        }
+
+        &s {
+            @include m.respond-to(map.get(m.$min, 768)) {
+                padding-left: 54px;
+            }
+
+            @include m.respond-to(map.get(m.$max, 767)) {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .link-round {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border: solid 1px #5f5f5f;
+        border-radius: 25px;
+        font-size: 15px;
+        line-height: 26px;
+        font-weight: bold;
+        color: #000;
+        @include m.respond-to(map.get(m.$min, 768)) {
+            height: 50px;
+            padding: 0 40px;
+            margin-left: 54px;
+            white-space: nowrap;
+        }
+
+        @include m.respond-to(map.get(m.$max, 767)) {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        .icon-book {
+            flex-shrink: 0;
+            margin-right: 10px;
+            @include m.respond-to(map.get(m.$max, 767)) {
+                display: none;
+            }
+        }
+    }
+
+    + .compass-tab {
+        margin-top: 35px;
+    }
+}
+
+.icon-file {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17px' height='18px'%3E%3Cimage x='0px' y='0px' width='17px' height='18px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAMAAACKJ8VmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACE1BMVEXvtILusn3sroDtroHwtoXwsIHvt4Pur4Hus4XpsoXttovutYLttonws3/ytoD0uIXytYbvsoHts4PUoXZzcG+FhoeEhIV4en18a1zqrnrHmG+Td2vpr3rImm+cpKp+alrrrn+cpavFl3S+knDBlnXImm+dpavBlnbHmGqapKnBlW+Kc2WDcGt4dX2BbmqGcWKBcHdzY2qKdXp7aGyJdXmLdnx9aW11aG1qXmS3kG+Qdl95gYePdWC1j3DOnHHGmHTSn3R0dHSLjpGJi42KjI6JjI6KjI6JjI9ra2vLm3Wdpq3o+f/h8Pzl9P/E1N5wZ3Tk8//g7fjg7vnS4euPhY+Da3zj8v2dpq+MlZ2PmKCQmaGKk5u3wsvr+P/M2uOhrLVmb3fk8v62wcust7+uucKuucGtuMC0wMi7xtDF0dvo9v+IkZijrbWmsLmlr7ejrrahqrOstr/c6vWEjZSnsrqao6ucpa2ao6ymsLjd6/aGj5Xk9f/N2+XJ1+HJ2OHg8PuCjZOLipSMipSNi5WOjJWOjJaNi5SLiZNyb3nss8vqr8TnrMDtscbjrMP3uc/ztsr1t8zussb1uM7xtcnztsvsscX9vdT5us77u9D0tsq/mKy/laa8kqK8kqO9kqPCl6m5k6aotb+kr7ijrreirrakr7mmsrtpc3qiq7Ly///q+f/q+P/p+P/r+v/t/f+Jk5v///9xFjKTAAAASnRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAJt/k5OSpBjGtBS/9pgv9ODo5Lv04K/02p9D+06zu7+Tl5OTl7u9Rf/6GUiUwJ+Hm5ebl5eXlMLQjhRYAAAABYktHRLBDZK7EAAAAB3RJTUUH6QYTCDkVXTnV0gAAAPlJREFUGNNjYBAWERUDA1FxCUlGJmYGFikvbx8w8PXzl5ZhZWZgk5ULCASDoOCQUHkFdqCIYlh4RGRUZHRMbFx8ghIHSE1iUnJKSmpaekZmVrYyJ1hNak5uXl5efkFhUbEKFwO3qlpiSWkZCJRXVFap8zDwamhW19TWgUBtTX2DFh+Dto5uY1MzCLS0trV36OkzGHR2dSNAT68hg1FfPxKYMNGYwWTSZCQwZaoxgxGGiOm06UhgxkwzBvNZs+fMhYB5c+fOX2DBYGllvXARGCxesnTZchtbBn67FStXrVq1GojWrF233l6AQdDB0cnZ2dkFiF3d3D08hQA3jHg+RiLUvwAAAABJRU5ErkJggg==' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+}
+
+.icon-book {
+    width: 22px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='22px' height='16px'%3E%3Cimage x='0px' y='0px' width='22px' height='16px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAQAAAC45EetAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfpBhMLJjdHRSTxAAABJUlEQVQoz22QPUvDUBSGnxsTW9CC1I9REJdENG0dXBz8Czq4FqRDKV10FFfBn+HuoIuLDoKDi4OtUWjoWHARLEUtxEZzHdohJ8lZLjzn4bwvV619RzPI0bmWIqigJDaGytbH2AKGHEaznBqWoD5nmGCzlTi9aJTYJj3m+OngA+CIFJ8OADZOXL7jEoB9Id9zAcCelJs0M2Lr1LNqeLQBqLARW77QAqCMG5cfuJ38RFx+5BqAoZQbNDJq1Khl1XjiFQCXcmzZxgNgnc243JoEaiF7XAEwknIycDxVqskaXaYEstD84REK2gWUo3Xq4jQwSlGFqXdZBjDUamFnZak4P5cvHpUWOHkO+h+D9/7b4KYXaQDdU+5nriAvhL/BOeQPLFPyn69/4W1Np8HoZMwAAAAASUVORK5CYII=' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }

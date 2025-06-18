@@ -14,12 +14,12 @@
     },
     "repository": {
         "type": "git",
-        "url": " https://github.com/mjkang0987/mjkang0987.github.io"
+        "url": " https://github.com/mjkang0109/mjkang0109.github.io"
     },
     "keywords": [
         "UI"
     ],
-    "author": "mjkang0987",
+    "author": "mjkang0109",
     "license": "ISC",
     "port": {
         "development": 8000,
@@ -117,7 +117,6 @@
         "postcss-nested": "^6.2.0",
         "postcss-sort-media-queries": "^5.2.0",
         "rimraf": "^3.0.2",
-        "sass": "^1.89.2",
         "sass-migrator": "^2.3.2",
         "sharp": "^0.32.6",
         "stylelint": "^15.11.0",

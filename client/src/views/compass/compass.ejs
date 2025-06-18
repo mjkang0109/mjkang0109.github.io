@@ -5,17 +5,7 @@ state:
 ---
 <!DOCTYPE html>
 <html lang="ko">
-<%
-isLocal = process.env.NODE_ENV === 'development';
-
-hosting = 'https://www.compass.or.kr';
-
-path = {
-    styles : hosting,
-    scripts: hosting,
-    images : hosting,
-};
-%>
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_constants`, {}); %>
 <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_head`, {}); %>
 <body>
     <div class="wrap">

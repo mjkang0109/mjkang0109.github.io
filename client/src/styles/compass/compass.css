@@ -35,6 +35,11 @@
   flex: 1;
   margin-right: 0;
 }
+@media (min-width: 768px) {
+  .search-period > [for=search-period-end] {
+    width: 130px;
+  }
+}
 .search-period > [for=search-period-end] input[type=text] {
   width: 100%;
 }

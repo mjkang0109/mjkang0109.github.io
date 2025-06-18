@@ -1,0 +1,85 @@
+---
+group: compass
+state:
+    default: 문서공개
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_constants`, {}); %>
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_head`, {}); %>
+<body>
+    <div class="wrap">
+        <!-- 상단메뉴영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_header`, {}); %>
+        <!--모바일 MENUAREA-->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_mobileHeader`, {}); %>
+        <div class="totladim" style="display: none; opacity: 0.8;"></div>
+        <!-- 상단메뉴영역 끝 -->
+        <div class="container">
+            <!-- 타이틀영역 시작 -->
+            <div class="sub-visual7">
+                <div class="inner7">
+                    <h2><%= pageTitle %></h2>
+                    <div class="print-box">
+                        <!-- <button><img src="<%= path.images %>/image/site/link.svg"></button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- 타이틀영역 끝 -->
+            <div class="inner sub-contents-box">
+                <!-- 왼쪽메뉴영역 시작 -->
+                <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_leftNav`, {
+                currentIndex: 1
+                }); %>
+                <!-- 왼쪽메뉴영역 끝 -->
+                <div class="sub-contents">
+                    <div class="right-fixed">
+                        <div class="right-top">
+                            <a href=""><span>TOP</span></a>
+                        </div>
+                    </div>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_breadCrum`, {
+                    depth1: '국제통용 발자국 검증제도',
+                    depth2: '정보공개',
+                    depth3: pageTitle,
+                    }); %>
+                    <div class="lci_area mt-30">
+                        <h3><%= pageTitle %></h3>
+                    </div>
+                    <div class="document-info">
+                        <span class="icon-info">
+                            <span class="a11y">노트북 아이콘</span>
+                        </span>
+                        <ul class="info-items">
+                            <li class="info-item">국제통용 발자국 검증제도는 “운영요령”과 “세부 운영지침”을 제정하여 제도의 원활한 운영을 위해 필요한 사항을 규정하고 있습니다.</li>
+                            <li class="info-item">동 검증제도의 검증기관으로 지정받고자 하는 기관은 한국인정기구(KOLAS)의 관련 요령(타당성평가 및 검증 분야)과 동 검증제도에서 추가로 요구하는 사항을 본 운영요령과 세부운영지침을 확인하여 준수하시기 바랍니다.</li>
+                        </ul>
+                        <a href="#" title="한국인정기구 운영요령 바로가기" class="link-round">
+                            <span class="icon-book">
+                                <span class="a11y">책 아이콘</span>
+                            </span>
+                            한국인정기구 운영요령 바로가기
+                        </a>
+                    </div>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_tab`, {}); %>
+
+                    <div class="lci_area mt-30">
+                        <h3>운영규정</h3>
+                    </div>
+
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_search`, {}); %>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_boardMock`, {
+                        fileIcon: 'file',
+                    }); %>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_footer`, {}); %>
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_layers`, {}); %>
+        <!-- 푸터영역 끝 -->
+    </div>
+    <script src="<%= process.env.BASE_PATH; %>/scripts/compass/compass<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
+            defer></script>
+</body>
+</html>

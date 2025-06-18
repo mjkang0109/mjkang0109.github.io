@@ -1,60 +1,17 @@
 <ul class="l-nav">
     <li class="depth_1">국제통용 발자국<br> 검증제도</li>
-    <li class="item close">
-        <h3 class="btn depth2">EU CBAM 소개<span class="plus"></span></h3>
-        <div class="depth3 desc">
-            <ul>
-                <li>
-                    <a href="/eucbam/introduce/outline">개요</a>
-                </li>
-                <li>
-                    <a href="/eucbam/introduce/apply">적용범위</a>
-                </li>
-                <li>
-                    <a href="/eucbam/introduce/period">기간별 의무사항</a>
-                </li>
-                <li>
-                    <a href="/eucbam/introduce/react">수출타입별 대응방안</a>
-                </li>
-                <li>
-                    <a href="/eucbam/introduce/verification">검증</a>
-                </li>
-                <li>
-                    <a href="/eucbam/introduce/faq/cfaq">FAQ</a>
-                </li>
-            </ul>
-        </div>
-    </li>
-    <li class="item close">
-        <h3 class="btn depth2">게시판<span class="plus"></span></h3>
-        <div class="depth3 desc">
-            <ul>
-                <li>
-                    <a href="/eucbam/schedule/list">주요일정</a>
-                </li>
-                <li>
-                    <a href="/eucbam/data/list">자료실</a>
-                </li>
-                <li>
-                    <a href="/eucbam/euvideo/list">영상자료</a>
-                </li>
-            </ul>
-        </div>
-    </li>
-    <li class="item open">
-        <h3 class="btn depth2">상담지원<span class="plus"></span></h3>
-        <div class="depth3 desc">
-            <ul>
-                <li>
-                    <a href="/eucbam/counsel/tel">전화상담</a>
-                </li>
-                <li>
-                    <a href="/eucbam/counsel/online/oncon">온라인상담</a>
-                </li>
-                <li>
-                    <a href="/eucbam/counsel/visit/list">센터방문상담</a>
-                </li>
-            </ul>
-        </div>
-    </li>
+    <% menu.forEach((item, index) => { %>
+        <li class="item close">
+            <h3 class="btn depth2"><%= item.title %><span class="plus"></span></h3>
+            <div class="depth3 desc">
+                <ul>
+                    <% item.items.forEach((sub) => { %>
+                        <li class="item">
+                            <a href="/<%= sub.url %>"><%= sub.title %></a>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </li>
+    <% }); %>
 </ul>

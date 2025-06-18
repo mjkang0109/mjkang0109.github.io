@@ -20,24 +20,24 @@
         height: 35px;
 
         @include m.respond-to(map.get(m.$min, 768)) {
-        width: 130px;
+            width: 130px;
         }
         @include m.respond-to(map.get(m.$max, 767)) {
-        max-width: 100px;
+            flex: 1;
         }
     }
 
-    > label {
-        display: block;
+    .search-period-title {
+        flex-shrink: 0;
+        width: 50px;
+    }
 
-        &:first-of-type {
-            white-space: nowrap;
+    > [for="search-period-end"] {
+        flex: 1;
+        margin-right: 0;
 
-            @include m.respond-to(map.get(m.$max, 767)) {
-                flex: 0;
-                margin-right: 0;
-            }
-
+        input[type="text"] {
+            width: 100%;
         }
     }
 

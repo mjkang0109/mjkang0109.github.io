@@ -24,20 +24,19 @@
 }
 @media (max-width: 767px) {
   .search-period input[type=text] {
-    max-width: 100px;
+    flex: 1;
   }
 }
-.search-period > label {
-  display: block;
+.search-period .search-period-title {
+  flex-shrink: 0;
+  width: 50px;
 }
-.search-period > label:first-of-type {
-  white-space: nowrap;
+.search-period > [for=search-period-end] {
+  flex: 1;
+  margin-right: 0;
 }
-@media (max-width: 767px) {
-  .search-period > label:first-of-type {
-    flex: 0;
-    margin-right: 0;
-  }
+.search-period > [for=search-period-end] input[type=text] {
+  width: 100%;
 }
 .search-period .icon-wave {
   padding: 0 10px;

@@ -1,7 +1,10 @@
+<%
+var currentIndex = currentIndex ?? null;
+%>
 <ul class="l-nav">
     <li class="depth_1">국제통용 발자국<br> 검증제도</li>
     <% menu.forEach((item, index) => { %>
-        <li class="item close">
+        <li class="item<%= currentIndex === index ? ' open' : ' close' %>">
             <h3 class="btn depth2"><%= item.title %><span class="plus"></span></h3>
             <div class="depth3 desc">
                 <ul>

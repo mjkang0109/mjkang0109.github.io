@@ -1,0 +1,22 @@
+<div class="searchbox">
+    <div class="search-period">
+        <label for="search-period-start">작성기간</label>
+        <input type="text" id="search-period-start" class="input-datepicker">
+        <span class="icon-wave">~</span>
+        <label for="search-period-end">
+            <input type="text" id="search-period-end" class="input-datepicker">
+        </label>
+    </div>
+    <div class="search-condition">
+        <select class="sc-select" id="searchKey" name="searchKey">
+            <option value="" selected="selected">전체</option>
+            <option value="title">제목</option>
+            <option value="wcontent">내용</option>
+        </select>
+        <input type="text" id="searchKeywd" name="searchKeywd">
+        <button id="btnSearch">
+            <img src="<%= path.images %>/image/site/search-btn.svg" alt="검색">
+        </button>
+    </div>
+</div>
+

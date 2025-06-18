@@ -1,4 +1,6 @@
 <%
+pageTitle = pageFm.state[state];
+
 isLocal = process.env.NODE_ENV === 'development';
 
 hosting = 'https://www.compass.or.kr';
@@ -11,37 +13,37 @@ path = {
 
 menu = [
     {
-        title: '제도소개', url: 'intro',
+        title: '제도소개', url: 'lcidb',
         items: [
-            {title: '국제통용발자국 검증제도란', url: ''},
-            {title: '제도 운영기관', url: ''},
-            {title: '검증기준', url: ''},
-            {title: '검증기관정보', url: ''},
-            {title: '협력기관', url: ''},
+            {title: '국제통용발자국 검증제도란', url: 'intro'},
+            {title: '제도 운영기관', url: 'organ'},
+            {title: '검증기준', url: 'standard'},
+            {title: '검증기관정보', url: 'organInfo'},
+            {title: '협력기관', url: 'cooperation'},
         ]
     },
     {
-        title: '정보공개', url: 'info',
+        title: '정보공개', url: 'lcidbInfo',
         items: [
-            {title: '주요일정', url: ''},
-            {title: '문서공개', url: ''},
-            {title: '제품범주규칙(PCR)', url: ''},
+            {title: '주요일정', url: 'schedule'},
+            {title: '문서공개', url: 'document'},
+            {title: '제품범주규칙(PCR)', url: 'PCR'},
         ]
     },
     {
-        title: 'IPEF등록', url: 'IPEF',
+        title: 'IPEF등록', url: 'lcidbIPEF',
         items: [
-            {title: '도안신청', url: ''},
-            {title: '검증기관신청', url: ''},
-            {title: '검증제품', url: ''},
+            {title: '도안신청', url: 'designApply'},
+            {title: '검증기관신청', url: 'organApply'},
+            {title: '검증제품', url: 'verification'},
         ]
     },
     {
-        title: '게시판', url: '',
+        title: '게시판', url: 'lcidbBoard',
         items: [
-            {title: '공지사항', url: ''},
-            {title: '자료실', url: ''},
-            {title: '문의사항', url: ''},
+            {title: '공지사항', url: 'notice'},
+            {title: '자료실', url: 'resources'},
+            {title: '문의사항', url: 'inquiry'},
         ]
     },
 ];

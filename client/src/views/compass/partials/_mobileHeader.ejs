@@ -184,21 +184,20 @@
                     </dl>
                     <dl>
                         <dt class="sub04_00">검증제도</dt>
-                        <dd class="sub04_01">
-                            <a href="/lcidb/infor" target="_self" title="">제도소개</a>
-                        </dd>
-                        <dd class="sub04_02">
-                            <a href="/lcidb/system" target="_self">운영체계</a>
-                        </dd>
-                        <dd class="sub04_03">
-                            <a href="/lcidb/standard" target="_self" title="">검증기준</a>
-                        </dd>
-                        <dd class="sub04_04">
-                            <a href="/lcidb/serive" target="_self">검증기관 정보</a>
-                        </dd>
-                        <!--<dd class="sub04_05 ">
-                            <a href="/lcidb/lciList" target="_self" title="">LCI DB</a>
-                        </dd>-->
+                        <% menu.forEach((item) => { %>
+                            <dd class="">
+                                <a href="" target="_self" title="" class=""><%= item.title %></a>
+                                <ul style="display: none;">
+                                    <% item.items.forEach((sub) => { %>
+                                        <li class="">
+                                            <a href="<%= sub.url %>" target="_self"
+                                               title=""><%= sub.title %>
+                                            </a>
+                                        </li>
+                                    <% }); %>
+                                </ul>
+                            </dd>
+                        <% }); %>
                     </dl>
                     <dl>
                         <dt class="sub05_00">EU CBAM 헬프데스크</dt>

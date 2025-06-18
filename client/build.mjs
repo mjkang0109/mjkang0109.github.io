@@ -222,11 +222,13 @@ const generatorViews = () => {
             const render = ejs.render(pageFm.content, pageProps, ejsOption);
             const beautified = beautify.html(render, pkg.beautify);
 
+            /*
             htmlValidation({
                 srcPath: `/${VIEWS}/${srcPath}`,
                 state,
                 data   : beautified,
             });
+            */
 
             renderHTML({
                 data    : beautified,

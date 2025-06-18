@@ -1,7 +1,7 @@
 ---
 group: compass
 state:
-    default: 제도소개
+    default: 국제통용 발자국 검증제도
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -19,7 +19,7 @@ state:
             <!-- 타이틀영역 시작 -->
             <div class="sub-visual7">
                 <div class="inner7">
-                    <h2>제도소개</h2>
+                    <h2><%= pageTitle %></h2>
                     <div class="print-box">
                         <!-- <button><img src="<%= path.images %>/image/site/link.svg"></button> -->
                     </div>
@@ -36,12 +36,11 @@ state:
                             <a href=""><span>TOP</span></a>
                         </div>
                     </div>
-                    <div class="location">
-                        <span class="loc_pdr10"><img src="<%= path.images %>/image/site/icon_home.png" alt="홈"></span>
-                        <span>국제통용 발자국 검증제도</span> <span class="location-dep">제도 소개</span>
-                    </div>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_breadCrum`, {
+                        depth1: pageTitle,
+                    }); %>
                     <div class="lci_area mt-30">
-                        <h3>제도소개</h3>
+                        <h3><%= pageTitle %></h3>
                     </div>
                 </div>
             </div>

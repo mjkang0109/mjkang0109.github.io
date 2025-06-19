@@ -1,0 +1,63 @@
+<div>
+    <table>
+        <colgroup>
+            <col width="180px">
+            <col width="*">
+            <col width="200px">
+            <col width="120px">
+            <col width="100px">
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col" class="">승인번호</th>
+            <th scope="col" class="">기관명</th>
+            <th scope="col" class="">유효기간</th>
+            <th scope="col" class="">소재지(시, 도)</th>
+            <th scope="col" class="">승인서 사본</th>
+        </tr>
+        </thead>
+        <tbody id="dataTableBody">
+        <%
+        const titles = [
+            '(재)한국기계전기전자시험연구원',
+            '한국생산성본부인증원한국생산성본부인증원한국생산성본부인증원',
+            '한국인터텍테스팅서비스(주)',
+            '(재)한국기계전기전자시험연구원',
+            '한국생산성본부인증원한국생산성본부인증원한국생산성본부인증원',
+            '한국인터텍테스팅서비스(주)',
+            '(재)한국기계전기전자시험연구원',
+            '한국생산성본부인증원한국생산성본부인증원한국생산성본부인증원',
+            '한국인터텍테스팅서비스(주)',
+            '한국생산성본부인증원한국생산성본부인증원한국생산성본부인증원',
+        ];
+        for(let i = 0; i < 10; i++) { %>
+        <tr>
+            <td class="organ-number">KVV-008</td>
+            <td class="organ-title">
+                <a href="#"><%= titles[i]; %></a>
+            </td>
+            <td class="organ-period">2024-09-30 ~ 2028-09-29</td>
+            <td class="organ-location">서울특별시</td>
+            <td class="organ-document">
+                <button class="add-down"
+                        onclick="javascript:main.proc.doDownload('CE797FC8-97AC-4ABE-B2BC-71C5D6BEB682.zip', 'EUCBAM탄소배출량이론과실무_이건모교수아주대학교.zip', '673')">
+                    다운로드
+                </button>
+            </td>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+<div class="pagination" id="paging">
+    <a class="prev" alt="이전페이지">이전</a>
+    <a class="choice" href="#1^10" data-pg="1">1</a>
+    <a href="#2^10" data-pg="2">2</a>
+    <a href="#3^10" data-pg="3">3</a>
+    <a href="#4^10" data-pg="4">4</a>
+    <a href="#5^10" data-pg="5">5</a>
+    <a href="#6^10" data-pg="6">6</a>
+    <a href="#7^10" data-pg="7">7</a>
+    <a href="#8^10" data-pg="8">8</a>
+    <a href="#9^10" data-pg="9">9</a>
+    <a class="next" alt="다음페이지">다음</a>
+</div>

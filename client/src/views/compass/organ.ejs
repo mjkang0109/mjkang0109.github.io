@@ -1,0 +1,167 @@
+---
+group: compass
+state:
+    default: 제도 운영기관
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_constants`, {}); %>
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_head`, {}); %>
+<body>
+    <div class="wrap">
+        <!-- 상단메뉴영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_header`, {}); %>
+        <!--모바일 MENUAREA-->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_mobileHeader`, {}); %>
+        <div class="totladim" style="display: none; opacity: 0.8;"></div>
+        <!-- 상단메뉴영역 끝 -->
+        <div class="container">
+            <!-- 타이틀영역 시작 -->
+            <div class="sub-visual7">
+                <div class="inner7">
+                    <h2><%= pageTitle %></h2>
+                    <div class="print-box">
+                        <!-- <button><img src="<%= path.images %>/image/site/link.svg"></button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- 타이틀영역 끝 -->
+            <div class="inner sub-contents-box">
+                <!-- 왼쪽메뉴영역 시작 -->
+                <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_leftNav`, {}); %>
+                <!-- 왼쪽메뉴영역 끝 -->
+                <div class="sub-contents">
+                    <div class="right-fixed">
+                        <div class="right-top">
+                            <a href=""><span>TOP</span></a>
+                        </div>
+                    </div>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_breadCrum`, {
+                        depth1: pageTitle,
+                    }); %>
+                    <div class="lci_area mt-30">
+                        <h3><%= pageTitle %></h3>
+                    </div>
+
+                    <div class="lcidb-about">
+                        <strong class="about-title">제도 운영기관은?</strong>
+                        <ul class="about-standards">
+                            <li class="about-standard">국제통용 발자국 검증제도는 국제표준(ISO)와 범용표준(PAS)를 비롯하여 국제적으로 수요가 높은 해외 제도의 검증기준(PCR 포함)을 제도의 검증기준으로 활용하고 있습니다.</li>
+                            <li class="about-standard">이는 검증을 획득하고자 하는 기업이 실제 필요한 검증기준을 그대로 활용할 수 있어 수출규제 또는 글로벌 고객사의 요구에 신속한 대응이 가능합니다.</li>
+                        </ul>
+                    </div>
+
+                    <div class="lci_area mt-30">
+                        <h3>기관설명</h3>
+                    </div>
+                    <%
+                    const items = [
+                        {
+                            title: '국제인정포럼 (IAF: International Accreditation Forum)',
+                            items: [
+                                {
+                                    title: '역할',
+                                    desc : '전 세계 인증기관의 상호인정을 위한 국제 협의체',
+                                },
+                                {
+                                    title: '기능',
+                                    desc : '각국의 인정기관이 국제적으로 인정받을 수 있도록<br>다자간 상호인정협정(MLA)을 운영',
+                                },
+                                {
+                                    title: '의의',
+                                    desc : '국내 제도가 국제 기준에 맞는지 검증',
+                                },
+                            ]
+                        },
+                        {
+                            title: 'KOLAS (Korea Laboratory Accreditation Scheme, 한국인정기구)',
+                            items: [
+                                {
+                                    title: '역할',
+                                    desc : '국내 유일의 공식 인정기관으로서 제3자 검증기관의 공신력을 인정',
+                                },
+                                {
+                                    title: '기능',
+                                    desc : [
+                                        '검증기관에 대해 인정 평가 및 지정',
+                                        '국제인정포럼(IAF)과의 MLA 참여로 국제 상호인정 보장',
+                                    ],
+                                },
+                                {
+                                    title: '의의',
+                                    desc : '제3자 검증기관이 KOLAS에 인정 신청 → 평가 후 인정 → 검증 수행 가능',
+                                },
+                            ]
+                        },
+                        {
+                            title: '제3자 검증기관',
+                            items: [
+                                {
+                                    title: '역할',
+                                    desc : '기업의 탄소발자국 등의 데이터를 검증하는 실제 실행 기관',
+                                },
+                                {
+                                    title: '기능',
+                                    desc : '시험기관, 인증기관, 분석기관 등',
+                                },
+                                {
+                                    title: '의의',
+                                    desc : '수출기업의 검증 신청 접수<br>현장심사 및 데이터 분석<br>검증서(라벨) 발급',
+                                },
+                            ]
+                        },
+                        {
+                            title: 'KOLAS (Korea Laboratory Accreditation Scheme, 한국인정기구)',
+                            items: [
+                                {
+                                    title: '역할',
+                                    desc : '국내 유일의 공식 인정기관으로서 제3자 검증기관의 공신력을 인정',
+                                },
+                                {
+                                    title: '기능',
+                                    desc : [
+                                        '검증기관에 대해 인정 평가 및 지정',
+                                        '국제인정포럼(IAF)과의 MLA 참여로 국제 상호인정 보장',
+                                    ],
+                                },
+                                {
+                                    title: '의의',
+                                    desc : '제3자 검증기관이 KOLAS에 인정 신청 → 평가 후 인정 → 검증 수행 가능',
+                                },
+                            ]
+                        },
+                    ];
+                    %>
+                    <div class="organ-about">
+                        <% items.forEach((item) => { %>
+                        <dl class="organ-items">
+                            <dt><%= item.title %></dt>
+                            <% item.items.forEach((sub) => { %>
+                                <dd>
+                                    <strong class="organ-title"><%= sub.title %></strong>
+                                    <% if (typeof sub.desc === 'object') { %>
+                                        <ul class="organ-descriptions">
+                                            <% sub.desc.forEach((desc) => { %>
+                                                <li class="organ-description"><%= desc %></li>
+                                            <% }); %>
+                                        </ul>
+                                    <% } %>
+                                    <% if (typeof sub.desc !== 'object') { %>
+                                        <p class="organ-description"><%= sub.desc %></p>
+                                    <% } %>
+                                </dd>
+                            <% }); %>
+                        </dl>
+                        <% });%>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 푸터영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_footer`, {}); %>
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_layers`, {}); %>
+        <!-- 푸터영역 끝 -->
+    </div>
+</body>
+</html>

@@ -695,6 +695,61 @@ $imgPath: "../../images/compass";
     }
 }
 
+.organ-about {
+    display: grid;
+    grid-gap: 54px 50px;
+        margin-bottom: 30px;
+    @include m.respond-to(map.get(m.$min, 1024)) {
+    grid-template-columns: 1fr 1fr;
+    }
+
+    .organ-items {
+        border-bottom: 1px solid #d2d2d2;
+
+        dt {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 54px;
+            border-top: 2px solid #173674;
+            background-color: #f9f9f9;
+            font-size: 15px;
+            font-family: "Noto Sans KR", sans-serif;
+            color: #30326d;
+            font-weight: bold;
+        }
+
+        dd {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            border-top: 1px solid #d2d2d2;
+        }
+    }
+
+    .organ-title {
+        align-content: center;
+        flex-shrink: 0;
+        width: 97px;
+        height: 100%;
+        text-align: center;
+        border-right: 1px solid #d2d2d2;
+        font-size: 14px;
+        font-family: "Noto Sans KR", sans-serif;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .organ-description {
+        padding-left: 25px;
+        font-size: 14px;
+        font-family: "Noto Sans KR", sans-serif;
+        color: #333;
+        line-height: 20px;
+
+    }
+}
+
 .icon-file {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17px' height='18px'%3E%3Cimage x='0px' y='0px' width='17px' height='18px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAMAAACKJ8VmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACE1BMVEXvtILusn3sroDtroHwtoXwsIHvt4Pur4Hus4XpsoXttovutYLttonws3/ytoD0uIXytYbvsoHts4PUoXZzcG+FhoeEhIV4en18a1zqrnrHmG+Td2vpr3rImm+cpKp+alrrrn+cpavFl3S+knDBlnXImm+dpavBlnbHmGqapKnBlW+Kc2WDcGt4dX2BbmqGcWKBcHdzY2qKdXp7aGyJdXmLdnx9aW11aG1qXmS3kG+Qdl95gYePdWC1j3DOnHHGmHTSn3R0dHSLjpGJi42KjI6JjI6KjI6JjI9ra2vLm3Wdpq3o+f/h8Pzl9P/E1N5wZ3Tk8//g7fjg7vnS4euPhY+Da3zj8v2dpq+MlZ2PmKCQmaGKk5u3wsvr+P/M2uOhrLVmb3fk8v62wcust7+uucKuucGtuMC0wMi7xtDF0dvo9v+IkZijrbWmsLmlr7ejrrahqrOstr/c6vWEjZSnsrqao6ucpa2ao6ymsLjd6/aGj5Xk9f/N2+XJ1+HJ2OHg8PuCjZOLipSMipSNi5WOjJWOjJaNi5SLiZNyb3nss8vqr8TnrMDtscbjrMP3uc/ztsr1t8zussb1uM7xtcnztsvsscX9vdT5us77u9D0tsq/mKy/laa8kqK8kqO9kqPCl6m5k6aotb+kr7ijrreirrakr7mmsrtpc3qiq7Ly///q+f/q+P/p+P/r+v/t/f+Jk5v///9xFjKTAAAASnRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAJt/k5OSpBjGtBS/9pgv9ODo5Lv04K/02p9D+06zu7+Tl5OTl7u9Rf/6GUiUwJ+Hm5ebl5eXlMLQjhRYAAAABYktHRLBDZK7EAAAAB3RJTUUH6QYTCDkVXTnV0gAAAPlJREFUGNNjYBAWERUDA1FxCUlGJmYGFikvbx8w8PXzl5ZhZWZgk5ULCASDoOCQUHkFdqCIYlh4RGRUZHRMbFx8ghIHSE1iUnJKSmpaekZmVrYyJ1hNak5uXl5efkFhUbEKFwO3qlpiSWkZCJRXVFap8zDwamhW19TWgUBtTX2DFh+Dto5uY1MzCLS0trV36OkzGHR2dSNAT68hg1FfPxKYMNGYwWTSZCQwZaoxgxGGiOm06UhgxkwzBvNZs+fMhYB5c+fOX2DBYGllvXARGCxesnTZchtbBn67FStXrVq1GojWrF233l6AQdDB0cnZ2dkFiF3d3D08hQA3jHg+RiLUvwAAAABJRU5ErkJggg==' /%3E%3C/svg%3E");
     background-repeat: no-repeat;

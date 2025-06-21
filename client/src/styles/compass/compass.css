@@ -289,18 +289,17 @@
   background-image: url("../../images/compass/visual-bg.png");
   background-repeat: no-repeat;
   background-position: 50% 0;
+  background-size: auto 100%;
   margin-top: 20px;
   text-align: center;
 }
 @media (min-width: 768px) {
   .lcidb-visual {
-    background-size: 100% auto;
     padding: 150px 55px 60px;
   }
 }
 @media (max-width: 767px) {
   .lcidb-visual {
-    background-size: auto 100%;
     padding: 80px 15px 30px;
   }
 }
@@ -612,10 +611,14 @@
     background-position: top 49px right 17px;
   }
 }
+@media (max-width: 1023px) {
+  .lcidb-schedule .schedule-link {
+    background-size: 130px 88px;
+  }
+}
 @media (max-width: 767px) {
   .lcidb-schedule .schedule-link {
     padding: 30px 25px 35px;
-    background-size: 130px 88px;
     background-position: bottom 49px right 17px;
   }
 }

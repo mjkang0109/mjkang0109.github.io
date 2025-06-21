@@ -240,14 +240,13 @@ $imgPath: "../../images/compass";
     background-image: url("#{$imgPath}/visual-bg.png");
     background-repeat: no-repeat;
     background-position: 50% 0;
+    background-size: auto 100%;
     margin-top: 20px;
     text-align: center;
     @include m.respond-to(map.get(m.$min, 768)) {
-        background-size: 100% auto;
         padding: 150px 55px 60px;
     }
     @include m.respond-to(map.get(m.$max, 767)) {
-        background-size: auto 100%;
         padding: 80px 15px 30px;
     }
 
@@ -553,9 +552,11 @@ $imgPath: "../../images/compass";
             background-size: 292px 198px;
             background-position: top 49px right 17px;
         }
+        @include m.respond-to(map.get(m.$max, 1023)) {
+            background-size: 130px 88px;
+        }
         @include m.respond-to(map.get(m.$max, 767)) {
             padding: 30px 25px 35px;
-            background-size: 130px 88px;
             background-position: bottom 49px right 17px;
         }
 

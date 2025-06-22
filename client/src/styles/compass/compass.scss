@@ -698,9 +698,9 @@ $imgPath: "../../images/compass";
 .organ-about {
     display: grid;
     grid-gap: 54px 50px;
-        margin-bottom: 30px;
+    margin-bottom: 30px;
     @include m.respond-to(map.get(m.$min, 1024)) {
-    grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .organ-items {
@@ -746,7 +746,91 @@ $imgPath: "../../images/compass";
         font-family: "Noto Sans KR", sans-serif;
         color: #333;
         line-height: 20px;
+    }
+}
 
+.verification-count {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #173674;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    color: #0069b4;
+}
+
+.verification-products {
+    display: grid;
+    margin-top: 50px;
+    @include m.respond-to(map.get(m.$min, 768)) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px 62px;
+    }
+    @include m.respond-to(map.get(m.$max, 1023)) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px 52px;
+
+    }
+    @include m.respond-to(map.get(m.$max, 767)) {
+        grid-template-columns: 1fr;
+        grid-gap: 20px 0;
+    }
+}
+
+.verification-product {
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    font-family: "Noto Sans KR", sans-serif;
+
+    .product-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .product-description {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    figure {
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    figcaption {
+        display: block;
+        margin-top: 26px;
+        font-size: 16px;
+        color: #0069b4;
+        font-weight: bold;
+        line-height: 24px;
+    }
+
+    .verification-description {
+        font-size: 15px;
+        line-height: 24px;
+        color: #333;
+    }
+
+    .verification-brief {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 33px;
+
+        span {
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid #bfbfbf;
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+        }
     }
 }
 

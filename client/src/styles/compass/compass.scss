@@ -769,7 +769,6 @@ $imgPath: "../../images/compass";
     @include m.respond-to(map.get(m.$max, 1023)) {
         grid-template-columns: 1fr 1fr;
         grid-gap: 40px 52px;
-
     }
     @include m.respond-to(map.get(m.$max, 767)) {
         grid-template-columns: 1fr;
@@ -778,10 +777,14 @@ $imgPath: "../../images/compass";
 }
 
 .verification-product {
-    padding: 20px;
     border: 1px solid #e7e7e7;
     border-radius: 5px;
     font-family: "Noto Sans KR", sans-serif;
+
+    > a {
+        display: block;
+        padding: 20px;
+    }
 
     .product-title {
         font-size: 16px;

@@ -56,20 +56,22 @@ state:
                     <ul class="verification-products">
                         <% for (let i = 0; i < 10; i++) { %>
                             <li class="verification-product">
-                                <figure>
-                                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                <a href="#" title="<%= item.title %> 바로가기">
+                                    <figure>
+                                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
                                         width: 312,
                                         height: 225
-                                    }); %>
-                                    <figcaption>
-                                        <%= item.title %>
-                                    </figcaption>
-                                </figure>
-                                <p class="verification-description"><%= item.description %></p>
-                                <div class="verification-brief">
-                                    <span class="serial"><%= item.serial %></span>
-                                    <span class="date"><%= item.date %></span>
-                                </div>
+                                        }); %>
+                                        <figcaption>
+                                            <%= item.title %>
+                                        </figcaption>
+                                    </figure>
+                                    <p class="verification-description"><%= item.description %></p>
+                                    <div class="verification-brief">
+                                        <span class="serial"><%= item.serial %></span>
+                                        <span class="date"><%= item.date %></span>
+                                    </div>
+                                </a>
                             </li>
                         <% } %>
                     </ul>

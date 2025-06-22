@@ -1,0 +1,86 @@
+---
+group: compass
+state:
+    default: 검증제품
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_constants`, {}); %>
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_head`, {}); %>
+<body>
+    <div class="wrap">
+        <!-- 상단메뉴영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_header`, {}); %>
+        <!--모바일 MENUAREA-->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_mobileHeader`, {}); %>
+        <div class="totladim" style="display: none; opacity: 0.8;"></div>
+        <!-- 상단메뉴영역 끝 -->
+        <div class="container">
+            <!-- 타이틀영역 시작 -->
+            <div class="sub-visual7">
+                <div class="inner7">
+                    <h2><%= pageTitle %></h2>
+                    <div class="print-box">
+                        <!-- <button><img src="<%= path.images %>/image/site/link.svg"></button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- 타이틀영역 끝 -->
+            <div class="inner sub-contents-box">
+                <!-- 왼쪽메뉴영역 시작 -->
+                <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_leftNav`, {
+                    currentIndex: 0
+                }); %>
+                <!-- 왼쪽메뉴영역 끝 -->
+                <div class="sub-contents">
+                    <div class="right-fixed">
+                        <div class="right-top">
+                            <a href=""><span>TOP</span></a>
+                        </div>
+                    </div>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_breadCrum`, {
+                        depth1: pageTitle,
+                    }); %>
+                    <div class="lci_area mt-30">
+                        <h3><%= pageTitle %></h3>
+                    </div>
+                    <div class="verification-count">총 : 121건,  페이지수 : 01/07</div>
+                    <%
+                    const item = {
+                        title      : 'Fiordilatte g100 Sassano 3개들이 봉지',
+                        description: '센트럴 델 라떼 델 몰리세 srl',
+                        serial     : 'P-2025-0012',
+                        date       : '2024',
+                    };
+                    %>
+                    <ul class="verification-products">
+                        <% for (let i = 0; i < 10; i++) { %>
+                            <li class="verification-product">
+                                <figure>
+                                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                        width: 312,
+                                        height: 225
+                                    }); %>
+                                    <figcaption>
+                                        <%= item.title %>
+                                    </figcaption>
+                                </figure>
+                                <p class="verification-description"><%= item.description %></p>
+                                <div class="verification-brief">
+                                    <span class="serial"><%= item.serial %></span>
+                                    <span class="date"><%= item.date %></span>
+                                </div>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- 푸터영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_footer`, {}); %>
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_layers`, {}); %>
+        <!-- 푸터영역 끝 -->
+    </div>
+</body>
+</html>

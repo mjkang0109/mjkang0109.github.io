@@ -839,10 +839,13 @@
 }
 
 .verification-product {
-  padding: 20px;
   border: 1px solid #e7e7e7;
   border-radius: 5px;
   font-family: "Noto Sans KR", sans-serif;
+}
+.verification-product > a {
+  display: block;
+  padding: 20px;
 }
 .verification-product .product-title {
   font-size: 16px;

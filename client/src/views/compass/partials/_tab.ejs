@@ -1,21 +1,17 @@
+<%
+var tabs = tabs ?? [];
+%>
+
 <div class="tb-view-tab compass-tab">
     <div class="c-tab01" id="multi-tab01">
         <ul id="menu-list">
-            <li class="over">
-                <a onclick="main.proc.setFaqCategory('all')" data-category="">
-                    <span>국제통용 발자국 검증제 운영요령</span>
+            <% tabs.forEach((tab, index) => { %>
+            <li class="<%= index === 0 ? 'over' : '' %>">
+                <a data-category="">
+                    <span><%= tab %></span>
                 </a>
             </li>
-            <li class="">
-                <a onclick="main.proc.setFaqCategory(1)" data-category="1">
-                    <span>국제통용 발자국 검증제 세부운영지침</span>
-                </a>
-            </li>
-            <li class="">
-                <a onclick="main.proc.setFaqCategory(2)" data-category="2">
-                    <span>불만 및 이의처리 절차서</span>
-                </a>
-            </li>
+            <% }) %>
         </ul>
         <input type="hidden" id="faqCategory" name="faqCategory" value="">
     </div>

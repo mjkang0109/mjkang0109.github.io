@@ -61,7 +61,13 @@ state:
                             한국인정기구 운영요령 바로가기
                         </a>
                     </div>
-                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_tab`, {}); %>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_tab`, {
+                        tabs: [
+                            '국제통용 발자국 검증제 운영요령',
+                            '국제통용 발자국 검증제 세부운영지침',
+                            '불만 및 이의처리 절차서',
+                        ]
+                    }); %>
 
                     <div class="lci_area mt-30">
                         <h3>운영규정</h3>

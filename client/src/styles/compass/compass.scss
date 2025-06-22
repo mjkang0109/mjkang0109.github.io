@@ -871,7 +871,44 @@ $imgPath: "../../images/compass";
             color: #333;
             background-color: #f3f3f3;
         }
+    }
+}
 
+.cooperation-companies {
+    display: grid;
+    grid-gap: 50px 30px;
+    margin-top: 45px;
+    border-top: 2px solid #173674;
+    padding: 40px 0 50px;
+    border-bottom: 1px solid #d9d9d9;
+    @include m.respond-to(map.get(m.$min, 768)) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @include m.respond-to(map.get(m.$max, 767)) {
+        grid-template-columns: 1fr 1fr
+    }
+
+    img {
+        border: 1px solid #e4e4e4;
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        margin-top: 24px;
+        font-size: 16px;
+        line-height: 23px;
+        color: #333;
+        font-family: "Noto Sans KR", sans-serif;
+        text-align: center;
+    }
+
+    .date {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #9f9f9f;
+        text-align: center;
     }
 }
 

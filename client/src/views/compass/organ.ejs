@@ -47,15 +47,22 @@ state:
                         <h3><%= pageTitle %></h3>
                     </div>
 
-                    <div class="lcidb-about">
-                        <strong class="about-title">제도 운영기관은?</strong>
+                    <div class="lcidb-about bg-kitech">
+                        <strong class="about-title">한국생산기술연구원</strong>
                         <ul class="about-standards">
-                            <li class="about-standard">국제통용 발자국 검증제도는 국제표준(ISO)와 범용표준(PAS)를 비롯하여 국제적으로 수요가 높은 해외 제도의 검증기준(PCR 포함)을 제도의 검증기준으로 활용하고 있습니다.</li>
-                            <li class="about-standard">이는 검증을 획득하고자 하는 기업이 실제 필요한 검증기준을 그대로 활용할 수 있어 수출규제 또는 글로벌 고객사의 요구에 신속한 대응이 가능합니다.</li>
+                            <li class="about-standard">한국생산기술연구원은 국제통용발자국 검증제도의 운영기관(Scheme Owner)으로서 제도의 원활한 운영과 활성화를 위해 한국인정기구(KOLAS)와 적극적으로 협력하고 있으며, 검증심사원 양성을 위해 검증심사원 교육 및 자격인증기관을 지정 . 관리하고 있습니다.</li>
+                            <li class="about-standard">제도 운영은 한국생산기술연구원의 국가청정생산지원센터에서 담당하고 있습니다.</li>
                         </ul>
                     </div>
 
-                    <div class="lci_area mt-30">
+                    <div class="lci_area mt-30 dot">
+                        <h3>기관별 운영구조</h3>
+                    </div>
+                    <div class="organ-structure">
+                        <img src="<%= imgPath %>/organ-visual.png" alt="">
+                    </div>
+
+                    <div class="lci_area mt-30 dot">
                         <h3>기관설명</h3>
                     </div>
                     <%
@@ -110,12 +117,49 @@ state:
                                 },
                                 {
                                     title: '의의',
-                                    desc : '수출기업의 검증 신청 접수<br>현장심사 및 데이터 분석<br>검증서(라벨) 발급',
+                                    desc : ['수출기업의 검증 신청 접수', '현장심사 및 데이터 분석', '검증서(라벨) 발급'],
                                 },
                             ]
                         },
                         {
-                            title: 'KOLAS (Korea Laboratory Accreditation Scheme, 한국인정기구)',
+                            title: '해외 탄소발자국 제도 (Scheme Owner)',
+                            items: [
+                                {
+                                    title: '역할',
+                                    desc : '국내 유일의 공식 인정기관으로서 제3자 검증기관의 공신력을 인정',
+                                },
+                                {
+                                    title: '기능',
+                                    desc : [
+                                        '검증기관에 대해 인정 평가 및 지정',
+                                        '국제인정포럼(IAF)과의 MLA 참여로 국제 상호인정 보장'
+                                    ],
+                                },
+                                {
+                                    title: '의의',
+                                    desc : '제3자 검증기관이 KOLAS에 인정 신청 → 평가 후 인정 → 검증 수행 가능',
+                                },
+                            ]
+                        },
+                        {
+                            title: '수출기업',
+                            items: [
+                                {
+                                    title: '역할',
+                                    desc : '전 세계 인증기관의 상호인정을 위한 국제 협의체',
+                                },
+                                {
+                                    title: '기능',
+                                    desc : '각국의 인정기관이 국제적으로 인정받을 수 있도록<br>다자간 상호인정협정(MLA)을 운영',
+                                },
+                                {
+                                    title: '의의',
+                                    desc : '국내 제도가 국제 기준에 맞는지 검증',
+                                },
+                            ]
+                        },
+                        {
+                            title: '한국생산기술연구원 (국가청정생산지원센터, Scheme Owner)',
                             items: [
                                 {
                                     title: '역할',
@@ -131,6 +175,27 @@ state:
                                 {
                                     title: '의의',
                                     desc : '제3자 검증기관이 KOLAS에 인정 신청 → 평가 후 인정 → 검증 수행 가능',
+                                },
+                            ]
+                        },
+                        {
+                            title: '교육/자격인증기관 (제3자 기관)',
+                            items: [
+                                {
+                                    title: '역할',
+                                    desc : '기업의 탄소발자국 등의 데이터를 검증하는 실제 실행 기관',
+                                },
+                                {
+                                    title: '기능',
+                                    desc : '시험기관, 인증기관, 분석기관 등',
+                                },
+                                {
+                                    title: '의의',
+                                    desc : [
+                                        '수출기업의 검증 신청 접수',
+                                        '현장심사 및 데이터 분석',
+                                        '검증서(라벨) 발급',
+                                    ],
                                 },
                             ]
                         },
@@ -151,14 +216,85 @@ state:
                                         </ul>
                                     <% } %>
                                     <% if (typeof sub.desc !== 'object') { %>
-                                        <p class="organ-description"><%= sub.desc %></p>
+                                        <p class="organ-description"><%- sub.desc %></p>
                                     <% } %>
                                 </dd>
                             <% }); %>
                         </dl>
                         <% });%>
                     </div>
+
+                    <div class="lci_area mt-30 dot">
+                        <h3>용어설명</h3>
+                    </div>
+                    <%
+
+                    const titles = [
+                        '약어',
+                        '풀어쓰기',
+                        '의미'
+                    ];
+
+                    const terminology = [
+                        {
+                            title: 'IAF',
+                            desc: 'International Accreditation Forum',
+                            mean: '국제인정포럼, 각국 인증기관 간 상호인정 협의체'
+                        },
+                        {
+                            title: 'MLA',
+                            desc: 'Multilateral Recognition Arrangement',
+                            mean: '다자간 상호인정협정'
+                        },
+                        {
+                            title: 'MRA',
+                            desc: 'Mutual Recognition Agreement',
+                            mean: '상호인정협정 (양자간 또는 복수국간)'
+                        },
+                        {
+                            title: 'MOU',
+                            desc: 'Memorandum of Understanding',
+                            mean: '업무협약'
+                        },
+                        {
+                            title: 'KOLAS',
+                            desc: 'Korea Laboratory Accreditation Scheme',
+                            mean: '한국인정기구, 국내 유일 인정기관'
+                        },
+                        {
+                            title: 'Scheme Owner',
+                            desc: '제도 운영 주체',
+                            mean: '한 국가 또는 기관이 운영하는 제도의 총괄책임자'
+                        } ,
+                    ];
+                    %>
+                    <table class="table-terminology">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="30%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <% titles.forEach((title) => { %>
+                                <th><%= title %></th>
+                            <% }); %>
+                        </tr>
+                        <% terminology.forEach((ter) => { %>
+                            <tr>
+                                <td><%= ter.title %></td>
+                                <td><%= ter.desc %></td>
+                                <td><%= ter.mean %></td>
+                            </tr>
+                        <% }); %>
+                        </tbody>
+                    </table>
+                    <dl class="terminology-items">
+                            <dd>
+                            </dd>
+                    </dl>
                 </div>
+
 
             </div>
         </div>

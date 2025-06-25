@@ -54,10 +54,7 @@ state:
                         <% for(let i = 0; i < 10; i++) { %>
                         <li>
                             <figure>
-                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                                width: 270,
-                                height: 120
-                                }); %>
+                                <img src="<%= process.env.BASE_PATH %>/images/compass/cooper_img1.png" width="270" height="120" alt="">
                                 <figcaption>
                                     삼성 일렉트로닉
                                     <br>국제 표준 인정기구 선정

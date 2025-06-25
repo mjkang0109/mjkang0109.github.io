@@ -1111,8 +1111,6 @@ $imgPath: "../../images/compass";
     @include m.respond-to(map.get(m.$min, 768)) {
         padding: 0 80px;
     }
-    @include m.respond-to(map.get(m.$max, 767)) {
-    }
 
     > li {
         flex: 1;
@@ -1147,8 +1145,6 @@ $imgPath: "../../images/compass";
         font-size: 22px;
         font-family: SCoreDream, sans-serif;
         font-weight: 700;
-        @include m.respond-to(map.get(m.$min, 768)) {
-        }
         @include m.respond-to(map.get(m.$max, 767)) {
             line-height: 26px;
         }
@@ -1174,8 +1170,6 @@ $imgPath: "../../images/compass";
             @include m.respond-to(map.get(m.$min, 768)) {
                 background-size: 81px 100px;
             }
-            @include m.respond-to(map.get(m.$max, 767)) {
-            }
         }
     }
 
@@ -1185,8 +1179,6 @@ $imgPath: "../../images/compass";
             @include m.respond-to(map.get(m.$min, 768)) {
                 background-size: 101px 93px;
             }
-            @include m.respond-to(map.get(m.$max, 767)) {
-            }
         }
     }
 
@@ -1195,8 +1187,6 @@ $imgPath: "../../images/compass";
             background-image: $icon-factory;
             @include m.respond-to(map.get(m.$min, 768)) {
                 background-size: 92px 86px;
-            }
-            @include m.respond-to(map.get(m.$max, 767)) {
             }
         }
     }
@@ -1258,9 +1248,8 @@ $imgPath: "../../images/compass";
         display: flex;
         flex-direction: column-reverse;
         @include m.respond-to(map.get(m.$min, 1024)) {
-        padding-left: 104px;
+            padding-left: 104px;
         }
-
         @include m.respond-to(map.get(m.$max, 1023)) {
             width: 100%;
             margin-top: 50px;

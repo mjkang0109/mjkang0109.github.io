@@ -190,9 +190,13 @@ const generatorViews = () => {
         const srcPath = path.join(pathObj.dir.replace(VIEWS, ''), targetFile);
 
         if (process.env.NODE_ENV === 'development') {
-            process.env.BASE_PATH = path.join(__dirname, DIST);
+            const pathLength = pathObj.dir.split('/').length;
+            const relativePath = '..';
+            const totalPath = new Array(pathLength - 1).fill('').reduce((acc, curr) => acc + '/' + relativePath, '..');
+
+            process.env.BASE_PATH = totalPath;
             process.env.MINIFY = '.min';
-            process.env.IMG_PATH = path.join(__dirname, DIST, IMAGES);
+            process.env.IMG_PATH = `${totalPath}/${IMAGES}`;
         }
 
         const pageFm = frontMatter.read(targetPath);

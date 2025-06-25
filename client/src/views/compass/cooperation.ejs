@@ -53,14 +53,16 @@ state:
                     <ul class="cooperation-companies">
                         <% for(let i = 0; i < 10; i++) { %>
                         <li>
-                            <figure>
-                                <img src="<%= process.env.BASE_PATH %>/images/compass/cooper_img1.png" width="270" height="120" alt="">
-                                <figcaption>
-                                    삼성 일렉트로닉
-                                    <br>국제 표준 인정기구 선정
-                                </figcaption>
-                            </figure>
-                            <span class="date">2023.06.26</span>
+                            <a href="#" title="삼성 일렉트로닉 국제 표준 바로가기">
+                                <figure>
+                                    <img src="<%= process.env.BASE_PATH %>/images/compass/cooper_img1.png" width="270" height="120" alt="">
+                                    <figcaption>
+                                        삼성 일렉트로닉
+                                        <br>국제 표준 인정기구 선정
+                                    </figcaption>
+                                </figure>
+                                <span class="date">2023.06.26</span>
+                            </a>
                         </li>
                         <% } %>
                     </ul>

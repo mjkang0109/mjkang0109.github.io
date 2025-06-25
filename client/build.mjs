@@ -266,7 +266,7 @@ const generatorStyles = () => {
 
         const data = fs.readFileSync(`${SRC}/${styles[i]}`);
 
-        postcss([autoprefixer, postcssNested, cssnano, psmq])
+        postcss([autoprefixer, postcssNested, psmq])
             .process(data, {from: undefined})
             .then(result => {
                 fs.writeFile(`${DIST}/${pathObj.dir}/${pathObj.name}.min.css`, result.css, (err) => {

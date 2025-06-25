@@ -669,7 +669,6 @@
 }
 
 .organ-structure {
-  padding: 65px 82px 55px;
   border: 1px solid #e2e2e2;
   border-radius: 10px;
 }
@@ -1183,6 +1182,9 @@
   .standards .standard-items {
     margin-left: 54px;
   }
+  .organ-structure {
+    padding: 65px 82px 55px;
+  }
   .verification-products {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px 62px;
@@ -1372,6 +1374,9 @@
   }
   .standards .standard-items {
     margin: 30px 0;
+  }
+  .organ-structure {
+    padding: 20px;
   }
   .table-terminology {
     margin-bottom: 30px;

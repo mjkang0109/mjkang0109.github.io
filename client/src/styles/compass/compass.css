@@ -867,9 +867,18 @@
 }
 
 .organ-structure {
-  padding: 65px 82px 55px;
   border: 1px solid #e2e2e2;
   border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .organ-structure {
+    padding: 65px 82px 55px;
+  }
+}
+@media (max-width: 767px) {
+  .organ-structure {
+    padding: 20px;
+  }
 }
 .organ-structure img {
   width: 100%;

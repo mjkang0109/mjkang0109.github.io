@@ -1634,8 +1634,6 @@ dd {
         font-size: 14px;
         line-height: 20px;
         color: #333;
-        @include m.respond-to(map.get(m.$min, 768)) {
-        }
         @include m.respond-to(map.get(m.$max, 767)) {
             margin-bottom: 30px;
         }
@@ -1672,8 +1670,6 @@ dd {
 .apply-signature {
     border: 7px solid #efefef;
     margin-top: 24px;
-    @include m.respond-to(map.get(m.$min, 768)) {
-    }
     @include m.respond-to(map.get(m.$max, 767)) {
         margin-bottom: 30px;
     }

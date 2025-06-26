@@ -1,83 +1,83 @@
 <%
 var panel = panel ?? 0;
 %>
-<% if (panel === 0 || panel === 1) { %>
+<% if (panel === 0 || panel === 2) { %>
     <strong class="form-title">도안 사용을 위한 세부정보</strong>
 
     <ul class="form-items">
         <li>
-            <label for="form-product-<%= panel + 1 %>"
+            <label for="form-product-<%= panel + 1; %>"
                    class="require">검증 받은 제품명</label>
-            <input id="form-product-<%= panel + 1 %>"
+            <input id="form-product-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
         </li>
         <li>
-            <label for="form-type-<%= panel + 1 %>"
+            <label for="form-type-<%= panel + 1; %>"
                    class="require">제품 유형</label>
-            <input id="form-type-<%= panel + 1 %>"
+            <input id="form-type-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
         </li>
         <li>
-            <label for="form-function-<%= panel + 1 %>"
+            <label for="form-function-<%= panel + 1; %>"
                    class="require">제품 기능(제품 설명)</label>
-            <input id="form-function-<%= panel + 1 %>"
+            <input id="form-function-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
         </li>
         <li>
-            <label for="form-unit-<%= panel + 1 %>"
+            <label for="form-unit-<%= panel + 1; %>"
                    class="require">제품의 기능(선언)단위</label>
-            <input id="form-unit-<%= panel + 1 %>"
+            <input id="form-unit-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
         </li>
         <li>
-            <label for="form-rule-<%= panel + 1 %>"
+            <label for="form-rule-<%= panel + 1; %>"
                    class="require">제품범주 규칙명</label>
-            <input id="form-rule-<%= panel + 1 %>"
+            <input id="form-rule-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
         </li>
         <li>
-            <label for="form-category-<%= panel + 1 %>"
+            <label for="form-category-<%= panel + 1; %>"
                    class="require">검증유형 및 검증기관명</label>
-            <input id="form-category-<%= panel + 1 %>"
+            <input id="form-category-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
-            <label for="form-date-<%= panel + 1 %>">검증번호 및 검증일자</label>
-            <input id="form-date-<%= panel + 1 %>"
+            <label for="form-date-<%= panel + 1; %>">검증번호 및 검증일자</label>
+            <input id="form-date-<%= panel + 1; %>"
                    type="text"
                    class="form-input">
         </li>
         <li>
-            <label for="form-system-gate-<%= panel + 1 %>"
+            <label for="form-system-gate-<%= panel + 1; %>"
                    class="require">전과정 단계를 포함한 시스템 경계</label>
             <input type="radio"
-                   id="form-system-gate-<%= panel + 1 %>"
-                   name="radio-system-<%= panel + 1 %>"
+                   id="form-system-gate-<%= panel + 1; %>"
+                   name="radio-system-<%= panel + 1; %>"
                    checked>
-            <label for="form-system-gate-<%= panel + 1 %>">
+            <label for="form-system-gate-<%= panel + 1; %>">
                 Cradle to Gate
             </label>
             <input type="radio"
-                   id="form-system-grave-<%= panel + 1 %>"
-                   name="radio-system-<%= panel + 1 %>">
-            <label for="form-system-grave-<%= panel + 1 %>">
+                   id="form-system-grave-<%= panel + 1; %>"
+                   name="radio-system-<%= panel + 1; %>">
+            <label for="form-system-grave-<%= panel + 1; %>">
                 Cradle to Grave
             </label>
         </li>
         <li>
-            <label for="form-info-<%= panel + 1 %>"
+            <label for="form-info-<%= panel + 1; %>"
                    class="require">기능 또는 선언단위당 정량적 발자국 정보</label>
-            <input id="form-info-<%= panel + 1 %>"
+            <input id="form-info-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
@@ -85,22 +85,22 @@ var panel = panel ?? 0;
                 <label>
                     <input type="text"
                            class="form-input"
-                            <%= i === 0 ? 'required' : '' %>>
+                            <%= i === 0 ? 'required' : ''; %>>
                 </label>
             <% } %>
         </li>
         <li>
-            <label for="form-statistics-<%= panel + 1 %>"
+            <label for="form-statistics-<%= panel + 1; %>"
                    class="require">발자국 산정을 위한 데이터 수집기간</label>
-            <input id="form-statistics-<%= panel + 1 %>"
+            <input id="form-statistics-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
         </li>
         <li>
-            <label for="form-PCR-<%= panel + 1 %>"
+            <label for="form-PCR-<%= panel + 1; %>"
                    class="require">기타 PCR에서 규정한 정보</label>
-            <input id="form-PCR-<%= panel + 1 %>"
+            <input id="form-PCR-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
                    required>
@@ -136,21 +136,22 @@ var panel = panel ?? 0;
         <div class="apply-file">
             <strong>신청기관장 직인 날인 신청서</strong>
             <label><input type="text"
-                          id="file-path-<%= panel + 1 %>"
+                          id="file-path-<%= panel + 1; %>"
                           readonly></label>
-            <label for="upload-file-<%= panel + 1 %>">파일추가</label>
+            <label for="upload-file-<%= panel + 1; %>">파일추가</label>
             <input type="file"
-                   id="upload-file-<%= panel + 1 %>"
+                   id="upload-file-<%= panel + 1; %>"
                    class="input-file"
-                   data-path="file-path-<%= panel + 1 %>"
+                   data-path="file-path-<%= panel + 1; %>"
                    hidden>
             <button type="button"
-                    id="delete-file-<%= panel + 1 %>"
+                    id="delete-file-<%= panel + 1; %>"
                     class="delete-file"
-                    data-target="upload-file-<%= panel + 1 %>">삭제
+                    data-target="upload-file-<%= panel + 1; %>">삭제
             </button>
         </div>
     </div>
+<% } %>
 <% if (panel === 1) { %>
     <strong class="form-title">검증제도 도안 사용 신청서</strong>
 

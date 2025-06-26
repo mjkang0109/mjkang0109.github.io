@@ -47,7 +47,7 @@ state:
                         <h3><%= pageTitle %></h3>
                     </div>
 
-                    <div class="lcidb-about bg-kitech" hidden>
+                    <div class="lcidb-about bg-kitech">
                         <strong class="about-title">한국생산기술연구원</strong>
                         <ul class="about-standards">
                             <li class="about-standard">한국생산기술연구원은 국제통용발자국 검증제도의 운영기관(Scheme Owner)으로서 제도의 원활한 운영과 활성화를 위해 한국인정기구(KOLAS)와 적극적으로 협력하고 있으며, 검증심사원 양성을 위해 검증심사원 교육 및 자격인증기관을 지정 . 관리하고 있습니다.</li>
@@ -55,21 +55,21 @@ state:
                         </ul>
                     </div>
 
-                    <div class="lci_area mt-30 dot" hidden>
+                    <div class="lci_area mt-30 dot">
                         <h3>국내 도안 신청 절차</h3>
                     </div>
-                    <div class="organ-structure" hidden>
+                    <div class="organ-structure">
                         <img src="<%= imgPath %>/domestic.png" alt="">
                     </div>
 
-                    <div class="lci_area mt-30 dot" hidden>
+                    <div class="lci_area mt-30 dot">
                         <h3>해외상호인정 도안 신청 절차</h3>
                     </div>
-                    <div class="organ-structure" hidden>
+                    <div class="organ-structure">
                         <img src="<%= imgPath %>/overseas.png" alt="">
                     </div>
 
-                    <div class="lci_area mt-30 dot" hidden>
+                    <div class="lci_area mt-30 dot">
                         <h3>도안 신청</h3>
                     </div>
 
@@ -149,7 +149,7 @@ state:
                                            id="tab-<%= i + 1 %>"
                                            name="design-apply-type"
                                            role="tab"
-                                           aria-selected="<%= i === 0 %>"
+                                           aria-selected="<%= i === 1 %>"
                                            aria-controls="panel-<%= i + 1 %>"
                                             <%= i === 0 ? ' checked' : '' %>>
                                     <label for="tab-<%= i + 1 %>">

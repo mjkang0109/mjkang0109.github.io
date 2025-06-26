@@ -1370,6 +1370,14 @@ dd {
         font-weight: bold;
     }
 
+    .form-subtitle {
+        display: block;
+        margin: 43px 0 20px;
+        font-size: 15px;
+        color: #333;
+        font-weight: bold;
+    }
+
     input[type="radio"] {
         appearance: none;
         display: none;
@@ -1432,6 +1440,7 @@ dd {
         border-right: 1px solid #dbdbdb;
         font-weight: bold;
         font-size: 14px;
+        line-height: 20px;
         background-color: #fcfcfc;
         @include m.respond-to(map.get(m.$min, 768)) {
             width: 194px;
@@ -1471,6 +1480,7 @@ dd {
     }
 
     input[type="text"] {
+        align-self: stretch;
         height: auto;
         padding: 20px 25px;
         border: none;
@@ -1478,6 +1488,10 @@ dd {
         color: #333;
         @include m.respond-to(map.get(m.$max, 767)) {
             width: 60%;
+        }
+
+        &.red {
+            color: #ec0101;
         }
     }
 }
@@ -1613,11 +1627,56 @@ dd {
             }
         }
     }
+
+    .caution {
+        display: block;
+        margin-top: 28px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+        @include m.respond-to(map.get(m.$min, 768)) {
+        }
+        @include m.respond-to(map.get(m.$max, 767)) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+[id="panel-2"] {
+    .form-items {
+        label {
+            justify-content: flex-start;
+            @include m.respond-to(map.get(m.$min, 768)) {
+            width: 418px;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                width: 40%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-top: none;
+            }
+
+            &:not(.require) {
+                padding-left: 42px;
+                border-left: none;
+
+                + input[type="text"] {
+                    border-top: none;
+                }
+            }
+        }
+
+    }
 }
 
 .apply-signature {
     border: 7px solid #efefef;
     margin-top: 24px;
+    @include m.respond-to(map.get(m.$min, 768)) {
+    }
+    @include m.respond-to(map.get(m.$max, 767)) {
+        margin-bottom: 30px;
+    }
 
     > ul {
         padding: 46px 30px 50px;
@@ -1638,6 +1697,7 @@ dd {
             align-items: baseline;
             color: #000;
             font-size: 16px;
+
             font-weight: 500;
             margin-right: 24px;
         }

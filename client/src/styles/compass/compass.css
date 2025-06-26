@@ -1407,6 +1407,13 @@ dd {
   color: #30326d;
   font-weight: bold;
 }
+.form-design .form-subtitle {
+  display: block;
+  margin: 43px 0 20px;
+  font-size: 15px;
+  color: #333;
+  font-weight: bold;
+}
 .form-design input[type=radio] {
   appearance: none;
   display: none;
@@ -1466,6 +1473,7 @@ dd {
   border-right: 1px solid #dbdbdb;
   font-weight: bold;
   font-size: 14px;
+  line-height: 20px;
   background-color: #fcfcfc;
 }
 @media (min-width: 768px) {
@@ -1508,6 +1516,7 @@ dd {
   }
 }
 .form-items input[type=text] {
+  align-self: stretch;
   height: auto;
   padding: 20px 25px;
   border: none;
@@ -1518,6 +1527,9 @@ dd {
   .form-items input[type=text] {
     width: 60%;
   }
+}
+.form-items input[type=text].red {
+  color: #ec0101;
 }
 
 [role=tablist] {
@@ -1646,10 +1658,51 @@ dd {
     padding: 0;
   }
 }
+[role=tabpanel] .caution {
+  display: block;
+  margin-top: 28px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .caution {
+    margin-bottom: 30px;
+  }
+}
+
+[id=panel-2] .form-items label {
+  justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  [id=panel-2] .form-items label {
+    width: 418px;
+  }
+}
+@media (max-width: 767px) {
+  [id=panel-2] .form-items label {
+    width: 40%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: none;
+  }
+}
+[id=panel-2] .form-items label:not(.require) {
+  padding-left: 42px;
+  border-left: none;
+}
+[id=panel-2] .form-items label:not(.require) + input[type=text] {
+  border-top: none;
+}
 
 .apply-signature {
   border: 7px solid #efefef;
   margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .apply-signature {
+    margin-bottom: 30px;
+  }
 }
 .apply-signature > ul {
   padding: 46px 30px 50px;

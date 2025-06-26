@@ -1133,6 +1133,13 @@ dd {
   color: #30326d;
   font-weight: bold;
 }
+.form-design .form-subtitle {
+  display: block;
+  margin: 43px 0 20px;
+  font-size: 15px;
+  color: #333;
+  font-weight: bold;
+}
 .form-design input[type=radio] {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1200,6 +1207,7 @@ dd {
   border-right: 1px solid #dbdbdb;
   font-weight: bold;
   font-size: 14px;
+  line-height: 20px;
   background-color: #fcfcfc;
 }
 .form-items label.require {
@@ -1215,11 +1223,16 @@ dd {
   border-left: 1px solid #dbdbdb;
 }
 .form-items input[type=text] {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   height: auto;
   padding: 20px 25px;
   border: none;
   font-size: 14px;
   color: #333;
+}
+.form-items input[type=text].red {
+  color: #ec0101;
 }
 
 [role=tablist] {
@@ -1264,6 +1277,26 @@ dd {
 }
 [role=tabpanel] li:has(label[for*=form-info]) label:not(:first-of-type) {
   border-right: none;
+}
+[role=tabpanel] .caution {
+  display: block;
+  margin-top: 28px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+
+[id=panel-2] .form-items label {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+[id=panel-2] .form-items label:not(.require) {
+  padding-left: 42px;
+  border-left: none;
+}
+[id=panel-2] .form-items label:not(.require) + input[type=text] {
+  border-top: none;
 }
 
 .apply-signature {
@@ -1569,6 +1602,9 @@ dd {
   [role=tabpanel] li:has(label[for*=form-info]) label:not(:first-of-type) {
     width: auto;
   }
+  [id=panel-2] .form-items label {
+    width: 418px;
+  }
   .apply-signature .signature .stamp button {
     margin-left: 34px;
   }
@@ -1851,6 +1887,18 @@ dd {
   }
   [role=tabpanel] li:has(label[for*=form-info]) label:not(:first-of-type) {
     padding: 0;
+  }
+  [role=tabpanel] .caution {
+    margin-bottom: 30px;
+  }
+  [id=panel-2] .form-items label {
+    width: 40%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: none;
+  }
+  .apply-signature {
+    margin-bottom: 30px;
   }
   .apply-signature .signature {
     -webkit-box-orient: vertical;

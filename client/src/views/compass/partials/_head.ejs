@@ -19,6 +19,11 @@ var title = hostName + ' - ' + title || hostName;
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">-->
     <link rel="stylesheet"
           href="<%= process.env.BASE_PATH %>/styles/compass/compass<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+    <!-- Noto sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <!-- Noto sans -->
     <script type="text/javascript" src="<%= path.scripts %>/js/aos.js"></script>
     <script type="text/javascript" src="<%= path.scripts %>/js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="<%= path.scripts %>/js/jquery-migrate-1.4.1.min.js"></script>

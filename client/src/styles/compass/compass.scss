@@ -1903,7 +1903,7 @@ dd {
     .apply-file {
         margin-top: 0;
         @include m.respond-to(map.get(m.$min, 768)) {
-        padding: 6px 0;
+            padding: 6px 0;
         }
         @include m.respond-to(map.get(m.$max, 767)) {
             padding: 40px 20px;
@@ -1920,8 +1920,6 @@ dd {
             }
 
             + label {
-                @include m.respond-to(map.get(m.$min, 768)) {
-                }
                 @include m.respond-to(map.get(m.$max, 767)) {
                     width: 100%;
                     margin-bottom: 10px;
@@ -1959,8 +1957,6 @@ dd {
         display: flex;
         width: 100%;
         border-top: 1px solid #d2d2d2;
-        @include m.respond-to(map.get(m.$min, 768)) {
-        }
         @include m.respond-to(map.get(m.$max, 767)) {
             flex-wrap: wrap;
         }
@@ -2008,8 +2004,6 @@ dd {
         flex: 1;
 
         &:not(:only-of-type) {
-            @include m.respond-to(map.get(m.$min, 768)) {
-            }
             @include m.respond-to(map.get(m.$max, 767)) {
                 flex: auto;
                 width: 100%;
@@ -2017,8 +2011,6 @@ dd {
 
             .column {
                 label[for] {
-                    @include m.respond-to(map.get(m.$min, 768)) {
-                    }
                     @include m.respond-to(map.get(m.$max, 767)) {
                         border-top: none;
                     }
@@ -2059,8 +2051,6 @@ dd {
                     flex: 1;
 
                     &:first-of-type {
-                        @include m.respond-to(map.get(m.$min, 768)) {
-                        }
                         @include m.respond-to(map.get(m.$max, 767)) {
                             border-top: 1px solid #d2d2d2;
                         }
@@ -2075,8 +2065,6 @@ dd {
         justify-content: center;
         align-items: center;
         width: 100%;
-        @include m.respond-to(map.get(m.$min, 768)) {
-        }
         @include m.respond-to(map.get(m.$max, 767)) {
             flex-wrap: wrap;
         }
@@ -2108,20 +2096,14 @@ dd {
                 @include m.respond-to(map.get(m.$min, 768)) {
                     border-left: 1px solid #d2d2d2;
                 }
-                @include m.respond-to(map.get(m.$max, 767)) {
-                }
             }
 
             &:not(:first-of-type) {
-                @include m.respond-to(map.get(m.$min, 768)) {
-                }
                 @include m.respond-to(map.get(m.$max, 767)) {
                     border-top: 1px solid #d2d2d2;
                 }
 
                 + input[type=text] {
-                    @include m.respond-to(map.get(m.$min, 768)) {
-                    }
                     @include m.respond-to(map.get(m.$max, 767)) {
                         align-self: stretch;
                         border-top: 1px solid #d2d2d2;
@@ -2135,8 +2117,6 @@ dd {
             padding: 22px 0;
             font-size: 14px;
             color: #333;
-            @include m.respond-to(map.get(m.$min, 768)) {
-            }
             @include m.respond-to(map.get(m.$max, 767)) {
                 width: 70%;
             }

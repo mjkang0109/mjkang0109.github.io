@@ -24,7 +24,8 @@ th,
 li,
 a,
 dt,
-dd {
+dd,
+caption {
     font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -2138,6 +2139,115 @@ dd {
                 &:after {
                     left: 27px;
                 }
+            }
+        }
+    }
+}
+
+.detail-wrap {
+    text-align: center;
+    padding: 40px 0 64px;
+
+    .content-title {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 40px;
+        font-size: 17px;
+        line-height: 26px;
+        font-weight: bold;
+        color: #000;
+        border: 1px solid #cacaca;
+        border-radius: 50px;
+        word-break: keep-all;
+    }
+
+    .thumbs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 54px;
+        @include m.respond-to(map.get(m.$min, 768)) {
+            gap: 70px;
+        }
+        @include m.respond-to(map.get(m.$max, 767)) {
+            gap: 20px;
+        }
+
+        img {
+            display: block;
+            height: auto;
+        }
+    }
+
+    .button-download {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 54px;
+        padding: 14px 30px;
+        background-color: #004993;
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .detail-tables {
+        display: grid;
+        gap: 55px 60px;
+        margin-top: 50px;
+        @include m.respond-to(map.get(m.$min, 768)) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .detail-table {
+        border-top: 1px solid #222;
+        align-self: start;
+
+        caption {
+            caption-side: top;
+            overflow: visible;
+            width: auto;
+            height: auto;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: left;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 18px 20px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        th {
+            background-color: #f3f3f3;
+
+            &:first-child {
+                border-right: 1px solid #d9d9d9;
+            }
+
+            + td {
+                text-align: left;
+            }
+        }
+
+        td {
+            &:first-child {
+                border-right: 1px solid #d9d9d9;
+            }
+        }
+
+        .logo {
+            img {
+                width: auto;
+                height: auto;
+                vertical-align: middle;
+                margin-left: 18px;
             }
         }
     }

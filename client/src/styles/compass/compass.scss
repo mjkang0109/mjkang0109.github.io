@@ -1323,6 +1323,12 @@ dd {
 }
 
 .form-design {
+    &:has(.form-docs) {
+        .notice {
+            justify-content: flex-end;
+        }
+    }
+
     .notice {
         display: flex;
         width: 100%;
@@ -1668,7 +1674,7 @@ dd {
         label {
             justify-content: flex-start;
             @include m.respond-to(map.get(m.$min, 768)) {
-            width: 418px;
+                width: 418px;
             }
             @include m.respond-to(map.get(m.$max, 767)) {
                 width: 40%;
@@ -1686,7 +1692,6 @@ dd {
                 }
             }
         }
-
     }
 }
 
@@ -1716,7 +1721,6 @@ dd {
             align-items: baseline;
             color: #000;
             font-size: 16px;
-
             font-weight: 500;
             margin-right: 24px;
         }
@@ -1740,6 +1744,7 @@ dd {
         width: 100%;
         margin-top: 40px;
         font-size: 16px;
+        font-weight: bold;
         @include m.respond-to(map.get(m.$max, 767)) {
             flex-direction: column;
             gap: 30px;
@@ -1752,7 +1757,7 @@ dd {
         .stamp {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 10px;
 
             button {
                 display: inline-flex;
@@ -1838,6 +1843,322 @@ dd {
         }
         @include m.respond-to(map.get(m.$max, 767)) {
             width: 70px;
+        }
+    }
+}
+
+.apply-files {
+    border-top: 6px solid #efefef;
+    @include m.respond-to(map.get(m.$min, 768)) {
+        padding: 0 50px 36px;
+    }
+    @include m.respond-to(map.get(m.$max, 767)) {
+        padding: 30px;
+    }
+
+    > strong {
+        display: block;
+        margin-top: 32px;
+        font-size: 16px;
+        color: #333;
+        font-weight: bold;
+
+        + p {
+            display: flex;
+            gap: 40px;
+            margin-top: 16px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+            @include m.respond-to(map.get(m.$min, 768)) {
+                justify-content: center;
+                align-items: center;
+                padding: 30px 0;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+
+            button {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 12px 18px;
+                border: 1px solid #c4c4c4;
+                font-size: 14px;
+                color: #000;
+                font-weight: bold;
+                @include m.respond-to(map.get(m.$min, 768)) {
+                    margin-left: 24px;
+                }
+                @include m.respond-to(map.get(m.$max, 767)) {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .apply-file {
+        margin-top: 0;
+        @include m.respond-to(map.get(m.$min, 768)) {
+        padding: 6px 0;
+        }
+        @include m.respond-to(map.get(m.$max, 767)) {
+            padding: 40px 20px;
+        }
+
+        > strong {
+            flex-shrink: 0;
+            @include m.respond-to(map.get(m.$min, 768)) {
+                width: 188px;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            + label {
+                @include m.respond-to(map.get(m.$min, 768)) {
+                }
+                @include m.respond-to(map.get(m.$max, 767)) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                input[type=text] {
+                    width: 100%;
+                }
+            }
+        }
+
+        &:first-of-type {
+            margin-top: 16px;
+            padding-top: 34px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        &:last-of-type {
+            padding-bottom: 34px;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+}
+
+.form-docs {
+    border-bottom: 1px solid #d2d2d2;
+
+    + .apply-signature {
+        .signature {
+            padding-bottom: 40px;
+        }
+    }
+
+    li {
+        display: flex;
+        width: 100%;
+        border-top: 1px solid #d2d2d2;
+        @include m.respond-to(map.get(m.$min, 768)) {
+        }
+        @include m.respond-to(map.get(m.$max, 767)) {
+            flex-wrap: wrap;
+        }
+
+        &:has(label[for="carbon-footprint"]) {
+            .column {
+                justify-content: flex-start;
+            }
+        }
+
+        > strong {
+            display: flex;
+            justify-content: center;
+            align-self: stretch;
+            align-items: center;
+            flex-shrink: 0;
+            background-color: #fcfcfc;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: bold;
+            @include m.respond-to(map.get(m.$min, 768)) {
+                width: 130px;
+                border-right: 1px solid #d2d2d2;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                width: 100%;
+                padding: 20px 0;
+                border-bottom: 1px solid #d2d2d2;
+            }
+
+            + .inputs {
+                label[for] {
+                    @include m.respond-to(map.get(m.$min, 768)) {
+                        width: 135px;
+                    }
+                    @include m.respond-to(map.get(m.$max, 767)) {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+    .inputs {
+        flex: 1;
+
+        &:not(:only-of-type) {
+            @include m.respond-to(map.get(m.$min, 768)) {
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                flex: auto;
+                width: 100%;
+            }
+
+            .column {
+                label[for] {
+                    @include m.respond-to(map.get(m.$min, 768)) {
+                    }
+                    @include m.respond-to(map.get(m.$max, 767)) {
+                        border-top: none;
+                    }
+                }
+            }
+        }
+
+        + .inputs {
+            display: flex;
+
+            > strong {
+                flex-shrink: 0;
+                display: flex;
+                align-self: stretch;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcfcfc;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: bold;
+                border-right: 1px solid #d2d2d2;
+                @include m.respond-to(map.get(m.$min, 768)) {
+                    border-left: 1px solid #d2d2d2;
+                    width: 135px;
+                }
+                @include m.respond-to(map.get(m.$max, 767)) {
+                    border-top: 1px solid #d2d2d2;
+                    width: 30%;
+                }
+            }
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+
+                .column {
+                    flex: 1;
+
+                    &:first-of-type {
+                        @include m.respond-to(map.get(m.$min, 768)) {
+                        }
+                        @include m.respond-to(map.get(m.$max, 767)) {
+                            border-top: 1px solid #d2d2d2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        @include m.respond-to(map.get(m.$min, 768)) {
+        }
+        @include m.respond-to(map.get(m.$max, 767)) {
+            flex-wrap: wrap;
+        }
+
+        &:not(:first-of-type) {
+            border-top: 1px solid #d2d2d2;
+        }
+
+        label[for] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            flex-shrink: 0;
+            background-color: #fcfcfc;
+            padding: 20px 0;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: bold;
+            border-right: 1px solid #d2d2d2;
+            @include m.respond-to(map.get(m.$min, 768)) {
+                width: 265px;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                width: 30%;
+            }
+
+            &:not(:first-of-type, [for*=footprint]) {
+                @include m.respond-to(map.get(m.$min, 768)) {
+                    border-left: 1px solid #d2d2d2;
+                }
+                @include m.respond-to(map.get(m.$max, 767)) {
+                }
+            }
+
+            &:not(:first-of-type) {
+                @include m.respond-to(map.get(m.$min, 768)) {
+                }
+                @include m.respond-to(map.get(m.$max, 767)) {
+                    border-top: 1px solid #d2d2d2;
+                }
+
+                + input[type=text] {
+                    @include m.respond-to(map.get(m.$min, 768)) {
+                    }
+                    @include m.respond-to(map.get(m.$max, 767)) {
+                        align-self: stretch;
+                        border-top: 1px solid #d2d2d2;
+                    }
+                }
+            }
+        }
+
+        input[type=text] {
+            border: none;
+            padding: 22px 0;
+            font-size: 14px;
+            color: #333;
+            @include m.respond-to(map.get(m.$min, 768)) {
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                width: 70%;
+            }
+        }
+
+        input[type=radio] {
+            + label {
+                width: auto;
+                flex: 1;
+                justify-content: flex-start;
+                border: none;
+                background-color: transparent;
+                padding-left: 48px;
+
+                &:before {
+                    left: 22px;
+                }
+
+                &:after {
+                    left: 27px;
+                }
+            }
         }
     }
 }

@@ -1713,8 +1713,6 @@ caption {
 }
 .detail-wrap .detail-table {
   border-top: 1px solid #222;
-  -ms-flex-item-align: start;
-      align-self: start;
 }
 .detail-wrap .detail-table caption {
   caption-side: top;
@@ -1971,6 +1969,10 @@ caption {
   }
   .detail-wrap .detail-tables {
     grid-template-columns: 1fr 1fr;
+  }
+  .detail-wrap .detail-table {
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
   }
 }
 
@@ -2366,5 +2368,9 @@ caption {
   }
   .detail-wrap .thumbs {
     gap: 20px;
+  }
+  .detail-wrap .detail-table {
+    -ms-flex-item-align: start;
+        align-self: start;
   }
 }

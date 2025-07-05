@@ -2237,7 +2237,16 @@ caption {
 }
 .detail-wrap .detail-table {
   border-top: 1px solid #222;
-  align-self: start;
+}
+@media (min-width: 768px) {
+  .detail-wrap .detail-table {
+    align-self: stretch;
+  }
+}
+@media (max-width: 767px) {
+  .detail-wrap .detail-table {
+    align-self: start;
+  }
 }
 .detail-wrap .detail-table caption {
   caption-side: top;

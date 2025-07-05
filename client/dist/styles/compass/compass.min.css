@@ -253,7 +253,7 @@ caption {
 }
 .lcidb-visual .visual-title {
   position: relative;
-  font-family: "EliceDigitalBaeum", serif;
+  font-size: 43px !important;
   color: #fff;
 }
 .lcidb-visual .visual-title > b {
@@ -272,9 +272,9 @@ caption {
   background-position: 50% 50%;
 }
 .lcidb-visual .visual-description {
-  margin-top: 45px;
-  font-size: 20px;
-  line-height: 36px;
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 28px;
   color: #fff;
   font-family: "SCoreDream", serif;
   font-weight: 600;
@@ -468,8 +468,8 @@ caption {
 
 .lcidb-schedule .schedule-description {
   display: block;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 17px;
+  line-height: 26px;
   font-family: "SCoreDream", serif;
   font-weight: 600;
 }
@@ -556,14 +556,14 @@ caption {
   margin-top: 48px;
 }
 .lcidb-about p[class=about-standards] {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 26px;
   color: #1c1d20;
 }
 .lcidb-about .about-standard {
   position: relative;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 22px;
   word-break: keep-all;
   padding-left: 10px;
   color: #1c1d20;
@@ -661,7 +661,7 @@ caption {
           transform: translateX(-50%);
 }
 .standards .standard-items {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 26px;
   word-break: keep-all;
   color: #333;
@@ -687,7 +687,7 @@ caption {
   border-radius: 3px;
 }
 .standards .standard-items .standard-name {
-  font-size: 22px;
+  font-size: 21px;
   color: #000;
   font-family: SCoreDream, serif;
   font-weight: 800;
@@ -709,24 +709,27 @@ caption {
   margin-bottom: 30px;
 }
 .organ-about .organ-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px auto;
   border-bottom: 1px solid #d2d2d2;
-  -ms-flex-item-align: start;
-      align-self: start;
 }
 .organ-about .organ-items dt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 54px;
+  height: 60px;
   border-top: 2px solid #173674;
   background-color: #f9f9f9;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 20px;
   color: #30326d;
   font-weight: bold;
 }
@@ -737,7 +740,7 @@ caption {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
   border-top: 1px solid #d2d2d2;
 }
@@ -965,14 +968,15 @@ caption {
 .ipef-elements .ipef-title {
   display: block;
   margin-top: 50px;
-  font-size: 22px;
+  font-size: 20px;
+  line-height: 28px;
   font-family: SCoreDream, sans-serif;
   font-weight: 700;
 }
 .ipef-elements .ipef-description {
   margin: 20px auto 0;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 15px;
+  line-height: 22px;
   color: #333;
   word-break: keep-all;
   max-width: 270px;

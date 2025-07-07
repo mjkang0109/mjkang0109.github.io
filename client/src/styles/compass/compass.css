@@ -323,7 +323,7 @@ caption {
 }
 .lcidb-visual .visual-title {
   position: relative;
-  font-size: 43px !important;
+  font-family: "EliceDigitalBaeum", serif;
   color: #fff;
 }
 @media (min-width: 768px) {
@@ -367,9 +367,9 @@ caption {
   }
 }
 .lcidb-visual .visual-description {
-  margin-top: 30px;
-  font-size: 18px;
-  line-height: 28px;
+  margin-top: 45px;
+  font-size: 20px;
+  line-height: 36px;
   color: #fff;
   font-family: "SCoreDream", serif;
   font-weight: 600;
@@ -609,8 +609,8 @@ caption {
 
 .lcidb-schedule .schedule-description {
   display: block;
-  font-size: 17px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 32px;
   font-family: "SCoreDream", serif;
   font-weight: 600;
 }
@@ -767,14 +767,14 @@ caption {
   margin-top: 48px;
 }
 .lcidb-about p[class=about-standards] {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 26px;
   color: #1c1d20;
 }
 .lcidb-about .about-standard {
   position: relative;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 26px;
   word-break: keep-all;
   padding-left: 10px;
   color: #1c1d20;
@@ -861,7 +861,7 @@ caption {
   transform: translateX(-50%);
 }
 .standards .standard-items {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 26px;
   word-break: keep-all;
   color: #333;
@@ -897,7 +897,7 @@ caption {
   border-radius: 3px;
 }
 .standards .standard-items .standard-name {
-  font-size: 21px;
+  font-size: 22px;
   color: #000;
   font-family: SCoreDream, serif;
   font-weight: 800;
@@ -934,28 +934,24 @@ caption {
   }
 }
 .organ-about .organ-items {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 60px auto;
   border-bottom: 1px solid #d2d2d2;
+  align-self: start;
 }
 .organ-about .organ-items dt {
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 54px;
   border-top: 2px solid #173674;
   background-color: #f9f9f9;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 15px;
   color: #30326d;
   font-weight: bold;
 }
 .organ-about .organ-items dd {
   display: flex;
   align-items: stretch;
-  font-size: 13px;
+  font-size: 14px;
   color: #333;
   border-top: 1px solid #d2d2d2;
 }
@@ -1223,8 +1219,7 @@ caption {
 .ipef-elements .ipef-title {
   display: block;
   margin-top: 50px;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 22px;
   font-family: SCoreDream, sans-serif;
   font-weight: 700;
 }
@@ -1235,8 +1230,8 @@ caption {
 }
 .ipef-elements .ipef-description {
   margin: 20px auto 0;
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 26px;
   color: #333;
   word-break: keep-all;
   max-width: 270px;
@@ -1564,6 +1559,23 @@ caption {
   color: #ec0101;
 }
 
+.link-apply {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #206cab;
+  font-size: 16px;
+  color: #fff;
+}
+.link-apply:hover {
+  color: #fff;
+}
+.link-apply-wrap {
+  margin-top: 63px;
+  text-align: center;
+}
+
 [role=tablist] {
   display: flex;
   justify-content: space-between;
@@ -1631,63 +1643,154 @@ caption {
 }
 @media (min-width: 768px) {
   [role=tabpanel] li:has(label[for*=form-info]) {
-    grid-template-columns: 314px 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 314px 1fr;
   }
 }
 @media (max-width: 767px) {
   [role=tabpanel] li:has(label[for*=form-info]) {
-    grid-template-columns: 40% 30% 30%;
+    grid-template-columns: 40% 60%;
   }
 }
-[role=tabpanel] li:has(label[for*=form-info]) input[type=text] {
-  width: 100%;
-  box-sizing: border-box;
+[role=tabpanel] li:has(label[for*=form-info]) > label[for] {
+  grid-row: 1/span 2;
 }
 @media (max-width: 767px) {
-  [role=tabpanel] li:has(label[for*=form-info]) label {
+  [role=tabpanel] li:has(label[for*=form-info]) > label[for] {
     width: 100%;
   }
 }
+[role=tabpanel] .column {
+  display: flex;
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .column {
+    flex-wrap: wrap;
+  }
+}
+[role=tabpanel] .column:first-of-type {
+  border-bottom: solid 1px #dbdbdb;
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .column br {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
-  [role=tabpanel] li:has(label[for*=form-info]) label:first-of-type {
-    grid-row: 1/span 2;
+  [role=tabpanel] .column > label[for] {
+    width: 100px;
   }
 }
 @media (max-width: 767px) {
-  [role=tabpanel] li:has(label[for*=form-info]) label:first-of-type {
-    grid-row: 1/span 6;
-    width: auto;
+  [role=tabpanel] .column > label[for] {
+    justify-content: center;
+    border-right: none;
+    border-bottom: solid 1px #dbdbdb;
+    width: 100%;
+    padding: 20px;
   }
 }
+[role=tabpanel] .column > label[for]:first-of-type {
+  border-left: none;
+}
 @media (max-width: 767px) {
-  [role=tabpanel] li:has(label[for*=form-info]) label:nth-of-type(3), [role=tabpanel] li:has(label[for*=form-info]) label:nth-of-type(9) {
-    grid-column: 2/span 1;
-  }
-  [role=tabpanel] li:has(label[for*=form-info]) label:nth-of-type(2) {
+  [role=tabpanel] .column > label[for]:first-of-type {
     border-top: none;
   }
-  [role=tabpanel] li:has(label[for*=form-info]) label:nth-of-type(even) {
-    border-left: 1px solid #dbdbdb;
-  }
 }
-[role=tabpanel] li:has(label[for*=form-info]) label:nth-of-type(7) {
-  grid-column: 2/span 1;
-  border: none;
+[role=tabpanel] .column input[type=text] {
+  width: 50px;
+  height: 36px;
+  padding: 14px;
+  border: 1px solid #d5d5d5;
 }
-[role=tabpanel] li:has(label[for*=form-info]) label:nth-of-type(n+7) {
-  border-top: 1px solid #dbdbdb;
-}
-[role=tabpanel] li:has(label[for*=form-info]) label:not(:first-of-type) {
-  border-right: none;
+[role=tabpanel] .column .column-cell {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 14px 5px 14px 15px;
 }
 @media (min-width: 768px) {
-  [role=tabpanel] li:has(label[for*=form-info]) label:not(:first-of-type) {
-    width: auto;
+  [role=tabpanel] .column .column-cell {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
-  [role=tabpanel] li:has(label[for*=form-info]) label:not(:first-of-type) {
-    padding: 0;
+  [role=tabpanel] .column .column-cell {
+    flex-wrap: wrap;
+  }
+}
+[role=tabpanel] .column .column-cell label[for] {
+  width: auto;
+  border: none;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .column .column-cell label[for] {
+    padding-left: 0;
+  }
+}
+[role=tabpanel] .column .column-cell label[for] input[type=text] {
+  margin-right: 8px;
+}
+[role=tabpanel] .column .unit {
+  font-size: 13px;
+  padding: 10px 0;
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .column .unit {
+    display: flex;
+  }
+}
+[role=tabpanel] .column .icon-dot {
+  align-self: flex-end;
+  padding: 0 4px;
+}
+[role=tabpanel] .search-period {
+  padding: 14px 15px;
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .search-period {
+    width: 60%;
+  }
+}
+[role=tabpanel] .search-period input[type=text] {
+  flex-shrink: 0;
+  height: 34px;
+  border: 1px solid #d5d5d5;
+  padding: 14px;
+}
+@media (min-width: 768px) {
+  [role=tabpanel] .search-period input[type=text] {
+    width: 130px;
+  }
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .search-period input[type=text] {
+    flex: 0 0 calc(50% - 7px);
+    padding: 0 30px 0 14px;
+  }
+}
+[role=tabpanel] .search-period label[for] {
+  border: none;
+}
+@media (min-width: 768px) {
+  [role=tabpanel] .search-period label[for] {
+    width: 130px;
+  }
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .search-period label[for] {
+    flex: 0 0 calc(50% - 7px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+[role=tabpanel] .search-period label[for] input[type=text] {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  [role=tabpanel] .search-period label[for] input[type=text] {
+    flex: 1 1 auto;
   }
 }
 [role=tabpanel] .caution {
@@ -2242,16 +2345,7 @@ caption {
 }
 .detail-wrap .detail-table {
   border-top: 1px solid #222;
-}
-@media (min-width: 768px) {
-  .detail-wrap .detail-table {
-    align-self: stretch;
-  }
-}
-@media (max-width: 767px) {
-  .detail-wrap .detail-table {
-    align-self: start;
-  }
+  align-self: start;
 }
 .detail-wrap .detail-table caption {
   caption-side: top;

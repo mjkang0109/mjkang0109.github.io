@@ -11,6 +11,7 @@ var panel = panel ?? 0;
             <input id="form-product-<%= panel + 1; %>"
                    type="text"
                    class="form-input"
+                   placeholder="(해당되는 경우, 모델명 및 모델번호 등)"
                    required>
         </li>
         <li>
@@ -151,6 +152,54 @@ var panel = panel ?? 0;
             </button>
         </div>
     </div>
+
+    <% if (panel === 2) { %>
+        <strong class="form-subtitle">해외 검증제도 도안 사용 신청서(영문 작성 필요)</strong>
+        <ul class="form-items">
+            <li>
+                <label for="form-name-<%= panel + 1 %>">Producer name <br>(제작자 성명)</label>
+                <input id="form-name-<%= panel + 1 %>"
+                       type="text"
+                       class="form-input">
+            </li>
+            <li>
+                <label for="form-designation-<%= panel + 1 %>">Commercial name of the product <br>(제품의 상업적
+                    명칭)</label>
+                <input id="form-designation-<%= panel + 1 %>"
+                       type="text"
+                       class="form-input">
+            </li>
+            <li>
+                <label for="form-type-<%= panel + 1 %>">Product type <br>(제품유형)</label>
+                <input id="form-type-<%= panel + 1 %>"
+                       type="text"
+                       class="form-input">
+            </li>
+            <li>
+                <label for="form-explanation-<%= panel + 1 %>">Product description <br>(제품설명)</label>
+                <input id="form-explanation-<%= panel + 1 %>"
+                       type="text"
+                       class="form-input">
+            </li>
+            <li>
+                <label for="form-number-<%= panel + 1 %>">Registration number <br>(등록번호)</label>
+                <input id="form-number-<%= panel + 1 %>"
+                       type="text"
+                       class="form-input">
+            </li>
+            <li>
+                <label for="form-link-<%= panel + 1 %>">Registration web-link <br>(등록 웹링크)</label>
+                <input id="form-link-<%= panel + 1 %>"
+                       type="text"
+                       class="form-input">
+            </li>
+        </ul>
+        <strong class="caution">Please attach the company logo, a product picture (in jpg,
+            .PNG format) and the verificationstatement issued by the verification body.
+            <br>(회사 로고, 제품 사진(jpg, .PNG 형식) 및 인증 기관에서 발급한 인증 명세서를 첨부해 주시기 바랍니다.)
+        </strong>
+    <% } %>
+
 <% } %>
 <% if (panel === 1) { %>
     <strong class="form-title">검증제도 도안 사용 신청서</strong>
@@ -162,6 +211,7 @@ var panel = panel ?? 0;
             <input id="form-certification-<%= panel + 1; %>"
                    type="text"
                    class="form-input red"
+                   placeholder="신청자가 승인번호 직접 입력 (예:25687896)"
                    required>
         </li>
     </ul>

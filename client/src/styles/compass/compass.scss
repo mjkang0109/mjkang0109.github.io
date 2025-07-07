@@ -1626,8 +1626,6 @@ caption {
 
             > label[for] {
                 grid-row: 1 / span 2;
-                @include m.respond-to(map.get(m.$min, 768)) {
-                }
                 @include m.respond-to(map.get(m.$max, 767)) {
                     width: 100%;
                 }
@@ -1637,23 +1635,15 @@ caption {
 
     .column {
         display: flex;
-        @include m.respond-to(map.get(m.$min, 768)) {
-        }
         @include m.respond-to(map.get(m.$max, 767)) {
             flex-wrap: wrap;
         }
 
         &:first-of-type {
             border-bottom: solid 1px #dbdbdb;
-            @include m.respond-to(map.get(m.$min, 768)) {
-            }
-            @include m.respond-to(map.get(m.$max, 767)) {
-            }
         }
 
         br {
-            @include m.respond-to(map.get(m.$min, 768)) {
-            }
             @include m.respond-to(map.get(m.$max, 767)) {
                 display: none;
             }
@@ -1673,8 +1663,6 @@ caption {
 
             &:first-of-type {
                 border-left: none;
-                @include m.respond-to(map.get(m.$min, 768)) {
-                }
                 @include m.respond-to(map.get(m.$max, 767)) {
                     border-top: none;
                 }
@@ -1704,8 +1692,6 @@ caption {
                 width: auto;
                 border: none;
                 background-color: transparent;
-                @include m.respond-to(map.get(m.$min, 768)) {
-                }
                 @include m.respond-to(map.get(m.$max, 767)) {
                     padding-left: 0;
                 }
@@ -1719,8 +1705,6 @@ caption {
         .unit {
             font-size: 13px;
             padding: 10px 0;
-            @include m.respond-to(map.get(m.$min, 768)) {
-            }
             @include m.respond-to(map.get(m.$max, 767)) {
                 display: flex;
             }
@@ -1734,8 +1718,6 @@ caption {
 
     .search-period {
         padding: 14px 15px;
-        @include m.respond-to(map.get(m.$min, 768)) {
-        }
         @include m.respond-to(map.get(m.$max, 767)) {
             width: 60%;
         }
@@ -1767,8 +1749,6 @@ caption {
 
             input[type="text"] {
                 width: 100%;
-                @include m.respond-to(map.get(m.$min, 768)) {
-                }
                 @include m.respond-to(map.get(m.$max, 767)) {
                     flex: 1 1 auto;
                 }

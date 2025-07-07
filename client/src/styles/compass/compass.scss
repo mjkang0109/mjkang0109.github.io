@@ -2202,12 +2202,7 @@ caption {
 
     .detail-table {
         border-top: 1px solid #222;
-        @include m.respond-to(map.get(m.$min, 768)) {
-            align-self: stretch;
-        }
-        @include m.respond-to(map.get(m.$max, 767)) {
-            align-self: start;
-        }
+        align-self: start;
 
         caption {
             caption-side: top;

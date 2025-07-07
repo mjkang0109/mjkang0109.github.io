@@ -271,7 +271,7 @@ caption {
 
     .visual-title {
         position: relative;
-        font-size: 43px !important;
+        font-family: "EliceDigitalBaeum", serif;
         color: #fff;
         @include m.respond-to(map.get(m.$min, 768)) {
             white-space: nowrap;
@@ -310,9 +310,9 @@ caption {
     }
 
     .visual-description {
-        margin-top: 30px;
-        font-size: 18px;
-        line-height: 28px;
+        margin-top: 45px;
+        font-size: 20px;
+        line-height: 36px;
         color: #fff;
         font-family: "SCoreDream", serif;
         font-weight: 600;
@@ -553,8 +553,8 @@ caption {
 .lcidb-schedule {
     .schedule-description {
         display: block;
-        font-size: 17px;
-        line-height: 26px;
+        font-size: 20px;
+        line-height: 32px;
         font-family: "SCoreDream", serif;
         font-weight: 600;
     }
@@ -701,15 +701,15 @@ caption {
     }
 
     p[class="about-standards"] {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 26px;
         color: #1c1d20;
     }
 
     .about-standard {
         position: relative;
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 26px;
         word-break: keep-all;
         padding-left: 10px;
         color: #1c1d20;
@@ -800,7 +800,7 @@ caption {
     }
 
     .standard-items {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 26px;
         word-break: keep-all;
         color: #333;
@@ -836,7 +836,7 @@ caption {
         }
 
         .standard-name {
-            font-size: 21px;
+            font-size: 22px;
             color: #000;
             font-family: SCoreDream, serif;
             font-weight: 800;
@@ -871,17 +871,16 @@ caption {
 
     .organ-items {
         border-bottom: 1px solid #d2d2d2;
+        align-self: start;
 
         dt {
             display: flex;
-            text-align: center;
             align-items: center;
             justify-content: center;
-            height: 60px;
+            height: 54px;
             border-top: 2px solid #173674;
             background-color: #f9f9f9;
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 15px;
             color: #30326d;
             font-weight: bold;
         }
@@ -889,7 +888,7 @@ caption {
         dd {
             display: flex;
             align-items: stretch;
-            font-size: 13px;
+            font-size: 14px;
             color: #333;
             border-top: 1px solid #d2d2d2;
         }
@@ -1174,8 +1173,7 @@ caption {
     .ipef-title {
         display: block;
         margin-top: 50px;
-        font-size: 20px;
-        line-height: 28px;
+        font-size: 22px;
         font-family: SCoreDream, sans-serif;
         font-weight: 700;
         @include m.respond-to(map.get(m.$max, 767)) {
@@ -1185,8 +1183,8 @@ caption {
 
     .ipef-description {
         margin: 20px auto 0;
-        font-size: 15px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 26px;
         color: #333;
         word-break: keep-all;
         max-width: 270px;

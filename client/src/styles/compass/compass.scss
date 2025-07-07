@@ -870,9 +870,6 @@ caption {
     }
 
     .organ-items {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 60px auto;
         border-bottom: 1px solid #d2d2d2;
 
         dt {

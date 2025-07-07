@@ -1,6 +1,6 @@
 <%
 const hostName = '국제공용 발자국 검증 제도';
-var title = hostName + ' - ' + title || hostName;
+var title = hostName + (title ? ' - ' + (title ?? hostName) : '');
 %>
 <head>
     <title><%= title %></title>

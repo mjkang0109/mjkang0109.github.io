@@ -1526,6 +1526,25 @@ caption {
     }
 }
 
+.link-apply {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #206cab;
+    font-size: 16px;
+    color: #fff;
+
+    &:hover {
+        color: #fff;
+    }
+
+    &-wrap {
+        margin-top: 63px;
+        text-align: center;
+    }
+}
+
 [role="tablist"] {
     display: flex;
     justify-content: space-between;
@@ -1595,64 +1614,163 @@ caption {
         }
     }
 
-    li:has(label[for*="form-info"]) {
-        display: grid;
+    li {
+        &:has(label[for*="form-info"]) {
+            display: grid;
+            @include m.respond-to(map.get(m.$min, 768)) {
+                grid-template-columns: 314px 1fr;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                grid-template-columns: 40% 60%;
+            }
+
+            > label[for] {
+                grid-row: 1 / span 2;
+                @include m.respond-to(map.get(m.$min, 768)) {
+                }
+                @include m.respond-to(map.get(m.$max, 767)) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .column {
+        display: flex;
         @include m.respond-to(map.get(m.$min, 768)) {
-            grid-template-columns: 314px 1fr 1fr 1fr 1fr 1fr 1fr;
         }
         @include m.respond-to(map.get(m.$max, 767)) {
-            grid-template-columns: 40% 30% 30%;
+            flex-wrap: wrap;
         }
 
-        input[type="text"] {
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        label {
+        &:first-of-type {
+            border-bottom: solid 1px #dbdbdb;
+            @include m.respond-to(map.get(m.$min, 768)) {
+            }
             @include m.respond-to(map.get(m.$max, 767)) {
+            }
+        }
+
+        br {
+            @include m.respond-to(map.get(m.$min, 768)) {
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                display: none;
+            }
+        }
+
+        > label[for] {
+            @include m.respond-to(map.get(m.$min, 768)) {
+                width: 100px;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                justify-content: center;
+                border-right: none;
+                border-bottom: solid 1px #dbdbdb;
                 width: 100%;
+                padding: 20px;
             }
 
             &:first-of-type {
+                border-left: none;
                 @include m.respond-to(map.get(m.$min, 768)) {
-                    grid-row: 1 / span 2;
                 }
                 @include m.respond-to(map.get(m.$max, 767)) {
-                    grid-row: 1 / span 6;
-                    width: auto;
-                }
-            }
-
-            @include m.respond-to(map.get(m.$max, 767)) {
-                &:nth-of-type(3),
-                &:nth-of-type(9), {
-                    grid-column: 2 / span 1;
-                }
-                &:nth-of-type(2) {
                     border-top: none;
                 }
-                &:nth-of-type(even) {
-                    border-left: 1px solid #dbdbdb;
-                }
+            }
+        }
+
+        input[type="text"] {
+            width: 50px;
+            height: 36px;
+            padding: 14px;
+            border: 1px solid #d5d5d5;
+        }
+
+        .column-cell {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 14px 5px 14px 15px;
+            @include m.respond-to(map.get(m.$min, 768)) {
+                width: 100%;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                flex-wrap: wrap;
             }
 
-            &:nth-of-type(7) {
-                grid-column: 2 / span 1;
+            label[for] {
+                width: auto;
                 border: none;
-            }
-
-            &:nth-of-type(n+7) {
-                border-top: 1px solid #dbdbdb;
-            }
-
-            &:not(:first-of-type) {
-                border-right: none;
+                background-color: transparent;
                 @include m.respond-to(map.get(m.$min, 768)) {
-                    width: auto;
                 }
                 @include m.respond-to(map.get(m.$max, 767)) {
-                    padding: 0;
+                    padding-left: 0;
+                }
+
+                input[type="text"] {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .unit {
+            font-size: 13px;
+            padding: 10px 0;
+            @include m.respond-to(map.get(m.$min, 768)) {
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                display: flex;
+            }
+        }
+
+        .icon-dot {
+            align-self: flex-end;
+            padding: 0 4px;
+        }
+    }
+
+    .search-period {
+        padding: 14px 15px;
+        @include m.respond-to(map.get(m.$min, 768)) {
+        }
+        @include m.respond-to(map.get(m.$max, 767)) {
+            width: 60%;
+        }
+
+        input[type="text"] {
+            flex-shrink: 0;
+            height: 34px;
+            border: 1px solid #d5d5d5;
+            padding: 14px;
+            @include m.respond-to(map.get(m.$min, 768)) {
+                width: 130px;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                flex: 0 0 calc(50% - 7px);
+                padding: 0 30px 0 14px;
+            }
+        }
+
+        label[for] {
+            border: none;
+            @include m.respond-to(map.get(m.$min, 768)) {
+                width: 130px;
+            }
+            @include m.respond-to(map.get(m.$max, 767)) {
+                flex: 0 0 calc(50% - 7px);
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                @include m.respond-to(map.get(m.$min, 768)) {
+                }
+                @include m.respond-to(map.get(m.$max, 767)) {
+                    flex: 1 1 auto;
                 }
             }
         }

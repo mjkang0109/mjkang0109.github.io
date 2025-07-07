@@ -76,27 +76,67 @@ var panel = panel ?? 0;
             </label>
         </li>
         <li>
-            <label for="form-info-<%= panel + 1; %>"
+            <label for="form-info-<%= panel + 1; %>-total"
                    class="require">기능 또는 선언단위당 정량적 발자국 정보</label>
-            <input id="form-info-<%= panel + 1; %>"
-                   type="text"
-                   class="form-input"
-                   required>
-            <% for (let i = 0; i < 11; i++) { %>
-                <label>
-                    <input type="text"
-                           class="form-input"
-                            <%= i === 0 ? 'required' : ''; %>>
+            <div class="column">
+                <label for="form-info-<%= panel + 1; %>-total">
+                    총 발자국 값
                 </label>
-            <% } %>
+                <span class="column-cell">
+                    <input type="text" id="form-info-<%= panel + 1; %>-total">
+                    <span class="icon-dot">.</span>
+                    <label for="form-info-<%= panel + 1; %>-1-suffix">
+                        <input type="text" id="form-info-<%= panel + 1; %>-1-suffix">
+                    </label>
+                    <span class="unit">g CO2 e/FU 또는 DU</span>
+                </span>
+                <label for="form-info-<%= panel + 1; %>-step">
+                    제조단계<br> 발자국
+                </label>
+                <span class="column-cell">
+                    <input type="text" id="form-info-<%= panel + 1; %>-step">
+                    <span class="icon-dot">.</span>
+                    <label for="form-info-<%= panel + 1; %>-2-suffix">
+                        <input type="text" id="form-info-<%= panel + 1; %>-2-suffix">
+                    </label>
+                    <span class="unit">g CO2 e/FU 또는 DU</span>
+                </span>
+            </div>
+            <div class="column">
+                <label for="form-info-<%= panel + 1; %>-upstream">
+                    업스트림<br>단계 발자국
+                </label>
+                <span class="column-cell">
+                    <input type="text" id="form-info-<%= panel + 1; %>-upstream">
+                    <span class="icon-dot">.</span>
+                    <label for="form-info-<%= panel + 1; %>-3-suffix">
+                        <input type="text" id="form-info-<%= panel + 1; %>-3-suffix">
+                    </label>
+                    <span class="unit">g CO2 e/FU 또는 DU</span>
+                </span>
+                <label for="form-info-<%= panel + 1; %>-downstream">
+                    다운스트림<br>단계 발자국
+                </label>
+                <span class="column-cell">
+                    <input type="text" id="form-info-<%= panel + 1; %>-downstream">
+                    <span class="icon-dot">.</span>
+                    <label for="form-info-<%= panel + 1; %>-4-suffix">
+                        <input type="text" id="form-info-<%= panel + 1; %>-4-suffix">
+                    </label>
+                    <span class="unit">g CO2 e/FU 또는 DU</span>
+                </span>
+            </div>
         </li>
         <li>
             <label for="form-statistics-<%= panel + 1; %>"
                    class="require">발자국 산정을 위한 데이터 수집기간</label>
-            <input id="form-statistics-<%= panel + 1; %>"
-                   type="text"
-                   class="form-input"
-                   required>
+            <div class="search-period">
+                <input type="text" id="form-statistics-<%= panel + 1; %>" class="input-datepicker">
+                <span class="icon-wave">~</span>
+                <label for="form-statistics-end-<%= panel + 1; %>">
+                    <input type="text" id="form-statistics-end-<%= panel + 1; %>" class="input-datepicker">
+                </label>
+            </div>
         </li>
         <li>
             <label for="form-PCR-<%= panel + 1; %>"

@@ -1,0 +1,162 @@
+---
+group: compass
+state:
+    default: 도안신청
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_constants`, {}); %>
+<%- include(`${process.env.INCLUDE_PATH}/compass/partials/_head`, {}); %>
+<body>
+    <div class="wrap">
+        <!-- 상단메뉴영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_header`, {}); %>
+        <!--모바일 MENUAREA-->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_mobileHeader`, {}); %>
+        <div class="totladim" style="display: none; opacity: 0.8;"></div>
+        <!-- 상단메뉴영역 끝 -->
+        <div class="container">
+            <!-- 타이틀영역 시작 -->
+            <div class="sub-visual7">
+                <div class="inner7">
+                    <h2><%= pageTitle %></h2>
+                    <div class="print-box">
+                        <!-- <button><img src="<%= path.images %>/image/site/link.svg"></button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- 타이틀영역 끝 -->
+            <div class="inner sub-contents-box">
+                <!-- 왼쪽메뉴영역 시작 -->
+                <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_leftNav`, {
+                    currentIndex: 2
+                }); %>
+                <!-- 왼쪽메뉴영역 끝 -->
+                <div class="sub-contents">
+                    <div class="right-fixed">
+                        <div class="right-top">
+                            <a href=""><span>TOP</span></a>
+                        </div>
+                    </div>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_breadCrum`, {
+                        depth1: '국제통용 발자국 검증제도',
+                        depth2: 'IPEF등록',
+                        depth3: pageTitle,
+                    }); %>
+                    <div class="lci_area mt-30">
+                        <h3><%= pageTitle %></h3>
+                    </div>
+
+                    <div class="form-design">
+                        <div class="notice">
+                            <strong class="essential">* 필수입력항목</strong>
+                            <strong class="print">
+                                <span>도안사용신청시에 입력, 신청인 인증을 하고 신청기관장 직인을 위해서 출력 및 신청기관장 직인한 문서 이미지를 업로드 제출하여주세요.</span>
+                                <button type="button" class="button-print"><span class="a11y">출력하기</span></button>
+                            </strong>
+                        </div>
+                        <form action="">
+                            <strong class="form-title">검증제도 도안 사용 신청서</strong>
+                            <ul class="form-items">
+                                <li>
+                                    <label for="form-period" class="require">신청범위</label>
+                                    <input id="form-period"
+                                           type="text"
+                                           class="form-input"
+                                           required>
+                                </li>
+                                <li>
+                                    <label for="form-name" class="require">신청자(조직)명</label>
+                                    <input id="form-name"
+                                           type="text"
+                                           class="form-input"
+                                           required>
+                                </li>
+                                <li>
+                                    <label for="form-address" class="require">주소</label>
+                                    <input id="form-address"
+                                           type="text"
+                                           class="form-input"
+                                           required>
+                                </li>
+                                <li>
+                                    <label for="form-manager" class="require">담당자</label>
+                                    <input id="form-manager"
+                                           type="text"
+                                           class="form-input"
+                                           required>
+                                </li>
+                                <li>
+                                    <label for="form-tel" class="require">전화</label>
+                                    <input id="form-tel"
+                                           type="text"
+                                           class="form-input"
+                                           required>
+                                    <label for="form-fax">팩스</label>
+                                    <input id="form-fax"
+                                           type="text"
+                                           class="form-input">
+                                </li>
+                                <li>
+                                    <label for="form-mail" class="require">이메일</label>
+                                    <input id="form-mail"
+                                           type="text"
+                                           class="form-input"
+                                           required>
+                                    <label for="form-web">웹주소</label>
+                                    <input id="form-web"
+                                           type="text"
+                                           class="form-input">
+                                </li>
+                            </ul>
+                            <%
+                            const tabs = [
+                                '국내 도안 사용신청',
+                                '해외상호 인정신청',
+                                '국내,해외 도안 사용신청'
+                            ]
+                            %>
+                            <div class="tabs"
+                                 role="tablist">
+                                <% for (let i = 0; i < 3; i++) { %>
+                                    <input type="radio"
+                                           id="tab-<%= i + 1 %>"
+                                           name="design-apply-type"
+                                           role="tab"
+                                           aria-selected="<%= i === 1 %>"
+                                           aria-controls="panel-<%= i + 1 %>"
+                                            <%= i === 0 ? ' checked' : '' %>>
+                                    <label for="tab-<%= i + 1 %>">
+                                        <%= tabs[i] %>
+                                    </label>
+                                <% } %>
+                            </div>
+                            <div class="panels">
+                                <% for (let i = 0; i < 3; i++) { %>
+                                    <div id="panel-<%= i + 1 %>"
+                                         role="tabpanel"
+                                         tabindex="<%= i === 0 ? '0' : '-1' %>"
+                                         aria-labelledby="tab-<%= i + 1 %>"
+                                            <%= i !== 0 ? 'hidden' : '' %>>
+                                        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_apply`, {
+                                            panel: i
+                                        }); %>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 푸터영역 시작 -->
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_footer`, {}); %>
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_layers`, {}); %>
+        <!-- 푸터영역 끝 -->
+    </div>
+    <script src="<%= process.env.BASE_PATH; %>/scripts/compass/compass<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
+            defer></script>
+</body>
+</html>

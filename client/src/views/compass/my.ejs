@@ -2,9 +2,6 @@
 group: compass
 state:
     default: 국내도안신청내역
-    domestic: 국내도안신청내역
-    overseas: 해외상호인정신청내역
-    both: 국내해외동시도안신청내역
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -49,132 +46,8 @@ state:
                     <div class="lci_area mt-30">
                         <h3><%= pageTitle %></h3>
                     </div>
-                    <div class="form-design">
-                        <div class="apply-info">
-                                <strong class="title">신청접수일</strong>
-                                <span class="description">2025-07-24</span>
-                                <strong class="title">신청접수일</strong>
-                                <span class="description">2025-07-24</span>
-                                <strong class="title">승인서발급</strong>
-                                <span class="description">
-                                    <button type="button">
-                                        <span class="button-text">다운로드</span>
-                                    </button>
-                                </span>
-                        </div>
-                        <div class="notice">
-                            <strong class="essential">필수입력항목</strong>
-                        </div>
-                        <form action="">
-                            <strong class="form-title">검증제도 도안 사용 신청서</strong>
-                            <ul class="form-items">
-                                <li>
-                                    <label for="form-period"
-                                           class="require">신청범위</label>
-                                    <input id="form-period"
-                                           type="text"
-                                           readonly value="국제통용발자국 검증제도 도안"
-                                           class="form-input"
-                                           required>
-                                </li>
-                                <li>
-                                    <label for="form-name"
-                                           class="require">신청자(조직)명</label>
-                                    <input id="form-name"
-                                           type="text"
-                                           readonly value="홍길동"
-                                           class="form-input"
-                                           required>
-                                </li>
-                                <li>
-                                    <label for="form-address"
-                                           class="require">주소</label>
-                                    <input id="form-address"
-                                           type="text"
-                                           readonly value="서울시 강남구 서초동 *****"
-                                           class="form-input"
-                                           required>
-                                </li>
-                                <li>
-                                    <label for="form-manager"
-                                           class="require">담당자</label>
-                                    <input id="form-manager"
-                                           type="text"
-                                           readonly value="강감찬"
-                                           class="form-input"
-                                           required>
-                                </li>
-                                <li>
-                                    <label for="form-tel"
-                                           class="require">전화</label>
-                                    <input id="form-tel"
-                                           type="text"
-                                           readonly value="02-1234-1234"
-                                           class="form-input"
-                                           required>
-                                    <label for="form-fax">팩스</label>
-                                    <input id="form-fax"
-                                           type="text"
-                                           readonly value="02-1234-1234"
-                                           class="form-input">
-                                </li>
-                                <li>
-                                    <label for="form-mail"
-                                           class="require">이메일</label>
-                                    <input id="form-mail"
-                                           type="text"
-                                           readonly value="acb@naver.com"
-                                           class="form-input"
-                                           required>
-                                    <label for="form-web">웹주소</label>
-                                    <input id="form-web"
-                                           type="text"
-                                           readonly value="acb@naver.com"
-                                           class="form-input">
-                                </li>
-                            </ul>
-                            <%
-                            const tabs = [
-                                '국내 도안 사용신청',
-                                '해외상호 인정신청',
-                                '국내,해외 도안 사용신청'
-                            ];
-                            const current = state === 'overseas' ? 1 : state === 'both' ? 2 : 0;
-                            %>
-                            <div class="tabs"
-                                 role="tablist">
-                                <% for (let i = 0; i < 3; i++) { %>
-                                    <input type="radio"
-                                           id="tab-<%= i + 1 %>"
-                                           name="design-apply-type"
-                                           role="tab"
-                                           aria-selected="<%= i === 1 %>"
-                                           aria-controls="panel-<%= i + 1 %>"
-                                           disabled
-                                            <%= i === current ? ' checked' : '' %>>
-                                    <label for="tab-<%= i + 1 %>">
-                                        <%= tabs[i] %>
-                                    </label>
-                                <% } %>
-                            </div>
-                            <div class="panels">
-                                <% for (let i = 0; i < 3; i++) { %>
-                                    <div id="panel-<%= i + 1 %>"
-                                         role="tabpanel"
-                                         tabindex="<%= i === 0 ? '0' : '-1' %>"
-                                         aria-labelledby="tab-<%= i + 1 %>"
-                                            <%= i !== current ? 'hidden' : '' %>>
-                                        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_applyRead`, {
-                                        panel: i
-                                        }); %>
-                                    </div>
-                                <% } %>
-                            </div>
-                        </form>
-                        <div class="btn-box">
-                            <button class="btn-view" id="btnList">목록</button>
-                        </div>
-                    </div>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_search`, {}); %>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_applyMock`, {}); %>
                 </div>
             </div>
         </div>

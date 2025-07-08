@@ -1938,32 +1938,32 @@ caption {
   }
 }
 
-[id=panel-2] .form-items label,
-[id=panel-3] .form-items label {
+[id=panel-2] .form-subtitle + .form-items label,
+[id=panel-3] .form-subtitle + .form-items label {
   justify-content: flex-start;
 }
 @media (min-width: 768px) {
-  [id=panel-2] .form-items label,
-  [id=panel-3] .form-items label {
+  [id=panel-2] .form-subtitle + .form-items label,
+  [id=panel-3] .form-subtitle + .form-items label {
     width: 418px;
   }
 }
 @media (max-width: 767px) {
-  [id=panel-2] .form-items label,
-  [id=panel-3] .form-items label {
+  [id=panel-2] .form-subtitle + .form-items label,
+  [id=panel-3] .form-subtitle + .form-items label {
     width: 40%;
     padding-top: 5px;
     padding-bottom: 5px;
     border-top: none;
   }
 }
-[id=panel-2] .form-items label:not(.require),
-[id=panel-3] .form-items label:not(.require) {
+[id=panel-2] .form-subtitle + .form-items label:not(.require),
+[id=panel-3] .form-subtitle + .form-items label:not(.require) {
   padding-left: 42px;
   border-left: none;
 }
-[id=panel-2] .form-items label:not(.require) + input[type=text],
-[id=panel-3] .form-items label:not(.require) + input[type=text] {
+[id=panel-2] .form-subtitle + .form-items label:not(.require) + input[type=text],
+[id=panel-3] .form-subtitle + .form-items label:not(.require) + input[type=text] {
   border-top: none;
 }
 

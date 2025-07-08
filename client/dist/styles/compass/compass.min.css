@@ -1474,19 +1474,19 @@ caption {
   color: #333;
 }
 
-[id=panel-2] .form-items label,
-[id=panel-3] .form-items label {
+[id=panel-2] .form-subtitle + .form-items label,
+[id=panel-3] .form-subtitle + .form-items label {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-[id=panel-2] .form-items label:not(.require),
-[id=panel-3] .form-items label:not(.require) {
+[id=panel-2] .form-subtitle + .form-items label:not(.require),
+[id=panel-3] .form-subtitle + .form-items label:not(.require) {
   padding-left: 42px;
   border-left: none;
 }
-[id=panel-2] .form-items label:not(.require) + input[type=text],
-[id=panel-3] .form-items label:not(.require) + input[type=text] {
+[id=panel-2] .form-subtitle + .form-items label:not(.require) + input[type=text],
+[id=panel-3] .form-subtitle + .form-items label:not(.require) + input[type=text] {
   border-top: none;
 }
 
@@ -2102,8 +2102,8 @@ caption {
   [role=tabpanel] .search-period label[for] {
     width: 130px;
   }
-  [id=panel-2] .form-items label,
-  [id=panel-3] .form-items label {
+  [id=panel-2] .form-subtitle + .form-items label,
+  [id=panel-3] .form-subtitle + .form-items label {
     width: 418px;
   }
   .apply-signature .signature .stamp button {
@@ -2506,8 +2506,8 @@ caption {
   [role=tabpanel] .caution {
     margin-bottom: 30px;
   }
-  [id=panel-2] .form-items label,
-  [id=panel-3] .form-items label {
+  [id=panel-2] .form-subtitle + .form-items label,
+  [id=panel-3] .form-subtitle + .form-items label {
     width: 40%;
     padding-top: 5px;
     padding-bottom: 5px;

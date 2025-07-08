@@ -1905,9 +1905,10 @@ caption {
 
 [id="panel-2"],
 [id="panel-3"] {
-    .form-subtitle + .form-items {
+    .form-subtitle + .form-title + .form-items {
         label {
-            justify-content: flex-start;
+            justify-content: center;
+            text-align: center;
             @include m.respond-to(map.get(m.$min, 768)) {
                 width: 418px;
             }
@@ -1919,7 +1920,7 @@ caption {
             }
 
             &:not(.require) {
-                padding-left: 42px;
+                padding: 10px;
                 border-left: none;
 
                 + input[type="text"] {

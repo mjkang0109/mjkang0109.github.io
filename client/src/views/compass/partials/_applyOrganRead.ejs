@@ -1,0 +1,167 @@
+<div class="form-design">
+    <form action="">
+        <strong class="form-title">검증기관 승인 신청서</strong>
+        <%
+        const forms = [
+            {
+                title: '신청<br>기관',
+                items: [
+                    {
+                        title: '① 기관명',
+                        id   : 'organ',
+                        value: '국제통용발자국 검증제도 도안'
+                    },
+                    {
+                        items: [
+                            {
+                                title: '② 대표자',
+                                id   : 'representative',
+                                value: '홍길동'
+                            },
+                            {
+                                title: '③법인등록번호',
+                                id   : 'corporation-number'
+                            }
+                        ]
+                    },
+                    {
+                        items: [
+                            {
+                                title: '④ 주 소',
+                                id   : 'address',
+                                value: '서울시 강남구 서초동 *****'
+                            },
+                            {
+                                title: '⑤연 락 처',
+                                id   : 'contact'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: '⑥ 실무담당자',
+                items: [
+                    {
+                        title: '성명',
+                        id   : 'name',
+                        value: '강감찬'
+                    },
+                    {
+                        title: '연락처(이메일)',
+                        id   : 'mail',
+                        value: '02-1234-1234'
+                    }
+                ]
+            },
+            {
+                items: [
+                    {
+                        title: '⑦ 인정일자',
+                        id   : 'admit-date',
+                        value: '2025-10-26'
+                    },
+                    {
+                        title: '⑧인정번호',
+                        id   : 'admit-number'
+                    }
+                ]
+            },
+            {
+                items: [
+                    {
+                        title: '⑨ 인정기구명',
+                        id   : 'admin-name'
+                    }
+                ]
+            },
+        ];
+        %>
+        <ul class="form-docs">
+            <% forms.forEach((form) => { %>
+                <li>
+                    <% if (form.title) { %>
+                        <strong><%- form.title; %></strong>
+                    <% } %>
+                    <div class="inputs">
+                        <% if (form.items) {
+                        form.items.forEach((item) => { %>
+                            <% if (!item.items) { %>
+                                <div class="column">
+                                    <label for="form-<%= item.id; %>"
+                                           class="input-title"><%= item.title; %></label>
+                                    <input type="text"
+                                           id="form-<%= item.id; %>"
+                                           value="<%= item.value %>"
+                                           readonly>
+                                </div>
+                            <% } %>
+                            <% if (item.items) { %>
+                                <div class="column">
+                                    <% item.items.forEach((subItem) => { %>
+                                        <label for="form-<%= subItem.id; %>"
+                                               class="input-title"><%= subItem.title; %></label>
+                                        <input type="text"
+                                               id="form-<%= subItem.id; %>"
+                                               value="<%= subItem.value %>"
+                                               readonly>
+                                    <% }); %>
+                                </div>
+                            <% } %>
+                        <% });
+                        } %>
+                    </div>
+                </li>
+            <% }) %>
+            <li>
+                <strong>⑩인정범위</strong>
+                <div class="inputs">
+                    <div class="column">
+                        <label for="carbon-footprint">
+                            [탄소발자국]
+                        </label>
+                        <input type="radio"
+                               id="carbon-footprint"
+                               name="footprint"
+                               disabled
+                               checked>
+                        <label for="carbon-footprint">ISO 14067</label>
+                    </div>
+                    <div class="column">
+                        <label for="water-footprint">
+                            [물발자국]
+                        </label>
+                        <input type="radio"
+                               id="water-footprint"
+                               disabled
+                               name="footprint">
+                        <label for="water-footprint">ISO 14066</label>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <strong>⑪ 적합성평가<br>활동 유형</strong>
+                    <div class="inputs">
+                        <div class="column">
+                            <input type="radio"
+                                   id="type-1"
+                                   name="type"
+                                   disabled
+                                   checked>
+                            <label for="type-1">제1자, 제2자</label>
+                        </div>
+                        <div class="column">
+                            <input type="radio"
+                                   id="type-2"
+                                   disabled
+                                   name="type">
+                            <label for="type-2">제3자</label>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_organApply`, {
+            readonly: true
+        }); %>
+    </form>
+</div>

@@ -63,6 +63,11 @@ state:
                                     </button>
                                 </span>
                         </div>
+                        <% if (state === 'organization') { %>
+                        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_applyOrganRead`, {}) %>
+
+                        <% } %>
+                        <% if (state !== 'organization') { %>
                         <div class="notice">
                             <strong class="essential">필수입력항목</strong>
                         </div>
@@ -172,6 +177,7 @@ state:
                                 <% } %>
                             </div>
                         </form>
+                        <% } %>
                         <div class="btn-box">
                             <button class="btn-view" id="btnList">목록</button>
                         </div>

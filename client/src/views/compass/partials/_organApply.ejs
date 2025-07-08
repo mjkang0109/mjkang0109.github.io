@@ -1,3 +1,6 @@
+<%
+var readonly = readonly || false;
+%>
 <div class="apply-signature">
     <ul>
         <li>「국제통용 발자국 검증제도 운영요령」제12조에 의거하여 위와 같이 검증기관 승인을 신청합니다.</li>
@@ -6,61 +9,70 @@
     </ul>
     <div class="date">
         <label class="year">20
-            <input type="text">년
+            <input type="text"
+                    <%- readonly ? ' readonly' : '' %>
+                   value="<%= readonly ? '24' : '' %>">년
         </label>
         <label class="month">
-            <input type="text">월
+            <input type="text"
+                    <%= readonly ? ' readonly' : '' %>
+                   value="<%= readonly ? '1' : '' %>">월
         </label>
         <label class="month">
-            <input type="text">일
+            <input type="text"
+                    <%= readonly ? ' readonly' : '' %>
+                   value="<%= readonly ? ' 2' : '' %>">일
         </label>
     </div>
     <div class="signature">
         <strong>한국생산기술연구원장 귀하</strong>
         <div class="stamp">
             <strong>신청인 (서명 또는 인)
-                <button type="button">휴대폰 인증</button>
+                <button type="button"><%= readonly ? '인증완료' : '휴대폰 인증' %></button>
             </strong>
             <strong>신청기관장 (직인)</strong>
         </div>
     </div>
-    <div class="apply-files">
-        <strong>구비서류</strong>
-        <p>
-            <span>1. 법인 정관 1부(최초/갱신)</span>
-            <span>2. 법인등기부등본 1부(최초/갱신)</span>
-            <span>3. 검증심사원 현황
+    <% if (!readonly) { %>
+        <div class="apply-files">
+            <strong>구비서류</strong>
+            <p>
+                <span>1. 법인 정관 1부(최초/갱신)</span>
+                <span>2. 법인등기부등본 1부(최초/갱신)</span>
+                <span>3. 검증심사원 현황
                 <button type="button">양식 D/L</button>
             </span>
-        </p>
-        <strong>구비서류 파일등록</strong>
+            </p>
+            <strong>구비서류 파일등록</strong>
 
-        <%
-        const titles = [
-            '법인정관 1부',
-            '법인등기부등본 1부',
-            '검증심사원현황',
-            '신청기관장 직인 날인 신청서',
-        ];
-        %>
-        <% for(let i = 0; i < 4; i++) { %>
-            <div class="apply-file">
-                <strong><%= titles[i] %></strong>
-                <label><input type="text"
-                              id="file-path-<%= i + 1 %>"
-                              readonly></label>
-                <label for="upload-file-<%= i + 1 %>">파일추가</label>
-                <input type="file"
-                       id="upload-file-<%= i + 1 %>"
-                       class="input-file"
-                       data-path="file-path-<%= i + 1 %>"
-                       hidden>
-                <button type="button"
-                        id="delete-file"
-                        class="delete-file"
-                        data-target="upload-file-<%= i + 1 %>">삭제
-                </button>
-            </div>
-        <% } %>
-    </div>
+            <%
+                const titles = [
+                    '법인정관 1부',
+                    '법인등기부등본 1부',
+                    '검증심사원현황',
+                    '신청기관장 직인 날인 신청서',
+                ];
+            %>
+            <% for(let i = 0; i < 4; i++) { %>
+                <div class="apply-file">
+                    <strong><%= titles[i] %></strong>
+                    <label><input type="text"
+                                  id="file-path-<%= i + 1 %>"
+                                  readonly></label>
+                    <label for="upload-file-<%= i + 1 %>">파일추가</label>
+                    <input type="file"
+                           id="upload-file-<%= i + 1 %>"
+                           class="input-file"
+                           data-path="file-path-<%= i + 1 %>"
+                           hidden>
+                    <button type="button"
+                            id="delete-file"
+                            class="delete-file"
+                            data-target="upload-file-<%= i + 1 %>">삭제
+                    </button>
+                </div>
+            <% } %>
+        </div>
+    <% } %>
+
 </div>

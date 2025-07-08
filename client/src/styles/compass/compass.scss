@@ -1905,7 +1905,7 @@ caption {
 
 [id="panel-2"],
 [id="panel-3"] {
-    .form-subtitle + .form-title + .form-items {
+    .form-subtitle ~ .form-items {
         label {
             justify-content: center;
             text-align: center;

@@ -147,8 +147,6 @@ caption {
 }
 
 .mobile-hide {
-    @include m.respond-to(map.get(m.$min, 768)) {
-    }
     @include m.respond-to(map.get(m.$max, 767)) {
         display: none;
     }
@@ -1581,9 +1579,6 @@ caption {
                 background-size: 100% auto;
                 background-position: 50% 50%;
             }
-        }
-
-        button {
         }
     }
 }

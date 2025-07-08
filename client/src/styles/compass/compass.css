@@ -1938,43 +1938,48 @@ caption {
   }
 }
 
-[id=panel-2] .form-subtitle + .form-items label,
-[id=panel-3] .form-subtitle + .form-items label {
-  justify-content: flex-start;
+[id=panel-2] .form-subtitle ~ .form-items label,
+[id=panel-3] .form-subtitle ~ .form-items label {
+  justify-content: center;
+  text-align: center;
 }
 @media (min-width: 768px) {
-  [id=panel-2] .form-subtitle + .form-items label,
-  [id=panel-3] .form-subtitle + .form-items label {
+  [id=panel-2] .form-subtitle ~ .form-items label,
+  [id=panel-3] .form-subtitle ~ .form-items label {
     width: 418px;
   }
 }
 @media (max-width: 767px) {
-  [id=panel-2] .form-subtitle + .form-items label,
-  [id=panel-3] .form-subtitle + .form-items label {
+  [id=panel-2] .form-subtitle ~ .form-items label,
+  [id=panel-3] .form-subtitle ~ .form-items label {
     width: 40%;
     padding-top: 5px;
     padding-bottom: 5px;
     border-top: none;
   }
 }
-[id=panel-2] .form-subtitle + .form-items label:not(.require),
-[id=panel-3] .form-subtitle + .form-items label:not(.require) {
-  padding-left: 42px;
+[id=panel-2] .form-subtitle ~ .form-items label:not(.require),
+[id=panel-3] .form-subtitle ~ .form-items label:not(.require) {
+  padding: 10px;
   border-left: none;
 }
-[id=panel-2] .form-subtitle + .form-items label:not(.require) + input[type=text],
-[id=panel-3] .form-subtitle + .form-items label:not(.require) + input[type=text] {
+[id=panel-2] .form-subtitle ~ .form-items label:not(.require) + input[type=text],
+[id=panel-3] .form-subtitle ~ .form-items label:not(.require) + input[type=text] {
   border-top: none;
 }
 
 .apply-signature {
   border: 7px solid #efefef;
   margin-top: 24px;
+  padding-bottom: 40px;
 }
 @media (max-width: 767px) {
   .apply-signature {
     margin-bottom: 30px;
   }
+}
+.apply-signature:has(.apply-file) {
+  padding-bottom: 0;
 }
 .apply-signature > ul {
   padding: 46px 30px 50px;
@@ -2240,7 +2245,7 @@ caption {
 .form-docs {
   border-bottom: 1px solid #d2d2d2;
 }
-.form-docs + .apply-signature .signature {
+.form-docs + .apply-signature:has(.apply-files) .signature {
   padding-bottom: 40px;
 }
 .form-docs li {
@@ -2399,7 +2404,7 @@ caption {
 }
 .form-docs .column input[type=text] {
   border: none;
-  padding: 22px 0;
+  padding: 22px 14px;
   font-size: 14px;
   color: #333;
 }

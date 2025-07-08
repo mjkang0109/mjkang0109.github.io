@@ -1474,25 +1474,30 @@ caption {
   color: #333;
 }
 
-[id=panel-2] .form-subtitle + .form-items label,
-[id=panel-3] .form-subtitle + .form-items label {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+[id=panel-2] .form-subtitle ~ .form-items label,
+[id=panel-3] .form-subtitle ~ .form-items label {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
-[id=panel-2] .form-subtitle + .form-items label:not(.require),
-[id=panel-3] .form-subtitle + .form-items label:not(.require) {
-  padding-left: 42px;
+[id=panel-2] .form-subtitle ~ .form-items label:not(.require),
+[id=panel-3] .form-subtitle ~ .form-items label:not(.require) {
+  padding: 10px;
   border-left: none;
 }
-[id=panel-2] .form-subtitle + .form-items label:not(.require) + input[type=text],
-[id=panel-3] .form-subtitle + .form-items label:not(.require) + input[type=text] {
+[id=panel-2] .form-subtitle ~ .form-items label:not(.require) + input[type=text],
+[id=panel-3] .form-subtitle ~ .form-items label:not(.require) + input[type=text] {
   border-top: none;
 }
 
 .apply-signature {
   border: 7px solid #efefef;
   margin-top: 24px;
+  padding-bottom: 40px;
+}
+.apply-signature:has(.apply-file) {
+  padding-bottom: 0;
 }
 .apply-signature > ul {
   padding: 46px 30px 50px;
@@ -1690,7 +1695,7 @@ caption {
 .form-docs {
   border-bottom: 1px solid #d2d2d2;
 }
-.form-docs + .apply-signature .signature {
+.form-docs + .apply-signature:has(.apply-files) .signature {
   padding-bottom: 40px;
 }
 .form-docs li {
@@ -1808,7 +1813,7 @@ caption {
 }
 .form-docs .column input[type=text] {
   border: none;
-  padding: 22px 0;
+  padding: 22px 14px;
   font-size: 14px;
   color: #333;
 }
@@ -2102,8 +2107,8 @@ caption {
   [role=tabpanel] .search-period label[for] {
     width: 130px;
   }
-  [id=panel-2] .form-subtitle + .form-items label,
-  [id=panel-3] .form-subtitle + .form-items label {
+  [id=panel-2] .form-subtitle ~ .form-items label,
+  [id=panel-3] .form-subtitle ~ .form-items label {
     width: 418px;
   }
   .apply-signature .signature .stamp button {
@@ -2506,8 +2511,8 @@ caption {
   [role=tabpanel] .caution {
     margin-bottom: 30px;
   }
-  [id=panel-2] .form-subtitle + .form-items label,
-  [id=panel-3] .form-subtitle + .form-items label {
+  [id=panel-2] .form-subtitle ~ .form-items label,
+  [id=panel-3] .form-subtitle ~ .form-items label {
     width: 40%;
     padding-top: 5px;
     padding-bottom: 5px;

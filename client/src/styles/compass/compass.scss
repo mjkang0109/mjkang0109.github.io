@@ -2355,7 +2355,7 @@ caption {
 
         input[type=text] {
             border: none;
-            padding: 22px 0;
+            padding: 22px 14px;
             font-size: 14px;
             color: #333;
             @include m.respond-to(map.get(m.$max, 767)) {

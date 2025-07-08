@@ -128,9 +128,26 @@ caption {
 .searchbox:has(.search-period) .search-condition {
   padding-left: 40px;
 }
+.searchbox .search-title {
+  padding-right: 25px;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #000;
+}
 
 .tb-author {
   width: 200px;
+}
+
+.table-my .tb-num {
+  width: 8%;
+}
+.table-my .tb-title {
+  width: 45%;
+}
+.table-my th,
+.table-my td {
+  white-space: nowrap;
 }
 
 .compass-tab #menu-list {
@@ -808,6 +825,7 @@ caption {
 }
 
 .verification-count {
+  margin-top: 30px;
   padding-bottom: 20px;
   border-bottom: 2px solid #173674;
   font-size: 15px;
@@ -1198,6 +1216,87 @@ caption {
           transform: translateY(-50%);
 }
 
+.apply-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.apply-info .title,
+.apply-info .description {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 82px;
+  border: 4px solid #51409e;
+  font-size: 16px;
+  font-weight: bold;
+}
+.apply-info .title:not(:first-child),
+.apply-info .description:not(:first-child) {
+  border-left: none;
+}
+.apply-info .title {
+  padding-bottom: 0;
+  background-color: #51409e;
+  color: #fff;
+}
+.apply-info .title:first-of-type {
+  border-radius: 10px 0 0 10px;
+}
+.apply-info .title:before {
+  content: "";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14px' height='14px'%3E%3Cimage x='0px' y='0px' width='14px' height='14px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfpBwkBBBxDGIAMAAAAV0lEQVQY052O2wnAIBAEx5AiUkb6sYF0oc1Y5+QjmIcoAfc+brlhl8OekoigYzyCmh7IPfuDgwKQqdo4qq2wq/VaJX/PMb+ToQn5SuJsbWlqo7/fLjAJTxQ1dNcuBOxXAAAAAElFTkSuQmCC' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+}
+.apply-info .description:last-of-type {
+  border-radius: 0 10px 10px 0;
+}
+.apply-info .description button {
+  padding: 10px 18px;
+  border-radius: 5px;
+  border: 1px solid #c1c1c1;
+}
+.apply-info .description .button-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+.apply-info .description .button-text:before {
+  content: "";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 13px;
+  height: 13px;
+  margin-right: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13px' height='13px'%3E%3Cimage x='0px' y='0px' width='13px' height='13px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAATlBMVEVIS05HSk5ISk5ISk1IS05IS05HSk5IS05IS05IS05ISk1HSk5IS05IS05ISk1HSk5HSk5ISk5ISk1HSk5ISk5ISk1IS05IS05IS07////WcZSMAAAAGHRSTlMAAAAAf3M1a65tLmr7+V9G8+86T8dBy88hxGtmAAAAAWJLR0QZ7G61iAAAAAd0SU1FB+kHCQEPGKeBnd4AAABPSURBVAjXjc1LDoAgDEXRSkHxr6D49r9SS9XA0DPqbVIgyiwsFb+qEVpGPOXgiEWutvPw/fDWOAGYF2ajl+uGPeisL8Xj5OqLb5+uIhFqNwFEBLxWaG6KAAAAAElFTkSuQmCC' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 50% 50%;
+}
+
 .form-items > li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1375,16 +1474,19 @@ caption {
   color: #333;
 }
 
-[id=panel-2] .form-items label {
+[id=panel-2] .form-items label,
+[id=panel-3] .form-items label {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-[id=panel-2] .form-items label:not(.require) {
+[id=panel-2] .form-items label:not(.require),
+[id=panel-3] .form-items label:not(.require) {
   padding-left: 42px;
   border-left: none;
 }
-[id=panel-2] .form-items label:not(.require) + input[type=text] {
+[id=panel-2] .form-items label:not(.require) + input[type=text],
+[id=panel-3] .form-items label:not(.require) + input[type=text] {
   border-top: none;
 }
 
@@ -1965,6 +2067,12 @@ caption {
   .form-design .print {
     max-width: 530px;
   }
+  .apply-info .title,
+  .apply-info .description {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
   .form-items label {
     width: 194px;
   }
@@ -1994,7 +2102,8 @@ caption {
   [role=tabpanel] .search-period label[for] {
     width: 130px;
   }
-  [id=panel-2] .form-items label {
+  [id=panel-2] .form-items label,
+  [id=panel-3] .form-items label {
     width: 418px;
   }
   .apply-signature .signature .stamp button {
@@ -2111,6 +2220,12 @@ caption {
     margin-top: 10px;
   }
   .tb-author {
+    display: none;
+  }
+  .table-my .tb-title {
+    width: 30%;
+  }
+  .mobile-hide {
     display: none;
   }
   .compass-tab #menu-list {
@@ -2260,6 +2375,27 @@ caption {
   .form-design input[type=radio] + label {
     width: 200px;
   }
+  .apply-info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .apply-info .title,
+  .apply-info .description {
+    width: 50%;
+  }
+  .apply-info .title:not(:first-of-type),
+  .apply-info .description:not(:first-of-type) {
+    margin-top: 20px;
+  }
+  .apply-info .title {
+    border-radius: 10px 0 0 10px;
+  }
+  .apply-info .description {
+    border-radius: 0 10px 10px 0;
+  }
+  .apply-info .description:first-of-type {
+    border-radius: 0 10px 10px 0;
+  }
   .form-items > li {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2370,7 +2506,8 @@ caption {
   [role=tabpanel] .caution {
     margin-bottom: 30px;
   }
-  [id=panel-2] .form-items label {
+  [id=panel-2] .form-items label,
+  [id=panel-3] .form-items label {
     width: 40%;
     padding-top: 5px;
     padding-bottom: 5px;

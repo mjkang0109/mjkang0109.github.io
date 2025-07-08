@@ -60,6 +60,15 @@ state:
                     <% if (state === 'organization') { %>
                         <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_applyMockOrgan`, {}); %>
                     <% } %>
+                    <div class="pagination" id="paging">
+                        <a class="prev" alt="이전페이지">이전</a>
+                        <a class="choice" href="#1^10" data-pg="1">1</a>
+                        <a href="#2^10" data-pg="2">2</a>
+                        <a href="#3^10" data-pg="3">3</a>
+                        <a href="#4^10" data-pg="4">4</a>
+                        <a href="#5^10" data-pg="5">5</a>
+                        <a class="next" alt="다음페이지">다음</a>
+                    </div>
                 </div>
             </div>
         </div>

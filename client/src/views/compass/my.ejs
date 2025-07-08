@@ -50,8 +50,16 @@ state:
                     <div class="lci_area mt-30">
                         <h3><%= pageTitle %></h3>
                     </div>
-                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_search`, {}); %>
-                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_applyMock`, {}); %>
+                    <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_search`, {
+                       state
+                    }); %>
+
+                    <% if (state !== 'organization') { %>
+                        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_applyMock`, {}); %>
+                    <% } %>
+                    <% if (state === 'organization') { %>
+                        <%- include(`${process.env.INCLUDE_PATH}/compass/partials/_applyMockOrgan`, {}); %>
+                    <% } %>
                 </div>
             </div>
         </div>

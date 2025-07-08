@@ -230,26 +230,6 @@ var panel = panel ?? 0;
                 <strong>신청기관장 (직인)</strong>
             </div>
         </div>
-        <div class="apply-file">
-            <strong>신청기관장 직인 날인 신청서</strong>
-            <label><input type="text"
-                          readonly
-                          value="/images/img.jpg"
-                          id="file-path-<%= panel + 1; %>"></label>
-            <label for="upload-file-<%= panel + 1; %>">파일추가</label>
-            <input type="file"
-                   id="upload-file-<%= panel + 1; %>"
-                   class="input-file"
-                   data-path="file-path-<%= panel + 1; %>"
-                   disabled
-                   hidden>
-            <button type="button"
-                    id="delete-file-<%= panel + 1; %>"
-                    class="delete-file"
-                    disabled
-                    data-target="upload-file-<%= panel + 1; %>">삭제
-            </button>
-        </div>
     </div>
 
     <% if (panel === 2) { %>

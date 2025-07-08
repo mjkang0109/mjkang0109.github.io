@@ -1905,7 +1905,7 @@ caption {
 
 [id="panel-2"],
 [id="panel-3"] {
-    .form-items {
+    .form-subtitle + .form-items {
         label {
             justify-content: flex-start;
             @include m.respond-to(map.get(m.$min, 768)) {

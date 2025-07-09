@@ -14,7 +14,7 @@
     <!--
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://mjkang0109.github.io/client/dist/styles/compass/compass.min.css?20250709004216">
+    <link rel="stylesheet" href="https://mjkang0109.github.io/client/dist/styles/compass/compass.min.css?20250709150903">
     <!-- Noto sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1143,174 +1143,14 @@
                     <div class="lci_area mt-30">
                         <h3>검증기관신청</h3>
                     </div>
-                    <div class="form-design">
-                        <div class="notice">
-                            <strong class="print">
-                                <span>도안사용신청시에 입력, 신청인 인증을 하고 신청기관장 직인을 위해서 출력 및 신청기관장 직인한 문서 이미지를 업로드 제출하여주세요.</span>
-                                <button type="button" class="button-print"><span class="a11y">출력하기</span></button>
-                            </strong>
-                        </div>
-                        <form action="">
-                            <strong class="form-title">검증기관 승인 신청서</strong>
-                            <ul class="form-docs">
-                                <li>
-                                    <strong>신청<br>기관</strong>
-                                    <div class="inputs">
-                                        <div class="column">
-                                            <label for="form-organ" class="input-title">① 기관명</label>
-                                            <input type="text" id="form-organ">
-                                        </div>
-                                        <div class="column">
-                                            <label for="form-representative" class="input-title">② 대표자</label>
-                                            <input type="text" id="form-representative">
-                                            <label for="form-corporation-number" class="input-title">③법인등록번호</label>
-                                            <input type="text" id="form-corporation-number">
-                                        </div>
-                                        <div class="column">
-                                            <label for="form-address" class="input-title">④ 주 소</label>
-                                            <input type="text" id="form-address">
-                                            <label for="form-contact" class="input-title">⑤연 락 처</label>
-                                            <input type="text" id="form-contact">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <strong>⑥ 실무담당자</strong>
-                                    <div class="inputs">
-                                        <div class="column">
-                                            <label for="form-name" class="input-title">성명</label>
-                                            <input type="text" id="form-name">
-                                        </div>
-                                        <div class="column">
-                                            <label for="form-mail" class="input-title">연락처(이메일)</label>
-                                            <input type="text" id="form-mail">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inputs">
-                                        <div class="column">
-                                            <label for="form-admit-date" class="input-title">⑦ 인정일자</label>
-                                            <input type="text" id="form-admit-date">
-                                        </div>
-                                        <div class="column">
-                                            <label for="form-admit-number" class="input-title">⑧인정번호</label>
-                                            <input type="text" id="form-admit-number">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inputs">
-                                        <div class="column">
-                                            <label for="form-admin-name" class="input-title">⑨ 인정기구명</label>
-                                            <input type="text" id="form-admin-name">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <strong>⑩인정범위</strong>
-                                    <div class="inputs">
-                                        <div class="column">
-                                            <label for="carbon-footprint">
-                                                [탄소발자국]
-                                            </label>
-                                            <input type="radio" id="carbon-footprint" name="footprint" checked>
-                                            <label for="carbon-footprint">ISO 14067</label>
-                                        </div>
-                                        <div class="column">
-                                            <label for="water-footprint">
-                                                [물발자국]
-                                            </label>
-                                            <input type="radio" id="water-footprint" name="footprint">
-                                            <label for="water-footprint">ISO 14066</label>
-                                        </div>
-                                    </div>
-                                    <div class="inputs">
-                                        <strong>⑪ 적합성평가<br>활동 유형</strong>
-                                        <div class="inputs">
-                                            <div class="column">
-                                                <input type="radio" id="type-1" name="type" checked>
-                                                <label for="type-1">제1자, 제2자</label>
-                                            </div>
-                                            <div class="column">
-                                                <input type="radio" id="type-2" name="type">
-                                                <label for="type-2">제3자</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="apply-signature">
-                                <ul>
-                                    <li>「국제통용 발자국 검증제도 운영요령」제12조에 의거하여 위와 같이 검증기관 승인을 신청합니다.</li>
-                                    <li>- 본 기관은 운영기관의 검증기관 등록, 승인 및 공시(Notification) 절차, 운영기관과 검증기관간의 협약의 내용을 충분히 이해하였으며 모든 내용을 수락함을 확인함</li>
-                                    <li>- 신청서에 기재한 모든 내용은 완전하며 사실임을 확인함</li>
-                                </ul>
-                                <div class="date">
-                                    <label class="year">20
-                                        <input type="text" value="">년
-                                    </label>
-                                    <label class="month">
-                                        <input type="text" value="">월
-                                    </label>
-                                    <label class="month">
-                                        <input type="text" value="">일
-                                    </label>
-                                </div>
-                                <div class="signature">
-                                    <strong>한국생산기술연구원장 귀하</strong>
-                                    <div class="stamp">
-                                        <strong>신청인 (서명 또는 인)
-                                            <button type="button">휴대폰 인증</button>
-                                        </strong>
-                                        <strong>신청기관장 (직인)</strong>
-                                    </div>
-                                </div>
-                                <div class="apply-files">
-                                    <strong>구비서류</strong>
-                                    <p>
-                                        <span>1. 법인 정관 1부(최초/갱신)</span>
-                                        <span>2. 법인등기부등본 1부(최초/갱신)</span>
-                                        <span>3. 검증심사원 현황
-                                            <button type="button">양식 D/L</button>
-                                        </span>
-                                    </p>
-                                    <strong>구비서류 파일등록</strong>
-                                    <div class="apply-file">
-                                        <strong>법인정관 1부</strong>
-                                        <label><input type="text" id="file-path-1" readonly></label>
-                                        <label for="upload-file-1">파일추가</label>
-                                        <input type="file" id="upload-file-1" class="input-file" data-path="file-path-1" hidden>
-                                        <button type="button" id="delete-file" class="delete-file" data-target="upload-file-1">삭제
-                                        </button>
-                                    </div>
-                                    <div class="apply-file">
-                                        <strong>법인등기부등본 1부</strong>
-                                        <label><input type="text" id="file-path-2" readonly></label>
-                                        <label for="upload-file-2">파일추가</label>
-                                        <input type="file" id="upload-file-2" class="input-file" data-path="file-path-2" hidden>
-                                        <button type="button" id="delete-file" class="delete-file" data-target="upload-file-2">삭제
-                                        </button>
-                                    </div>
-                                    <div class="apply-file">
-                                        <strong>검증심사원현황</strong>
-                                        <label><input type="text" id="file-path-3" readonly></label>
-                                        <label for="upload-file-3">파일추가</label>
-                                        <input type="file" id="upload-file-3" class="input-file" data-path="file-path-3" hidden>
-                                        <button type="button" id="delete-file" class="delete-file" data-target="upload-file-3">삭제
-                                        </button>
-                                    </div>
-                                    <div class="apply-file">
-                                        <strong>신청기관장 직인 날인 신청서</strong>
-                                        <label><input type="text" id="file-path-4" readonly></label>
-                                        <label for="upload-file-4">파일추가</label>
-                                        <input type="file" id="upload-file-4" class="input-file" data-path="file-path-4" hidden>
-                                        <button type="button" id="delete-file" class="delete-file" data-target="upload-file-4">삭제
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="lci_area mt-30 dot">
+                        <h3>검증기관 승인 신청 절차</h3>
+                    </div>
+                    <div class="organ-structure">
+                        <img src="https://mjkang0109.github.io/client/dist/images/compass/organ.png" alt="">
+                    </div>
+                    <div class="link-apply-wrap">
+                        <a href="#" class="link-apply" title="검증기관 승인 신청 바로가기">검증기관 승인 신청</a>
                     </div>
                 </div>
             </div>
@@ -1582,7 +1422,7 @@
         <!-- 파일첨부 -->
         <!-- 푸터영역 끝 -->
     </div>
-    <script src="https://mjkang0109.github.io/client/dist/scripts/compass/compass.min.js?20250709004216" defer></script>
+    <script src="https://mjkang0109.github.io/client/dist/scripts/compass/compass.min.js?20250709150903" defer></script>
 </body>
 
 </html>

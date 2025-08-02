@@ -14,7 +14,7 @@
     <!--
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://mjkang0109.github.io/client/dist/styles/compass/compass.min.css?20250709151537">
+    <link rel="stylesheet" href="https://mjkang0109.github.io/client/dist/styles/compass/compass.min.css?20250802181147">
     <!-- Noto sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -697,7 +697,14 @@
                         <a class="total_close" href="javascript:rightMenuOpen();" style="backface-visibility: hidden; perspective: 1000px;">전체메뉴닫기
                         </a>
                     </div>
-                    <ul class="total_mn">
+                    <!-- select language : start -->
+                    <input type="radio" id="language-ko" name="language" class="select-language-radio" checked>
+                    <label for="language-ko" class="select-language">KO</label>
+                    <input type="radio" id="language-en" class="select-language-radio" name="language">
+                    <label for="language-en" class="select-language">EN</label>
+                    <!-- select language : end -->
+                    <!-- selected korean : start -->
+                    <ul class="total_mn selected-ko">
                         <li>
                             <a href="">종합정보망</a>
                         </li>
@@ -721,7 +728,7 @@
                             <a href="/user/login">로그인</a>
                         </li>
                     </ul>
-                    <div class="total_submn">
+                    <div class="total_submn selected-ko">
                         <div id="subcon" class="subcon">
                             <dl>
                                 <dt class="sub01_00">종합정보망</dt>
@@ -1036,6 +1043,97 @@
                             <dl class="lastdl"></dl>
                         </div>
                     </div>
+                    <!-- selected korean : end -->
+                    <!-- selected english : start -->
+                    <ul class="total_mn selected-en">
+                        <li>
+                            <a href="" class="on">검증제도</a>
+                        </li>
+                    </ul>
+                    <div class="total_submn selected-en">
+                        <div id="subcon" class="subcon">
+                            <dl>
+                                <dt class="sub04_00">검증제도</dt>
+                                <dd class="">
+                                    <a href="" target="_self" title="" class="">제도소개</a>
+                                    <ul style="display: none;">
+                                        <li class="">
+                                            <a href="intro" target="_self" title="">국제통용발자국 검증제도란
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="organ" target="_self" title="">제도 운영기관
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="standard" target="_self" title="">검증기준
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="organInfo" target="_self" title="">검증기관정보
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="cooperation" target="_self" title="">협력기관
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dd class="">
+                                    <a href="" target="_self" title="" class="">정보공개</a>
+                                    <ul style="display: none;">
+                                        <li class="">
+                                            <a href="schedule" target="_self" title="">주요일정
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="document" target="_self" title="">문서공개
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="PCR" target="_self" title="">제품범주규칙(PCR)
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dd class="">
+                                    <a href="" target="_self" title="" class="">IPEF등록</a>
+                                    <ul style="display: none;">
+                                        <li class="">
+                                            <a href="designApply" target="_self" title="">도안신청
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="organApply" target="_self" title="">검증기관신청
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="verification" target="_self" title="">검증제품
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dd class="">
+                                    <a href="" target="_self" title="" class="">게시판</a>
+                                    <ul style="display: none;">
+                                        <li class="">
+                                            <a href="notice" target="_self" title="">공지사항
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="resources" target="_self" title="">자료실
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="inquiry" target="_self" title="">문의사항
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- selected english : end -->
                 </div>
             </div>
         </div>
@@ -1590,7 +1688,7 @@
         <!-- 파일첨부 -->
         <!-- 푸터영역 끝 -->
     </div>
-    <script src="https://mjkang0109.github.io/client/dist/scripts/compass/compass.min.js?20250709151537" defer></script>
+    <script src="https://mjkang0109.github.io/client/dist/scripts/compass/compass.min.js?20250802181147" defer></script>
 </body>
 
 </html>

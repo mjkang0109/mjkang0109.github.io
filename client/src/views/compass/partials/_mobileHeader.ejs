@@ -8,7 +8,24 @@
                    style="backface-visibility: hidden; perspective: 1000px;">전체메뉴닫기
                 </a>
             </div>
-            <ul class="total_mn">
+            <!-- select language : start -->
+            <input type="radio"
+                   id="language-ko"
+                   name="language"
+                   class="select-language-radio"
+                   checked>
+            <label for="language-ko"
+                   class="select-language">KO</label>
+            <input type="radio"
+                   id="language-en"
+                   class="select-language-radio"
+                   name="language">
+            <label for="language-en"
+                   class="select-language">EN</label>
+            <!-- select language : end -->
+
+            <!-- selected korean : start -->
+            <ul class="total_mn selected-ko">
                 <li>
                     <a href="">종합정보망</a>
                 </li>
@@ -32,7 +49,7 @@
                     <a href="/user/login">로그인</a>
                 </li>
             </ul>
-            <div class="total_submn">
+            <div class="total_submn selected-ko">
                 <div id="subcon" class="subcon">
                     <dl>
                         <dt class="sub01_00">종합정보망</dt>
@@ -307,6 +324,35 @@
                     <dl class="lastdl"></dl>
                 </div>
             </div>
+            <!-- selected korean : end -->
+            <!-- selected english : start -->
+            <ul class="total_mn selected-en">
+                <li>
+                    <a href="" class="on">검증제도</a>
+                </li>
+            </ul>
+            <div class="total_submn selected-en">
+                <div id="subcon" class="subcon">
+                    <dl>
+                        <dt class="sub04_00">검증제도</dt>
+                        <% menu.forEach((item) => { %>
+                            <dd class="">
+                                <a href="" target="_self" title="" class=""><%= item.title %></a>
+                                <ul style="display: none;">
+                                    <% item.items.forEach((sub) => { %>
+                                        <li class="">
+                                            <a href="<%= sub.url %>" target="_self"
+                                               title=""><%= sub.title %>
+                                            </a>
+                                        </li>
+                                    <% }); %>
+                                </ul>
+                            </dd>
+                        <% }); %>
+                    </dl>
+                </div>
+            </div>
+            <!-- selected english : end -->
         </div>
     </div>
 </div>

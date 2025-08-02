@@ -2671,3 +2671,58 @@ caption {
 .icon-print {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='28px' height='28px'%3E%3Cimage x='0px' y='0px' width='28px' height='28px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfpBhoEFx61/rOYAAABa0lEQVQ4y9WVsUtCURTGfz4kCcJq6Q9oaHWRIHCIpCHef9DSP2BbBE41twa2CG7h1CYtFm1ODkFhRdTQZCBiiqn53tegPh+o3efY9y3nwPfdc889l3sRQybUlAlNJUb6kBjihXXO+GQ21jjmjY1h5lWsqyQMLKk+ii3fil1M8Ckso3gG/pExJDhkB7CBhkG9DBSAW85RUVJfbTlyA9BRW31JRSRVZBkn6KelimQBOdyAjZ2QBlxyEAZ6AW0HnALPXNEbGIPiASFeB8k8xjIr9GnPb4SvcTi+AFXcAKyO5OOKC3xwaai4T3TSCO+kDcYtYpNbnRMWEPHlSZypvTns+lQRCCNSXHjndcMmi1MKfFP24igphPKSJFdSzXhLG0OllEfIVkZZdfUolFRPP1PYU1LoSV1llZHtfx7r3LONxR5LU7ba4hqXO2KsTo7DAlwKhqOcmGOLOEf0/7CFiVPzMq9xWx3jF9CRPdL/AutAfAYPLKAWAAAAAElFTkSuQmCC' /%3E%3C/svg%3E");
 }
+
+.select-language-radio {
+    display: none;
+    appearance: none;
+
+    &:checked {
+        + .select-language {
+            color: #fff;
+        }
+    }
+
+    &[id=language-ko]:checked {
+        ~ .selected-ko {
+            display: block;
+        }
+    }
+
+    &[id=language-en]:checked {
+        ~ .selected-en {
+            display: block;
+        }
+
+        ~ .total_mn {
+            li {
+                a {
+                    background-color: #023976;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.total_mn,
+.total_submn {
+    display: none;
+}
+
+.select-language {
+    position: absolute;
+    top: 21px;
+    font-size: 17px;
+    color: #9c9c9c;
+    font-weight: bold;
+    text-decoration: underline;
+    z-index: 10000;
+
+    &[for=language-ko] {
+        left: 127px;
+    }
+
+    &[for=language-en] {
+        left: 162px;
+    }
+}

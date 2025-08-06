@@ -5,14 +5,12 @@ state:
 ---
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_head`); %>
-    <link rel="stylesheet"
-          href="<%= process.env.BASE_PATH %>/styles/always360/always360<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
-</head>
 <%
 imgPath = `${process.env.IMG_PATH}/always360`;
 %>
+<head>
+    <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_head`); %>
+</head>
 <body>
     <div id="wrap">
         <!-- 팝업(s) -->

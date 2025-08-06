@@ -12,6 +12,28 @@ var isMain = isMain ?? false;
         <!-- GNB -->
         <nav>
             <ul>
+                <% if (state.includes('loginPersonal')) { %>
+                    <!-- 로그인 후(개인) -->
+                    <li>
+                        <a href="/always360/user/mypage/childcareRsvtList.do?key=2401020023"
+                           class="">마이페이지
+                        </a>
+                        <div class="depth2_wrap">
+                            <ul>
+                                <li>
+                                    <a href="/always360/user/mypage/childcareRsvtList.do?key=2401020023">돌봄신청내역</a>
+                                </li>
+                                <li>
+                                    <a href="/always360/user/mypage/preInfoRegList.do?key=2401020023">사전아동등록</a>
+                                </li>
+                                <li>
+                                    <a href="/always360/user/mypage/mypageView.do?key=2401020023">개인정보관리</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- // 로그인 후(개인) -->
+                <% } %>
                 <li>
                     <a href="/always360/childcare/rsvtForm.do?key=2411190005"
                        target="_self">돌봄서비스 신청

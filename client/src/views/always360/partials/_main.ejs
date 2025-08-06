@@ -180,6 +180,304 @@
                        value=""/>
                 <div class="section_inner"
                      id="map_load">
+                    <div class="map_wrap"
+                         id="map_main"
+                         style="overflow: hidden; background: url(&quot;https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png&quot;);">
+                    </div>
+                    <div class="info_wrap">
+                        <h2><em>아동돌봄</em> 서비스 지도</h2>
+                        <div class="inner">
+                            <div class="search_area">
+                                <div class="box mob_half">
+                                    <div class="tit">경기 지역선택</div>
+                                    <div class="select_wrap">
+                                        <select id="sggSelect"
+                                                name="sc_sgg"
+                                                title="경기 지역선택">
+                                            <option value="">경기 지역선택</option>
+                                            <option value="가평군"
+                                                    data-pstnla="37.8313195480"
+                                                    data-pstnlo="127.5097053147">가평군
+                                            </option>
+                                            <option value="고양시"
+                                                    data-pstnla="37.6584133274"
+                                                    data-pstnlo="126.8319601069">고양시
+                                            </option>
+                                            <option value="과천시"
+                                                    data-pstnla="37.4302215702"
+                                                    data-pstnlo="126.9867975274">과천시
+                                            </option>
+                                            <option value="광명시"
+                                                    data-pstnla="37.4791045947"
+                                                    data-pstnlo="126.8648274001">광명시
+                                            </option>
+                                            <option value="광주시"
+                                                    data-pstnla="37.4292876634"
+                                                    data-pstnlo="127.2550692127">광주시
+                                            </option>
+                                            <option value="구리시"
+                                                    data-pstnla="37.5943497638"
+                                                    data-pstnlo="127.1296401379">구리시
+                                            </option>
+                                            <option value="군포시"
+                                                    data-pstnla="37.3610235159"
+                                                    data-pstnlo="126.9353164015">군포시
+                                            </option>
+                                            <option value="김포시"
+                                                    data-pstnla="37.6160639717"
+                                                    data-pstnlo="126.7143074964">김포시
+                                            </option>
+                                            <option value="남양주시"
+                                                    data-pstnla="37.6366168417"
+                                                    data-pstnlo="127.2179954278">남양주시
+                                            </option>
+                                            <option value="동두천시"
+                                                    data-pstnla="37.9036063789"
+                                                    data-pstnlo="127.0603006517">동두천시
+                                            </option>
+                                            <option value="부천시"
+                                                    data-pstnla="37.5035709607"
+                                                    data-pstnlo="126.7653497454">부천시
+                                            </option>
+                                            <option value="성남시"
+                                                    data-pstnla="37.4201775351"
+                                                    data-pstnlo="127.1262799642">성남시
+                                            </option>
+                                            <option value="수원시"
+                                                    data-pstnla="37.2634535001"
+                                                    data-pstnlo="127.0286620739">수원시
+                                            </option>
+                                            <option value="시흥시"
+                                                    data-pstnla="37.3804222349"
+                                                    data-pstnlo="126.8040652160">시흥시
+                                            </option>
+                                            <option value="안산시"
+                                                    data-pstnla="37.3225569018"
+                                                    data-pstnlo="126.8327135158">안산시
+                                            </option>
+                                            <option value="안성시"
+                                                    data-pstnla="37.0083078624"
+                                                    data-pstnlo="127.2792099773">안성시
+                                            </option>
+                                            <option value="안양시"
+                                                    data-pstnla="37.3942980870"
+                                                    data-pstnlo="126.9568583567">안양시
+                                            </option>
+                                            <option value="양주시"
+                                                    data-pstnla="37.7853533153"
+                                                    data-pstnlo="127.0449130036">양주시
+                                            </option>
+                                            <option value="양평군"
+                                                    data-pstnla="37.4917397537"
+                                                    data-pstnlo="127.4876803754">양평군
+                                            </option>
+                                            <option value="여주시"
+                                                    data-pstnla="37.2982137906"
+                                                    data-pstnlo="127.6366243768">여주시
+                                            </option>
+                                            <option value="연천군"
+                                                    data-pstnla="38.0965132154"
+                                                    data-pstnlo="127.0752586451">연천군
+                                            </option>
+                                            <option value="오산시"
+                                                    data-pstnla="37.1490366159"
+                                                    data-pstnlo="127.0776634684">오산시
+                                            </option>
+                                            <option value="용인시"
+                                                    data-pstnla="37.2410193565"
+                                                    data-pstnlo="127.1778962582">용인시
+                                            </option>
+                                            <option value="의왕시"
+                                                    data-pstnla="37.3454377014"
+                                                    data-pstnlo="126.9682394423">의왕시
+                                            </option>
+                                            <option value="의정부시"
+                                                    data-pstnla="37.7380644998"
+                                                    data-pstnlo="127.0338354480">의정부시
+                                            </option>
+                                            <option value="이천시"
+                                                    data-pstnla="37.2721230778"
+                                                    data-pstnlo="127.4350365875">이천시
+                                            </option>
+                                            <option value="파주시"
+                                                    data-pstnla="37.7600428240"
+                                                    data-pstnlo="126.7798758050">파주시
+                                            </option>
+                                            <option value="평택시"
+                                                    data-pstnla="36.9922987648"
+                                                    data-pstnlo="127.1125253346">평택시
+                                            </option>
+                                            <option value="포천시"
+                                                    data-pstnla="37.8947048945"
+                                                    data-pstnlo="127.2003315419">포천시
+                                            </option>
+                                            <option value="하남시"
+                                                    data-pstnla="37.5393456277"
+                                                    data-pstnlo="127.2147760540">하남시
+                                            </option>
+                                            <option value="화성시"
+                                                    data-pstnla="37.1974995348"
+                                                    data-pstnlo="126.8302559423">화성시
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select id="sggLowSelect"
+                                                name="sc_dongNm"
+                                                title="읍면동 선택">
+                                            <option value="">읍/면/동 선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="box mob_100">
+                                    <div class="tit">시설구분 선택</div>
+                                    <div class="select_wrap">
+                                        <div class="select_wrap">
+                                            <select name="sc_aplyYn"
+                                                    title="언제나돌봄 서비스제공기관(신청가능기관) 선택">
+                                                <option value="">전체</option>
+                                                <option value="Y">언제나돌봄 서비스제공기관(신청가능기관)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select name="sc_realm"
+                                                title="시설구분 선택">
+                                            <option value="">시설구분 선택</option>
+                                            <option value="001">지역아동센터</option>
+                                            <option value="002">다함께돌봄센터</option>
+                                            <option value="003">학교돌봄터</option>
+                                            <option value="004">언제나어린이집</option>
+                                            <option value="006">이천시24시간아이돌봄</option>
+                                            <option value="005">방문형언제나돌봄서비스</option>
+                                            <option value="999">기타</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="box mob_70">
+                                    <div class="tit">키워드</div>
+                                    <div class="select_wrap">
+                                        <select name="sc"
+                                                title="검색조건 선택">
+                                            <option value="">전체</option>
+                                            <option value="insttNm">시설명</option>
+                                            <option value="addr">주소</option>
+                                        </select>
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input type="text"
+                                               name="sw"
+                                               value=""
+                                               placeholder="검색어를 입력해주세요"
+                                               title="검색어를 입력해주세요">
+                                    </div>
+                                </div>
+                                <button type="submit"
+                                        id="searchBtn"
+                                        class="search_btn">
+                                    <div class="icon_search"></div>
+                                    검색
+                                </button>
+                            </div>
+                            <div class="list_area">
+                                <ul id="ulList">
+                                    <li id="0">
+                                        <a href="#"
+                                           class="insttList fcsBtn"
+                                           data-mapsn="173"
+                                           data-sn="173"
+                                           data-la="37.4829595685"
+                                           data-lo="126.8657840988"
+                                           data-nm="두드림지역아동센터"
+                                           data-aplyyn="">
+                                            <div class="tit_wrap">
+                                                <div class="img_wrap">
+                                                    <img src="<%= imgPath %>/icon/icon-default2.png"
+                                                         alt="돌봄기관">
+                                                </div>
+                                                <div class="tit">
+                                                    두드림지역아동센터
+                                                </div>
+                                            </div>
+                                            <div class="dl_wrap">
+                                                <dl class="address">
+                                                    <dt>주소</dt>
+                                                    <dd>(14214) 경기 광명시 시청로 71-1</dd>
+                                                </dl>
+                                                <dl class="time">
+                                                    <dt>업무시간</dt>
+                                                    <dd>(학기 중) 13시~20시
+                                                        (방학 중) 12시~17시
+                                                        ※ 센터별 운영시간 상이
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li id="1">
+                                        <a href="#"
+                                           class="insttList fcsBtn"
+                                           data-mapsn="1106"
+                                           data-sn="1106"
+                                           data-la="37.4733593216"
+                                           data-lo="126.8709625373"
+                                           data-nm="광명시 가족센터"
+                                           data-aplyyn="Y">
+                                            <div class="tit_wrap">
+                                                <div class="img_wrap">
+                                                    <img src="<%= imgPath %>/icon/icon-default.jpg"
+                                                         alt="360 돌봄">
+                                                </div>
+                                                <div class="tit">
+                                                    광명시 가족센터
+                                                </div>
+                                            </div>
+                                            <div class="dl_wrap">
+                                                <dl class="address">
+                                                    <dt>주소</dt>
+                                                    <dd>(14241) 경기 광명시 디지털로 34</dd>
+                                                </dl>
+                                                <dl class="time">
+                                                    <dt>업무시간</dt>
+                                                    <dd>월~금 9~18시※ (서비스가능시간) 365일 24시간</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li id="2">
+                                        <a href="#"
+                                           class="insttList fcsBtn"
+                                           data-mapsn="990"
+                                           data-sn="990"
+                                           data-la="37.4703615110"
+                                           data-lo="126.8739953717"
+                                           data-nm="광명시 다함께돌봄센터(철산래미안자이)"
+                                           data-aplyyn="Y">
+                                            <div class="tit_wrap">
+                                                <div class="img_wrap">
+                                                    <img src="<%= imgPath %>/icon/icon-default.jpg"
+                                                         alt="360 돌봄">
+                                                </div>
+                                                <div class="tit">
+                                                    광명시 다함께돌봄센터(철산래미안자이)
+                                                </div>
+                                            </div>
+                                            <div class="dl_wrap">
+                                                <dl class="address">
+                                                    <dt>주소</dt>
+                                                    <dd>(14242) 경기 광명시 디지털로 56</dd>
+                                                </dl>
+                                                <dl class="time">
+                                                    <dt>업무시간</dt>
+                                                    <dd>(학기 중) 10시~19시 (방학 중) 9시~19시 ※ 센터별 운영시간 상이</dd>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
         </section>

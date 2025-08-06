@@ -25,73 +25,12 @@ imgPath = `${process.env.IMG_PATH}/always360`;
         <!-- //헤더 -->
 
         <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_main`) %>
-        <div class="bg_dimm"></div>
+
+        <div class="bg_dimm"
+             style="<%= state.includes('layer') ? 'display: block' : '' %>"></div>
+
         <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_footer`) %>
         <!-- 푸터 -->
-    </div>
-    <script>
-        function fncGetCookie(name) {
-            var nameOfCookie = name + '=';
-            var x = 0;
-
-            while (x <= document.cookie.length) {
-                var y = (x + nameOfCookie.length);
-                if (document.cookie.substring(x, y) == nameOfCookie) {
-                    if ((endOfCookie = document.cookie.indexOf(';', y)) == -1) {
-                        endOfCookie = document.cookie.length;
-                    }
-                    return unescape(document.cookie.substring(y, endOfCookie));
-                }
-                x = document.cookie.indexOf(' ', x) + 1;
-
-                if (x == 0) break;
-            }
-
-            return '';
-        }
-
-        function fncSetCookie(name, value, days) {
-            const updatedCookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
-            var todayDate = new Date();
-            todayDate.setDate(todayDate.getDate() + days);
-            document.cookie = updatedCookie + '; path=/; expires=' + todayDate.toGMTString() + ';';
-        }
-
-        function insertMenu() {
-            var menuSn = '';
-            if (null == menuSn || '' == menuSn) {
-                menuSn = '0';
-            }
-
-            $.ajax({
-                url  : '/always360/cntn/stats/menu/insert.do',
-                type : 'POST',
-                data : {
-                    'menuSn': menuSn,
-                },
-                error: function (request, status, error) {
-                },
-            });
-        }
-
-        //접속 통계
-        $(document).ready(function () {
-            var statAt = fncGetCookie('SITE_STAT');
-            if (statAt == null || statAt != 'Y') {
-                $.ajax({
-                    url    : '/always360/cntn/stats/insert.do',
-                    type   : 'POST',
-                    error  : function (request, status, error) {
-                    },
-                    success: function () {
-                        fncSetCookie('SITE_STAT', 'Y', 1);
-                    },
-                });
-            }
-
-            insertMenu();
-        });
-    </script>
         <!-- // 푸터 -->
         <!-- 스크롤 탑 버튼 -->
         <button type="button"

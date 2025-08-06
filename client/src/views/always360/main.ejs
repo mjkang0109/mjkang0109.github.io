@@ -15,7 +15,7 @@ state:
 imgPath = `${process.env.IMG_PATH}/always360`;
 %>
 <head>
-    <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_head`); %>
+    <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_head`, {isMain: true}); %>
 </head>
 <body>
     <div id="wrap">
@@ -30,7 +30,7 @@ imgPath = `${process.env.IMG_PATH}/always360`;
         <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_header`) %>
         <!-- //헤더 -->
 
-        <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_main`) %>
+        <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_main`, {isMain: true}) %>
 
         <div class="bg_dimm"
              style="<%= state.includes('layer') ? 'display: block' : '' %>"></div>

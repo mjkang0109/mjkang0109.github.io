@@ -1,3 +1,6 @@
+<%
+var isMain = isMain ?? false;
+%>
 <meta http-equiv="Content-Type"
       content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible"
@@ -29,29 +32,37 @@
 <meta name="robots"
       content="index, follow">
 <link rel="icon"
-      href="<%= imgPath %>/favicon.ico"
+      href="<%= imgPath; %>/favicon.ico"
       type="image/x-icon">
 <!-- css -->
 <link rel="stylesheet"
-      href="<%= process.env.BASE_PATH %>/styles/always360/loading<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+      href="<%= process.env.BASE_PATH; %>/styles/always360/loading<%= process.env.MINIFY; %>.css<%= `?${setTimestamp()}`; %>">
 <link rel="stylesheet"
       href="<%= process.env.BASE_PATH %>/styles/always360/reset<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
 <link rel="stylesheet"
       href="<%= process.env.BASE_PATH %>/styles/always360/fonts<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
-<link rel="stylesheet"
-      href="<%= process.env.BASE_PATH %>/styles/always360/popup<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+<% if (isMain) { %>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH %>/styles/always360/popup<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+<% } %>
 <link rel="stylesheet"
       href="<%= process.env.BASE_PATH %>/styles/always360/common<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
 <link rel="stylesheet"
       href="<%= process.env.BASE_PATH %>/styles/always360/common_new<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+<% if (!isMain) { %>
 <link rel="stylesheet"
-      href="<%= process.env.BASE_PATH %>/styles/always360/main<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
-<link rel="stylesheet"
-      href="<%= process.env.BASE_PATH %>/styles/always360/lib/chat/common<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
-<link rel="stylesheet"
-      href="<%= process.env.BASE_PATH %>/styles/always360/lib/chat/chat_childcare<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
-<link rel="stylesheet"
-      href="<%= process.env.BASE_PATH %>/styles/always360/chat_childcare<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+      href="<%= process.env.BASE_PATH %>/styles/always360/sub<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+<% } %>
+<% if (isMain) { %>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH %>/styles/always360/main<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH %>/styles/always360/lib/chat/common<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH %>/styles/always360/lib/chat/chat_childcare<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH %>/styles/always360/chat_childcare<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+<% } %>
 <link rel="stylesheet"
       href="<%= process.env.BASE_PATH %>/styles/always360/swiper-bundle<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
 <link rel="stylesheet"

@@ -1,4 +1,7 @@
-<header class="main_ver">
+<%
+var isMain = isMain ?? false;
+%>
+<header class="<%= isMain ? 'main_ver' : ''; %>">
     <div class="header_inner">
         <h1>
             <a href="/always360/index.do">

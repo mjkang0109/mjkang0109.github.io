@@ -84,7 +84,7 @@
         </nav>
         <div class="util_area">
             <a href="/always360/sso/form.do?key=2404190001"
-               class="text_btn2">로그인
+               class="text_btn2"><%= state.includes('login') ? '로그아웃' : '로그인'; %>
             </a>
             <div class="menu_wrap">
                 <a href="javascript:void(0);"
@@ -94,7 +94,7 @@
                     <div class="inner">
                         <div class="heading">
                             <h2>
-                                <img src="<%= imgPath %>/logo/header_logo.svg"
+                                <img src="<%= imgPath; %>/logo/header_logo.svg"
                                      alt="360 돌봄 언제나 돌봄">
                             </h2>
                             <a href="/always360/sso/form.do?key=2404190001"
@@ -180,20 +180,99 @@
                 <!-- //sitemap_wrap (e) -->
                 <div class="mobile_side_wrap">
                     <div class="inner">
-                        <div class="login_area">
-                            <!-- 로그인 전 -->
-                            <div class="top_box">
-                                <p>맞춤형 돌봄 서비스,<br>
-                                    로그인 후 바로 신청해보세요.</p>
-                                <a href="/always360/sso/form.do?key=2404190001"
-                                   class="primary_btn">로그인
-                                </a>
+                        <% if (!state.includes('login')) { %>
+                            <div class="login_area">
+                                <!-- 로그인 전 -->
+                                <div class="top_box">
+                                    <p>맞춤형 돌봄 서비스,<br>
+                                        로그인 후 바로 신청해보세요.</p>
+                                    <a href="/always360/sso/form.do?key=2404190001"
+                                       class="primary_btn">로그인
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        <% } %>
+                        <% if (state.includes('loginPersonal')) { %>
+                            <div class="login_area">
+                                <!-- 로그인 후 (개인)-->
+                                <div class="personal_wrap user">
+                                    <div class="con_wrap">
+                                        <div class="name_wrap">
+                                            <div class="name"><strong>구본민</strong>님</div>
+                                            <div class="welcome_txt">어서오세요! 환영합니다.</div>
+                                        </div>
+                                        <!-- 자녀 정보가 없는 경우  -->
+                                        <div class="no_info_wrap"
+                                             style="display: none;">
+                                            자녀정보를 등록해주세요!
+                                        </div>
+                                        <div class="now_board_wrap">
+                                            <ul>
+                                                <li class="type1">
+                                                    <div class="tit">최근 한달 돌봄서비스 신청</div>
+                                                    <div class="txt"><strong>0</strong>건</div>
+                                                </li>
+                                                <li class="type2">
+                                                    <div class="tit">돌봄서비스 누적 이용 시간</div>
+                                                    <div class="txt"><strong>0</strong>건</div>
+                                                </li>
+                                                <li class="type3">
+                                                    <div class="tit">돌봄서비스 누적 이용 요금</div>
+                                                    <div class="txt"><strong>0</strong>원</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="service_link_wrap">
+                                        <ul>
+                                            <li class="type1">
+                                                <a href="/always360/user/mypage/childcareRsvtList.do?key=2401020023">
+                                                    서비스<br>신청현황
+                                                </a>
+                                            </li>
+                                            <li class="type2">
+                                                <a href="/always360/user/mypage/mypageReportList.do?key=2401020023">
+                                                    돌보미<br>업무보고 열람
+                                                </a>
+                                            </li>
+                                            <li class="type3">
+                                                <a href="/always360/user/mypage/mypageSurveyList.do?key=2401020023">
+                                                    서비스<br>만족도 조사
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
                         <!-- mobile_acc_wrap (s) -->
                         <div class="mobile_acc_wrap">
                             <div class="mob_depth1_wrap">
                                 <ul>
+                                    <!-- 로그인 후(개인) -->
+                                    <li>
+                                        <a href="javascript:;"
+                                           class="">마이페이지
+                                        </a>
+                                        <ul class="mob_depth2_wrap">
+                                            <li>
+                                                <a href="/always360/user/mypage/childcareRsvtList.do?key=2401020023">
+                                                    돌봄신청내역
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/always360/user/mypage/preInfoRegList.do?key=2401020023">
+                                                    사전아동등록
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/always360/user/mypage/mypageView.do?key=2401020023">
+                                                    개인정보관리
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- //로그인 후 -->
                                     <li>
                                         <a href="javascript:;"
                                            class="">돌봄서비스 신청

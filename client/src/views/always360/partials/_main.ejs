@@ -32,78 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- 로그인 전 -->
-                <form name="loginFrm"
-                      method="post"></form>
-                <form name="frm"
-                      id="frm"
-                      method="get">
-                    <div class="personal_wrap pc_only">
-                        <div class="login_box">
-                            <strong class="login_guide_txt tac">
-                                맞춤형 돌봄 서비스,<br>
-                                로그인 후 바로 신청해보세요.
-                            </strong>
-                            <div class="input_wrap">
-                                <input type="text"
-                                       id="userId"
-                                       name="userId"
-                                       placeholder="아이디를 입력해주세요"
-                                       title="아이디를 입력해주세요">
-                            </div>
-                            <div class="input_wrap password_type">
-                                <input type="password"
-                                       id="userPswd"
-                                       name="userPswd"
-                                       placeholder="비밀번호를 입력해주세요"
-                                       title="비밀번호를 입력해주세요">
-                                <button type="button"
-                                        title="비밀번호 표시"
-                                        class="show_password"></button>
-                            </div>
-                            <div class="raBox">
-                                <input type="checkbox"
-                                       name="saveId"
-                                       id="saveId"><label for="saveId">아이디 저장</label>
-                            </div>
-                            <!-- button 에 disabled 추가 시 로그인 버튼 작동 안됨-->
-                            <button class="black_btn"
-                                    type="submit">로그인
-                            </button>
-                            <div class="btn_wrap">
-                                <a href="/always360/user/idSearch.do?key=2402130005">아이디/비밀번호 찾기</a>
-                                <a href="/always360/user/join/s1.do?key=2402130007">회원가입</a>
-                            </div>
-                        </div>
-                        <div class="sns_wrap">
-                            <div class="tit">SNS 로그인</div>
-                            <ul>
-                                <li>
-                                    <a title="새창열림"
-                                       href="javascript:void(0);"
-                                       onclick="redirectToNaverLogin();"
-                                       class="naver">네이버
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="새창열림"
-                                       href="javascript:void(0);"
-                                       onclick="kakaoLogin();"
-                                       class="kakao">카카오
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="새창열림"
-                                       href="javascript:void(0);"
-                                       onclick="googleOauthSignIn();"
-                                       class="google">구글
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </form>
-                <!-- //로그인 전 -->
+                <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_mainLogin`) %>
             </div>
         </section>
         <section class="section2">

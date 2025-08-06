@@ -75,11 +75,13 @@ var isMain = isMain ?? false;
 <script src="<%= process.env.BASE_PATH %>/scripts/always360/utils.js"></script>
 <script src="<%= process.env.BASE_PATH %>/scripts/always360/dates.js"></script>
 <script src="<%= process.env.BASE_PATH %>/scripts/always360/jquery_utils.js"></script>
-<script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/jquery.min.js"></script>
-<script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/common.js"></script>
-<script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/chatAIaas_always.js"></script>
-<script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/async.min.js"></script>
-<script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/crypto-js.min.js"></script>
+<% if (isMain) { %>
+    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/jquery.min.js"></script>
+    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/common.js"></script>
+    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/chatAIaas_always.js"></script>
+    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/async.min.js"></script>
+    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/chat/js/crypto-js.min.js"></script>
+<% } %>
 <script type="text/javascript"
         src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e2bf5529fbfc796b3a32dbab98f8b23d"></script>
 <!-- Google tag (gtag.js) -->

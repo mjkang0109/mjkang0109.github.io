@@ -1,0 +1,104 @@
+---
+group: always360
+state:
+    default: 공지사항
+    detail: 상세
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%
+imgPath = `${process.env.IMG_PATH}/always360`;
+%>
+<head>
+    <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_head`); %>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 팝업(s) -->
+        <!-- // 팝업(e)  -->
+        <!-- skip -->
+        <div id="skip">
+            <a href="https://www.gg.go.kr/always360/index.do#container">본문 바로가기</a>
+        </div>
+        <!-- // skip -->
+        <!-- 헤더 -->
+        <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_header`) %>
+        <!-- //헤더 -->
+        <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_notice`) %>
+        <div class="bg_dimm"
+             style="<%= state.includes('layer') ? 'display: block' : '' ;%>"></div>
+        <!-- 푸터 -->
+        <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_footer`) %>
+        <!-- // 푸터 -->
+        <!-- 스크롤 탑 버튼 -->
+        <button type="button"
+                class="top_btn"
+                title="스크롤 위로 올리기"></button>
+        <!-- // 스크롤 탑 버튼 -->
+    </div>
+
+    <% if (state === 'layerCenter') { %>
+        <div id="modalLoad93251"
+             class="popup_wrap popup3 welfare_pop"
+             tabindex="-1"
+             style="display: block;">
+            <div style="display: block;">
+                <div class="popup_header">
+                    <p class="bull_tit"><span>지역아동센터</span></p>
+                    <h2 class="bull_tit2">영지지역아동센터</h2>
+                </div>
+                <div class="popup_con">
+                    <div class="div_table">
+                        <div class="div_wrap">
+                            <dl>
+                                <dt class="bull_place">주소</dt>
+                                <dd>(14333) 경기 광명시 오리로 397 3층 소하2동</dd>
+                            </dl>
+                            <dl>
+                                <dt class="bull_phone">전화번호</dt>
+                                <dd>02-899-9418</dd>
+                            </dl>
+                            <dl>
+                                <dt class="bull_website">이용대상</dt>
+                                <dd>18세 미만의 아동으로서 초등학교 및 중학교에 재학 중인 아동</dd>
+                            </dl>
+                            <dl>
+                                <dt class="bull_membernumber">정원</dt>
+                                <dd>35</dd>
+                            </dl>
+                            <dl>
+                                <dt class="bull_time">운영시간</dt>
+                                <dd>(학기 중) 13시~20시
+                                    (방학 중) 12시~17시
+                                    ※ 센터별 운영시간 상이
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="bull_price">이용요금</dt>
+                                <dd>(원칙) 무료
+                                    ※ 단, 일반아동 한해 월 10만원 한도 내 수납 가능
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="bull_qualification">자격요건</dt>
+                                <dd>우선돌봄아동 및 일반아동</dd>
+                            </dl>
+                            <dl>
+                                <dt class="bull_ex">지원내용</dt>
+                                <dd>방과 후 돌봄서비스 등</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <a href="#"
+                       onclick="window.open('https://map.kakao.com/link/to/영지지역아동센터,37.4378958583,126.8791656063')">길 찾기
+                    </a>
+                </div>
+                <a href="#"
+                   class="btn_close"><span class="screenOut">닫기</span></a>
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>

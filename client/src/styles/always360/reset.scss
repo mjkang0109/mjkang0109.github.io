@@ -1,0 +1,130 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: -1px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Pretendard";
+    font-size: 16px;
+    color: #555;
+}
+
+em, address, i {
+    font-style: normal;
+}
+
+html, body {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    -webkit-print-color-adjust: exact;
+}
+
+ul, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+img {
+    border: 0;
+    font-size: 0;
+    vertical-align: top;
+}
+
+input[type="submit"], button {
+    cursor: pointer;
+}
+
+table, tr, td {
+    border-collapse: collapse;
+}
+
+table {
+    border: 0;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border-top: 1px solid #ccc;
+}
+
+input,
+select {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background: transparent;
+}
+
+select option {
+    cursor: pointer;
+}
+
+button {
+    background: none;
+    border: 0;
+}
+
+iframe {
+    width: 100%;
+}
+
+label {
+}
+
+/* sound only */
+.screenOut {
+    overflow: hidden;
+    display: inline-block;
+    border: 0;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+/* focus */
+:focus-visible,
+input:focus-visible + label {
+    outline: 2px dotted;
+    outline-offset: -2px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox  */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+.ico_dot {
+    display: inline-block;
+    background: #b7b7b7;
+    margin: -3px 3px 0 4px;
+    width: 2px;
+    height: 2px;
+    vertical-align: middle;
+}
+
+.for_mobile {
+    display: none;
+}
+
+@media screen and (max-width: 959px) {
+    .for_web {
+        display: none;
+    }
+    .for_mobile {
+        display: block;
+    }
+}

@@ -183,6 +183,26 @@
                                         </div>
                                         <ul class="chip_wrap"
                                             id="lowAppendDiv">
+                                            <% if (state === 'hasMap' || state === 'noData') { %>
+                                                <li data-no="2">
+                                                    <span>광명시 광명동</span>
+                                                    <input type="hidden"
+                                                           name="sc_sggArr"
+                                                           value="광명동">
+                                                    <a href="javascript:void(0);"
+                                                       onclick="delZone(2);"
+                                                       title="삭제"></a>
+                                                </li>
+                                                <li data-no="2">
+                                                    <span>광명시 소하동</span>
+                                                    <input type="hidden"
+                                                           name="sc_sggArr"
+                                                           value="소하동">
+                                                    <a href="javascript:void(0);"
+                                                       onclick="delZone(2);"
+                                                       title="삭제"></a>
+                                                </li>
+                                            <% } %>
                                         </ul>
                                         <div id="totalZone"
                                              style="display:none;"></div>
@@ -261,126 +281,141 @@
                         </div>
                         <div class="map_list_wrap"
                              id="map_load">
-                            <% if (state === 'hasMap') { %>
+                            <% if (state === 'hasMap' || state === 'noData') { %>
                                 <div class="map_wrap"></div>
                                 <div class="list_wrap">
                                     <div class="list_box_wrap">
-                                        <a href="#"
-                                           class="insttList fcsBtn"
-                                           data-mapsn="173"
-                                           data-sn="173"
-                                           data-la="37.4829595685"
-                                           data-lo="126.8657840988"
-                                           data-nm="두드림지역아동센터"
-                                           data-aplyyn="">
-                                            <div class="img_wrap">
-                                                <div class="bull_round type2"
-                                                     title="돌봄기관"></div>
-                                            </div>
-                                            <dl>
-                                                <dt>두드림지역아동센터</dt>
-                                                <dd><span class="bull_position">주소</span>(14214) 경기 광명시 시청로 71-1</dd>
-                                            </dl>
-                                        </a>
-                                        <a href="#"
-                                           class="insttList fcsBtn"
-                                           data-mapsn="1106"
-                                           data-sn="1106"
-                                           data-la="37.4733593216"
-                                           data-lo="126.8709625373"
-                                           data-nm="광명시 가족센터"
-                                           data-aplyyn="Y">
-                                            <div class="img_wrap">
-                                                <div class="bull_round"
-                                                     title="360"></div>
-                                            </div>
-                                            <dl>
-                                                <dt>광명시 가족센터</dt>
-                                                <dd><span class="bull_position">주소</span>(14241) 경기 광명시 디지털로 34</dd>
-                                            </dl>
-                                        </a>
-                                        <a href="#"
-                                           class="insttList fcsBtn"
-                                           data-mapsn="990"
-                                           data-sn="990"
-                                           data-la="37.4703615110"
-                                           data-lo="126.8739953717"
-                                           data-nm="광명시 다함께돌봄센터(철산래미안자이)"
-                                           data-aplyyn="Y">
-                                            <div class="img_wrap">
-                                                <div class="bull_round"
-                                                     title="360"></div>
-                                            </div>
-                                            <dl>
-                                                <dt>광명시 다함께돌봄센터(철산래미안자이)</dt>
-                                                <dd><span class="bull_position">주소</span>(14242) 경기 광명시 디지털로 56</dd>
-                                            </dl>
-                                        </a>
-                                        <a href="#"
-                                           class="insttList fcsBtn"
-                                           data-mapsn="185"
-                                           data-sn="185"
-                                           data-la="37.4802716563"
-                                           data-lo="126.8599411146"
-                                           data-nm="엘리트지역아동센터"
-                                           data-aplyyn="">
-                                            <div class="img_wrap">
-                                                <div class="bull_round type2"
-                                                     title="돌봄기관"></div>
-                                            </div>
-                                            <dl>
-                                                <dt>엘리트지역아동센터</dt>
-                                                <dd><span class="bull_position">주소</span>(14217) 경기 광명시 광명로928번길 42-4
-                                                </dd>
-                                            </dl>
-                                        </a>
-                                        <a href="#"
-                                           class="insttList fcsBtn"
-                                           data-mapsn="183"
-                                           data-sn="183"
-                                           data-la="37.4810933631"
-                                           data-lo="126.8571458428"
-                                           data-nm="어벤져스지역아동센터"
-                                           data-aplyyn="">
-                                            <div class="img_wrap">
-                                                <div class="bull_round type2"
-                                                     title="돌봄기관"></div>
-                                            </div>
-                                            <dl>
-                                                <dt>어벤져스지역아동센터</dt>
-                                                <dd><span class="bull_position">주소</span>(14221) 경기 광명시 광명로928번길 16</dd>
-                                            </dl>
-                                        </a>
-                                        <div class="paging_wrap">
+                                        <% if (state === 'hasMap') { %>
                                             <a href="#"
-                                               class="prev"
-                                               onclick="fn_egov_link_page(1); return false;">
-                                                <span class="screenOut">이전</span></a>
-                                            <a href="#"
-                                               class="num active"
-                                               title="현재 페이지(선택됨)">1
+                                               class="insttList fcsBtn"
+                                               data-mapsn="173"
+                                               data-sn="173"
+                                               data-la="37.4829595685"
+                                               data-lo="126.8657840988"
+                                               data-nm="두드림지역아동센터"
+                                               data-aplyyn="">
+                                                <div class="img_wrap">
+                                                    <div class="bull_round type2"
+                                                         title="돌봄기관"></div>
+                                                </div>
+                                                <dl>
+                                                    <dt>두드림지역아동센터</dt>
+                                                    <dd><span class="bull_position">주소</span>(14214) 경기 광명시 시청로 71-1
+                                                    </dd>
+                                                </dl>
                                             </a>
                                             <a href="#"
-                                               class="num"
-                                               onclick="fn_egov_link_page(2); return false;">2
+                                               class="insttList fcsBtn"
+                                               data-mapsn="1106"
+                                               data-sn="1106"
+                                               data-la="37.4733593216"
+                                               data-lo="126.8709625373"
+                                               data-nm="광명시 가족센터"
+                                               data-aplyyn="Y">
+                                                <div class="img_wrap">
+                                                    <div class="bull_round"
+                                                         title="360"></div>
+                                                </div>
+                                                <dl>
+                                                    <dt>광명시 가족센터</dt>
+                                                    <dd><span class="bull_position">주소</span>(14241) 경기 광명시 디지털로 34</dd>
+                                                </dl>
                                             </a>
                                             <a href="#"
-                                               class="num"
-                                               onclick="fn_egov_link_page(3); return false;">3
+                                               class="insttList fcsBtn"
+                                               data-mapsn="990"
+                                               data-sn="990"
+                                               data-la="37.4703615110"
+                                               data-lo="126.8739953717"
+                                               data-nm="광명시 다함께돌봄센터(철산래미안자이)"
+                                               data-aplyyn="Y">
+                                                <div class="img_wrap">
+                                                    <div class="bull_round"
+                                                         title="360"></div>
+                                                </div>
+                                                <dl>
+                                                    <dt>광명시 다함께돌봄센터(철산래미안자이)</dt>
+                                                    <dd><span class="bull_position">주소</span>(14242) 경기 광명시 디지털로 56</dd>
+                                                </dl>
                                             </a>
                                             <a href="#"
-                                               class="num"
-                                               onclick="fn_egov_link_page(4); return false;">4
+                                               class="insttList fcsBtn"
+                                               data-mapsn="185"
+                                               data-sn="185"
+                                               data-la="37.4802716563"
+                                               data-lo="126.8599411146"
+                                               data-nm="엘리트지역아동센터"
+                                               data-aplyyn="">
+                                                <div class="img_wrap">
+                                                    <div class="bull_round type2"
+                                                         title="돌봄기관"></div>
+                                                </div>
+                                                <dl>
+                                                    <dt>엘리트지역아동센터</dt>
+                                                    <dd><span class="bull_position">주소</span>(14217) 경기 광명시 광명로928번길
+                                                        42-4
+                                                    </dd>
+                                                </dl>
                                             </a>
                                             <a href="#"
-                                               class="num"
-                                               onclick="fn_egov_link_page(5); return false;">5
+                                               class="insttList fcsBtn"
+                                               data-mapsn="183"
+                                               data-sn="183"
+                                               data-la="37.4810933631"
+                                               data-lo="126.8571458428"
+                                               data-nm="어벤져스지역아동센터"
+                                               data-aplyyn="">
+                                                <div class="img_wrap">
+                                                    <div class="bull_round type2"
+                                                         title="돌봄기관"></div>
+                                                </div>
+                                                <dl>
+                                                    <dt>어벤져스지역아동센터</dt>
+                                                    <dd><span class="bull_position">주소</span>(14221) 경기 광명시 광명로928번길 16
+                                                    </dd>
+                                                </dl>
                                             </a>
-                                            <a href="#"
-                                               class="next"
-                                               onclick="fn_egov_link_page(6); return false;">
-                                                <span class="screenOut">다음</span></a>
-                                        </div>
+                                            <div class="paging_wrap">
+                                                <a href="#"
+                                                   class="prev"
+                                                   onclick="fn_egov_link_page(1); return false;">
+                                                    <span class="screenOut">이전</span></a>
+                                                <a href="#"
+                                                   class="num active"
+                                                   title="현재 페이지(선택됨)">1
+                                                </a>
+                                                <a href="#"
+                                                   class="num"
+                                                   onclick="fn_egov_link_page(2); return false;">2
+                                                </a>
+                                                <a href="#"
+                                                   class="num"
+                                                   onclick="fn_egov_link_page(3); return false;">3
+                                                </a>
+                                                <a href="#"
+                                                   class="num"
+                                                   onclick="fn_egov_link_page(4); return false;">4
+                                                </a>
+                                                <a href="#"
+                                                   class="num"
+                                                   onclick="fn_egov_link_page(5); return false;">5
+                                                </a>
+                                                <a href="#"
+                                                   class="next"
+                                                   onclick="fn_egov_link_page(6); return false;">
+                                                    <span class="screenOut">다음</span></a>
+                                            </div>
+                                        <% } %>
+                                        <% if (state === 'noData') { %>
+                                            <div class="no_data_wrap">
+                                                <p>현재 시설정보가 없습니다.</p>
+                                            </div>
+                                            <div class="paging_wrap">
+                                                <a href="#"
+                                                   class="num active">1
+                                                </a>
+                                            </div>
+                                        <% } %>
                                     </div>
                                 </div>
                             <% } %>

@@ -1,3 +1,5 @@
+$imgPath: "../../images/always360";
+
 @charset "utf-8";
 .bg_dimm {
     display: none;
@@ -122,51 +124,51 @@
 }
 
 .div_wrap dt.bull_place {
-    background: url("../images/icon/bull_place.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_place.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_phone {
-    background: url("../images/icon/bull_phone.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_phone.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_website {
-    background: url("../images/icon/bull_website.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_website.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_membernumber {
-    background: url("../images/icon/bull_membernumber.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_membernumber.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_time {
-    background: url("../images/icon/bull_time.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_time.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_price {
-    background: url("../images/icon/bull_price.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_price.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_qualification {
-    background: url("../images/icon/bull_qualification.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_qualification.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_ex {
-    background: url("../images/icon/bull_ex.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_ex.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_apply {
-    background: url("../images/icon/bull_apply.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_apply.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_building {
-    background: url("../images/icon/bull_building.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_building.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_camera {
-    background: url("../images/icon/bull_camera.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_camera.svg") no-repeat left 0 / auto;
 }
 
 .div_wrap dt.bull_relationship {
-    background: url("../images/icon/bull_relationship.svg") no-repeat left 0 / auto;
+    background: url("#{$imgPath}/icon/bull_relationship.svg") no-repeat left 0 / auto;
 }
 
 .popup_wrap .btn_close {
@@ -175,7 +177,7 @@
     top: 38px;
     width: 24px;
     height: 24px;
-    background: url("../images/icon/icon_popup_close.svg") center no-repeat;
+    background: url("#{$imgPath}/icon/icon_popup_close.svg") center no-repeat;
 }
 
 .popup_wrap:focus-visible {
@@ -216,7 +218,7 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    background: url("../images/icon/icon_place.svg") center no-repeat;
+    background: url("#{$imgPath}/icon/icon_place.svg") center no-repeat;
 }
 
 .popup_wrap .btn_wrap.column_type {
@@ -376,7 +378,7 @@
 
 .popup_wrap .import_area {
     font-size: 16px;
-    background: url("../images/icon/bull_import.svg") no-repeat;
+    background: url("#{$imgPath}/icon/bull_import.svg") no-repeat;
     padding-left: 20px;
     color: #e72417;
     font-weight: bold;

@@ -1,0 +1,58 @@
+<div class="content"
+     id="container">
+    <form id="frm"
+          name="frm"
+          action="/always360/user/mypage/mypageSurveyList.do?key=2401020023&amp;pageIndex=1&amp;rsvtSn="
+          method="get">
+        <input id="key"
+               name="key"
+               type="hidden"
+               value="2401020023">
+        <input id="pageIndex"
+               name="pageIndex"
+               type="hidden"
+               value="1">
+        <input type="hidden"
+               name="rsvtSn">
+        <div class="sub_wrap type1">
+            <div class="inner">
+                <div class="sub_top bg4">
+                    <h2 class="sub_tit">돌봄서비스 관리</h2>
+                </div>
+                <div class="sub_con">
+                    <div class="max_1520">
+                        <div class="manage_list_wrap">
+                            <div class="page_tab_btn_area type2">
+                                <a href="javascript:void(0);"
+                                   onclick="goRsvtList();">돌봄신청 관리
+                                </a>
+                                <a href="javascript:void(0);"
+                                   onclick="goReportList();">돌보미 업무보고
+                                </a>
+                                <a href="#"
+                                   class="active"
+                                   title="선택됨">만족도 조사
+                                </a>
+                            </div>
+                            <div class="db_manage_list type4">
+                                <ul>
+                                </ul>
+                                <% if (state === 'noData') { %>
+                                    <div class="no_result_wrap">
+                                        <p class="no_result">검색된 결과가 없습니다.</p>
+                                    </div>
+                                <% } %>
+                            </div>
+                            <div class="paging_wrap">
+                                <a href="#"
+                                   class="num active"
+                                   title="현재 페이지(선택됨)">1
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

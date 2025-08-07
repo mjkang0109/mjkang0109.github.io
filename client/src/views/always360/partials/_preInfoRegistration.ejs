@@ -30,10 +30,60 @@
                             </div>
                             <div class="manage_list">
                                 <ul>
+                                    <%
+                                    const type = ['승인완료', '승인대기', '보완대기', '돌봄대상아님'];
+                                    if (state !== 'noData') {
+                                    for(let i = 0; i < 4; i++) {
+                                    %>
+                                        <li>
+                                            <a href="javascript:void(0);"
+                                               onclick="javascript:goView('1895')">
+                                                <div class="tit">
+                                                    <div class="info1">
+                                                        <strong class="name">홍길동</strong>
+                                                        <div class="gender">
+                                                            여성
+                                                        </div>
+                                                    </div>
+                                                    <div class="tag type<%= i + 1 %>">
+                                                        <%= type[i] %>
+                                                    </div>
+                                                </div>
+                                                <div class="info_con">
+                                                    <dl>
+                                                        <dt class="birth">생년월일</dt>
+                                                        <dd>2015년 1월 1일</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt class="relation">관계</dt>
+                                                        <dd>
+                                                            직계 가족
+                                                            -
+                                                            부모
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt class="tel">비상연락망<span>(신청자)</span></dt>
+                                                        <dd>010-1111-1111</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt class="date">신청일</dt>
+                                                        <dd>
+                                                            2025년 08월 07일
+                                                            15시07분34초
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    <% }
+                                    } %>
                                 </ul>
-                                <div class="no_result_wrap">
-                                    <p class="no_result">사전등록정보가 존재하지 않습니다.</p>
-                                </div>
+                                <% if (state === 'noData') { %>
+                                    <div class="no_result_wrap">
+                                        <p class="no_result">사전등록정보가 존재하지 않습니다.</p>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="paging_wrap">
                                 <a href="#"
@@ -47,5 +97,4 @@
             </div>
         </div>
     </form>
-
 </div>

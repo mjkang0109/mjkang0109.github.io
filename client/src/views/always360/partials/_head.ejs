@@ -1,5 +1,6 @@
 <%
 var isMain = isMain ?? false;
+var title = title ?? '경기도아동언제나돌봄';
 %>
 <meta http-equiv="Content-Type"
       content="text/html; charset=UTF-8">
@@ -20,7 +21,7 @@ var isMain = isMain ?? false;
 <meta property="og:type"
       content="website">
 <meta property="og:title"
-      content="경기도 아동 언제나 돌봄">
+      content="<%= title %>">
 <meta property="og:image"
       content="/resource/www/images/common/logo.svg">
 <meta property="og:url"
@@ -88,7 +89,7 @@ var isMain = isMain ?? false;
 <script async
         src="https://www.googletagmanager.com/gtag/js?id=G-VV20T4GZT2"></script>
 <!-- //script -->
-<title>경기도아동언제나돌봄</title>
+<title><%= title %></title>
 <script src="https://apis.google.com/js/platform.js"
         async
         defer></script>

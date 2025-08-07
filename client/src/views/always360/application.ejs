@@ -9,7 +9,9 @@ state:
 imgPath = `${process.env.IMG_PATH}/always360`;
 %>
 <head>
-    <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_head`); %>
+    <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_head`, {
+        title: '경기도아동언제나돌봄 | 돌봄안내 - 아동 언제나 돌봄사업 안내 - 신청방법 및 이용절차'
+    }); %>
 </head>
 <body>
     <div id="wrap">

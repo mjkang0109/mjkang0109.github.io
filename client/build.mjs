@@ -60,17 +60,17 @@ const pages = glob.sync(`${VIEWS}/**/[^_]*.ejs`, {
     nosort: true,
 });
 
-const scripts = glob.sync(`${SCRIPTS}/*[^plugins]*/*.js`, {
+const scripts = glob.sync(`${SCRIPTS}/*[^plugins]*/**/*.js`, {
     cwd   : SRC,
     nosort: true,
 });
 
-const styles = glob.sync(`${STYLES}/*[^plugins|^fonts]*/*.css`, {
+const styles = glob.sync(`${STYLES}/*[^plugins|^fonts]*/**/*.css`, {
     cwd   : SRC,
     nosort: true,
 });
 
-const images = await glob.sync(`${IMAGES}/**/**/*[^.min].{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}`, {
+const images = await glob.sync(`${IMAGES}/**/**/*[^.min].{jpg,jpeg,png,svg,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}`, {
     cwd   : SRC,
     nosort: true,
 });

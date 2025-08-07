@@ -1,0 +1,98 @@
+<div class="content"
+     id="container">
+    <form name="frm"
+          id="frm"
+          method="post"
+          data-parsley-validate="true">
+        <div class="sub_wrap type2">
+            <div class="inner">
+                <div class="sub_top">
+                    <h2 class="sub_tit">회원탈퇴 신청</h2>
+                </div>
+                <div class="sub_con">
+                    <div class="login_wrap">
+                        <div class="login_inner">
+                            <div class="input_tit_wrap">비밀번호 확인</div>
+                            <div class="input_wrap">
+                                <input type="password"
+                                       id="input_pass"
+                                       placeholder="현재 비밀번호를 입력해주세요"
+                                       title="현재 비밀번호를 입력해주세요">
+                            </div>
+                            <p class="guide_txt">
+                                언제나 돌봄 회원 탈퇴 시 기존 회원 정보 및<br>
+                                이용 내역은 삭제 처리되어 확인이 불가능합니다.
+                            </p>
+                            <div class="btn_wrap2">
+                                <a href="javascript:void(0);"
+                                   onclick="goDelete();"
+                                   class="primary_btn w258">회원탈퇴
+                                </a>
+                                <a href="/always360/user/mypage/mypageView.do?key=2401020023"
+                                   class="text_btn tac">취소
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        function goDelete() {
+            var userPswd = $("#input_pass").val();
+
+            if (userPswd == '') {
+                alert("비밀번호를 입력해주세요.");
+                $("#input_pass").focus();
+                return false;
+            }
+            lodingFixedOn("로딩중 입니다.", 300, 100);
+            $.ajax({
+                url     : "/always360/user/pswdChk.do",
+                type    : "POST",
+                data    : {
+                    "userId"  : "test78965",
+                    "userPswd": userPswd,
+                },
+                dataType: "json",
+                error   : function (request, status, error) {
+                    alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+                    lodingOff(document.body);
+                },
+                success : function (result) {
+                    lodingOff(document.body);
+                    if (result != null && result.length > 0) {
+                        if (result[0].msg != '') {
+                            alert(result[0].msg);
+                            return false;
+                        }
+                        $.ajax({
+                            url     : "/always360/user/mypage/whdwl.do",
+                            type    : "POST",
+                            data    : {
+                                "userId": "test78965"
+                            },
+                            dataType: "json",
+                            error   : function (request, status, error) {
+                                alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+                                lodingOff(document.body);
+                            },
+                            success : function (result) {
+                                lodingOff(document.body);
+                                if (result != null && result.length > 0) {
+                                    if (result[0].msg != '') {
+                                        alert(result[0].msg);
+                                        return false;
+                                    }
+                                    alert("회원탈퇴 처리 되었습니다.\n언제나 돌봄을 이용해주셔서 감사합니다.");
+                                    location.href = "/always360/sso/logout.do";
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+        }
+    </script>
+</div>

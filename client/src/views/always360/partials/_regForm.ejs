@@ -457,7 +457,6 @@
                                                         자격인증 서비스
                                                     </a>
                                                 </td>
-
                                                 <td class="tac">
                                                     <div id="divParent"
                                                          style="display:none;">
@@ -534,27 +533,52 @@
 					※ 최대 10MB 파일 5개까지 업로드 가능합니다</span>
                                         </div>
                                         <div class="chip_wrap">
+                                            <ul class="file-list-child">
+                                                <li class="tag_box dz-image-preview-child">
+                                                    <div class="del-button">
+                                                        <span class="name">
+                                                            <a href="javascript:void(0);">스크린샷 2024-10-07 오전 10.59.42.png</a>
+                                                        </span>
+                                                        <span class="kb">175.39KB</span>
+                                                        <button type="button"
+                                                                class="del_btn upload-delete-child"
+                                                                arry-sn="1"
+                                                                data-sn="0"
+                                                                data-realnm="1754451286633.png"
+                                                                ordr="0"></button>
+                                                    </div>
+                                                    <div class="img_alt_wrap">
+                                                        <label for="image_alt1">이미지 설명 (대체
+                                                            텍스트)</label>
+                                                        <input type="text"
+                                                               id="image_alt1"
+                                                               name="image_alt"
+                                                               title="이미지 대체 텍스트를 입력해주세요."
+                                                               placeholder="이미지 대체 텍스트를 입력해주세요.">
+                                                    </div>
+                                                </li>
+                                            </ul>
                                             <ul class="file-list-child"></ul>
                                         </div>
                                     </div>
                                     <link rel="stylesheet"
-                                          href="<%= process.env.BASE_PATH %>/styles/always360/lib/jquery.fileupload.css">
+                                          href="<%= process.env.BASE_PATH; %>/styles/always360/lib/jquery.fileupload.css">
                                     <link rel="stylesheet"
-                                          href="<%= process.env.BASE_PATH %>/styles/always360/lib/jquery.fileupload-ui.css">
+                                          href="<%= process.env.BASE_PATH; %>/styles/always360/lib/jquery.fileupload-ui.css">
                                     <noscript>
                                         <link rel="stylesheet"
-                                              href="<%= process.env.BASE_PATH %>/styles/always360/lib/jquery.fileupload-noscript.css">
+                                              href="<%= process.env.BASE_PATH; %>/styles/always360/lib/jquery.fileupload-noscript.css">
                                     </noscript>
                                     <noscript>
                                         <link rel="stylesheet"
-                                              href="<%= process.env.BASE_PATH %>/styles/always360/lib/jquery.fileupload-ui-noscript.css">
+                                              href="<%= process.env.BASE_PATH; %>/styles/always360/lib/jquery.fileupload-ui-noscript.css">
                                     </noscript>
-                                    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/jquery.ui.widget.js"></script>
-                                    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/jquery.iframe-transport.js"></script>
-                                    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/jquery.fileupload.js"></script>
-                                    <script src="<%= process.env.BASE_PATH %>/scripts/always360/lib/jquery.fileupload-process.js"></script>
-                                    <script src="<%= process.env.BASE_PATH %>/scripts/always360/utils.js"></script>
-                                    <script src="<%= process.env.BASE_PATH %>/scripts/always360/dates.js"></script>
+                                    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/lib/jquery.ui.widget.js"></script>
+                                    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/lib/jquery.iframe-transport.js"></script>
+                                    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/lib/jquery.fileupload.js"></script>
+                                    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/lib/jquery.fileupload-process.js"></script>
+                                    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/utils.js"></script>
+                                    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/dates.js"></script>
                                     <script>
                                         var f = document.forms["frm"];
                                         var fileImgToDate = replaceAll(getDatePlusTmp(-1), '-', '');//오늘날짜 저장
@@ -912,7 +936,7 @@
         </div>
         <div class="popup_wrap large_type"
              id="popup4"
-             style="<%= state === 'layerPrivacy' ? 'display: block;' : '' %>"
+             style="<%= state === 'layerPrivacy' ? 'display: block;' : ''; %>"
              tabindex="-1">
             <div class="popup_header">
                 <h2>사전등록신청 개인정보수집 및 이용동의서</h2>
@@ -1151,7 +1175,7 @@
                class="btn_close"><span class="screenOut">닫기</span></a>
         </div>
         <div class="popup_wrap large_type"
-             style="<%= state === 'layerRemote' ? 'display: block;' : '' %>"
+             style="<%= state === 'layerRemote' ? 'display: block;' : ''; %>"
              id="popup6">
             <div class="popup_header">
                 <h2>비대면 자격인증 서비스</h2>
@@ -1225,7 +1249,7 @@
                class="btn_close"><span class="screenOut">닫기</span></a>
         </div>
         <div class="popup_wrap large_type"
-             style="<%= state === 'layerAddress' ? 'display: block;' : '' %>"
+             style="<%= state === 'layerAddress' ? 'display: block;' : ''; %>"
              id="popup7">
             <div class="popup_header">
                 <h2>주소지 인증 서비스</h2>
@@ -1298,7 +1322,7 @@
                class="btn_close"><span class="screenOut">닫기</span></a>
         </div>
         <div class="popup_wrap large_type"
-             style="<%= state === 'layerAddressChild' ? 'display: block;' : '' %>"
+             style="<%= state === 'layerAddressChild' ? 'display: block;' : ''; %>"
              id="popup8">
             <div class="popup_header">
                 <h2>주소지 인증 서비스</h2>
@@ -1374,7 +1398,7 @@
     <!-- 카카오 도로명주소 검색 -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script type="text/javascript"
-            src="<%= process.env.BASE_PATH %>/scripts/always360/jquery.kakaoUtils.js"></script>
+            src="<%= process.env.BASE_PATH; %>/scripts/always360/jquery.kakaoUtils.js"></script>
     <script>
         var f = document.forms['frm'];
         var actionMsg = "자녀정보를 등록하시겠습니까?";

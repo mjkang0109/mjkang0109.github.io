@@ -1,12 +1,5 @@
 <div class="content"
      id="container">
-    <script>
-        $(document).ready(function () {
-            if (2402130007 == '2402130007') {
-                $("#titleNm").text("경기도아동언제나돌봄 | 회원서비스 - 회원가입 완료");
-            }
-        });
-    </script>
     <div class="sub_wrap type2">
         <div class="inner">
             <div class="sub_top">
@@ -39,18 +32,5 @@
             </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function () {
-            //title
-            $("#titleNm").append(" - " + $('.join_step li.active').text().replaceAll("현재단계", ""));
-        });
 
-        function goList(type) {
-            if (type == 'M') {
-                document.location.href = "/always360/";
-            } else {
-                document.location.href = "/always360/sso/form.do?key=2404190001";
-            }
-        }
-    </script>
 </div>

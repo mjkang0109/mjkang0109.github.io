@@ -105,6 +105,7 @@
                                         </div>
                                     </div>
                                     <% if (state === 'sns') { %>
+                                        <!-- SNS 연동 완료 -->
                                         <div class="box sns_type">
                                             <div class="box_tit">SNS 연동</div>
                                             <ul class="sns_type_wrap">
@@ -122,8 +123,10 @@
                                                 </li>
                                             </ul>
                                         </div>
+                                        <!-- // SNS 연동 완료 -->
                                     <% } %>
                                     <% if (state !== 'sns') { %>
+                                        <!-- SNS 연동 전 -->
                                         <div class="box">
                                             <div class="box_tit">SNS 연동여부</div>
                                             <ul class="sns_c_wrap">
@@ -153,6 +156,7 @@
                                                 </li>
                                             </ul>
                                         </div>
+                                        <!-- // SNS 연동 전 -->
                                     <% } %>
                                     <div class="box address_wrap">
                                         <div class="box_tit_wrap">
@@ -256,7 +260,7 @@
         <div class="popup_wrap"
              id="popup3"
              tabindex="0"
-             style="<%= state === 'layerPassword' ? 'display: block;' : '' ;%>">
+             style="<%= state === 'layerPassword' ? 'display: block;' : ''; %>">
             <div class="popup_header">
                 <h2>비밀번호 변경</h2>
             </div>
@@ -301,13 +305,13 @@
                class="btn_close"><span class="screenOut">닫기</span></a>
         </div>
     </form>
-    <script src="<%= process.env.BASE_PATH ;%>/scripts/always360/lib/jquery-ui.min.js"></script>
-    <script src="<%= process.env.BASE_PATH ;%>/scripts/always360/lib/jquery.validate.min.js"></script>
-    <script src="<%= process.env.BASE_PATH ;%>/scripts/always360/utils.js"></script>
+    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/lib/jquery-ui.min.js"></script>
+    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/lib/jquery.validate.min.js"></script>
+    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/utils.js"></script>
     <!-- 카카오 도로명주소 검색 -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script type="text/javascript"
-            src="<%= process.env.BASE_PATH ;%>/scripts/always360/jquery.kakaoUtils.js"></script>
+            src="<%= process.env.BASE_PATH; %>/scripts/always360/jquery.kakaoUtils.js"></script>
     <script>
         var f = document.forms['frm'];
         $(document).ready(function () {

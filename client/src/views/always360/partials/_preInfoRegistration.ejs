@@ -45,8 +45,15 @@
                                                             여성
                                                         </div>
                                                     </div>
-                                                    <div class="tag type<%= i + 1 %>">
-                                                        <%= type[i] %>
+                                                    <!--
+                                                        * 배지 style - `.type_tag`
+                                                        ㄴ type1: 승인완료 - 녹색
+                                                        ㄴ type2: 승인대기 - 파란색
+                                                        ㄴ type3: 보완대기 - 빨간색
+                                                        ㄴ type4: 돌봄대상아님 - 회색
+                                                    -->
+                                                    <div class="tag type<%= i + 1; %>">
+                                                        <%= type[i]; %>
                                                     </div>
                                                 </div>
                                                 <div class="info_con">
@@ -80,9 +87,11 @@
                                     } %>
                                 </ul>
                                 <% if (state === 'noData') { %>
+                                    <!-- 사전등록정보 없음 -->
                                     <div class="no_result_wrap">
                                         <p class="no_result">사전등록정보가 존재하지 않습니다.</p>
                                     </div>
+                                    <!-- // 사전등록정보 없음 -->
                                 <% } %>
                             </div>
                             <div class="paging_wrap">

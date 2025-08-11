@@ -1,12 +1,5 @@
 <div class="content"
      id="container">
-    <script>
-        $(document).ready(function () {
-            if (2402130007 == '2402130007') {
-                $("#titleNm").text("경기도아동언제나돌봄 | 회원서비스 - 회원가입 본인인증");
-            }
-        });
-    </script>
     <form id="frm"
           method="post"
           action="s3.do">
@@ -24,6 +17,7 @@
                         <h3 class="join_tit">회원 정보와 본인인증 절차를 진행해 주세요.</h3>
                         <strong class="required_txt fc_red">* 필수입력 항목입니다</strong>
                         <% if (state !== 'default') { %>
+                            <!-- 본인인증 완료 -->
                             <div class="join_inner">
                                 <div class="box_wrap">
                                     <div class="box">
@@ -185,8 +179,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- // 본인인증 완료 -->
                         <% } %>
                         <% if (state === 'default') { %>
+                            <!-- 본인인증 전 -->
                             <div class="join_inner">
                                 <div class="box_wrap">
                                     <div class="box">
@@ -337,6 +333,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- // 본인인증 전 -->
                         <% } %>
                         <div class="agree_wrap">
                             <div class="agree_line">
@@ -346,14 +343,14 @@
                                         <input type="radio"
                                                id="radi03_01"
                                                name="radi_all03"
-                                                <%= state !== 'default' ? 'checked' : '' %>
-                                               <%= state === 'default' ? 'disabled' : '' %>><label for="radi03_01">예</label>
+                                                <%= state !== 'default' ? 'checked' : ''; %>
+                                                <%= state === 'default' ? 'disabled' : ''; %>><label for="radi03_01">예</label>
                                     </div>
                                     <div class="raBox">
                                         <input type="radio"
                                                id="radi03_02"
                                                name="radi_all03"
-                                                <%= state === 'default' ? 'disabled' : '' %>><label for="radi03_02">아니오</label>
+                                                <%= state === 'default' ? 'disabled' : ''; %>><label for="radi03_02">아니오</label>
                                     </div>
                                 </div>
                             </div>
@@ -364,14 +361,14 @@
                                         <input type="radio"
                                                id="radi03_03"
                                                name="radi_all04"
-                                                <%= state !== 'default' ? 'checked' : '' %>
-                                                <%= state === 'default' ? 'disabled' : '' %>><label for="radi03_03">예</label>
+                                                <%= state !== 'default' ? 'checked' : ''; %>
+                                                <%= state === 'default' ? 'disabled' : ''; %>><label for="radi03_03">예</label>
                                     </div>
                                     <div class="raBox">
                                         <input type="radio"
                                                id="radi03_04"
                                                name="radi_all04"
-                                                <%= state === 'default' ? 'disabled' : '' %>><label for="radi03_04">아니오</label>
+                                                <%= state === 'default' ? 'disabled' : ''; %>><label for="radi03_04">아니오</label>
                                     </div>
                                 </div>
                             </div>

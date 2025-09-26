@@ -30,8 +30,8 @@ dotenv.config({
     path: path.resolve(
         process.cwd(),
         process.env.NODE_ENV === 'development'
-        ? '.env.development'
-        : '.env.production',
+            ? '.env.development'
+            : '.env.production',
     ),
 });
 

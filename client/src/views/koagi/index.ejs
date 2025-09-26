@@ -10,14 +10,14 @@ state:
         title: 'example'
     }); %>
     <link rel="stylesheet"
-          href="<%= process.env.BASE_PATH %>/styles/example/example<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+          href="<%= process.env.BASE_PATH %>/styles/koagi/styles<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
 </head>
 <body>
     <div style="padding: 100px; border: 1px solid #333; display: flex; align-items: center; justify-content: center;">
         <h1>EXAMPLE</h1>
         <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {}); %>
     </div>
-    <script src="<%= process.env.BASE_PATH; %>/scripts/example/example<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
+    <script src="<%= process.env.BASE_PATH; %>/scripts/koagi/scripts<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
             type="module"
             defer></script>
 </body>

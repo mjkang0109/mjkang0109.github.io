@@ -145,7 +145,7 @@ const renderHTML = ({
     fileName,
 }) => {
     fs.writeFileSync(
-        `${filePath}/${fileName}.html`,
+        `${DIST}/${fileName}.html`,
         data,
         (err) => {
             if (err) {
@@ -194,7 +194,7 @@ const generatorViews = () => {
             const relativePath = '..';
             const totalPath = new Array(pathLength - 1).fill('').reduce((acc, curr) => acc + '/' + relativePath, '..');
 
-            process.env.BASE_PATH = totalPath;
+            process.env.BASE_PATH = '.';
             process.env.MINIFY = '.min';
             process.env.IMG_PATH = `${totalPath}/${IMAGES}`;
         }

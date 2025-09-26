@@ -386,6 +386,7 @@ const generatorImages = async () => {
             png : ['png', 'avif', 'webp'],
             webp: ['webp'],
             avif: ['avif'],
+            svg : ['svg'],
         };
 
         const pathObj = path.parse(images[i]);
@@ -394,8 +395,7 @@ const generatorImages = async () => {
         const qualityOpt = 80;
 
         const data = fs.readFileSync(`${SRC}/${images[i]}`);
-        const buffer = await sharp(data)[types[imageType][0]]({quality: qualityOpt})
-            .toBuffer();
+        const buffer = imageType !== 'svg' ? await sharp(data)[types[imageType][0]]({quality: qualityOpt}).toBuffer() : data;
 
         if (!fs.existsSync(`${DIST}/${pathObj.dir}`)) {
             fs.mkdirSync(`${DIST}/${pathObj.dir}`, {recursive: true});

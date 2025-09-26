@@ -70,7 +70,7 @@ const styles = glob.sync(`${STYLES}/*[^example|^plugins|^fonts]*/**/*.css`, {
     nosort: true,
 });
 
-const images = await glob.sync(`${IMAGES}/*[^example]*/**/*[^.min].{jpg,jpeg,png,svg,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}`, {
+const images = await glob.sync(`${IMAGES}/*[^example|^favicon]*/**/*[^.min].{jpg,jpeg,png,svg,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}`, {
     cwd   : SRC,
     nosort: true,
 });
@@ -145,7 +145,7 @@ const renderHTML = ({
     fileName,
 }) => {
     fs.writeFileSync(
-        `${filePath}/${fileName}.html`,
+        `${DIST}/${fileName}.html`,
         data,
         (err) => {
             if (err) {
@@ -194,7 +194,7 @@ const generatorViews = () => {
             const relativePath = '..';
             const totalPath = new Array(pathLength - 1).fill('').reduce((acc, curr) => acc + '/' + relativePath, '..');
 
-            process.env.BASE_PATH = totalPath;
+            process.env.BASE_PATH = '.';
             process.env.MINIFY = '.min';
             process.env.IMG_PATH = `${totalPath}/${IMAGES}`;
         }

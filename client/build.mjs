@@ -145,7 +145,7 @@ const renderHTML = ({
     fileName,
 }) => {
     fs.writeFileSync(
-        `${DIST}/${fileName}.html`,
+        `${isDev ? DIST : filePath}/${fileName}.html`,
         data,
         (err) => {
             if (err) {

@@ -88,17 +88,15 @@ for (let i = 1; i <= scale; i++) {
     }
 }
 %>
-
 <% if (isModernFormat) { %>
     <!-- 해당 포맷은 일부 브라우저에서 지원하지 않는 포맷입니다. -->
 <% } %>
-
 <% if (modernFormats.length > 0) {
     for (let i = 0; i < modernFormats.length; i++) { %>
-    <source type="image/<%= modernFormats[i] %>"
-            srcset="<%= arraySource.reduce((acc, curr, index) => `${acc}${curr.replace(`${sourceObject.extension}`, `.${modernFormats[i]}`)} ${index + 1}x${index < arraySource.length - 1 ? ', ' : ''}`, '').trim(); %>">
+        <source type="image/<%= modernFormats[i] ;%>"
+                srcset="<%= arraySource.reduce((acc, curr, index) => `${acc}${curr.replace(`${sourceObject.extension}`, `.${modernFormats[i]}`)} ${index + 1}x${index < arraySource.length - 1 ? ', ' : ''}`, '').trim(); %>">
 <% }
-    } %>
+} %>
 <img width="<%= width %>"
      height="<%= height %>"
      <%- loading ? `loading="${loading}"` : '' %>

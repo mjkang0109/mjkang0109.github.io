@@ -35,6 +35,8 @@ dotenv.config({
     ),
 });
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const pkg = JSON.parse(
     await readFile(
         new URL('./package.json', import.meta.url),
@@ -264,8 +266,8 @@ const generatorStyles = () => {
 
         const pathObj = path.parse(styles[i]);
 
-        if (!fs.existsSync(`${DIST}/${pathObj.dir}`)) {
-            fs.mkdirSync(`${DIST}/${pathObj.dir}`, {recursive: true});
+        if (!fs.existsSync(`${DIST}/${isDev ? STYLES : pathObj.dir}`)) {
+            fs.mkdirSync(`${DIST}/${isDev ? STYLES : pathObj.dir}`, {recursive: true});
         }
 
         const data = fs.readFileSync(`${SRC}/${styles[i]}`);
@@ -273,7 +275,7 @@ const generatorStyles = () => {
         postcss([autoprefixer, postcssNested, psmq])
             .process(data, {from: undefined})
             .then(result => {
-                fs.writeFile(`${DIST}/${pathObj.dir}/${pathObj.name}.min.css`, result.css, (err) => {
+                fs.writeFile(`${DIST}/${isDev ? STYLES : pathObj.dir}/${pathObj.name}.min.css`, result.css, (err) => {
                     if (err) {
                         return console.error(err, 'styled can not created!');
                     }
@@ -305,10 +307,13 @@ const generatorScripts = async () => {
 
     const options = {
         compress: {
-            drop_console: true,
-            toplevel    : true,
+            keep_fargs  : isDev,
+            drop_console: !isDev,
+            toplevel    : !isDev,
         },
-        format  : {
+
+        format: {
+            beautify   : isDev,
             quote_style: 1,
         },
     };
@@ -324,8 +329,8 @@ const generatorScripts = async () => {
 
         const pathObj = path.parse(scripts[i]);
 
-        if (!fs.existsSync(`${DIST}/${pathObj.dir}`)) {
-            fs.mkdirSync(`${DIST}/${pathObj.dir}`, {recursive: true});
+        if (!fs.existsSync(`${DIST}/${isDev ? SCRIPTS : pathObj.dir}`)) {
+            fs.mkdirSync(`${DIST}/${isDev ? SCRIPTS : pathObj.dir}`, {recursive: true});
         }
 
         const data = fs.readFileSync(`${SRC}/${pathObj.dir}/${pathObj.name}.js`, 'utf-8');
@@ -348,7 +353,7 @@ const generatorScripts = async () => {
                 }
             }
 
-            fs.writeFileSync(`${DIST}/${pathObj.dir}/${pathObj.name}.min.js`, generatorCode, (err) => {
+            fs.writeFileSync(`${DIST}/${isDev ? SCRIPTS : pathObj.dir}/${pathObj.name}${isDev ? '' : '.min'}.js`, isDev ? data.code : generatorCode, (err) => {
                 if (err) {
                     return console.error(err, 'script can not created!');
                 }

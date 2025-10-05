@@ -407,7 +407,7 @@ const generatorImages = async () => {
         }
 
         types[imageType].map((type) => {
-            fs.writeFileSync(`${DIST}/${pathObj.dir}/${pathObj.name}.${type}`, buffer, (err) => {
+            fs.writeFileSync(`${DIST}/${isDev ? IMAGES : pathObj.dir}/${pathObj.name}.${type}`, buffer, (err) => {
                 if (err) {
                     return console.error(err, 'image can not created!');
                 }

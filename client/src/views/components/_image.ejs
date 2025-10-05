@@ -75,7 +75,7 @@ if (!isDummy) {
 let arraySource = [];
 
 for (let i = 1; i <= scale; i++) {
-    if (source === 'dummy') {
+    if (isDummy) {
         const base = `${process.env.DUMMY_IMG}/${width * i}/${height * i}`;
         const dummyBackground = background ? `/${background}` : '';
         const dummyColor = color ? `/${color}` : '';

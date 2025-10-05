@@ -104,4 +104,4 @@ for (let i = 1; i <= scale; i++) {
      srcset="<%= arraySource.reduce((acc, curr, index) => `${acc}${curr} ${index + 1}x${index < arraySource.length - 1 ? ', ' : ''}`, '').trim(); %>"
      alt="<%= alt %>"
      <%- !isDraggable ? 'draggable="false"' : '' %>
-     style="<%= !isBlur ? '' : 'filter: blur(4px)'; %>)">
+     style="<%= !isBlur ? '' : 'filter: blur(4px)'; %>">

@@ -1,14 +1,11 @@
 ---
-group: example
+group: koagi
 state:
-    default: 예제
+    default: 메인
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <%- include(`${process.env.INCLUDE_PATH}/components/_head`, {
-        title: 'example'
-    }); %>
     <link rel="stylesheet"
           href="<%= process.env.BASE_PATH %>/styles/koagi/styles<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
 </head>

@@ -1,0 +1,985 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../components/mixin" as m;
+
+$imgPath: "./../../images/always360";
+$fontPath: "./../fonts";
+//$fontPath: "/fonts";
+//$imgPath: "/images/always360";
+@font-face {
+    font-family: "SCoreDream";
+    font-weight: 500;
+    font-style: normal;
+    src: url("#{$fontPath}/SCoreDream5.woff2") format("woff2"), url("#{$fontPath}/SCoreDream5.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SCoreDream";
+    font-weight: 800;
+    font-style: normal;
+    src: url("#{$fontPath}/SCoreDream8.woff2") format("woff2"), url("#{$fontPath}/SCoreDream8.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Jalnan";
+    font-weight: 800;
+    font-style: normal;
+    src: url("#{$fontPath}/Jalnan.woff") format("woff"), url("#{$fontPath}/Jalnan.otf") format("opentype");
+    font-display: swap;
+}
+
+.a11y {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.event-wrap {
+    background-color: #484544;
+    padding-bottom: 366px;
+
+    .visual {
+        position: relative;
+        max-height: 1014px;
+        padding: 23px 0 200px;
+        background: #fcd6ce url("#{$imgPath}/bg-visual.png") no-repeat center top;
+        background-size: auto 1172px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            max-height: fit-content;
+            padding: 23px 30px 200px;
+            background: #fcd6ce url("#{$imgPath}/bg-visual-mobile.png") no-repeat center bottom;
+            background-size: 100% auto;
+        }
+        @include m.respond-to(map.get(m.$max, 959)) {
+            padding: math.div(157px, 2) math.div(60px, 2) math.div(270px, 2);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 78px;
+            left: 50%;
+            width: 1635px;
+            height: 158px;
+            margin-left: -847px;
+            background: url("#{$imgPath}/visual-particle.png") no-repeat center top;
+            background-size: 100% auto;
+            pointer-events: none;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        &-logo {
+            padding-left: 28px;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                display: none;
+            }
+        }
+
+        &-title {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 1040px;
+            padding-top: 60px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 81px;
+            line-height: 108px;
+            font-family: Jalnan, serif;
+            color: #553c3c;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                padding-top: math.div(60px, 2);
+                font-size: math.div(81px, 2);
+                line-height: math.div(108px, 2);
+            }
+
+            .logo {
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    width: math.div(89px, 2);
+                    height: math.div(83px, 2);
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            strong {
+                font-size: 81px;
+                line-height: 108px;
+                font-family: Jalnan, serif;
+                color: #d8396c;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    display: block;
+                    width: 100%;
+                    margin-top: math.div(40px, 2);
+                    font-size: math.div(81px, 2);
+                    line-height: math.div(108px, 2);
+                }
+            }
+        }
+
+        &-desc {
+            margin-top: 44px;
+            text-align: center;
+            font-size: 22px;
+            color: #553c3c;
+            font-family: Jalnan, serif;
+            word-break: keep-all;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                margin-top: math.div(46px, 2);
+                font-size: math.div(32px, 2);
+                line-height: math.div(50px, 2);
+            }
+        }
+    }
+
+    .tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        width: min(100%, 1645px);
+        margin: 70px auto 0;
+        padding: 0 20px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            grid-template-columns: 1fr 1fr;
+            margin: 80px auto 0;
+            padding: 0;
+        }
+        @include m.respond-to(map.get(m.$max, 650)) {
+            margin: 20px auto 0;
+            //grid-template-columns: 1fr;
+        }
+
+        button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 140px;
+            background-color: #fff;
+            border: 4px solid #413129;
+            border-radius: 15px;
+            padding: 20px 30px 20px 113px;
+            background-repeat: no-repeat;
+            background-position: 43px 50%;
+            background-size: 42px auto;
+            text-align: left;
+            line-height: 36px;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                padding: 15px 20px 15px 65px;
+                background-position: 28px 50%;
+                background-size: 27px auto;
+            }
+
+            strong {
+                font-size: 25px;
+                color: #c34400;
+                font-family: Jalnan, serif;
+                word-break: keep-all;
+                pointer-events: none;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+            }
+
+            span {
+                font-size: 20px;
+                color: #000;
+                font-family: Jalnan, serif;
+                word-break: keep-all;
+                pointer-events: none;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    font-size: 15px;
+                    line-height: 23px;
+                }
+            }
+        }
+
+        .tab-1 {
+            background-image: url("#{$imgPath}/icon-home.png");
+        }
+
+        .tab-2 {
+            background-image: url("#{$imgPath}/icon-book.png");
+        }
+
+        .tab-3 {
+            background-image: url("#{$imgPath}/icon-xylophone.png");
+        }
+
+        .tab-4 {
+            background-image: url("#{$imgPath}/icon-comment.png");
+        }
+    }
+
+    .event-info {
+        margin-top: 63px;
+        @include m.respond-to(map.get(m.$max, 959)) {
+            margin-top: math.div(68px, 2);
+        }
+
+        ul {
+            display: grid;
+            justify-content: space-between;
+            max-width: 920px;
+            margin: 0 auto;
+            gap: 40px;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                grid-template-columns: 1fr;
+                gap: math.div(30px, 2);
+            }
+        }
+
+        li {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                gap: 15px;
+            }
+
+            &:nth-child(2) {
+                p {
+                    max-width: 150px;
+                    @include m.respond-to(map.get(m.$max, 959)) {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        strong {
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            width: 86px;
+            height: 86px;
+            padding: 0 17px;
+            background-color: #413129;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 17px;
+            line-height: 24px;
+            color: #fff;
+            font-family: Jalnan, serif;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                width: auto;
+                min-width: math.div(245px, 2);
+                height: auto;
+                padding: 10px 25px;
+                border-radius: 100px;
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+
+        p {
+            word-break: keep-all;
+            font-size: 18px;
+            line-height: 30px;
+            color: #413129;
+            font-family: Jalnan, serif;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+            span {
+                font-size: 18px;
+                line-height: 30px;
+                color: #413129;
+                font-family: Jalnan, serif;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .event-description {
+            justify-content: center;
+            grid-column: 1 / 4;
+            gap: 4px;
+            font-size: 20px;
+            color: #413129;
+            text-decoration: underline;
+            font-family: Jalnan, serif;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                grid-column: auto;
+                justify-content: flex-start;
+                gap: 15px;
+                margin-top: 0;
+                text-decoration: none;
+            }
+
+            strong {
+                width: auto;
+                height: auto;
+                padding-right: 4px;
+                background-color: transparent;
+                font-size: 20px;
+                line-height: inherit;
+                color: #413129;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    width: auto;
+                    height: auto;
+                    padding: 10px 25px;
+                    border-radius: 50px;
+                    background-color: #413129;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #fff;
+                }
+            }
+
+            span {
+                font-size: 20px;
+                color: #413129;
+                text-decoration: underline;
+                font-family: Jalnan, serif;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    display: none;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .contents-item {
+        position: relative;
+        max-width: 1900px;
+        margin: 0 auto;
+        padding: 85px 111px 0;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: 30px 25px;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 100% auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        &:before {
+            top: -287px;
+            left: 35px;
+            width: 358px;
+            height: 349px;
+            background-image: url("#{$imgPath}/object-left.png");
+        }
+
+        &:after {
+            top: -315px;
+            right: 42px;
+            width: 321px;
+            height: 391px;
+            background-image: url("#{$imgPath}/object-right.png");
+        }
+
+        .items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        li {
+            position: relative;
+        }
+
+        .soon,
+        .closed {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                background-position: 50% 100%;
+            }
+        }
+
+        .soon {
+            &:after {
+                background-image: url("#{$imgPath}/cover-soon.png");
+            }
+
+        }
+
+        .closed {
+            &:after {
+                background-image: url("#{$imgPath}/cover-closed.png");
+            }
+
+        }
+
+        a,
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .review {
+        &-visual {
+            min-height: 597px;
+            padding-top: 80px;
+            background: #fcd6cf url("#{$imgPath}/bg-review-visual.png") no-repeat 50% 0;
+            background-size: 1900px auto;
+
+            .visual-wrap {
+                width: min(1076px, 100%);
+                margin: 0 auto;
+                padding: 0 25px;
+                text-align: center;
+            }
+        }
+
+        &-title {
+            font-size: 60px;
+            line-height: 80px;
+            color: #553c3c;
+            font-family: Jalnan, serif;
+        }
+
+        &-desc {
+            margin-top: 50px;
+            font-size: 26px;
+            line-height: 45px;
+            color: #553c3c;
+            font-family: Jalnan, serif;
+            word-break: keep-all;
+
+            strong {
+                font-size: inherit;
+                line-height: inherit;
+                color: #d8396c;
+                font-family: Jalnan, serif;
+            }
+        }
+
+        &-notice {
+            margin-top: 48px;
+            padding-bottom: 60px;
+            font-size: 16px;
+            line-height: 28px;
+            word-break: keep-all;
+            color: #553c3c;
+            font-family: SCoreDream, serif;
+            font-weight: 500;
+        }
+
+        &-wrap {
+            position: relative;
+            width: min(100%, 1300px);
+            min-height: 1000px;
+            background-color: #fff;
+            border-radius: 20px;
+            margin: -45px auto 0;
+            padding: 60px 67px 144px;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                padding: 25px;
+                min-height: 0;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: -265px;
+                left: -190px;
+                width: 328px;
+                height: 319px;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 100% auto;
+                background-image: url("#{$imgPath}/object-left.png");
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    display: none;
+                }
+            }
+
+            > strong {
+                display: block;
+                font-size: 18px;
+                line-height: 28px;
+                color: #553c3c;
+                text-align: center;
+                word-break: keep-all;
+                font-family: Jalnan, serif;
+            }
+
+            .button-save {
+                display: block;
+                width: 220px;
+                height: 70px;
+                border-radius: 70px;
+                background-color: #f07c07;
+                margin: 200px auto 0;
+                color: #fff;
+                font-size: 26px;
+                font-family: Jalnan, serif;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    margin-top: 80px;
+                }
+            }
+
+            .textarea {
+                display: block;
+                margin-top: 30px;
+
+                textarea {
+                    width: 100%;
+                    height: 276px;
+                    padding: 34px 35px;
+                    border: 1px solid #e0e0e0;
+                    resize: none;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #111;
+                    font-family: SCoreDream, serif;
+                    @include m.respond-to(map.get(m.$max, 959)) {
+                        padding: 25px;
+                    }
+
+                    &::placeholder {
+                        font-size: 16px;
+                        line-height: 28px;
+                        color: #858585;
+                    }
+                }
+            }
+
+            .files {
+                margin-top: 30px;
+
+                li {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 10px 18px 10px 30px;
+                    margin: 10px 16px 0 0;
+                    border: 1px solid #c7c7c7;
+                    border-radius: 100px;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #111;
+                    font-weight: 500;
+                    font-family: SCoreDream, serif;
+                }
+
+                button {
+                    margin-left: 50px;
+                }
+            }
+        }
+
+        &-file {
+            display: flex;
+            gap: 16px;
+            margin-top: 34px;
+
+            label:first-of-type {
+                flex: 1;
+            }
+
+            [type="text"] {
+                width: 630px;
+                height: 63px;
+                border: 1px solid #e0e0e0;
+                padding: 10px;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    width: 100%;
+                }
+            }
+
+            .label-file {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 155px;
+                background-color: #553c3c;
+                font-size: 17px;
+                color: #fff;
+                font-family: Jalnan, serif;
+                cursor: pointer;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    flex-shrink: 0;
+                }
+            }
+
+            [type="file"] {
+                display: none;
+            }
+        }
+    }
+
+    .applies {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 35px;
+        @include m.respond-to(map.get(m.$max, 959)) {
+            grid-template-columns: 1fr;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 94px;
+            padding: 0 40px 0 30px;
+            border: #cfcfcf 1px solid;
+
+            &.my {
+                border: none;
+                background-color: #d8396c;
+
+                .name,
+                .state {
+                    color: #fff;
+                }
+
+                .profile {
+                    background-color: #2d2927;
+                }
+            }
+
+            &:not(.my) {
+                .profile {
+                    background-color: #e2e2e2;
+                }
+            }
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            font-size: 15px;
+            color: #fff;
+            font-family: SCoreDream, serif;
+
+            img {
+                display: block;
+                width: 28px;
+                height: auto;
+            }
+        }
+
+        .name {
+            flex: 1;
+            padding: 0 30px;
+            font-size: 18px;
+            line-height: 28px;
+            color: #000;
+            font-family: SCoreDream, serif;
+            font-weight: 500;
+        }
+
+        .state {
+            flex-shrink: 0;
+            font-size: 18px;
+            line-height: 28px;
+            color: #000;
+            font-family: SCoreDream, serif;
+            font-weight: 500;
+        }
+    }
+
+    .comment-wrap {
+        width: min(100%, 1450px);
+        padding: 0 25px;
+        margin: 146px auto 0;
+
+        h2 {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 60px;
+            line-height: 80px;
+            font-family: Jalnan, serif;
+            color: #e98700;
+
+            span {
+                padding-left: 25px;
+                font-size: 25px;
+                line-height: 35px;
+                color: #fff;
+                font-family: Jalnan, serif;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    display: block;
+                    padding-left: 0;
+                }
+            }
+
+            + .round-box {
+                margin-top: 43px;
+            }
+        }
+    }
+
+    .round-box {
+        padding: 54px 56px;
+        border-radius: 20px;
+        background-color: #fff;
+        @include m.respond-to(map.get(m.$max, 959)) {
+            padding: 30px;
+        }
+
+        + .round-box {
+            margin-top: 42px;
+        }
+    }
+
+    .quiz {
+        counter-reset: number 0;
+
+        > li {
+            position: relative;
+            padding-left: 78px;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                padding-left: 0;
+                padding-top: 78px;
+            }
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                counter-increment: number 1;
+                content: "Q" counter(number);
+                font-size: 40px;
+                font-family: SCoreDream, serif;
+                font-weight: 700;
+                color: #999;
+            }
+
+            + li {
+                margin-top: 54px;
+                padding-top: 54px;
+                border-top: 1px solid #dbdbdb;
+                @include m.respond-to(map.get(m.$max, 959)) {
+                    padding-top: (54px+78px);
+                }
+
+                &:before {
+                    top: 54px;
+                }
+            }
+        }
+
+        .q {
+            display: block;
+            font-size: 20px;
+            line-height: 30px;
+            color: #000;
+            font-family: SCoreDream, serif;
+        }
+
+        .hint {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 28px;
+            color: #ee5613;
+            font-family: SCoreDream, serif;
+        }
+    }
+
+    .count {
+        display: block;
+        font-size: 24px;
+        line-height: 34px;
+        color: #553c3c;
+        font-family: Jalnan, serif;
+    }
+
+    .input-comment {
+        display: block;
+        margin-top: 30px;
+
+        textarea {
+            width: 100%;
+            height: 188px;
+            padding: 30px;
+            border: 1px solid #e0e0e0;
+            font-size: 16px;
+            line-height: 26px;
+            font-family: SCoreDream, serif;
+            color: #000;
+            resize: none;
+
+            &::placeholder {
+                color: #545454;
+            }
+        }
+    }
+
+    .cautions {
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: 26px;
+        font-family: SCoreDream, serif;
+        color: #545454;
+    }
+
+    .button-apply {
+        display: block;
+        width: 220px;
+        height: 70px;
+        margin: 56px auto 0;
+        border-radius: 35px;
+        background-color: #f07c07;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        font-family: Jalnan, serif;
+    }
+
+    .comments {
+        margin-top: 70px;
+        padding-top: 60px;
+        border-top: 1px solid #000;
+
+        .input-comment {
+            padding-bottom: 11px;
+        }
+
+        li:not(:first-of-type) {
+            margin-top: 24px;
+        }
+    }
+
+    .comment-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @include m.respond-to(map.get(m.$max, 959)) {
+            flex-wrap: wrap;
+        }
+
+        &.my {
+            .profile {
+                background-color: #2d2927;
+            }
+
+            .identity {
+                font-weight: 800;
+                color: #000;
+            }
+        }
+
+        &:not(.my) {
+            border: 1px solid #cfcfcf;
+            padding: 22px 30px;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color: #e2e2e2;
+            font-size: 15px;
+            line-height: 25px;
+            color: #fff;
+            font-family: SCoreDream, serif;
+        }
+
+        .identity {
+            flex-shrink: 0;
+            padding-left: 18px;
+            font-size: 18px;
+            line-height: 28px;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                flex: 1;
+            }
+        }
+
+        .comment {
+            flex: 1;
+            padding-left: 60px;
+            font-size: 18px;
+            line-height: 28px;
+            color: #000;
+            font-family: SCoreDream, serif;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                flex: 0 0 auto;
+                width: 100%;
+                margin-top: 20px;
+                padding-left: 0;
+            }
+        }
+
+        .buttons {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            @include m.respond-to(map.get(m.$max, 959)) {
+                flex: 0 0 auto;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            button {
+                min-height: 33px;
+                padding: 8px 12px;
+                border-radius: 5px;
+                background-color: #484544;
+                margin-left: 9px;
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+    }
+
+    .button-more {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin: 30px auto 100px;
+        font-size: 24px;
+        color: #000;
+        font-family: Jalnan, serif;
+    }
+}
+

@@ -38,6 +38,11 @@ var isBlur = isBlur || false;
 var alt = isString({str: alt}) ? alt : '...';
 
 /**
+ * @type {boolean}
+ */
+var isSimply = isSimply || false;
+
+/**
  * @type {number|undefined}
  */
 var scale = isNumber({num: scale}) ? (scale > 3 || scale < 0 ? 3 : scale) : 3;
@@ -75,6 +80,10 @@ if (!isDummy) {
 let arraySource = [];
 
 for (let i = 1; i <= scale; i++) {
+    if (isSimply) {
+        break;
+    }
+
     if (isDummy) {
         const base = `${process.env.DUMMY_IMG}/${width * i}/${height * i}`;
         const dummyBackground = background ? `/${background}` : '';
@@ -100,8 +109,8 @@ for (let i = 1; i <= scale; i++) {
 <img width="<%= width %>"
      height="<%= height %>"
      <%- loading ? `loading="${loading}"` : '' %>
-     src="<%= arraySource[1] %>"
-     srcset="<%= arraySource.reduce((acc, curr, index) => `${acc}${curr} ${index + 1}x${index < arraySource.length - 1 ? ', ' : ''}`, '').trim(); %>"
+     src="<%= isSimply ? source : arraySource[1] %>"
+     <%- isSimply ? '' : `srcset="${arraySource.reduce((acc, curr, index) => `${acc}${curr} ${index + 1}x${index < arraySource.length - 1 ? ', ' : ''}`, '').trim()}"` %>
      alt="<%= alt %>"
      <%- !isDraggable ? 'draggable="false"' : '' %>
      style="<%= !isBlur ? '' : 'filter: blur(4px)'; %>">

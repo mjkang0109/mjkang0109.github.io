@@ -147,7 +147,7 @@ const renderHTML = ({
     fileName,
 }) => {
     fs.writeFileSync(
-        `${isDev ? DIST : filePath}/${fileName}.html`,
+        `${isDev ? filePath : filePath}/${fileName}.html`,
         data,
         (err) => {
             if (err) {
@@ -196,9 +196,10 @@ const generatorViews = () => {
             const relativePath = '..';
             const totalPath = new Array(pathLength - 1).fill('').reduce((acc, curr) => acc + '/' + relativePath, '..');
 
-            process.env.BASE_PATH = '.';
-            process.env.MINIFY = '.min';
-            process.env.IMG_PATH = `${totalPath}/${IMAGES}`;
+            const generatorPath = Array(pathLength).fill('0').reduce((acc, curr) => acc + '/..' , '.');
+
+            process.env.BASE_PATH = generatorPath;
+            process.env.IMG_PATH = `${generatorPath}/${IMAGES}`;
         }
 
         const pageFm = frontMatter.read(targetPath);
@@ -266,8 +267,8 @@ const generatorStyles = () => {
 
         const pathObj = path.parse(styles[i]);
 
-        if (!fs.existsSync(`${DIST}/${isDev ? STYLES : pathObj.dir}`)) {
-            fs.mkdirSync(`${DIST}/${isDev ? STYLES : pathObj.dir}`, {recursive: true});
+        if (!fs.existsSync(`${DIST}/${isDev ? pathObj.dir : pathObj.dir}`)) {
+            fs.mkdirSync(`${DIST}/${isDev ? pathObj.dir : pathObj.dir}`, {recursive: true});
         }
 
         const data = fs.readFileSync(`${SRC}/${styles[i]}`);
@@ -275,7 +276,7 @@ const generatorStyles = () => {
         postcss([autoprefixer, postcssNested, psmq])
             .process(data, {from: undefined})
             .then(result => {
-                fs.writeFile(`${DIST}/${isDev ? STYLES : pathObj.dir}/${pathObj.name}.min.css`, result.css, (err) => {
+                fs.writeFile(`${DIST}/${isDev ? pathObj.dir : pathObj.dir}/${pathObj.name}${isDev ? '' : '.min'}.css`, result.css, (err) => {
                     if (err) {
                         return console.error(err, 'styled can not created!');
                     }
@@ -329,11 +330,12 @@ const generatorScripts = async () => {
 
         const pathObj = path.parse(scripts[i]);
 
-        if (!fs.existsSync(`${DIST}/${isDev ? SCRIPTS : pathObj.dir}`)) {
-            fs.mkdirSync(`${DIST}/${isDev ? SCRIPTS : pathObj.dir}`, {recursive: true});
+        if (!fs.existsSync(`${DIST}/${isDev ? pathObj.dir : pathObj.dir}`)) {
+            fs.mkdirSync(`${DIST}/${isDev ? pathObj.dir : pathObj.dir}`, {recursive: true});
         }
 
         const data = fs.readFileSync(`${SRC}/${pathObj.dir}/${pathObj.name}.js`, 'utf-8');
+        const originData = data;
 
         minify({
             js: data,
@@ -353,7 +355,7 @@ const generatorScripts = async () => {
                 }
             }
 
-            fs.writeFileSync(`${DIST}/${isDev ? SCRIPTS : pathObj.dir}/${pathObj.name}${isDev ? '' : '.min'}.js`, isDev ? data.code : generatorCode, (err) => {
+            fs.writeFileSync(`${DIST}/${isDev ? pathObj.dir : pathObj.dir}/${pathObj.name}${isDev ? '' : '.min'}.js`, isDev ? originData : generatorCode, (err) => {
                 if (err) {
                     return console.error(err, 'script can not created!');
                 }
@@ -407,7 +409,7 @@ const generatorImages = async () => {
         }
 
         types[imageType].map((type) => {
-            fs.writeFileSync(`${DIST}/${isDev ? IMAGES : pathObj.dir}/${pathObj.name}.${type}`, buffer, (err) => {
+            fs.writeFileSync(`${DIST}/${isDev ? pathObj.dir : pathObj.dir}/${pathObj.name}.${type}`, buffer, (err) => {
                 if (err) {
                     return console.error(err, 'image can not created!');
                 }

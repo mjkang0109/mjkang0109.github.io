@@ -179,6 +179,7 @@ app.use(sassMiddleware({
 }));
 
 app.use(`/${STYLES}`, express.static(path.join(__dirname, SRC, STYLES)));
+app.use(`/fonts`, express.static(path.join(__dirname, SRC, STYLES, 'fonts')));
 app.use(`/${SCRIPTS}`, express.static(path.join(__dirname, SRC, SCRIPTS)));
 app.use(`/${IMAGES}`, express.static(path.join(__dirname, SRC, IMAGES)));
 app.use(`/`, express.static(path.join(__dirname, DIST)));

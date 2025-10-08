@@ -57,7 +57,7 @@ const {
     DIST,
 } = base;
 
-const pages = glob.sync(`${VIEWS}/*[^example]*/[^_]*.ejs`, {
+const pages = glob.sync(`${VIEWS}/*[^example]*/**/[^_]*.ejs`, {
     cwd   : SRC,
     nosort: true,
 });

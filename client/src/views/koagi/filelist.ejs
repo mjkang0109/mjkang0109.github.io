@@ -1,0 +1,165 @@
+---
+group: koagi
+state:
+    default: UI
+---
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>
+<html class="lt-ie10 lt-ie9 lt-ie8 ie6"
+      lang="ko-KR"><![ingif]-->
+<!--[if IE 7]>
+<html class="lt-ie10 lt-ie9 lt-ie8 ie7"
+      lang="ko-KR"><![ingif]-->
+<!--[if IE 8]>
+<html class="lt-ie10 lt-ie9 ie8"
+      lang="ko-KR"><![ingif]-->
+<!--[if IE 9]>
+<html class="lt-ie10 ie9"
+      lang="ko-KR"><![ingif]-->
+<!--[if !IE]><!-->
+<html lang="ko-KR"><!--<![ingif]-->
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {}); %>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>
+                한국수목원정원관리<span class="cntTotal">(<span class="total"></span>pages)</span>
+            </h1>
+        </div>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_sitemap`, {}); %>
+        <table width="100%"
+               border="0"
+               cellspacing="0"
+               cellpadding="0"
+               class="htmllist">
+            <colgroup>
+                <col width="120px">
+                <col width="120px">
+                <col width="120px">
+                <col width="120px">
+                <col width="5%">
+                <col width="5%">
+                <col width="*">
+                <col width="35px">
+            </colgroup>
+            <thead>
+            <tr class="head">
+                <td>1depth</td>
+                <td>2depth</td>
+                <td>3depth</td>
+                <td>4depth</td>
+                <td>design</td>
+                <td>UI</td>
+                <td>FileName</td>
+                <td>View</td>
+            </tr>
+            </thead>
+            <tbody>
+            <%
+            items.map((item) => {
+                if (item.title) {
+            %>
+            <tr>
+                <th colspan="11"><%= item.title %></th>
+            </tr>
+
+            <%
+            if (item.items) {
+                item.items.map((depth) => {
+            %>
+                <tr class="v3<%= depth.ui ? ' done' : '' %>">
+                    <td class="depth1"><%= depth.title %></td>
+                    <td class="depth2"></td>
+                    <td class="depth3"></td>
+                    <td class="depth4"></td>
+                    <td class="design"><%= depth.design ? 'O' : '' %></td>
+                    <td class="ui"><%= depth.ui ? 'O' : '' %></td>
+                    <td class="fileName"><%= depth.name %>.html</td>
+                    <td class="view">
+                        <a href="./<%= item.name %>/<%= depth.name %>.html"
+                           target="_blank">View
+                        </a>
+                    </td>
+                </tr>
+                <%
+                if (depth.pages) {
+                    depth.pages.map((page) => {
+                %>
+                    <tr class="v3<%= page.ui ? ' doen' : '' %>">
+                        <td class="depth1"></td>
+                        <td class="depth2"><%= page.title %></td>
+                        <td class="depth3"></td>
+                        <td class="depth4"></td>
+                        <td class="design"><%= page.design ? 'O' : '' %></td>
+                        <td class="ui"><%= page.ui ? 'O' : '' %></td>
+                        <td class="fileName"><%= page.name %>.html</td>
+                        <td class="view">
+                            <a href="./<%= item.name %>/<%= page.name %>.html"
+                               target="_blank">View
+                            </a>
+                        </td>
+                    </tr>
+
+                    <%
+                    if (page.subItems) {
+                        page.subItems.map((subItem) => {
+                    %>
+                        <tr class="v3<%= subItem.ui ? ' done' : '' %>">
+                            <td class="depth1"></td>
+                            <td class="depth2"></td>
+                            <td class="depth3"><%= subItem.title %></td>
+                            <td class="depth4"></td>
+                            <td class="design"><%= subItem.design ? 'O' : '' %></td>
+                            <td class="ui"><%= subItem.ui ? 'O' : '' %></td>
+                            <td class="fileName"><%= subItem.name %>.html</td>
+                            <td class="view">
+                                <a href="./<%= item.name %>/<%= subItem.name %>.html"
+                                   target="_blank">View
+                                </a>
+                            </td>
+                        </tr>
+                    <%
+                        });
+                    }
+                    %>
+                <%
+                    });
+                }
+                %>
+            <%
+                });
+            }
+            %>
+
+            <%
+                }
+            })
+            %>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var totalPageNum = 0;
+        $('tbody').each(function (idx) {
+            var titTxt = $('tbody').eq(idx).find('th').text();
+            $('.total').append('<span class="tit_txt">' + titTxt + ': </span>')
+            $(this).find('tr').each(function (i) {
+                $(this).find('td:first-child').text(i);
+                num = $(this).filter(':last-child').find('td:first-child').text();
+            });
+            $('.total').append('<strong>' + num + '</strong>');
+            totalPageNum += parseInt(num);
+        });
+        $('.total h3').append('<strong class="total_page_num">' + totalPageNum + '</strong>');
+
+        var totalPage = 0;
+        $(".cnt").each(function () {
+            $(this).children("em").text($(this).parent().parent().parent().children("tr").length - 1)
+            totalPage = totalPage + $(this).parent().parent().parent().children("tr").length - 1
+        });
+
+        $(".total").text(totalPage);
+    </script>
+</body>
+</html>

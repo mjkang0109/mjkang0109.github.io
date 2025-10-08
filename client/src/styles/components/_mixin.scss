@@ -6,18 +6,24 @@ $font: Pretendard, -apple-system, Apple SD Gothic Neo, 맑은 고딕, Malgun Got
 
 $w300: 300px;
 $w360: 360px;
+$w650: 650px;
 $w767: 767px;
 $w768: 768px;
+$w959: 959px;
 $w1023: 1023px;
 $w1024: 1024px;
+$w1199: 1199px;
 $w1200: 1200px;
 $w1279: 1279px;
 $w1280: 1280px;
 
 $max: (
     360: "max-width: #{$w360}",
+    650: "max-width: #{$w650}",
     767: "max-width: #{$w767}",
+    959: "max-width: #{$w959}",
     1023: "max-width: #{$w1023}",
+    1199: "max-width: #{$w1199}",
     1279: "max-width: #{$w1279}"
 );
 

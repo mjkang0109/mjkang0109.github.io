@@ -1,0 +1,229 @@
+---
+group: always360
+state:
+    default: 메인
+    quiz: 퀴즈이벤트
+    renewal: 댓글이벤트
+---
+<%
+const imgPath = `${process.env.IMG_PATH}/always360`;
+%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include(`${process.env.INCLUDE_PATH}/always360/partials/_head`, {
+    }); %>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH %>/styles/always360/event<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+</head>
+<body class="event-wrap">
+    <section class="visual">
+        <a href="#" class="visual-logo">
+            <span class="logo">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    isSimply: true,
+                    source: `${imgPath}/logo-long.png`,
+                    width: 162,
+                    height: 48,
+                    alt: '언제나 돌봄 로고'
+                }); %>
+            </span>
+            <span class="a11y">경기도 언제나 돌봄 오픈 이벤트</span>
+        </a>
+        <h1 class="visual-title">언제나돌봄
+            <span class="logo">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                isSimply: true,
+                source: `${imgPath}/logo.png`,
+                width: 89,
+                height: 83,
+                alt: '언제나 돌봄 로고'
+                }); %>
+            </span>
+            서비스 플랫폼
+            <strong>2차 오픈기념 이벤트</strong>
+        </h1>
+        <p class="visual-desc">“새로워진 기능과 서비스! 회원가입부터 퀴즈 · 후기까지 참여하고 풍성한 혜택을 받으세요.”</p>
+        <div id="jsTabs" class="tabs">
+            <%
+            const buttons = [
+                {
+                    title: '어서와~',
+                    desc : '회원가입 및 비밀번호 변경',
+                },
+                {
+                    title: '알려줘~',
+                    desc : '이용후기 및 홍보글 게시',
+                },
+                {
+                    title: '맞춰봐~',
+                    desc : '퀴즈 참여',
+                },
+                {
+                    title: '고마워~',
+                    desc : '축하 댓글 참여',
+                },
+            ];
+            %>
+            <% for (let i = 0; i < 4; i++) { %>
+                <button type="button"
+                        class="tab-<%= i + 1 %>"
+                        data-target="#item-<%= i + 1 %>">
+                    <strong><%= buttons[i].title; %></strong>
+                    <span><%= buttons[i].desc; %></span>
+                </button>
+            <% } %>
+        </div>
+        <div class="event-info">
+            <%
+            const information = [
+                {
+                    title: '이벤트 기간',
+                    desc : '2025.10.27.(월) ~ 12.07.(일)<br><span>※ 이벤트 별로 상이</span>',
+                },
+                {
+                    title: '참여 대상',
+                    desc : '플랫폼 신규 또는 기존 회원 누구나',
+                },
+                {
+                    title: '참여 방법',
+                    desc : '이벤트별 안내',
+                },
+            ];
+            %>
+            <ul>
+                <% for (let i = 0; i < 3; i++) { %>
+                    <li>
+                        <strong><%- information[i].title; %></strong>
+                        <p><%- information[i].desc; %></p>
+                    </li>
+                <% } %>
+                    <li class="event-description"><strong>당첨자 발표</strong><span>및 상품 발송 예정일 : </span><p>2025.12.09.(월)</p></li>
+            </ul>
+        </div>
+    </section>
+    <section class="contents-item">
+        <%
+        const items = [
+            {
+                alt: '회원가입 및 비밀번호 변경 이벤트. 플랫폼이 처음이라면 회원가입만해도, 플랫폼 기존 가입 회원이라면 로그인 후 비밀번호 변경해도 선물이 팡팡! 참여기간: 2025.10.27.(월) ~ 12.07.(일), 참여방법: 기존 회원 : 이벤트 기간 내 플랫폼 로그인 후 비밀번호 변경 시 자동 응모 / 신규 회원 : 이벤트 기간 내 회원가입 시 자동 응모, 상품지급: 참여 회원 중 1,000명 무작위 추첨, 상품내용: 2천원 상당 모바일 쿠폰 지급'
+            },
+            {
+                alt: '이용후기 및 홍보글 게시 이벤트. 아동 언제나돌봄서비스는 누가, 언제, 어떻게 이용하는 걸까요? 아동 언제나돌봄서비스 이용해 보셨다면 이용 후기를 남겨주세요! 언제나돌봄서비스~ 더 많은 경기도민과 함께 누려요!! 참여기간: 2025.10.27.(월) ~ 11.23.(일), 참여방법: 본 이벤트 페이지의 응모하기 버튼 클릭하여 URL과 캡쳐 화면 첨부하면 응모 완료, 상품지급: 참여 회원 중 심사를 통해 최우수 10명에게, 우수 50명에게 5만원 상당 모바일 쿠폰 참가자 중 100명 무작위 추첨하여 1만원 상당 모바일 쿠폰 지급'
+            },
+            {
+                alt: '퀴즈 이벤트. 퀴즤의 정답을 댓글로 작성해주세요! 참여기간: 2025.11.3.(월) ~ 11.16.(일), 참여방법: 기존 회원 : 이벤트 기간 내 플랫폼 로그인 후 비밀번호 변경 시 자동 응모, 신규 회원 : 이벤트 기간 내 회원가입 시 자동 응모, 상품지급: 참여 회원 중 600명 무작위 추첨, 상품내용: 5천원 상당 모바일 쿠폰 지급ㅅ'
+            },
+            {
+                alt: '축하 댓글 이벤트. 언제나돌봄서비스 리뉴얼 오픈 축하메시지를 남겨 주세요! 참여기간: 2025.11.27.(월) ~ 12.07.(일), 참여방법: 로그인 후 이벤트 페이지 하단에 축하메시지를 댓글로 작성하면 응모 완료, 상품지급: 참여 회원 중 600명 무작위 추첨, 상품내용: 5천원 상당 모바일 쿠폰 지급'
+            }
+        ]
+        %>
+        <ol class="items">
+            <% for (let i = 0; i < 4; i++) { %>
+            <li id="item-<%= i + 1 %>" class="<%= i === 1 ? 'soon' : i === 2 ? 'closed' : '' %>">
+                <a href="" rel="noopener noreferrer" title=" 새 창 열림" target="_blank">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    isSimply: true,
+                    source: `${imgPath}/detail-event${i + 1}.png`,
+                    width: 807,
+                    height: 843,
+                    alt: '언제나 돌봄 로고'
+                    }); %>
+                </a>
+            </li>
+            <% } %>
+        </ol>
+    </section>
+    <%
+    const isQuiz = state === 'quiz';
+    %>
+    <% if (state.includes('renewal') || state.includes('quiz')) { %>
+        <section class="comment-wrap">
+            <h2>
+                <%= isQuiz ? '퀴즈이벤트' : '축하 댓글이벤트' %>
+                <span><%= isQuiz ? '퀴즈의 정답을 댓글로 작성해 주세요!' : '퀴즈의 정답을 댓글로 작성해 주세요!' %></span>
+            </h2>
+            <% if (isQuiz) { %>
+                <div class="round-box">
+                    <ol class="quiz">
+                        <li>
+                            <span class="q">경기도가 시·군, 아동돌봄센터, 서비스제공기관과 협력하여 틈새없는 아동긴급돌봄체계를 마련하기 위해 추진중인 사업으로, 돌봄이 필요한 12세 이하 아동을 대상으로 제공하고 있는 돌봄 서비스의 이름은 무엇일까요?</span>
+                            <span class="hint">Hint: 경기도 ○○○○○○○서비스</span>
+                        </li>
+                        <li>
+                            <span class="q">위 서비스에 대해 언제든지 편하게 문의할 수 있는 ‘전용 콜센터’! 고객센터 전화번호는 몇 번일까요?</span>
+                            <span class="hint">Hint: 010- ○○○○-○○○○</span>
+                        </li>
+                    </ol>
+                </div>
+            <% } %>
+
+            <div class="round-box">
+                <span class="count"><%= isQuiz ? '퀴즈' : '축하' %>댓글 N개</span>
+                <label for="input-comment" class="input-comment">
+                    <textarea id="input-comment" placeholder="퀴즈 정답을 작성해주세요. (예: 1.서비스  2.1234-5678)"></textarea>
+                </label>
+                <p class="cautions">개인정보 관련 피해 방지를 위해, 이름, 연락처, 주소 등 개인정보가 노출되지 않도록 주의해 주시기 바랍니다.
+                    <br>이벤트와 관련 없는 글, 타인을 비방하는 글은 예고 없이 삭제될 수 있습니다.
+                </p>
+                <button type="button" class="button-apply">등록</button>
+
+                <ul class="comments">
+                    <% for (let i = 0; i < 10; i++) { %>
+                        <li>
+                            <div class="comment-item<%= i === 0 ? ' my' : '' %>">
+                                <span class="profile">
+                                    <% if (i === 0) { %>
+                                        내글
+                                    <% } %>
+                                    <% if (i !== 0) { %>
+                                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                        isSimply: true,
+                                        source: `${imgPath}/icon-profile.png`,
+                                        width: 28,
+                                        height: 29,
+                                        alt: '사람 픽토그램'
+                                        }); %>
+                                    <% } %>
+                                </span>
+                                <span class="identity">kbm05789***</span>
+                                <% if (i === 0) { %>
+                                    <div class="buttons">
+                                        <button type="button">수정</button>
+                                        <button type="button">삭제</button>
+                                        <button type="button">저장</button>
+                                        <button type="button">취소</button>
+                                    </div>
+                                <% } %>
+                                <% if (i !== 0) { %>
+                                    <span class="comment">아동언제나돌봄 사이트 오픈을 축하합니다. 좋은 정보 많이 제공 부탁드립니다.</span>
+                                <% } %>
+                            </div>
+                            <% if (i === 0) { %>
+                                <label for="modify-comment" class="input-comment">
+                                    <textarea id="modify-comment" placeholder="개인정보 관련 피해 방지를 위해, 이름, 연락처, 주소 등 개인정보가 노출되지 않도록 주의해 주시기 바랍니다. 이벤트와 관련 없는 글, 타인을 비방하는 글은 예고 없이 삭제될 수 있습니다."></textarea>
+                                </label>
+                            <% } %>
+                        </li>
+                    <% } %>
+                </ul>
+
+                <button type="button" class="button-more">
+                    더 보기
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    isSimply: true,
+                    source: `${imgPath}/icon-arrow-down.png`,
+                    width: 23,
+                    height: 13,
+                    alt: '아래꺽쇠'
+                    }); %>
+                </button>
+            </div>
+        </section>
+    <% } %>
+
+    <script src="<%= process.env.BASE_PATH; %>/scripts/always360/event<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
+            defer></script>
+</body>
+</html>

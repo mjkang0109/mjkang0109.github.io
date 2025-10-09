@@ -1,0 +1,125 @@
+<%
+var category = category || 'baekdu';
+%>
+<div id="jsSitemap1"
+     class="mSitemap1">
+    <!-- title -->
+    <div class="title">
+        <div class="mLang1 jsBtnShow1">
+            <button type="button"
+                    class="sel">KOR
+            </button>
+            <div class="selList">
+                <a href="#">KOR</a>
+                <a href="#">ENG</a>
+            </div>
+        </div>
+        <div class="mLink1">
+            <a href="#"
+               class="hom">HOME
+            </a>
+            <a href="#"
+               class="log">로그인
+            </a>
+            <a href="#"
+               class="my">마이페이지
+            </a>
+        </div>
+        <button class="close">메뉴 닫기</button>
+    </div>
+    <!-- //title -->
+    <div class="mUtil2">
+        <div class="col">
+            <a href="#"
+               class="i1"><span>통합예약시스템</span></a>
+        </div>
+        <div class="col">
+            <a href="#"
+               class="i2"><span>패밀리사이트</span></a>
+        </div>
+    </div>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_sitemap`, {
+    }) %>
+    <!-- list -->
+    <div class="list">
+        <!-- dep1 -->
+        <div class="dep1">
+            <ul>
+                <%
+                const currentIndex = nav[category];
+                const currentItems = navItems[currentIndex].items;
+                const currentItemsLength = currentItems.length;
+                for (let i = 0; i < currentItemsLength; i++) {
+                    if (currentItems[i].title === '메인') {
+                        continue;
+                    }
+                %>
+                <li class="m1">
+                    <% if (!currentItems[i].pages) { %>
+                        <a href="./../<%= category %>/<%= currentItems[i].name %>.html" class="link"><%= currentItems[i].title %></a>
+                    <% } %>
+                    <% if (currentItems[i].pages) { %>
+                        <a href="#jsDep2_<%= i %>_m"><%= currentItems[i].title %></a>
+                    <% } %>
+                </li>
+                <%
+                }
+                %>
+            </ul>
+        </div>
+        <!-- //dep1 -->
+        <%
+        for (let i = 0; i < currentItemsLength; i++) {
+            if (currentItems[i].title === '메인') {
+                continue;
+            }
+        %>
+        <!-- <%=currentItems[i].title %> -->
+        <div id="jsDep2_<%= i %>_m"
+             class="dep2<%= i !== 1 ? ' hidden' : '' %>"
+             aria-expanded="false"
+             aria-controls="jsDep2_<%= i + 1 %>_m">
+            <ul>
+                <%
+                const currentPages = currentItems[i]?.pages;
+                if (currentPages) {
+                    const currentPagesLength = currentPages.length;
+                    for (let j = 0; j < currentPagesLength; j++) {
+                %>
+                    <li>
+                        <%
+                        const currentSubItems = currentPages[j]?.subItems;
+                        if (currentSubItems) {
+                        %>
+                            <button type="button"
+                                    class="t"><%= currentPages[j].title %>
+                            </button>
+                            <div class="dep3"
+                                 style="">
+                                <%
+                                    const currentSubItemsLength = currentSubItems.length;
+                                for (let k = 0; k < currentSubItemsLength; k++) {
+                                %>
+                                    <a href="#"><%= currentSubItems[k].title %></a>
+                                <% } %>
+                            </div>
+                        <% } %>
+                        <% if (!currentSubItems) { %>
+                            <a href="#"
+                               class="t"><%= currentPages[j].title %>
+                            </a>
+                        <% } %>
+                    </li>
+                <%
+                }
+                    }
+                %>
+            </ul>
+        </div>
+        <!-- <%=currentItems[i].title %> -->
+        <%
+        }
+        %>
+    </div>
+    <!-- //list -->
+</div>

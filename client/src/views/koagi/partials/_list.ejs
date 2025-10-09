@@ -1,0 +1,25 @@
+<ul class="galleryItems photos">
+    <% for(let i = 0; i < 8; i++) { %>
+        <li>
+            <a href="#">
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 320,
+                        height: 240,
+                        isSimply: true,
+                        source: `${imgPath}/dummy-plant.jpg`,
+                        alt: '',
+                    }); %>
+                </span>
+                <strong>물까치수염</strong>
+                <p>Lysimachia leucantha Miq</p>
+            </a>
+        </li>
+    <% } %>
+</ul>
+
+<!-- pagination -->
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_pagination`, {
+    
+}) %>
+<!-- // pagination -->

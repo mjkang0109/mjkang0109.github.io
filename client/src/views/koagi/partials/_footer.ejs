@@ -1,0 +1,48 @@
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_sitemap`, {
+}) %>
+<%
+var category = category || 'baekdu';
+%>
+<div id="footer">
+    <div class="link">
+        <div class="bg">
+            <strong class="tit">관련사이트</strong>
+            <a href="#">한국수목원정원관리원</a>
+            <%
+            const length = navItems.length;
+            for (let h = 0; h < length; h++) {
+                if (navItems[h].name === category) {
+                    continue;
+                }
+            %>
+            <a href="#"><%= navItems[h].title %></a>
+            <%
+            }
+            %>
+        </div>
+    </div>
+    <div class="text">
+        <div class="bg">
+            <div class="log">
+                <img src="<%= process.env.IMG_PATH %>/koagi/logo_footer.png"
+                     alt="원주시">
+            </div>
+            <div class="txt">
+                <div class="ln">
+                    <a href="#"><strong>개인정보처리방침</strong></a>
+                    <a href="#">이용약관</a>
+                    <a href="#">이메일무단수집거부</a>
+                    <a href="#">홈페이지 개선 의견</a>
+                </div>
+                <div class="ad">
+                    한국수목원정원관리원 (30129) 세종특별자치시 정부 2청사로 10, SM타워 3층 <span class="bar">|</span> 044-270-5005
+                    <br>©Korea Arboreta and Gardens Institute.All Rights Reserved.
+                </div>
+            </div>
+            <div class="img">
+                <img src="<%= process.env.IMG_PATH %>/koagi/img_footer1.png"
+                     alt="">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_sitemap`, {
+}) %>
+<%
+var currentNav = currentNav || '';
+var category = category || 'baekdu';
+%>
+<div id="header">
+    <!-- uh -->
+    <div class="uh">
+        <div class="bg">
+            <div class="link">
+                <a href="#"
+                   class="type2">한국수목원정원관리원
+                </a>
+                <%
+                const length = navItems.length;
+                for (let h = 0; h < length; h++) {
+                    if (navItems[h].name === category) {
+                        continue;
+                    }
+                %>
+                    <a href="#"><%= navItems[h].title %></a>
+                <%
+                }
+                %>
+            </div>
+            <div class="util">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+                <a href="#">고객지원</a>
+            </div>
+        </div>
+    </div>
+    <!-- //uh -->
+    <!-- mh -->
+    <div class="mh">
+        <div class="bg">
+            <h1>
+                <a href="#">
+                    <span class="forW">
+                        <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory %>.png"
+                             alt="한국수목원정원관리원">
+                    </span>
+                    <span class="forM">
+                        <img src="<%= process.env.IMG_PATH %>/koagi/logo_m.png"
+                             alt="한국수목원정원관리원">
+                    </span>
+                </a>
+            </h1>
+            <!-- gnb -->
+            <div id="gnb"
+                 class="mGnb">
+                <h2 class="sound-only">메인 메뉴</h2>
+                <ul class="list">
+                    <%
+                    const currentIndex = nav[category];
+                    const currentItems = navItems[currentIndex].items;
+                    const currentLength = currentItems.length;
+                    for (let i = 0; i < currentLength; i++) {
+                        if (currentItems[i].title === '메인') {
+                            continue;
+                        }
+                    %>
+                    <li class="m1<%= currentNav === currentItems[i].name ? ' active' : '' %>">
+                        <a href="#"
+                           class="dep1"><%= currentItems[i].title %>
+                        </a>
+                        <%
+                            const currentPages = currentItems[i].pages;
+                        if (currentPages) {
+                            const pageLength = currentPages.length;
+                        %>
+                        <div class="dep2">
+                            <div class="ti">
+                                <strong class="t"><%= currentItems[i].title %></strong>
+                                <p class="c">Korea Arboreta and Gardens Institute</p>
+                            </div>
+                            <div class="ls">
+                                <ul>
+                                    <%
+                                    for (let j = 0; j < pageLength; j++) {
+                                    %>
+                                        <li>
+                                            <a href="#"
+                                               class="t"><%= currentPages[j].title %>
+                                            </a>
+                                            <%
+                                                const currentSubItems = currentPages[j].subItems;
+                                            if (currentSubItems) {
+                                                const subItemsLength = currentPages[j].subItems.length;
+                                            for (let k = 0; k < subItemsLength; k++) {
+                                            %>
+                                                <div class="dep3">
+                                                    <a href="#"><%= currentSubItems[k].title %></a>
+                                                </div>
+                                            <% }
+                                            } %>
+                                        </li>
+                                    <%
+                                    }
+                                    %>
+                                </ul>
+                            </div>
+                        </div>
+                        <%
+                        }
+                        %>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+            <!-- //gnb -->
+            <div class="util">
+                <!-- forWeb -->
+                <span class="forW">
+						<a href="#"
+                           class="iFind1">검색</a>
+					</span>
+                <a href="#jsSitemap1"
+                   class="iMenu1 jsBtnMenu1">전체메뉴
+                </a>
+                <a href="#"
+                   class="iLog1 forM">로그인
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- //mh -->
+</div>

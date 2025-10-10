@@ -1,5 +1,5 @@
 <%
-var category = category || 'baekdu';
+var currentCategory = currentCategory || 'baekdu';
 %>
 <div id="jsSitemap1"
      class="mSitemap1">
@@ -46,7 +46,7 @@ var category = category || 'baekdu';
         <div class="dep1">
             <ul>
                 <%
-                const currentIndex = nav[category];
+                const currentIndex = nav[currentCategory];
                 const currentItems = navItems[currentIndex].items;
                 const currentItemsLength = currentItems.length;
                 for (let i = 0; i < currentItemsLength; i++) {
@@ -56,7 +56,7 @@ var category = category || 'baekdu';
                 %>
                 <li class="m1">
                     <% if (!currentItems[i].pages) { %>
-                        <a href="./../<%= category %>/<%= currentItems[i].name %>.html" class="link"><%= currentItems[i].title %></a>
+                        <a href="./../<%= currentCategory %>/<%= currentItems[i].name %>.html" class="link"><%= currentItems[i].title %></a>
                     <% } %>
                     <% if (currentItems[i].pages) { %>
                         <a href="#jsDep2_<%= i %>_m"><%= currentItems[i].title %></a>

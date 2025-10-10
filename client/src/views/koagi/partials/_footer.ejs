@@ -1,7 +1,8 @@
 <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_sitemap`, {
 }) %>
 <%
-var category = category || 'baekdu';
+var currentCategory = currentCategory || 'baekdu';
+var currentName = currentName || '';
 %>
 <div id="footer">
     <div class="link">
@@ -11,7 +12,7 @@ var category = category || 'baekdu';
             <%
             const length = navItems.length;
             for (let h = 0; h < length; h++) {
-                if (navItems[h].name === category) {
+                if (navItems[h].name === currentCategory) {
                     continue;
                 }
             %>
@@ -24,8 +25,8 @@ var category = category || 'baekdu';
     <div class="text">
         <div class="bg">
             <div class="log">
-                <img src="<%= process.env.IMG_PATH %>/koagi/logo_footer.png"
-                     alt="원주시">
+                <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory %>-footer.png"
+                     alt="<%= currentName %>">
             </div>
             <div class="txt">
                 <div class="ln">

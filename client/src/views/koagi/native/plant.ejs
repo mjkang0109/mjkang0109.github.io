@@ -1,14 +1,14 @@
 ---
 group: koagi
 state:
-    default: 식물현황-국립백두대간수목원
+    default: 식물현황-국립한국자생식물원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립백두대간수목원';
-    currentCategory = 'baekdu';
+    currentCategory = 'native';
+    currentName = '국립한국자생식물원';
     currentNav = 'tour';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
@@ -29,6 +29,7 @@ state:
             currentCategory,
             currentNav,
             currentName
+
         }) %>
         <!-- // header -->
 
@@ -68,8 +69,8 @@ state:
         
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
-            currentName,
             currentCategory,
+            currentName
         }) %>
         <!-- // footer -->
         

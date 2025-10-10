@@ -1,25 +1,41 @@
-<ul class="galleryItems photos">
-    <% for(let i = 0; i < 8; i++) { %>
+<%
+var type = type || 'photos';
+var count = count || 8;
+var dummy = dummy || 'plant';
+var badge = badge || '';
+var title = title || '물까치수염';
+%>
+<ul class="gallery-items gallery-<%= type ;%>">
+    <% for(let i = 0; i < count; i++) { %>
         <li>
             <a href="#">
                 <span class="img-wrap">
                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                        width: 320,
-                        height: 240,
-                        isSimply: true,
-                        source: `${imgPath}/dummy-plant.jpg`,
-                        alt: '',
+                    width: 320,
+                    height: 240,
+                    isSimply: true,
+                    source: `${imgPath}/dummy-${dummy}.jpg`,
+                    alt: '',
                     }); %>
                 </span>
-                <strong>물까치수염</strong>
-                <p>Lysimachia leucantha Miq</p>
+                <div class="title">
+                    <strong>
+                        <%= title ;%>
+                    </strong>
+                    <% if (badge !== '') { %>
+                        <span class="badge">
+                                <%= badge; %>
+                            </span>
+                    <% } %>
+                </div>
+                <% if (type !== 'grid') { %>
+                    <p>Lysimachia leucantha Miq</p>
+                <% } %>
             </a>
         </li>
     <% } %>
 </ul>
-
 <!-- pagination -->
 <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_pagination`, {
-    
 }) %>
 <!-- // pagination -->

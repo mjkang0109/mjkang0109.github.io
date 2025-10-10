@@ -1,7 +1,7 @@
 ---
 group: koagi
 state:
-    default: 식물현황-국립백두대간수목원
+    default: 식물현황상세-국립백두대간수목원
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -54,12 +54,7 @@ state:
 
         <!-- contents -->
         <div id="body">
-            
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
-                
-            }) %>
-
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_detail`, {
 
             }) %>
 

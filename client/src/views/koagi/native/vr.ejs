@@ -1,20 +1,20 @@
 ---
 group: koagi
 state:
-    default: 식물현황-국립백두대간수목원
+    default: 수목원vr-국립한국자생식물원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립백두대간수목원';
-    currentCategory = 'baekdu';
+    currentName = '국립한국자생식물원';
+    currentCategory = 'native';
     currentNav = 'tour';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
         title: currentName,
-        currentCategory: currentCategory
+        currentCategory
     }); %>
 </head>
 <body class="<%= currentCategory %>">
@@ -43,11 +43,11 @@ state:
         
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '식물현황',
+            title: '수목원VR',
             desc: '유아부터 성인까지 즐길 수 있는 다양한 교육 프로그램을 소개합니다. 관심 있는 프로그램을 확인하고 신청해 보세요. ',
             depths: [
                 '둘러보기',
-                '식물현황'
+                '수목원VR'
             ],
         }) %>
         <!-- // title -->
@@ -60,7 +60,11 @@ state:
             }) %>
 
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
-
+                type: 'grid',
+                count: 6,
+                badge: '항공 VR 보기',
+                title: '방문자센터',
+                dummy: 'vr'
             }) %>
 
         </div>

@@ -1615,71 +1615,32 @@ body.scrolling #header {
   margin: 0 -3px 0 1px;
 }
 
-.gallery-photos {
+.galleryItems {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
-}
-@media (max-width: 1199px) {
-  .gallery-photos {
-    gap: 50px 20px;
-  }
-}
-.gallery-photos .img-wrap {
-  width: 325px;
-  height: 240px;
-}
-@media (max-width: 1199px) {
-  .gallery-photos .img-wrap {
-    padding-top: 73.8461538462%;
-  }
-}
-
-.gallery-grid {
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 70px;
-}
-@media (max-width: 1199px) {
-  .gallery-grid {
-    gap: 50px 20px;
-  }
-}
-.gallery-grid .img-wrap {
-  width: 430px;
-  height: 316px;
-}
-@media (max-width: 1199px) {
-  .gallery-grid .img-wrap {
-    padding-top: 73.488372093%;
-  }
-}
-.gallery-grid strong {
-  justify-content: space-between;
-}
-
-.gallery-items {
-  display: grid;
   padding-top: 70px;
   border-top: 2px solid #444;
 }
 @media (max-width: 1199px) {
-  .gallery-items {
+  .galleryItems {
     grid-template-columns: 1fr 1fr;
   }
 }
-.gallery-items.gallery-grid .title {
-  justify-content: space-between;
-}
-.gallery-items .img-wrap {
+.galleryItems .img-wrap {
   display: block;
   position: relative;
+  width: 325px;
+  height: 240px;
 }
 @media (max-width: 1199px) {
-  .gallery-items .img-wrap {
+  .galleryItems .img-wrap {
     width: 100%;
     height: 0;
+    padding-top: 73.8461538462%;
   }
 }
-.gallery-items .img-wrap img {
+.galleryItems .img-wrap img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1687,44 +1648,21 @@ body.scrolling #header {
   height: auto;
   object-fit: cover;
 }
-.gallery-items .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.galleryItems strong {
+  display: block;
   margin-top: 38px;
   font-family: "SCoreDream", serif;
+  font-weight: 600;
   font-size: 22px;
   line-height: 32px;
   text-align: center;
 }
-@media (max-width: 1199px) {
-  .gallery-items .title {
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-}
-.gallery-items .title strong {
-  font-weight: 600;
-}
-.gallery-items p {
+.galleryItems p {
   margin-top: 15px;
   font-size: 15px;
   line-height: 25px;
   font-family: "SCoreDream", serif;
   text-align: center;
-}
-.gallery-items .badge {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 114px;
-  height: 33px;
-  border-radius: 5px;
-  background-color: #3baf89;
-  font-size: 14px;
-  color: #fff;
-  font-weight: 500;
-  font-family: "SCoreDream", serif;
 }
 
 .swiper-wrap ul {

@@ -1,3 +1,96 @@
+const scripts = (() => {
+    const $ = (el) => {
+        if (!el) {
+            return;
+        }
+
+        const element = document.querySelector(el);
+
+        if (!element) {
+            return;
+        }
+
+        return element;
+    };
+
+    const $$ = (el) => {
+        if (!el) {
+            return;
+        }
+
+        const elements = document.querySelectorAll(el);
+
+        if (elements.length === 0) {
+            return;
+        }
+
+        return elements;
+    };
+
+    const bindSwiper = () => {
+        const swipers = $$('.swiper');
+        const thumbSwipers = $$('.thumb-swiper');
+
+        if (!swipers) {
+            return;
+        }
+
+        const optsSwiper = {};
+        const optsThumb = {};
+        const objSwiper = {};
+        const objThumb = {};
+
+        if (thumbSwipers.length > 0) {
+            thumbSwipers.forEach((thumb, i) => {
+                const id = thumb.getAttribute('id');
+
+                optsThumb.slidesPerView = thumb.dataset.perView ?? 4;
+
+                objThumb[id] = new Swiper(thumb, {
+                    freeMode: true,
+                    ...optsThumb,
+                });
+            });
+        }
+
+        swipers.forEach((swiper, i) => {
+            const thumb = swiper.dataset.thumb;
+            const id = swiper.getAttribute('id');
+
+            optsSwiper.spaceBetween = swiper.dataset.gap ?? 30;
+            optsSwiper.slidesPerView = swiper.dataset.perView ?? 1;
+
+            if (thumb) {
+                optsSwiper.thumbs = {
+                    swiper: objThumb[thumb],
+                };
+            }
+
+            objSwiper[id] = new Swiper(swiper, {
+                navigation: {
+                    nextEl: '.button-next',
+                    prevEl: '.button-prev',
+                },
+                ...optsSwiper,
+            });
+        });
+    };
+
+    const init = () => {
+        bindSwiper();
+    };
+
+    return {
+        init, bindSwiper,
+    };
+})();
+
+if (document.readyState === 'complete') {
+    scripts.init();
+} else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', scripts.init);
+}
+
 $(document).ready(function () {
     /* show popup when load */
     if (window.location.href.split('#')[1]) {
@@ -9,10 +102,7 @@ $(document).ready(function () {
     /* scroll */
     $(window).scroll(function () {
         var winSc = $(document).scrollTop();
-        if (winSc >= 1)
-            $('body').addClass('scrolling');
-        else
-            $('body').removeClass('scrolling');
+        if (winSc >= 1) $('body').addClass('scrolling'); else $('body').removeClass('scrolling');
     });
     /* //scroll */
 

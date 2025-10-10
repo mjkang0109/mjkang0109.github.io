@@ -1,6 +1,6 @@
 <%
 var title = title || '';
-var category = category || 'baekdu';
+var currentCategory = currentCategory || 'baekdu';
 %>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible"
@@ -50,10 +50,10 @@ const fonts = [
 <!-- // fonts -->
 <link rel="stylesheet"
       type="text/css"
-      href="<%= process.env.BASE_PATH %>/styles/koagi/<%= category %>.css">
+      href="<%= process.env.BASE_PATH %>/styles/koagi/<%= currentCategory %>.css">
 <script src="<%= process.env.BASE_PATH %>/scripts/plugins/jquery-1.11.2.min.js"></script>
 <script src="<%= process.env.BASE_PATH %>/scripts/plugins/swiper.min.js"></script>
 <script src="<%= process.env.BASE_PATH %>/scripts/plugins/jquery-ui.min.js"></script>
 <script src="<%= process.env.BASE_PATH %>/scripts/koagi/scripts.js"></script>
-<script src="<%= process.env.BASE_PATH %>/scripts/koagi/<%= category %>.js"
+<script src="<%= process.env.BASE_PATH %>/scripts/koagi/<%= currentCategory %>.js"
         defer></script>

@@ -1,20 +1,20 @@
 ---
 group: koagi
 state:
-    default: 식물현황-국립백두대간수목원
+    default: 식물현황상세-국립정원문화원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립백두대간수목원';
-    currentCategory = 'baekdu';
+    currentCategory = 'garden';
+    currentName = '국립정원문화원';
     currentNav = 'tour';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
         title: currentName,
-        currentCategory: currentCategory
+        currentCategory
     }); %>
 </head>
 <body class="<%= currentCategory %>">
@@ -54,12 +54,8 @@ state:
 
         <!-- contents -->
         <div id="body">
-            
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
-                
-            }) %>
 
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_detail`, {
 
             }) %>
 
@@ -68,8 +64,8 @@ state:
         
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
-            currentName,
             currentCategory,
+            currentName
         }) %>
         <!-- // footer -->
         

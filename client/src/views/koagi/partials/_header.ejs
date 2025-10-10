@@ -2,7 +2,8 @@
 }) %>
 <%
 var currentNav = currentNav || '';
-var category = category || 'baekdu';
+var currentName = currentName || '국립백두대간수목원';
+var currentCategory = currentCategory || 'baekdu';
 %>
 <div id="header">
     <!-- uh -->
@@ -10,12 +11,12 @@ var category = category || 'baekdu';
         <div class="bg">
             <div class="link">
                 <a href="#"
-                   class="type2">한국수목원정원관리원
+                   class="type2"><%= currentName %>
                 </a>
                 <%
                 const length = navItems.length;
                 for (let h = 0; h < length; h++) {
-                    if (navItems[h].name === category) {
+                    if (navItems[h].name === currentCategory) {
                         continue;
                     }
                 %>
@@ -39,11 +40,11 @@ var category = category || 'baekdu';
                 <a href="#">
                     <span class="forW">
                         <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory %>.png"
-                             alt="한국수목원정원관리원">
+                             alt="<%= currentName %>">
                     </span>
                     <span class="forM">
-                        <img src="<%= process.env.IMG_PATH %>/koagi/logo_m.png"
-                             alt="한국수목원정원관리원">
+                        <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory %>-m.png"
+                             alt="<%= currentName %>">
                     </span>
                 </a>
             </h1>
@@ -53,7 +54,7 @@ var category = category || 'baekdu';
                 <h2 class="sound-only">메인 메뉴</h2>
                 <ul class="list">
                     <%
-                    const currentIndex = nav[category];
+                    const currentIndex = nav[currentCategory];
                     const currentItems = navItems[currentIndex].items;
                     const currentLength = currentItems.length;
                     for (let i = 0; i < currentLength; i++) {

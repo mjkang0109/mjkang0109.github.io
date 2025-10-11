@@ -1805,6 +1805,12 @@ body.scrolling #header {
     flex-wrap: wrap;
   }
 }
+.gallery-items .title.line-clamp strong {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
 .gallery-items .title strong {
   font-weight: 600;
 }
@@ -1814,6 +1820,22 @@ body.scrolling #header {
   line-height: 25px;
   font-family: "SCoreDream", serif;
   text-align: center;
+}
+.gallery-items p.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #727272;
+}
+.gallery-items p.date:before {
+  content: "";
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+  background: url("./../../images/koagi/icon-calendar.png") no-repeat 50% 50%;
 }
 .gallery-items .badge {
   display: inline-flex;

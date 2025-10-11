@@ -4,8 +4,10 @@ var count = count || 8;
 var dummy = dummy || 'plant';
 var badge = badge || '';
 var title = title || '물까치수염';
+var titleOverflow = titleOverflow || false;
 var desc = desc || 'Lysimachia leucantha Miq';
 var info = info || '';
+var date = date || '';
 %>
 <ul class="gallery-items gallery-<%= type; %>">
     <% for(let i = 0; i < count; i++) { %>
@@ -21,18 +23,25 @@ var info = info || '';
                     }); %>
                 </span>
                 <div class="info-wrap">
-                    <div class="title">
+                    <div class="title<%= titleOverflow ? ' line-clamp' : '' %>">
                         <strong>
                             <%= title; %>
+                            <% if (i === 1) { %>
+                                <%= title; %>
+                                <%= title; %>
+                            <% } %>
                         </strong>
                         <% if (badge) { %>
                             <span class="badge">
-                            <%= badge; %>
-                        </span>
+                                <%= badge; %>
+                            </span>
                         <% } %>
                     </div>
-                    <% if (type !== 'grid') { %>
+                    <% if (type !== 'grid' && desc !== 'hide') { %>
                         <p><%- desc %></p>
+                    <% } %>
+                    <% if (date) { %>
+                        <p class="date"><%- date %></p>
                     <% } %>
                     <% if (info) { %>
                         <%- info %>

@@ -26,7 +26,11 @@ const depthLength = depths.length;
     </div>
     <!-- //bc forWeb -->
     <div class="title">
-        <h4><%= title %></h4>
-        <p class="desc"><%= desc %></p>
+        <h4>
+            <%= title %>
+        </h4>
+        <% if (desc) { %>
+            <p class="desc"><%= desc %></p>
+        <% } %>
     </div>
 </div>

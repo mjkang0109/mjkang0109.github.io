@@ -80,7 +80,7 @@ $imgPath: "./../../images/koagi";
         padding: 9px 44px 45px;
         text-align: left;
         @include m.respond-to(map.get(m.$max, 1199)) {
-        padding: 9px 15px 15px;
+            padding: 9px 15px 15px;
         }
     }
 
@@ -97,7 +97,7 @@ $imgPath: "./../../images/koagi";
                 flex-wrap: wrap;
             }
 
-            strong{
+            strong {
                 flex-shrink: 0;
                 width: 62px;
                 @include m.respond-to(map.get(m.$max, 1199)) {
@@ -124,7 +124,6 @@ $imgPath: "./../../images/koagi";
             border-radius: 100px;
             font-weight: 500;
             font-family: "SCoreDream", serif;
-
         }
     }
 }
@@ -193,6 +192,15 @@ $imgPath: "./../../images/koagi";
             flex-wrap: wrap;
         }
 
+        &.line-clamp {
+            strong {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 1;
+            }
+        }
+
         strong {
             font-weight: 600;
         }
@@ -204,6 +212,24 @@ $imgPath: "./../../images/koagi";
         line-height: 25px;
         font-family: "SCoreDream", serif;
         text-align: center;
+
+        &.date {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            font-size: 15px;
+            line-height: 25px;
+            color: #727272;
+
+            &:before {
+                content: "";
+                display: inline-flex;
+                width: 15px;
+                height: 15px;
+                background: url("#{$imgPath}/icon-calendar.png") no-repeat 50% 50%;
+            }
+        }
     }
 
     .badge {
@@ -457,7 +483,6 @@ $imgPath: "./../../images/koagi";
                 height: 41px;
                 background: url("#{$imgPath}/icon-leaf-border.png") no-repeat 50% 50%;
                 pointer-events: none;
-
             }
         }
     }

@@ -1448,4 +1448,6 @@ body.scrolling #header {
     margin: 0 -3px 0 1px;
 }
 
-
+.ui-widget-header .ui-icon {
+    background-image: url("#{$imgPath}/ui-icons_555555_256x240.png");
+}

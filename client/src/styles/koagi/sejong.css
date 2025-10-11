@@ -1614,6 +1614,10 @@ body.scrolling #header {
   margin: 0 -3px 0 1px;
 }
 
+.ui-widget-header .ui-icon {
+  background-image: url("./../../images/koagi/ui-icons_555555_256x240.png");
+}
+
 .gallery-photos {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
@@ -1703,10 +1707,10 @@ body.scrolling #header {
     padding: 9px 15px 15px;
   }
 }
-.gallery-box ul {
+.gallery-box .education-info {
   margin-top: 35px;
 }
-.gallery-box ul li {
+.gallery-box .education-info li {
   display: flex;
   margin-bottom: 10px;
   font-size: 15px;
@@ -1714,21 +1718,21 @@ body.scrolling #header {
   font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
-  .gallery-box ul li {
+  .gallery-box .education-info li {
     flex-wrap: wrap;
   }
 }
-.gallery-box ul li strong {
+.gallery-box .education-info li strong {
   flex-shrink: 0;
   width: 62px;
 }
 @media (max-width: 1199px) {
-  .gallery-box ul li strong {
+  .gallery-box .education-info li strong {
     display: flex;
     width: 100%;
   }
 }
-.gallery-box ul li span {
+.gallery-box .education-info li span {
   flex: 1;
 }
 .gallery-box .badge-round {
@@ -1743,6 +1747,72 @@ body.scrolling #header {
   border-radius: 100px;
   font-weight: 500;
   font-family: "SCoreDream", serif;
+}
+
+.gallery-poster {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 65px 55px;
+}
+@media (max-width: 1199px) {
+  .gallery-poster {
+    grid-template-columns: 1fr 1fr;
+    gap: 55px 20px;
+  }
+}
+.gallery-poster .img-wrap {
+  width: 305px;
+  height: 405px;
+}
+@media (max-width: 1199px) {
+  .gallery-poster .img-wrap {
+    padding-top: 132.7868852459%;
+  }
+}
+.gallery-poster .states {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.gallery-poster .states .state {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  padding: 7px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 23px;
+  border-radius: 50px;
+  border: 2px solid;
+}
+.gallery-poster .states .state.green {
+  color: #00ac4f;
+  border-color: #00ac4f;
+}
+.gallery-poster .states .state.gray {
+  color: #6e6e6e;
+  border-color: #6e6e6e;
+}
+.gallery-poster .exhibition-info {
+  margin-top: 25px;
+}
+.gallery-poster .exhibition-info li {
+  display: flex;
+  font-size: 15px;
+  font-family: "SCoreDream", serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.gallery-poster .exhibition-info strong {
+  flex: 0 0 auto;
+  width: 40px;
+  color: #666;
+}
+.gallery-poster .exhibition-info span {
+  color: #000;
+  font-weight: 700;
 }
 
 .gallery-items {
@@ -1764,6 +1834,14 @@ body.scrolling #header {
   text-align: left;
 }
 .gallery-items.gallery-box p {
+  text-align: left;
+}
+.gallery-items.gallery-poster {
+  border-top: none;
+}
+.gallery-items.gallery-poster .title {
+  justify-content: flex-start;
+  margin-top: 20px;
   text-align: left;
 }
 .gallery-items li {
@@ -2067,6 +2145,78 @@ body.scrolling #header {
   height: 41px;
   background: url("./../../images/koagi/icon-leaf-border.png") no-repeat 50% 50%;
   pointer-events: none;
+}
+
+.search-period {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #50a6a9;
+  border-radius: 20px;
+  padding: 30px 124px;
+}
+@media (max-width: 1199px) {
+  .search-period {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+}
+@media (max-width: 1199px) {
+  .search-period > div {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+.search-period strong {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 100px;
+  font-size: 17px;
+  font-family: "SCoreDream", serif;
+  color: #000;
+}
+@media (max-width: 1199px) {
+  .search-period strong {
+    width: 100%;
+  }
+}
+.search-period .left {
+  display: flex;
+  align-items: center;
+}
+.search-period .left .it {
+  background: url("./../../images/koagi/icon-calendar-black.png") no-repeat 130px 50%;
+}
+@media (max-width: 1199px) {
+  .search-period .left .it {
+    background-position: right 10px top 50%;
+    background-size: 20px auto;
+  }
+}
+@media (max-width: 1199px) {
+  .search-period .left label {
+    flex: 1;
+  }
+  .search-period .left label .it {
+    width: 100%;
+  }
+}
+.search-period .left span {
+  flex: 0 0 auto;
+  display: inline-flex;
+  width: 20px;
+  justify-content: center;
+  font-weight: bold;
+  font-family: "SCoreDream", serif;
+}
+.search-period .it {
+  width: 174px;
+  padding-right: 42px;
+  box-sizing: border-box;
+}
+.search-period label {
+  flex: 0 0 auto;
 }
 
 @media all and (max-width: 1199px) {

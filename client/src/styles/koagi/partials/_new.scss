@@ -84,7 +84,7 @@ $imgPath: "./../../images/koagi";
         }
     }
 
-    ul {
+    .education-info {
         margin-top: 35px;
 
         li {
@@ -128,6 +128,77 @@ $imgPath: "./../../images/koagi";
     }
 }
 
+.gallery-poster {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 65px 55px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        grid-template-columns: 1fr 1fr;
+        gap: 55px 20px;
+    }
+
+    .img-wrap {
+        width: 305px;
+        height: 405px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding-top: math.div(405, 305) * 100%;
+        }
+    }
+
+    .states {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 32px;
+
+        .state {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            box-sizing: border-box;
+            margin-right: 8px;
+            padding: 7px 20px;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 23px;
+            border-radius: 50px;
+            border: 2px solid;
+
+            &.green {
+                color: #00ac4f;
+                border-color: #00ac4f;
+            }
+
+            &.gray {
+                color: #6e6e6e;
+                border-color: #6e6e6e;
+            }
+        }
+    }
+
+    .exhibition-info {
+        margin-top: 25px;
+
+        li {
+            display: flex;
+            font-size: 15px;
+            font-family: "SCoreDream", serif;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            flex: 0 0 auto;
+            width: 40px;
+            color: #666;
+        }
+
+        span {
+            color: #000;
+            font-weight: 700;
+        }
+    }
+}
+
 .gallery-items {
     display: grid;
     padding-top: 70px;
@@ -150,6 +221,16 @@ $imgPath: "./../../images/koagi";
         }
 
         p {
+            text-align: left;
+        }
+    }
+
+    &.gallery-poster {
+        border-top: none;
+
+        .title {
+            justify-content: flex-start;
+            margin-top: 20px;
             text-align: left;
         }
     }
@@ -485,5 +566,79 @@ $imgPath: "./../../images/koagi";
                 pointer-events: none;
             }
         }
+    }
+}
+
+.search-period {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #50a6a9;
+    border-radius: 20px;
+    padding: 30px 124px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    > div {
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+    strong {
+        display: inline-flex;
+        flex: 0 0 auto;
+        width: 100px;
+        font-size: 17px;
+        font-family: "SCoreDream", serif;
+        color: #000;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            width: 100%;
+        }
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+
+        .it {
+            background: url("#{$imgPath}/icon-calendar-black.png") no-repeat 130px 50%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                background-position: right 10px top 50%;
+                background-size: 20px auto;
+            }
+        }
+
+        label {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 1;
+                .it {
+                    width: 100%;
+                }
+            }
+        }
+
+        span {
+            flex: 0 0 auto;
+            display: inline-flex;
+            width: 20px;
+            justify-content: center;
+            font-weight: bold;
+            font-family: "SCoreDream", serif;
+        }
+    }
+
+    .it {
+        width: 174px;
+        padding-right: 42px;
+        box-sizing: border-box;
+    }
+
+    label {
+        flex: 0 0 auto;
     }
 }

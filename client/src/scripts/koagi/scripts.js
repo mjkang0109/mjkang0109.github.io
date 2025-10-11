@@ -186,8 +186,16 @@ $(document).ready(function () {
             $(this).parent().addClass('active').next().slideDown();
         }
     });
+
     /* //faq */
 
+    function bindDatepicker() {
+        $('.jsDatepicker').each(function () {
+            $(this).datepicker();
+        });
+    }
+
+    bindDatepicker();
 });
 
 /* isTablet */

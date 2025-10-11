@@ -8,6 +8,7 @@ var titleOverflow = titleOverflow || false;
 var desc = desc || 'Lysimachia leucantha Miq';
 var info = info || '';
 var date = date || '';
+var states = states || [];
 %>
 <ul class="gallery-items gallery-<%= type; %>">
     <% for(let i = 0; i < count; i++) { %>
@@ -23,6 +24,15 @@ var date = date || '';
                     }); %>
                 </span>
                 <div class="info-wrap">
+                    <% if (states.length > 0) { %>
+                        <div class="states">
+                            <% states.forEach((state, i) => { %>
+                                <strong class="state <%= state.color %>">
+                                    <%= state.text %>
+                                </strong>
+                            <% }); %>
+                        </div>
+                    <% } %>
                     <div class="title<%= titleOverflow ? ' line-clamp' : '' %>">
                         <strong>
                             <%= title; %>

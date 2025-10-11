@@ -4,8 +4,10 @@ var count = count || 8;
 var dummy = dummy || 'plant';
 var badge = badge || '';
 var title = title || '물까치수염';
+var desc = desc || 'Lysimachia leucantha Miq';
+var info = info || '';
 %>
-<ul class="gallery-items gallery-<%= type ;%>">
+<ul class="gallery-items gallery-<%= type; %>">
     <% for(let i = 0; i < count; i++) { %>
         <li>
             <a href="#">
@@ -18,19 +20,24 @@ var title = title || '물까치수염';
                     alt: '',
                     }); %>
                 </span>
-                <div class="title">
-                    <strong>
-                        <%= title ;%>
-                    </strong>
-                    <% if (badge !== '') { %>
-                        <span class="badge">
-                                <%= badge; %>
-                            </span>
+                <div class="info-wrap">
+                    <div class="title">
+                        <strong>
+                            <%= title; %>
+                        </strong>
+                        <% if (badge) { %>
+                            <span class="badge">
+                            <%= badge; %>
+                        </span>
+                        <% } %>
+                    </div>
+                    <% if (type !== 'grid') { %>
+                        <p><%- desc %></p>
+                    <% } %>
+                    <% if (info) { %>
+                        <%- info %>
                     <% } %>
                 </div>
-                <% if (type !== 'grid') { %>
-                    <p>Lysimachia leucantha Miq</p>
-                <% } %>
             </a>
         </li>
     <% } %>

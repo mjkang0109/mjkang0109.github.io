@@ -1,0 +1,88 @@
+---
+group: koagi
+state:
+    default: 교육소개-국립정원문화원
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립정원문화원';
+    currentCategory = 'garden';
+    currentNav = 'application';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+        title: currentName,
+        currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+            currentCategory,
+            currentNav,
+            currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+            type: 'plant',
+            currentNav: '참여하기',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+            title: '교육소개',
+            desc: '유아부터 성인까지 즐길 수 있는 다양한 교육 프로그램을 소개합니다. 관심 있는 프로그램을 확인하고 신청해 보세요. ',
+            depths: [
+                '참여하기',
+                '교육 프로그램',
+                '교육소개'
+            ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+                items: ['교육', '숙박', '해설', '상담', '이동',]
+            }) %>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+                type: 'box',
+                title: '백두의 여름이야기',
+                desc: '호랑이숲으로 가는 길에 만날 수 있는 다양한 산림생물자원과 호랑이 이야기를 들을 수 있는 수목원 대표 해설',
+                dummy: 'edu',
+                count: 6,
+                info: include(`${process.env.INCLUDE_PATH}/koagi/partials/_educationInfo`),
+            }) %>
+
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+            currentName,
+            currentCategory,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+            currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

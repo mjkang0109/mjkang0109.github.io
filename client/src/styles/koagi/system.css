@@ -3905,3 +3905,24 @@ body.scrolling #header {
     background-size: auto 8px;
   }
 }
+#header.system {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.06);
+}
+#header.system .mh h1 {
+  width: 215px;
+}
+@media (max-width: 1199px) {
+  #header.system .mh h1 {
+    width: auto;
+  }
+}
+
+.system .mGnb .list {
+  display: flex;
+}
+.system .mGnb .list .dep1 {
+  padding: 0 20px;
+}
+.system .mGnb .list li .dep2 .ti .t {
+  font-size: 25px;
+}

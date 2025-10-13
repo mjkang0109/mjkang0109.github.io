@@ -13,41 +13,6 @@ var currentCategory = currentCategory || 'baekdu';
 <link rel="stylesheet"
       type="text/css"
       href="<%= process.env.BASE_PATH %>/styles/plugins/jquery-ui.min.css">
-<%
-const fonts = [
-    'SCoreDream1.woff',
-    'SCoreDream1.woff2',
-    'SCoreDream2.woff',
-    'SCoreDream3.woff2',
-    'SCoreDream4.woff',
-    'SCoreDream5.woff2',
-    'SCoreDream6.woff',
-    'SCoreDream7.woff2',
-    'SCoreDream8.woff',
-    'SCoreDream9.woff2',
-    'EliceDigitalBaeumRegular.woff',
-    'EliceDigitalBaeumRegular.woff2',
-    'EliceDigitalBaeumRegular.ttf',
-    'EliceDigitalBaeumBold.woff',
-    'EliceDigitalBaeumBold.woff2',
-    'EliceDigitalBaeumBold.ttf',
-    'SBAggroL.woff',
-    'SBAggroL.otf',
-    'SBAggroM.woff',
-    'SBAggroM.otf',
-    'SBAggroB.woff',
-    'SBAggroB.otf',
-]
-%>
-<!-- fonts -->
-<% fonts.map((font, i) => { %>
-<link rel="preload"
-      href="<%= process.env.BASE_PATH %>/styles/fonts/<%= fonts[i] %>"
-      as="font"
-      type="font/<%= fonts[i].split('.')[1] %>"
-      crossorigin>
-<% });%>
-<!-- // fonts -->
 <link rel="stylesheet"
       type="text/css"
       href="<%= process.env.BASE_PATH %>/styles/koagi/<%= currentCategory %>.css">

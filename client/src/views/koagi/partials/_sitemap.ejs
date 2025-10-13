@@ -4,6 +4,7 @@ nav = {
     sejong: 1,
     native: 2,
     garden: 3,
+    system: 4,
 };
 
 navItems = [
@@ -1058,6 +1059,290 @@ navItems = [
                                 ui    : false,
                             },
                         ]
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        title : '예약시스템',
+        name  : 'system',
+        design: false,
+        ui    : false,
+        items : [
+            {
+                title : '한국수목원정원관리원',
+                name  : 'koagi',
+                design: false,
+                ui    : false,
+                pages : [
+                    {
+                        title   : '연간회원 신청',
+                        name    : 'membership',
+                        design  : false,
+                        ui      : false,
+                        subItems: [
+                            {
+                                title : '연간회원 소개',
+                                name  : 'membershipIntro',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '연간회원 신청/갱신',
+                                name  : 'membershipApplication',
+                                design: false,
+                                ui    : false,
+                            },
+                        ],
+                    },
+                    {
+                        title   : '위촉강사 신청',
+                        name    : 'instructor',
+                        design  : false,
+                        ui      : false,
+                        subItems: [
+                            {
+                                title : '위촉강사 소개',
+                                name  : 'instructorIntro',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '위촉강사 신청',
+                                name  : 'instructorApplication',
+                                design: false,
+                                ui    : false,
+                            },
+                        ],
+                    },
+                    {
+                        title   : '가든샵 신청',
+                        name    : 'gardenShop',
+                        design  : false,
+                        ui      : false,
+                        subItems: [
+                            {
+                                title : '가든샵 소개',
+                                name  : 'gardenShopIntro',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '가든샵 신청',
+                                name  : 'gardenShopApplication',
+                                design: false,
+                                ui    : false,
+                            },
+                        ],
+                    },
+                ],
+            },
+            {
+                title : '국립백두대간수목원',
+                name  : 'baekdu',
+                design: false,
+                ui    : false,
+                pages : [
+                    {
+                        title : '입장권 구매',
+                        name  : 'baekduTicket',
+                        design: false,
+                        ui    : false,
+                    },
+                    {
+                        title : '교육프로그램 신청',
+                        name  : 'baekduEducationApplication',
+                        design: true,
+                        ui    : true,
+                    },
+                    {
+                        title : '이용안내',
+                        name  : 'baekduInformation',
+                        design: false,
+                        ui    : false,
+                    },
+                ],
+            },
+            {
+                title : '국립세종수목원',
+                name  : 'sejong',
+                design: false,
+                ui    : false,
+                pages : [
+                    {
+                        title : '입장권 구매',
+                        name  : 'sejongTicket',
+                        design: false,
+                        ui    : false,
+                    },
+                    {
+                        title : '교육프로그램 신청',
+                        name  : 'sejongEducationApplication',
+                        design: true,
+                        ui    : true,
+                    },
+                    {
+                        title : '이용안내',
+                        name  : 'sejongInformation',
+                        design: false,
+                        ui    : false,
+                    },
+                ]
+            },
+            {
+                title : '국립정원문화원',
+                name  : 'garden',
+                design: false,
+                ui    : false,
+                pages : [
+                    {
+                        title : '입장권 구매',
+                        name  : 'gardenTicket',
+                        design: false,
+                        ui    : false,
+                    },
+                    {
+                        title : '교육프로그램 신청',
+                        name  : 'gardenEducationApplication',
+                        design: true,
+                        ui    : true,
+                    },
+                    {
+                        title : '이용안내',
+                        name  : 'gardenInformation',
+                        design: false,
+                        ui    : false,
+                    },
+                ],
+            },
+            {
+                title : '국립한국자생식물원',
+                name  : 'native',
+                design: false,
+                ui    : false,
+                pages : [
+                    {
+                        title : '입장권 구매',
+                        name  : 'nativeTicket',
+                        design: false,
+                        ui    : false,
+                    },
+                    {
+                        title : '교육프로그램 신청',
+                        name  : 'nativeEducationApplication',
+                        design: true,
+                        ui    : true,
+                    },
+                    {
+                        title : '이용안내',
+                        name  : 'nativeInformation',
+                        design: false,
+                        ui    : false,
+                    },
+                ]
+            },
+            {
+                title : '마이페이지',
+                name  : 'my',
+                design: false,
+                ui    : false,
+                pages : [
+                    {
+                        title   : '회원정보',
+                        name    : 'myInfo',
+                        design  : false,
+                        ui      : false,
+                        subItems: [
+                            {
+                                title : '회원정보 수정',
+                                name  : 'modify',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '회원탈퇴',
+                                name  : 'withdraw',
+                                design: false,
+                                ui    : false,
+                            },
+                        ],
+                    },
+                    {
+                        title   : '신청내역',
+                        name    : 'applicationHistory',
+                        design  : false,
+                        ui      : false,
+                        subItems: [
+                            {
+                                title : '입장권 구매 내역',
+                                name  : 'ticketHistory',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '교육 프로그램 신청 내역',
+                                name  : 'educationHistory',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '연간회원 신청/갱신 내역',
+                                name  : 'membershipHistory',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '위촉강사 신청내역',
+                                name  : 'instructorHistory',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '가든샵 신청내역',
+                                name  : 'gardenShopHistory',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '코리아가든쇼 신청내역',
+                                name  : 'koreaGardenHistory',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '이동형 반려식물 클리닉 신청내역',
+                                name  : 'clinicHistory',
+                                design: false,
+                                ui    : false,
+                            },
+                        ],
+                    },
+                    {
+                        title   : '활동내역',
+                        name    : 'activationHistory',
+                        design  : false,
+                        ui      : false,
+                        subItems: [
+                            {
+                                title : '사전정보 모니터링',
+                                name  : 'monitoring',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '클린신고센터',
+                                name  : 'reportCenter',
+                                design: false,
+                                ui    : false,
+                            },
+                            {
+                                title : '반려식물 Q&A',
+                                name  : 'plantQnA',
+                                design: false,
+                                ui    : false,
+                            },
+                        ],
                     },
                 ],
             },

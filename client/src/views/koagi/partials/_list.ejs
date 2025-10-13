@@ -2,7 +2,8 @@
 var type = type || 'photos';
 var count = count || 8;
 var dummy = dummy || 'plant';
-var badge = badge || '';
+var dummyType = dummyType || 'jpg';
+var badges = badges || [];
 var title = title || '물까치수염';
 var titleOverflow = titleOverflow || false;
 var desc = desc || 'Lysimachia leucantha Miq';
@@ -19,14 +20,14 @@ var states = states || [];
                     width: 320,
                     height: 240,
                     isSimply: true,
-                    source: `${imgPath}/dummy-${dummy}.jpg`,
+                    source: `${imgPath}/dummy-${dummy}.${dummyType}`,
                     alt: '',
                     }); %>
                 </span>
                 <div class="info-wrap">
                     <% if (states.length > 0) { %>
                         <div class="states">
-                            <% states.forEach((state, i) => { %>
+                            <% states.forEach((state, j) => { %>
                                 <strong class="state <%= state.color %>">
                                     <%= state.text %>
                                 </strong>
@@ -41,14 +42,18 @@ var states = states || [];
                                 <%= title; %>
                             <% } %>
                         </strong>
-                        <% if (badge) { %>
-                            <span class="badge">
-                                <%= badge; %>
-                            </span>
+                        <% if (badges.length > 0) { %>
+                            <div class="badges">
+                                <% badges.map((badge, k) => { %>
+                                    <span class="badge <%= i === 0 && k === 0 ? badge.color : i === 1 && k === 0 ? 'green' : i === 2 && k === 0 ? 'gray' : 'outline' %>">
+                                        <%= i === 0 && k === 0 ? '접수중' : i === 1 && k === 0 ? '접수대기' : i === 2 && k === 0 ? '접수마감' : badge.text %>
+                                    </span>
+                                <% }); %>
+                            </div>
                         <% } %>
                     </div>
                     <% if (type !== 'grid' && desc !== 'hide') { %>
-                        <p><%- desc %></p>
+                        <p class="desc"><%- desc %></p>
                     <% } %>
                     <% if (date) { %>
                         <p class="date"><%- date %></p>

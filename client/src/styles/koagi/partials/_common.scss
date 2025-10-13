@@ -810,6 +810,10 @@ body.scrolling #header {
     text-align: left;
     width: 1440px;
     z-index: 1;
+
+    > .title:first-of-type {
+        padding-top: 36px;
+    }
 }
 
 .gTitle1 h4 {

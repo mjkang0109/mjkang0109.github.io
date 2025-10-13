@@ -1,15 +1,15 @@
 ---
 group: koagi
 state:
-    default: 수목원vr-국립백두대간수목원
+    default: 예약시스템-교육프로그램신청-국립세종수목원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립백두대간수목원';
-    currentCategory = 'baekdu';
-    currentNav = 'tour';
+    currentName = '한국수목원정원관리원';
+    currentCategory = 'system';
+    currentNav = 'sejong';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -32,51 +32,56 @@ state:
         }) %>
         <!-- // header -->
 
-        <!-- visual sub -->
-        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
-            type: 'plant',
-            currentNav: '둘러보기',
-            key: '국민이 행복한 수목원',
-            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
-        }) %>
-        <!-- // visual sub -->
-        
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '수목원VR',
-            desc: '유아부터 성인까지 즐길 수 있는 다양한 교육 프로그램을 소개합니다. 관심 있는 프로그램을 확인하고 신청해 보세요. ',
-            depths: [
-                '둘러보기',
-                '수목원VR'
-            ],
+            title: '교육신청',
         }) %>
         <!-- // title -->
 
         <!-- contents -->
         <div id="body">
-            
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_searchEdu`, {
+            }) %>
+
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
-                
+                hideSearch: true
             }) %>
 
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
-                type: 'grid',
-                count: 6,
-                badges: [{text: '항공 VR 보기', color: 'cyan'}],
-                title: '방문자센터',
-                dummy: 'vr'
+                type: 'poster-edu',
+                badges: [
+                    {
+                        text: '접수중',
+                        color: 'orange',
+                    },
+                    {
+                        text: '교육',
+                        color: 'outline',
+                    },
+                    {
+                        text: '학교 교육',
+                        color: 'outline',
+                    },
+                ],
+                title: '[개인] 백두대간 숲싹 실험실 (선착마감)',
+                desc: 'hide',
+                dummy: 'poster-edu',
+                dummyType: 'png',
+                count: 3,
+                info: include(`${process.env.INCLUDE_PATH}/koagi/partials/_eduInfo`),
             }) %>
 
         </div>
         <!-- // contents -->
-        
+
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
             currentName,
             currentCategory,
         }) %>
         <!-- // footer -->
-        
+
         <!-- navigation -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
             currentCategory: currentCategory

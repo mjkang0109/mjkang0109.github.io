@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "./../components/mixin" as m;
+@use "./partials/fonts" as fonts;
+@use "./partials/reset" as reset;
+@use "./partials/common" as common;
+@use "./partials/new" as new;
+@use "./partials/common1200" as common1200;
+
+#header.system {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.06);
+
+    .mh h1 {
+        width: 215px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            width: auto;
+        }
+    }
+}
+
+.system .mGnb .list {
+    display: flex;
+
+    .dep1 {
+        padding: 0 20px
+    }
+
+    li .dep2 .ti .t {
+        font-size: 25px;
+    }
+}
+

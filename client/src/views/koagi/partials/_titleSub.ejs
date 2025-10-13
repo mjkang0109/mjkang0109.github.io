@@ -6,24 +6,26 @@ const depthLength = depths.length;
 %>
 <div class="gTitle1">
     <!-- bc forWeb -->
-    <div class="mBc1 forW">
-        <span class="home">홈</span>
-        <% depths.map((depth, i) => { %>
-            <span class="<%= i === depthLength - 1 ? 'cur' : '' %>"><%= depth %></span>
-        <% }) %>
-        <div class="mUtil1">
-            <a href="#"
-               class="share">공유
-            </a>
-            <a href="#"
-               class="attach">첨부
-            </a>
-            <button type="button"
-                    class="print"
-                    onclick="window.print();">프린트
-            </button>
+    <% if (depthLength > 0) { %>
+        <div class="mBc1 forW">
+            <span class="home">홈</span>
+            <% depths.map((depth, i) => { %>
+                <span class="<%= i === depthLength - 1 ? 'cur' : '' %>"><%= depth %></span>
+            <% }) %>
+            <div class="mUtil1">
+                <a href="#"
+                   class="share">공유
+                </a>
+                <a href="#"
+                   class="attach">첨부
+                </a>
+                <button type="button"
+                        class="print"
+                        onclick="window.print();">프린트
+                </button>
+            </div>
         </div>
-    </div>
+    <% } %>
     <!-- //bc forWeb -->
     <div class="title">
         <h4>

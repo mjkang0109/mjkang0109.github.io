@@ -1,0 +1,150 @@
+<div class="search-edu">
+    <%
+    const items = [
+        {
+            title : '모집유형',
+            inputs: [
+                {
+                    select: ['선착순', '추첨',],
+                    id    : 'recruitment'
+                },
+            ]
+
+        },
+        {
+            title : '유형·분류',
+            inputs: [
+                {
+                    select: ['전체'],
+                    id    : 'type1'
+                },
+                {
+                    select: ['전체'],
+                    id    : 'type2'
+                },
+            ]
+
+        },
+        {
+            title : '참여자 구분',
+            inputs: [
+                {
+                    select: ['개인', '단체'],
+                    id    : 'participant'
+                },
+            ]
+
+        },
+        {
+            title : '기간검색',
+            inputs: [
+                {
+                    select: ['접수일시'],
+                    id    : 'period'
+                },
+                {
+                    period: true,
+                    id    : 'periodInput'
+                },
+            ]
+
+        },
+        {
+            title : '신청방법',
+            inputs: [
+                {
+                    check: ['온라인', '유선', '현장'],
+                    id   : 'method'
+                }
+            ]
+
+        },
+        {
+            title : '이용대상',
+            inputs: [
+                {
+                    check: ['유아', '초등', '중등', '성인', '전연령'],
+                    id   : 'target'
+                }
+            ]
+
+        },
+        {
+            title : '접수상태',
+            inputs: [
+                {
+                    select: ['접수대기', '접수중', '접수마감'],
+                    id    : 'state'
+                },
+            ]
+
+        },
+        {
+            title : '검색어',
+            inputs: [
+                {
+                    input: '검색어를 입력하세요',
+                    id   : 'seach'
+                },
+            ]
+
+        },
+    ];
+    %>
+    <ul>
+        <% items.map((item) => { %>
+            <li>
+                <strong><%= item.title %></strong>
+
+                <% if (item.inputs.length > 0) { %>
+                    <% item.inputs.map((input, j) => { %>
+
+                        <% if (input.input) { %>
+                            <label for="<%= input.id %>">
+                                <input type="text"
+                                       id="<%= input.id %>"
+                                       class="it"
+                                       placeholder="<%= input.input %>">
+                            </label>
+                        <% } %>
+
+                        <% if (input.select) { %>
+                            <label for="<%= input.id %>">
+                                <select id="<%= input.id %>"
+                                        class=" select">
+                                    <% input.select.map(s => { %>
+                                        <option value="<%= s %>"><%= s %></option>
+                                    <% }); %>
+                                </select>
+                            </label>
+                        <% } %>
+
+                        <% if (input.check) { %>
+                            <% input.check.map((c, l) => { %>
+                                <input type="checkbox"
+                                       id="<%= input.id %>-<%= l + 1 %>"
+                                        <%- l === 0 ? 'checked' : '' %>>
+                                <label for="<%= input.id %>-<%= l + 1 %>">
+                                    <%= c %>
+                                </label>
+                            <% }); %>
+                        <% } %>
+                        <% if (input.period) { %>
+                            <label for="dateStart">
+                                <input type="text"
+                                       id="dateStart"
+                                       class="it jsDatepicker">
+                            </label>
+                            <span>~</span>
+                            <label for="dateEnd">
+                                <input type="text"
+                                       id="dateEnd"
+                                       class="it jsDatepicker">
+                            </label>
+                        <% } %>
+                    <% }); %>
+                <% } %>
+            </li>
+        <% }); %>
+    </ul>
+</div>

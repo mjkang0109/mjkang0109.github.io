@@ -5,7 +5,7 @@ var currentNav = currentNav || '';
 var currentName = currentName || '국립백두대간수목원';
 var currentCategory = currentCategory || 'baekdu';
 %>
-<div id="header">
+<div id="header" class="<%= currentCategory === 'system' ? 'system' : '' %>">
     <!-- uh -->
     <div class="uh">
         <div class="bg">
@@ -16,7 +16,7 @@ var currentCategory = currentCategory || 'baekdu';
                 <%
                 const length = navItems.length;
                 for (let h = 0; h < length; h++) {
-                    if (navItems[h].name === currentCategory) {
+                    if (navItems[h].name === currentCategory || navItems[h].name === 'system') {
                         continue;
                     }
                 %>
@@ -39,11 +39,11 @@ var currentCategory = currentCategory || 'baekdu';
             <h1>
                 <a href="#">
                     <span class="forW">
-                        <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory %>.png"
+                        <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory === 'system' ? 'koagi' : currentCategory %>.png"
                              alt="<%= currentName %>">
                     </span>
                     <span class="forM">
-                        <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory %>-m.png"
+                        <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory === 'system' ? 'koagi' : currentCategory %>-m.png"
                              alt="<%= currentName %>">
                     </span>
                 </a>
@@ -111,19 +111,22 @@ var currentCategory = currentCategory || 'baekdu';
                 </ul>
             </div>
             <!-- //gnb -->
-            <div class="util">
-                <!-- forWeb -->
-                <span class="forW">
-						<a href="#"
-                           class="iFind1">검색</a>
-					</span>
-                <a href="#jsSitemap1"
-                   class="iMenu1 jsBtnMenu1">전체메뉴
-                </a>
-                <a href="#"
-                   class="iLog1 forM">로그인
-                </a>
-            </div>
+
+            <% if (currentCategory !== 'system') { %>
+                <div class="util">
+                    <!-- forWeb -->
+                    <span class="forW">
+                            <a href="#"
+                               class="iFind1">검색</a>
+                        </span>
+                    <a href="#jsSitemap1"
+                       class="iMenu1 jsBtnMenu1">전체메뉴
+                    </a>
+                    <a href="#"
+                       class="iLog1 forM">로그인
+                    </a>
+                </div>
+            <% } %>
         </div>
     </div>
     <!-- //mh -->

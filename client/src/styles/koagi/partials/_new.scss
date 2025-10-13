@@ -199,6 +199,111 @@ $imgPath: "./../../images/koagi";
     }
 }
 
+.gallery-poster-edu {
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        gap: 50px 20px;
+    }
+
+    > li:not(:last-of-type) {
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+        border-bottom: solid 1px #e0e3e7;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: flex-start;
+        gap: 55px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+        }
+
+        .title {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
+    }
+
+    .img-wrap {
+        flex: 0 0 auto;
+        width: 220px;
+        height: 294px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding-top: math.div(294, 220) * 100%;
+        }
+    }
+
+    .title {
+        align-items: flex-start;
+        gap: 10px;
+
+        strong {
+            margin-top: 16px;
+        }
+    }
+
+    .info-wrap {
+        flex: 1;
+    }
+
+    .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        width: 100%;
+        order: -1;
+    }
+
+    .dot-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 26px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            grid-template-columns: 1fr;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            font-size: 15px;
+            line-height: 25px;
+            color: #333;
+            font-family: "SCoreDream", serif;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-wrap: wrap;
+            }
+
+            > strong {
+                flex: 0 0 auto;
+                width: 86px;
+                text-align: justify;
+                font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                }
+            }
+
+            p {
+                flex: 1;
+                font-family: "SCoreDream", serif;
+                font-weight: 500;
+
+                > strong {
+                    color: #db0e0e;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
 .gallery-items {
     display: grid;
     padding-top: 70px;
@@ -287,29 +392,29 @@ $imgPath: "./../../images/koagi";
         }
     }
 
-    p {
+    .desc {
         margin-top: 15px;
         font-size: 15px;
         line-height: 25px;
         font-family: "SCoreDream", serif;
         text-align: center;
+    }
 
-        &.date {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 7px;
-            font-size: 15px;
-            line-height: 25px;
-            color: #727272;
+    .date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        font-size: 15px;
+        line-height: 25px;
+        color: #727272;
 
-            &:before {
-                content: "";
-                display: inline-flex;
-                width: 15px;
-                height: 15px;
-                background: url("#{$imgPath}/icon-calendar.png") no-repeat 50% 50%;
-            }
+        &:before {
+            content: "";
+            display: inline-flex;
+            width: 15px;
+            height: 15px;
+            background: url("#{$imgPath}/icon-calendar.png") no-repeat 50% 50%;
         }
     }
 
@@ -317,14 +422,44 @@ $imgPath: "./../../images/koagi";
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 114px;
         height: 33px;
         border-radius: 5px;
-        background-color: #3baf89;
+        padding: 0 18px;
+        box-sizing: border-box;
         font-size: 14px;
-        color: #fff;
         font-weight: 500;
         font-family: "SCoreDream", serif;
+        white-space: nowrap;
+
+        &.cyan {
+            background-color: #3baf89;
+            border-color: #3baf89;
+            color: #fff;
+        }
+
+        &.green {
+            color: #fff;
+            border-color: #30a643;
+            background-color: #30a643;
+        }
+
+        &.orange {
+            color: #fff;
+            border-color: #f2713f;
+            background-color: #f2713f;
+        }
+
+        &.gray {
+            color: #fff;
+            background-color: #818181;
+            border-color: #818181;
+        }
+
+        &.outline {
+            color: #000;
+            border: 1px solid #d1d1d1;
+            background-color: #fff;
+        }
     }
 }
 
@@ -640,5 +775,122 @@ $imgPath: "./../../images/koagi";
 
     label {
         flex: 0 0 auto;
+    }
+}
+
+.search-edu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid #279c2f;
+    border-radius: 20px;
+    padding: 60px 124px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    + .gCount1 {
+        margin-top: 98px;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            grid-template-columns: 1fr;
+        }
+
+        li {
+            display: flex;
+            width: 100%;
+            gap: 15px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            + li {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: 10px;
+                }
+            }
+
+            > strong {
+                flex: 0 0 auto;
+                display: inline-flex;
+                align-items: center;
+                min-width: 82px;
+                font-size: 17px;
+                line-height: 27px;
+                color: #333;
+                font-weight: 500;
+                white-space: nowrap;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                }
+            }
+
+            > label {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                cursor: pointer
+            }
+        }
+
+        .select {
+            width: 100%;
+            max-width: 227px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                max-width: 100%;
+            }
+        }
+
+        .it {
+            width: 100%;
+        }
+
+        span {
+            flex: 0 0 auto;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 5px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+
+            &:checked {
+                + label {
+                    &:before {
+                        background: #4a506b url("#{$imgPath}/icon-checked.png") no-repeat 50% 50%;
+                        border-color: #4a506b;
+                    }
+                }
+            }
+
+            + label {
+                flex: 0 0 auto;
+                min-height: 25px;
+                position: relative;
+                padding: 0 5px 0 36px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 23px;
+                    height: 23px;
+                    background-color: #fff;
+                    border: 1px solid #666;
+                    transform: translateY(-50%);
+                }
+            }
+        }
     }
 }

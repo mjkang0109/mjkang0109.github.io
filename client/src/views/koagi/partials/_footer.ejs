@@ -12,7 +12,7 @@ var currentName = currentName || '';
             <%
             const length = navItems.length;
             for (let h = 0; h < length; h++) {
-                if (navItems[h].name === currentCategory) {
+                if (navItems[h].name === currentCategory || navItems[h].name === 'system') {
                     continue;
                 }
             %>
@@ -25,7 +25,7 @@ var currentName = currentName || '';
     <div class="text">
         <div class="bg">
             <div class="log">
-                <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory %>-footer.png"
+                <img src="<%= process.env.IMG_PATH %>/koagi/logo-<%= currentCategory === 'system' ? 'koagi' : currentCategory %>-footer.png"
                      alt="<%= currentName %>">
             </div>
             <div class="txt">

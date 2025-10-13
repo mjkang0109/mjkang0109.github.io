@@ -979,6 +979,9 @@ body.scrolling #header {
   width: 1440px;
   z-index: 1;
 }
+.gTitle1 > .title:first-of-type {
+  padding-top: 36px;
+}
 
 .gTitle1 h4 {
   color: #333;
@@ -1815,6 +1818,110 @@ body.scrolling #header {
   font-weight: 700;
 }
 
+@media (max-width: 1199px) {
+  .gallery-poster-edu {
+    gap: 50px 20px;
+  }
+}
+.gallery-poster-edu > li:not(:last-of-type) {
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #e0e3e7;
+}
+@media (max-width: 1199px) {
+  .gallery-poster-edu > li:not(:last-of-type) {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+.gallery-poster-edu a {
+  display: flex;
+  align-items: flex-start;
+  gap: 55px;
+}
+@media (max-width: 1199px) {
+  .gallery-poster-edu a {
+    flex-wrap: wrap;
+  }
+}
+.gallery-poster-edu a .title {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+.gallery-poster-edu .img-wrap {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 294px;
+}
+@media (max-width: 1199px) {
+  .gallery-poster-edu .img-wrap {
+    padding-top: 133.6363636364%;
+  }
+}
+.gallery-poster-edu .title {
+  align-items: flex-start;
+  gap: 10px;
+}
+.gallery-poster-edu .title strong {
+  margin-top: 16px;
+}
+.gallery-poster-edu .info-wrap {
+  flex: 1;
+}
+.gallery-poster-edu .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  width: 100%;
+  order: -1;
+}
+.gallery-poster-edu .dot-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 26px;
+}
+@media (max-width: 1199px) {
+  .gallery-poster-edu .dot-info {
+    grid-template-columns: 1fr;
+  }
+}
+.gallery-poster-edu .dot-info li {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333;
+  font-family: "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .gallery-poster-edu .dot-info li {
+    flex-wrap: wrap;
+  }
+}
+.gallery-poster-edu .dot-info li > strong {
+  flex: 0 0 auto;
+  width: 86px;
+  text-align: justify;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .gallery-poster-edu .dot-info li > strong {
+    width: 100%;
+  }
+}
+.gallery-poster-edu .dot-info li p {
+  flex: 1;
+  font-family: "SCoreDream", serif;
+  font-weight: 500;
+}
+.gallery-poster-edu .dot-info li p > strong {
+  color: #db0e0e;
+  font-weight: 700;
+}
+
 .gallery-items {
   display: grid;
   padding-top: 70px;
@@ -1892,14 +1999,14 @@ body.scrolling #header {
 .gallery-items .title strong {
   font-weight: 600;
 }
-.gallery-items p {
+.gallery-items .desc {
   margin-top: 15px;
   font-size: 15px;
   line-height: 25px;
   font-family: "SCoreDream", serif;
   text-align: center;
 }
-.gallery-items p.date {
+.gallery-items .date {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1908,7 +2015,7 @@ body.scrolling #header {
   line-height: 25px;
   color: #727272;
 }
-.gallery-items p.date:before {
+.gallery-items .date:before {
   content: "";
   display: inline-flex;
   width: 15px;
@@ -1919,14 +2026,39 @@ body.scrolling #header {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 114px;
   height: 33px;
   border-radius: 5px;
-  background-color: #3baf89;
+  padding: 0 18px;
+  box-sizing: border-box;
   font-size: 14px;
-  color: #fff;
   font-weight: 500;
   font-family: "SCoreDream", serif;
+  white-space: nowrap;
+}
+.gallery-items .badge.cyan {
+  background-color: #3baf89;
+  border-color: #3baf89;
+  color: #fff;
+}
+.gallery-items .badge.green {
+  color: #fff;
+  border-color: #30a643;
+  background-color: #30a643;
+}
+.gallery-items .badge.orange {
+  color: #fff;
+  border-color: #f2713f;
+  background-color: #f2713f;
+}
+.gallery-items .badge.gray {
+  color: #fff;
+  background-color: #818181;
+  border-color: #818181;
+}
+.gallery-items .badge.outline {
+  color: #000;
+  border: 1px solid #d1d1d1;
+  background-color: #fff;
 }
 
 .swiper-wrap ul {
@@ -2219,6 +2351,116 @@ body.scrolling #header {
   flex: 0 0 auto;
 }
 
+.search-edu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid #279c2f;
+  border-radius: 20px;
+  padding: 60px 124px;
+}
+@media (max-width: 1199px) {
+  .search-edu {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+}
+.search-edu + .gCount1 {
+  margin-top: 98px;
+}
+.search-edu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+@media (max-width: 1199px) {
+  .search-edu ul {
+    grid-template-columns: 1fr;
+  }
+}
+.search-edu ul li {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+@media (max-width: 1199px) {
+  .search-edu ul li {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+@media (max-width: 1199px) {
+  .search-edu ul li + li {
+    margin-top: 10px;
+  }
+}
+.search-edu ul li > strong {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  min-width: 82px;
+  font-size: 17px;
+  line-height: 27px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+@media (max-width: 1199px) {
+  .search-edu ul li > strong {
+    width: 100%;
+  }
+}
+.search-edu ul li > label {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+}
+.search-edu ul .select {
+  width: 100%;
+  max-width: 227px;
+}
+@media (max-width: 1199px) {
+  .search-edu ul .select {
+    max-width: 100%;
+  }
+}
+.search-edu ul .it {
+  width: 100%;
+}
+.search-edu ul span {
+  flex: 0 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5px;
+}
+.search-edu ul input[type=checkbox] {
+  display: none;
+}
+.search-edu ul input[type=checkbox]:checked + label:before {
+  background: #4a506b url("./../../images/koagi/icon-checked.png") no-repeat 50% 50%;
+  border-color: #4a506b;
+}
+.search-edu ul input[type=checkbox] + label {
+  flex: 0 0 auto;
+  min-height: 25px;
+  position: relative;
+  padding: 0 5px 0 36px;
+}
+.search-edu ul input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 23px;
+  height: 23px;
+  background-color: #fff;
+  border: 1px solid #666;
+  transform: translateY(-50%);
+}
+
 @media all and (max-width: 1199px) {
   .mUtil1 .attach,
   .mUtil1 .print,
@@ -2398,7 +2640,6 @@ body.scrolling #header {
     height: 25px;
   }
   .mKeysub1 {
-    background-image: url(./../../images/koagi/k_keysub1_m.jpg);
     height: 140px;
   }
   .mKeysub1 .left {

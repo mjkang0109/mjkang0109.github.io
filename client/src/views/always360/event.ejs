@@ -67,7 +67,7 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
             %>
             <% for (let i = 0; i < 4; i++) { %>
                 <button type="button"
-                        class="tab-<%= i + 1 %>"
+                        class="tab-<%= i + 1 %> <%= i === 2 ? 'soon' : '' %>"
                         data-target="#item-<%= i + 1 %>">
                     <strong><%= buttons[i].title; %></strong>
                     <span><%= buttons[i].desc; %></span>
@@ -121,16 +121,64 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
         %>
         <ol class="items">
             <% for (let i = 0; i < 4; i++) { %>
-            <li id="item-<%= i + 1 %>" class="<%= i === 1 ? 'soon' : i === 2 ? 'closed' : '' %>">
-                <a href="" rel="noopener noreferrer" title=" 새 창 열림" target="_blank">
-                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                    isSimply: true,
-                    source: `${imgPath}/detail-event${i + 1}.png`,
-                    width: 807,
-                    height: 843,
-                    alt: '언제나 돌봄 로고'
-                    }); %>
-                </a>
+            <li id="item-<%= i + 1 %>" class="<%= i === 2 ? 'soon' : i === 3 ? 'closed' : '' %>">
+                <% if (i > 1) { %>
+                    <a href="" rel="noopener noreferrer" title=" 새 창 열림" target="_blank">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        isSimply: true,
+                        source: `${imgPath}/detail-event${i + 1}.png`,
+                        width: 807,
+                        height: 843,
+                        alt: items[i].alt
+                        }); %>
+                    </a>
+                <% } %>
+            <% if (i === 0) { %>
+                <img src="<%= imgPath %>/detail-event<%= i + 1 %>.png"
+                     class="img<%= i + 1 %>"
+                     alt="<%= items[i].alt %>">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="<%= imgPath %>/img-link.png"
+                             class="img-link"
+                             alt="바로가기">
+                    </a>
+                </div>
+            <% } %>
+            <% if (i === 1) { %>
+                <% for (let j = 0; j < 5; j++) { %>
+                    <% if (j === 2) { %>
+                        <div class="button-wrap">
+                            <button type="button" onclick="this.nextElementSibling.style.display = 'block'">
+                                <img src="<%= imgPath %>/detail-event<%= i + 1 %>-<%= j + 1 %>.png"
+                                     class="img<%= i + 1 %>-<%= j + 1 %>"
+                                     alt="<%= items[i].alt %>">
+                            </button>
+                            <div class="tooltip">
+                                참여 회원 중 심사를 통해 최우수 10명에게, 우수 50명에게 5만원 상당 모바일 쿠폰
+                                참가자 중 100명 무작위 추첨하여 1만원 상당 모바일 쿠폰 지급
+                                <button type="button"
+                                        class="button-close"
+                                        onclick="this.parentNode.style.display = 'none'">
+                                    <span class="a11y">닫기</span>
+                                </button>
+                            </div>
+                        </div>
+                    <% } %>
+                        <% if (j !== 2) { %>
+                            <img src="<%= imgPath %>/detail-event<%= i + 1 %>-<%= j + 1 %>.png"
+                                 class="img<%= i + 1 %>-<%= j + 1 %>"
+                                 alt="<%= items[i].alt %>">
+                        <% } %>
+                    <% } %>
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="<%= imgPath %>/img-apply.png"
+                             class="img-apply"
+                            alt="바로가기">
+                    </a>
+                </div>
+            <% } %>
             </li>
             <% } %>
         </ol>

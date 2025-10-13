@@ -112,6 +112,56 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
             <% } %>
         </div>
     </section>
+
+    <div class="layer">
+        <strong>개인정보 수집 · 이용 동의</strong>
+        <div class="layer-content">
+            <table>
+                <colgroup>
+                    <col width="25%">
+                    <col width="*">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>수집항목</th>
+                    <th>수집 · 이용 목적</th>
+                    <th>보유기간</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>아이디, 이름,
+                        휴대폰번호, 이메일주소,
+                        성별, 생년월일, <strong>주소</strong>
+                    </td>
+                    <td>
+                        <strong>* 경품 발송 및 서비스 이용자 통계용
+                            <br>* 우수 및 최우수 당첨 수기는
+                            <br>추후 홍보용 자료로 활용</strong>
+                    </td>
+                    <td>
+                        당첨자 발표 후
+                        <strong>1년까지</strong>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p>※ 개인정보 수집 미동의 시 제공혜택에 제한이 따를 수 있습니다.</p>
+        </div>
+        <div class="button-wrap">
+            <button type="button" class="button-gray">
+                동의안함
+            </button>
+            <button type="button" class="button-orange">
+                동의함
+            </button>
+        </div>
+
+        <button type="button" class="button-close" onclick="this.parentNode.style.display = 'none'">
+            <span class="a11y">닫기</span>
+        </button>
+    </div>
     <script src="<%= process.env.BASE_PATH; %>/scripts/always360/event<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
             defer></script>
 </body>

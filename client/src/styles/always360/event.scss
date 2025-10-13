@@ -621,6 +621,7 @@ $fontPath: "./../fonts";
             display: flex;
             gap: 16px;
             margin-top: 34px;
+            max-width: 800px;
 
             label:first-of-type {
                 flex: 1;
@@ -1132,7 +1133,6 @@ $fontPath: "./../fonts";
             width: 24px;
             height: 24px;
             background: url("#{$imgPath}/icon-close-layer.png") no-repeat 50% 50%;
-
         }
 
         .layer-content {
@@ -1169,7 +1169,7 @@ $fontPath: "./../fonts";
         p {
             margin-top: 20px;
             color: #f01b0a;
-            font-family: "SCoreDream",v serif;
+            font-family: "SCoreDream", v serif;
             font-size: 15px;
             line-height: 25px;
         }
@@ -1200,6 +1200,67 @@ $fontPath: "./../fonts";
         .button-orange {
             background-color: #f07c07;
         }
+    }
+
+    .mPag {
+        margin: 120px 0 0;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .mPag a {
+        display: inline-block;
+        background-color: #fff;
+        border: 1px solid #dedede;
+        color: #666;
+        text-decoration: none;
+        font-size: 14px;
+        margin: 0 -2px 0 -4px;
+        vertical-align: middle;
+        text-align: center;
+        min-width: 42px;
+        line-height: 38px;
+        height: 40px;
+    }
+
+    .mPag .active {
+        position: relative;
+        background-color: #279c6b;
+        border-color: #279c6b;
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .mPag .first,
+    .mPag .last,
+    .mPag .prev,
+    .mPag .next {
+        position: relative;
+        display: inline-block;
+        background: url(#{$imgPath}/ico_pag_first.png) 50% 50% no-repeat #fff;
+        text-indent: -9999px;
+        font-size: 0;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    .mPag .first {
+        margin-right: -6px;
+    }
+
+    .mPag .next,
+    .mPag .last {
+        background-image: url(#{$imgPath}/ico_pag_last.png);
+    }
+
+    .mPag .prev {
+        background-image: url(#{$imgPath}/ico_pag_prev.png);
+        margin: 0 2px 0 0;
+    }
+
+    .mPag .next {
+        background-image: url(#{$imgPath}/ico_pag_next.png);
+        margin: 0 -3px 0 1px;
     }
 }
 

@@ -603,6 +603,7 @@
   display: flex;
   gap: 16px;
   margin-top: 34px;
+  max-width: 800px;
 }
 .event-wrap .review-file label:first-of-type {
   flex: 1;
@@ -1123,4 +1124,57 @@
 }
 .event-wrap .layer .button-orange {
   background-color: #f07c07;
+}
+.event-wrap .mPag {
+  margin: 120px 0 0;
+  line-height: normal;
+  text-align: center;
+}
+.event-wrap .mPag a {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 -2px 0 -4px;
+  vertical-align: middle;
+  text-align: center;
+  min-width: 42px;
+  line-height: 38px;
+  height: 40px;
+}
+.event-wrap .mPag .active {
+  position: relative;
+  background-color: #279c6b;
+  border-color: #279c6b;
+  color: #fff;
+  text-decoration: underline;
+}
+.event-wrap .mPag .first,
+.event-wrap .mPag .last,
+.event-wrap .mPag .prev,
+.event-wrap .mPag .next {
+  position: relative;
+  display: inline-block;
+  background: url(./../../images/always360/ico_pag_first.png) 50% 50% no-repeat #fff;
+  text-indent: -9999px;
+  font-size: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+.event-wrap .mPag .first {
+  margin-right: -6px;
+}
+.event-wrap .mPag .next,
+.event-wrap .mPag .last {
+  background-image: url(./../../images/always360/ico_pag_last.png);
+}
+.event-wrap .mPag .prev {
+  background-image: url(./../../images/always360/ico_pag_prev.png);
+  margin: 0 2px 0 0;
+}
+.event-wrap .mPag .next {
+  background-image: url(./../../images/always360/ico_pag_next.png);
+  margin: 0 -3px 0 1px;
 }

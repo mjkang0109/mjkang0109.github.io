@@ -21,9 +21,9 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
             <p class="review-desc">언제나돌봄서비스 실제 이용 후기 또는 홍보글을 <strong>블로그, 개인 SNS, 지역 카페</strong> 등에
                 게시 후, 자신의 글이 올라간 <strong>URL과 캡쳐 화면</strong>을 등록해 주세요!</p>
             <p class="review-notice">
-                ※ 이벤트 기간 종료 전 해당 게시글이 삭제된 경우, 미참여로 간주
-                <br>※ 최소 10줄 이상의 글 작성 및 사진 첨부
-                <br>※ 우수 후기는 추후 홍보자료로 활용될 수 있습니다.
+                <span>이벤트 기간 종료 전 해당 게시글이 삭제된 경우, 미참여로 간주</span>
+                <span>최소 10줄 이상의 글 작성 및 사진 첨부</span>
+                <span>우수 후기는 추후 홍보자료로 활용될 수 있습니다.</span>
                 <% if (state === 'list') { %>
                     <button type="button" class="button-registration">등록하기</button>
                 <% } %>
@@ -35,7 +35,7 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
             <% if (state === 'default') { %>
                 <strong>최우수 후기 당첨자는 다른 이벤트에 중복 당첨 불가</strong>
                 <label for="jsTextarea" class="textarea">
-                    <textarea id="jsTextarea" placeholder="URL 주소를 입력해 주세요"></textarea>
+                    <textarea id="jsTextarea" placeholder="URL 주소를 입력해 주세요. 게시글 캡쳐 화면을 첨부해 주세요."></textarea>
                 </label>
                 <div class="review-file">
                     <label for="jsPath">
@@ -170,9 +170,9 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
         <div class="layer-content">
             <table>
                 <colgroup>
-                    <col width="25%">
+                    <col width="28%">
                     <col width="*">
-                    <col width="20%">
+                    <col width="25%">
                 </colgroup>
                 <thead>
                 <tr>
@@ -188,9 +188,13 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
                         성별, 생년월일, <strong>주소</strong>
                     </td>
                     <td>
-                        <strong>* 경품 발송 및 서비스 이용자 통계용
-                            <br>* 우수 및 최우수 당첨 수기는
-                            <br>추후 홍보용 자료로 활용</strong>
+                        <strong class="dot">
+                            경품 발송 및 서비스 이용자 통계용
+                        </strong>
+                        <strong class="dot">
+                            우수 및 최우수 당첨 수기는 추후 홍보용 자료로 활용
+                        </strong>
+
                     </td>
                     <td>
                         당첨자 발표 후

@@ -48,19 +48,19 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
             <%
             const buttons = [
                 {
-                    title: '어서와~',
+                    title: '어서와',
                     desc : '회원가입 및 비밀번호 변경',
                 },
                 {
-                    title: '알려줘~',
+                    title: '알려줘',
                     desc : '이용후기 및 홍보글 게시',
                 },
                 {
-                    title: '맞춰봐~',
+                    title: '맞춰봐',
                     desc : '퀴즈 참여',
                 },
                 {
-                    title: '고마워~',
+                    title: '고마워',
                     desc : '축하 댓글 참여',
                 },
             ];
@@ -189,8 +189,8 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
     <% if (state.includes('renewal') || state.includes('quiz')) { %>
         <section class="comment-wrap">
             <h2>
-                <%= isQuiz ? '퀴즈이벤트' : '축하 댓글이벤트' %>
-                <span><%= isQuiz ? '퀴즈의 정답을 댓글로 작성해 주세요!' : '퀴즈의 정답을 댓글로 작성해 주세요!' %></span>
+                <%= isQuiz ? '퀴즈 이벤트' : '축하 댓글이벤트' %>
+                <span><%= isQuiz ? '퀴즈의 정답을 댓글로 작성해 주세요!' : '경기도 아동 언제나돌봄서비스 플랫폼의 2차 오픈을 축하해 주세요~' %></span>
             </h2>
             <% if (isQuiz) { %>
                 <div class="round-box">

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "SCoreDream";
   font-weight: 500;
@@ -18,6 +19,11 @@
   src: url("./../fonts/Jalnan.woff") format("woff"), url("./../fonts/Jalnan.otf") format("opentype");
   font-display: swap;
 }
+* {
+  letter-spacing: 0;
+  word-break: keep-all;
+}
+
 .a11y {
   position: absolute;
   white-space: nowrap;
@@ -170,9 +176,9 @@
   background-color: #fff;
   border: 4px solid #413129;
   border-radius: 30px;
-  padding: 12px 30px 12px 113px;
+  padding: 12px 30px 12px 95px;
   background-repeat: no-repeat;
-  background-position: 43px 50%;
+  background-position: 35px 50%;
   background-size: 42px auto;
   text-align: left;
   line-height: 36px;
@@ -489,7 +495,8 @@
 }
 .event-wrap .review-notice {
   position: relative;
-  margin-top: 48px;
+  max-width: 460px;
+  margin: 48px auto 0;
   padding-bottom: 60px;
   font-size: 16px;
   line-height: 28px;
@@ -497,6 +504,21 @@
   color: #553c3c;
   font-family: SCoreDream, serif;
   font-weight: 500;
+  text-align: left;
+}
+.event-wrap .review-notice span {
+  display: block;
+  position: relative;
+  padding-left: 18px;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+.event-wrap .review-notice span:before {
+  content: "※";
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .event-wrap .review-wrap {
   position: relative;
@@ -1014,7 +1036,7 @@
 }
 .event-wrap .button-registration {
   position: absolute;
-  left: 100%;
+  left: calc(100% + 30px);
   top: 50%;
   display: inline-flex;
   align-items: center;
@@ -1022,7 +1044,6 @@
   width: 220px;
   height: 70px;
   margin-top: -30px;
-  margin-left: -112px;
   border-radius: 35px;
   background-color: #f07c07;
   color: #fff;
@@ -1073,6 +1094,11 @@
 .event-wrap .layer .layer-content {
   padding: 36px 35px;
 }
+@media (max-width: 1199px) {
+  .event-wrap .layer .layer-content {
+    padding: 15px;
+  }
+}
 .event-wrap .layer table {
   width: 100%;
   border-top: 2px solid #2a2a4a;
@@ -1089,16 +1115,42 @@
   font-family: "SCoreDream", serif;
   font-weight: 500;
 }
+@media (max-width: 1199px) {
+  .event-wrap .layer th,
+  .event-wrap .layer td {
+    font-size: 12px;
+    line-height: 23px;
+  }
+}
 .event-wrap .layer td {
   text-align: left;
 }
 .event-wrap .layer td strong {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
   color: #f01b0a;
+}
+.event-wrap .layer td .dot {
+  display: block;
+  position: relative;
+  padding-left: 10px;
+}
+.event-wrap .layer td .dot:before {
+  content: "*";
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
 }
 .event-wrap .layer p {
   margin-top: 20px;
   color: #f01b0a;
-  font-family: "SCoreDream", v serif;
+  font-family: "SCoreDream", serif;
   font-size: 15px;
   line-height: 25px;
 }
@@ -1146,8 +1198,8 @@
 }
 .event-wrap .mPag .active {
   position: relative;
-  background-color: #279c6b;
-  border-color: #279c6b;
+  background-color: #d8396c;
+  border-color: #d8396c;
   color: #fff;
   text-decoration: underline;
 }

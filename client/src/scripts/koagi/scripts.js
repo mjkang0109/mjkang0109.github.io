@@ -56,6 +56,8 @@ const scripts = (() => {
         swipers.forEach((swiper, i) => {
             const thumb = swiper.dataset.thumb;
             const id = swiper.getAttribute('id');
+            const hideNavigation = swiper.dataset.hideNavi;
+            const scrollbar = swiper.dataset.scrollbar;
 
             optsSwiper.spaceBetween = swiper.dataset.gap ?? 30;
             optsSwiper.slidesPerView = swiper.dataset.perView ?? 1;
@@ -73,11 +75,22 @@ const scripts = (() => {
                 };
             }
 
-            objSwiper[id] = new Swiper(swiper, {
-                navigation: {
+            if (!hideNavigation) {
+                optsSwiper.navigation = {
                     nextEl: '.button-next',
                     prevEl: '.button-prev',
-                },
+                };
+            }
+
+            if (scrollbar) {
+                optsSwiper.scrollbar = {
+                    el       : '.scrollbar',
+                    draggable: true,
+                    dragSize: 80,
+                };
+            }
+
+            objSwiper[id] = new Swiper(swiper, {
                 ...optsSwiper,
             });
         });

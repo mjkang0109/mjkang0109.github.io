@@ -368,7 +368,7 @@ body.scrolling #header {
 .iFind1,
 .iMenu1 {
   display: inline-block;
-  background: url(./../../images/koagi/ico_menu1.png) 50% 50% no-repeat;
+  background: url(./../../images/koagi/icon-hamberger.png) 50% 50% no-repeat;
   text-indent: -9999px;
   font-size: 0;
   width: 58px;
@@ -377,7 +377,7 @@ body.scrolling #header {
 }
 
 .iFind1 {
-  background-image: url(./../../images/koagi/ico_find1.png);
+  background-image: url(./../../images/koagi/icon-search.png);
 }
 
 .mGnb {
@@ -2528,6 +2528,37 @@ body.scrolling #header {
   transform: translateY(-50%);
 }
 
+.swiper-tabs .swiper {
+  overflow: hidden;
+}
+.swiper-tabs .swiper-slide {
+  flex: 0 0 auto;
+  width: 270px;
+}
+.swiper-tabs .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.swiper-tabs .scrollbar {
+  position: relative;
+  margin-top: 55px;
+}
+.swiper-tabs .scrollbar:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #696969;
+  transform: translateY(-50%);
+}
+.swiper-tabs .scrollbar .swiper-scrollbar-drag {
+  height: 31px;
+  background: url("./../../images/koagi/icon-scroll.png") no-repeat 50% 50%;
+  cursor: pointer;
+}
 @media all and (max-width: 1199px) {
   .mUtil1 .attach,
   .mUtil1 .print,

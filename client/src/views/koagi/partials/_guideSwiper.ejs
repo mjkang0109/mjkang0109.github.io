@@ -1,0 +1,44 @@
+<%
+const items = [
+    '방문자센터',
+    '진입광장',
+    '어린이정원',
+    '모험의 숲',
+    '식물분류원',
+    '약용식물원',
+    'swiper',
+    'swiper',
+    'swiper',
+    'swiper',
+    'swiper',
+];
+
+const length = items.length
+%>
+<div class="swiper-tabs">
+    <div class="swiper-wrap swiper"
+         id="plantSwiper"
+         data-scrollbar="true"
+         data-gap="25"
+         data-per-view="auto">
+        <ul class="swiper-wrapper">
+            <% for (let i = 0; i < length; i++) { %>
+                <li class="swiper-slide">
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 650,
+                        height: 488,
+                        isSimply: true,
+                        source: `${imgPath}/dummy-guide.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                    <strong>
+                        <%= items[i] %><%= i + 1 %>
+                    </strong>
+                </li>
+            <% } %>
+        </ul>
+        <div class="scrollbar"></div>
+    </div>
+</div>

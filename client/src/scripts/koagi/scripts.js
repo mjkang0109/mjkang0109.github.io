@@ -40,7 +40,7 @@ const scripts = (() => {
         const objSwiper = {};
         const objThumb = {};
 
-        if (thumbSwipers.length > 0) {
+        if (thumbSwipers) {
             thumbSwipers.forEach((thumb, i) => {
                 const id = thumb.getAttribute('id');
 
@@ -63,6 +63,13 @@ const scripts = (() => {
             if (thumb) {
                 optsSwiper.thumbs = {
                     swiper: objThumb[thumb],
+                };
+            }
+
+            if (!thumb) {
+                optsSwiper.pagination = {
+                    el       : '.pagination',
+                    clickable: true,
                 };
             }
 

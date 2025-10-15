@@ -104,7 +104,7 @@ $imgPath: "./../../images/koagi";
     font-weight: 500;
     padding: 0 15px;
     text-align: center;
-    font-family: "EliceDigitalBaeum", "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
+    font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
     font-weight: bold;
 
     &:not(.type2):after {
@@ -187,7 +187,7 @@ body.scrolling #header {
 .iFind1,
 .iMenu1 {
     display: inline-block;
-    background: url(./../../images/koagi/ico_menu1.png) 50% 50% no-repeat;
+    background: url(./../../images/koagi/icon-hamberger.png) 50% 50% no-repeat;
     text-indent: -9999px;
     font-size: 0;
     width: 58px;
@@ -196,7 +196,7 @@ body.scrolling #header {
 }
 
 .iFind1 {
-    background-image: url(./../../images/koagi/ico_find1.png);
+    background-image: url(./../../images/koagi/icon-search.png);
 }
 
 .mGnb {
@@ -216,8 +216,8 @@ body.scrolling #header {
     display: block;
     color: #333;
     font-size: 23px;
-    font-family: "SBAggro", "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
-    font-weight: 500;
+    font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
+    font-weight: 700;
     letter-spacing: -0.7px;
     padding: 0 40px;
     line-height: 122px;
@@ -289,6 +289,7 @@ body.scrolling #header {
     position: relative;
     font-size: 38px;
     white-space: nowrap;
+    font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
 }
 
 .mGnb .list li .dep2 .ti .c {
@@ -345,6 +346,7 @@ body.scrolling #header {
     font-size: 18px;
     padding: 0 29px;
     height: 56px;
+    font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
 }
 
 .mGnb .list li .dep2 .ls li .dep3 {

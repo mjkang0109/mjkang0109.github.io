@@ -1,15 +1,15 @@
 ---
 group: koagi
 state:
-    default: 생생교욱후기-국립백두대간수목원
+    default: 테마별공간탐방-국립세종수목원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립백두대간수목원';
-    currentCategory = 'baekdu';
-    currentNav = 'application';
+    currentName = '국립세종수목원';
+    currentCategory = 'sejong';
+    currentNav = 'tour';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -40,43 +40,39 @@ state:
             info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
         }) %>
         <!-- // visual sub -->
-        
+
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '생생 교육후기',
+            title: '식물현황',
+            desc: '유아부터 성인까지 즐길 수 있는 다양한 교육 프로그램을 소개합니다. 관심 있는 프로그램을 확인하고 신청해 보세요. ',
             depths: [
-                '참여하기',
-                '교육프로그램',
-                '생생 교육후기',
+                '둘러보기',
+                '식물현황'
             ],
         }) %>
         <!-- // title -->
 
         <!-- contents -->
         <div id="body">
-            
+
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
-                
+
             }) %>
 
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
-                dummy: 'review',
-                title: '즐거운 호랑이 숲길 탐방',
-                titleOverflow: true,
-                date: '2025-06-29',
-                desc: 'hide'
+
             }) %>
 
         </div>
         <!-- // contents -->
-        
+
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
-            currentName,
             currentCategory,
+            currentName,
         }) %>
         <!-- // footer -->
-        
+
         <!-- navigation -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
             currentCategory: currentCategory

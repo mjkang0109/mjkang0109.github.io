@@ -288,7 +288,7 @@ li {
   font-weight: 500;
   padding: 0 15px;
   text-align: center;
-  font-family: "EliceDigitalBaeum", "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
+  font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
   font-weight: bold;
 }
 #header .uh .link a:not(.type2):after {
@@ -368,7 +368,7 @@ body.scrolling #header {
 .iFind1,
 .iMenu1 {
   display: inline-block;
-  background: url(./../../images/koagi/ico_menu1.png) 50% 50% no-repeat;
+  background: url(./../../images/koagi/icon-hamberger.png) 50% 50% no-repeat;
   text-indent: -9999px;
   font-size: 0;
   width: 58px;
@@ -377,7 +377,7 @@ body.scrolling #header {
 }
 
 .iFind1 {
-  background-image: url(./../../images/koagi/ico_find1.png);
+  background-image: url(./../../images/koagi/icon-search.png);
 }
 
 .mGnb {
@@ -397,8 +397,8 @@ body.scrolling #header {
   display: block;
   color: #333;
   font-size: 23px;
-  font-family: "SBAggro", "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
-  font-weight: 500;
+  font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
+  font-weight: 700;
   letter-spacing: -0.7px;
   padding: 0 40px;
   line-height: 122px;
@@ -470,6 +470,7 @@ body.scrolling #header {
   position: relative;
   font-size: 38px;
   white-space: nowrap;
+  font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
 }
 
 .mGnb .list li .dep2 .ti .c {
@@ -525,6 +526,7 @@ body.scrolling #header {
   font-size: 18px;
   padding: 0 29px;
   height: 56px;
+  font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
 }
 
 .mGnb .list li .dep2 .ls li .dep3 {
@@ -2068,7 +2070,7 @@ body.scrolling #header {
   flex-shrink: 0;
 }
 
-.plant-detail {
+.detail-view {
   display: flex;
   width: 100%;
   gap: 96px;
@@ -2076,48 +2078,49 @@ body.scrolling #header {
   padding-top: 78px;
 }
 @media (max-width: 1199px) {
-  .plant-detail {
+  .detail-view {
     flex-wrap: wrap;
   }
 }
-.plant-detail .left-top {
+.detail-view .left-top {
   position: relative;
 }
-.plant-detail .right {
+.detail-view .right {
+  flex: 1;
   padding-top: 27px;
 }
-.plant-detail .right dfn {
+.detail-view .right dfn {
   font-size: 40px;
   line-height: 52px;
   font-family: "SCoreDream", serif;
   font-style: normal;
   font-weight: 700;
 }
-.plant-detail .right ul {
+.detail-view .right ul {
   margin-top: 50px;
 }
-.plant-detail .right li {
+.detail-view .right li {
   display: flex;
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 27px;
   font-family: "SCoreDream", serif;
 }
-.plant-detail .right li strong {
+.detail-view .right li strong {
   flex-shrink: 0;
   width: 80px;
   text-decoration: underline;
 }
-.plant-detail .right li span {
+.detail-view .right li span {
   flex: 1;
 }
-.plant-detail .right .links {
+.detail-view .right .links {
   display: flex;
   justify-content: space-between;
   gap: 24px;
   margin-top: 94px;
 }
-.plant-detail .right .link-map {
+.detail-view .right .link-map {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -2127,21 +2130,21 @@ body.scrolling #header {
   font-size: 17px;
   font-family: "SCoreDream", serif;
 }
-.plant-detail .right .link-map.green {
+.detail-view .right .link-map.green {
   background-color: #3cad39;
   color: #fff;
 }
-.plant-detail .right .link-map.green .link-text {
+.detail-view .right .link-map.green .link-text {
   background-image: url("./../../images/koagi/icon-mark-white.png");
 }
-.plant-detail .right .link-map.yellow {
+.detail-view .right .link-map.yellow {
   background-color: #361f1f;
   color: #f6df00;
 }
-.plant-detail .right .link-map.yellow .link-text {
+.detail-view .right .link-map.yellow .link-text {
   background-image: url("./../../images/koagi/icon-mark-yellow.png");
 }
-.plant-detail .right .link-text {
+.detail-view .right .link-text {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2151,8 +2154,8 @@ body.scrolling #header {
   background-position: 0 50%;
   background-size: auto 27px;
 }
-.plant-detail .button-next,
-.plant-detail .button-prev {
+.detail-view .button-next,
+.detail-view .button-prev {
   position: absolute;
   top: 50%;
   width: 72px;
@@ -2161,62 +2164,62 @@ body.scrolling #header {
   box-shadow: 0 0 10px rgba(148, 148, 148, 0.19);
   border-radius: 100%;
 }
-.plant-detail .button-next {
+.detail-view .button-next {
   right: -36px;
   transform: translateY(-50%);
 }
 @media (max-width: 1199px) {
-  .plant-detail .button-next {
+  .detail-view .button-next {
     right: 10px;
   }
 }
-.plant-detail .button-prev {
+.detail-view .button-prev {
   left: -36px;
   transform: translateY(-50%) rotate(180deg);
 }
 @media (max-width: 1199px) {
-  .plant-detail .button-prev {
+  .detail-view .button-prev {
     left: 10px;
   }
 }
-.plant-detail .swiper {
+.detail-view .swiper {
   overflow: hidden;
   width: 650px;
 }
 @media (max-width: 1199px) {
-  .plant-detail .swiper {
+  .detail-view .swiper {
     width: 100%;
   }
 }
 @media (max-width: 1199px) {
-  .plant-detail .swiper li {
+  .detail-view .swiper li {
     width: 100% !important;
   }
 }
-.plant-detail .thumb-swiper {
+.detail-view .thumb-swiper {
   width: 650px;
   margin-top: 40px;
 }
 @media (max-width: 1199px) {
-  .plant-detail .thumb-swiper {
+  .detail-view .thumb-swiper {
     width: 100%;
   }
 }
-.plant-detail .thumb-swiper ul {
+.detail-view .thumb-swiper ul {
   gap: 20px;
 }
-.plant-detail .thumb-swiper li {
+.detail-view .thumb-swiper li {
   flex: 1;
   cursor: pointer;
 }
-.plant-detail .img-wrap {
+.detail-view .img-wrap {
   display: block;
 }
-.plant-detail .img-wrap img {
+.detail-view .img-wrap img {
   width: 100%;
   height: auto;
 }
-.plant-detail + .description {
+.detail-view + .description {
   margin-top: 97px;
   padding: 70px 0 130px;
   border: solid #e5e5e5;
@@ -2226,6 +2229,70 @@ body.scrolling #header {
   color: #000;
   font-family: "SCoreDream", serif;
   font-weight: 400;
+}
+.detail-view .pagination {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 33px;
+  left: 50%;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 11px 20px;
+  transform: translateX(-50%);
+}
+.detail-view .pagination > span {
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #e1e1e1;
+  cursor: pointer;
+}
+.detail-view .pagination > span[aria-current=true] {
+  background-color: #404040;
+}
+.detail-view + .detail-items {
+  margin-top: 92px;
+  padding-top: 92px;
+  border-top: 1px solid #e5e5e5;
+}
+.detail-view + .detail-items > strong {
+  display: block;
+  padding-left: 38px;
+  background: url("./../../images/koagi/icon-leaves.png") no-repeat 0 50%;
+  font-size: 25px;
+  line-height: 35px;
+  font-family: "SCoreDream", serif;
+}
+.detail-view + .detail-items > ul {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+.detail-view + .detail-items li {
+  flex: 1;
+  text-align: center;
+}
+.detail-view + .detail-items li .img-wrap {
+  display: block;
+}
+.detail-view + .detail-items li img {
+  width: 100%;
+  height: auto;
+}
+.detail-view + .detail-items li strong {
+  display: block;
+  margin-top: 37px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "SCoreDream", serif;
+}
+.detail-view + .detail-items li p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "SCoreDream", serif;
 }
 
 .link-list {

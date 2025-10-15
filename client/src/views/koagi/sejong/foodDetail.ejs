@@ -1,0 +1,126 @@
+---
+group: koagi
+state:
+    default: 푸드&샵 상세-국립세종수목원
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립세종수목원';
+    currentCategory = 'sejong';
+    currentNav = 'viewing';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+        title: currentName,
+        currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+            currentCategory,
+            currentNav,
+            currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+            type: 'plant',
+            currentNav: '관람안내',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+            title: '푸드 & 샵',
+            desc: '유아부터 성인까지 즐길 수 있는 다양한 교육 프로그램을 소개합니다. 관심 있는 프로그램을 확인하고 신청해 보세요. ',
+            depths: [
+                '관람안내',
+                '시설안내',
+                '푸드&샵'
+            ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+
+            <%
+            const detailItems = [
+                {
+                    title: '위치',
+                    desc : '방문자센터 1층',
+                },
+                {
+                    title: '운영시간',
+                    desc : '09:00 ~ 17:30',
+                },
+                {
+                    title: '설명',
+                    desc : '커피(아메리카노, 카페라떼, 바닐라라떼), 허브티(캐모마일, 루이스보스), 라즈베리 블랙티, 유자차, 생강차, 그린티라떼, 미숫가루라떼, 자몽에이드, 레몬에이드, 복숭아아이스티, 레몬아이스티, 핫초코, 아이스초코',
+                },
+            ];
+            const bottomItems = {
+                title: '판매물품',
+                dummy: 'cafe',
+                items: [
+                    {
+                        title: '아메리카노',
+                        price: '4,500원'
+                    },
+                    {
+                        title: '바닐라라떼',
+                        price: '4,500원'
+                    },
+                    {
+                        title: '그린티라떼',
+                        price: '4,500원'
+                    },
+                    {
+                        title: '미숫가루라떼',
+                        price: '4,500원'
+                    },
+                    {
+                        title: '자몽에이드',
+                        price: '4,500원'
+                    },
+                ]
+            };
+            %>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_detail`, {
+            title: '이디야커피',
+            dummy: 'food',
+            items: detailItems,
+            bottomItems,
+        }) %>
+
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+            currentCategory,
+            currentName,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+            currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

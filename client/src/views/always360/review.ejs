@@ -51,10 +51,36 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
                            id="jsFile"
                            class="upload-file"
                            data-path="jsPath">
+                    <span class="file">
+                        image_092589
+                        <button type="button" id="jsDelete">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            isSimply: true,
+                            source: `${imgPath}/icon-close.png`,
+                            width: 23,
+                            height: 23,
+                            alt: '삭제'
+                            }); %>
+
+                            <span class="a11y">삭제</span>
+                        </button>
+                    </span>
                 </div>
-                <!-- file list -->
-                <ul class="files">
-                    <li>
+                <div class="review-file">
+                    <label for="jsPath">
+                        <input type="text"
+                               id="jsPath"
+                               readonly>
+                    </label>
+                    <label for="jsFile"
+                           class="label-file">
+                        이미지첨부
+                    </label>
+                    <input type="file"
+                           id="jsFile"
+                           class="upload-file"
+                           data-path="jsPath">
+                    <span class="file">
                         image_092589
                         <button type="button" id="jsDelete">
                             <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
@@ -64,10 +90,26 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
                             height: 23,
                             alt: '삭제'
                             }); %>
+
                             <span class="a11y">삭제</span>
                         </button>
-                    </li>
-                    <li>
+                    </span>
+                </div>
+                <div class="review-file">
+                    <label for="jsPath">
+                        <input type="text"
+                               id="jsPath"
+                               readonly>
+                    </label>
+                    <label for="jsFile"
+                           class="label-file">
+                        이미지첨부
+                    </label>
+                    <input type="file"
+                           id="jsFile"
+                           class="upload-file"
+                           data-path="jsPath">
+                    <span class="file">
                         image_092589
                         <button type="button" id="jsDelete">
                             <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
@@ -77,11 +119,11 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
                             height: 23,
                             alt: '삭제'
                             }); %>
+
                             <span class="a11y">삭제</span>
                         </button>
-                    </li>
-                </ul>
-                <!-- // file list -->
+                    </span>
+                </div>
                 <button type="button" class="button-save">
                     저장
                 </button>
@@ -170,9 +212,9 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
         <div class="layer-content">
             <table>
                 <colgroup>
-                    <col width="28%">
+                    <col width="22%">
                     <col width="*">
-                    <col width="25%">
+                    <col width="22%">
                 </colgroup>
                 <thead>
                 <tr>
@@ -185,7 +227,7 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
                 <tr>
                     <td>아이디, 이름,
                         휴대폰번호, 이메일주소,
-                        성별, 생년월일, 주소
+                        성별, 생년월일, <strong>주소</strong>
                     </td>
                     <td>
                         <strong class="dot">

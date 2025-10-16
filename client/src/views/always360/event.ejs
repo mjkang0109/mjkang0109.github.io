@@ -187,9 +187,9 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
     const isQuiz = state === 'quiz';
     %>
     <% if (state.includes('renewal') || state.includes('quiz')) { %>
-        <section class="comment-wrap">
+        <section class="comment-wrap<%= state.includes('renewal') ? ' renewal' : ''%>">
             <h2>
-                <%= isQuiz ? '퀴즈 이벤트' : '축하 댓글이벤트' %>
+                <strong><%= isQuiz ? '퀴즈 이벤트' : '축하 댓글 이벤트' %></strong>
                 <span><%= isQuiz ? '퀴즈의 정답을 댓글로 작성해 주세요!' : '경기도 아동 언제나돌봄서비스 플랫폼의 2차 오픈을 축하해 주세요~' %></span>
             </h2>
             <% if (isQuiz) { %>

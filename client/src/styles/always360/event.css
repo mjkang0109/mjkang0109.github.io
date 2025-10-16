@@ -19,6 +19,12 @@
   src: url("./../fonts/Jalnan.woff") format("woff"), url("./../fonts/Jalnan.otf") format("opentype");
   font-display: swap;
 }
+@font-face {
+  font-family: "CookieRun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
 * {
   letter-spacing: 0;
   word-break: keep-all;
@@ -191,9 +197,9 @@
   }
 }
 .event-wrap .tabs button strong {
-  font-size: 25px;
+  font-size: 32px;
   color: #c34400;
-  font-family: Jalnan, serif;
+  font-family: "CookieRun", serif;
   word-break: keep-all;
   pointer-events: none;
 }
@@ -602,10 +608,7 @@
   line-height: 28px;
   color: #858585;
 }
-.event-wrap .review-wrap .files {
-  margin-top: 30px;
-}
-.event-wrap .review-wrap .files li {
+.event-wrap .review-wrap .file {
   display: inline-flex;
   align-items: center;
   padding: 10px 18px 10px 30px;
@@ -618,20 +621,20 @@
   font-weight: 500;
   font-family: SCoreDream, serif;
 }
-.event-wrap .review-wrap .files button {
+.event-wrap .review-wrap .file button {
   margin-left: 50px;
 }
 .event-wrap .review-file {
   display: flex;
   gap: 16px;
   margin-top: 34px;
-  max-width: 800px;
+  width: 100%;
 }
 .event-wrap .review-file label:first-of-type {
   flex: 1;
 }
 .event-wrap .review-file [type=text] {
-  width: 630px;
+  width: 100%;
   height: 63px;
   border: 1px solid #e0e0e0;
   padding: 10px;
@@ -731,34 +734,65 @@
   padding: 0 25px;
   margin: 146px auto 0;
 }
+.event-wrap .comment-wrap.renewal h2 strong {
+  background: #f88600 url("./../../images/always360/icon-comment-large.png") no-repeat 42px 50%;
+}
+@media (max-width: 959px) {
+  .event-wrap .comment-wrap.renewal h2 strong {
+    background-size: 30px auto;
+    background-position: 20px 30px;
+  }
+}
 .event-wrap .comment-wrap h2 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 60px;
-  line-height: 80px;
+  gap: 53px;
+  border-bottom: 8px solid #f88600;
+}
+@media (max-width: 959px) {
+  .event-wrap .comment-wrap h2 {
+    gap: 10px;
+    border-bottom: 0;
+    background-color: #f88600;
+    border-radius: 30px 30px 0 0;
+  }
+}
+.event-wrap .comment-wrap h2 strong {
+  width: 550px;
+  padding: 28px 0 0 57px;
+  text-align: center;
+  border-radius: 30px 30px 0 0;
+  background: #f88600 url("./../../images/always360/icon-xylophone-large.png") no-repeat 103px 50%;
   font-family: Jalnan, serif;
-  color: #e98700;
+  font-size: 50px;
+  color: #fff;
+}
+@media (max-width: 959px) {
+  .event-wrap .comment-wrap h2 strong {
+    text-align: left;
+    font-size: 25px;
+    background-size: 30px auto;
+    background-position: 20px 30px;
+  }
 }
 .event-wrap .comment-wrap h2 span {
-  padding-left: 25px;
   font-size: 25px;
-  line-height: 35px;
-  color: #fff;
   font-family: Jalnan, serif;
+  color: #fff;
 }
 @media (max-width: 959px) {
   .event-wrap .comment-wrap h2 span {
-    display: block;
-    padding-left: 0;
+    padding: 0 15px 21px 57px;
+    font-size: 12px;
   }
 }
 .event-wrap .comment-wrap h2 + .round-box {
-  margin-top: 43px;
+  border-radius: 0 0 30px 30px;
 }
 .event-wrap .round-box {
   padding: 54px 56px;
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: #fff;
 }
 @media (max-width: 959px) {
@@ -1067,7 +1101,7 @@
   top: 50%;
   left: 50%;
   width: calc(100% - 20px);
-  max-width: 700px;
+  max-width: 800px;
   background-color: #fff;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -1125,12 +1159,14 @@
 .event-wrap .layer td {
   text-align: left;
 }
+.event-wrap .layer td:not(:first-of-type) strong {
+  color: #f01b0a;
+}
 .event-wrap .layer td strong {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   font-weight: 700;
-  color: #f01b0a;
 }
 .event-wrap .layer td .dot {
   display: block;

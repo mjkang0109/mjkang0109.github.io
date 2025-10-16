@@ -371,7 +371,9 @@ const generatorScripts = async () => {
         fs.mkdirSync(`${SRC}/${SCRIPTS}/plugins`, {recursive: true});
     }
 
-    fs.cpSync(`${SRC}/${SCRIPTS}/plugins`, `${DIST}/${SCRIPTS}/plugins`, {recursive: true});
+    if (fs.existsSync(`${SRC}/${SCRIPTS}/plugins`)) {
+        fs.cpSync(`${SRC}/${SCRIPTS}/plugins`, `${DIST}/${SCRIPTS}/plugins`, {recursive: true});
+    }
 
     await console.log(`${chalk.greenBright('\nscripts compile finish.')} ${chalk.green(`(${new Date() - startTiming}ms)`)}`);
 };

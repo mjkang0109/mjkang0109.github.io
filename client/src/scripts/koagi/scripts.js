@@ -68,7 +68,7 @@ const scripts = (() => {
                 };
             }
 
-            console.log(swiper)
+            console.log(swiper);
 
             if (!thumb) {
                 optsSwiper.pagination = {
@@ -80,7 +80,7 @@ const scripts = (() => {
             if (!hideNavigation) {
                 optsSwiper.navigation = {
                     nextEl: swiper.parentElement.querySelector('.button-next'),
-                    prevEl: swiper.parentElement.querySelector('.button-prev')
+                    prevEl: swiper.parentElement.querySelector('.button-prev'),
                 };
             }
 
@@ -88,7 +88,7 @@ const scripts = (() => {
                 optsSwiper.scrollbar = {
                     el       : swiper.parentElement.querySelector('.scrollbar'),
                     draggable: true,
-                    dragSize: 80,
+                    dragSize : 80,
                 };
             }
 
@@ -98,8 +98,100 @@ const scripts = (() => {
         });
     };
 
+    const setTabs = () => {
+        const tabs = document.querySelectorAll('[role="tab"]');
+        const tabList = document.querySelector('[role="tablist"]');
+
+        if (tabs.length === 0) {
+            return;
+        }
+
+        if (!tabList) {
+            return;
+        }
+
+        let tabFocus = 0;
+
+        const onChangeTab = (e) => {
+            const target = e.target;
+            const parent = target.parentElement;
+            const grand = parent.parentElement;
+
+            grand
+                .querySelectorAll('[aria-selected="true"]')
+                .forEach(t => {
+                    t.setAttribute('aria-selected', 'false');
+                    t.classList.remove('active');
+                });
+
+            target.setAttribute('aria-selected', 'true');
+            target.classList.add('active');
+
+            grand
+                .parentElement
+                .querySelectorAll('[role="tabpanel"]:not([hidden]), [role="tabpanel"].show')
+                .forEach(p => {
+                    Object.assign(p, {
+                        hidden: 'true', tabIndex: '-1',
+                    });
+
+                    p.classList.remove('show');
+                });
+
+            grand
+                .parentElement
+                .querySelector(`#${target.getAttribute('aria-controls')}`)
+                .removeAttribute('hidden');
+
+            grand
+                .parentElement
+                .querySelector(`#${target.getAttribute('aria-controls')}`)
+                .setAttribute('tabindex', '0');
+
+            grand
+                .parentElement
+                .querySelector(`#${target.getAttribute('aria-controls')}`)
+                .classList
+                .add('show');
+        };
+
+        const kbdNavigation = (e) => {
+            const keyCode = e.keyCode;
+            const isHorizontal = Object.values(KEY).some(k => k === Number(keyCode));
+
+            if (!isHorizontal) {
+                return;
+            }
+
+            tabs[tabFocus].setAttribute('tabindex', '-1');
+
+            if (keyCode === KEY['RIGHT']) {
+                tabFocus++;
+
+                if (tabFocus >= tabs.length) {
+                    tabFocus = 0;
+                }
+            }
+
+            if (keyCode === KEY['LEFT']) {
+                tabFocus--;
+
+                if (tabFocus < 0) {
+                    tabFocus = tabs.length - 1;
+                }
+            }
+
+            tabs[tabFocus].setAttribute('tabindex', '0');
+            tabs[tabFocus].focus();
+        };
+
+        tabs.forEach(tab => tab.addEventListener('click', onChangeTab));
+        tabList.addEventListener('keydown', kbdNavigation);
+    };
+
     const init = () => {
         bindSwiper();
+        setTabs();
     };
 
     return {

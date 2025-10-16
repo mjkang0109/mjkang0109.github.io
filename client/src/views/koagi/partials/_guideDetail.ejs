@@ -1,0 +1,68 @@
+<%
+var items = items || [];
+console.log(items)
+%>
+<section class="detail-guide">
+    <div class="top">
+        <div class="buttons"
+             role="tablist">
+            <% items.map((item, i) => { %>
+                <button type="button"
+                        aria-controls="panel-<%= i + 1 %>"
+                        aria-selected="<%= i === 0 %>"
+                        role="tab">
+                    <span><%= item.title %></span>
+                </button>
+            <% }) %>
+        </div>
+        <% items.map((item, i) => { %>
+            <div class="visual" <%= i === 0 ? '' : 'hidden' %>>
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 1100,
+                height: 550,
+                isSimply: true,
+                source: `${imgPath}/dummy-theme.jpg`,
+                alt: '',
+                }); %>
+            </div>
+        <% }); %>
+    </div>
+    <% items.map((item, i) => { %>
+        <div class="panel"
+             id="panel-<%= i + 1 %>"
+             role="tabpanel"
+                <%- i !== 0 ? 'hidden' : '' %>>
+            <strong><%= item.title %></strong>
+            <p>먹거리나 볼거리로 활용되는 식물을 키우고 수확하는 과정을 직접 참여하고 체험할 수 있는 정원입니다.
+                <br>생활정원은 채소 씨앗을 뿌려서 어린 식물을 생산하는 온실, 사과나무 벽면장식정원, 블루베리 정원, 유실수 정원,
+                <br>산나물정원 등 다양한 형태의 정원이 있습니다.
+            </p>
+            <ul class="tags">
+                <li># 사과나무</li>
+                <li># 곰취</li>
+                <li># 사과나무</li>
+                <li># 복숭아</li>
+            </ul>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+            title: '물까치수염',
+            desc: 'Lysimachia leucantha Miq',
+            count: 4,
+            hidePagination: true,
+            }) %>
+        </div>
+    <% }) %>
+    <div class="map">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: 1450,
+        height: 728,
+        isSimply: true,
+        source: `${imgPath}/map-${currentCategory}.jpg`,
+        alt: '',
+        }); %>
+        <% items.map((item, i) => { %>
+            <span <%= i === 0 ? '' : 'hidden' %>>
+            마커 <%= i + 1 %>
+            </span>
+        <% }); %>
+    </div>
+</section>

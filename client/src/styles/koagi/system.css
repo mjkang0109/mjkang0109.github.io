@@ -1956,6 +1956,12 @@ body.scrolling #header {
 .gallery-items.gallery-box p {
   text-align: left;
 }
+.gallery-items.gallery-photos .title.line-clamp {
+  justify-content: flex-start;
+}
+.gallery-items.gallery-photos .title.line-clamp + .date {
+  justify-content: flex-start;
+}
 .gallery-items.gallery-poster {
   border-top: none;
 }
@@ -2613,6 +2619,12 @@ input[type=checkbox] + label:before {
   padding-bottom: 106px;
   border-bottom: 1px solid #e5e5e5;
 }
+@media (max-width: 1199px) {
+  .detail-section.division {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
 .detail-section > strong {
   display: block;
   margin-bottom: 32px;
@@ -2625,11 +2637,24 @@ input[type=checkbox] + label:before {
   padding-bottom: 40px;
   border-bottom: 1px solid #707070;
 }
+@media (max-width: 1199px) {
+  .detail-section > .left,
+  .detail-section > .right {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
 .detail-section > .left {
   flex: 0 0 auto;
   width: 485px;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 0 83px 0 46px;
+}
+@media (max-width: 1199px) {
+  .detail-section > .left {
+    padding: 0;
+  }
 }
 .detail-section > .right {
   flex: 1;
@@ -2647,14 +2672,33 @@ input[type=checkbox] + label:before {
   background-color: #f9f9f9;
   border-radius: 10px;
 }
+@media (max-width: 1199px) {
+  .detail-section > .right .dot-info {
+    padding: 5px 15px 15px;
+  }
+}
 .detail-section > .right .dot-info li > strong:before {
   background-color: #3cad39;
+}
+@media (max-width: 1199px) {
+  .detail-section .img-wrap {
+    display: block;
+    text-align: center;
+  }
+  .detail-section .img-wrap img {
+    max-width: 100%;
+  }
 }
 .detail-section .link-list.outline-green {
   margin: 60px 0 0 0;
   border: 2px solid #3cad39;
   color: #3cad39;
   background-color: #fff;
+}
+@media (max-width: 1199px) {
+  .detail-section .link-list.outline-green {
+    margin: 60px auto 0;
+  }
 }
 .detail-section .notice {
   font-size: 16px;
@@ -2668,9 +2712,19 @@ input[type=checkbox] + label:before {
   border-radius: 20px;
   padding: 68px;
 }
+@media (max-width: 1199px) {
+  .box {
+    padding: 20px;
+  }
+}
 .box.division {
   display: flex;
   gap: 80px;
+}
+@media (max-width: 1199px) {
+  .box.division {
+    flex-wrap: wrap;
+  }
 }
 .box.green {
   border-color: #279c2f;
@@ -2679,15 +2733,32 @@ input[type=checkbox] + label:before {
 .calendar {
   flex: 1;
 }
+@media (max-width: 1199px) {
+  .calendar {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
 .calendar-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 1199px) {
+  .calendar-top {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
 .calendar .left {
   display: flex;
   align-items: center;
   gap: 36px;
+}
+@media (max-width: 1199px) {
+  .calendar .left {
+    width: 100%;
+  }
 }
 .calendar .left button {
   flex: 0 0 auto;
@@ -2703,6 +2774,17 @@ input[type=checkbox] + label:before {
   font-size: 24px;
   line-height: 34px;
   font-family: "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .calendar .left strong {
+    text-align: center;
+  }
+}
+@media (max-width: 1199px) {
+  .calendar .right {
+    width: 100%;
+    text-align: right;
+  }
 }
 .calendar .right .selected,
 .calendar .right .disabled {
@@ -2740,6 +2822,11 @@ input[type=checkbox] + label:before {
   gap: 18px;
   margin-top: 28px;
 }
+@media (max-width: 1199px) {
+  .calendar .days {
+    gap: 5px;
+  }
+}
 .calendar .days li {
   display: flex;
   justify-content: center;
@@ -2753,6 +2840,11 @@ input[type=checkbox] + label:before {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 18px;
   margin-top: 10px;
+}
+@media (max-width: 1199px) {
+  .calendar .dates {
+    gap: 5px;
+  }
 }
 .calendar .dates li {
   display: flex;
@@ -2770,6 +2862,12 @@ input[type=checkbox] + label:before {
   line-height: 28px;
   color: #000;
   font-family: "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .calendar .dates button {
+    width: 44px;
+    height: 44px;
+  }
 }
 .calendar .dates button.today {
   color: #0bb178;
@@ -2793,6 +2891,8 @@ input[type=checkbox] + label:before {
 }
 .detail-explanation .img-wrap img {
   display: inline-block;
+  max-width: 100%;
+  height: auto;
 }
 .detail-explanation .img-wrap + .desc {
   margin-top: 86px;
@@ -2804,11 +2904,22 @@ input[type=checkbox] + label:before {
   font-family: "SCoreDream", serif;
   color: #000;
 }
+@media (max-width: 1199px) {
+  .detail-explanation .desc {
+    padding: 0;
+  }
+}
 
 .detail-sub {
   display: flex;
   gap: 55px;
   margin-top: 70px;
+}
+@media (max-width: 1199px) {
+  .detail-sub {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .detail-sub .left,
 .detail-sub .right {
@@ -2816,6 +2927,13 @@ input[type=checkbox] + label:before {
   flex-direction: column;
   flex: 1;
   align-self: stretch;
+}
+@media (max-width: 1199px) {
+  .detail-sub .left,
+  .detail-sub .right {
+    flex: 0 0 auto;
+    width: 100%;
+  }
 }
 .detail-sub strong {
   color: #000;
@@ -2853,24 +2971,34 @@ table {
 table + table {
   margin-top: 52px;
 }
+@media (max-width: 1199px) {
+  table col[width*=px] {
+    width: auto;
+  }
+}
 
 .table-black {
   width: 100%;
 }
 .table-black th,
 .table-black td {
+  padding: 18px 0;
   font-family: "SCoreDream", serif;
   line-height: 26px;
 }
+@media (max-width: 1199px) {
+  .table-black th,
+  .table-black td {
+    padding: 5px 0;
+  }
+}
 .table-black th {
-  padding: 18px 0;
   background-color: #3a3a3a;
   color: #fff;
   font-size: 16px;
   border: none;
 }
 .table-black td {
-  padding: 18px 0;
   text-align: center;
   font-size: 15px;
   border-bottom: 1px solid #e0e3e7;
@@ -2889,10 +3017,15 @@ table + table {
 .table-gray td {
   border: 1px solid #e7e7e7;
   width: 100%;
-  padding: 18px 0;
   font-size: 16px;
   line-height: 26px;
   font-family: "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .table-gray th,
+  .table-gray td {
+    padding: 5px 0;
+  }
 }
 .table-gray th:first-of-type,
 .table-gray td:first-of-type {
@@ -2926,21 +3059,24 @@ table + table {
 }
 .table-horizon th,
 .table-horizon td {
+  padding: 18px 24px;
   border: 1px solid #e7e7e7;
   width: 100%;
   font-size: 16px;
   line-height: 26px;
   font-family: "SCoreDream", serif;
 }
+@media (max-width: 1199px) {
+  .table-horizon th,
+  .table-horizon td {
+    padding: 10px;
+  }
+}
 .table-horizon th {
   background-color: #fafafa;
-  padding: 18px 24px;
 }
 .table-horizon th:first-of-type {
   border-left: none;
-}
-.table-horizon td {
-  padding: 18px 24px;
 }
 .table-horizon td:last-of-type {
   border-right: none;
@@ -2968,6 +3104,12 @@ table + table {
 .schedule {
   flex: 0 0 auto;
   width: 794px;
+}
+@media (max-width: 1199px) {
+  .schedule {
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 
 @media all and (max-width: 1199px) {

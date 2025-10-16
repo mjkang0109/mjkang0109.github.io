@@ -2,6 +2,9 @@
 group: koagi
 state:
     default: 테마별공간탐방-국립세종수목원
+    exhibition: 테마별공간탐방-전시/이벤트-국립세종수목원
+    healing: 테마별공간탐방-힐링-국립세종수목원
+    research: 테마별공간탐방-탐구/연구-국립세종수목원
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -43,25 +46,48 @@ state:
 
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '식물현황',
-            desc: '유아부터 성인까지 즐길 수 있는 다양한 교육 프로그램을 소개합니다. 관심 있는 프로그램을 확인하고 신청해 보세요. ',
+            title: '테마별 공간 탐방',
             depths: [
                 '둘러보기',
-                '식물현황'
+                '테마별 공간 탐방'
             ],
         }) %>
         <!-- // title -->
 
         <!-- contents -->
         <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_guideMap`, {
+            }) %>
+            <%
+            const currentGuide = guide[nav[currentCategory]];
+            const pages = currentGuide.pages;
+            const titles = pages.map(page => page.title);
 
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
+            const pagesObj = {
+                default: 0,
+                exhibition: 1,
+                healing: 2,
+                research: 3,
+            };
 
+            const currentIndex = pagesObj[state];
+            const currentPages = pages[currentIndex];
+            const title = currentPages.title;
+            const items = currentPages.items;
+            const desc = currentPages.desc;
+            %>
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+                items: titles,
+                current: currentIndex
+            }) %>
+            
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_guideDetail`, {
+                title,
+                desc,
+                items,
             }) %>
 
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
-
-            }) %>
 
         </div>
         <!-- // contents -->

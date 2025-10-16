@@ -1,9 +1,10 @@
 <%
 var items = items || [];
+var current = current || 0;
 %>
 <ul class="tabs">
     <% items.forEach((item, i) => { %>
-        <li class="tab<%= i === 0 ? ' active' : '' %>">
+        <li class="tab<%= i === current ? ' active' : '' %>">
             <a href="#"><%= item %></a>
         </li>
     <% }); %>

@@ -58,7 +58,7 @@ var currentCategory = currentCategory || 'baekdu';
                     const currentItems = navItems[currentIndex].items;
                     const currentLength = currentItems.length;
                     for (let i = 0; i < currentLength; i++) {
-                        if (currentItems[i].title === '메인' || currentItems[i].title.includes('상세')) {
+                        if (currentItems[i].title === '메인' || currentItems[i].title.includes('상세') || currentItems[i].title.includes('등록')) {
                             continue;
                         }
                     %>
@@ -80,7 +80,7 @@ var currentCategory = currentCategory || 'baekdu';
                                 <ul>
                                     <%
                                     for (let j = 0; j < pageLength; j++) {
-                                        if (currentPages[j].title.includes('상세')) {
+                                        if (currentPages[j].title.includes('상세') || currentPages[j].title.includes('등록')) {
                                             continue;
                                         }
                                     %>
@@ -93,6 +93,9 @@ var currentCategory = currentCategory || 'baekdu';
                                             if (currentSubItems) {
                                                 const subItemsLength = currentPages[j].subItems.length;
                                             for (let k = 0; k < subItemsLength; k++) {
+                                                if (currentSubItems[k].title.includes('상세') || currentSubItems[k].title.includes('등록')) {
+                                                    continue;
+                                                }
                                             %>
                                                 <div class="dep3">
                                                     <a href="#"><%= currentSubItems[k].title %></a>

@@ -66,6 +66,41 @@ $imgPath: "./../../images/koagi";
             color: #fff;
         }
     }
+
+    .states {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 32px;
+
+        + .title {
+            margin-top: 14px;
+        }
+
+        .state {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            box-sizing: border-box;
+            margin-right: 8px;
+            padding: 7px 20px;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 23px;
+            border-radius: 50px;
+            border: 2px solid;
+
+            &.green {
+                color: #00ac4f;
+                border-color: #00ac4f;
+            }
+
+            &.gray {
+                color: #6e6e6e;
+                border-color: #6e6e6e;
+            }
+        }
+    }
 }
 
 .gallery-photos {
@@ -209,37 +244,6 @@ $imgPath: "./../../images/koagi";
         }
     }
 
-    .states {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 32px;
-
-        .state {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            height: 30px;
-            box-sizing: border-box;
-            margin-right: 8px;
-            padding: 7px 20px;
-            font-size: 13px;
-            font-weight: 500;
-            line-height: 23px;
-            border-radius: 50px;
-            border: 2px solid;
-
-            &.green {
-                color: #00ac4f;
-                border-color: #00ac4f;
-            }
-
-            &.gray {
-                color: #6e6e6e;
-                border-color: #6e6e6e;
-            }
-        }
-    }
-
     .exhibition-info {
         margin-top: 25px;
 
@@ -341,6 +345,16 @@ $imgPath: "./../../images/koagi";
 
         p {
             text-align: left;
+        }
+    }
+
+    &.gallery-photos {
+        .title.line-clamp {
+            justify-content: flex-start;
+
+            + .date {
+                justify-content: flex-start;
+            }
         }
     }
 
@@ -1069,6 +1083,10 @@ input[type="checkbox"] {
         display: flex;
         padding-bottom: 106px;
         border-bottom: 1px solid #e5e5e5;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+            gap: 40px;
+        }
     }
 
     > strong {
@@ -1085,11 +1103,23 @@ input[type="checkbox"] {
         }
     }
 
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        > .left,
+        > .right {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+
     > .left {
         flex: 0 0 auto;
         width: 485px;
+        max-width: 100%;
         box-sizing: border-box;
         padding: 0 83px 0 46px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: 0;
+        }
     }
 
     > .right {
@@ -1108,9 +1138,23 @@ input[type="checkbox"] {
             padding: 44px 46px 56px;
             background-color: #f9f9f9;
             border-radius: 10px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 5px 15px 15px;
+            }
 
             li > strong:before {
                 background-color: #3cad39;
+            }
+        }
+    }
+
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        .img-wrap {
+            display: block;
+            text-align: center;
+
+            img {
+                max-width: 100%;
             }
         }
     }
@@ -1120,6 +1164,9 @@ input[type="checkbox"] {
         border: 2px solid #3cad39;
         color: #3cad39;
         background-color: #fff;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            margin: 60px auto 0;
+        }
     }
 
     .notice {
@@ -1134,10 +1181,16 @@ input[type="checkbox"] {
     border: 2px solid;
     border-radius: 20px;
     padding: 68px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        padding: 20px;
+    }
 
     &.division {
         display: flex;
         gap: 80px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+        }
     }
 
     &.green {
@@ -1147,17 +1200,28 @@ input[type="checkbox"] {
 
 .calendar {
     flex: 1;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        flex: 0 0 auto;
+        width: 100%;
+    }
 
     &-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
     }
 
     .left {
         display: flex;
         align-items: center;
         gap: 36px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            width: 100%;
+        }
 
         button {
             flex: 0 0 auto;
@@ -1175,10 +1239,18 @@ input[type="checkbox"] {
             font-size: 24px;
             line-height: 34px;
             font-family: "SCoreDream", serif;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                text-align: center;
+            }
         }
     }
 
     .right {
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            width: 100%;
+            text-align: right;
+        }
+
         .selected,
         .disabled {
             position: relative;
@@ -1221,6 +1293,9 @@ input[type="checkbox"] {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 18px;
         margin-top: 28px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 5px;
+        }
 
         li {
             display: flex;
@@ -1237,6 +1312,9 @@ input[type="checkbox"] {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 18px;
         margin-top: 10px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 5px;
+        }
 
         li {
             display: flex;
@@ -1256,6 +1334,10 @@ input[type="checkbox"] {
             line-height: 28px;
             color: #000;
             font-family: "SCoreDream", serif;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 44px;
+                height: 44px;
+            }
 
             &.today {
                 color: #0bb178;
@@ -1285,6 +1367,8 @@ input[type="checkbox"] {
 
         img {
             display: inline-block;
+            max-width: 100%;
+            height: auto;
         }
 
         + .desc {
@@ -1298,6 +1382,9 @@ input[type="checkbox"] {
         line-height: 26px;
         font-family: "SCoreDream", serif;
         color: #000;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: 0;
+        }
     }
 }
 
@@ -1305,6 +1392,10 @@ input[type="checkbox"] {
     display: flex;
     gap: 55px;
     margin-top: 70px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 
     .left,
     .right {
@@ -1312,6 +1403,10 @@ input[type="checkbox"] {
         flex-direction: column;
         flex: 1;
         align-self: stretch;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex: 0 0 auto;
+            width: 100%;
+        }
     }
 
     strong {
@@ -1354,6 +1449,12 @@ table {
     + table {
         margin-top: 52px;
     }
+
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        col[width*="px"] {
+            width: auto;
+        }
+    }
 }
 
 .table-black {
@@ -1361,12 +1462,15 @@ table {
 
     th,
     td {
+        padding: 18px 0;
         font-family: "SCoreDream", serif;
         line-height: 26px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: 5px 0;
+        }
     }
 
     th {
-        padding: 18px 0;
         background-color: #3a3a3a;
         color: #fff;
         font-size: 16px;
@@ -1374,7 +1478,6 @@ table {
     }
 
     td {
-        padding: 18px 0;
         text-align: center;
         font-size: 15px;
         border-bottom: 1px solid #e0e3e7;
@@ -1398,10 +1501,12 @@ table {
     td {
         border: 1px solid #e7e7e7;
         width: 100%;
-        padding: 18px 0;
         font-size: 16px;
         line-height: 26px;
         font-family: "SCoreDream", serif;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: 5px 0;
+        }
 
         &:first-of-type {
             border-left: none;
@@ -1445,16 +1550,19 @@ table {
 
     th,
     td {
+        padding: 18px 24px;
         border: 1px solid #e7e7e7;
         width: 100%;
         font-size: 16px;
         line-height: 26px;
         font-family: "SCoreDream", serif;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: 10px;
+        }
     }
 
     th {
         background-color: #fafafa;
-        padding: 18px 24px;
 
         &:first-of-type {
             border-left: none;
@@ -1462,8 +1570,6 @@ table {
     }
 
     td {
-        padding: 18px 24px;
-
         &:last-of-type {
             border-right: none;
         }
@@ -1496,4 +1602,136 @@ table {
 .schedule {
     flex: 0 0 auto;
     width: 794px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+.detail-guide {
+    margin-top: 128px;
+
+    .top {
+        display: flex;
+        width: 100%;
+    }
+
+    .buttons {
+        flex: 0 0 auto;
+        width: 350px;
+        height: 550px;
+        padding-left: 20px;
+        margin-left: -20px;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+
+        button {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 100px;
+            text-align: left;
+            padding: 0 40px;
+            box-sizing: border-box;
+            scroll-snap-align: center;
+            background-color: #223927;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -20px;
+                width: 310px;
+                height: 65px;
+                background-color: #3eaa36;
+                transform: translateY(-50%);
+                border-radius: 0 50px 50px 50px;
+                opacity: 0;
+            }
+
+            span {
+                position: relative;
+                font-size: 18px;
+                font-family: "SCoreDream", serif;
+                color: #fff;
+                font-weight: 700;
+            }
+
+            &[aria-selected="true"] {
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &[aria-selected="false"] {
+            }
+        }
+    }
+
+    .visual {
+        flex: 1;
+    }
+
+    .panel {
+        margin-top: 114px;
+        text-align: center;
+
+        > strong {
+            display: block;
+            position: relative;
+            padding-top: 35px;
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 60px;
+            color: #333;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 53px;
+                height: 1px;
+                background-color: #000;
+                transform: translateX(-50%);
+            }
+        }
+
+        > p {
+            margin-top: 42px;
+            font-size: 16px;
+            line-height: 26px;
+            color: #000;
+            font-family: "SCoreDream", serif;
+        }
+
+        .tags {
+            margin-top: 77px;
+        }
+
+        .gallery-items {
+            margin-top: 60px;
+            padding-top: 0;
+            border-top: none;
+        }
+
+    }
+
+    .map {
+        margin-top: 108px;
+    }
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    li {
+        border-radius: 50px;
+        padding: 10px 17px;
+        border: 1px solid #d3d3d3;
+    }
 }

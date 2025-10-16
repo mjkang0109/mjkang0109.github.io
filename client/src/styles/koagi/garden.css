@@ -1872,13 +1872,6 @@ body.scrolling #header {
 .gallery-poster-edu .info-wrap {
   flex: 1;
 }
-.gallery-poster-edu .badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  width: 100%;
-  order: -1;
-}
 .gallery-poster-edu .dot-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1905,7 +1898,9 @@ body.scrolling #header {
 }
 .gallery-poster-edu .dot-info li > strong {
   flex: 0 0 auto;
+  position: relative;
   width: 86px;
+  padding-left: 10px;
   text-align: justify;
   font-weight: 700;
 }
@@ -1913,6 +1908,17 @@ body.scrolling #header {
   .gallery-poster-edu .dot-info li > strong {
     width: 100%;
   }
+}
+.gallery-poster-edu .dot-info li > strong:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #333;
+  transform: translateY(-50%);
 }
 .gallery-poster-edu .dot-info li p {
   flex: 1;
@@ -1922,6 +1928,14 @@ body.scrolling #header {
 .gallery-poster-edu .dot-info li p > strong {
   color: #db0e0e;
   font-weight: 700;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  width: 100%;
+  order: -1;
 }
 
 .gallery-items {
@@ -2526,6 +2540,49 @@ body.scrolling #header {
   background-color: #fff;
   border: 1px solid #666;
   transform: translateY(-50%);
+}
+
+.swiper-tabs .swiper {
+  overflow: hidden;
+}
+.swiper-tabs .swiper-slide {
+  flex: 0 0 auto;
+  width: 270px;
+}
+.swiper-tabs .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.swiper-tabs .scrollbar {
+  position: relative;
+  margin-top: 55px;
+}
+.swiper-tabs .scrollbar:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #696969;
+  transform: translateY(-50%);
+}
+.swiper-tabs .scrollbar .swiper-scrollbar-drag {
+  height: 31px;
+  background: url("./../../images/koagi/icon-scroll.png") no-repeat 50% 50%;
+  cursor: pointer;
+}
+.detail-info {
+  border-top: 2px solid #444;
+  padding-top: 67px;
+}
+
+.detail-section.division {
+  display: flex;
+}
+.detail-section > .left {
+  padding: 0 83px 0 46px;
 }
 
 @media all and (max-width: 1199px) {

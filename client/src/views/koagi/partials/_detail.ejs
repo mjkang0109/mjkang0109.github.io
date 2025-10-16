@@ -6,6 +6,8 @@ var items = items || [];
 var dummy = dummy || '';
 var description = description || '';
 var bottomItems = bottomItems || {};
+var hideMap = hideMap || false;
+var hideListLink = hideListLink || false;
 %>
 <div class="detail-view">
     <div class="left">
@@ -32,7 +34,9 @@ var bottomItems = bottomItems || {};
                     <% } %>
                 </ul>
             </div>
-            <div class="pagination"></div>
+            <% if (!thumb) { %>
+                <div class="pagination"></div>
+            <% } %>
             <button type="button"
                     class="button-next">
                 <span class="sound-only">다음</span>
@@ -77,20 +81,22 @@ var bottomItems = bottomItems || {};
                 </li>
             <% }); %>
         </ul>
-        <div class="links">
-            <a href="#"
-               target="_blank"
-               title="네이버 지도 새 창"
-               class="link-map green">
-                <span class="link-text">네이버 지도 보기</span>
-            </a>
-            <a href="#"
-               target="_blank"
-               title="카카오 지도 새 창"
-               class="link-map yellow">
-                <span class="link-text">카카오 지도 보기</span>
-            </a>
-        </div>
+        <% if (!hideMap) { %>
+            <div class="links">
+                <a href="#"
+                   target="_blank"
+                   title="네이버 지도 새 창"
+                   class="link-map green">
+                    <span class="link-text">네이버 지도 보기</span>
+                </a>
+                <a href="#"
+                   target="_blank"
+                   title="카카오 지도 새 창"
+                   class="link-map yellow">
+                    <span class="link-text">카카오 지도 보기</span>
+                </a>
+            </div>
+        <% } %>
     </div>
 </div>
 <% if (description) { %>
@@ -98,7 +104,7 @@ var bottomItems = bottomItems || {};
         <%- description %>
     </p>
 <% } %>
-<% if (bottomItems.items.length > 0) { %>
+<% if (bottomItems.items) { %>
     <div class="detail-items">
         <strong><%= bottomItems.title %></strong>
         <ul>
@@ -120,7 +126,9 @@ var bottomItems = bottomItems || {};
         </ul>
     </div>
 <% } %>
-<a href="#"
-   class="link-list">
-    목록
-</a>
+<% if (!hideListLink) { %>
+    <a href="#"
+       class="link-list">
+        목록
+    </a>
+<% } %>

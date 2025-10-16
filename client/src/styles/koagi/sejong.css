@@ -1905,7 +1905,9 @@ body.scrolling #header {
 }
 .gallery-poster-edu .dot-info li > strong {
   flex: 0 0 auto;
+  position: relative;
   width: 86px;
+  padding-left: 10px;
   text-align: justify;
   font-weight: 700;
 }
@@ -1913,6 +1915,17 @@ body.scrolling #header {
   .gallery-poster-edu .dot-info li > strong {
     width: 100%;
   }
+}
+.gallery-poster-edu .dot-info li > strong:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #333;
+  transform: translateY(-50%);
 }
 .gallery-poster-edu .dot-info li p {
   flex: 1;

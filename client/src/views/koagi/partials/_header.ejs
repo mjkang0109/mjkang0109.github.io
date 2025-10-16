@@ -58,7 +58,7 @@ var currentCategory = currentCategory || 'baekdu';
                     const currentItems = navItems[currentIndex].items;
                     const currentLength = currentItems.length;
                     for (let i = 0; i < currentLength; i++) {
-                        if (currentItems[i].title === '메인') {
+                        if (currentItems[i].title === '메인' || currentItems[i].title.includes('상세')) {
                             continue;
                         }
                     %>
@@ -80,6 +80,9 @@ var currentCategory = currentCategory || 'baekdu';
                                 <ul>
                                     <%
                                     for (let j = 0; j < pageLength; j++) {
+                                        if (currentPages[j].title.includes('상세')) {
+                                            continue;
+                                        }
                                     %>
                                         <li>
                                             <a href="#"

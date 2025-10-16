@@ -288,7 +288,7 @@ li {
   font-weight: 500;
   padding: 0 15px;
   text-align: center;
-  font-family: "EliceDigitalBaeum", "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
+  font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
   font-weight: bold;
 }
 #header .uh .link a:not(.type2):after {
@@ -368,7 +368,7 @@ body.scrolling #header {
 .iFind1,
 .iMenu1 {
   display: inline-block;
-  background: url(./../../images/koagi/ico_menu1.png) 50% 50% no-repeat;
+  background: url(./../../images/koagi/icon-hamberger.png) 50% 50% no-repeat;
   text-indent: -9999px;
   font-size: 0;
   width: 58px;
@@ -377,7 +377,7 @@ body.scrolling #header {
 }
 
 .iFind1 {
-  background-image: url(./../../images/koagi/ico_find1.png);
+  background-image: url(./../../images/koagi/icon-search.png);
 }
 
 .mGnb {
@@ -397,8 +397,8 @@ body.scrolling #header {
   display: block;
   color: #333;
   font-size: 23px;
-  font-family: "SBAggro", "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
-  font-weight: 500;
+  font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
+  font-weight: 700;
   letter-spacing: -0.7px;
   padding: 0 40px;
   line-height: 122px;
@@ -470,6 +470,7 @@ body.scrolling #header {
   position: relative;
   font-size: 38px;
   white-space: nowrap;
+  font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
 }
 
 .mGnb .list li .dep2 .ti .c {
@@ -525,6 +526,7 @@ body.scrolling #header {
   font-size: 18px;
   padding: 0 29px;
   height: 56px;
+  font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
 }
 
 .mGnb .list li .dep2 .ls li .dep3 {
@@ -1621,6 +1623,68 @@ body.scrolling #header {
   background-image: url("./../../images/koagi/ui-icons_555555_256x240.png");
 }
 
+#body .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  width: 100%;
+  order: -1;
+}
+#body .badge,
+#body .link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 33px;
+  border-radius: 5px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "SCoreDream", serif;
+  white-space: nowrap;
+}
+#body .badge.cyan,
+#body .link.cyan {
+  background-color: #3baf89;
+  border-color: #3baf89;
+  color: #fff;
+}
+#body .badge.green,
+#body .link.green {
+  color: #fff;
+  border-color: #30a643;
+  background-color: #30a643;
+}
+#body .badge.orange,
+#body .link.orange {
+  color: #fff;
+  border-color: #f2713f;
+  background-color: #f2713f;
+}
+#body .badge.gray,
+#body .link.gray {
+  color: #fff;
+  background-color: #818181;
+  border-color: #818181;
+}
+#body .badge.outline,
+#body .link.outline {
+  color: #000;
+  border: 1px solid #d1d1d1;
+  background-color: #fff;
+}
+#body .badge.navy,
+#body .link.navy {
+  background-color: #013569;
+  color: #fff;
+}
+#body .badge.navyBlue,
+#body .link.navyBlue {
+  background-color: #413129;
+  color: #fff;
+}
+
 .gallery-photos {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
@@ -1870,57 +1934,6 @@ body.scrolling #header {
 .gallery-poster-edu .info-wrap {
   flex: 1;
 }
-.gallery-poster-edu .badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  width: 100%;
-  order: -1;
-}
-.gallery-poster-edu .dot-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 26px;
-}
-@media (max-width: 1199px) {
-  .gallery-poster-edu .dot-info {
-    grid-template-columns: 1fr;
-  }
-}
-.gallery-poster-edu .dot-info li {
-  display: flex;
-  align-items: center;
-  margin-top: 12px;
-  font-size: 15px;
-  line-height: 25px;
-  color: #333;
-  font-family: "SCoreDream", serif;
-}
-@media (max-width: 1199px) {
-  .gallery-poster-edu .dot-info li {
-    flex-wrap: wrap;
-  }
-}
-.gallery-poster-edu .dot-info li > strong {
-  flex: 0 0 auto;
-  width: 86px;
-  text-align: justify;
-  font-weight: 700;
-}
-@media (max-width: 1199px) {
-  .gallery-poster-edu .dot-info li > strong {
-    width: 100%;
-  }
-}
-.gallery-poster-edu .dot-info li p {
-  flex: 1;
-  font-family: "SCoreDream", serif;
-  font-weight: 500;
-}
-.gallery-poster-edu .dot-info li p > strong {
-  color: #db0e0e;
-  font-weight: 700;
-}
 
 .gallery-items {
   display: grid;
@@ -2022,43 +2035,63 @@ body.scrolling #header {
   height: 15px;
   background: url("./../../images/koagi/icon-calendar.png") no-repeat 50% 50%;
 }
-.gallery-items .badge {
-  display: inline-flex;
-  justify-content: center;
+
+.dot-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 26px;
+}
+@media (max-width: 1199px) {
+  .dot-info {
+    grid-template-columns: 1fr;
+  }
+}
+.dot-info li {
+  display: flex;
   align-items: center;
-  height: 33px;
-  border-radius: 5px;
-  padding: 0 18px;
-  box-sizing: border-box;
-  font-size: 14px;
-  font-weight: 500;
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333;
   font-family: "SCoreDream", serif;
-  white-space: nowrap;
 }
-.gallery-items .badge.cyan {
-  background-color: #3baf89;
-  border-color: #3baf89;
-  color: #fff;
+@media (max-width: 1199px) {
+  .dot-info li {
+    flex-wrap: wrap;
+  }
 }
-.gallery-items .badge.green {
-  color: #fff;
-  border-color: #30a643;
-  background-color: #30a643;
+.dot-info li > strong {
+  flex: 0 0 auto;
+  position: relative;
+  width: 86px;
+  padding-left: 10px;
+  text-align: justify;
+  font-weight: 700;
 }
-.gallery-items .badge.orange {
-  color: #fff;
-  border-color: #f2713f;
-  background-color: #f2713f;
+@media (max-width: 1199px) {
+  .dot-info li > strong {
+    width: 100%;
+  }
 }
-.gallery-items .badge.gray {
-  color: #fff;
-  background-color: #818181;
-  border-color: #818181;
+.dot-info li > strong:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #333;
+  transform: translateY(-50%);
 }
-.gallery-items .badge.outline {
-  color: #000;
-  border: 1px solid #d1d1d1;
-  background-color: #fff;
+.dot-info li p {
+  flex: 1;
+  font-family: "SCoreDream", serif;
+  font-weight: 500;
+}
+.dot-info li p > strong {
+  color: #db0e0e;
+  font-weight: 700;
 }
 
 .swiper-wrap ul {
@@ -2068,7 +2101,7 @@ body.scrolling #header {
   flex-shrink: 0;
 }
 
-.plant-detail {
+.detail-view {
   display: flex;
   width: 100%;
   gap: 96px;
@@ -2076,48 +2109,49 @@ body.scrolling #header {
   padding-top: 78px;
 }
 @media (max-width: 1199px) {
-  .plant-detail {
+  .detail-view {
     flex-wrap: wrap;
   }
 }
-.plant-detail .left-top {
+.detail-view .left-top {
   position: relative;
 }
-.plant-detail .right {
+.detail-view .right {
+  flex: 1;
   padding-top: 27px;
 }
-.plant-detail .right dfn {
+.detail-view .right dfn {
   font-size: 40px;
   line-height: 52px;
   font-family: "SCoreDream", serif;
   font-style: normal;
   font-weight: 700;
 }
-.plant-detail .right ul {
+.detail-view .right ul {
   margin-top: 50px;
 }
-.plant-detail .right li {
+.detail-view .right li {
   display: flex;
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 27px;
   font-family: "SCoreDream", serif;
 }
-.plant-detail .right li strong {
+.detail-view .right li strong {
   flex-shrink: 0;
   width: 80px;
   text-decoration: underline;
 }
-.plant-detail .right li span {
+.detail-view .right li span {
   flex: 1;
 }
-.plant-detail .right .links {
+.detail-view .right .links {
   display: flex;
   justify-content: space-between;
   gap: 24px;
   margin-top: 94px;
 }
-.plant-detail .right .link-map {
+.detail-view .right .link-map {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -2127,21 +2161,21 @@ body.scrolling #header {
   font-size: 17px;
   font-family: "SCoreDream", serif;
 }
-.plant-detail .right .link-map.green {
+.detail-view .right .link-map.green {
   background-color: #3cad39;
   color: #fff;
 }
-.plant-detail .right .link-map.green .link-text {
+.detail-view .right .link-map.green .link-text {
   background-image: url("./../../images/koagi/icon-mark-white.png");
 }
-.plant-detail .right .link-map.yellow {
+.detail-view .right .link-map.yellow {
   background-color: #361f1f;
   color: #f6df00;
 }
-.plant-detail .right .link-map.yellow .link-text {
+.detail-view .right .link-map.yellow .link-text {
   background-image: url("./../../images/koagi/icon-mark-yellow.png");
 }
-.plant-detail .right .link-text {
+.detail-view .right .link-text {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2151,8 +2185,8 @@ body.scrolling #header {
   background-position: 0 50%;
   background-size: auto 27px;
 }
-.plant-detail .button-next,
-.plant-detail .button-prev {
+.detail-view .button-next,
+.detail-view .button-prev {
   position: absolute;
   top: 50%;
   width: 72px;
@@ -2161,62 +2195,62 @@ body.scrolling #header {
   box-shadow: 0 0 10px rgba(148, 148, 148, 0.19);
   border-radius: 100%;
 }
-.plant-detail .button-next {
+.detail-view .button-next {
   right: -36px;
   transform: translateY(-50%);
 }
 @media (max-width: 1199px) {
-  .plant-detail .button-next {
+  .detail-view .button-next {
     right: 10px;
   }
 }
-.plant-detail .button-prev {
+.detail-view .button-prev {
   left: -36px;
   transform: translateY(-50%) rotate(180deg);
 }
 @media (max-width: 1199px) {
-  .plant-detail .button-prev {
+  .detail-view .button-prev {
     left: 10px;
   }
 }
-.plant-detail .swiper {
+.detail-view .swiper {
   overflow: hidden;
   width: 650px;
 }
 @media (max-width: 1199px) {
-  .plant-detail .swiper {
+  .detail-view .swiper {
     width: 100%;
   }
 }
 @media (max-width: 1199px) {
-  .plant-detail .swiper li {
+  .detail-view .swiper li {
     width: 100% !important;
   }
 }
-.plant-detail .thumb-swiper {
+.detail-view .thumb-swiper {
   width: 650px;
   margin-top: 40px;
 }
 @media (max-width: 1199px) {
-  .plant-detail .thumb-swiper {
+  .detail-view .thumb-swiper {
     width: 100%;
   }
 }
-.plant-detail .thumb-swiper ul {
+.detail-view .thumb-swiper ul {
   gap: 20px;
 }
-.plant-detail .thumb-swiper li {
+.detail-view .thumb-swiper li {
   flex: 1;
   cursor: pointer;
 }
-.plant-detail .img-wrap {
+.detail-view .img-wrap {
   display: block;
 }
-.plant-detail .img-wrap img {
+.detail-view .img-wrap img {
   width: 100%;
   height: auto;
 }
-.plant-detail + .description {
+.detail-view + .description {
   margin-top: 97px;
   padding: 70px 0 130px;
   border: solid #e5e5e5;
@@ -2226,6 +2260,70 @@ body.scrolling #header {
   color: #000;
   font-family: "SCoreDream", serif;
   font-weight: 400;
+}
+.detail-view .pagination {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 33px;
+  left: 50%;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 11px 20px;
+  transform: translateX(-50%);
+}
+.detail-view .pagination > span {
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #e1e1e1;
+  cursor: pointer;
+}
+.detail-view .pagination > span[aria-current=true] {
+  background-color: #404040;
+}
+.detail-view + .detail-items {
+  margin-top: 92px;
+  padding-top: 92px;
+  border-top: 1px solid #e5e5e5;
+}
+.detail-view + .detail-items > strong {
+  display: block;
+  padding-left: 38px;
+  background: url("./../../images/koagi/icon-leaves.png") no-repeat 0 50%;
+  font-size: 25px;
+  line-height: 35px;
+  font-family: "SCoreDream", serif;
+}
+.detail-view + .detail-items > ul {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+.detail-view + .detail-items li {
+  flex: 1;
+  text-align: center;
+}
+.detail-view + .detail-items li .img-wrap {
+  display: block;
+}
+.detail-view + .detail-items li img {
+  width: 100%;
+  height: auto;
+}
+.detail-view + .detail-items li strong {
+  display: block;
+  margin-top: 37px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "SCoreDream", serif;
+}
+.detail-view + .detail-items li p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "SCoreDream", serif;
 }
 
 .link-list {
@@ -2436,20 +2534,30 @@ body.scrolling #header {
   align-items: center;
   width: 5px;
 }
-.search-edu ul input[type=checkbox] {
+.search-edu ul input[type=checkbox] + label {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: auto;
+  padding: 0 5px 0 36px;
+  margin: 0;
+}
+
+input[type=checkbox] {
   display: none;
 }
-.search-edu ul input[type=checkbox]:checked + label:before {
+input[type=checkbox]:checked + label:before {
   background: #4a506b url("./../../images/koagi/icon-checked.png") no-repeat 50% 50%;
   border-color: #4a506b;
 }
-.search-edu ul input[type=checkbox] + label {
-  flex: 0 0 auto;
-  min-height: 25px;
+input[type=checkbox] + label {
+  display: flex;
+  margin: 0 auto;
+  width: 25px;
+  height: 25px;
   position: relative;
-  padding: 0 5px 0 36px;
+  cursor: pointer;
 }
-.search-edu ul input[type=checkbox] + label:before {
+input[type=checkbox] + label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -2459,6 +2567,407 @@ body.scrolling #header {
   background-color: #fff;
   border: 1px solid #666;
   transform: translateY(-50%);
+}
+
+.swiper-tabs .swiper {
+  overflow: hidden;
+}
+.swiper-tabs .swiper-slide {
+  flex: 0 0 auto;
+  width: 270px;
+}
+.swiper-tabs .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.swiper-tabs .scrollbar {
+  position: relative;
+  margin-top: 55px;
+}
+.swiper-tabs .scrollbar:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #696969;
+  transform: translateY(-50%);
+}
+.swiper-tabs .scrollbar .swiper-scrollbar-drag {
+  height: 31px;
+  background: url("./../../images/koagi/icon-scroll.png") no-repeat 50% 50%;
+  cursor: pointer;
+}
+.detail-info {
+  border-top: 2px solid #444;
+  padding-top: 67px;
+}
+
+.detail-section + .detail-section {
+  margin-top: 92px;
+}
+.detail-section.division {
+  display: flex;
+  padding-bottom: 106px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.detail-section > strong {
+  display: block;
+  margin-bottom: 32px;
+  font-size: 25px;
+  line-height: 35px;
+  color: #333;
+  font-family: "SCoreDream", serif;
+}
+.detail-section > strong.underline {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #707070;
+}
+.detail-section > .left {
+  flex: 0 0 auto;
+  width: 485px;
+  box-sizing: border-box;
+  padding: 0 83px 0 46px;
+}
+.detail-section > .right {
+  flex: 1;
+}
+.detail-section > .right > strong {
+  display: block;
+  margin-top: 37px;
+  font-size: 40px;
+  line-height: 50px;
+  font-family: "SCoreDream", serif;
+  font-weight: 700;
+}
+.detail-section > .right .dot-info {
+  padding: 44px 46px 56px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+.detail-section > .right .dot-info li > strong:before {
+  background-color: #3cad39;
+}
+.detail-section .link-list.outline-green {
+  margin: 60px 0 0 0;
+  border: 2px solid #3cad39;
+  color: #3cad39;
+  background-color: #fff;
+}
+.detail-section .notice {
+  font-size: 16px;
+  color: #333;
+  line-height: 26px;
+  font-family: "SCoreDream", serif;
+}
+
+.box {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 68px;
+}
+.box.division {
+  display: flex;
+  gap: 80px;
+}
+.box.green {
+  border-color: #279c2f;
+}
+
+.calendar {
+  flex: 1;
+}
+.calendar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.calendar .left {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.calendar .left button {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  background: url("./../../images/koagi/icon-arrow-right.png") no-repeat 50% 50%;
+}
+.calendar .left button.button-prev {
+  transform: rotate(180deg);
+}
+.calendar .left strong {
+  flex: 1;
+  font-size: 24px;
+  line-height: 34px;
+  font-family: "SCoreDream", serif;
+}
+.calendar .right .selected,
+.calendar .right .disabled {
+  position: relative;
+  padding-left: 26px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+  font-weight: 700;
+  font-family: "SCoreDream", serif;
+}
+.calendar .right .selected:before,
+.calendar .right .disabled:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  transform: translateY(-50%);
+}
+.calendar .right .selected:before {
+  background-color: #3eaa36;
+}
+.calendar .right .disabled {
+  margin-left: 18px;
+}
+.calendar .right .disabled:before {
+  background-color: #e3e3e3;
+}
+.calendar .days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 18px;
+  margin-top: 28px;
+}
+.calendar .days li {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000;
+  font-family: "SCoreDream", serif;
+}
+.calendar .dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 18px;
+  margin-top: 10px;
+}
+.calendar .dates li {
+  display: flex;
+  justify-content: center;
+}
+.calendar .dates .prev,
+.calendar .dates .next {
+  opacity: 0.4;
+}
+.calendar .dates button {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000;
+  font-family: "SCoreDream", serif;
+}
+.calendar .dates button.today {
+  color: #0bb178;
+  font-weight: bold;
+}
+.calendar .dates button:disabled {
+  background-color: #e3e3e3;
+  font-weight: bold;
+  cursor: default;
+}
+.calendar .dates button.current {
+  background-color: #3eaa36;
+  color: #fff;
+  font-weight: bold;
+}
+
+.detail-explanation .img-wrap {
+  display: block;
+  margin-top: 90px;
+  text-align: center;
+}
+.detail-explanation .img-wrap img {
+  display: inline-block;
+}
+.detail-explanation .img-wrap + .desc {
+  margin-top: 86px;
+}
+.detail-explanation .desc {
+  padding: 0 25px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "SCoreDream", serif;
+  color: #000;
+}
+
+.detail-sub {
+  display: flex;
+  gap: 55px;
+  margin-top: 70px;
+}
+.detail-sub .left,
+.detail-sub .right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-self: stretch;
+}
+.detail-sub strong {
+  color: #000;
+  font-size: 20px;
+  font-family: "SCoreDream", serif;
+  font-weight: 700;
+}
+.detail-sub .box.outline {
+  flex: 1;
+  margin-top: 30px;
+  padding: 38px 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 0;
+}
+.detail-sub .box.outline li {
+  position: relative;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  font-family: "SCoreDream", serif;
+  padding-left: 10px;
+}
+.detail-sub .box.outline li:before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+table + table {
+  margin-top: 52px;
+}
+
+.table-black {
+  width: 100%;
+}
+.table-black th,
+.table-black td {
+  font-family: "SCoreDream", serif;
+  line-height: 26px;
+}
+.table-black th {
+  padding: 18px 0;
+  background-color: #3a3a3a;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+}
+.table-black td {
+  padding: 18px 0;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid #e0e3e7;
+}
+.table-black td > strong:first-of-type {
+  color: #f00a0a;
+}
+
+.table-gray {
+  width: 100%;
+}
+.table-gray.fixed {
+  table-layout: fixed;
+}
+.table-gray th,
+.table-gray td {
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "SCoreDream", serif;
+}
+.table-gray th:first-of-type,
+.table-gray td:first-of-type {
+  border-left: none;
+}
+.table-gray th:last-of-type,
+.table-gray td:last-of-type {
+  border-right: none;
+}
+.table-gray th {
+  border-top: 1px solid #707070;
+  font-weight: 700;
+  background-color: #fafafa;
+}
+.table-gray td {
+  font-weight: 400;
+  text-align: center;
+}
+
+.table-horizon caption {
+  caption-side: top;
+  font-size: 17px;
+  text-align: left;
+  font-family: "SCoreDream", serif;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+.table-horizon tr:first-of-type th,
+.table-horizon tr:first-of-type td {
+  border-top: 1px solid #707070;
+}
+.table-horizon th,
+.table-horizon td {
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "SCoreDream", serif;
+}
+.table-horizon th {
+  background-color: #fafafa;
+  padding: 18px 24px;
+}
+.table-horizon th:first-of-type {
+  border-left: none;
+}
+.table-horizon td {
+  padding: 18px 24px;
+}
+.table-horizon td:last-of-type {
+  border-right: none;
+}
+.table-horizon .link:first-of-type {
+  margin-left: 25px;
+}
+.table-horizon .link + .link {
+  margin-left: 12px;
+}
+
+.button-apply {
+  display: block;
+  width: 150px;
+  box-sizing: border-box;
+  margin: 60px auto 0;
+  background-color: #013569;
+  padding: 23px 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 17px;
+  font-family: "SCoreDream", serif;
+}
+
+.schedule {
+  flex: 0 0 auto;
+  width: 794px;
 }
 
 @media all and (max-width: 1199px) {
@@ -3921,7 +4430,7 @@ body.scrolling #header {
   display: flex;
 }
 .system .mGnb .list .dep1 {
-  padding: 0 20px;
+  padding: 0 18px;
 }
 .system .mGnb .list li .dep2 .ti .t {
   font-size: 25px;

@@ -1,40 +1,56 @@
+<%
+const dotItems = [
+    {
+        title: '접수일시',
+        desc: '2025-08-01 (09:00) ~ 2025-08-31 (23:59)',
+    },
+    {
+        title: '참여자',
+        desc: '개인',
+    },
+    {
+        title: '이용일시',
+        desc: '2025-09-01',
+    },
+    {
+        title: '참가비',
+        desc: '유료',
+    },
+    {
+        title: '이용대상',
+        desc: '초등, 중등',
+    },
+    {
+        title: '신청방법',
+        desc: '온라인, 유선',
+    },
+    {
+        title: '모집정원',
+        desc: '<strong>40명</strong>',
+    },
+    {
+        title: '모집유형',
+        desc: '선착순',
+    },
+    {
+        title: '담당부서',
+        desc:'교육운영실'
+    },
+    {
+        title:'연락처',
+        desc: '02-000-0000'
+    }
+];
+
+var isDetail = isDetail || false;
+
+const items = isDetail ? dotItems : dotItems.slice(0, dotItems.length - 2) ;
+
+ %>
+
 <ul class="dot-info">
     <%
-    const dotItems = [
-        {
-            title: '접수일시',
-            desc: '2025-08-01 (09:00) ~ 2025-08-31 (23:59)',
-        },
-        {
-            title: '참  여  자',
-            desc: '개인',
-        },
-        {
-            title: '이용일시',
-            desc: '2025-09-01',
-        },
-        {
-            title: '참  가  비',
-            desc: '유료',
-        },
-        {
-            title: '이용대상',
-            desc: '초등, 중등',
-        },
-        {
-            title: '신청방법',
-            desc: '온라인, 유선',
-        },
-        {
-            title: '모집정원',
-            desc: '<strong>40명</strong>',
-        },
-        {
-            title: '모집유형',
-            desc: '선착순',
-        },
-    ]
-    dotItems.map((item) => { %>
+    items.map((item) => { %>
     <li>
         <strong><%= item.title %></strong>
         <p><%- item.desc %></p>

@@ -10,6 +10,7 @@ var desc = desc || 'Lysimachia leucantha Miq';
 var info = info || '';
 var date = date || '';
 var states = states || [];
+var hidePagination = hidePagination || false;
 %>
 <ul class="gallery-items gallery-<%= type; %>">
     <% for(let i = 0; i < count; i++) { %>
@@ -66,7 +67,9 @@ var states = states || [];
         </li>
     <% } %>
 </ul>
+<% if (!hidePagination) { %>
 <!-- pagination -->
 <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_pagination`, {
 }) %>
 <!-- // pagination -->
+<% } %>

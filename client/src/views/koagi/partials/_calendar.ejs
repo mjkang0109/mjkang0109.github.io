@@ -1,0 +1,48 @@
+<div class="calendar">
+    <div class="calendar-top">
+        <div class="left">
+            <button type="button"
+                    class="button-prev">
+                <span class="sound-only">이전달</span>
+            </button>
+            <strong>2025. 10</strong>
+            <button type="button"
+                    class="button-next">
+                <span class="sound-only">다음달</span>
+            </button>
+        </div>
+        <div class="right">
+            <span class="selected">선택</span>
+            <span class="disabled">예약불가</span>
+        </div>
+    </div>
+    <ul class="days">
+        <%
+        const days = ['월', '화', '수', '목', '금', '토', '일'];
+        days.map(day => {
+        %>
+            <li><%= day %></li>
+        <% }); %>
+    </ul>
+    <ul class="dates">
+        <% for(let i = 25; i < 30; i++) { %>
+            <li class="prev">
+                <button type="button"
+                        class="button-date"><%= i %></button>
+            </li>
+        <% } %>
+        <% for (let i = 1; i < 32; i++) { %>
+            <li>
+                <button type="button"
+                        <%- i === 7 || i === 13 || i === 15 || i === 21 ? 'disabled' : '' %>
+                        class="button-date<%= i === 19 ? ' current' : '' %><%= i === 10 ? ' today' : '' %>"><%= i %></button>
+            </li>
+        <% } %>
+        <% for (let i = 1; i < 7; i++) { %>
+            <li class="next">
+                <button type="button"
+                        class="button-date"><%= i %></button>
+            </li>
+        <% } %>
+    </ul>
+</div>

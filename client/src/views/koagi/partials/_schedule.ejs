@@ -1,0 +1,50 @@
+<%
+const head = [
+    '선택',
+    '이용일시',
+    '회차',
+    '모집유형',
+    '신청/정원',
+    '대기/정원',
+    '상태',
+];
+const body = [
+    '',
+    '2025-09-01',
+    '45회',
+    '선착순',
+    '<strong>20</strong><span>/</span><strong>40</strong>',
+    '<strong>20</strong><span>/</span><strong>40</strong>',
+    '신청가능'
+]
+%>
+<div class="schedule">
+    <table class="table-black">
+        <thead>
+        <tr>
+            <% head.map(h => { %>
+                <th><%= h %></th>
+            <% }); %>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(let j = 0; j < 4; j++) { %>
+        <tr>
+            <% body.map((b, i) => { %>
+                <td>
+                    <% if (i === 0) { %>
+                        <input type="checkbox"
+                               id="inputSchedule<%= j + 1 %>"
+                               name="input-schedule">
+                        <label for="inputSchedule<%= j + 1 %>"></label>
+
+                    <% } %>
+                    <%- b %>
+                </td>
+            <% }); %>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <button type="button" class="button-apply">신청하기</button>
+</div>

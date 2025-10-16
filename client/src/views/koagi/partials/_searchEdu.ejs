@@ -92,7 +92,7 @@
     ];
     %>
     <ul>
-        <% items.map((item) => { %>
+        <% items.map((item, i) => { %>
             <li>
                 <strong><%= item.title %></strong>
 
@@ -123,6 +123,7 @@
                             <% input.check.map((c, l) => { %>
                                 <input type="checkbox"
                                        id="<%= input.id %>-<%= l + 1 %>"
+                                       name="input<%= i + 1 %>"
                                         <%- l === 0 ? 'checked' : '' %>>
                                 <label for="<%= input.id %>-<%= l + 1 %>">
                                     <%= c %>

@@ -1,0 +1,339 @@
+<section class="detail-info">
+    <article class="detail-section division">
+        <div class="left">
+            <span class="img-wrap">
+                 <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                 width: 354,
+                 height: 500,
+                 isSimply: true,
+                 source: `${imgPath}/dummy-poster-edu2.png`,
+                 alt: '',
+                 }); %>
+            </span>
+        </div>
+        <div class="right">
+            <div class="badges">
+                <span class="badge green">접수대기</span>
+                <span class="badge orange">접수중</span>
+                <span class="badge gray">접수마감</span>
+                <span class="badge outline">교육</span>
+            </div>
+            <strong>한여름밤의 초대 꽃마숲 가든스테이</strong>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_eduInfo`, {
+            isDetail: true
+            }) %>
+            <a href="#"
+               class="link-list outline-green">목록보기
+            </a>
+        </div>
+    </article>
+    <article class="detail-section">
+        <strong>신청현황</strong>
+        <div class="box green division">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_calendar`, {
+            }) %>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_schedule`, {
+            }) %>
+        </div>
+    </article>
+    <article class="detail-section">
+        <%
+        const cost = [
+            ['유아', '0원'],
+            ['초등', '5,000원'],
+            ['중등', '5,000원'],
+            ['고등', '5,000원'],
+            ['성인', '5,000원'],
+            ['인솔자', '5,000원'],
+            ['재료비', '5,000원'],
+        ]
+        %>
+        <strong>참가비</strong>
+        <table class="table-gray fixed">
+            <thead>
+            <tr>
+                <% cost.map(c => { %>
+                    <th><%= c[0] %></th>
+                <% }) %>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <% cost.map(c => { %>
+                    <td><%= c[1] %></td>
+                <% }) %>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+    <article class="detail-section">
+        <strong class="underline">프로그램 설명</strong>
+        <div class="detail-explanation">
+            <span class="img-wrap">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 700,
+            height: 990,
+            isSimply: true,
+            source: `${imgPath}/dummy-poster-large.png`,
+            alt: '',
+            }); %>
+            </span>
+            <p class="desc">
+                물가의 양지바른 습지에서 높이 40~60cm 정도로 자라는 여러해살이풀이다. 전체에 털이 없다.
+                줄기는 곧추서고 모서리가 있으며, 가지는 거의 갈라지지 않는다. 잎은 어긋나며, 도피침형 또는 넓은 선형이고 길이 2~4.5cm, 폭 3~5mm이다. 잎 가장자리는 밋밋하다. 잎자루에
+                검은색 샘점이 있다. 꽃은 흰색으로 5~6월에 피는데 줄기 끝의 총상꽃차례를 이룬다. 열매는 삭과이며, 암술대가 남아 있다. 우리나라 제주도, 전라남도 구례, 해남, 경상남도 지리산 등
+                남부지방에 자생하며 일본에 분포한다. 이 종은 두메까치수염에 비해 잎은 도피침형 또는 넓은 선형으로 좁고 끝이 둔하므로 구별된다. 관상용으로 심는다. 물까치수영이라고도 한다.
+                <br><br>줄기는 곧추서고 모서리가 있으며, 가지는 거의 갈라지지 않는다. 잎은 어긋나며, 도피침형 또는 넓은 선형이고 길이 2~4.5cm, 폭 3~5mm이다. 잎 가장자리는
+                밋밋하다. 잎자루에 검은색 샘점이 있다. 꽃은 흰색으로 5~6월에 피는데 줄기 끝의 총상꽃차례를 이룬다. 열매는 삭과이며, 암술대가 남아 있다. 우리나라 제주도, 전라남도 구례, 해남,
+                경상남도 지리산 등 남부지방에 자생하며 일본에 분포한다. 이 종은 두메까치수염에 비해 잎은 도피침형 또는 넓은 선형으로 좁고 끝이 둔하므로 구별된다. 관상용으로 심는다. 물까치수영이라고도
+                한다.
+            </p>
+        </div>
+    </article>
+    <article class="detail-section">
+        <strong>위치정보</strong>
+        <table class="table-horizon">
+            <colgroup>
+                <col width="198px">
+                <col width="*">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>장소</th>
+                <td>
+                    국립백두대간수목원
+                    <a href="#"
+                       class="link navy">오시는길
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td>
+                    세종특별시 정부 2청사로 10, SM타워 3층
+                    <a href="#"
+                       class="link green">네이버 지도보기
+                    </a>
+                    <a href="#"
+                       class="link navyBlue">카카오 지도보기
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th>설명</th>
+                <td>
+                    방문자센터 앞에서 모이시면 됩니다. 방문자센터 앞에서 모이시면 됩니다방문자센터 앞에서 모이시면 됩니다방문자센터 앞에서 모이시면 됩니다방문자센터 앞에서 모이시면 됩니다
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+    <article class="detail-section">
+        <strong>유의사항</strong>
+        <ul class="notice">
+            <li>1. 참여가 어려우신 경우, 다른 분들을 위해 반드시 예약 취소 부탁드립니다.</li>
+            <li>2. 프로그램 2일전 18:00까지 참가비 입금되지 않을 경우 예약취소 됩니다.</li>
+            <li>3. 프로그램 참가를 원치 않으실 경우 재료 준비에 대응할 수 있도록 이틀 전까지 취소 부탁드립니다.</li>
+            <li>4. 프로그램 참여 현장에서 촬영된 사진이나 동영상은 종로구 홍보자료로 사용될 수 있습니다.</li>
+            <li>5. 기상상황에 따라 프로그램이 취소 될 수 있습니다.</li>
+            <li>6. 주차장소가 없으니 대중교통 이용 부탁드립니다.</li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong>교육자료</strong>
+        <table class="table-horizon">
+            <colgroup>
+                <col width="198px">
+                <col width="*">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>URL</th>
+                <td>
+                    <a href="#">https://koagi.or.kr/</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+    <article class="detail-section">
+        <strong>연계 프로그램</strong>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+        type: 'poster',
+        states: [{text: '숙박', color: 'green'}, {text: '체류형', color: 'gray'}],
+        title: '그 여름, 반짝이는 수련',
+        desc: 'hide',
+        dummy: 'exhibition',
+        count: 4,
+        hidePagination: true,
+        }) %>
+    </article>
+    <article class="detail-section">
+        <strong>강사정보</strong>
+        <table class="table-gray">
+            <colgroup>
+                <col width="235px"/>
+                <col width="235px"/>
+                <col width="*"/>
+                <col width="*"/>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>이름</th>
+                <th>구분</th>
+                <th>담당업무</th>
+                <th>자격사항</th>
+            </tr>
+            <tr>
+                <td>김대한</td>
+                <td>강의전담</td>
+                <td>&middot;교육 강의 및 진행</td>
+                <td>&middot;교육 강의 및 진행
+                    <br>&middot;교육운영 지원업무
+                </td>
+            </tr>
+            <tr>
+                <td>김대한</td>
+                <td>운영강사</td>
+                <td>&middot;교육 강의 및 진행
+                    <br>&middot;교육운영 지원업무
+                </td>
+                <td>&middot;청소년지도사 2·3급</td>
+            </tr>
+            </thead>
+        </table>
+    </article>
+    <article class="detail-section">
+        <%
+        const detailItems = [
+            {
+                title: '숙소타입',
+                desc : '2인 1실',
+            },
+            {
+                title: '침대형태',
+                desc : '퀸침대1개',
+            },
+            {
+                title: '숙소정원',
+                desc : '정원 2명 / 최대 3명',
+            },
+            {
+                title: '입실시간',
+                desc : '오후 2시',
+            },
+            {
+                title: '퇴실시간',
+                desc : '오전 11시',
+            },
+            {
+                title: '이용요금',
+                desc : '숙박비 : 1박 60,000원 / 침구추가 : 개당 10,000원',
+            },
+        ];
+        %>
+        <strong>숙소정보</strong>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_detail`, {
+        title: '제1연수동',
+        dummy: 'edu2',
+        items: detailItems,
+        hideMap: true,
+        hideListLink: true,
+        }) %>
+        <div class="detail-sub">
+            <div class="left">
+                <strong>숙소 이용안내</strong>
+                <div class="box outline">
+                    <li>체크인은 오후 3시부터 가능하며, 체크아웃은 오전 11시까지 완료해 주시기 바랍니다.</li>
+                    <li>입실 시 예약자 본인 확인을 위해 신분증을 반드시 지참해 주셔야 합니다.</li>
+                    <li>쾌적한 숙박 환경을 위해 객실 내 흡연 및 취사는 금지되어 있습니다.</li>
+                </div>
+            </div>
+            <div class="right">
+                <strong>숙소 취소 및 환불</strong>
+                <div class="box outline">
+                    <li>이용일 3일 전까지 취소 시 전액 환불되며, 이후에는 환불 규정에 따라 부분 환불이 적용됩니다.</li>
+                    <li>당일 취소 또는 무단 불참(No-Show)의 경우 환불이 불가합니다.</li>
+                    <li>기상 악화, 천재지변 등 불가피한 사유 발생 시 별도의 규정에 따라 환불이 진행됩니다.</li>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="detail-section">
+        <%
+        const vehicles = [
+            {
+                title: '차량번호',
+                desc : '123가 0000',
+            },
+            {
+                title: '운행시간',
+                desc : '오전 9시 ~ 오후 8시',
+            },
+            {
+                title: '숙소정원',
+                desc : '40명',
+            },
+            {
+                title: '운행횟',
+                desc : '하루 4회 운행',
+            },
+            {
+                title: '운행구간',
+                desc : '영주역~춘양버스터미널~국립백두대간수목원',
+            },
+        ];
+        %>
+        <strong>숙소정보</strong>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_detail`, {
+        title: '제1연수동',
+        dummy: 'edu2',
+        items: vehicles,
+        hideMap: true,
+        hideListLink: true,
+        }) %>
+        <div class="detail-sub">
+            <div class="left">
+                <strong>차량 이용안내</strong>
+                <ul class="box outline">
+                    <li>셔틀버스는 예약자 본인만 탑승 가능하며, 탑승 시 예약 확인 문자 또는 신분증을 제시해 주시기 바랍니다.</li>
+                    <li>출발 시간 10분 전까지 지정 승차장에 도착해 주셔야 하며, 지각 시 탑승이 제한될 수 있습니다.</li>
+                    <li>안전한 운행을 위해 차량 내에서는 음식물 섭취 및 음주가 금지됩니다.</li>
+                </ul>
+            </div>
+            <div class="right">
+                <strong>차량 취소 및 환불</strong>
+                <ul class="box outline">
+                    <li>이용일 3일 전까지 취소 시 전액 환불되며, 이후에는 환불 규정에 따라 부분 환불이 적용됩니다.</li>
+                    <li>당일 취소 또는 무단 불참(No-Show)의 경우 환불이 불가합니다.</li>
+                    <li>기상 악화, 천재지변 등 불가피한 사유 발생 시 별도의 규정에 따라 환불이 진행됩니다.</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <article class="detail-section">
+        <strong>노선정보</strong>
+        <table class="table-horizon">
+            <caption>노선1. 영주역~춘양버스터미널</caption>
+            <tbody>
+            <tr>
+                <th>출발지</th>
+                <td class="underline">영주역 (오전 9시)</td>
+                <th>목적지</th>
+                <td class="underline">춘양버스터미널 (오전 10시)</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table-horizon">
+            <caption>노선2. 영주역~춘양버스터미널</caption>
+            <tbody>
+            <tr>
+                <th>출발지</th>
+                <td class="underline">영주역 (오전 9시)</td>
+                <th>목적지</th>
+                <td class="underline">춘양버스터미널 (오전 10시)</td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+</section>

@@ -68,23 +68,25 @@ const scripts = (() => {
                 };
             }
 
+            console.log(swiper)
+
             if (!thumb) {
                 optsSwiper.pagination = {
-                    el       : '.pagination',
+                    el       : swiper.parentElement.querySelector('.pagination'),
                     clickable: true,
                 };
             }
 
             if (!hideNavigation) {
                 optsSwiper.navigation = {
-                    nextEl: '.button-next',
-                    prevEl: '.button-prev',
+                    nextEl: swiper.parentElement.querySelector('.button-next'),
+                    prevEl: swiper.parentElement.querySelector('.button-prev')
                 };
             }
 
             if (scrollbar) {
                 optsSwiper.scrollbar = {
-                    el       : '.scrollbar',
+                    el       : swiper.parentElement.querySelector('.scrollbar'),
                     draggable: true,
                     dragSize: 80,
                 };

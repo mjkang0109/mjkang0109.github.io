@@ -555,7 +555,6 @@ $imgPath: "./../../images/koagi";
             strong {
                 flex-shrink: 0;
                 width: 80px;
-                text-decoration: underline;
             }
 
             span {
@@ -1080,6 +1079,10 @@ input[type="checkbox"] {
         margin-top: 92px;
     }
 
+    .gallery-items {
+        padding-top: 10px;
+    }
+
     &.division {
         display: flex;
         padding-bottom: 106px;
@@ -1502,6 +1505,7 @@ table {
     td {
         border: 1px solid #e7e7e7;
         width: 100%;
+        padding: 20px 0;
         font-size: 16px;
         line-height: 26px;
         font-family: "SCoreDream", serif;
@@ -1598,6 +1602,7 @@ table {
     color: #fff;
     font-size: 17px;
     font-family: "SCoreDream", serif;
+    font-weight: 600;
 }
 
 .schedule {

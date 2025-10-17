@@ -396,7 +396,7 @@ body.scrolling #header {
   position: relative;
   display: block;
   color: #333;
-  font-size: 23px;
+  font-size: 21px;
   font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
   font-weight: 700;
   letter-spacing: -0.7px;
@@ -469,6 +469,8 @@ body.scrolling #header {
 .mGnb .list li .dep2 .ti .t {
   position: relative;
   font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -1px;
   white-space: nowrap;
   font-family: "SCoreDream", "맑은 고딕", "돋움", dotum, sans-serif;
 }
@@ -478,7 +480,7 @@ body.scrolling #header {
   color: #979797;
   font-size: 13px;
   font-weight: normal;
-  letter-spacing: 0.5px;
+  letter-spacing: 0;
   margin: 10px 0 0 5px;
   white-space: nowrap;
 }
@@ -1008,7 +1010,7 @@ body.scrolling #header {
 .gTitle1 .title h4 {
   display: flex;
   justify-content: center;
-  font-size: 40px;
+  font-size: 44px;
   line-height: 50px;
   font-weight: 500;
   color: #333;
@@ -1706,6 +1708,7 @@ body.scrolling #header {
   line-height: 23px;
   border-radius: 50px;
   border: 2px solid;
+  font-family: "SCoreDream", serif;
 }
 #body .states .state.green {
   color: #00ac4f;
@@ -2150,7 +2153,6 @@ body.scrolling #header {
 .detail-view .right li strong {
   flex-shrink: 0;
   width: 80px;
-  text-decoration: underline;
 }
 .detail-view .right li span {
   flex: 1;
@@ -2618,6 +2620,9 @@ input[type=checkbox] + label:before {
 .detail-section + .detail-section {
   margin-top: 92px;
 }
+.detail-section .gallery-items {
+  padding-top: 10px;
+}
 .detail-section.division {
   display: flex;
   padding-bottom: 106px;
@@ -3021,6 +3026,7 @@ table + table {
 .table-gray td {
   border: 1px solid #e7e7e7;
   width: 100%;
+  padding: 20px 0;
   font-size: 16px;
   line-height: 26px;
   font-family: "SCoreDream", serif;
@@ -3103,6 +3109,7 @@ table + table {
   color: #fff;
   font-size: 17px;
   font-family: "SCoreDream", serif;
+  font-weight: 600;
 }
 
 .schedule {
@@ -3116,14 +3123,15 @@ table + table {
   }
 }
 
-.detail-guide {
+.detail-theme {
   margin-top: 128px;
 }
-.detail-guide .top {
+.detail-theme .top {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
-.detail-guide .buttons {
+.detail-theme .buttons {
   flex: 0 0 auto;
   position: relative;
   width: 350px;
@@ -3133,7 +3141,13 @@ table + table {
   overflow-y: auto;
   scroll-snap-type: y mandatory;
 }
-.detail-guide .buttons:before {
+@media (max-width: 1199px) {
+  .detail-theme .buttons {
+    width: 100%;
+    height: auto;
+  }
+}
+.detail-theme .buttons:before {
   content: "";
   position: absolute;
   top: 0;
@@ -3142,7 +3156,7 @@ table + table {
   height: 100%;
   background-color: #223927;
 }
-.detail-guide .buttons button {
+.detail-theme .buttons button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -3155,7 +3169,7 @@ table + table {
   scroll-snap-align: center;
   background-color: #223927;
 }
-.detail-guide .buttons button:before {
+.detail-theme .buttons button:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -3167,24 +3181,30 @@ table + table {
   border-radius: 0 50px 50px 50px;
   opacity: 0;
 }
-.detail-guide .buttons button span {
+.detail-theme .buttons button span {
   position: relative;
   font-size: 18px;
   font-family: "SCoreDream", serif;
   color: #fff;
   font-weight: 700;
 }
-.detail-guide .buttons button[aria-selected=true]:before {
+.detail-theme .buttons button[aria-selected=true]:before {
   opacity: 1;
 }
-.detail-guide .visual {
+.detail-theme .visual {
   flex: 1;
 }
-.detail-guide .panel {
+@media (max-width: 1199px) {
+  .detail-theme .visual img {
+    width: 100%;
+    height: auto;
+  }
+}
+.detail-theme .panel {
   margin-top: 114px;
   text-align: center;
 }
-.detail-guide .panel > strong {
+.detail-theme .panel > strong {
   display: block;
   position: relative;
   padding-top: 35px;
@@ -3193,7 +3213,7 @@ table + table {
   line-height: 60px;
   color: #333;
 }
-.detail-guide .panel > strong:before {
+.detail-theme .panel > strong:before {
   content: "";
   position: absolute;
   top: 0;
@@ -3203,23 +3223,29 @@ table + table {
   background-color: #000;
   transform: translateX(-50%);
 }
-.detail-guide .panel > p {
+.detail-theme .panel > p {
   margin-top: 42px;
   font-size: 16px;
   line-height: 26px;
   color: #000;
   font-family: "SCoreDream", serif;
 }
-.detail-guide .panel .tags {
+.detail-theme .panel .tags {
   margin-top: 77px;
 }
-.detail-guide .panel .gallery-items {
+.detail-theme .panel .gallery-items {
   margin-top: 60px;
   padding-top: 0;
   border-top: none;
 }
-.detail-guide .map {
+.detail-theme .map {
   margin-top: 108px;
+}
+@media (max-width: 1199px) {
+  .detail-theme .map img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .tags {

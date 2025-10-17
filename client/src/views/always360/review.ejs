@@ -124,9 +124,14 @@ const imgPath = `${process.env.IMG_PATH}/always360`;
                         </button>
                     </span>
                 </div>
-                <button type="button" class="button-save">
-                    저장
-                </button>
+                <div class="button-wrap">
+                    <button type="button" class="button-save">
+                        저장
+                    </button>
+                    <button type="button" class="button-save">
+                        목록
+                    </button>
+                </div>
             <% } %>
             <% if (state === 'list') { %>
                 <ul class="applies">

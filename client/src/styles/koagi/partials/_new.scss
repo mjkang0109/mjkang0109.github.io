@@ -89,6 +89,7 @@ $imgPath: "./../../images/koagi";
             line-height: 23px;
             border-radius: 50px;
             border: 2px solid;
+            font-family: "SCoreDream", serif;
 
             &.green {
                 color: #00ac4f;
@@ -1608,22 +1609,38 @@ table {
     }
 }
 
-.detail-guide {
+.detail-theme {
     margin-top: 128px;
 
     .top {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
     }
 
     .buttons {
         flex: 0 0 auto;
+        position: relative;
         width: 350px;
         height: 550px;
         padding-left: 20px;
         margin-left: -20px;
         overflow-y: auto;
         scroll-snap-type: y mandatory;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            width: 100%;
+            height: auto;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 350px;
+            height: 100%;
+            background-color: #223927;
+        }
 
         button {
             display: flex;
@@ -1672,6 +1689,14 @@ table {
 
     .visual {
         flex: 1;
+
+        img {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                height: auto;
+            }
+        }
+
     }
 
     .panel {
@@ -1716,11 +1741,17 @@ table {
             padding-top: 0;
             border-top: none;
         }
-
     }
 
     .map {
         margin-top: 108px;
+
+        img {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }
 

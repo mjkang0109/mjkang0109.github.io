@@ -98,6 +98,10 @@ const scripts = (() => {
         });
     };
 
+    const KEY = {
+        RIGHT: 39, LEFT: 37,
+    };
+
     const setTabs = () => {
         const tabs = document.querySelectorAll('[role="tab"]');
         const tabList = document.querySelector('[role="tablist"]');
@@ -112,10 +116,34 @@ const scripts = (() => {
 
         let tabFocus = 0;
 
+        const onChangeElement = ({
+            target
+        }) => {
+            if (!target) {
+                return;
+            }
+
+            const targetEl = document.getElementById(target);
+
+            if (!targetEl) {
+                return;
+            }
+
+            const parent = targetEl.parentElement;
+            const prev = parent.querySelector(`${targetEl.tagName}:not([hidden])`);
+            prev.setAttribute('hidden', true);
+            targetEl.removeAttribute('hidden');
+
+            console.log(prev, targetEl)
+
+        };
+
         const onChangeTab = (e) => {
             const target = e.target;
             const parent = target.parentElement;
             const grand = parent.parentElement;
+            const visual = target.dataset.visual;
+            const marker = target.dataset.marker;
 
             grand
                 .querySelectorAll('[aria-selected="true"]')
@@ -153,6 +181,14 @@ const scripts = (() => {
                 .querySelector(`#${target.getAttribute('aria-controls')}`)
                 .classList
                 .add('show');
+
+            if (visual) {
+                onChangeElement({target: visual});
+            }
+
+            if (marker) {
+                onChangeElement({target: marker});
+            }
         };
 
         const kbdNavigation = (e) => {

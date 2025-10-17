@@ -1,17 +1,16 @@
 ---
 group: koagi
 state:
-    default: 테마별공간탐방-국립세종수목원
-    type2: 테마별공간탐방-전시/이벤트-국립세종수목원
-    type3: 테마별공간탐방-힐링-국립세종수목원
-    type4: 테마별공간탐방-탐구/연구-국립세종수목원
+    default: 테마별공간탐방-국립정원문화원
+    type2: 테마별공간탐방-학습/체험-국립정원문화원
+    type3: 테마별공간탐방-탐구/전문-국립정원문화원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립세종수목원';
-    currentCategory = 'sejong';
+    currentName = '국립정원문화원';
+    currentCategory = 'garden';
     currentNav = 'tour';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
@@ -67,7 +66,6 @@ state:
                 default: 0,
                 type2: 1,
                 type3: 2,
-                type4: 3,
             };
 
             const currentIndex = pagesObj[state];

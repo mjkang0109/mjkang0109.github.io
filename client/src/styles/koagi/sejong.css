@@ -1706,6 +1706,7 @@ body.scrolling #header {
   line-height: 23px;
   border-radius: 50px;
   border: 2px solid;
+  font-family: "SCoreDream", serif;
 }
 #body .states .state.green {
   color: #00ac4f;
@@ -3125,12 +3126,22 @@ table + table {
 }
 .detail-guide .buttons {
   flex: 0 0 auto;
+  position: relative;
   width: 350px;
   height: 550px;
   padding-left: 20px;
   margin-left: -20px;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+}
+.detail-guide .buttons:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 350px;
+  height: 100%;
+  background-color: #223927;
 }
 .detail-guide .buttons button {
   display: flex;

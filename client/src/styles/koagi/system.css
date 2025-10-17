@@ -485,6 +485,7 @@ body.scrolling #header {
 
 .mGnb .list li .dep2 .ls {
   padding: 47px 0;
+  font-family: "SCoreDream", serif;
 }
 
 .mGnb .list li .dep2 .ls ul + ul {
@@ -1684,6 +1685,37 @@ body.scrolling #header {
   background-color: #413129;
   color: #fff;
 }
+#body .states {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+#body .states + .title {
+  margin-top: 14px;
+}
+#body .states .state {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  padding: 7px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 23px;
+  border-radius: 50px;
+  border: 2px solid;
+  font-family: "SCoreDream", serif;
+}
+#body .states .state.green {
+  color: #00ac4f;
+  border-color: #00ac4f;
+}
+#body .states .state.gray {
+  color: #6e6e6e;
+  border-color: #6e6e6e;
+}
 
 .gallery-photos {
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1834,33 +1866,6 @@ body.scrolling #header {
   .gallery-poster .img-wrap {
     padding-top: 132.7868852459%;
   }
-}
-.gallery-poster .states {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 32px;
-}
-.gallery-poster .states .state {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  box-sizing: border-box;
-  margin-right: 8px;
-  padding: 7px 20px;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 23px;
-  border-radius: 50px;
-  border: 2px solid;
-}
-.gallery-poster .states .state.green {
-  color: #00ac4f;
-  border-color: #00ac4f;
-}
-.gallery-poster .states .state.gray {
-  color: #6e6e6e;
-  border-color: #6e6e6e;
 }
 .gallery-poster .exhibition-info {
   margin-top: 25px;
@@ -3110,6 +3115,142 @@ table + table {
     width: 100%;
     overflow-x: auto;
   }
+}
+
+.detail-theme {
+  margin-top: 128px;
+}
+.detail-theme .top {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.detail-theme .buttons {
+  flex: 0 0 auto;
+  position: relative;
+  width: 350px;
+  height: 550px;
+  padding-left: 20px;
+  margin-left: -20px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+@media (max-width: 1199px) {
+  .detail-theme .buttons {
+    width: 100%;
+    height: auto;
+  }
+}
+.detail-theme .buttons:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 350px;
+  height: 100%;
+  background-color: #223927;
+}
+.detail-theme .buttons button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  text-align: left;
+  padding: 0 40px;
+  box-sizing: border-box;
+  scroll-snap-align: center;
+  background-color: #223927;
+}
+.detail-theme .buttons button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 310px;
+  height: 65px;
+  background-color: #3eaa36;
+  transform: translateY(-50%);
+  border-radius: 0 50px 50px 50px;
+  opacity: 0;
+}
+.detail-theme .buttons button span {
+  position: relative;
+  font-size: 18px;
+  font-family: "SCoreDream", serif;
+  color: #fff;
+  font-weight: 700;
+}
+.detail-theme .buttons button[aria-selected=true]:before {
+  opacity: 1;
+}
+.detail-theme .visual {
+  flex: 1;
+}
+@media (max-width: 1199px) {
+  .detail-theme .visual img {
+    width: 100%;
+    height: auto;
+  }
+}
+.detail-theme .panel {
+  margin-top: 114px;
+  text-align: center;
+}
+.detail-theme .panel > strong {
+  display: block;
+  position: relative;
+  padding-top: 35px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: #333;
+}
+.detail-theme .panel > strong:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 53px;
+  height: 1px;
+  background-color: #000;
+  transform: translateX(-50%);
+}
+.detail-theme .panel > p {
+  margin-top: 42px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+  font-family: "SCoreDream", serif;
+}
+.detail-theme .panel .tags {
+  margin-top: 77px;
+}
+.detail-theme .panel .gallery-items {
+  margin-top: 60px;
+  padding-top: 0;
+  border-top: none;
+}
+.detail-theme .map {
+  margin-top: 108px;
+}
+@media (max-width: 1199px) {
+  .detail-theme .map img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.tags li {
+  border-radius: 50px;
+  padding: 10px 17px;
+  border: 1px solid #d3d3d3;
 }
 
 @media all and (max-width: 1199px) {

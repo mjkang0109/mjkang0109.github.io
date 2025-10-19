@@ -18,6 +18,10 @@ $imgPath: "./../../images/koagi";
             }
         }
 
+        + .box.outline {
+            margin-top: 98px;
+        }
+
         li {
             width: 100px;
             position: relative;
@@ -51,6 +55,13 @@ $imgPath: "./../../images/koagi";
                 }
             }
 
+            &.current {
+                &:before {
+                    background-color: #3eaa36;
+                    border-color: #3eaa36;
+                }
+            }
+
             &:before {
                 content: "";
                 position: absolute;
@@ -81,8 +92,6 @@ $imgPath: "./../../images/koagi";
 
                 &.current {
                     &:before {
-                        background-color: #3eaa36;
-                        border-color: #3eaa36;
                         background-image: url("#{$imgPath}/icon-info-on.png");
                     }
                 }
@@ -92,11 +101,24 @@ $imgPath: "./../../images/koagi";
                 &:before {
                     background-image: url("#{$imgPath}/icon-payment-off.png");
                 }
+
+                &.current {
+                    &:before {
+                        background-image: url("#{$imgPath}/icon-payment-on.png");
+                    }
+                }
             }
 
             &.finish {
                 &:before {
                     background-image: url("#{$imgPath}/icon-finish-off.png");
+                }
+
+                &.current {
+                    &:before {
+
+                    background-image: url("#{$imgPath}/icon-finish-on.png");
+                    }
                 }
             }
         }

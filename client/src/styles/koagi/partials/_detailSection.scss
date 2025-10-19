@@ -65,6 +65,19 @@ $imgPath: "./../../images/koagi";
                     line-height: 34px;
                 }
             }
+
+            &.caution {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin-top: 30px;
+                padding-left: 0;
+                background: transparent;
+                font-size: 15px;
+                line-height: 25px;
+                color: #ec1010;
+                font-weight: 400;
+            }
         }
 
         @include m.respond-to(map.get(m.$max, 1199)) {

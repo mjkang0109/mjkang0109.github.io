@@ -1,15 +1,15 @@
 ---
 group: koagi
 state:
-    default: 예약시스템-교육프로그램신청정보-국립정원문화원
+    default: 예약시스템-교육프로그램신청정보-국립세종수목원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립정원문화원';
+    currentName = '국립세종수목원';
     currentCategory = 'system';
-    currentNav = 'gardenw';
+    currentNav = 'sejong';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -40,7 +40,7 @@ state:
 
         <!-- contents -->
         <div id="body">
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_eduInfoDetail`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_eduFinish`, {
             }) %>
         </div>
         <!-- // contents -->

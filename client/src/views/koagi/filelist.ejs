@@ -59,7 +59,7 @@ state:
                 if (item.items) {
                 item.items.map((depth) => {
                 %>
-                    <tr class="v3<%= depth.ui ? ' done' : '' ;%>">
+                    <tr class="v3<%= depth.ui ? ' done' : '' ;%><%= depth.design ? ' design' : '' ;%>">
                         <td class="depth1"><%= depth.title ;%></td>
                         <td class="depth2"></td>
                         <td class="depth3"></td>
@@ -77,7 +77,7 @@ state:
                     if (depth.pages) {
                     depth.pages.map((page) => {
                     %>
-                        <tr class="v3<%= page.ui ? ' done' : '' ;%>">
+                        <tr class="v3<%= page.ui ? ' done' : '' ;%><%= page.design ? ' design' : '' ;%>">
                             <td class="depth1"></td>
                             <td class="depth2"><%= page.title ;%></td>
                             <td class="depth3"></td>
@@ -96,7 +96,7 @@ state:
                         if (page.subItems) {
                         page.subItems.map((subItem) => {
                         %>
-                            <tr class="v3<%= subItem.ui ? ' done' : '' ;%>">
+                            <tr class="v3<%= subItem.ui ? ' done' : '' ;%><%= subItem.design ? ' design' : '' ;%>">
                                 <td class="depth1"></td>
                                 <td class="depth2"></td>
                                 <td class="depth3"><%= subItem.title ;%></td>

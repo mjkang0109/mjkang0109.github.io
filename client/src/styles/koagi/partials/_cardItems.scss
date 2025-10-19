@@ -1,0 +1,83 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin cardItems {
+    .card-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 56px 50px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        a {
+            display: block;
+
+            > p {
+                display: flex;
+                justify-content: space-between;
+                padding: 17px 20px;
+                background-color: #43a0aa;
+                color: #fff;
+
+                > strong {
+                    padding-left: 20px;
+                    background: url("#{$imgPath}/icon-chart.png") no-repeat 0 50%;
+                    background-size: 13px auto;
+                }
+
+                > span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        li {
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            border-radius: 20px;
+        }
+
+        .item-top {
+            position: relative;
+            min-height: 212px;
+            padding: 44px 120px 44px 32px;
+            box-sizing: border-box;
+
+            > strong {
+                display: block;
+                margin-top: 22px;
+                word-break: keep-all;
+                font-size: 22px;
+                line-height: 32px;
+                color: #000;
+            }
+        }
+
+        .status {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 100%;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+
+            &.green {
+                background-color: #3eaa36;
+            }
+
+            &.gray {
+                background-color: #969696;
+            }
+        }
+    }
+}

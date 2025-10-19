@@ -78,11 +78,6 @@ $imgPath: "./../../images/koagi";
     .states {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 32px;
-
-        + .title {
-            margin-top: 14px;
-        }
 
         .state {
             display: inline-flex;

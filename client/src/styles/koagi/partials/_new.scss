@@ -12,6 +12,8 @@
 @use "./../partials/tags" as tags;
 @use "./../partials/step" as step;
 @use "./../partials/buttons" as buttons;
+@use "./../partials/board" as board;
+@use "./../partials/cardItems" as cardItems;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -831,3 +833,5 @@ input[type="radio"] {
 
 @include tags.tags;
 @include step.step;
+@include board.board;
+@include cardItems.cardItems;

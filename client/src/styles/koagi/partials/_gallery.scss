@@ -377,5 +377,13 @@ $imgPath: "./../../images/koagi";
                 background: url("#{$imgPath}/icon-calendar.png") no-repeat 50% 50%;
             }
         }
+
+        .states {
+            margin-top: 32px;
+
+            + .title {
+                margin-top: 14px;
+            }
+        }
     }
 }

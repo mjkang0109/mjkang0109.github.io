@@ -9,7 +9,7 @@ state:
     <%
     currentName = '국립정원문화원';
     currentCategory = 'system';
-    currentNav = 'gardenw';
+    currentNav = 'garden';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -40,7 +40,7 @@ state:
 
         <!-- contents -->
         <div id="body">
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_eduInfoDetail`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_eduFinish`, {
             }) %>
         </div>
         <!-- // contents -->

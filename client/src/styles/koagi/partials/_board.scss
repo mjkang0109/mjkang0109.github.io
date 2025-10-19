@@ -1,0 +1,73 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin board {
+    .board-detail {
+        border-top: 2px solid #444;
+        padding-top: 54px;
+
+        .states {
+            justify-content: center;
+
+            + strong {
+                margin-top: 28px;
+            }
+        }
+
+        > strong {
+            display: block;
+            text-align: center;
+            font-size: 23px;
+            line-height: 33px;
+            color: #333;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        .info {
+            margin-top: 48px;
+            padding: 24px 10px;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+
+            li {
+                display: flex;
+                justify-content: center;
+                gap: 12px;
+                font-size: 16px;
+                color: #000;
+            }
+        }
+
+        .text-wrap {
+            padding: 104px 0 70px;
+            border-bottom: 1px solid #e0e0e0;
+
+            .img-wrap {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 90px;
+        }
+
+        .button-navy {
+            display: block;
+            margin: 87px auto 0;
+        }
+    }
+}

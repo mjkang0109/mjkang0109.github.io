@@ -48,4 +48,25 @@ $imgPath: "./../../images/koagi";
         background-color: #242424;
         color: #fff;
     }
+    .button-green {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 28px 54px;
+        background-color: #3cad39;
+        border-radius: 10px;
+        font-size: 17px;
+        color: #fff !important;
+        font-weight: 700;
+    }
+    .button-green-outline {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 28px 54px;
+        border-radius: 10px;
+        color: #3cad39 !important;
+        border: 2px solid #3cad39;
+        font-weight: 700;
+    }
 }

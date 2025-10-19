@@ -1,0 +1,111 @@
+---
+group: koagi
+state:
+    default: 이동형클리닉-신청청안내-국립세종수목원
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립세종수목원';
+    currentCategory = 'sejong';
+    currentNav = 'companion';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+        type: 'plant',
+        currentNav: '식물 연구',
+        key: '국민이 행복한 수목원',
+        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: '이동형 반려식물 클리닉',
+        depths: [
+        '반려식물',
+        '이동형 반려식물 클리닉',
+        ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+            items: ['소개', '신청안내', '출동 일정',],
+            current: 1,
+            }) %>
+
+            <%
+            const item = {
+                badge: '2025년 하반기',
+                title: '이동형 반려식물 클리닉 수요조사 안내',
+                period: '2025-03-01 ~ 2025-04-28',
+            }
+            %>
+            <ul class="card-items">
+            <% for (let i = 0; i < 6; i++ ) { %>
+                <li>
+                    <a href="#">
+                        <div class="item-top">
+                            <span class="status <%= i % 2 === 0 ? 'green' : 'gray'%>"><%= i % 2 === 0 ? '진행' : '종료'%></span>
+                            <span class="states">
+                                <span class="state green"><%= item.badge %></span>
+                            </span>
+                            <strong><%= item.title %></strong>
+                        </div>
+                        <p class="">
+                            <strong>수요조사</strong>
+                            <span><%= item.period %></span>
+                        </p>
+                    </a>
+                </li>
+            <% } %>
+            </ul>
+
+            <!-- pagination -->
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_pagination`, {
+            }) %>
+            <!-- // pagination -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentCategory,
+        currentName,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

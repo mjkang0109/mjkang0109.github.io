@@ -1,0 +1,30 @@
+<div class="board-detail">
+    <div class="states">
+        <span class="state green">식물관리법</span>
+    </div>
+    <strong>2025년 하반기 이동형 반려식물 클리닉 수요조사 안내</strong>
+    <ul class="info">
+        <li>
+            <strong>진행기간</strong>
+            <span>2025-03-01 ~ 2025-04-28</span>
+        </li>
+    </ul>
+    <div class="text-wrap">
+        <span class="img-wrap">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: 960,
+        height: 1340,
+        isSimply: true,
+        source: `${imgPath}/dummy-poster-companion.png`,
+        alt: '이동형 반려식물 클리닉 안내',
+        }); %>
+        </span>
+        <div class="buttons">
+            <a href="#" class="button-green">온라인 신청하기</a>
+            <a href="#" class="button-green-outline">신청내역 보기</a>
+        </div>
+    </div>
+    <button type="button" class="button-navy">
+        목록
+    </button>
+</div>

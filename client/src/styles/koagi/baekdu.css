@@ -2019,10 +2019,6 @@ body.scrolling #header {
 #body .states {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 32px;
-}
-#body .states + .title {
-  margin-top: 14px;
 }
 #body .states .state {
   display: inline-flex;
@@ -2405,6 +2401,12 @@ body.scrolling #header {
   width: 15px;
   height: 15px;
   background: url("./../../images/koagi/icon-calendar.png") no-repeat 50% 50%;
+}
+.gallery-items .states {
+  margin-top: 32px;
+}
+.gallery-items .states + .title {
+  margin-top: 14px;
 }
 
 .dot-info {
@@ -3109,6 +3111,18 @@ input[type=radio] + label:after {
     line-height: 34px;
   }
 }
+.detail-section > strong.caution {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 0;
+  background: transparent;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ec1010;
+  font-weight: 400;
+}
 @media (max-width: 1199px) {
   .detail-section > .left,
   .detail-section > .right {
@@ -3278,6 +3292,88 @@ input[type=radio] + label:after {
   padding: 38px 30px;
   border: 1px solid #e5e5e5;
   border-radius: 0;
+}
+.box.medium {
+  max-width: 718px;
+  margin: 0 auto;
+  padding: 71px 20px 85px;
+}
+
+.box-desc {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 27px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+  box-sizing: border-box;
+}
+.box-desc.cyan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  background-color: #58b2a8;
+  color: #fff;
+}
+@media (max-width: 1199px) {
+  .box-desc.cyan {
+    flex-direction: column;
+  }
+}
+.box-desc.cyan strong {
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #000;
+  background-color: #fff;
+  font-weight: 700;
+}
+.box-desc.cyan span {
+  margin-left: 20px;
+  font-weight: 600;
+}
+.box-desc ~ .table-gray {
+  margin-top: 54px;
+}
+.box-desc ~ .table-gray th,
+.box-desc ~ .table-gray td {
+  border-left: none;
+  border-right: none;
+}
+.box-desc ~ .total {
+  margin-top: 27px;
+}
+.box-desc ~ .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 94px;
+}
+
+.box-info {
+  text-align: center;
+}
+.box-info strong {
+  display: inline-block;
+  padding-top: 132px;
+  background: url("./../../images/koagi/icon-finish.png") no-repeat 50% 0;
+  background-size: 89px auto;
+  font-size: 22px;
+}
+.box-info p {
+  margin-top: 23px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #6d6d6d;
+}
+.box-info + .buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 82px;
 }
 
 .calendar {
@@ -3779,7 +3875,7 @@ table + table {
   box-sizing: border-box;
   margin: 60px auto 0;
   background-color: #013569;
-  padding: 23px 0;
+  padding: 23px 43px;
   border-radius: 10px;
   color: #fff;
   font-size: 17px;
@@ -3801,7 +3897,7 @@ table + table {
   min-width: 150px;
   box-sizing: border-box;
   background-color: #013569;
-  padding: 23px 0;
+  padding: 23px 43px;
   border-radius: 10px;
   color: #fff;
   font-size: 17px;
@@ -3815,6 +3911,36 @@ table + table {
     border-radius: 7px;
     font-size: 15px;
   }
+}
+
+.button-black {
+  padding: 15px 27px;
+  font-size: 16px;
+  background-color: #242424;
+  color: #fff;
+}
+
+.button-green {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 54px;
+  background-color: #3cad39;
+  border-radius: 10px;
+  font-size: 17px;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.button-green-outline {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 54px;
+  border-radius: 10px;
+  color: #3cad39 !important;
+  border: 2px solid #3cad39;
+  font-weight: 700;
 }
 
 .schedule {
@@ -3984,6 +4110,9 @@ table + table {
     margin-top: 40px;
   }
 }
+.info-step + .box.outline {
+  margin-top: 98px;
+}
 .info-step li {
   width: 100px;
   position: relative;
@@ -4021,6 +4150,10 @@ table + table {
     top: 40px;
   }
 }
+.info-step li.current:before {
+  background-color: #3eaa36;
+  border-color: #3eaa36;
+}
 .info-step li:before {
   content: "";
   position: absolute;
@@ -4049,15 +4182,78 @@ table + table {
   background-image: url("./../../images/koagi/icon-info-off.png");
 }
 .info-step li.info.current:before {
-  background-color: #3eaa36;
-  border-color: #3eaa36;
   background-image: url("./../../images/koagi/icon-info-on.png");
 }
 .info-step li.payment:before {
   background-image: url("./../../images/koagi/icon-payment-off.png");
 }
+.info-step li.payment.current:before {
+  background-image: url("./../../images/koagi/icon-payment-on.png");
+}
 .info-step li.finish:before {
   background-image: url("./../../images/koagi/icon-finish-off.png");
+}
+.info-step li.finish.current:before {
+  background-image: url("./../../images/koagi/icon-finish-on.png");
+}
+
+.board-detail {
+  border-top: 2px solid #444;
+  padding-top: 54px;
+}
+.board-detail .states {
+  justify-content: center;
+}
+.board-detail .states + strong {
+  margin-top: 28px;
+}
+.board-detail > strong {
+  display: block;
+  text-align: center;
+  font-size: 23px;
+  line-height: 33px;
+  color: #333;
+}
+@media (max-width: 1199px) {
+  .board-detail > strong {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.board-detail .info {
+  margin-top: 48px;
+  padding: 24px 10px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.board-detail .info li {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #000;
+}
+.board-detail .text-wrap {
+  padding: 104px 0 70px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.board-detail .text-wrap .img-wrap {
+  display: flex;
+  justify-content: center;
+}
+.board-detail .text-wrap .img-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+.board-detail .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 90px;
+}
+.board-detail .button-navy {
+  display: block;
+  margin: 87px auto 0;
 }
 
 @media all and (max-width: 1199px) {

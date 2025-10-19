@@ -243,19 +243,19 @@
         <div class="detail-sub">
             <div class="left">
                 <strong>숙소 이용안내</strong>
-                <div class="box outline">
+                <ul class="box outline">
                     <li>체크인은 오후 3시부터 가능하며, 체크아웃은 오전 11시까지 완료해 주시기 바랍니다.</li>
                     <li>입실 시 예약자 본인 확인을 위해 신분증을 반드시 지참해 주셔야 합니다.</li>
                     <li>쾌적한 숙박 환경을 위해 객실 내 흡연 및 취사는 금지되어 있습니다.</li>
-                </div>
+                </ul>
             </div>
             <div class="right">
                 <strong>숙소 취소 및 환불</strong>
-                <div class="box outline">
+                <ul class="box outline">
                     <li>이용일 3일 전까지 취소 시 전액 환불되며, 이후에는 환불 규정에 따라 부분 환불이 적용됩니다.</li>
                     <li>당일 취소 또는 무단 불참(No-Show)의 경우 환불이 불가합니다.</li>
                     <li>기상 악화, 천재지변 등 불가피한 사유 발생 시 별도의 규정에 따라 환불이 진행됩니다.</li>
-                </div>
+                </ul>
             </div>
         </div>
     </article>
@@ -284,9 +284,9 @@
             },
         ];
         %>
-        <strong>숙소정보</strong>
+        <strong>이동수단 차량정보</strong>
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_detail`, {
-        title: '제1연수동',
+        title: '영주역~수목원 셔틀버스',
         dummy: 'edu2',
         items: vehicles,
         hideMap: true,

@@ -1,25 +1,16 @@
 ---
 group: koagi
 state:
-    default: 산출물
+    default: 산출물-전체
+    baekdu: 산출물-국립백두대간수목원
+    sejong: 산출물-국립세종수목원
+    garden: 산출물-국립정원문화원
+    native: 산출물-국립한국자생식물원
+    system: 산출물-예약시스템
 ---
 <!DOCTYPE HTML>
-<!--[if lt IE 7]>
-<html class="lt-ie10 lt-ie9 lt-ie8 ie6"
-      lang="ko-KR"><![ingif]-->
-<!--[if IE 7]>
-<html class="lt-ie10 lt-ie9 lt-ie8 ie7"
-      lang="ko-KR"><![ingif]-->
-<!--[if IE 8]>
-<html class="lt-ie10 lt-ie9 ie8"
-      lang="ko-KR"><![ingif]-->
-<!--[if IE 9]>
-<html class="lt-ie10 ie9"
-      lang="ko-KR"><![ingif]-->
-<!--[if !IE]><!-->
-<html lang="ko-KR"><!--<![ingif]-->
+<html lang="ko-KR">
 <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_outputHead`, {}); %>
-
 <body>
     <div id="wrap">
         <div id="header">
@@ -57,84 +48,83 @@ state:
             </thead>
             <tbody>
             <%
-            navItems.map((item) => {
-                if (item.title) {
+                const sliceItems = state === 'default' ? navItems : navItems.slice(nav[state], nav[state] + 1);
+                sliceItems.map((item) => {
             %>
-            <tr>
-                <th colspan="11"><%= item.title %></th>
-            </tr>
-
-            <%
-            if (item.items) {
-                item.items.map((depth) => {
-            %>
-                <tr class="v3<%= depth.ui ? ' done' : '' %>">
-                    <td class="depth1"><%= depth.title %></td>
-                    <td class="depth2"></td>
-                    <td class="depth3"></td>
-                    <td class="depth4"></td>
-                    <td class="design"><%= depth.design ? 'O' : '' %></td>
-                    <td class="ui"><%= depth.ui ? 'O' : '' %></td>
-                    <td class="fileName"><%= depth.name %>.html</td>
-                    <td class="view">
-                        <a href="./<%= item.name %>/<%= depth.name %>.html"
-                           target="_blank">View
-                        </a>
-                    </td>
+                <tr>
+                    <th colspan="11"><%= item.title ;%></th>
                 </tr>
+
                 <%
-                if (depth.pages) {
-                    depth.pages.map((page) => {
+                if (item.items) {
+                item.items.map((depth) => {
                 %>
-                    <tr class="v3<%= page.ui ? ' done' : '' %>">
-                        <td class="depth1"></td>
-                        <td class="depth2"><%= page.title %></td>
+                    <tr class="v3<%= depth.ui ? ' done' : '' ;%>">
+                        <td class="depth1"><%= depth.title ;%></td>
+                        <td class="depth2"></td>
                         <td class="depth3"></td>
                         <td class="depth4"></td>
-                        <td class="design"><%= page.design ? 'O' : '' %></td>
-                        <td class="ui"><%= page.ui ? 'O' : '' %></td>
-                        <td class="fileName"><%= page.name %>.html</td>
+                        <td class="design"><%= depth.design ? 'O' : '' ;%></td>
+                        <td class="ui"><%= depth.ui ? 'O' : '' ;%></td>
+                        <td class="fileName"><%= depth.name ;%>.html</td>
                         <td class="view">
-                            <a href="./<%= item.name %>/<%= page.name %>.html"
+                            <a href="./<%= item.name ;%>/<%= depth.name ;%>.html"
                                target="_blank">View
                             </a>
                         </td>
                     </tr>
-
                     <%
-                    if (page.subItems) {
-                        page.subItems.map((subItem) => {
+                    if (depth.pages) {
+                    depth.pages.map((page) => {
                     %>
-                        <tr class="v3<%= subItem.ui ? ' done' : '' %>">
+                        <tr class="v3<%= page.ui ? ' done' : '' ;%>">
                             <td class="depth1"></td>
-                            <td class="depth2"></td>
-                            <td class="depth3"><%= subItem.title %></td>
+                            <td class="depth2"><%= page.title ;%></td>
+                            <td class="depth3"></td>
                             <td class="depth4"></td>
-                            <td class="design"><%= subItem.design ? 'O' : '' %></td>
-                            <td class="ui"><%= subItem.ui ? 'O' : '' %></td>
-                            <td class="fileName"><%= subItem.name %>.html</td>
+                            <td class="design"><%= page.design ? 'O' : '' ;%></td>
+                            <td class="ui"><%= page.ui ? 'O' : '' ;%></td>
+                            <td class="fileName"><%= page.name ;%>.html</td>
                             <td class="view">
-                                <a href="./<%= item.name %>/<%= subItem.name %>.html"
+                                <a href="./<%= item.name ;%>/<%= page.name ;%>.html"
                                    target="_blank">View
                                 </a>
                             </td>
                         </tr>
-                    <%
+
+                        <%
+                        if (page.subItems) {
+                        page.subItems.map((subItem) => {
+                        %>
+                            <tr class="v3<%= subItem.ui ? ' done' : '' ;%>">
+                                <td class="depth1"></td>
+                                <td class="depth2"></td>
+                                <td class="depth3"><%= subItem.title ;%></td>
+                                <td class="depth4"></td>
+                                <td class="design"><%= subItem.design ? 'O' : '' ;%></td>
+                                <td class="ui"><%= subItem.ui ? 'O' : '' ;%></td>
+                                <td class="fileName"><%= subItem.name ;%>.html</td>
+                                <td class="view">
+                                    <a href="./<%= item.name ;%>/<%= subItem.name ;%>.html"
+                                       target="_blank">View
+                                    </a>
+                                </td>
+                            </tr>
+                        <%
                         });
+                        }
+                        %>
+                    <%
+                    });
                     }
                     %>
                 <%
-                    });
+                });
                 }
                 %>
-            <%
-                });
-            }
-            %>
 
             <%
-                }
-            })
+            });
             %>
             </tbody>
         </table>

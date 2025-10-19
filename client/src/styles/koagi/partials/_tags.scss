@@ -1,0 +1,13 @@
+@mixin tags {
+    .tags {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        li {
+            border-radius: 50px;
+            padding: 10px 17px;
+            border: 1px solid #d3d3d3;
+        }
+    }
+}

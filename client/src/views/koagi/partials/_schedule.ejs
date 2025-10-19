@@ -1,4 +1,5 @@
 <%
+var buttonText = buttonText || '신청하기';
 const head = [
     '선택',
     '이용일시',
@@ -15,36 +16,39 @@ const body = [
     '선착순',
     '<strong>20</strong><span>/</span><strong>40</strong>',
     '<strong>20</strong><span>/</span><strong>40</strong>',
-    '신청가능'
-]
+    '신청가능',
+];
 %>
-<div class="schedule">
-    <table class="table-black">
-        <thead>
-        <tr>
-            <% head.map(h => { %>
-                <th><%= h %></th>
-            <% }); %>
-        </tr>
-        </thead>
-        <tbody>
-        <% for(let j = 0; j < 4; j++) { %>
-        <tr>
-            <% body.map((b, i) => { %>
-                <td>
-                    <% if (i === 0) { %>
-                        <input type="checkbox"
-                               id="inputSchedule<%= j + 1 %>"
-                               name="input-schedule">
-                        <label for="inputSchedule<%= j + 1 %>"></label>
+<div class="schedule-wrap">
+    <div class="schedule">
+        <table class="table-black">
+            <thead>
+            <tr>
+                <% head.map(h => { %>
+                    <th><%= h; %></th>
+                <% }); %>
+            </tr>
+            </thead>
+            <tbody>
+            <% for(let j = 0; j < 4; j++) { %>
+                <tr>
+                    <% body.map((b, i) => { %>
+                        <td>
+                            <% if (i === 0) { %>
+                                <input type="checkbox"
+                                       id="inputSchedule<%= j + 1; %>"
+                                       name="input-schedule">
+                                <label for="inputSchedule<%= j + 1; %>"></label>
 
-                    <% } %>
-                    <%- b %>
-                </td>
-            <% }); %>
-        </tr>
-        <% } %>
-        </tbody>
-    </table>
-    <button type="button" class="button-apply">신청하기</button>
+                            <% } %>
+                            <%- b; %>
+                        </td>
+                    <% }); %>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+    <button type="button"
+            class="button-apply"><%= buttonText; %></button>
 </div>

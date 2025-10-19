@@ -1,0 +1,263 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin detailView {
+    .detail-view {
+        display: flex;
+        width: 100%;
+        gap: 96px;
+        border-top: 2px solid #444;
+        padding-top: 35px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+        }
+
+        .left-top {
+            position: relative;
+        }
+
+        .right {
+            flex: 1;
+            padding-top: 27px;
+
+            dfn {
+                font-size: 40px;
+                line-height: 52px;
+                font-family: "SCoreDream", serif;
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            ul {
+                margin-top: 50px;
+            }
+
+            li {
+                display: flex;
+                margin-bottom: 20px;
+                font-size: 17px;
+                line-height: 27px;
+                font-family: "SCoreDream", serif;
+
+                strong {
+                    flex-shrink: 0;
+                    width: 80px;
+                }
+
+                span {
+                    flex: 1;
+                }
+            }
+
+            .links {
+                display: flex;
+                justify-content: space-between;
+                gap: 24px;
+                margin-top: 94px;
+            }
+
+            .link-map {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+                height: 72px;
+                border-radius: 10px;
+                font-size: 17px;
+                font-family: "SCoreDream", serif;
+
+                &.green {
+                    background-color: #3cad39;
+                    color: #fff;
+
+                    .link-text {
+                        background-image: url("#{$imgPath}/icon-mark-white.png");
+                    }
+                }
+
+                &.yellow {
+                    background-color: #361f1f;
+                    color: #f6df00;
+
+                    .link-text {
+                        background-image: url("#{$imgPath}/icon-mark-yellow.png");
+                    }
+                }
+            }
+
+            .link-text {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 27px;
+                padding-left: 36px;
+                background-repeat: no-repeat;
+                background-position: 0 50%;
+                background-size: auto 27px;
+            }
+        }
+
+        .button-next,
+        .button-prev {
+            position: absolute;
+            top: 50%;
+            width: 72px;
+            height: 72px;
+            background: url("#{$imgPath}/icon-circle-right.png") no-repeat 50% 50%;
+            box-shadow: 0 0 10px rgba(148 148 148 / .19);
+            border-radius: 100%;
+            background-size: 40px;
+        }
+
+        .button-next {
+            right: -36px;
+            transform: translateY(-50%);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                right: 0;
+            }
+        }
+
+        .button-prev {
+            left: -36px;
+            transform: translateY(-50%) rotate(180deg);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                left: 0;
+            }
+        }
+
+        .swiper {
+            overflow: hidden;
+            width: 650px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
+
+            li {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        .thumb-swiper {
+            width: 650px;
+            margin-top: 40px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
+
+            ul {
+                gap: 20px;
+            }
+
+            li {
+                flex: 1;
+                cursor: pointer;
+            }
+        }
+
+        .img-wrap {
+            display: block;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        + .description {
+            margin-top: 97px;
+            padding: 70px 0 130px;
+            border: solid #e5e5e5;
+            border-width: 1px 0;
+            font-size: 16px;
+            line-height: 32px;
+            color: #000;
+            font-family: "SCoreDream", serif;
+            font-weight: 400;
+        }
+
+        .pagination {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            bottom: 33px;
+            left: 50%;
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 11px 20px;
+            transform: translateX(-50%);
+
+            > span {
+                display: inline-flex;
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                background-color: #e1e1e1;
+                cursor: pointer;
+
+                &[aria-current="true"] {
+                    background-color: #404040;
+                }
+            }
+        }
+
+        + .detail-items {
+            margin-top: 92px;
+            padding-top: 92px;
+            border-top: 1px solid #e5e5e5;
+        }
+    }
+
+    .detail-items {
+        > strong {
+            display: block;
+            padding-left: 38px;
+            background: url("#{$imgPath}/icon-leaves.png") no-repeat 0 50%;
+            font-size: 25px;
+            line-height: 35px;
+            font-family: "SCoreDream", serif;
+        }
+
+        > ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 25px;
+            margin-top: 40px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-wrap: wrap;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        li {
+            text-align: center;
+
+            .img-wrap {
+                display: block;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            strong {
+                display: block;
+                margin-top: 37px;
+                font-size: 20px;
+                line-height: 30px;
+                font-family: "SCoreDream", serif;
+            }
+
+            p {
+                margin-top: 10px;
+                font-size: 16px;
+                line-height: 26px;
+                font-family: "SCoreDream", serif;
+            }
+        }
+    }
+}

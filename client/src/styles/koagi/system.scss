@@ -9,10 +9,19 @@
 #header.system {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.06);
 
-    .mh h1 {
-        width: 215px;
-        @include m.respond-to(map.get(m.$max, 1199)) {
-            width: auto;
+    .mh {
+        .bg {
+            display: flex;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: block;
+            }
+        }
+
+        h1 {
+            width: 215px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: auto;
+            }
         }
     }
 }
@@ -21,7 +30,7 @@
     display: flex;
 
     .dep1 {
-        padding: 0 25px
+        padding: 0 20px
     }
 
     li .dep2 .ti .t {

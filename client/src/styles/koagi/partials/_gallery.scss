@@ -1,0 +1,381 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin gallery {
+    .gallery-photos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 50px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 50px 20px;
+        }
+
+        .img-wrap {
+            width: 325px;
+            height: 240px;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-top: math.div(240, 325) * 100%;
+            }
+        }
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 70px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 50px 20px;
+        }
+
+        .img-wrap {
+            width: 430px;
+            height: 316px;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-top: math.div(316, 430) * 100%;
+            }
+        }
+
+        strong {
+            justify-content: space-between;
+        }
+    }
+    .gallery-box {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 70px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 50px 20px;
+        }
+
+        a {
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 428px;
+                height: 100%;
+                border: 1px solid #e7e7e7;
+                transform: translateX(-50%);
+                pointer-events: none;
+                border-radius: 20px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: calc(100% - 2px);
+                }
+            }
+        }
+
+        .img-wrap {
+            width: 430px;
+            height: 316px;
+            border-radius: 20px 20px 0 0;
+            z-index: 2;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-top: math.div(316, 430) * 100%;
+            }
+        }
+
+        .info-wrap {
+            padding: 9px 44px 45px;
+            text-align: left;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 9px 15px 15px;
+            }
+        }
+
+        .education-info {
+            margin-top: 35px;
+
+            li {
+                display: flex;
+                margin-bottom: 10px;
+                font-size: 15px;
+                line-height: 25px;
+                font-family: "SCoreDream", serif;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex-wrap: wrap;
+                }
+
+                strong {
+                    flex-shrink: 0;
+                    width: 62px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: flex;
+                        width: 100%;
+                    }
+                }
+
+                span {
+                    flex: 1;
+                }
+            }
+        }
+
+        .badge-round {
+            display: inline-flex;
+            margin-top: 9px;
+            font-size: 13px;
+
+            &.green {
+                padding: 7px 18px;
+                color: #00ac4f;
+                border: 1px solid #00ac4f;
+                border-radius: 100px;
+                font-weight: 500;
+                font-family: "SCoreDream", serif;
+            }
+        }
+    }
+    .gallery-poster {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 65px 55px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            grid-template-columns: 1fr 1fr;
+            gap: 55px 20px;
+        }
+
+        .img-wrap {
+            width: 305px;
+            height: 405px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-top: math.div(405, 305) * 100%;
+            }
+        }
+
+        .exhibition-info {
+            margin-top: 25px;
+
+            li {
+                display: flex;
+                font-size: 15px;
+                font-family: "SCoreDream", serif;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+
+            strong {
+                flex: 0 0 auto;
+                width: 40px;
+                color: #666;
+            }
+
+            span {
+                color: #000;
+                font-weight: 700;
+            }
+        }
+    }
+    .gallery-poster-edu {
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 50px 20px;
+        }
+
+        > li:not(:last-of-type) {
+            padding-bottom: 60px;
+            margin-bottom: 60px;
+            border-bottom: solid 1px #e0e3e7;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: flex-start;
+            gap: 55px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-wrap: wrap;
+            }
+
+            .title {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin-top: 0;
+            }
+        }
+
+        .img-wrap {
+            flex: 0 0 auto;
+            width: 220px;
+            height: 294px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+            }
+        }
+
+        .title {
+            align-items: flex-start;
+            gap: 10px;
+
+            strong {
+                margin-top: 16px;
+            }
+        }
+
+        .info-wrap {
+            flex: 1;
+        }
+    }
+    .gallery-items {
+        display: grid;
+        padding-top: 70px;
+        border-top: 2px solid #444;
+        background-color: #fff;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            grid-template-columns: 1fr 1fr;
+            padding-top: 30px;
+        }
+
+        &.gallery-grid {
+            .title {
+                justify-content: space-between;
+            }
+        }
+
+        &.gallery-box {
+            .title {
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+
+        &.gallery-photos {
+            .title.line-clamp {
+                justify-content: flex-start;
+
+                + .date {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        &.gallery-poster {
+            border-top: none;
+
+            .title {
+                justify-content: flex-start;
+                margin-top: 20px;
+                text-align: left;
+            }
+        }
+
+        &.gallery-poster-edu {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr;
+            }
+
+            a {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: 20px;
+                }
+            }
+
+            .img-wrap {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 140px;
+                    height: 185px;
+                }
+            }
+
+            .title {
+                text-align: left;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    min-height: 195px;
+                    font-size: 19px;
+                    line-height: 20px;
+                }
+
+                strong {
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        li {
+            position: relative;
+        }
+
+        .img-wrap {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                height: 0;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                object-fit: cover
+            }
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 38px;
+            font-family: "SCoreDream", serif;
+            font-size: 22px;
+            line-height: 32px;
+            text-align: center;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: 10px;
+                flex-wrap: wrap;
+                font-size: 17px;
+                line-height: 26px;
+            }
+
+            &.line-clamp {
+                strong {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    -webkit-line-clamp: 1;
+                }
+            }
+
+            strong {
+                font-weight: 600;
+            }
+        }
+
+        .desc {
+            margin-top: 15px;
+            font-size: 15px;
+            line-height: 25px;
+            font-family: "SCoreDream", serif;
+            text-align: center;
+        }
+
+        .date {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            font-size: 15px;
+            line-height: 25px;
+            color: #727272;
+
+            &:before {
+                content: "";
+                display: inline-flex;
+                width: 15px;
+                height: 15px;
+                background: url("#{$imgPath}/icon-calendar.png") no-repeat 50% 50%;
+            }
+        }
+    }
+}

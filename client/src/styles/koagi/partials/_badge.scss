@@ -1,0 +1,113 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+
+@mixin badge {
+    .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        width: 100%;
+        order: -1;
+    }
+
+    .badge,
+    .link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 33px;
+        border-radius: 5px;
+        padding: 0 18px;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "SCoreDream", serif;
+        white-space: nowrap;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            height: 26px;
+            border-radius: 5px;
+            padding: 0 8px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        &.cyan {
+            background-color: #3baf89;
+            border-color: #3baf89;
+            color: #fff;
+        }
+
+        &.green {
+            color: #fff;
+            border-color: #30a643;
+            background-color: #30a643;
+        }
+
+        &.orange {
+            color: #fff;
+            border-color: #f2713f;
+            background-color: #f2713f;
+        }
+
+        &.gray {
+            color: #fff;
+            background-color: #818181;
+            border-color: #818181;
+        }
+
+        &.outline {
+            color: #000;
+            border: 1px solid #d1d1d1;
+            background-color: #fff;
+        }
+
+        &.navy {
+            background-color: #013569;
+            color: #fff;
+        }
+
+        &.navyBlue {
+            background-color: #413129;
+            color: #fff;
+        }
+    }
+
+    .states {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 32px;
+
+        + .title {
+            margin-top: 14px;
+        }
+
+        .state {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            box-sizing: border-box;
+            margin-right: 8px;
+            padding: 7px 20px;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 23px;
+            border-radius: 50px;
+            border: 2px solid;
+            font-family: "SCoreDream", serif;
+
+            &.green {
+                color: #00ac4f;
+                border-color: #00ac4f;
+            }
+
+            &.gray {
+                color: #6e6e6e;
+                border-color: #6e6e6e;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+<%
+var items = items || [];
+var title = title || '';
+var category = category || '';
+%>
+<article class="detail-section">
+    <strong><%= title; %></strong>
+    <ul class="item-horizon">
+        <%
+        items.map((b, i) => {
+        %>
+            <li>
+                <strong><%= b[0]; %></strong>
+                <% if (b[1]) { %>
+                    <div>
+                        <% if (typeof b[1] === 'string') { %>
+                            <%= b[1]; %>
+                        <% } %>
+                        <% if (typeof b[1] === 'object') {
+                            const type = b[1][0];
+                        if (type === 'select') {
+                        %>
+                            <label for="<%= category %>-select-<%= i %>">
+                                <select id="<%= category %>-select<%= i %>"
+                                        class="select">
+                                    <option value=""><%= b[1][1] %></option>
+                                </select>
+                            </label>
+                        <% } %>
+                        <% if (type === 'radio') { %>
+                            <%
+                            b[1][1].map((radio, j) => { %>
+                                <input type="radio"
+                                       id="<%= category %>-radio<%= j + 1; %>"
+                                       name="<%= category %>-radio<%= i; %>">
+                                <label for="<%= category %>-radio<%= j + 1; %>">
+                                    <%= radio; %>
+                                </label>
+                        <% });
+                        } %>
+                        <% if (type === 'checkbox') { %>
+                            <%
+                            b[1][1].map((check, j) => { %>
+                                <input type="checkbox"
+                                       id="<%= category %>-check<%= j + 1; %>"
+                                       name="check<%= i; %>">
+                                <label for="<%= category %>-check<%= j + 1; %>">
+                                    <%= check; %>
+                                </label>
+                                <% if (check === '기타') { %>
+                                    <label for="<%= category %>-radio-input<%= j + 1 %>">
+                                        <input type="text"
+                                               id="<%= category %>-radio-input<%= j + 1 %>"
+                                               class="it"
+                                               placeholder="텍스트를 입력하세요">
+                                    </label>
+                                <% } %>
+                        <% });
+                        } %>
+                        <% if (type === 'input') { %>
+                            <label for="<%= category %>-input<%= i + 1 %>">
+                                <input type="text"
+                                       id="<%= category %>-input<%= i + 1 %>"
+                                       class="it"
+                                       placeholder="<%- b[1][1] %>">
+                            </label>
+                        <% } %>
+                        <% } %>
+                        <% if (b.length === 3) { %>
+                            <%- b[2] %>
+                        <% } %>
+                    </div>
+                <% } %>
+                <% if (b[2] && b.length !== 3) { %>
+                    <strong>
+                        <%= b[2]; %>
+                    </strong>
+                <% } %>
+                <% if (b[3]) { %>
+                    <div>
+                        <% if (typeof b[3] === 'string') { %>
+                            <%= b[3]; %>
+                        <% } %>
+                        <% if (typeof b[3] === 'object') {
+                            const type = b[3][0];
+                        if (type === 'input') {
+                        %>
+                            <label for="<%= category %>-input<%= i + 1 %>">
+                                <input type="text"
+                                       id="<%= category %>-input<%= i + 1 %>"
+                                       class="it"
+                                       placeholder="<%- b[3][1] %>">
+                            </label>
+                        <% } %>
+                        <% } %>
+                    </div>
+                <% } %>
+            </li>
+        <% }); %>
+    </ul>
+</article>

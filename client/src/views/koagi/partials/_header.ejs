@@ -118,13 +118,14 @@ var currentCategory = currentCategory || 'baekdu';
             </div>
             <!-- //gnb -->
 
-            <% if (currentCategory !== 'system') { %>
                 <div class="util">
                     <!-- forWeb -->
+            <% if (currentCategory !== 'system') { %>
                     <span class="forW">
                             <a href="#"
                                class="iFind1">검색</a>
                         </span>
+            <% } %>
                     <a href="#jsSitemap1"
                        class="iMenu1 jsBtnMenu1">전체메뉴
                     </a>
@@ -132,7 +133,6 @@ var currentCategory = currentCategory || 'baekdu';
                        class="iLog1 forM">로그인
                     </a>
                 </div>
-            <% } %>
         </div>
     </div>
     <!-- //mh -->

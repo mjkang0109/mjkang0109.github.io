@@ -4268,7 +4268,10 @@ table + table {
   }
 }
 .card-items a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .card-items a > p {
   display: flex;
@@ -4286,6 +4289,7 @@ table + table {
   font-weight: 700;
 }
 .card-items li {
+  align-self: stretch;
   overflow: hidden;
   border: 1px solid #e7e7e7;
   border-radius: 20px;

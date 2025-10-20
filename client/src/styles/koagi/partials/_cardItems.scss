@@ -14,7 +14,10 @@ $imgPath: "./../../images/koagi";
         }
 
         a {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
 
             > p {
                 display: flex;
@@ -36,6 +39,7 @@ $imgPath: "./../../images/koagi";
         }
 
         li {
+            align-self: stretch;
             overflow: hidden;
             border: 1px solid #e7e7e7;
             border-radius: 20px;

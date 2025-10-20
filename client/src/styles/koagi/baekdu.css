@@ -4256,6 +4256,75 @@ table + table {
   margin: 87px auto 0;
 }
 
+.card-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 56px 50px;
+}
+@media (max-width: 1199px) {
+  .card-items {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.card-items a {
+  display: block;
+}
+.card-items a > p {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 20px;
+  background-color: #43a0aa;
+  color: #fff;
+}
+.card-items a > p > strong {
+  padding-left: 20px;
+  background: url("./../../images/koagi/icon-chart.png") no-repeat 0 50%;
+  background-size: 13px auto;
+}
+.card-items a > p > span {
+  font-weight: 700;
+}
+.card-items li {
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+}
+.card-items .item-top {
+  position: relative;
+  min-height: 212px;
+  padding: 44px 120px 44px 32px;
+  box-sizing: border-box;
+}
+.card-items .item-top > strong {
+  display: block;
+  margin-top: 22px;
+  word-break: keep-all;
+  font-size: 22px;
+  line-height: 32px;
+  color: #000;
+}
+.card-items .status {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+.card-items .status.green {
+  background-color: #3eaa36;
+}
+.card-items .status.gray {
+  background-color: #969696;
+}
+
 @media all and (max-width: 1199px) {
   .mUtil1 .attach,
   .mUtil1 .print,

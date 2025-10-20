@@ -75,7 +75,12 @@ state:
                             <span class="states">
                                 <span class="state green"><%= item.badge %></span>
                             </span>
-                            <strong><%= item.title %></strong>
+                            <strong>
+                                <%= item.title %>
+                                <% if (i === 2) { %>
+                                    <%= item.title %><%= item.title %>
+                                <% } %>
+                            </strong>
                         </div>
                         <p class="">
                             <strong>수요조사</strong>

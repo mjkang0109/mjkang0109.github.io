@@ -1,0 +1,186 @@
+<ol class="info-step">
+    <li class="current info">신청정보</li>
+    <li class="finish">신청완료</li>
+</ol>
+<section class="detail-info">
+    <article class="detail-section">
+        <strong class="detail-title">2025년 국립백두대간수목원 가든샵 위탁판매 상품 공개모집 안내</strong>
+    </article>
+    <%
+    const shopInfo = [
+        ['신청자', '홍길동', '연락처', '010-0000-0000'],
+    ];
+    const basicInfo = [
+        ['제공기관', '국립백두대간수목원'],
+        ['프로그램명', '[개인]백두대간 숲싹 실험실 (선착마감)'],
+        ['이름', '김청수', '생년월일', ['input', '1990-01-01']],
+        ['연락처', '010-0000-0000', '이메일', ['input', 'sample123@korea.com']],
+        ['거주지역', ['select', '시·도 선택']],
+        ['유입경로', ['checkbox', ['인터넷 검색', '소셜미디어', '지인 추천', '재방문', '기타']]],
+    ];
+    const parkingInfo = [
+        ['차량이용', ['radio', ['이용', '미이용']]],
+        ['차량번호', ['input', '123가9999 (띄어쓰기 없이 입력하세요.)'], '<strong class="caution">※ 차량 이용 시 주차등록을 위한 정보 입력이 필요합니다.</strong>'],
+        ['차량번호', ['input', '123가9999 (띄어쓰기 없이 입력하세요.)']],
+    ];
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+    category: 'shop',
+    title: '신청자 정보',
+    items: shopInfo,
+    }) %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+    category: 'essential',
+    title: '판매업체 신청정보',
+    items: basicInfo,
+    }) %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+    category: 'parking',
+    title: '주차정보',
+    items: parkingInfo,
+    }) %>
+    <article class="detail-section">
+        <strong>파일첨부</strong>
+        <table class="table-horizon">
+            <tbody>
+            <tr>
+                <th>파일첨부</th>
+                <td>
+                    <ul class="box outline">
+                        <li>
+                            <button type="button"
+                                    class="button-delete">
+                                <span class="sound-only">삭제</span>
+                            </button>
+                            <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                        </li>
+                        <li>
+                            <button type="button"
+                                    class="button-delete">
+                                <span class="sound-only">삭제</span>
+                            </button>
+                            <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                        </li>
+                        <li>
+                            <button type="button"
+                                    class="button-delete">
+                                <span class="sound-only">삭제</span>
+                            </button>
+                            <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button type="button"
+                                class="button-black">
+                            파일선택
+                        </button>
+                        <button type="button"
+                                class="button-black">
+                            모두삭제
+                        </button>
+                    </div>
+                    <p class="caution">
+                        ※ 첨부파일 제한용량 : 50 MB
+                        <br>※ 허용파일 유형 : gif, jpg, png, jpeg
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+    <article class="detail-section">
+        <strong>이용금액</strong>
+        <%
+        const titles = ['구분', '참가비', '지료비', '수량', '합계'];
+        const priceItems = [
+            {
+                age  : '<strong>성인</strong><p>만19세 이상 ~ 만64세 미만</p>',
+                price: '5,000원',
+                part : '10,000원',
+                count: true,
+                total: '',
+            },
+            {
+                age  : '<strong>고등</strong><p>만16세 이상 ~ 만19세 미만</p>',
+                price: '4,000원',
+                part : '10,000원',
+                count: true,
+                total: '',
+            },
+            {
+                age  : '<strong>중등</strong><p>만14세 이상 ~ 만16세 미만 </p>',
+                price: '3,000원',
+                part : '10,000원',
+                count: true,
+                total: '',
+            },
+            {
+                age  : '<strong>초등</strong><p>만6세 이상 ~ 만 4세 미만</p>',
+                price: '2,000원',
+                part : '10,000원',
+                count: true,
+                total: '',
+            },
+            {
+                age  : '<strong>유아</strong><p>만6세 미만</p>',
+                price: '2,000원',
+                part : '10,000원',
+                count: true,
+                total: '',
+            },
+        ];
+        %>
+        <ul class="table-info">
+            <li>
+                <% titles.map(title => { %>
+                    <div><%= title; %></div>
+                <% }); %>
+            </li>
+            <% priceItems.map((item, i) => { %>
+                <li>
+                    <div>
+                        <%- item.age; %>
+                    </div>
+                    <div>
+                        <span>참가비</span>
+                        <strong><%= item.price; %></strong>
+                    </div>
+                    <div>
+                        <span>재료비</span>
+                        <strong><%= item.part; %></strong>
+                    </div>
+                    <div class="count">
+                        <button type="button"
+                                class="button-increase">
+                            <span class="sound-only">인원 증가</span>
+                        </button>
+                        <span id="jsCount<%= i + 1; %>">1</span>
+                        <button type="button"
+                                class="button-decrease">
+                            <span class="sound-only">인원 감소</span>
+                        </button>
+                    </div>
+                    <div>
+                        <strong class="jsTotal<%= i + 1 %>">1,000원</strong>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+        <div class="total">
+            <span>합계</span>
+            <strong>67,000원</strong>
+        </div>
+        <p class="detail-desc">
+            <strong>안내사항</strong>
+            <span>참가비는 무료이며, 원활한 운영을 위해 <strong>참여자 유형별 인원을 반드시 체크</strong>해 주세요.</span>
+        </p>
+    </article>
+    <article class="detail-section">
+        <strong>이용약관 동의</strong>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_terms`, {
+        }) %>
+        <button type="button"
+                class="button-navy">다음
+        </button>
+    </article>
+</section>

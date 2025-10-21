@@ -70,4 +70,134 @@ $imgPath: "./../../images/koagi";
             margin: 87px auto 0;
         }
     }
+    .announcement-detail {
+        border-top: 2px solid #444;
+        padding-top: 60px;
+
+        > strong {
+            display: block;
+            margin-top: 39px;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 52px;
+            color: #000;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: 20px;
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+
+        .dot-info {
+            display: flex;
+            gap: 72px;
+            max-width: 100%;
+            margin-top: 51px;
+            padding: 47px 46px;
+            background-color: #f9f9f9;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                margin-left: 0;
+                gap: 10px;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            li {
+                font-size: 17px;
+                margin-top: 0;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                }
+
+                strong {
+                    padding-left: 12px;
+
+                    &:before {
+                        width: 7px;
+                        height: 7px;
+                        background-color: #3cad39;
+                    }
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin-top: 70px;
+        }
+
+        .detail-section {
+            margin-top: 67px;
+            padding-top: 83px;
+            border-top: 1px solid #e5e5e5;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: 50px;
+                padding-top: 50px;
+            }
+        }
+
+        .desc {
+            padding: 0 25px;
+            font-size: 16px;
+            line-height: 26px;
+            font-family: "SCoreDream", serif;
+            color: #000;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 0;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+
+        .files {
+            display: flex;
+            margin-top: 100px;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 39px 55px 33px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            strong {
+                flex: 0 0 auto;
+                width: 160px;
+                font-size: 18px;
+                line-height: 32px;
+                color: #000;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding-bottom: 20px;
+                }
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 12px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    grid-template-columns: 1fr;
+                    gap: 10px;
+                }
+            }
+
+            a {
+                display: block;
+                padding-left: 27px;
+                background: url("#{$imgPath}/icon-clip.png") no-repeat 0 50%;
+                background-size: auto 20px;
+                font-size: 16px;
+                color: #000;
+                line-height: 26px;
+            }
+        }
+
+        .button-navy {
+            display: block;
+            margin: 95px auto 0;
+        }
+    }
 }

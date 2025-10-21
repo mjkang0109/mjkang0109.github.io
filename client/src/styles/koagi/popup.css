@@ -1,0 +1,215 @@
+/* SCoreDream */
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 100;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream1.woff2") format("woff2"), url("./../fonts/SCoreDream1.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 200;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream2.woff2") format("woff2"), url("./../fonts/SCoreDream2.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 300;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream3.woff2") format("woff2"), url("./../fonts/SCoreDream3.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream4.woff2") format("woff2"), url("./../fonts/SCoreDream4.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream5.woff2") format("woff2"), url("./../fonts/SCoreDream5.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 600;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream6.woff2") format("woff2"), url("./../fonts/SCoreDream6.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream7.woff2") format("woff2"), url("./../fonts/SCoreDream7.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 800;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream8.woff2") format("woff2"), url("./../fonts/SCoreDream8.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 900;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream9.woff2") format("woff2"), url("./../fonts/SCoreDream9.woff") format("woff");
+  font-display: swap;
+}
+/* EliceDigitalBaeum */
+@font-face {
+  font-family: "EliceDigitalBaeum";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./../fonts/EliceDigitalBaeumRegular.woff2") format("woff2"), url("./../fonts/EliceDigitalBaeumRegular.woff") format("woff"), url("./../fonts/EliceDigitalBaeumRegular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "EliceDigitalBaeum";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./../fonts/EliceDigitalBaeumBold.woff2") format("woff2"), url("./../fonts/EliceDigitalBaeumBold.woff") format("woff"), url("./../fonts/EliceDigitalBaeumBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SBAggro";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./../fonts/SBAggroL.woff") format("woff"), url("./../fonts/SBAggroL.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SBAggro";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./../fonts/SBAggroM.woff") format("woff"), url("./../fonts/SBAggroM.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SBAggro";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./../fonts/SBAggroB.woff") format("woff"), url("./../fonts/SBAggroB.otf") format("opentype");
+  font-display: swap;
+}
+body,
+div,
+strong,
+button,
+table,
+tr,
+th,
+td {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body,
+button {
+  font-family: "SCoreDream", serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.a11y {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 76px;
+  background-color: #2a2a4a;
+  color: #fff;
+  padding-left: 25px;
+  font-size: 19px;
+  line-height: 29px;
+}
+.header .button-close {
+  appearance: none;
+  width: 70px;
+  height: 70px;
+  background: transparent url("./../../images/koagi/icon-close.png") no-repeat 50% 50%;
+  background-size: 23px auto;
+  border: none;
+}
+
+.body {
+  padding: 60px 20px 50px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 54px;
+}
+
+.table-horizon {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-horizon th,
+.table-horizon td {
+  min-height: 68px;
+  padding: 25px;
+  border: 1px solid #e7e7e7;
+  font-size: 16px;
+  line-height: 26px;
+}
+.table-horizon th:first-of-type,
+.table-horizon td:first-of-type {
+  border-top: 1px solid #707070;
+}
+.table-horizon th {
+  min-width: 119px;
+  background-color: #fafafa;
+}
+
+.button-navy {
+  padding: 11px 26px;
+  border-radius: 10px;
+  margin-left: 24px;
+  background-color: #013569;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.button-black {
+  padding: 15px 40px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #242424;
+}

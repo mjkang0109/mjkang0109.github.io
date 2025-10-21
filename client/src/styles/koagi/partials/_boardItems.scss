@@ -1,0 +1,62 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin boardItems {
+    .board-items {
+        border-top: 2px solid #666;
+
+        > li {
+            position: relative;
+            padding: 34px 400px 44px 0;
+            border-bottom: 1px solid #e0e3e7;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 30px 0;
+            }
+
+            > strong {
+                display: block;
+                margin-top: 26px;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 30px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: 19px;
+                    line-height: 30px;
+                }
+            }
+        }
+
+        .dot-info {
+            display: flex;
+            gap: 48px;
+            margin-top: 21px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                margin-left: 0;
+                width: auto;
+                gap: 12px;
+                margin-top: 12px;
+            }
+
+            li {
+                margin-top: 0;
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 16px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                position: relative;
+                transform: translateY(0);
+                margin-top: 43px;
+            }
+        }
+    }
+}

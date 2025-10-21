@@ -1,0 +1,44 @@
+<%
+var items = items || [];
+%>
+<ul class="board-items">
+    <% if (items.length > 0) { %>
+        <% items.map(item => { %>
+            <li>
+                <% if (item.badge) { %>
+                    <span class="badges">
+                    <span class="badge <%= item.badge.color ;%>">
+                        <%= item.badge.text ;%>
+                    </span>
+                </span>
+                <% } %>
+                <% if (item.title) { %>
+                    <strong><%= item.title ;%></strong>
+                <% } %>
+                <% if (item.info) { %>
+                    <ul class="<%= item.infoClassName ;%>">
+                        <% item.info.map(unit => { %>
+                            <li>
+                                <strong><%= unit.title ;%></strong>
+                                <p><%= unit.desc ;%></p>
+                            </li>
+                        <% }); %>
+                    </ul>
+                <% } %>
+                <% if (item.links) { %>
+                    <div class="links <%= item.linksPosition ;%>">
+                        <% item.links.map(link => { %>
+                            <button type="button"
+                                    <%- link.onclick ? `onclick=${link.onclick}` : '' %>
+                                    class="<%= link.className ;%>"><%= link.text ;%></button>
+                        <% }); %>
+                    </div>
+                <% } %>
+            </li>
+        <% }); %>
+    <% } %>
+</ul>
+<!-- pagination -->
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_pagination`, {
+}) %>
+<!-- // pagination -->

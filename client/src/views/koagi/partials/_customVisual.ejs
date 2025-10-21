@@ -1,0 +1,24 @@
+<%
+var title = title || '';
+var desc = desc || '';
+var button = button || undefined;
+var img = img || '';
+%>
+
+<div class="custom-visual">
+    <div class="left">
+        <div class="title"><%- title %></div>
+        <p class="desc"><%- desc %></p>
+        <%- button %>
+    </div>
+
+    <div class="right">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: 650,
+        height: 478,
+        isSimply: true,
+        source: `${imgPath}/dummy-${img}.jpg`,
+        alt: '',
+        }); %>
+    </div>
+</div>

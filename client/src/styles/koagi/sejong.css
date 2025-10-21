@@ -1094,7 +1094,6 @@ body.scrolling #header {
   background: url(./../../images/koagi/ico_bc1.png) 0 50% no-repeat;
   margin-left: 0;
   padding: 0 0 0 26px;
-  height: 21px;
 }
 
 .mBc1 .home:before {
@@ -2226,8 +2225,7 @@ body.scrolling #header {
 }
 @media (max-width: 1199px) {
   .gallery-poster-edu > li:not(:last-of-type) {
-    border-bottom: none;
-    padding-bottom: 0;
+    padding-bottom: 50px;
     margin-bottom: 0;
   }
 }
@@ -2243,7 +2241,7 @@ body.scrolling #header {
 }
 .gallery-poster-edu a .title {
   justify-content: flex-start;
-  flex-wrap: wrap;
+  align-items: flex-start;
   margin-top: 0;
 }
 .gallery-poster-edu .img-wrap {
@@ -2315,13 +2313,15 @@ body.scrolling #header {
   }
 }
 .gallery-items.gallery-poster-edu .title {
+  flex-direction: column;
   text-align: left;
 }
 @media (max-width: 1199px) {
   .gallery-items.gallery-poster-edu .title {
+    align-items: flex-start;
     min-height: 195px;
     font-size: 19px;
-    line-height: 20px;
+    line-height: 30px;
   }
 }
 @media (max-width: 1199px) {
@@ -2418,10 +2418,11 @@ body.scrolling #header {
   .dot-info {
     grid-template-columns: 1fr;
     margin-top: 4px;
-    width: calc(100% + 175px);
+    width: calc(100% + 160px);
     margin-left: -155px;
     padding-left: 10px;
     font-weight: 700;
+    box-sizing: border-box;
   }
 }
 .dot-info li {
@@ -3939,6 +3940,7 @@ table + table {
   padding: 28px 54px;
   border-radius: 10px;
   color: #3cad39 !important;
+  font-size: 17px;
   border: 2px solid #3cad39;
   font-weight: 700;
 }
@@ -4329,6 +4331,184 @@ table + table {
   background-color: #969696;
 }
 
+.board-items {
+  border-top: 2px solid #666;
+}
+.board-items > li {
+  position: relative;
+  padding: 34px 400px 44px 0;
+  border-bottom: 1px solid #e0e3e7;
+}
+@media (max-width: 1199px) {
+  .board-items > li {
+    padding: 30px 0;
+  }
+}
+.board-items > li > strong {
+  display: block;
+  margin-top: 26px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+}
+@media (max-width: 1199px) {
+  .board-items > li > strong {
+    font-size: 19px;
+    line-height: 30px;
+  }
+}
+.board-items .dot-info {
+  display: flex;
+  gap: 48px;
+  margin-top: 21px;
+}
+@media (max-width: 1199px) {
+  .board-items .dot-info {
+    flex-direction: column;
+    margin-left: 0;
+    width: auto;
+    gap: 12px;
+    margin-top: 12px;
+  }
+}
+.board-items .dot-info li {
+  margin-top: 0;
+}
+.board-items .links {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 1199px) {
+  .board-items .links {
+    position: relative;
+    transform: translateY(0);
+    margin-top: 43px;
+  }
+}
+
+.custom-visual {
+  display: flex;
+  width: 100%;
+  margin-bottom: 53px;
+}
+@media (max-width: 1199px) {
+  .custom-visual {
+    flex-direction: column;
+  }
+}
+.custom-visual .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 800px;
+  max-width: 100vw;
+  background: url("./../../images/koagi/background-banner.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+@media (max-width: 1199px) {
+  .custom-visual .left {
+    min-height: 480px;
+    margin-left: -15px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+}
+.custom-visual .title {
+  font-family: "SBAggro", serif;
+  text-align: center;
+  color: #272727;
+}
+.custom-visual .title > span,
+.custom-visual .title > strong {
+  position: relative;
+}
+.custom-visual .title > span:first-child:before,
+.custom-visual .title > strong:first-child:before {
+  content: "“";
+  position: absolute;
+  left: -33px;
+  top: -6px;
+  font-size: 65px;
+  font-weight: 500;
+  font-family: "SBAggro", serif;
+}
+@media (max-width: 1199px) {
+  .custom-visual .title > span:first-child:before,
+  .custom-visual .title > strong:first-child:before {
+    font-size: 20px;
+    left: -20px;
+  }
+}
+.custom-visual .title > span:last-child:after,
+.custom-visual .title > strong:last-child:after {
+  content: "”";
+  position: absolute;
+  right: -43px;
+  top: -1px;
+  font-size: 65px;
+  font-weight: 500;
+  font-family: "SBAggro", serif;
+}
+@media (max-width: 1199px) {
+  .custom-visual .title > span:last-child:after,
+  .custom-visual .title > strong:last-child:after {
+    font-size: 20px;
+    right: -20px;
+  }
+}
+.custom-visual .title span {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .custom-visual .title span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.custom-visual .title strong {
+  font-size: 58px;
+  line-height: 68px;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .custom-visual .title strong {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.custom-visual .desc {
+  margin-top: 34px;
+  font-size: 17px;
+  line-height: 30px;
+  color: #272727;
+  text-align: center;
+}
+.custom-visual button {
+  margin-top: 43px;
+}
+.custom-visual .right {
+  flex: 1;
+}
+.custom-visual .right img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1199px) {
+  .custom-visual .right {
+    flex: 0 0 auto;
+    width: 100vw;
+    margin-left: -15px;
+  }
+}
+
 @media all and (max-width: 1199px) {
   .mUtil1 .attach,
   .mUtil1 .print,
@@ -4573,7 +4753,6 @@ table + table {
     background-position: 0 50%;
     background-size: 7px auto;
     padding: 0 0 0 13px;
-    height: 11px;
   }
   .mBc1 .home:before {
     display: none;

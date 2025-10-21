@@ -1,0 +1,63 @@
+---
+group: koagi
+state:
+    default: 팝업-견본접수
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>견본접수</title>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH ;%>/styles/koagi/popup<%= process.env.MINIFY ;%>.css<%= `?${setTimestamp()}`; %>">
+</head>
+<body>
+    <%
+    const data = {
+        default: {
+            title: '견본접수',
+            body: `
+
+            `,
+        }
+    }
+    %>
+    <div class="popup">
+        <strong class="header">
+            <%= data[state].title %>
+            <button type="button" class="button-close">
+                <span class="a11y">닫기</span>
+            </button>
+        </strong>
+        <div class="body">
+            <%- data[state].body %>
+            <table class="table-horizon">
+                <tr>
+                    <th>담당자명</th>
+                    <td>국립백두대간수목원 안전환경실 홍길동 주임</td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td><a href="tel:054-679-0616">054-679-0616</a></td>
+                </tr>
+                <tr>
+                    <th>접수처</th>
+                    <td>36209 경상북도 봉화군 춘양면 춘양로 1501<button type="button" class="button-navy">복사</button></td>
+                </tr>
+                <tr>
+                    <th>안내사항</th>
+                    <td>2025.08.31(일) 24:00 이내 신청서 제출 및 국립백두대간수목원
+                        도달분에 한하여 접수처리됩니다.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+            <button type="button" class="button-black">확인</button>
+        </div>
+    </div>
+</body>
+</html>

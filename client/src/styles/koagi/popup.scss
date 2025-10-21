@@ -1,0 +1,124 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../components/mixin" as m;
+@use "./partials/fonts" as fonts;
+
+$imgPath: "./../../images/koagi";
+body,
+div,
+strong,
+button,
+table,
+tr,
+th,
+td {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body,
+button {
+    font-family: "SCoreDream", serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.a11y {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: -1px !important;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 76px;
+    background-color: #2a2a4a;
+    color: #fff;
+    padding-left: 25px;
+    font-size: 19px;
+    line-height: 29px;
+
+    .button-close {
+        appearance: none;
+        width: 70px;
+        height: 70px;
+        background: transparent url("#{$imgPath}/icon-close.png") no-repeat 50% 50%;
+        background-size: 23px auto;
+        border: none;
+    }
+}
+
+.body {
+    padding: 60px 20px 50px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 54px;
+}
+
+.table-horizon {
+    border-collapse: collapse;
+    width: 100%;
+
+    th,
+    td {
+        min-height: 68px;
+        padding: 25px;
+        border: 1px solid #e7e7e7;
+        font-size: 16px;
+        line-height: 26px;
+
+        &:first-of-type {
+            border-top: 1px solid #707070;
+        }
+    }
+
+    th {
+        min-width: 119px;
+        background-color: #fafafa;
+    }
+}
+
+.button-navy {
+    padding: 11px 26px;
+    border-radius: 10px;
+    margin-left: 24px;
+    background-color: #013569;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.button-black {
+    padding: 15px 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #242424;
+}

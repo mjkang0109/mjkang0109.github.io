@@ -205,254 +205,294 @@ $imgPath: "./../../images/koagi";
             line-height: 25px;
         }
     }
-}
+    .item-horizon {
+        border-top: 1px solid #000;
 
-.item-horizon {
-    border-top: 1px solid #000;
-
-    li {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 100%;
-
-        > strong,
-        > div {
-            min-height: 70px;
-            padding: 18px 25px;
-            box-sizing: border-box;
-            border-bottom: 1px solid #e7e7e7;
-        }
-
-        > strong {
+        li {
             display: flex;
-            align-self: stretch;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 auto;
-            width: 200px;
-            background-color: #fafafa;
-            text-align: center;
-            border-right: 1px solid #e7e7e7;
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                width: 100px;
-                font-size: 13px;
-                line-height: 23px;
-                min-height: 50px;
-                padding: 10px 10px;
-            }
-        }
-
-        > div {
-            display: flex;
-            align-items: center;
-            align-self: stretch;
             flex-wrap: wrap;
-            flex: 1;
-            color: #333;
-            font-size: 16px;
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                flex: 0 0 auto;
-                width: calc(100% - 100px);
-                gap: 10px;
-                padding: 10px;
-                font-size: 13px;
-                line-height: 23px;
-                min-height: 50px;
-            }
+            align-items: center;
+            width: 100%;
 
-            &:first-of-type {
-                label {
-                    width: 497px;
-                    max-width: 100%;
-                }
-            }
-
-            + strong {
-                border-left: 1px solid #e7e7e7;
-                @include m.respond-to(map.get(m.$max, 1199)) {
-                    border-left: none;
-                }
-            }
-
-            ~ div {
-                label {
-                    display: block;
-                    width: 100%;
-                }
-            }
-
-            .it {
-                width: 100%;
+            > strong,
+            > div {
+                min-height: 70px;
+                padding: 18px 25px;
                 box-sizing: border-box;
+                border-bottom: 1px solid #e7e7e7;
             }
-        }
 
-        input[type="checkbox"] {
-            + label {
-                width: auto;
+            > strong {
+                display: flex;
+                align-self: stretch;
                 align-items: center;
-                padding-left: 34px;
-                margin: 0 25px 0 0;
+                justify-content: center;
+                flex: 0 0 auto;
+                width: 200px;
+                background-color: #fafafa;
+                text-align: center;
+                border-right: 1px solid #e7e7e7;
                 @include m.respond-to(map.get(m.$max, 1199)) {
-                    width: 100%;
+                    width: 100px;
+                    font-size: 13px;
+                    line-height: 23px;
+                    min-height: 50px;
+                    padding: 10px 10px;
                 }
-            }
-
-            ~ label .it {
-                width: 286px;
-                @include m.respond-to(map.get(m.$max, 1199)) {
-                    width: 100%;
-                }
-            }
-        }
-
-        input[type="radio"] {
-            + label {
-                width: auto;
-                align-items: center;
-                padding-left: 34px;
-                margin: 0 25px 0 0;
-                @include m.respond-to(map.get(m.$max, 1199)) {
-                    width: 100%;
-                }
-            }
-        }
-
-        select {
-            min-width: 211px;
-        }
-
-        .caution {
-            font-size: 15px;
-            color: #ec1010;
-            font-weight: 400;
-            margin-left: 17px;
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                margin-left: 0;
-                margin-top: 5px;
-                font-size: 13px;
-                line-height: 20px;
-            }
-        }
-    }
-}
-
-.table-info {
-    border-top: 2px solid #000;
-
-    li {
-        display: grid;
-        grid-template-columns: 1fr 272px 272px 272px 272px;
-        align-items: center;
-        border-bottom: 1px solid #e7e7e7;
-        padding: 20px;
-        @include m.respond-to(map.get(m.$max, 1199)) {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 0;
-            padding: 12px;
-        }
-
-        &:first-of-type {
-            background-color: #fafafa;
-            text-align: center;
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                display: none;
             }
 
             > div {
-                font-weight: 500;
-            }
-        }
-
-        &:not(:first-of-type) {
-            > div:first-of-type {
-                padding-left: 50px;
+                display: flex;
+                align-items: center;
+                align-self: stretch;
+                flex-wrap: wrap;
+                flex: 1;
+                color: #333;
+                font-size: 16px;
                 @include m.respond-to(map.get(m.$max, 1199)) {
-                    padding-left: 0;
+                    flex: 0 0 auto;
+                    width: calc(100% - 100px);
+                    gap: 10px;
+                    padding: 10px;
+                    font-size: 13px;
+                    line-height: 23px;
+                    min-height: 50px;
+                }
+
+                &:only-of-type {
+                    label {
+                        width: 475px;
+                        max-width: 100%;
+                    }
+                }
+
+                label {
+                    width: 100%;
+
+                    &.middle {
+                        width: 274px;
+                    }
+                }
+
+                + strong {
+                    border-left: 1px solid #e7e7e7;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        border-left: none;
+                    }
+                }
+
+                ~ div {
+                    label {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                .it {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+
+            input[type="checkbox"] {
+                + label {
+                    width: auto;
+                    align-items: center;
+                    padding-left: 34px;
+                    margin: 0 25px 0 0;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: 100%;
+                    }
+                }
+
+                ~ label .it {
+                    width: 286px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            input[type="radio"] {
+                + label {
+                    width: auto;
+                    align-items: center;
+                    padding-left: 34px;
+                    margin: 0 25px 0 0;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            select {
+                min-width: 211px;
+            }
+
+            .caution {
+                font-size: 15px;
+                color: #ec1010;
+                font-weight: 400;
+                margin-left: 17px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-left: 0;
+                    margin-top: 5px;
+                    font-size: 13px;
+                    line-height: 20px;
                 }
             }
         }
 
-        > div {
-            font-size: 16px;
-            line-height: 26px;
+        .address {
+            gap: 10px;
 
-            > span:not([id]) {
-                display: none;
+            label {
+                &:not(:first-of-type) {
+                    flex: 0 0 417px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        flex: 0 0 100%;
+                    }
+                }
+
+                &:first-of-type {
+                    flex: 1;
+                }
+            }
+
+            input[type="text"]:disabled {
+                background-color: #fafafa;
+            }
+        }
+
+        .business {
+            gap: 7px;
+
+            label {
+                flex: 1;
+            }
+
+            span {
+                color: #333;
+                font-size: 16px;
+            }
+        }
+    }
+    .table-info {
+        border-top: 2px solid #000;
+
+        li {
+            display: grid;
+            grid-template-columns: 1fr 272px 272px 272px 272px;
+            align-items: center;
+            border-bottom: 1px solid #e7e7e7;
+            padding: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 0;
+                padding: 12px;
+            }
+
+            &:first-of-type {
+                background-color: #fafafa;
+                text-align: center;
                 @include m.respond-to(map.get(m.$max, 1199)) {
-                    display: inline-flex;
+                    display: none;
+                }
+
+                > div {
+                    font-weight: 500;
                 }
             }
 
             &:not(:first-of-type) {
-                text-align: center;
-            }
-
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                &:nth-of-type(1) {
-                    grid-column: 1 / 3;
-                }
-                &:nth-of-type(2) {
-                    grid-column: 1 / 3;
-                    text-align: left;
-                    font-size: 14px;
-                    line-height: 24px;
-                }
-                &:nth-of-type(3) {
-                    grid-column: 1/3;
-                    text-align: left;
-                    font-size: 14px;
-                    line-height: 24px;
-                }
-                &:nth-of-type(4) {
-                    grid-column: 3 / 4;
-                    grid-row: 1 / 4;
-                }
-                &:nth-of-type(5) {
-                    grid-column: 4 / 5;
-                    grid-row: 1 / 4;
+                > div:first-of-type {
+                    padding-left: 50px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        padding-left: 0;
+                    }
                 }
             }
 
-            p {
-                font-size: 12px;
+            > div {
+                font-size: 16px;
+                line-height: 26px;
+
+                > span:not([id]) {
+                    display: none;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: inline-flex;
+                    }
+                }
+
+                &:not(:first-of-type) {
+                    text-align: center;
+                }
+
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    &:nth-of-type(1) {
+                        grid-column: 1 / 3;
+                    }
+                    &:nth-of-type(2) {
+                        grid-column: 1 / 3;
+                        text-align: left;
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    &:nth-of-type(3) {
+                        grid-column: 1/3;
+                        text-align: left;
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    &:nth-of-type(4) {
+                        grid-column: 3 / 4;
+                        grid-row: 1 / 4;
+                    }
+                    &:nth-of-type(5) {
+                        grid-column: 4 / 5;
+                        grid-row: 1 / 4;
+                    }
+                }
+
+                p {
+                    font-size: 12px;
+                }
             }
         }
-    }
 
-    .count {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .count {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        button {
-            width: 36px;
-            height: 36px;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            background-position: 50% 50%;
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                width: 30px;
-                height: 30px;
+            button {
+                width: 36px;
+                height: 36px;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                background-position: 50% 50%;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
-        }
 
-        .button-increase {
-            background-image: url("#{$imgPath}/icon-plus-box.png");
-        }
+            .button-increase {
+                background-image: url("#{$imgPath}/icon-plus-box.png");
+            }
 
-        .button-decrease {
-            background-image: url("#{$imgPath}/icon-minus-box.png");
-        }
+            .button-decrease {
+                background-image: url("#{$imgPath}/icon-minus-box.png");
+            }
 
-        > span {
-            flex: 0 0 auto;
-            width: 52px;
-            font-size: 16px;
-            font-weight: 700;
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                width: 30px;
+            > span {
+                flex: 0 0 auto;
+                width: 52px;
+                font-size: 16px;
+                font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 30px;
+                }
             }
         }
     }

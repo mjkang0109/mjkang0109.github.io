@@ -1,15 +1,15 @@
 ---
 group: koagi
 state:
-    default: 가든샵신청정보-국립정원문화원
+    default: 산업계지원-국립세종수목원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립정원문화원';
-    currentCategory = 'system';
-    currentNav = 'garden';
+    currentName = '국립세종수목원';
+    currentCategory = 'sejong';
+    currentNav = 'companion';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -32,27 +32,49 @@ state:
         }) %>
         <!-- // header -->
 
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+            type: 'plant',
+            currentNav: '참여하기',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '가든샵 판매 신청',
+            title: '산업계 지원',
             depths: [
-            '국립정원문화원',
-            '가든샵 판매 신청',
+                '반려식물',
+                '산업계지원',
             ],
         }) %>
         <!-- // title -->
 
         <!-- contents -->
         <div id="body">
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_shopDetail`, {
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
+
             }) %>
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+                dummy: 'story-tree',
+                states: [{text: '박람회', color: 'green'}],
+                title: '2024 반려식물 키트 산업계 간담회',
+                 count: 8,
+                titleOverflow: true,
+                date: '2025-06-29',
+                desc: 'hide'
+            }) %>
+
         </div>
         <!-- // contents -->
 
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
-            currentName,
             currentCategory,
+            currentName,
         }) %>
         <!-- // footer -->
 

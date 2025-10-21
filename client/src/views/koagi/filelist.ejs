@@ -51,7 +51,7 @@ state:
                 const sliceItems = state === 'default' ? navItems : navItems.slice(nav[state], nav[state] + 1);
                 sliceItems.map((item) => {
             %>
-                <tr>
+                <tr style="position: sticky; top: 0;">
                     <th colspan="11"><%= item.title ;%></th>
                 </tr>
 

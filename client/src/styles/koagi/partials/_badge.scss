@@ -3,16 +3,20 @@
 @use "./../../components/mixin" as m;
 
 $imgPath: "./../../images/koagi";
-
 @mixin badge {
+    .board-items-table {
+        .badges {
+            display: inline-flex;
+            width: auto;
+        }
+    }
     .badges {
         display: flex;
         flex-wrap: wrap;
         gap: 7px;
         width: 100%;
-        order: -1;
+        //order: -1;
     }
-
     .badge,
     .link {
         display: inline-flex;
@@ -32,6 +36,14 @@ $imgPath: "./../../images/koagi";
             padding: 0 8px;
             font-size: 12px;
             font-weight: 600;
+        }
+
+        &.small {
+            height: 18px;
+            padding: 4px 5px;
+            font-size: 11px;
+            border-radius: 3px;
+            font-weight: 400;
         }
 
         &.cyan {
@@ -73,11 +85,16 @@ $imgPath: "./../../images/koagi";
             background-color: #413129;
             color: #fff;
         }
-    }
 
+        &.cherry {
+            background-color: #d64169;
+            color: #fff;
+        }
+    }
     .states {
         display: flex;
         flex-wrap: wrap;
+        gap: 8px;
 
         .state {
             display: inline-flex;
@@ -85,7 +102,6 @@ $imgPath: "./../../images/koagi";
             align-items: center;
             height: 30px;
             box-sizing: border-box;
-            margin-right: 8px;
             padding: 7px 20px;
             font-size: 13px;
             font-weight: 500;

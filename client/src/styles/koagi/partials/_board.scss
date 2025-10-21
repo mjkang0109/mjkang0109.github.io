@@ -29,23 +29,56 @@ $imgPath: "./../../images/koagi";
         }
 
         .info {
+            display: flex;
+            justify-content: center;
             margin-top: 48px;
             padding: 24px 10px;
             border-top: 1px solid #e0e0e0;
             border-bottom: 1px solid #e0e0e0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                gap: 12px;
+            }
 
             li {
-                display: flex;
+                display: inline-flex;
                 justify-content: center;
                 gap: 12px;
+                position: relative;
                 font-size: 16px;
                 color: #000;
+
+                + li {
+                    margin-left: 60px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-left: 0;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: -30px;
+                        width: 1px;
+                        height: 17px;
+                        transform: translateY(-50%);
+                        background-color: #4c4c4c;
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
 
         .text-wrap {
             padding: 104px 0 70px;
             border-bottom: 1px solid #e0e0e0;
+
+            &.border-none {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
 
             .img-wrap {
                 display: flex;
@@ -54,6 +87,12 @@ $imgPath: "./../../images/koagi";
                 img {
                     max-width: 100%;
                     height: auto;
+                }
+            }
+
+            .box.green {
+                + .detail-section {
+                    margin-top: 63px;
                 }
             }
         }
@@ -69,7 +108,19 @@ $imgPath: "./../../images/koagi";
             display: block;
             margin: 87px auto 0;
         }
+
+        .box.green {
+            padding: 35px 55px;
+        }
+
+        .detail-section {
+            > strong {
+                padding-left: 0;
+                background: none;
+            }
+        }
     }
+
     .announcement-detail {
         border-top: 2px solid #444;
         padding-top: 60px;

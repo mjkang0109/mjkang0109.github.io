@@ -20,8 +20,8 @@ var category = category || '';
                             const type = b[1][0];
                         if (type === 'select') {
                         %>
-                            <label for="<%= category %>-select-<%= i %>">
-                                <select id="<%= category %>-select<%= i %>"
+                            <label for="<%= category %>-select<%= i + 1 %>">
+                                <select id="<%= category %>-select<%= i + 1 %>"
                                         class="select">
                                     <option value=""><%= b[1][1] %></option>
                                 </select>
@@ -32,6 +32,7 @@ var category = category || '';
                             b[1][1].map((radio, j) => { %>
                                 <input type="radio"
                                        id="<%= category %>-radio<%= j + 1; %>"
+                                       <%- j === 0 ? `checked` : '' %>
                                        name="<%= category %>-radio<%= i; %>">
                                 <label for="<%= category %>-radio<%= j + 1; %>">
                                     <%= radio; %>
@@ -58,9 +59,10 @@ var category = category || '';
                         <% });
                         } %>
                         <% if (type === 'input') { %>
-                            <label for="<%= category %>-input<%= i + 1 %>">
+                            <label for="<%= category %>-input<%= i + 1 %>-1"
+                                   class="<%= b[1][2] ? b[1][2] : '' %>">
                                 <input type="text"
-                                       id="<%= category %>-input<%= i + 1 %>"
+                                       id="<%= category %>-input<%= i + 1 %>-1"
                                        class="it"
                                        placeholder="<%- b[1][1] %>">
                             </label>
@@ -75,6 +77,21 @@ var category = category || '';
                     <strong>
                         <%= b[2]; %>
                     </strong>
+
+                    <% if (b[2] === '사업자등록번호') { %>
+                        <div class="business">
+                            <% for (let z = 0; z < 3; z++) { %>
+                                <% if (z !== 0) { %>
+                                    <span>-</span>
+                                <% } %>
+                                <label for="<%= category %>-input<%= i %>-<%= z + 1 %>">
+                                    <input type="text"
+                                           class="it"
+                                           id="<%= category %>-input<%= i %>-<%= z + 1 %>">
+                                </label>
+                            <% } %>
+                        </div>
+                    <% } %>
                 <% } %>
                 <% if (b[3]) { %>
                     <div>
@@ -85,14 +102,41 @@ var category = category || '';
                             const type = b[3][0];
                         if (type === 'input') {
                         %>
-                            <label for="<%= category %>-input<%= i + 1 %>">
+                            <label for="<%= category %>-input<%= i + 1 %>-2"
+                                   class="<%= b[3][2] ? b[3][2] : '' %>">
                                 <input type="text"
-                                       id="<%= category %>-input<%= i + 1 %>"
+                                       id="<%= category %>-input<%= i + 1 %>-2"
                                        class="it"
                                        placeholder="<%- b[3][1] %>">
                             </label>
                         <% } %>
                         <% } %>
+                    </div>
+                <% } %>
+                <% if (b[0] === '주소') { %>
+                    <div class="address">
+                        <label for="address1">
+                            <input type="text"
+                                   id="address1"
+                                   class="it"
+                                   disabled>
+                        </label>
+                        <button type="button"
+                                class="button-black">
+                            주소찾기
+                        </button>
+                        <label for="address2">
+                            <input type="text"
+                                   id="address2"
+                                   class="it"
+                                   disabled>
+                        </label>
+                        <label for="address3">
+                            <input type="text"
+                                   id="address3"
+                                   class="it"
+                                   placeholder="상세주소를 입력하세요.">
+                        </label>
                     </div>
                 <% } %>
             </li>

@@ -59,4 +59,144 @@ $imgPath: "./../../images/koagi";
             }
         }
     }
+
+    .board-items-table {
+        border-top: 2px solid #444;
+
+        li {
+            display: grid;
+            grid-template-columns: 10% 10% 1fr 15% 10% 10%;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #e0e3e7;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding: 15px 10px;
+            }
+
+            &.titles {
+                background-color: #fafafa;
+                text-align: center;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
+
+                strong {
+                    font-weight: 500;
+                }
+            }
+
+            > span,
+            > strong {
+                padding: 20px 28px;
+                font-size: 15px;
+                line-height: 25px;
+                color: #333;
+                font-weight: 400;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding: 0;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+
+                &:not(.title) {
+                    text-align: center;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        text-align: left;
+                    }
+                }
+            }
+
+            > span {
+                &:not(.required) {
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: none;
+                    }
+                }
+            }
+
+            .required {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    min-width: 50%;
+                    padding-right: 7px;
+                    box-sizing: border-box;
+                    white-space: nowrap;
+                }
+
+                > strong {
+                    display: none;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: inline-flex;
+                        min-width: 45px;
+                        margin-right: 4px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .title {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: calc(100% - 40px);
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                }
+
+                a {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    -webkit-line-clamp: 1;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-weight: 600;
+                    }
+
+                    &:hover {
+                        color: #000;
+                        font-weight: 500;
+                        text-decoration: underline;
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            color: inherit;
+                            font-weight: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .badges {
+                    vertical-align: middle;
+                }
+            }
+
+            .num {
+                justify-content: center;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
+
+                &.badges {
+                    margin-bottom: 10px;
+
+                    ~ .title {
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            padding-left: 7px;
+                        }
+                    }
+                }
+            }
+
+            .num,
+            .title {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    order: -1;
+                }
+            }
+        }
+
+        ~ .mPag {
+            border-top: none;
+            margin-top: 0;
+        }
+    }
 }

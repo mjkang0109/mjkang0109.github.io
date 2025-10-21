@@ -1,15 +1,15 @@
 ---
 group: koagi
 state:
-    default: 가든샵신청정보-국립정원문화원
+    default: 가든샵신청완료-국립백두대간수목원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립정원문화원';
+    currentName = '국립백두대간수목원';
     currentCategory = 'system';
-    currentNav = 'garden';
+    currentNav = 'baekdu';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -36,7 +36,7 @@ state:
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
             title: '가든샵 판매 신청',
             depths: [
-            '국립정원문화원',
+            '국립백두대간수목원',
             '가든샵 판매 신청',
             ],
         }) %>
@@ -44,7 +44,7 @@ state:
 
         <!-- contents -->
         <div id="body">
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_shopDetail`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_shopFinish`, {
             }) %>
         </div>
         <!-- // contents -->

@@ -546,6 +546,41 @@ input[type="radio"] {
     }
 }
 
+.box-title-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        align-items: center;
+        gap: 16px;
+
+        strong {
+            display: inline-flex;
+            justify-content: center;
+            min-width: 120px;
+            padding: 11px 30px 12px;
+            background-color: #524e4d;
+            box-sizing: border-box;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 16px;
+            color: #000;
+            font-weight: 700;
+        }
+    }
+}
+
 @include calendar.calendar;
 .detail-explanation {
     .img-wrap {
@@ -603,11 +638,6 @@ input[type="radio"] {
     }
 
     .right {
-        @include m.respond-to(map.get(m.$max, 1199)) {
-            padding: 0 20px;
-            margin-top: -50px;
-        }
-
         dfn {
             @include m.respond-to(map.get(m.$max, 1199)) {
                 font-size: 22px;
@@ -686,6 +716,12 @@ input[type="radio"] {
     &-wrap {
         width: 100%;
     }
+
+    input[type="checkbox"] {
+        + label {
+            width: 25px;
+        }
+    }
 }
 
 .detail-theme {
@@ -705,6 +741,7 @@ input[type="radio"] {
         padding-left: 20px;
         margin-left: -20px;
         overflow-y: auto;
+        overflow-x: hidden;
         scroll-snap-type: y mandatory;
         @include m.respond-to(map.get(m.$max, 1199)) {
             width: 100%;
@@ -946,11 +983,11 @@ input[type="radio"] {
             width: 100%;
             height: auto;
         }
+
         @include m.respond-to(map.get(m.$max, 1199)) {
             flex: 0 0 auto;
             width: 100vw;
             margin-left: -15px;
         }
     }
-
 }

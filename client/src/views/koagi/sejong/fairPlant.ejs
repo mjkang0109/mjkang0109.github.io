@@ -9,7 +9,7 @@ state:
     <%
     currentName = '국립세종수목원';
     currentCategory = 'sejong';
-    currentNav = 'application';
+    currentNav = 'research';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -35,7 +35,7 @@ state:
         <!-- visual sub -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
             type: 'plant',
-            currentNav: '참여하기',
+            currentNav: '식물연구',
             key: '국민이 행복한 수목원',
             info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
         }) %>
@@ -43,11 +43,11 @@ state:
 
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '전시 프로그램',
-            desc: '유아부터 성인까지 즐길 수 있는 다양한 교육 프로그램을 소개합니다. 관심 있는 프로그램을 확인하고 신청해 보세요. ',
+            title: '출품식물',
             depths: [
-                '참여하기',
-                '전시 프로그램',
+                '식물 연구',
+                '정원식물 전시·품평회',
+                '출품식물',
             ],
         }) %>
         <!-- // title -->
@@ -56,22 +56,14 @@ state:
         <div id="body">
 
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
-                items: ['진행', '예정', '종료',]
+                items: ['전체', '2024년', '2023년', '2022년', '2021년']
             }) %>
 
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_search`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
             }) %>
-
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
-                type: 'poster',
-                states: [{text: '진행', color: 'green'}, {text: '특별', color: 'gray'}],
-                title: '그 여름, 반짝이는 수련',
-                desc: 'hide',
-                dummy: 'exhibition',
-                count: 8,
-                info: include(`${process.env.INCLUDE_PATH}/koagi/partials/_exhibitionInfo`),
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_boardItemsTable`, {
+                
             }) %>
-
         </div>
         <!-- // contents -->
 

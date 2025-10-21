@@ -1,15 +1,15 @@
 ---
 group: koagi
 state:
-    default: 가든샵신청정보-국립정원문화원
+    default: 전시프로그램-국립세종수목원
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립정원문화원';
-    currentCategory = 'system';
-    currentNav = 'garden';
+    currentName = '국립세종수목원';
+    currentCategory = 'sejong';
+    currentNav = 'research';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -32,19 +32,39 @@ state:
         }) %>
         <!-- // header -->
 
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+            type: 'plant',
+            currentNav: '식물연구',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '가든샵 판매 신청',
+            title: '출품식물',
             depths: [
-            '국립정원문화원',
-            '가든샵 판매 신청',
+                '식물 연구',
+                '정원식물 전시·품평회',
+                '출품식물',
             ],
         }) %>
         <!-- // title -->
-
         <!-- contents -->
+        <%
+        const info = [
+            ['작성자', '수목원사업실'],
+            ['등록일', '2025-07-29'],
+            ['조회수', randomNumber(1, 10000)],
+        ];
+        %>
         <div id="body">
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_shopDetail`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_boardDetail`, {
+                state: '식물관리법',
+                title: '2024년 2분기 여름방학 아동모집 안내드립니다.',
+                content: 'fair',
+                info,
             }) %>
         </div>
         <!-- // contents -->

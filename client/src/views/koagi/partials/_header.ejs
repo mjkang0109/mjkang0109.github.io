@@ -4,6 +4,12 @@
 var currentNav = currentNav || '';
 var currentName = currentName || '국립백두대간수목원';
 var currentCategory = currentCategory || 'baekdu';
+
+randomNumber = (min, max) => {
+    const minNum = min ?? 0;
+    const maxNum = max ?? 1000;
+    return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
+}
 %>
 <div id="header"
      class="<%= currentCategory === 'system' ? 'system' : ''; %>">

@@ -7,36 +7,55 @@ var items = items || [];
              role="tablist">
             <% items.map((item, i) => { %>
                 <button type="button"
-                        aria-controls="panel-<%= i + 1 %>"
-                        aria-selected="<%= i === 0 %>"
-                        data-visual="visual<%= i + 1 %>"
-                        data-marker="marker<%= i + 1 %>"
+                        aria-controls="panel-<%= i + 1; %>"
+                        aria-selected="<%= i === 0; %>"
+                        data-visual="visual<%= i + 1; %>"
+                        data-marker="marker<%= i + 1; %>"
                         role="tab">
-                    <span><%= item.title %></span>
+                    <span><%= item.title; %></span>
                 </button>
-            <% }) %>
+            <% }); %>
         </div>
         <div class="visuals">
             <% items.map((item, i) => { %>
-                <div class="visual" <%= i === 0 ? '' : 'hidden' %>
-                     id="visual<%= i + 1 %>">
-                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                    width: 1100,
-                    height: 550,
-                    isSimply: true,
-                    source: `${imgPath}/dummy-theme.jpg`,
-                    alt: '',
-                    }); %>
+                <div class="swiper-wrap swiper"
+                     id="visual<%= i + 1; %>"
+                     data-gap="0"
+                     data-per-view="1"
+                        <%- i === 0 ? '' : 'hidden'; %>>
+                    <ul class="swiper-wrapper">
+                        <% for (let j = 0; j < 4; j++) { %>
+                            <li class="swiper-slide visual">
+                                <span class="img-wrap">
+                                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                    width: 1100,
+                                    height: 550,
+                                    isSimply: true,
+                                    source: `${imgPath}/dummy-theme.jpg`,
+                                    alt: title,
+                                    }); %>
+                                </span>
+                            </li>
+                        <% } %>
+                    </ul>
+                    <button type="button"
+                            class="button-next">
+                        <span class="sound-only">다음</span>
+                    </button>
+                    <button type="button"
+                            class="button-prev">
+                        <span class="sound-only">이전</span>
+                    </button>
                 </div>
             <% }); %>
         </div>
     </div>
     <% items.map((item, i) => { %>
         <div class="panel"
-             id="panel-<%= i + 1 %>"
+             id="panel-<%= i + 1; %>"
              role="tabpanel"
-                <%- i !== 0 ? 'hidden' : '' %>>
-            <strong><%= item.title %></strong>
+                <%- i !== 0 ? 'hidden' : ''; %>>
+            <strong><%= item.title; %></strong>
             <p>먹거리나 볼거리로 활용되는 식물을 키우고 수확하는 과정을 직접 참여하고 체험할 수 있는 정원입니다.
                 <br>생활정원은 채소 씨앗을 뿌려서 어린 식물을 생산하는 온실, 사과나무 벽면장식정원, 블루베리 정원, 유실수 정원,
                 <br>산나물정원 등 다양한 형태의 정원이 있습니다.
@@ -54,7 +73,7 @@ var items = items || [];
             hidePagination: true,
             }) %>
         </div>
-    <% }) %>
+    <% }); %>
     <div class="map">
         <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
         width: 1450,
@@ -65,9 +84,9 @@ var items = items || [];
         }); %>
         <div class="markers">
             <% items.map((item, i) => { %>
-                <span <%= i === 0 ? '' : 'hidden' %>
-            id="marker<%= i + 1 %>">
-            마커 <%= i + 1 %>
+                <span <%= i === 0 ? '' : 'hidden'; %>
+            id="marker<%= i + 1; %>">
+            마커 <%= i + 1; %>
             </span>
             <% }); %>
         </div>

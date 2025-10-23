@@ -78,6 +78,28 @@ $imgPath: "./../../images/koagi";
                 color: #ec1010;
                 font-weight: 400;
             }
+
+            &.title-leaves {
+                display: flex;
+                justify-content: space-between;
+                background-image: url("#{$imgPath}/icon-leaves.png");
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex-wrap: wrap;
+                }
+
+                .caution {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #ec1010;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: block;
+                        width: 100%;
+                        margin-top: 10px;
+                        margin-left: -22px;
+                    }
+                }
+            }
         }
 
         @include m.respond-to(map.get(m.$max, 1199)) {
@@ -168,6 +190,18 @@ $imgPath: "./../../images/koagi";
                 font-size: 14px;
             }
         }
+
+        + .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 70px;
+        }
+
+        + button {
+            display: block;
+            margin: 70px auto 0;
+        }
     }
     .total {
         padding: 35px;
@@ -246,6 +280,22 @@ $imgPath: "./../../images/koagi";
         @include m.respond-to(map.get(m.$max, 1199)) {
             border-top: 1px solid #000;
             padding: 20px 0;
+        }
+
+        &:only-of-type {
+            border-top: none;
+            padding: 0;
+
+            .box {
+                font-size: 16px;
+                line-height: 30px;
+                color: #111;
+
+                ~ label {
+                    display: inline-flex;
+                    margin-top: 27px;
+                }
+            }
         }
 
         label {

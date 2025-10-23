@@ -4,26 +4,66 @@ var title = title || '';
 var category = category || '';
 %>
 <article class="detail-section">
-    <strong><%= title; %></strong>
+    <strong class="<%= category === 'clinic' ? 'title-leaves' : '' %>"><%- title; %></strong>
     <ul class="item-horizon">
         <%
         items.map((b, i) => {
         %>
             <li>
-                <strong><%= b[0]; %></strong>
+                <strong><%- b[0]; %></strong>
                 <% if (b[1]) { %>
-                    <div>
-                        <% if (typeof b[1] === 'string') { %>
-                            <%= b[1]; %>
+                    <div class="<%= b[1] === 'address' ? 'address' : b[1] === 'period' ? 'period' : '' %>">
+                        <% if (typeof b[1] === 'string' && b[1] !== 'address' && b[1] !== 'period') { %>
+                            <%- b[1]; %>
+                        <% } %>
+                        <% if (b[1] === 'address') { %>
+                            <label for="address1">
+                                <input type="text"
+                                       id="address1"
+                                       class="it"
+                                       disabled>
+                            </label>
+                            <button type="button"
+                                    class="button-black">
+                                주소찾기
+                            </button>
+                            <label for="address2">
+                                <input type="text"
+                                       id="address2"
+                                       class="it"
+                                       disabled>
+                            </label>
+                            <label for="address3">
+                                <input type="text"
+                                       id="address3"
+                                       class="it"
+                                       placeholder="상세주소를 입력하세요.">
+                            </label>
+                        <% } %>
+                        <% if (b[1] === 'period') { %>
+                            <label for="dateStart">
+                                <input type="text"
+                                       id="dateStart"
+                                       autocomplete="off"
+                                       class="it jsDatepicker">
+                            </label>
+                            <span>~</span>
+                            <label for="dateEnd">
+                                <input type="text"
+                                       id="dateEnd"
+                                       autocomplete="off"
+                                       class="it jsDatepicker">
+                            </label>
                         <% } %>
                         <% if (typeof b[1] === 'object') {
                             const type = b[1][0];
-                        if (type === 'select') {
-                        %>
-                            <label for="<%= category %>-select<%= i + 1 %>">
-                                <select id="<%= category %>-select<%= i + 1 %>"
+                        if (type === 'select') { %>
+                            <label for="<%= category; %>-select<%= i + 1; %>">
+                                <select id="<%= category; %>-select<%= i + 1; %>"
                                         class="select">
-                                    <option value=""><%= b[1][1] %></option>
+                                    <% for (let j = 1; j < b[1].length; j++) { %>
+                                        <option value=""><%= b[1][j] %></option>
+                                    <% } %>
                                 </select>
                             </label>
                         <% } %>
@@ -31,10 +71,10 @@ var category = category || '';
                             <%
                             b[1][1].map((radio, j) => { %>
                                 <input type="radio"
-                                       id="<%= category %>-radio<%= j + 1; %>"
-                                       <%- j === 0 ? `checked` : '' %>
+                                       id="<%= category; %>-radio<%= j + 1; %>"
+                                        <%- j === 0 ? `checked` : '' %>
                                        name="<%= category %>-radio<%= i; %>">
-                                <label for="<%= category %>-radio<%= j + 1; %>">
+                                <label for="<%= category; %>-radio<%= j + 1; %>">
                                     <%= radio; %>
                                 </label>
                         <% });
@@ -64,6 +104,7 @@ var category = category || '';
                                 <input type="text"
                                        id="<%= category %>-input<%= i + 1 %>-1"
                                        class="it"
+                                        <%- b[1][3] === 'disabled' ? 'disabled' : '' %>
                                        placeholder="<%- b[1][1] %>">
                             </label>
                         <% } %>
@@ -75,10 +116,10 @@ var category = category || '';
                 <% } %>
                 <% if (b[2] && b.length !== 3) { %>
                     <strong>
-                        <%= b[2]; %>
+                        <%- b[2]; %>
                     </strong>
 
-                    <% if (b[2] === '사업자등록번호') { %>
+                    <% if (b[2].includes('사업자등록번호')) { %>
                         <div class="business">
                             <% for (let z = 0; z < 3; z++) { %>
                                 <% if (z !== 0) { %>
@@ -111,32 +152,6 @@ var category = category || '';
                             </label>
                         <% } %>
                         <% } %>
-                    </div>
-                <% } %>
-                <% if (b[0] === '주소') { %>
-                    <div class="address">
-                        <label for="address1">
-                            <input type="text"
-                                   id="address1"
-                                   class="it"
-                                   disabled>
-                        </label>
-                        <button type="button"
-                                class="button-black">
-                            주소찾기
-                        </button>
-                        <label for="address2">
-                            <input type="text"
-                                   id="address2"
-                                   class="it"
-                                   disabled>
-                        </label>
-                        <label for="address3">
-                            <input type="text"
-                                   id="address3"
-                                   class="it"
-                                   placeholder="상세주소를 입력하세요.">
-                        </label>
                     </div>
                 <% } %>
             </li>

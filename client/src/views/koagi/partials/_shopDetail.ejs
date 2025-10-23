@@ -11,11 +11,11 @@
         ['신청자', '홍길동', '연락처', '010-0000-0000'],
     ];
     const basicInfo = [
-        ['회사명', ['input', '회사명을 입력하세요'], '대표자', ['input', '이름을 입력하세요']],
-        ['주소'],
-        ['사업자등록여부', ['radio', ['등록', '미등록']], '사업자등록번호', ''],
-        ['담당자', ['input', '', 'middle'], '이메일', ['input', 'sample123@korea.com']],
-        ['담당자 연락처', ['input', '-없이 숫자만 입력하세요','middle'], '<strong class="caution">※ 월 정산, 재고관리 등 상시연락을 위해 필히 기재 요망</strong>'],
+        ['회사명<span class="essential">*</span>', ['input', '회사명을 입력하세요'], '대표자<span class="essential">*</span>', ['input', '이름을 입력하세요']],
+        ['주소<span class="essential">*</span>', 'address'],
+        ['사업자등록여부<span class="essential">*</span>', ['radio', ['등록', '미등록']], '사업자등록번호<span class="essential">*</span>', ''],
+        ['담당자<span class="essential">*</span>', ['input', '', 'middle'], '이메일<span class="essential">*</span>', ['input', 'sample123@korea.com']],
+        ['담당자 연락처<span class="essential">*</span>', ['input', '-없이 숫자만 입력하세요','middle'], '<strong class="caution">※ 월 정산, 재고관리 등 상시연락을 위해 필히 기재 요망</strong>'],
     ];
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {

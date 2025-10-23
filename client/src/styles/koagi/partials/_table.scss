@@ -204,6 +204,27 @@ $imgPath: "./../../images/koagi";
             color: #ec1010;
             line-height: 25px;
         }
+
+        .files {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 60px;
+
+            li {
+                display: inline-flex;
+                flex: 0 0 auto;
+            }
+
+            a {
+                display: block;
+                padding-left: 27px;
+                background: url("#{$imgPath}/icon-clip.png") no-repeat 0 50%;
+                background-size: auto 20px;
+                font-size: 16px;
+                color: #000;
+                line-height: 26px;
+            }
+        }
     }
     .item-horizon {
         border-top: 1px solid #000;
@@ -264,6 +285,13 @@ $imgPath: "./../../images/koagi";
                         width: 475px;
                         max-width: 100%;
                     }
+
+                    label[for*="select"] {
+                        width: 190px;
+                        select {
+                            width: 100%;
+                        }
+                    }
                 }
 
                 label {
@@ -271,6 +299,10 @@ $imgPath: "./../../images/koagi";
 
                     &.middle {
                         width: 274px;
+                    }
+
+                    &.full {
+                        width: 919px;
                     }
                 }
 
@@ -325,10 +357,6 @@ $imgPath: "./../../images/koagi";
                 }
             }
 
-            select {
-                min-width: 211px;
-            }
-
             .caution {
                 font-size: 15px;
                 color: #ec1010;
@@ -340,7 +368,15 @@ $imgPath: "./../../images/koagi";
                     font-size: 13px;
                     line-height: 20px;
                 }
+
+                &.gray {
+                    color: #000;
+                }
             }
+        }
+
+        input[type="text"]:disabled {
+            background-color: #fafafa;
         }
 
         .address {
@@ -358,9 +394,22 @@ $imgPath: "./../../images/koagi";
                     flex: 1;
                 }
             }
+        }
 
-            input[type="text"]:disabled {
-                background-color: #fafafa;
+        .period {
+            gap: 7px;
+
+            label {
+                flex: 0 0 170px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 1;
+                }
+
+                input[type="text"] {
+                    padding-right: 50px;
+                    background: url("#{$imgPath}/icon-calendar-black.png") no-repeat top 50% right 22px;
+                    background-size: 23px auto;
+                }
             }
         }
 
@@ -376,7 +425,14 @@ $imgPath: "./../../images/koagi";
                 font-size: 16px;
             }
         }
+
+        .essential {
+            font-size: 16px;
+            color: #ec1010;
+            margin-left: 4px;
+        }
     }
+
     .table-info {
         border-top: 2px solid #000;
 

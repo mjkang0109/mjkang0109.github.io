@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
 $imgPath: "./../../images/koagi";
 
 .hidden,
@@ -392,7 +396,7 @@ body.scrolling #header {
 }
 
 .visual-wrap {
-    max-width: 2200px;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
@@ -405,20 +409,25 @@ body.scrolling #header {
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    width: 2200px;
+    width: 100%;
+    max-width: 2200px;
     height: 300px;
 
     &:before {
         content: "";
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
+        left: 304px;
+        width: 1896px;
         height: 100%;
         background-repeat: no-repeat;
         background-position: 100% 0;
         pointer-events: none;
         z-index: 1;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     &.plant {

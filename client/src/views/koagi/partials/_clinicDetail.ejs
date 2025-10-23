@@ -1,0 +1,165 @@
+<%
+const basicInfo = [
+    ['신청기관명<span class="essential">*</span>', ['input', '', 'middle']],
+    ['신청자명<span class="essential">*</span>', ['input', '김철수', 'middle', 'disabled']],
+    ['알림톡 발송 번호<span class="essential">*</span>', ['input', '010-0000-0000', 'middle', 'disabled'], '<strong class="caution gray">※ 질문 게시 후 1회, 답변 게시 후 1회 본인인증된 전화번호로 알림톡이 발송됩니다. </strong>'],
+    ['방문주소<span class="essential">*</span>', ['input', '', 'full']],
+    ['주차공간<span class="essential">*</span>', ['select', '있음', '없음'], '<span class="caution gray">※ 3.5톤 차량 : 6 x 3(m), 5.5톤 차량 : 10 x 3(m)의 주차공간 필요</span>'],
+    ['방문희망일<span class="essential">*</span>', 'period'],
+];
+
+const readonlyInfo = [
+    ['신청기관명', 'Sample Business'],
+    ['신청자명', '김철수'],
+    ['연락처', '010-0000-0000'],
+    ['방문주소', '경기도 세종특별자치시 대한로 123'],
+    ['주차공간', '있음'],
+    ['방문희망일', '2025-06-01~2025-06-12'],
+];
+
+const currentTableData = state === 'default' ? basicInfo : readonlyInfo;
+%>
+<% if (state !== 'default') { %>
+    <div class="document-state<%= ` ${state}`%>">
+        <strong><%= state === 'reject' ? '반려' : '승인' %></strong>
+        <p><%= state === 'reject' ? '신청이 반려되었습니다. 사유: 일정 조율 불가' : '신청이 승인되었습니다. 방문 예정일을 확인해 주세요.' %></p>
+    </div>
+<% } %>
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+category: 'clinic',
+title: '판매업체 신청정보',
+items: currentTableData,
+}) %>
+<article class="detail-section">
+    <strong class="title-leaves">
+        운영 프로그램
+        <span class="caution">* 참여자 명단 제출 및 사전 협의 필요</span>
+    </strong>
+    <ul class="check-items">
+        <%
+        const checks = [
+            ['상시 프로그램', '반려식물 클리닉 상담, 반려식물 소개'],
+            ['특별 프로그램', '나만의 반려식물 만들기 (반려식물 키트 체험)'],
+            ['특별 프로그램', '정원식물 관리 교육 및 컨설팅'],
+            ['별도 프로그램', '탄소 저감 실내가드닝'],
+        ];
+        %>
+        <% for (let i = 0; i < checks.length; i++) {
+            if (state !== 'default' && (i === 0 || i === 2)) {
+                continue;
+            }
+        %>
+        <li>
+            <input type="checkbox"
+                   id="program-check<%= i + 1; %>"
+                    <%- state !== 'default' ? `disabled` : '' %>
+                    <%- state !== 'default' ? `checked` : '' %>
+                   name="check-program">
+            <label for="program-check<%= i + 1; %>">
+                <strong><%= checks[i][0]; %></strong>
+                <span><%= checks[i][1]; %></span>
+            </label>
+        </li>
+        <% } %>
+    </ul>
+</article>
+<article class="detail-section">
+    <strong class="title-leaves">참여자 명단</strong>
+    <% if (state === 'default') { %>
+        <table class="table-horizon">
+            <tbody>
+            <tr>
+                <th>파일첨부</th>
+                <td>
+                    <ul class="box outline">
+                        <li>
+                            <button type="button"
+                                    class="button-delete">
+                                <span class="sound-only">삭제</span>
+                            </button>
+                            <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                        </li>
+                        <li>
+                            <button type="button"
+                                    class="button-delete">
+                                <span class="sound-only">삭제</span>
+                            </button>
+                            <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                        </li>
+                        <li>
+                            <button type="button"
+                                    class="button-delete">
+                                <span class="sound-only">삭제</span>
+                            </button>
+                            <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button type="button"
+                                class="button-black">
+                            파일선택
+                        </button>
+                        <button type="button"
+                                class="button-black">
+                            모두삭제
+                        </button>
+                    </div>
+                    <p class="caution">
+                        ※ 첨부파일 제한용량 : 50 MB
+                        <br>※ 허용파일 유형 : gif, jpg, png, jpeg
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    <% } %>
+    <% if (state !== 'default') { %>
+        <table class="table-horizon">
+            <colgroup>
+                <col style="width: 200px">
+                <col>
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>첨부파일</th>
+                <td>
+                    <ul class="files">
+                        <li>
+                            <a href="#">사업자등록 및 인·허가 관련 통합 폐업신고서.hwpx</a>
+                        </li>
+                        <li>
+                            <a href="#">사업자등록 및 인·허가 관련 통합.hwpx</a>
+                        </li>
+                        <li>
+                            <a href="#">사업자등록 및 인·허가 관련 통합 폐업신고서.hwpx</a>
+                        </li>
+                        <li>
+                            <a href="#">사업자등록 및 인·허가 관련 통합.hwpx</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    <% } %>
+</article>
+<% if (state === 'default') { %>
+    <article class="detail-section">
+        <strong class="title-leaves">개인정보 수집·이용 동의</strong>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_terms`, {
+        onlyPolicy: true,
+        }) %>
+    </article>
+    <div class="buttons">
+        <button type="button"
+                class="button-navy">신청
+        </button>
+        <button type="button"
+                class="button-gray">취소
+        </button>
+    </div>
+<% } %>
+
+<% if (state !== 'default') { %>
+    <button type="button" class="button-navy">목록</button>
+<% } %>

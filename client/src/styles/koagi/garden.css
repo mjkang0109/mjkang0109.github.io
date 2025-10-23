@@ -571,7 +571,7 @@ body.scrolling #header {
 }
 
 .visual-wrap {
-  max-width: 2200px;
+  max-width: 100%;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -584,20 +584,27 @@ body.scrolling #header {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  width: 2200px;
+  width: 100%;
+  max-width: 2200px;
   height: 300px;
 }
 .mKeysub1:before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 304px;
+  width: 1896px;
   height: 100%;
   background-repeat: no-repeat;
   background-position: 100% 0;
   pointer-events: none;
   z-index: 1;
+}
+@media (max-width: 1199px) {
+  .mKeysub1:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .mKeysub1.plant:before {
   background-image: url("./../../images/koagi/sub-visual-plant.png");
@@ -1647,6 +1654,19 @@ body.scrolling #header {
     padding: 20px 0;
   }
 }
+.terms .term:only-of-type {
+  border-top: none;
+  padding: 0;
+}
+.terms .term:only-of-type .box {
+  font-size: 16px;
+  line-height: 30px;
+  color: #111;
+}
+.terms .term:only-of-type .box ~ label {
+  display: inline-flex;
+  margin-top: 27px;
+}
 .terms .term label {
   font-size: 17px;
   line-height: 27px;
@@ -2266,6 +2286,7 @@ body.scrolling #header {
 }
 @media (max-width: 1199px) {
   .detail-view {
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 46px;
   }
@@ -2355,7 +2376,14 @@ body.scrolling #header {
   background: url("./../../images/koagi/icon-circle-right.png") no-repeat 50% 50%;
   box-shadow: 0 0 10px rgba(148, 148, 148, 0.19);
   border-radius: 100%;
-  background-size: 40px;
+}
+@media (max-width: 1199px) {
+  .detail-view .button-next,
+  .detail-view .button-prev {
+    width: 40px;
+    height: 40px;
+    background-size: 100% auto;
+  }
 }
 .detail-view .button-next {
   right: -36px;
@@ -2396,14 +2424,27 @@ body.scrolling #header {
 @media (max-width: 1199px) {
   .detail-view .thumb-swiper {
     width: 100%;
+    margin-top: 10px;
   }
 }
 .detail-view .thumb-swiper ul {
   gap: 20px;
 }
+@media (max-width: 1199px) {
+  .detail-view .thumb-swiper ul {
+    gap: 0;
+  }
+}
 .detail-view .thumb-swiper li {
-  flex: 1;
+  flex: 0 0 147px;
   cursor: pointer;
+}
+@media (max-width: 1199px) {
+  .detail-view .thumb-swiper li {
+    flex: 0 0 25%;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
 }
 .detail-view .img-wrap {
   display: block;
@@ -2913,6 +2954,30 @@ input[type=radio] + label:after {
   color: #ec1010;
   font-weight: 400;
 }
+.detail-section > strong.title-leaves {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("./../../images/koagi/icon-leaves.png");
+}
+@media (max-width: 1199px) {
+  .detail-section > strong.title-leaves {
+    flex-wrap: wrap;
+  }
+}
+.detail-section > strong.title-leaves .caution {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ec1010;
+}
+@media (max-width: 1199px) {
+  .detail-section > strong.title-leaves .caution {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: -22px;
+  }
+}
 @media (max-width: 1199px) {
   .detail-section > .left,
   .detail-section > .right {
@@ -3003,6 +3068,16 @@ input[type=radio] + label:after {
   .detail-section .notice {
     font-size: 14px;
   }
+}
+.detail-section + .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 70px;
+}
+.detail-section + button {
+  display: block;
+  margin: 70px auto 0;
 }
 
 .total {
@@ -3687,6 +3762,24 @@ table + table {
   color: #ec1010;
   line-height: 25px;
 }
+.table-horizon .files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 60px;
+}
+.table-horizon .files li {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+.table-horizon .files a {
+  display: block;
+  padding-left: 27px;
+  background: url("./../../images/koagi/icon-clip.png") no-repeat 0 50%;
+  background-size: auto 20px;
+  font-size: 16px;
+  color: #000;
+  line-height: 26px;
+}
 
 .item-horizon {
   border-top: 1px solid #000;
@@ -3748,11 +3841,20 @@ table + table {
   width: 475px;
   max-width: 100%;
 }
+.item-horizon li > div:only-of-type label[for*=select] {
+  width: 190px;
+}
+.item-horizon li > div:only-of-type label[for*=select] select {
+  width: 100%;
+}
 .item-horizon li > div label {
   width: 100%;
 }
 .item-horizon li > div label.middle {
   width: 274px;
+}
+.item-horizon li > div label.full {
+  width: 919px;
 }
 .item-horizon li > div + strong {
   border-left: 1px solid #e7e7e7;
@@ -3800,9 +3902,6 @@ table + table {
     width: 100%;
   }
 }
-.item-horizon li select {
-  min-width: 211px;
-}
 .item-horizon li .caution {
   font-size: 15px;
   color: #ec1010;
@@ -3816,6 +3915,12 @@ table + table {
     font-size: 13px;
     line-height: 20px;
   }
+}
+.item-horizon li .caution.gray {
+  color: #000;
+}
+.item-horizon input[type=text]:disabled {
+  background-color: #fafafa;
 }
 .item-horizon .address {
   gap: 10px;
@@ -3831,8 +3936,21 @@ table + table {
 .item-horizon .address label:first-of-type {
   flex: 1;
 }
-.item-horizon .address input[type=text]:disabled {
-  background-color: #fafafa;
+.item-horizon .period {
+  gap: 7px;
+}
+.item-horizon .period label {
+  flex: 0 0 170px;
+}
+@media (max-width: 1199px) {
+  .item-horizon .period label {
+    flex: 1;
+  }
+}
+.item-horizon .period label input[type=text] {
+  padding-right: 50px;
+  background: url("./../../images/koagi/icon-calendar-black.png") no-repeat top 50% right 22px;
+  background-size: 23px auto;
 }
 .item-horizon .business {
   gap: 7px;
@@ -3843,6 +3961,11 @@ table + table {
 .item-horizon .business span {
   color: #333;
   font-size: 16px;
+}
+.item-horizon .essential {
+  font-size: 16px;
+  color: #ec1010;
+  margin-left: 4px;
 }
 
 .table-info {
@@ -3970,6 +4093,7 @@ table + table {
   padding: 23px 43px;
   border-radius: 10px;
   color: #fff;
+  text-align: center;
   font-size: 17px;
   font-family: "SCoreDream", serif;
   font-weight: 600;
@@ -3992,6 +4116,7 @@ table + table {
   padding: 23px 43px;
   border-radius: 10px;
   color: #fff;
+  text-align: center;
   font-size: 17px;
   font-family: "SCoreDream", serif;
   font-weight: 600;
@@ -4005,9 +4130,31 @@ table + table {
   }
 }
 
+.button-gray {
+  min-width: 150px;
+  box-sizing: border-box;
+  background-color: #aaa;
+  padding: 23px 43px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+  font-family: "SCoreDream", serif;
+  font-weight: 600;
+}
+@media (max-width: 1199px) {
+  .button-gray {
+    min-width: 110px;
+    padding: 15px 0;
+    border-radius: 7px;
+    font-size: 15px;
+  }
+}
+
 .button-black {
   padding: 15px 27px;
   font-size: 16px;
+  text-align: center;
   background-color: #242424;
   color: #fff;
 }
@@ -4017,6 +4164,7 @@ table + table {
   justify-content: center;
   align-items: center;
   padding: 28px 54px;
+  text-align: center;
   background-color: #3cad39;
   border-radius: 10px;
   font-size: 17px;
@@ -4030,6 +4178,7 @@ table + table {
   align-items: center;
   padding: 28px 54px;
   border-radius: 10px;
+  text-align: center;
   color: #3cad39 !important;
   font-size: 17px;
   border: 2px solid #3cad39;
@@ -4048,6 +4197,9 @@ table + table {
 }
 .schedule-wrap {
   width: 100%;
+}
+.schedule input[type=checkbox] + label {
+  width: 25px;
 }
 
 .detail-theme {
@@ -4123,6 +4275,11 @@ table + table {
   flex: 1;
 }
 @media (max-width: 1199px) {
+  .detail-theme .visual {
+    flex: 0 0 auto;
+  }
+}
+@media (max-width: 1199px) {
   .detail-theme .visual img {
     width: 100%;
     height: auto;
@@ -4173,6 +4330,55 @@ table + table {
   .detail-theme .map img {
     width: 100%;
     height: auto;
+  }
+}
+.detail-theme .visuals {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals {
+    flex: 0 0 100%;
+  }
+}
+.detail-theme .visuals .visual {
+  width: 100%;
+}
+.detail-theme .visuals .button-next,
+.detail-theme .visuals .button-prev {
+  position: absolute;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  background: url("./../../images/koagi/icon-circle-right.png") no-repeat 50% 50%;
+  box-shadow: 0 0 10px rgba(148, 148, 148, 0.19);
+  border-radius: 100%;
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals .button-next,
+  .detail-theme .visuals .button-prev {
+    width: 40px;
+    height: 40px;
+    background-size: 100% auto;
+  }
+}
+.detail-theme .visuals .button-next {
+  right: 60px;
+  transform: translateY(-50%);
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals .button-next {
+    right: 0;
+  }
+}
+.detail-theme .visuals .button-prev {
+  left: 60px;
+  transform: translateY(-50%) rotate(180deg);
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals .button-prev {
+    left: 0;
   }
 }
 
@@ -4395,6 +4601,104 @@ table + table {
   padding-left: 0;
   background: none;
 }
+.board-detail .files {
+  display: flex;
+  margin-top: 100px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 39px 55px 33px 0;
+}
+@media (max-width: 1199px) {
+  .board-detail .files {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+.board-detail .files strong {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 32px;
+  color: #000;
+}
+@media (max-width: 1199px) {
+  .board-detail .files strong {
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+}
+.board-detail .files ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 30px;
+}
+@media (max-width: 1199px) {
+  .board-detail .files ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+.board-detail .files a {
+  display: block;
+  padding-left: 27px;
+  background: url("./../../images/koagi/icon-clip.png") no-repeat 0 50%;
+  background-size: auto 20px;
+  font-size: 16px;
+  color: #000;
+  line-height: 26px;
+}
+.board-detail .files + .buttons {
+  display: flex;
+}
+.board-detail .files + .buttons button,
+.board-detail .files + .buttons a {
+  margin: 0;
+}
+.board-detail .buttons {
+  position: relative;
+  padding: 0 200px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .board-detail .buttons {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+.board-detail .buttons:last-of-type button,
+.board-detail .buttons:last-of-type a {
+  margin: 0;
+}
+.board-detail .buttons:last-of-type button:nth-child(3):last-child,
+.board-detail .buttons:last-of-type a:nth-child(3):last-child {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1199px) {
+  .board-detail .buttons:last-of-type button:nth-child(3):last-child,
+  .board-detail .buttons:last-of-type a:nth-child(3):last-child {
+    position: relative;
+  }
+}
+.board-detail .desc {
+  padding: 0 25px;
+  font-size: 16px;
+  line-height: 32px;
+  font-family: "SCoreDream", serif;
+  color: #000;
+}
+@media (max-width: 1199px) {
+  .board-detail .desc {
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.board-detail .desc + .img-wrap {
+  margin-top: 60px;
+}
 
 .announcement-detail {
   border-top: 2px solid #444;
@@ -4481,7 +4785,7 @@ table + table {
   margin-top: 100px;
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
-  padding: 39px 55px 33px;
+  padding: 39px 55px 33px 0;
 }
 @media (max-width: 1199px) {
   .announcement-detail .files {
@@ -4492,19 +4796,22 @@ table + table {
 .announcement-detail .files strong {
   flex: 0 0 auto;
   width: 160px;
+  text-align: center;
   font-size: 18px;
   line-height: 32px;
   color: #000;
 }
 @media (max-width: 1199px) {
   .announcement-detail .files strong {
+    width: 100%;
     padding-bottom: 20px;
+    text-align: left;
   }
 }
 .announcement-detail .files ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px 12px;
+  gap: 12px 30px;
 }
 @media (max-width: 1199px) {
   .announcement-detail .files ul {
@@ -4914,6 +5221,128 @@ table + table {
     flex: 0 0 auto;
     width: 100vw;
     margin-left: -15px;
+  }
+}
+
+.check-items {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.check-items input[type=checkbox]:checked + label:before {
+  background: url("./../../images/koagi/icon-check-red-on.png") no-repeat 50% 50%;
+}
+.check-items input[type=checkbox]:checked + label strong,
+.check-items input[type=checkbox]:checked + label span {
+  color: #c91445;
+}
+.check-items input[type=checkbox]:disabled + label {
+  cursor: default;
+}
+.check-items input[type=checkbox]:disabled + label:before {
+  display: none;
+}
+.check-items input[type=checkbox] + label {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 27px 38px;
+  border: 1px solid #d2d2d2;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .check-items input[type=checkbox] + label {
+    flex-wrap: wrap;
+  }
+}
+.check-items input[type=checkbox] + label:before {
+  left: initial;
+  right: 38px;
+  width: 28px;
+  height: 28px;
+  background: url("./../../images/koagi/icon-check-red-off.png") no-repeat 50% 50%;
+  border: none;
+}
+.check-items strong {
+  flex: 0 0 160px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.check-items span {
+  flex: 1;
+  font-size: 17px;
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .check-items span {
+    flex: 0 0 100%;
+    margin-top: 20px;
+  }
+}
+
+.document-state {
+  display: flex;
+  min-height: 70px;
+  margin-bottom: 74px;
+}
+@media (max-width: 1199px) {
+  .document-state {
+    flex-direction: column;
+  }
+}
+.document-state.reject strong {
+  background-color: #c91445;
+}
+.document-state.reject p {
+  border: 1px solid #c91445;
+  color: #c91445;
+  background-color: #fff7f9;
+}
+.document-state.approval strong {
+  background-color: #0b59c3;
+}
+.document-state.approval p {
+  border: 1px solid #0b59c3;
+  color: #0b59c3;
+  background-color: #ebf3fe;
+}
+.document-state strong {
+  flex: 0 0 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px 0 0 50px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .document-state strong {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.document-state p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 0 50px 50px 0;
+  padding: 10px 27px;
+  font-size: 19px;
+  line-height: 29px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .document-state p {
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
   }
 }
 

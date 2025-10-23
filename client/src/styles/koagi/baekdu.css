@@ -571,7 +571,7 @@ body.scrolling #header {
 }
 
 .visual-wrap {
-  max-width: 2200px;
+  max-width: 100%;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -584,20 +584,27 @@ body.scrolling #header {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  width: 2200px;
+  width: 100%;
+  max-width: 2200px;
   height: 300px;
 }
 .mKeysub1:before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 304px;
+  width: 1896px;
   height: 100%;
   background-repeat: no-repeat;
   background-position: 100% 0;
   pointer-events: none;
   z-index: 1;
+}
+@media (max-width: 1199px) {
+  .mKeysub1:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .mKeysub1.plant:before {
   background-image: url("./../../images/koagi/sub-visual-plant.png");
@@ -2065,6 +2072,9 @@ body.scrolling #header {
 .gallery-items.gallery-photos .title.line-clamp {
   justify-content: flex-start;
 }
+.gallery-items.gallery-photos .title.line-clamp strong {
+  text-align: left;
+}
 .gallery-items.gallery-photos .title.line-clamp + .date {
   justify-content: flex-start;
 }
@@ -2352,7 +2362,14 @@ body.scrolling #header {
   background: url("./../../images/koagi/icon-circle-right.png") no-repeat 50% 50%;
   box-shadow: 0 0 10px rgba(148, 148, 148, 0.19);
   border-radius: 100%;
-  background-size: 40px;
+}
+@media (max-width: 1199px) {
+  .detail-view .button-next,
+  .detail-view .button-prev {
+    width: 40px;
+    height: 40px;
+    background-size: 100% auto;
+  }
 }
 .detail-view .button-next {
   right: -36px;
@@ -2399,7 +2416,7 @@ body.scrolling #header {
   gap: 20px;
 }
 .detail-view .thumb-swiper li {
-  flex: 1;
+  flex: 0 0 147px;
   cursor: pointer;
 }
 .detail-view .img-wrap {
@@ -2976,6 +2993,7 @@ input[type=radio] + label:after {
   }
   .detail-section .img-wrap img {
     max-width: 100%;
+    height: auto;
   }
 }
 .detail-section .link-list.outline-green {
@@ -3744,11 +3762,20 @@ table + table {
   width: 475px;
   max-width: 100%;
 }
+.item-horizon li > div:only-of-type label[for*=select] {
+  width: 190px;
+}
+.item-horizon li > div:only-of-type label[for*=select] select {
+  width: 100%;
+}
 .item-horizon li > div label {
   width: 100%;
 }
 .item-horizon li > div label.middle {
   width: 274px;
+}
+.item-horizon li > div label.full {
+  width: 919px;
 }
 .item-horizon li > div + strong {
   border-left: 1px solid #e7e7e7;
@@ -3796,9 +3823,6 @@ table + table {
     width: 100%;
   }
 }
-.item-horizon li select {
-  min-width: 211px;
-}
 .item-horizon li .caution {
   font-size: 15px;
   color: #ec1010;
@@ -3812,6 +3836,12 @@ table + table {
     font-size: 13px;
     line-height: 20px;
   }
+}
+.item-horizon li .caution.gray {
+  color: #000;
+}
+.item-horizon input[type=text]:disabled {
+  background-color: #fafafa;
 }
 .item-horizon .address {
   gap: 10px;
@@ -3827,8 +3857,16 @@ table + table {
 .item-horizon .address label:first-of-type {
   flex: 1;
 }
-.item-horizon .address input[type=text]:disabled {
-  background-color: #fafafa;
+.item-horizon .period {
+  gap: 7px;
+}
+.item-horizon .period label {
+  flex: 0 0 170px;
+}
+.item-horizon .period label input[type=text] {
+  padding-right: 50px;
+  background: url("./../../images/koagi/icon-calendar-black.png") no-repeat top 12px right 22px;
+  background-size: 23px auto;
 }
 .item-horizon .business {
   gap: 7px;
@@ -3839,6 +3877,11 @@ table + table {
 .item-horizon .business span {
   color: #333;
   font-size: 16px;
+}
+.item-horizon .essential {
+  font-size: 16px;
+  color: #ec1010;
+  margin-left: 4px;
 }
 
 .table-info {
@@ -4045,6 +4088,9 @@ table + table {
 .schedule-wrap {
   width: 100%;
 }
+.schedule input[type=checkbox] + label {
+  width: 25px;
+}
 
 .detail-theme {
   margin-top: 128px;
@@ -4119,6 +4165,11 @@ table + table {
   flex: 1;
 }
 @media (max-width: 1199px) {
+  .detail-theme .visual {
+    flex: 0 0 auto;
+  }
+}
+@media (max-width: 1199px) {
   .detail-theme .visual img {
     width: 100%;
     height: auto;
@@ -4169,6 +4220,55 @@ table + table {
   .detail-theme .map img {
     width: 100%;
     height: auto;
+  }
+}
+.detail-theme .visuals {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals {
+    flex: 0 0 100%;
+  }
+}
+.detail-theme .visuals .visual {
+  width: 100%;
+}
+.detail-theme .visuals .button-next,
+.detail-theme .visuals .button-prev {
+  position: absolute;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  background: url("./../../images/koagi/icon-circle-right.png") no-repeat 50% 50%;
+  box-shadow: 0 0 10px rgba(148, 148, 148, 0.19);
+  border-radius: 100%;
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals .button-next,
+  .detail-theme .visuals .button-prev {
+    width: 40px;
+    height: 40px;
+    background-size: 100% auto;
+  }
+}
+.detail-theme .visuals .button-next {
+  right: 60px;
+  transform: translateY(-50%);
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals .button-next {
+    right: 0;
+  }
+}
+.detail-theme .visuals .button-prev {
+  left: 60px;
+  transform: translateY(-50%) rotate(180deg);
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals .button-prev {
+    left: 0;
   }
 }
 

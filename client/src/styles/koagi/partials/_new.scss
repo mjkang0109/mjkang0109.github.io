@@ -805,6 +805,9 @@ input[type="radio"] {
 
     .visual {
         flex: 1;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex: 0 0 auto;
+        }
 
         img {
             @include m.respond-to(map.get(m.$max, 1199)) {
@@ -865,6 +868,51 @@ input[type="radio"] {
             @include m.respond-to(map.get(m.$max, 1199)) {
                 width: 100%;
                 height: auto;
+            }
+        }
+    }
+
+    .visuals {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex: 0 0 100%;
+        }
+
+        .visual {
+            width: 100%;
+        }
+
+        .button-next,
+        .button-prev {
+            position: absolute;
+            top: 50%;
+            width: 72px;
+            height: 72px;
+            background: url("#{$imgPath}/icon-circle-right.png") no-repeat 50% 50%;
+            box-shadow: 0 0 10px rgba(148 148 148 / .19);
+            border-radius: 100%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 40px;
+                height: 40px;
+                background-size: 100% auto;
+            }
+        }
+
+        .button-next {
+            right: 60px;
+            transform: translateY(-50%);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                right: 0;
+            }
+        }
+
+        .button-prev {
+            left: 60px;
+            transform: translateY(-50%) rotate(180deg);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                left: 0;
             }
         }
     }
@@ -988,6 +1036,144 @@ input[type="radio"] {
             flex: 0 0 auto;
             width: 100vw;
             margin-left: -15px;
+        }
+    }
+}
+
+.check-items {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    input[type="checkbox"] {
+        &:checked {
+            + label {
+                &:before {
+                    background: url("#{$imgPath}/icon-check-red-on.png") no-repeat 50% 50%;
+                }
+
+                strong,
+                span {
+                    color: #c91445;
+                }
+            }
+        }
+
+        &:disabled {
+            + label {
+                cursor: default;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        + label {
+            display: flex;
+            width: 100%;
+            height: auto;
+            padding: 27px 38px;
+            border: 1px solid #d2d2d2;
+            border-radius: 20px;
+            box-sizing: border-box;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-wrap: wrap;
+            }
+
+            &:before {
+                left: initial;
+                right: 38px;
+                width: 28px;
+                height: 28px;
+                background: url("#{$imgPath}/icon-check-red-off.png") no-repeat 50% 50%;
+                border: none;
+            }
+        }
+    }
+
+    strong {
+        flex: 0 0 160px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    span {
+        flex: 1;
+        font-size: 17px;
+        padding-right: 80px;
+        box-sizing: border-box;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex: 0 0 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+.document-state {
+    display: flex;
+    min-height: 70px;
+    margin-bottom: 74px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        flex-direction: column;
+    }
+
+    &.reject {
+        strong {
+            background-color: #c91445;
+        }
+
+        p {
+            border: 1px solid #c91445;
+            color: #c91445;
+            background-color: #fff7f9;
+        }
+    }
+
+    &.approval {
+        strong {
+            background-color: #0b59c3;
+        }
+
+        p {
+            border: 1px solid #0b59c3;
+            color: #0b59c3;
+            background-color: #ebf3fe;
+        }
+    }
+
+    strong {
+        flex: 0 0 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px 0 0 50px;
+        color: #fff;
+        font-size: 19px;
+        font-weight: 700;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex: 0 0 auto;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    p {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        border-radius: 0 50px 50px 0;
+        padding: 10px 27px;
+        font-size: 19px;
+        line-height: 29px;
+        font-weight: 700;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
         }
     }
 }

@@ -7,7 +7,7 @@ var items = items || [];
              role="tablist">
             <% items.map((item, i) => { %>
                 <button type="button"
-                        aria-controls="panel-<%= i + 1; %>"
+                        aria-controls="panel<%= i + 1; %>"
                         aria-selected="<%= i === 0; %>"
                         data-visual="visual<%= i + 1; %>"
                         data-marker="marker<%= i + 1; %>"
@@ -51,8 +51,8 @@ var items = items || [];
         </div>
     </div>
     <% items.map((item, i) => { %>
-        <div class="panel"
-             id="panel-<%= i + 1; %>"
+        <div id="panel<%= i + 1; %>"
+             class="panel"
              role="tabpanel"
                 <%- i !== 0 ? 'hidden' : ''; %>>
             <strong><%= item.title; %></strong>

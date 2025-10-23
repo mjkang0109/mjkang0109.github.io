@@ -266,6 +266,9 @@ $imgPath: "./../../images/koagi";
         }
 
         &.gallery-box {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr;
+            }
             .title {
                 justify-content: flex-start;
                 text-align: left;

@@ -2102,6 +2102,11 @@ body.scrolling #header {
 .gallery-items.gallery-grid .badges {
   width: auto !important;
 }
+@media (max-width: 1199px) {
+  .gallery-items.gallery-box {
+    grid-template-columns: 1fr;
+  }
+}
 .gallery-items.gallery-box .title {
   justify-content: flex-start;
   text-align: left;
@@ -2369,6 +2374,11 @@ body.scrolling #header {
   gap: 24px;
   margin-top: 94px;
 }
+@media (max-width: 1199px) {
+  .detail-view .right .links {
+    flex-direction: column;
+  }
+}
 .detail-view .right .link-map {
   display: inline-flex;
   justify-content: center;
@@ -2377,6 +2387,12 @@ body.scrolling #header {
   height: 72px;
   border-radius: 10px;
   font-size: 17px;
+}
+@media (max-width: 1199px) {
+  .detail-view .right .link-map {
+    flex: 0 0 auto;
+    width: 100%;
+  }
 }
 .detail-view .right .link-map.green {
   background-color: #3cad39;
@@ -4619,6 +4635,9 @@ table + table {
 }
 .board-detail .text-wrap .box.green + .detail-section {
   margin-top: 63px;
+}
+.board-detail .text-wrap table col {
+  width: auto !important;
 }
 .board-detail .buttons {
   display: flex;

@@ -22,6 +22,7 @@ $imgPath: "./../../images/koagi";
 
         .right {
             flex: 1;
+            position: relative;
             padding-top: 27px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 padding: 0 20px;
@@ -61,6 +62,9 @@ $imgPath: "./../../images/koagi";
                 justify-content: space-between;
                 gap: 24px;
                 margin-top: 94px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex-direction: column;
+                }
             }
 
             .link-map {
@@ -71,7 +75,10 @@ $imgPath: "./../../images/koagi";
                 height: 72px;
                 border-radius: 10px;
                 font-size: 17px;
-
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 auto;
+                    width: 100%;
+                }
 
                 &.green {
                     background-color: #3cad39;
@@ -227,6 +234,20 @@ $imgPath: "./../../images/koagi";
             margin-top: 92px;
             padding-top: 92px;
             border-top: 1px solid #e5e5e5;
+        }
+
+        .desc {
+            margin-top: 46px;
+            padding-bottom: 102px;
+            font-size: 16px;
+            line-height: 26px;
+            color: #000;
+
+            .button-green.vr {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
         }
     }
 

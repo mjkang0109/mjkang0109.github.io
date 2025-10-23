@@ -95,6 +95,12 @@ $imgPath: "./../../images/koagi";
                     margin-top: 63px;
                 }
             }
+
+            table {
+                col {
+                    width: auto !important;
+                }
+            }
         }
 
         .buttons {

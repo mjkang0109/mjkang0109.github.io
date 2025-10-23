@@ -39,7 +39,7 @@ $imgPath: "./../../images/koagi";
         font-weight: 600;
         @include m.respond-to(map.get(m.$max, 1199)) {
             min-width: 110px;
-            padding: 15px 0;
+            padding: 15px 10px;
             border-radius: 7px;
             font-size: 15px;
         }

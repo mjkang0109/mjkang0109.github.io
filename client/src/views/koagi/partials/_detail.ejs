@@ -2,22 +2,24 @@
 var count = count || 4;
 var thumb = thumb || undefined;
 var title = title || '';
+var desc = desc || '';
 var items = items || [];
 var dummy = dummy || '';
 var description = description || '';
 var bottomItems = bottomItems || {};
 var hideMap = hideMap || false;
 var hideListLink = hideListLink || false;
+var hideNavigation = hideNavigation || false;
 %>
 <div class="detail-view">
     <div class="left">
         <div class="left-top">
             <div class="swiper-wrap swiper"
                  id="plantSwiper"
-                    <%= thumb ? `data-type=thumb` : '' %>
+                    <%= thumb ? `data-type=thumb` : ''; %>
                  data-gap="20"
                  data-per-view="1"
-                    <%= thumb ? `data-thumb=${thumb.id}` : '' %>>
+                    <%= thumb ? `data-thumb=${thumb.id}` : ''; %>>
                 <ul class="swiper-wrapper">
                     <% for (let i = 0; i < count; i++) { %>
                         <li class="swiper-slide">
@@ -37,18 +39,20 @@ var hideListLink = hideListLink || false;
             <% if (!thumb) { %>
                 <div class="pagination"></div>
             <% } %>
-            <button type="button"
-                    class="button-next">
-                <span class="sound-only">다음</span>
-            </button>
-            <button type="button"
-                    class="button-prev">
-                <span class="sound-only">이전</span>
-            </button>
+            <% if (!hideNavigation) { %>
+                <button type="button"
+                        class="button-next">
+                    <span class="sound-only">다음</span>
+                </button>
+                <button type="button"
+                        class="button-prev">
+                    <span class="sound-only">이전</span>
+                </button>
+            <% } %>
         </div>
         <% if (thumb) { %>
-            <div id="<%= thumb.id %>"
-                 data-parent="<%= thumb.parentId %>"
+            <div id="<%= thumb.id; %>"
+                 data-parent="<%= thumb.parentId; %>"
                  data-per-view="auto"
                  class="swiper-wrap thumb-swiper">
                 <ul class="swiper-wrapper">
@@ -70,17 +74,22 @@ var hideListLink = hideListLink || false;
         <% } %>
     </div>
     <div class="right info">
-        <dfn><%= title %></dfn>
-        <ul>
-            <%
-            items.map(item => {
-            %>
-                <li>
-                    <strong><%= item.title; %></strong>
-                    <span><%= item.desc; %></span>
-                </li>
-            <% }); %>
-        </ul>
+        <dfn><%= title; %></dfn>
+        <% if (items.length > 0) { %>
+            <ul>
+                <%
+                items.map(item => {
+                %>
+                    <li>
+                        <strong><%= item.title; %></strong>
+                        <span><%= item.desc; %></span>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+        <% if (desc) { %>
+            <p class="desc"><%- desc %></p>
+        <% } %>
         <% if (!hideMap) { %>
             <div class="links">
                 <a href="#"

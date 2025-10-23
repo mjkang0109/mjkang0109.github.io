@@ -28,7 +28,8 @@ $imgPath: "./../../images/koagi";
         }
 
         > strong {
-            display: block;
+            display: flex;
+            align-items: center;
             padding-left: 34px;
             background: url("#{$imgPath}/icon-leaf2.png") no-repeat 0 0;
             margin-bottom: 20px;
@@ -97,6 +98,10 @@ $imgPath: "./../../images/koagi";
                         width: 100%;
                         margin-top: 10px;
                         margin-left: -22px;
+                    }
+
+                    &.gray {
+                        color: #595959;
                     }
                 }
             }
@@ -201,6 +206,35 @@ $imgPath: "./../../images/koagi";
         + button {
             display: block;
             margin: 70px auto 0;
+        }
+
+        .map-wrap {
+            display: block;
+            position: relative;
+            width: 1450px;
+            height: 728px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                height: 0;
+                padding-top: math.div(728, 1450) * 100%;
+
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            + strong {
+                margin-top: 222px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: 50px;
+                }
+            }
         }
     }
     .total {

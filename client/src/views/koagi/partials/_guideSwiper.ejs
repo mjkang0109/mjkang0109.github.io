@@ -13,32 +13,53 @@ const items = [
     'swiper',
 ];
 
-const length = items.length
+const length = items.length;
 %>
 <div class="swiper-tabs">
     <div class="swiper-wrap swiper"
-         id="plantSwiper"
+         id="guideSwiper"
          data-scrollbar="true"
          data-gap="25"
          data-per-view="auto">
-        <ul class="swiper-wrapper">
+        <ul class="swiper-wrapper"
+            role="tablist">
             <% for (let i = 0; i < length; i++) { %>
                 <li class="swiper-slide">
-                    <span class="img-wrap">
-                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                        width: 650,
-                        height: 488,
-                        isSimply: true,
-                        source: `${imgPath}/dummy-guide.jpg`,
-                        alt: '',
-                        }); %>
-                    </span>
-                    <strong>
-                        <%= items[i] %><%= i + 1 %>
-                    </strong>
+                    <div role="tab"
+                         aria-controls="panel<%= i + 1; %>"
+                         aria-selected="<%= i === 0; %>">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 650,
+                            height: 488,
+                            isSimply: true,
+                            source: `${imgPath}/dummy-guide.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong>
+                            <%= items[i]; %><%= i + 1; %>
+                        </strong>
+                    </div>
                 </li>
             <% } %>
         </ul>
         <div class="scrollbar"></div>
     </div>
 </div>
+
+<% for (let i = 0; i < length; i++) { %>
+    <div id="panel<%= i + 1 %>"
+         class="panel"
+         role="tabpanel"
+            <%- i !== 0 ? 'hidden' : '' %>>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_detail`, {
+        title: items[i],
+        dummy: 'edu2',
+        hideMap: true,
+        hideListLink: true,
+        hideNavigation: true,
+        desc: '수목원을 들어서는 관문으로 홍보와 안내를 담당하며 방문객이 수목원을 원활히 이용할 수 있도록 정보를 제공합니다. <br>각종 편의시설 및 장비를 보유하고 있으며, 백두대간 해설관(1층), 기획전시관(2층)이 있습니다. 외형은 주변 산마루금과 조화를 이루도록 설계하였으며 내부는 나무의 줄기를 형상화한 기둥을 세워 친환경적으로 설계하였습니다. <button type="button" class="button-green vr"><span>항공 VR 보기</span></button>',
+        }) %>
+    </div>
+<% } %>

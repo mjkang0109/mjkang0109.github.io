@@ -4620,6 +4620,9 @@ table + table {
 .board-detail .text-wrap .box.green + .detail-section {
   margin-top: 63px;
 }
+.board-detail .text-wrap table col {
+  width: auto !important;
+}
 .board-detail .buttons {
   display: flex;
   justify-content: center;

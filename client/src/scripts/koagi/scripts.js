@@ -35,20 +35,18 @@ const scripts = (() => {
             return;
         }
 
-        const optsSwiper = {};
-        const optsThumb = {};
         const objSwiper = {};
         const objThumb = {};
 
         if (thumbSwipers) {
             thumbSwipers.forEach((thumb, i) => {
                 const id = thumb.getAttribute('id');
+                const optsThumb = {};
 
                 optsThumb.slidesPerView = thumb.dataset.perView ?? 4;
 
                 objThumb[id] = new Swiper(thumb, {
-                    freeMode: true,
-                    ...optsThumb,
+                    freeMode: true, ...optsThumb,
                 });
             });
         }
@@ -58,6 +56,7 @@ const scripts = (() => {
             const id = swiper.getAttribute('id');
             const hideNavigation = swiper.dataset.hideNavi;
             const scrollbar = swiper.dataset.scrollbar;
+            const optsSwiper = {};
 
             optsSwiper.spaceBetween = swiper.dataset.gap ?? 30;
             optsSwiper.slidesPerView = swiper.dataset.perView ?? 1;
@@ -68,12 +67,9 @@ const scripts = (() => {
                 };
             }
 
-            console.log(swiper);
-
             if (!thumb) {
                 optsSwiper.pagination = {
-                    el       : swiper.parentElement.querySelector('.pagination'),
-                    clickable: true,
+                    el: swiper.parentElement.querySelector('.pagination'), clickable: true,
                 };
             }
 
@@ -85,10 +81,9 @@ const scripts = (() => {
             }
 
             if (scrollbar) {
+                console.log(swiper);
                 optsSwiper.scrollbar = {
-                    el       : swiper.parentElement.querySelector('.scrollbar'),
-                    draggable: true,
-                    dragSize : 80,
+                    el: swiper.parentElement.querySelector('.scrollbar'), draggable: true, dragSize: 80,
                 };
             }
 
@@ -117,7 +112,7 @@ const scripts = (() => {
         let tabFocus = 0;
 
         const onChangeElement = ({
-            target
+            target,
         }) => {
             if (!target) {
                 return;
@@ -134,7 +129,7 @@ const scripts = (() => {
             prev.setAttribute('hidden', true);
             targetEl.removeAttribute('hidden');
 
-            console.log(prev, targetEl)
+            console.log(prev, targetEl);
 
         };
 
@@ -155,9 +150,22 @@ const scripts = (() => {
             target.setAttribute('aria-selected', 'true');
             target.classList.add('active');
 
-            grand
-                .parentElement
-                .querySelectorAll('[role="tabpanel"]:not([hidden]), [role="tabpanel"].show')
+            let grandParent = grand.parentElement;
+            let allPanel;
+
+            allPanel = grandParent.querySelectorAll('[role="tabpanel"]:not([hidden]), [role="tabpanel"].show');
+
+            while (allPanel.length === 0) {
+                grandParent = grandParent.parentElement;
+
+                if (allPanel.length > 0) {
+                    return false;
+                }
+
+                allPanel = grandParent.querySelectorAll('[role="tabpanel"]:not([hidden]), [role="tabpanel"].show');
+            }
+
+            grandParent.querySelectorAll('[role="tabpanel"]:not([hidden]), [role="tabpanel"].show')
                 .forEach(p => {
                     Object.assign(p, {
                         hidden: 'true', tabIndex: '-1',
@@ -166,19 +174,13 @@ const scripts = (() => {
                     p.classList.remove('show');
                 });
 
-            grand
-                .parentElement
-                .querySelector(`#${target.getAttribute('aria-controls')}`)
+            grandParent.querySelector(`#${target.getAttribute('aria-controls')}`)
                 .removeAttribute('hidden');
 
-            grand
-                .parentElement
-                .querySelector(`#${target.getAttribute('aria-controls')}`)
+            grandParent.querySelector(`#${target.getAttribute('aria-controls')}`)
                 .setAttribute('tabindex', '0');
 
-            grand
-                .parentElement
-                .querySelector(`#${target.getAttribute('aria-controls')}`)
+            grandParent.querySelector(`#${target.getAttribute('aria-controls')}`)
                 .classList
                 .add('show');
 

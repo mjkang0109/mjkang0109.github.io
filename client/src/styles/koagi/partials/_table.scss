@@ -28,7 +28,7 @@ $imgPath: "./../../images/koagi";
         th,
         td {
             padding: 18px 0;
-            font-family: "SCoreDream", serif;
+
             line-height: 26px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 white-space: nowrap;
@@ -71,7 +71,7 @@ $imgPath: "./../../images/koagi";
             padding: 20px 0;
             font-size: 16px;
             line-height: 26px;
-            font-family: "SCoreDream", serif;
+
             @include m.respond-to(map.get(m.$max, 1199)) {
                 padding: 15px 0;
                 font-size: 14px;
@@ -103,7 +103,7 @@ $imgPath: "./../../images/koagi";
             caption-side: top;
             font-size: 17px;
             text-align: left;
-            font-family: "SCoreDream", serif;
+
             font-weight: 700;
             margin-bottom: 22px;
             @include m.respond-to(map.get(m.$max, 1199)) {
@@ -128,7 +128,7 @@ $imgPath: "./../../images/koagi";
             width: 100%;
             font-size: 16px;
             line-height: 26px;
-            font-family: "SCoreDream", serif;
+
             @include m.respond-to(map.get(m.$max, 1199)) {
                 padding: 17px 6px;
                 font-size: 14px;

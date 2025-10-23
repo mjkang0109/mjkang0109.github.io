@@ -1,0 +1,86 @@
+---
+group: native
+state:
+    default: 지정식물
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentCategory = 'native';
+    currentName = '국립한국자생식물원';
+    currentNav = 'conservation';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+        title: currentName,
+        currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+            currentCategory,
+            currentNav,
+            currentName
+
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+            type: 'plant',
+            currentNav: '보전연구',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+        
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+            title: '지정식물',
+            desc: '국립한국자생식물원에서 자라고 있는 서식지외보전기관 지정식물입니다. ',
+            depths: [
+                '보전연구',
+                '지정식물'
+            ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+            
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+                type: 'photos view5',
+                dummy: 'desination1',
+                dummyWidth: 254,
+                dummyHeight: 192,
+                count: 23,
+                hidePagination: true,
+            }) %>
+
+        </div>
+        <!-- // contents -->
+        
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+            currentCategory,
+            currentName
+        }) %>
+        <!-- // footer -->
+        
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+            currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

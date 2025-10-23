@@ -35,7 +35,7 @@ $imgPath: "./../../images/koagi";
             font-size: 23px;
             line-height: 33px;
             color: #333;
-            font-family: "SCoreDream", serif;
+
             @include m.respond-to(map.get(m.$max, 1199)) {
                 font-size: 18px;
                 line-height: 28px;
@@ -133,7 +133,7 @@ $imgPath: "./../../images/koagi";
                 margin-top: 37px;
                 font-size: 40px;
                 line-height: 50px;
-                font-family: "SCoreDream", serif;
+
                 font-weight: 700;
                 @include m.respond-to(map.get(m.$max, 1199)) {
                     margin-top: 27px;
@@ -185,7 +185,7 @@ $imgPath: "./../../images/koagi";
             font-size: 16px;
             color: #333;
             line-height: 26px;
-            font-family: "SCoreDream", serif;
+
             @include m.respond-to(map.get(m.$max, 1199)) {
                 font-size: 14px;
             }

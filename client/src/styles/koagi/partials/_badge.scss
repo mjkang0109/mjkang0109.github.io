@@ -28,7 +28,7 @@ $imgPath: "./../../images/koagi";
         box-sizing: border-box;
         font-size: 14px;
         font-weight: 500;
-        font-family: "SCoreDream", serif;
+
         white-space: nowrap;
         @include m.respond-to(map.get(m.$max, 1199)) {
             height: 26px;
@@ -108,7 +108,7 @@ $imgPath: "./../../images/koagi";
             line-height: 23px;
             border-radius: 50px;
             border: 2px solid;
-            font-family: "SCoreDream", serif;
+
 
             &.green {
                 color: #00ac4f;
@@ -118,6 +118,17 @@ $imgPath: "./../../images/koagi";
             &.gray {
                 color: #6e6e6e;
                 border-color: #6e6e6e;
+            }
+
+            &.fill-gray {
+                color: #fff;
+                border-color: #adadad;
+                background-color: #adadad;
+            }
+
+            &.orange {
+                color: #f2713f;
+                border-color: #f2713f;
             }
         }
     }

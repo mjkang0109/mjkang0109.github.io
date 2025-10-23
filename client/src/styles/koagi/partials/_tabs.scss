@@ -13,13 +13,15 @@ $imgPath: "./../../images/koagi";
             justify-content: center;
             align-items: center;
             position: relative;
-            padding: 21px 64px;
+            min-width: 150px;
+            box-sizing: border-box;
+            padding: 21px 35px;
             background-color: #fff;
             border-radius: 100px;
             border: 1px solid #d1d1d1;
             font-size: 18px;
             line-height: 28px;
-            font-family: "SCoreDream", serif;
+
             font-weight: 700;
         }
 

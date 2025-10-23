@@ -480,7 +480,6 @@ body.scrolling #header {
 
 .mGnb .list li .dep2 .ls {
   padding: 47px 0;
-  font-family: "SCoreDream", serif;
 }
 
 .mGnb .list li .dep2 .ls ul + ul {
@@ -1455,7 +1454,6 @@ body.scrolling #header {
   padding-bottom: 0;
   font-size: 15px;
   line-height: 25px;
-  font-family: "SCoreDream", serif;
 }
 
 .gCount1 .rt {
@@ -1540,7 +1538,8 @@ body.scrolling #header {
   border: solid 1px #ddd;
   background-color: #fff;
   color: #000;
-  padding: 0 0 0 15px;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .select {
@@ -1654,6 +1653,19 @@ body.scrolling #header {
     padding: 20px 0;
   }
 }
+.terms .term:only-of-type {
+  border-top: none;
+  padding: 0;
+}
+.terms .term:only-of-type .box {
+  font-size: 16px;
+  line-height: 30px;
+  color: #111;
+}
+.terms .term:only-of-type .box ~ label {
+  display: inline-flex;
+  margin-top: 27px;
+}
 .terms .term label {
   font-size: 17px;
   line-height: 27px;
@@ -1726,7 +1738,6 @@ body.scrolling #header {
   box-sizing: border-box;
   font-size: 14px;
   font-weight: 500;
-  font-family: "SCoreDream", serif;
   white-space: nowrap;
 }
 @media (max-width: 1199px) {
@@ -1809,7 +1820,6 @@ body.scrolling #header {
   line-height: 23px;
   border-radius: 50px;
   border: 2px solid;
-  font-family: "SCoreDream", serif;
 }
 #body .states .state.green {
   color: #00ac4f;
@@ -1818,6 +1828,15 @@ body.scrolling #header {
 #body .states .state.gray {
   color: #6e6e6e;
   border-color: #6e6e6e;
+}
+#body .states .state.fill-gray {
+  color: #fff;
+  border-color: #adadad;
+  background-color: #adadad;
+}
+#body .states .state.orange {
+  color: #f2713f;
+  border-color: #f2713f;
 }
 
 .gallery-photos {
@@ -1828,6 +1847,30 @@ body.scrolling #header {
   .gallery-photos {
     gap: 50px 20px;
   }
+}
+.gallery-photos.view5 {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+@media (max-width: 1199px) {
+  .gallery-photos.view5 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.gallery-photos.view5 .img-wrap {
+  width: 254px;
+  height: 192px;
+}
+@media (max-width: 1199px) {
+  .gallery-photos.view5 .img-wrap {
+    width: 100%;
+    height: 0;
+    padding-top: 1.3229166667;
+  }
+}
+.gallery-photos.view5 .title {
+  margin-top: 25px;
 }
 .gallery-photos .img-wrap {
   width: 325px;
@@ -1917,7 +1960,6 @@ body.scrolling #header {
   margin-bottom: 10px;
   font-size: 15px;
   line-height: 25px;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .gallery-box .education-info li {
@@ -1948,7 +1990,6 @@ body.scrolling #header {
   border: 1px solid #00ac4f;
   border-radius: 100px;
   font-weight: 500;
-  font-family: "SCoreDream", serif;
 }
 
 .gallery-poster {
@@ -1976,7 +2017,6 @@ body.scrolling #header {
 .gallery-poster .exhibition-info li {
   display: flex;
   font-size: 15px;
-  font-family: "SCoreDream", serif;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -1987,7 +2027,7 @@ body.scrolling #header {
 }
 .gallery-poster .exhibition-info span {
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media (max-width: 1199px) {
@@ -2147,7 +2187,6 @@ body.scrolling #header {
   justify-content: center;
   align-items: center;
   margin-top: 38px;
-  font-family: "SCoreDream", serif;
   font-size: 22px;
   line-height: 32px;
   text-align: center;
@@ -2156,8 +2195,8 @@ body.scrolling #header {
   .gallery-items .title {
     gap: 10px;
     flex-wrap: wrap;
-    font-size: 17px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 .gallery-items .title.line-clamp strong {
@@ -2173,8 +2212,13 @@ body.scrolling #header {
   margin-top: 15px;
   font-size: 15px;
   line-height: 25px;
-  font-family: "SCoreDream", serif;
   text-align: center;
+}
+@media (max-width: 1199px) {
+  .gallery-items .desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 .gallery-items .date {
   display: flex;
@@ -2197,6 +2241,15 @@ body.scrolling #header {
 }
 .gallery-items .states + .title {
   margin-top: 14px;
+}
+.gallery-items .info-wrap.align-left .title {
+  justify-self: flex-start;
+}
+.gallery-items .info-wrap.align-left .title > strong {
+  text-align: left;
+}
+.gallery-items .info-wrap.align-left .date {
+  justify-self: flex-start;
 }
 
 .dot-info {
@@ -2222,7 +2275,6 @@ body.scrolling #header {
   font-size: 15px;
   line-height: 25px;
   color: #333;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .dot-info li {
@@ -2249,7 +2301,6 @@ body.scrolling #header {
 }
 .dot-info li p {
   flex: 1;
-  font-family: "SCoreDream", serif;
   font-weight: 500;
 }
 .dot-info li p > strong {
@@ -2273,6 +2324,7 @@ body.scrolling #header {
 }
 @media (max-width: 1199px) {
   .detail-view {
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 46px;
   }
@@ -2292,7 +2344,6 @@ body.scrolling #header {
 .detail-view .right dfn {
   font-size: 40px;
   line-height: 52px;
-  font-family: "SCoreDream", serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -2304,7 +2355,6 @@ body.scrolling #header {
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 27px;
-  font-family: "SCoreDream", serif;
 }
 .detail-view .right li strong {
   flex-shrink: 0;
@@ -2327,7 +2377,6 @@ body.scrolling #header {
   height: 72px;
   border-radius: 10px;
   font-size: 17px;
-  font-family: "SCoreDream", serif;
 }
 .detail-view .right .link-map.green {
   background-color: #3cad39;
@@ -2410,14 +2459,27 @@ body.scrolling #header {
 @media (max-width: 1199px) {
   .detail-view .thumb-swiper {
     width: 100%;
+    margin-top: 10px;
   }
 }
 .detail-view .thumb-swiper ul {
   gap: 20px;
 }
+@media (max-width: 1199px) {
+  .detail-view .thumb-swiper ul {
+    gap: 0;
+  }
+}
 .detail-view .thumb-swiper li {
   flex: 0 0 147px;
   cursor: pointer;
+}
+@media (max-width: 1199px) {
+  .detail-view .thumb-swiper li {
+    flex: 0 0 25%;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
 }
 .detail-view .img-wrap {
   display: block;
@@ -2434,7 +2496,6 @@ body.scrolling #header {
   font-size: 16px;
   line-height: 32px;
   color: #000;
-  font-family: "SCoreDream", serif;
   font-weight: 400;
 }
 .detail-view .pagination {
@@ -2471,7 +2532,6 @@ body.scrolling #header {
   background: url("./../../images/koagi/icon-leaves.png") no-repeat 0 50%;
   font-size: 25px;
   line-height: 35px;
-  font-family: "SCoreDream", serif;
 }
 .detail-items > ul {
   display: grid;
@@ -2500,13 +2560,11 @@ body.scrolling #header {
   margin-top: 37px;
   font-size: 20px;
   line-height: 30px;
-  font-family: "SCoreDream", serif;
 }
 .detail-items li p {
   margin-top: 10px;
   font-size: 16px;
   line-height: 26px;
-  font-family: "SCoreDream", serif;
 }
 
 .link-list {
@@ -2518,7 +2576,6 @@ body.scrolling #header {
   margin: 74px auto 0;
   border-radius: 10px;
   background-color: #013569;
-  font-family: "SCoreDream", serif;
   color: #fff;
   font-weight: 700;
 }
@@ -2544,13 +2601,14 @@ body.scrolling #header {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 21px 64px;
+  min-width: 150px;
+  box-sizing: border-box;
+  padding: 21px 35px;
   background-color: #fff;
   border-radius: 100px;
   border: 1px solid #d1d1d1;
   font-size: 18px;
   line-height: 28px;
-  font-family: "SCoreDream", serif;
   font-weight: 700;
 }
 .tabs .active a {
@@ -2580,14 +2638,19 @@ body.scrolling #header {
 @media (max-width: 1199px) {
   .search-period {
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     padding: 20px;
   }
+}
+.search-period > div {
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 1199px) {
   .search-period > div {
     flex-wrap: wrap;
-    gap: 10px;
+    width: 100%;
+    max-width: 400px;
   }
 }
 .search-period strong {
@@ -2595,7 +2658,6 @@ body.scrolling #header {
   flex: 0 0 auto;
   width: 100px;
   font-size: 17px;
-  font-family: "SCoreDream", serif;
   color: #000;
 }
 @media (max-width: 1199px) {
@@ -2603,11 +2665,14 @@ body.scrolling #header {
     width: 100%;
   }
 }
-.search-period .left {
-  display: flex;
-  align-items: center;
+@media (max-width: 1199px) {
+  .search-period .left {
+    gap: 10px;
+  }
 }
 .search-period .left .it {
+  width: 174px;
+  padding-right: 42px;
   background: url("./../../images/koagi/icon-calendar-black.png") no-repeat 130px 50%;
 }
 @media (max-width: 1199px) {
@@ -2630,15 +2695,32 @@ body.scrolling #header {
   width: 20px;
   justify-content: center;
   font-weight: bold;
-  font-family: "SCoreDream", serif;
 }
-.search-period .it {
-  width: 174px;
-  padding-right: 42px;
-  box-sizing: border-box;
+.search-period .right .it {
+  width: 365px;
+}
+@media (max-width: 1199px) {
+  .search-period .right .it {
+    width: 100%;
+  }
+}
+.search-period .right label[for=searchInput] {
+  flex: 1;
+}
+@media (max-width: 1199px) {
+  .search-period .right strong {
+    margin-bottom: 10px;
+  }
 }
 .search-period label {
   flex: 0 0 auto;
+  margin: 0;
+}
+.search-period label .select {
+  margin-right: 10px;
+}
+.search-period label .it {
+  margin: 0;
 }
 
 .search-edu {
@@ -2882,7 +2964,6 @@ input[type=radio] + label:after {
   font-size: 23px;
   line-height: 33px;
   color: #333;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .detail-section > strong {
@@ -2927,6 +3008,30 @@ input[type=radio] + label:after {
   color: #ec1010;
   font-weight: 400;
 }
+.detail-section > strong.title-leaves {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("./../../images/koagi/icon-leaves.png");
+}
+@media (max-width: 1199px) {
+  .detail-section > strong.title-leaves {
+    flex-wrap: wrap;
+  }
+}
+.detail-section > strong.title-leaves .caution {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ec1010;
+}
+@media (max-width: 1199px) {
+  .detail-section > strong.title-leaves .caution {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: -22px;
+  }
+}
 @media (max-width: 1199px) {
   .detail-section > .left,
   .detail-section > .right {
@@ -2960,7 +3065,6 @@ input[type=radio] + label:after {
   margin-top: 37px;
   font-size: 40px;
   line-height: 50px;
-  font-family: "SCoreDream", serif;
   font-weight: 700;
 }
 @media (max-width: 1199px) {
@@ -3011,12 +3115,21 @@ input[type=radio] + label:after {
   font-size: 16px;
   color: #333;
   line-height: 26px;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .detail-section .notice {
     font-size: 14px;
   }
+}
+.detail-section + .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 70px;
+}
+.detail-section + button {
+  display: block;
+  margin: 70px auto 0;
 }
 
 .total {
@@ -3257,7 +3370,6 @@ input[type=radio] + label:after {
   flex: 1;
   font-size: 27px;
   line-height: 37px;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .calendar .left strong {
@@ -3280,7 +3392,6 @@ input[type=radio] + label:after {
   line-height: 23px;
   color: #000;
   font-weight: 700;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .calendar .right .selected,
@@ -3338,7 +3449,6 @@ input[type=radio] + label:after {
   font-size: 15px;
   line-height: 25px;
   color: #000;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .calendar .days li {
@@ -3371,7 +3481,6 @@ input[type=radio] + label:after {
   font-size: 15px;
   line-height: 25px;
   color: #000;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .calendar .dates button {
@@ -3416,7 +3525,6 @@ input[type=radio] + label:after {
   padding: 0 25px;
   font-size: 16px;
   line-height: 26px;
-  font-family: "SCoreDream", serif;
   color: #000;
 }
 @media (max-width: 1199px) {
@@ -3473,7 +3581,6 @@ input[type=radio] + label:after {
 .detail-sub strong {
   color: #000;
   font-size: 20px;
-  font-family: "SCoreDream", serif;
   font-weight: 700;
 }
 @media (max-width: 1199px) {
@@ -3499,7 +3606,6 @@ input[type=radio] + label:after {
   font-size: 15px;
   line-height: 25px;
   color: #000;
-  font-family: "SCoreDream", serif;
   padding-left: 10px;
 }
 @media (max-width: 1199px) {
@@ -3540,7 +3646,6 @@ table + table {
 .table-black th,
 .table-black td {
   padding: 18px 0;
-  font-family: "SCoreDream", serif;
   line-height: 26px;
 }
 @media (max-width: 1199px) {
@@ -3580,7 +3685,6 @@ table + table {
   padding: 20px 0;
   font-size: 16px;
   line-height: 26px;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .table-gray th,
@@ -3612,7 +3716,6 @@ table + table {
   caption-side: top;
   font-size: 17px;
   text-align: left;
-  font-family: "SCoreDream", serif;
   font-weight: 700;
   margin-bottom: 22px;
 }
@@ -3633,7 +3736,6 @@ table + table {
   width: 100%;
   font-size: 16px;
   line-height: 26px;
-  font-family: "SCoreDream", serif;
 }
 @media (max-width: 1199px) {
   .table-horizon th,
@@ -3700,6 +3802,24 @@ table + table {
   font-size: 16px;
   color: #ec1010;
   line-height: 25px;
+}
+.table-horizon .files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 60px;
+}
+.table-horizon .files li {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+.table-horizon .files a {
+  display: block;
+  padding-left: 27px;
+  background: url("./../../images/koagi/icon-clip.png") no-repeat 0 50%;
+  background-size: auto 20px;
+  font-size: 16px;
+  color: #000;
+  line-height: 26px;
 }
 
 .item-horizon {
@@ -3863,9 +3983,14 @@ table + table {
 .item-horizon .period label {
   flex: 0 0 170px;
 }
+@media (max-width: 1199px) {
+  .item-horizon .period label {
+    flex: 1;
+  }
+}
 .item-horizon .period label input[type=text] {
   padding-right: 50px;
-  background: url("./../../images/koagi/icon-calendar-black.png") no-repeat top 12px right 22px;
+  background: url("./../../images/koagi/icon-calendar-black.png") no-repeat top 50% right 22px;
   background-size: 23px auto;
 }
 .item-horizon .business {
@@ -4009,8 +4134,8 @@ table + table {
   padding: 23px 43px;
   border-radius: 10px;
   color: #fff;
+  text-align: center;
   font-size: 17px;
-  font-family: "SCoreDream", serif;
   font-weight: 600;
 }
 @media (max-width: 1199px) {
@@ -4031,8 +4156,8 @@ table + table {
   padding: 23px 43px;
   border-radius: 10px;
   color: #fff;
+  text-align: center;
   font-size: 17px;
-  font-family: "SCoreDream", serif;
   font-weight: 600;
 }
 @media (max-width: 1199px) {
@@ -4044,9 +4169,30 @@ table + table {
   }
 }
 
+.button-gray {
+  min-width: 150px;
+  box-sizing: border-box;
+  background-color: #aaa;
+  padding: 23px 43px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 600;
+}
+@media (max-width: 1199px) {
+  .button-gray {
+    min-width: 110px;
+    padding: 15px 0;
+    border-radius: 7px;
+    font-size: 15px;
+  }
+}
+
 .button-black {
   padding: 15px 27px;
   font-size: 16px;
+  text-align: center;
   background-color: #242424;
   color: #fff;
 }
@@ -4056,6 +4202,7 @@ table + table {
   justify-content: center;
   align-items: center;
   padding: 28px 54px;
+  text-align: center;
   background-color: #3cad39;
   border-radius: 10px;
   font-size: 17px;
@@ -4069,6 +4216,7 @@ table + table {
   align-items: center;
   padding: 28px 54px;
   border-radius: 10px;
+  text-align: center;
   color: #3cad39 !important;
   font-size: 17px;
   border: 2px solid #3cad39;
@@ -4154,7 +4302,6 @@ table + table {
 .detail-theme .buttons button span {
   position: relative;
   font-size: 18px;
-  font-family: "SCoreDream", serif;
   color: #fff;
   font-weight: 700;
 }
@@ -4203,7 +4350,6 @@ table + table {
   font-size: 16px;
   line-height: 26px;
   color: #000;
-  font-family: "SCoreDream", serif;
 }
 .detail-theme .panel .tags {
   margin-top: 77px;
@@ -4491,6 +4637,103 @@ table + table {
   padding-left: 0;
   background: none;
 }
+.board-detail .files {
+  display: flex;
+  margin-top: 100px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 39px 55px 33px 0;
+}
+@media (max-width: 1199px) {
+  .board-detail .files {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+.board-detail .files strong {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 32px;
+  color: #000;
+}
+@media (max-width: 1199px) {
+  .board-detail .files strong {
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+}
+.board-detail .files ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 30px;
+}
+@media (max-width: 1199px) {
+  .board-detail .files ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+.board-detail .files a {
+  display: block;
+  padding-left: 27px;
+  background: url("./../../images/koagi/icon-clip.png") no-repeat 0 50%;
+  background-size: auto 20px;
+  font-size: 16px;
+  color: #000;
+  line-height: 26px;
+}
+.board-detail .files + .buttons {
+  display: flex;
+}
+.board-detail .files + .buttons button,
+.board-detail .files + .buttons a {
+  margin: 0;
+}
+.board-detail .buttons {
+  position: relative;
+  padding: 0 200px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .board-detail .buttons {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+.board-detail .buttons:last-of-type button,
+.board-detail .buttons:last-of-type a {
+  margin: 0;
+}
+.board-detail .buttons:last-of-type button:nth-child(3):last-child,
+.board-detail .buttons:last-of-type a:nth-child(3):last-child {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1199px) {
+  .board-detail .buttons:last-of-type button:nth-child(3):last-child,
+  .board-detail .buttons:last-of-type a:nth-child(3):last-child {
+    position: relative;
+  }
+}
+.board-detail .desc {
+  padding: 0 25px;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000;
+}
+@media (max-width: 1199px) {
+  .board-detail .desc {
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.board-detail .desc + .img-wrap {
+  margin-top: 60px;
+}
 
 .announcement-detail {
   border-top: 2px solid #444;
@@ -4562,7 +4805,6 @@ table + table {
   padding: 0 25px;
   font-size: 16px;
   line-height: 26px;
-  font-family: "SCoreDream", serif;
   color: #000;
 }
 @media (max-width: 1199px) {
@@ -4577,7 +4819,7 @@ table + table {
   margin-top: 100px;
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
-  padding: 39px 55px 33px;
+  padding: 39px 55px 33px 0;
 }
 @media (max-width: 1199px) {
   .announcement-detail .files {
@@ -4588,19 +4830,22 @@ table + table {
 .announcement-detail .files strong {
   flex: 0 0 auto;
   width: 160px;
+  text-align: center;
   font-size: 18px;
   line-height: 32px;
   color: #000;
 }
 @media (max-width: 1199px) {
   .announcement-detail .files strong {
+    width: 100%;
     padding-bottom: 20px;
+    text-align: left;
   }
 }
 .announcement-detail .files ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px 12px;
+  gap: 12px 30px;
 }
 @media (max-width: 1199px) {
   .announcement-detail .files ul {
@@ -5013,6 +5258,128 @@ table + table {
   }
 }
 
+.check-items {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.check-items input[type=checkbox]:checked + label:before {
+  background: url("./../../images/koagi/icon-check-red-on.png") no-repeat 50% 50%;
+}
+.check-items input[type=checkbox]:checked + label strong,
+.check-items input[type=checkbox]:checked + label span {
+  color: #c91445;
+}
+.check-items input[type=checkbox]:disabled + label {
+  cursor: default;
+}
+.check-items input[type=checkbox]:disabled + label:before {
+  display: none;
+}
+.check-items input[type=checkbox] + label {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 27px 38px;
+  border: 1px solid #d2d2d2;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .check-items input[type=checkbox] + label {
+    flex-wrap: wrap;
+  }
+}
+.check-items input[type=checkbox] + label:before {
+  left: initial;
+  right: 38px;
+  width: 28px;
+  height: 28px;
+  background: url("./../../images/koagi/icon-check-red-off.png") no-repeat 50% 50%;
+  border: none;
+}
+.check-items strong {
+  flex: 0 0 160px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.check-items span {
+  flex: 1;
+  font-size: 17px;
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .check-items span {
+    flex: 0 0 100%;
+    margin-top: 20px;
+  }
+}
+
+.document-state {
+  display: flex;
+  min-height: 70px;
+  margin-bottom: 74px;
+}
+@media (max-width: 1199px) {
+  .document-state {
+    flex-direction: column;
+  }
+}
+.document-state.reject strong {
+  background-color: #c91445;
+}
+.document-state.reject p {
+  border: 1px solid #c91445;
+  color: #c91445;
+  background-color: #fff7f9;
+}
+.document-state.approval strong {
+  background-color: #0b59c3;
+}
+.document-state.approval p {
+  border: 1px solid #0b59c3;
+  color: #0b59c3;
+  background-color: #ebf3fe;
+}
+.document-state strong {
+  flex: 0 0 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px 0 0 50px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .document-state strong {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.document-state p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 0 50px 50px 0;
+  padding: 10px 27px;
+  font-size: 19px;
+  line-height: 29px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .document-state p {
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+  }
+}
+
 @media all and (max-width: 1199px) {
   .mUtil1 .attach,
   .mUtil1 .print,
@@ -5401,6 +5768,12 @@ table + table {
     display: -webkit-flex;
     display: flex;
     align-items: center;
+  }
+  .mSearch1 > label[for=searchText] {
+    flex: 1;
+  }
+  .mSearch1 > label[for=searchText] input[type=text] {
+    width: 100%;
   }
   .mSearch1 .select {
     min-width: 70px;

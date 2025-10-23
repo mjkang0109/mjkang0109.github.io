@@ -115,11 +115,6 @@ a {
   text-decoration: none;
 }
 
-body,
-button {
-  font-family: "SCoreDream", serif;
-}
-
 button {
   cursor: pointer;
 }

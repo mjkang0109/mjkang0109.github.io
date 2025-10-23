@@ -391,6 +391,14 @@
         display: -webkit-flex;
         display: flex;
         align-items: center;
+
+        > label[for="searchText"] {
+            flex: 1;
+
+            input[type="text"] {
+                width: 100%;
+            }
+        }
     }
     .mSearch1 .select {
         min-width: 70px;

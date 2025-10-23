@@ -30,7 +30,7 @@ $imgPath: "./../../images/koagi";
             dfn {
                 font-size: 40px;
                 line-height: 52px;
-                font-family: "SCoreDream", serif;
+
                 font-style: normal;
                 font-weight: 700;
             }
@@ -44,7 +44,7 @@ $imgPath: "./../../images/koagi";
                 margin-bottom: 20px;
                 font-size: 17px;
                 line-height: 27px;
-                font-family: "SCoreDream", serif;
+
 
                 strong {
                     flex-shrink: 0;
@@ -71,7 +71,7 @@ $imgPath: "./../../images/koagi";
                 height: 72px;
                 border-radius: 10px;
                 font-size: 17px;
-                font-family: "SCoreDream", serif;
+
 
                 &.green {
                     background-color: #3cad39;
@@ -194,7 +194,7 @@ $imgPath: "./../../images/koagi";
             font-size: 16px;
             line-height: 32px;
             color: #000;
-            font-family: "SCoreDream", serif;
+
             font-weight: 400;
         }
 
@@ -237,7 +237,7 @@ $imgPath: "./../../images/koagi";
             background: url("#{$imgPath}/icon-leaves.png") no-repeat 0 50%;
             font-size: 25px;
             line-height: 35px;
-            font-family: "SCoreDream", serif;
+
         }
 
         > ul {
@@ -268,14 +268,14 @@ $imgPath: "./../../images/koagi";
                 margin-top: 37px;
                 font-size: 20px;
                 line-height: 30px;
-                font-family: "SCoreDream", serif;
+
             }
 
             p {
                 margin-top: 10px;
                 font-size: 16px;
                 line-height: 26px;
-                font-family: "SCoreDream", serif;
+
             }
         }
     }

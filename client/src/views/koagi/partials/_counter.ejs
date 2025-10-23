@@ -1,20 +1,38 @@
 <%
 var hideSearch = hideSearch || false;
+var hasCategory = hasCategory || false;
+var categoryItems = categoryItems || [];
 %>
 <div class="gCount1">
     <% if (!hideSearch) { %>
         <div class="rt">
             <!-- search -->
             <div class="mSearch1">
-                <select class="select"
-                        title="분류">
-                    <option value="">제목</option>
-                    <option value="">내용</option>
-                </select>
-                <input type="text"
-                       class="it"
-                       placeholder="검색어를 입력하세요"
-                       title="검색어 입력">
+                <% if (hasCategory) { %>
+                    <label for="selectCategory">
+                        <select id="selectCategory"
+                                class="select">
+                            <% categoryItems.map(cate => { %>
+                                <option value="<%= cate; %>"><%= cate; %></option>
+                            <% }); %>
+                        </select>
+                    </label>
+                <% } %>
+                <label for="selectType">
+                    <select id="selectType"
+                            class="select"
+                            title="분류">
+                        <option value="">제목</option>
+                        <option value="">내용</option>
+                    </select>
+                </label>
+                <label for="searchText">
+                    <input type="text"
+                           id="searchText"
+                           class="it"
+                           placeholder="검색어를 입력하세요"
+                           title="검색어 입력">
+                </label>
                 <a href="#"
                    class="find">검색
                 </a>

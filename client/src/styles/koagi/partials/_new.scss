@@ -43,7 +43,6 @@ $imgPath: "./../../images/koagi";
         font-size: 15px;
         line-height: 25px;
         color: #333;
-        font-family: "SCoreDream", serif;
         @include m.respond-to(map.get(m.$max, 1199)) {
             font-size: 15px;
         }
@@ -70,7 +69,6 @@ $imgPath: "./../../images/koagi";
 
         p {
             flex: 1;
-            font-family: "SCoreDream", serif;
             font-weight: 500;
 
             > strong {
@@ -101,7 +99,6 @@ $imgPath: "./../../images/koagi";
     margin: 74px auto 0;
     border-radius: 10px;
     background-color: #013569;
-    font-family: "SCoreDream", serif;
     color: #fff;
     font-weight: 700;
     @include m.respond-to(map.get(m.$max, 1199)) {
@@ -123,14 +120,17 @@ $imgPath: "./../../images/koagi";
     padding: 30px 124px;
     @include m.respond-to(map.get(m.$max, 1199)) {
         flex-direction: column;
-        gap: 10px;
+        gap: 30px;
         padding: 20px;
     }
 
     > div {
+        display: flex;
+        align-items: center;
         @include m.respond-to(map.get(m.$max, 1199)) {
             flex-wrap: wrap;
-            gap: 10px;
+            width: 100%;
+            max-width: 400px;
         }
     }
 
@@ -139,7 +139,6 @@ $imgPath: "./../../images/koagi";
         flex: 0 0 auto;
         width: 100px;
         font-size: 17px;
-        font-family: "SCoreDream", serif;
         color: #000;
         @include m.respond-to(map.get(m.$max, 1199)) {
             width: 100%;
@@ -147,10 +146,13 @@ $imgPath: "./../../images/koagi";
     }
 
     .left {
-        display: flex;
-        align-items: center;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 10px;
+        }
 
         .it {
+            width: 174px;
+            padding-right: 42px;
             background: url("#{$imgPath}/icon-calendar-black.png") no-repeat 130px 50%;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 background-position: right 10px top 50%;
@@ -173,18 +175,39 @@ $imgPath: "./../../images/koagi";
             width: 20px;
             justify-content: center;
             font-weight: bold;
-            font-family: "SCoreDream", serif;
         }
     }
 
-    .it {
-        width: 174px;
-        padding-right: 42px;
-        box-sizing: border-box;
+    .right {
+        .it {
+            width: 365px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
+        }
+
+        label[for="searchInput"] {
+            flex: 1;
+        }
+
+        strong {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+            margin-bottom: 10px;
+            }
+        }
     }
 
     label {
         flex: 0 0 auto;
+        margin: 0;
+
+        .select {
+            margin-right: 10px;
+        }
+
+        .it {
+            margin: 0;
+        }
     }
 }
 
@@ -606,7 +629,6 @@ input[type="radio"] {
         padding: 0 25px;
         font-size: 16px;
         line-height: 26px;
-        font-family: "SCoreDream", serif;
         color: #000;
         @include m.respond-to(map.get(m.$max, 1199)) {
             padding: 0;
@@ -663,7 +685,6 @@ input[type="radio"] {
     strong {
         color: #000;
         font-size: 20px;
-        font-family: "SCoreDream", serif;
         font-weight: 700;
         @include m.respond-to(map.get(m.$max, 1199)) {
             font-size: 17px;
@@ -686,7 +707,6 @@ input[type="radio"] {
             font-size: 15px;
             line-height: 25px;
             color: #000;
-            font-family: "SCoreDream", serif;
             padding-left: 10px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 font-size: 14px;
@@ -787,7 +807,6 @@ input[type="radio"] {
             span {
                 position: relative;
                 font-size: 18px;
-                font-family: "SCoreDream", serif;
                 color: #fff;
                 font-weight: 700;
             }
@@ -847,7 +866,6 @@ input[type="radio"] {
             font-size: 16px;
             line-height: 26px;
             color: #000;
-            font-family: "SCoreDream", serif;
         }
 
         .tags {

@@ -1,0 +1,93 @@
+---
+group: baekdu
+state:
+    default: 봉자페스티벌
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립백두대간수목원';
+    currentCategory = 'baekdu';
+    currentNav = 'application';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+        title: currentName,
+        currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+            currentCategory,
+            currentNav,
+            currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+            type: 'plant',
+            currentNav: '참여하기',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+            title: '봉자페스티벌',
+            desc: '‘봉자페스티벌’은 평소에 만나기 어려운 자생식물을 활용한 우리꽃 축제로 ‘봉화 자생꽃 페스티벌’의 줄임말입니다. <br>우리 산야에서 자라는 다양한 자생식물을 만날 수 있고, 백두대간 정체성 및 ESG 가치를 반영하는 문화행사와 볼거리가 가득합니다. ',
+            depths: [
+                '참여하기',
+                '전시 프로그램',
+            ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+                items: ['진행', '예정', '종료',]
+            }) %>
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_search`, {
+            }) %>
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+                type: 'poster',
+                states: [{text: '진행', color: 'green'}, {text: '예정', color: 'orange'}, {text: '종료', color: 'fill-gray'}],
+                title: '그 여름, 반짝이는 수련',
+                desc: 'hide',
+                dummy: 'exhibition',
+                count: 8,
+                info: include(`${process.env.INCLUDE_PATH}/koagi/partials/_exhibitionInfo`),
+            }) %>
+
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+            currentName,
+            currentCategory,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+            currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

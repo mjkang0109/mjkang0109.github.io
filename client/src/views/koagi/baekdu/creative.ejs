@@ -1,0 +1,92 @@
+---
+group: baekdu
+state:
+    default: 수목원창작소
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립백두대간수목원';
+    currentCategory = 'baekdu';
+    currentNav = 'creative';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+        title: currentName,
+        currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+            currentCategory,
+            currentNav,
+            currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+            type: 'plant',
+            currentNav: '수목원 창작소',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+        
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+            title: '수목원 창작소',
+            desc: '수목원 사업에 활용된 디자인 소스를 새활용하여 만든 완성형 콘텐츠로서 상업적·비상업적으로 다양한 방면에 활용할 수 있는 공공저작물 서비스입니다.',
+            depths: [
+                '참여하기',
+                '교육프로그램',
+                '생생 교육후기',
+            ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+                items: ['함께 쓰는 디자인', '디자인 소스', '사진·영상 소스 ',]
+            }) %>
+            
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
+                
+            }) %>
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+                dummy: 'story-tree',
+                title: '숲과 피톤치드 이야기',
+                alignLeft: true,
+                date: '2025-06-29',
+                desc: 'hide'
+            }) %>
+
+        </div>
+        <!-- // contents -->
+        
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+            currentName,
+            currentCategory,
+        }) %>
+        <!-- // footer -->
+        
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+            currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

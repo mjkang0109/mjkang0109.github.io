@@ -3,9 +3,12 @@ var type = type || 'photos';
 var count = count || 8;
 var dummy = dummy || 'plant';
 var dummyType = dummyType || 'jpg';
+var dummyWidth = dummyWidth || 320;
+var dummyHeight = dummyHeight || 240;
 var badges = badges || [];
 var title = title || '물까치수염';
 var titleOverflow = titleOverflow || false;
+var alignLeft = alignLeft || false;
 var desc = desc || 'Lysimachia leucantha Miq';
 var info = info || '';
 var date = date || '';
@@ -18,14 +21,14 @@ var hidePagination = hidePagination || false;
             <a href="#">
                 <span class="img-wrap">
                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                    width: 320,
-                    height: 240,
+                    width: dummyWidth,
+                    height: dummyHeight,
                     isSimply: true,
                     source: `${imgPath}/dummy-${dummy}.${dummyType}`,
                     alt: '',
                     }); %>
                 </span>
-                <div class="info-wrap">
+                <div class="info-wrap<%= alignLeft ? ' align-left' : '' %>">
                     <% if (states.length > 0) { %>
                         <div class="states">
                             <% states.forEach((state, j) => { %>

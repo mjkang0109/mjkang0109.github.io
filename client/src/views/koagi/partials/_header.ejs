@@ -17,7 +17,7 @@ randomNumber = (min, max) => {
     <div class="uh">
         <div class="bg">
             <div class="link">
-                <a href="#"
+                <a href="./../<%= currentCategory %>/<%= currentCategory %>.html"
                    class="type2"><%= currentName; %>
                 </a>
                 <%
@@ -27,15 +27,15 @@ randomNumber = (min, max) => {
                         continue;
                     }
                 %>
-                <a href="#"><%= navItems[h].title; %></a>
+                <a href="./../<%= navItems[h].name %>/<%= navItems[h].name %>.html"><%= navItems[h].title; %></a>
                 <%
                 }
                 %>
             </div>
             <div class="util">
-                <a href="#">로그인</a>
-                <a href="#">회원가입</a>
-                <a href="#">고객지원</a>
+                <a href="./login.html">로그인</a>
+                <a href="./join.html">회원가입</a>
+                <a href="./cs.html">고객지원</a>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@ randomNumber = (min, max) => {
     <div class="mh">
         <div class="bg">
             <h1>
-                <a href="#">
+                <a href="./<%= currentCategory %>.html">
                     <span class="forW">
                         <img src="<%= process.env.IMG_PATH; %>/koagi/logo-<%= currentCategory === 'system' ? 'koagi' : currentCategory; %>.png"
                              alt="<%= currentName; %>">
@@ -70,7 +70,7 @@ randomNumber = (min, max) => {
                         }
                     %>
                     <li class="m1<%= currentNav === currentItems[i].name ? ' active' : ''; %>">
-                        <a href="#"
+                        <a href="./<%= currentItems[i].name %>.html"
                            class="dep1"><%= currentItems[i].title; %>
                         </a>
                         <%

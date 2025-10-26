@@ -12,18 +12,17 @@ state:
     currentName = '국립세종수목원';
     currentCategory = 'sejong';
     currentNav = 'companion';
-    imgPath = `${process.env.IMG_PATH}/koagi`
+    imgPath = `${process.env.IMG_PATH}/koagi`;
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
     title: currentName,
     currentCategory: currentCategory
     }); %>
 </head>
-<body class="<%= currentCategory %>">
+<body class="<%= currentCategory ;%>">
     <!-- skip navigation -->
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
     <!-- // skip navigation -->
-
     <!-- wrap -->
     <div id="wrap">
         <!-- header -->
@@ -33,16 +32,14 @@ state:
         currentName
         }) %>
         <!-- // header -->
-
         <!-- visual sub -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
         type: 'plant',
-        currentNav: '식물 연구',
+        currentNav: '반려식물',
         key: '국민이 행복한 수목원',
         info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
         }) %>
         <!-- // visual sub -->
-
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
         title: '이동형 반려식물 클리닉',
@@ -53,23 +50,18 @@ state:
         ],
         }) %>
         <!-- // title -->
-
         <!-- contents -->
         <div id="body">
-            <div id="body">
-                <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_clinicDetail`, {
-                }) %>
-            </div>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_clinicDetail`, {
+            }) %>
         </div>
         <!-- // contents -->
-
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
         currentCategory,
         currentName,
         }) %>
         <!-- // footer -->
-
         <!-- navigation -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
         currentCategory: currentCategory

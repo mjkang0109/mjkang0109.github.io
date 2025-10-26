@@ -2,9 +2,16 @@
 var items = items || [];
 var title = title || '';
 var category = category || '';
+var bottomCaution = bottomCaution || '';
+var onlyCaution = onlyCaution || '';
 %>
 <article class="detail-section">
-    <strong class="<%= category === 'clinic' ? 'title-leaves' : '' %>"><%- title; %></strong>
+    <% if (onlyCaution) { %>
+    <strong class="title-none"><%- onlyCaution; %></strong>
+    <% } %>
+    <% if (!onlyCaution) { %>
+    <strong class="<%= category === 'clinic' ? 'title-leaves' : ''; %>"><%- title; %></strong>
+    <% } %>
     <ul class="item-horizon">
         <%
         items.map((b, i) => {
@@ -12,8 +19,8 @@ var category = category || '';
             <li>
                 <strong><%- b[0]; %></strong>
                 <% if (b[1]) { %>
-                    <div class="<%= b[1] === 'address' ? 'address' : b[1] === 'period' ? 'period' : '' %>">
-                        <% if (typeof b[1] === 'string' && b[1] !== 'address' && b[1] !== 'period') { %>
+                    <div class="<%= b[1] === 'address' ? 'address' : b[1] === 'period' ? 'period' : b[1] === 'file' ? 'file' : ''; %>">
+                        <% if (typeof b[1] === 'string' && b[1] !== 'address' && b[1] !== 'period' && b[1] !== 'file' && b[1] !== 'textarea') { %>
                             <%- b[1]; %>
                         <% } %>
                         <% if (b[1] === 'address') { %>
@@ -54,6 +61,50 @@ var category = category || '';
                                        autocomplete="off"
                                        class="it jsDatepicker">
                             </label>
+                        <% } %>
+                        <% if (b[1] === 'textarea') { %>
+                            <label for="textarea1">
+                                <textarea id="textarea1"></textarea>
+                            </label>
+                        <% } %>
+                        <% if (b[1] === 'file') { %>
+                            <ul class="box outline">
+                                <li>
+                                    <button type="button"
+                                            class="button-delete">
+                                        <span class="sound-only">삭제</span>
+                                    </button>
+                                    <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                                </li>
+                                <li>
+                                    <button type="button"
+                                            class="button-delete">
+                                        <span class="sound-only">삭제</span>
+                                    </button>
+                                    <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                                </li>
+                                <li>
+                                    <button type="button"
+                                            class="button-delete">
+                                        <span class="sound-only">삭제</span>
+                                    </button>
+                                    <span>한국수목원정원관리원_sample_file.xlsx (13 KB)</span>
+                                </li>
+                            </ul>
+                            <div class="buttons">
+                                <button type="button"
+                                        class="button-navy small">
+                                    파일선택
+                                </button>
+                                <button type="button"
+                                        class="button-navy small">
+                                    모두삭제
+                                </button>
+                            </div>
+                            <p class="caution">
+                                ※ 첨부파일 제한용량 : 50 MB
+                                <br>※ 허용파일 유형 : gif, jpg, png, jpeg
+                            </p>
                         <% } %>
                         <% if (typeof b[1] === 'object') {
                             const type = b[1][0];
@@ -157,4 +208,8 @@ var category = category || '';
             </li>
         <% }); %>
     </ul>
+
+    <% if (bottomCaution) { %>
+        <p class="caution"><%= bottomCaution %></p>
+    <% } %>
 </article>

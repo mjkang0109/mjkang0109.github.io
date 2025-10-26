@@ -28,7 +28,6 @@ $imgPath: "./../../images/koagi";
         th,
         td {
             padding: 18px 0;
-
             line-height: 26px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 white-space: nowrap;
@@ -71,7 +70,6 @@ $imgPath: "./../../images/koagi";
             padding: 20px 0;
             font-size: 16px;
             line-height: 26px;
-
             @include m.respond-to(map.get(m.$max, 1199)) {
                 padding: 15px 0;
                 font-size: 14px;
@@ -103,7 +101,6 @@ $imgPath: "./../../images/koagi";
             caption-side: top;
             font-size: 17px;
             text-align: left;
-
             font-weight: 700;
             margin-bottom: 22px;
             @include m.respond-to(map.get(m.$max, 1199)) {
@@ -128,7 +125,6 @@ $imgPath: "./../../images/koagi";
             width: 100%;
             font-size: 16px;
             line-height: 26px;
-
             @include m.respond-to(map.get(m.$max, 1199)) {
                 padding: 17px 6px;
                 font-size: 14px;
@@ -284,14 +280,20 @@ $imgPath: "./../../images/koagi";
                     label {
                         width: 475px;
                         max-width: 100%;
+
+                        &[for*="textarea"] {
+                            width: 100%;
+                        }
                     }
 
                     label[for*="select"] {
                         width: 190px;
+
                         select {
                             width: 100%;
                         }
                     }
+
                 }
 
                 label {
@@ -409,6 +411,9 @@ $imgPath: "./../../images/koagi";
                     padding-right: 50px;
                     background: url("#{$imgPath}/icon-calendar-black.png") no-repeat top 50% right 22px;
                     background-size: 23px auto;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        background-position: top 50% right 10px;
+                    }
                 }
             }
         }
@@ -431,8 +436,96 @@ $imgPath: "./../../images/koagi";
             color: #ec1010;
             margin-left: 4px;
         }
-    }
 
+        + .caution {
+            display: block;
+            font-size: 15px;
+            margin-top: 22px;
+            color: #ec1010;
+            font-weight: 400;
+            text-align: right;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: 5px;
+                font-size: 13px;
+                line-height: 20px;
+            }
+        }
+
+        .file {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-items: flex-start;
+            gap: 20px;
+
+            .caution {
+                margin-top: 15px;
+                margin-left: 0;
+            }
+
+            .buttons {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        textarea {
+            resize: none;
+            width: 100%;
+            height: 650px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 48px;
+            border: solid 1px #ddd;
+            background-color: #fff;
+            color: #000;
+            padding: 0 15px;
+            box-sizing: border-box;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                appearance: none;
+                border-radius: 0;
+                font-size: 13px;
+                line-height: 32px;
+                height: 300px;
+                padding: 0 0 0 10px;
+            }
+        }
+
+        .box.outline {
+            width: 100%;
+            padding: 30px 27px;
+            box-sizing: border-box;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 20px 15px;
+            }
+
+            li {
+                display: flex;
+                gap: 9px;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                margin-bottom: 5px;
+
+                > span {
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #000;
+                    font-weight: 500;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            .button-delete {
+                flex: 0 0 auto;
+                width: 18px;
+                height: 18px;
+                margin-top: 2px;
+                background: url("#{$imgPath}/icon-delete.png") no-repeat 50% 50%;
+            }
+        }
+    }
     .table-info {
         border-top: 2px solid #000;
 

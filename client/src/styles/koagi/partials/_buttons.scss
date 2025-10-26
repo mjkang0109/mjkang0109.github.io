@@ -15,7 +15,6 @@ $imgPath: "./../../images/koagi";
         color: #fff;
         text-align: center;
         font-size: 17px;
-
         font-weight: 600;
         @include m.respond-to(map.get(m.$max, 1199)) {
             display: block;
@@ -35,12 +34,18 @@ $imgPath: "./../../images/koagi";
         color: #fff;
         text-align: center;
         font-size: 17px;
-
         font-weight: 600;
         @include m.respond-to(map.get(m.$max, 1199)) {
             min-width: 110px;
             padding: 15px 10px;
             border-radius: 7px;
+            font-size: 15px;
+        }
+
+        &.small {
+            min-width: 94px;
+            border-radius: 5px;
+            padding: 15px 20px;
             font-size: 15px;
         }
     }
@@ -53,7 +58,6 @@ $imgPath: "./../../images/koagi";
         color: #fff;
         font-size: 17px;
         text-align: center;
-
         font-weight: 600;
         @include m.respond-to(map.get(m.$max, 1199)) {
             min-width: 110px;

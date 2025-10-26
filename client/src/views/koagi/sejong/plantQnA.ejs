@@ -1,7 +1,7 @@
 ---
 group: sejong
 state:
-    default: 이동형클리닉-신청청안내-상세
+    default: 반려식물Q&A
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -13,8 +13,8 @@ state:
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
-    title: currentName,
-    currentCategory: currentCategory
+        title: currentName,
+        currentCategory: currentCategory
     }); %>
 </head>
 <body class="<%= currentCategory %>">
@@ -26,56 +26,56 @@ state:
     <div id="wrap">
         <!-- header -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
-        currentCategory,
-        currentNav,
-        currentName
+            currentCategory,
+            currentNav,
+            currentName
         }) %>
         <!-- // header -->
 
         <!-- visual sub -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
-        type: 'plant',
-        currentNav: '반려식물',
-        key: '국민이 행복한 수목원',
-        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+            type: 'plant',
+            currentNav: '반려식물',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
         }) %>
         <!-- // visual sub -->
 
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-        title: '이동형 반려식물 클리닉',
-        depths: [
-        '반려식물',
-        '이동형 반려식물 클리닉',
-        ],
+            title: '반려식물 Q&A',
+            depths: [
+                '반려식물',
+                '식물관리&상담',
+                '반려식물 Q&A',
+            ],
         }) %>
         <!-- // title -->
 
         <!-- contents -->
         <div id="body">
 
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
-            items: ['소개', '신청안내', '출동 일정',],
-                current: 1,
-            }) %>
-            
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_boardDetail`, {
-                
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
+            hasCategory: true,
+            categoryItems: ['분류 전체']
             }) %>
 
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_boardItemsTableQnA`, {
+                
+            }) %>
         </div>
         <!-- // contents -->
 
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
-        currentCategory,
-        currentName,
+            currentName,
+            currentCategory,
         }) %>
         <!-- // footer -->
 
         <!-- navigation -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
-        currentCategory: currentCategory
+            currentCategory: currentCategory
         }) %>
         <!-- // navigation -->
     </div>

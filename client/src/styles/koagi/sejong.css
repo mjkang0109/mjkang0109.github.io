@@ -176,9 +176,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-a:visited {
-  color: inherit;
-}
 
 img {
   vertical-align: middle;
@@ -1666,6 +1663,22 @@ body.scrolling #header {
   display: inline-flex;
   margin-top: 27px;
 }
+.terms .term:only-of-type details {
+  border-top: 1px solid #000;
+  margin-top: 32px;
+}
+.terms .term:only-of-type details summary:after {
+  top: -10px;
+}
+@media (max-width: 1199px) {
+  .terms .term:only-of-type details summary:after {
+    top: 0;
+  }
+}
+.terms .term:only-of-type details p {
+  border-top: none;
+  margin-top: 0;
+}
 .terms .term label {
   font-size: 17px;
   line-height: 27px;
@@ -3102,7 +3115,7 @@ input[type=radio] + label:after {
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
-  color: #ec1010;
+  color: #333;
 }
 @media (max-width: 1199px) {
   .detail-section > strong.title-leaves .caution {
@@ -3110,10 +3123,61 @@ input[type=radio] + label:after {
     width: 100%;
     margin-top: 10px;
     margin-left: -22px;
+    font-size: 13px;
+    text-align: right;
   }
 }
 .detail-section > strong.title-leaves .caution.gray {
   color: #595959;
+}
+.detail-section > strong.title-leaves .caution.red {
+  color: #ec1010;
+}
+.detail-section > strong.title-leaves .caution span {
+  margin-right: 4px;
+  color: #ec1010;
+}
+.detail-section > strong.title-none {
+  padding-left: 0;
+  background: transparent;
+}
+.detail-section > strong.title-none .caution {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333;
+}
+@media (max-width: 1199px) {
+  .detail-section > strong.title-none .caution {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: -22px;
+    font-size: 13px;
+    text-align: right;
+  }
+}
+.detail-section > strong.title-none .caution.gray {
+  color: #595959;
+}
+.detail-section > strong.title-none .caution.red {
+  color: #ec1010;
+}
+.detail-section > strong.title-none .caution span {
+  margin-right: 4px;
+  color: #ec1010;
+}
+.detail-section > strong .caution {
+  margin-left: auto;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #ec1010;
+}
+@media (max-width: 1199px) {
+  .detail-section > strong .caution {
+    font-size: 13px;
+  }
 }
 @media (max-width: 1199px) {
   .detail-section > .left,
@@ -3994,6 +4058,9 @@ table + table {
   width: 475px;
   max-width: 100%;
 }
+.item-horizon li > div:only-of-type label[for*=textarea] {
+  width: 100%;
+}
 .item-horizon li > div:only-of-type label[for*=select] {
   width: 190px;
 }
@@ -4105,6 +4172,11 @@ table + table {
   background: url("./../../images/koagi/icon-calendar-black.png") no-repeat top 50% right 22px;
   background-size: 23px auto;
 }
+@media (max-width: 1199px) {
+  .item-horizon .period label input[type=text] {
+    background-position: top 50% right 10px;
+  }
+}
 .item-horizon .business {
   gap: 7px;
 }
@@ -4119,6 +4191,94 @@ table + table {
   font-size: 16px;
   color: #ec1010;
   margin-left: 4px;
+}
+.item-horizon + .caution {
+  display: block;
+  font-size: 15px;
+  margin-top: 22px;
+  color: #ec1010;
+  font-weight: 400;
+  text-align: right;
+}
+@media (max-width: 1199px) {
+  .item-horizon + .caution {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+.item-horizon .file {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: flex-start;
+  gap: 20px;
+}
+.item-horizon .file .caution {
+  margin-top: 15px;
+  margin-left: 0;
+}
+.item-horizon .file .buttons {
+  display: flex;
+  gap: 10px;
+}
+.item-horizon textarea {
+  resize: none;
+  width: 100%;
+  height: 650px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 48px;
+  border: solid 1px #ddd;
+  background-color: #fff;
+  color: #000;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .item-horizon textarea {
+    appearance: none;
+    border-radius: 0;
+    font-size: 13px;
+    line-height: 32px;
+    height: 300px;
+    padding: 0 0 0 10px;
+  }
+}
+.item-horizon .box.outline {
+  width: 100%;
+  padding: 30px 27px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .item-horizon .box.outline {
+    padding: 20px 15px;
+  }
+}
+.item-horizon .box.outline li {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+}
+.item-horizon .box.outline li > span {
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .item-horizon .box.outline li > span {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.item-horizon .box.outline .button-delete {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  background: url("./../../images/koagi/icon-delete.png") no-repeat 50% 50%;
 }
 
 .table-info {
@@ -4279,6 +4439,12 @@ table + table {
     border-radius: 7px;
     font-size: 15px;
   }
+}
+.button-navy.small {
+  min-width: 94px;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 15px;
 }
 
 .button-gray {
@@ -5144,9 +5310,39 @@ table + table {
 .board-items-table li.titles strong {
   font-weight: 500;
 }
+.board-items-table li.reply .badges {
+  margin-right: 14px;
+}
+.board-items-table li.reply .title {
+  position: relative;
+}
+.board-items-table li.reply .title:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  width: 13px;
+  height: 19px;
+  border: 1px solid #c4c4c4;
+  border-top: none;
+  border-right: none;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .board-items-table li.reply .title:before {
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 15px;
+  }
+}
+.board-items-table li.reply .title a {
+  position: relative;
+  padding-left: 20px;
+}
 .board-items-table li > span,
 .board-items-table li > strong {
-  padding: 20px 28px;
+  padding: 20px;
   font-size: 15px;
   line-height: 25px;
   color: #333;
@@ -5178,7 +5374,7 @@ table + table {
 @media (max-width: 1199px) {
   .board-items-table li .required {
     min-width: 50%;
-    padding-right: 7px;
+    padding-right: 10px;
     box-sizing: border-box;
     white-space: nowrap;
   }

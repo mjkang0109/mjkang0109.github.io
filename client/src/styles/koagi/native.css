@@ -176,9 +176,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-a:visited {
-  color: inherit;
-}
 
 img {
   vertical-align: middle;
@@ -1666,6 +1663,22 @@ body.scrolling #header {
   display: inline-flex;
   margin-top: 27px;
 }
+.terms .term:only-of-type details {
+  border-top: 1px solid #000;
+  margin-top: 32px;
+}
+.terms .term:only-of-type details summary:after {
+  top: -10px;
+}
+@media (max-width: 1199px) {
+  .terms .term:only-of-type details summary:after {
+    top: 0;
+  }
+}
+.terms .term:only-of-type details p {
+  border-top: none;
+  margin-top: 0;
+}
 .terms .term label {
   font-size: 17px;
   line-height: 27px;
@@ -2339,6 +2352,7 @@ body.scrolling #header {
 }
 .detail-view .right {
   flex: 1;
+  position: relative;
   padding-top: 27px;
 }
 @media (max-width: 1199px) {
@@ -2540,6 +2554,18 @@ body.scrolling #header {
   margin-top: 92px;
   padding-top: 92px;
   border-top: 1px solid #e5e5e5;
+}
+.detail-view .desc {
+  margin-top: 46px;
+  padding-bottom: 102px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+}
+.detail-view .desc .button-green.vr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .detail-items > strong {
@@ -2911,18 +2937,68 @@ input[type=radio] + label:after {
 .swiper-tabs .swiper {
   overflow: hidden;
 }
+.swiper-tabs ~ .panel .detail-view {
+  margin-top: 112px;
+  border-top: none;
+  padding-top: 0;
+}
 .swiper-tabs .swiper-slide {
   flex: 0 0 auto;
+  position: relative;
   width: 270px;
+}
+.swiper-tabs .swiper-slide img,
+.swiper-tabs .swiper-slide .img-wrap,
+.swiper-tabs .swiper-slide strong {
+  pointer-events: none;
 }
 .swiper-tabs .swiper-slide img {
   display: block;
   width: 100%;
   height: auto;
 }
+.swiper-tabs [role=tab] {
+  position: relative;
+  cursor: pointer;
+}
+.swiper-tabs [role=tab] strong {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  z-index: 1;
+}
+.swiper-tabs [role=tab][aria-selected=true] strong {
+  bottom: 60px;
+  padding-top: 70px;
+}
+.swiper-tabs [role=tab][aria-selected=true] strong:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  background: url("./../../images/koagi/icon-plus.png") no-repeat 50% 50%;
+  transform: translateX(-50%);
+}
+.swiper-tabs [role=tab][aria-selected=true]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 .swiper-tabs .scrollbar {
   position: relative;
   margin-top: 55px;
+  cursor: pointer;
 }
 .swiper-tabs .scrollbar:before {
   content: "";
@@ -2973,7 +3049,8 @@ input[type=radio] + label:after {
   }
 }
 .detail-section > strong {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-left: 34px;
   background: url("./../../images/koagi/icon-leaf2.png") no-repeat 0 0;
   margin-bottom: 20px;
@@ -3038,7 +3115,7 @@ input[type=radio] + label:after {
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
-  color: #ec1010;
+  color: #333;
 }
 @media (max-width: 1199px) {
   .detail-section > strong.title-leaves .caution {
@@ -3046,6 +3123,60 @@ input[type=radio] + label:after {
     width: 100%;
     margin-top: 10px;
     margin-left: -22px;
+    font-size: 13px;
+    text-align: right;
+  }
+}
+.detail-section > strong.title-leaves .caution.gray {
+  color: #595959;
+}
+.detail-section > strong.title-leaves .caution.red {
+  color: #ec1010;
+}
+.detail-section > strong.title-leaves .caution span {
+  margin-right: 4px;
+  color: #ec1010;
+}
+.detail-section > strong.title-none {
+  padding-left: 0;
+  background: transparent;
+}
+.detail-section > strong.title-none .caution {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333;
+}
+@media (max-width: 1199px) {
+  .detail-section > strong.title-none .caution {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: -22px;
+    font-size: 13px;
+    text-align: right;
+  }
+}
+.detail-section > strong.title-none .caution.gray {
+  color: #595959;
+}
+.detail-section > strong.title-none .caution.red {
+  color: #ec1010;
+}
+.detail-section > strong.title-none .caution span {
+  margin-right: 4px;
+  color: #ec1010;
+}
+.detail-section > strong .caution {
+  margin-left: auto;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #ec1010;
+}
+@media (max-width: 1199px) {
+  .detail-section > strong .caution {
+    font-size: 13px;
   }
 }
 @media (max-width: 1199px) {
@@ -3146,6 +3277,35 @@ input[type=radio] + label:after {
 .detail-section + button {
   display: block;
   margin: 70px auto 0;
+}
+.detail-section .map-wrap {
+  display: block;
+  position: relative;
+  width: 1450px;
+  height: 728px;
+}
+@media (max-width: 1199px) {
+  .detail-section .map-wrap {
+    width: 100%;
+    height: 0;
+    padding-top: 50.2068965517%;
+  }
+}
+.detail-section .map-wrap img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.detail-section .map-wrap + strong {
+  margin-top: 222px;
+}
+@media (max-width: 1199px) {
+  .detail-section .map-wrap + strong {
+    margin-top: 50px;
+  }
 }
 
 .total {
@@ -3898,6 +4058,9 @@ table + table {
   width: 475px;
   max-width: 100%;
 }
+.item-horizon li > div:only-of-type label[for*=textarea] {
+  width: 100%;
+}
 .item-horizon li > div:only-of-type label[for*=select] {
   width: 190px;
 }
@@ -4009,6 +4172,11 @@ table + table {
   background: url("./../../images/koagi/icon-calendar-black.png") no-repeat top 50% right 22px;
   background-size: 23px auto;
 }
+@media (max-width: 1199px) {
+  .item-horizon .period label input[type=text] {
+    background-position: top 50% right 10px;
+  }
+}
 .item-horizon .business {
   gap: 7px;
 }
@@ -4023,6 +4191,94 @@ table + table {
   font-size: 16px;
   color: #ec1010;
   margin-left: 4px;
+}
+.item-horizon + .caution {
+  display: block;
+  font-size: 15px;
+  margin-top: 22px;
+  color: #ec1010;
+  font-weight: 400;
+  text-align: right;
+}
+@media (max-width: 1199px) {
+  .item-horizon + .caution {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+.item-horizon .file {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: flex-start;
+  gap: 20px;
+}
+.item-horizon .file .caution {
+  margin-top: 15px;
+  margin-left: 0;
+}
+.item-horizon .file .buttons {
+  display: flex;
+  gap: 10px;
+}
+.item-horizon textarea {
+  resize: none;
+  width: 100%;
+  height: 650px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 48px;
+  border: solid 1px #ddd;
+  background-color: #fff;
+  color: #000;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .item-horizon textarea {
+    appearance: none;
+    border-radius: 0;
+    font-size: 13px;
+    line-height: 32px;
+    height: 300px;
+    padding: 0 0 0 10px;
+  }
+}
+.item-horizon .box.outline {
+  width: 100%;
+  padding: 30px 27px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .item-horizon .box.outline {
+    padding: 20px 15px;
+  }
+}
+.item-horizon .box.outline li {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+}
+.item-horizon .box.outline li > span {
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .item-horizon .box.outline li > span {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.item-horizon .box.outline .button-delete {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  background: url("./../../images/koagi/icon-delete.png") no-repeat 50% 50%;
 }
 
 .table-info {
@@ -4179,10 +4435,16 @@ table + table {
 @media (max-width: 1199px) {
   .button-navy {
     min-width: 110px;
-    padding: 15px 0;
+    padding: 15px 10px;
     border-radius: 7px;
     font-size: 15px;
   }
+}
+.button-navy.small {
+  min-width: 94px;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 15px;
 }
 
 .button-gray {
@@ -5048,9 +5310,39 @@ table + table {
 .board-items-table li.titles strong {
   font-weight: 500;
 }
+.board-items-table li.reply .badges {
+  margin-right: 14px;
+}
+.board-items-table li.reply .title {
+  position: relative;
+}
+.board-items-table li.reply .title:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  width: 13px;
+  height: 19px;
+  border: 1px solid #c4c4c4;
+  border-top: none;
+  border-right: none;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .board-items-table li.reply .title:before {
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 15px;
+  }
+}
+.board-items-table li.reply .title a {
+  position: relative;
+  padding-left: 20px;
+}
 .board-items-table li > span,
 .board-items-table li > strong {
-  padding: 20px 28px;
+  padding: 20px;
   font-size: 15px;
   line-height: 25px;
   color: #333;
@@ -5082,7 +5374,7 @@ table + table {
 @media (max-width: 1199px) {
   .board-items-table li .required {
     min-width: 50%;
-    padding-right: 7px;
+    padding-right: 10px;
     box-sizing: border-box;
     white-space: nowrap;
   }
@@ -5139,8 +5431,10 @@ table + table {
     display: none;
   }
 }
-.board-items-table li .num.badges {
-  margin-bottom: 10px;
+@media (max-width: 1199px) {
+  .board-items-table li .num.badges {
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 1199px) {
   .board-items-table li .num.badges ~ .title {

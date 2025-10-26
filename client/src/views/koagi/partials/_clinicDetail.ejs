@@ -27,13 +27,13 @@ const currentTableData = state === 'default' ? basicInfo : readonlyInfo;
 <% } %>
 <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
 category: 'clinic',
-title: '판매업체 신청정보',
+title: '판매업체 신청정보<span class="caution"><span>*</span>표시 필수 입력항목</span>',
 items: currentTableData,
 }) %>
 <article class="detail-section">
     <strong class="title-leaves">
         운영 프로그램
-        <span class="caution">* 참여자 명단 제출 및 사전 협의 필요</span>
+        <span class="caution red">* 참여자 명단 제출 및 사전 협의 필요</span>
     </strong>
     <ul class="check-items">
         <%

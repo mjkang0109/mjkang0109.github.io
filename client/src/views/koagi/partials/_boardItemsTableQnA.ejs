@@ -1,0 +1,45 @@
+<ul class="board-items-table">
+    <li class="titles">
+        <strong>번호</strong>
+        <strong>분류</strong>
+        <strong>제목</strong>
+        <strong>작성자</strong>
+        <strong>작성일</strong>
+        <strong>조회수</strong>
+    </li>
+    <% for (let i = 0; i < 10; i++) { %>
+        <li class="<%= i % 2 === 0 && i !== 0 && i < 6 ? 'reply' : '' %>">
+            <span class="num">
+                <%- 200 - i %>
+            </span>
+            <span>식물소재사업실</span>
+            <strong class="title">
+                <a href="#">
+                    <% if (i === 0) { %>
+                        <span class="badges">
+                            <span class="badge small cherry">NEW</span>
+                        </span>
+                    <% } %>
+                    <% if (i % 2 === 0 && i < 6 && i > 0) {  %>
+                        <span class="badges">
+                            <span class="badge small cherry">답변완료</span>
+                        </span>Re:사전정보 공개를 요청합니다.
+                    <% } else { %>
+                    <span>사전정보 공개를 요청합니다.
+                        <% if (i === 1) { %>
+                            사전정보 공개를 요청합니다. 사전정보 공개를 요청합니다. 사전정보 공개를 요청합니다. 사전정보 공개를 요청합니다. 사전정보 공개를 요청합니다.
+                        <% } %>
+                    </span>
+                    <% } %>
+                </a>
+            </strong>
+            <span class="required"><strong>작성자</strong>식물소재업사업실</span>
+            <span class="required"><strong>작성일</strong>2025-3-6</span>
+            <span class="count"><%= randomNumber(1, 10000) %></span>
+        </li>
+    <% } %>
+</ul>
+<!-- pagination -->
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_pagination`, {
+}) %>
+<!-- // pagination -->

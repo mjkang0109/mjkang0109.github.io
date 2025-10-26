@@ -1,0 +1,31 @@
+<%
+const basicInfo = [
+    ['분류<span class="essential">*</span>', ['select', '환경경영']],
+    ['작성자<span class="essential">*</span>', ['input', '김철수', 'middle', 'disabled']],
+    ['알림톡 발송 번호<span class="essential">*</span>', ['input', '010-0000-0000', 'middle', 'disabled'], '<strong class="caution gray">※ 질문 게시 후 1회, 답변 게시 후 1회 본인인증된 전화번호로 알림톡이 발송됩니다. </strong>'],
+    ['제목<span class="essential">*</span>', ['input', '', 'full']],
+    ['문항체크', 'textarea'],
+    ['방문희망일<span class="essential">*</span>', 'period'],
+    ['첨부파일<br>(최대3개)', 'file'],
+];
+%>
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+category: 'qna',
+onlyCaution: '<span class="caution"><span>*</span>표시 필수 입력항목</span>',
+items: basicInfo,
+}) %>
+<article class="detail-section">
+    <strong class="title-leaves">개인정보 수집·이용 동의</strong>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_terms`, {
+        onlyPolicy: true,
+        isFold: true,
+    }) %>
+</article>
+<div class="buttons">
+    <button type="button"
+            class="button-navy">등록
+    </button>
+    <button type="button"
+            class="button-gray">취소
+    </button>
+</div>

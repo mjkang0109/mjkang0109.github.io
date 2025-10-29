@@ -70,7 +70,7 @@ randomNumber = (min, max) => {
                         }
                     %>
                     <li class="m1<%= currentNav === currentItems[i].name ? ' active' : ''; %>">
-                        <a href="./<%= currentItems[i].name %>.html"
+                        <a href="<%= currentItems[i].name === '#' ? '#' : `./${currentItems[i].name}.html` %>"
                            class="dep1"><%= currentItems[i].title; %>
                         </a>
                         <%
@@ -92,7 +92,7 @@ randomNumber = (min, max) => {
                                         }
                                     %>
                                     <li>
-                                        <a href="./<%= currentPages[j].name %>.html"
+                                        <a href="<%= currentPages[j].name === '#' ? '#' : `./${currentPages[j].name}.html` %>"
                                            class="t"><%= currentPages[j].title; %>
                                         </a>
                                         <%

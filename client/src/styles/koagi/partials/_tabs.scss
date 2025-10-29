@@ -44,4 +44,26 @@ $imgPath: "./../../images/koagi";
             }
         }
     }
+
+    .full-tabs {
+        display: flex;
+        width: 100%;
+        margin-top: 47px;
+
+        > button {
+            flex: 1;
+            padding: 23px;
+            border: 1px solid #dddddd;
+            border-bottom: 2px solid #279c2f;
+            font-size: 17px;
+            color: #000;
+            font-weight: 500;
+
+            &[aria-selected="true"] {
+                background-color: #279c2f;
+                border-color: #279c2f;
+                color: #fff;
+            }
+        }
+    }
 }

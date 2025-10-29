@@ -1,0 +1,357 @@
+<%
+const benefit = [
+    {
+        icon  : 'ticket',
+        text  : '한국수목원정원관리원<br>소속 수목원·식물원<br>무료입장',
+        width : 68,
+        height: 68,
+    },
+    {
+        icon  : 'tree',
+        text  : '교육 · 행사 · 전시<br>최신 관람정보 제공',
+        width : 67,
+        height: 65,
+    },
+    {
+        icon  : 'doc',
+        text  : '회원의 날<br>행사 초청',
+        width : 72,
+        height: 64,
+    },
+    {
+        icon  : 'fence',
+        text  : '수목원·식물원 내<br>카페 10% 할인',
+        width : 79,
+        height: 58,
+    },
+    {
+        icon  : 'tree-apple',
+        text  : '수목원·식물원 내<br>카페 10% 할인',
+        width : 65,
+        height: 66,
+    },
+    {
+        icon  : 'books',
+        text  : '교육 및 해설 프로그램<br>교육비 20% 할인<br>(재료비 제외)',
+        width : 69,
+        height: 73,
+    },
+];
+%>
+<section class="benefit">
+    <article class="benefit-detail">
+        <strong class="sound-only">회원혜택</strong>
+        <ul class="benefits">
+            <% benefit.map(b => { %>
+                <li>
+                    <span class="icon-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: b.width,
+                        height: b.height,
+                        isSimply: true,
+                        source: `${imgPath}/icon-${b.icon}.png`,
+                        alt: '',
+                        }); %>
+                    </span>
+                    <strong><%- b.text; %></strong>
+                </li>
+            <% }); %>
+        </ul>
+    </article>
+    <article class="benefit-detail">
+        <strong>회원종류 및 가입금액</strong>
+        <div class="table-grid">
+            <%
+            const tableHead = ['구분', '연회비', '비고'];
+            const type = [
+                '일반회원<br>(만 7세 이상~만65세 미만)',
+                '지역회원<br>(주소지가 해당 시/군 등록)',
+                '평생회원',
+                '어울림회원<br>(무료입장 대상자)',
+                '기관회원<br>(사업자 등록 기관 또는 기업, 자사 및 지부 등 포함)',
+                '기부회원',
+            ];
+            const price = [
+                '<strong>30,000원</strong>',
+                '<strong>15,000원</strong>',
+                '<strong>1,000,000원</strong>',
+                '<strong>무료</strong>',
+                '<strong>1인당 10,000원</strong>',
+                '회비없음',
+            ];
+            %>
+            <% tableHead.map((head, i)=> { %>
+                <div class="head<%= i === 0 ? ' col1-3' : '' %><%= i === head.length ? ' border-right-none' : '' %>"><strong><%= head %></strong></div>
+            <% }); %>
+
+            <div class="row2-6">개인회원</div>
+            <div><%- type[0] %></div>
+            <div><%- price[0] %></div>
+            <div class="row2-4 col4 border-right-none">가족 추가 가입 시 1인당 1만원
+                <br>(동일한 세대 구성원 또는 직계 존비속)
+            </div>
+
+            <div><%- type[1] %></div>
+            <div class=""><%- price[1] %></div>
+
+            <div><%- type[2] %></div>
+            <div><%- price[2] %></div>
+            <div class="border-right-none"></div>
+
+            <div><%- type[3] %></div>
+            <div><%- price[3] %></div>
+            <div class="border-right-none">
+                다자녀가구, 만 65세 이상 등
+                <a href="#" class="button-navy small">무료대상 보기</a>
+            </div>
+
+            <div class="col1-3"><%- type[4] %></div>
+            <div><%- price[4] %></div>
+            <div class="border-right-none">동시 가입자 20인 이상</div>
+
+            <div class="col1-3"><%- type[5] %></div>
+            <div class=""><%- price[5] %></div>
+            <div class="border-right-none">
+                한국수목원정원관리원 기부금품 업무처리 절차에 따름
+                <a href="#" class="button-navy small">자세히보기</a>
+            </div>
+
+        </div>
+    </article>
+
+    <article class="benefit-detail">
+        <strong>회원제 가입방법 및 절차</strong>
+        <div class="full-tabs" role="tablist">
+            <button type="button" role="tab" aria-selected="true"  aria-controls="panel1">
+                온라인 및 모바일 가입
+            </button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="panel2">
+                현장 방문 가입
+            </button>
+        </div>
+        <div id="panel1" role="tabpanel">
+            <strong>온라인 및 모바일 가입</strong>
+            <p>한국수목원정원관리원 회원가입 또는 본인인증 후 가입하실 수 있습니다.</p>
+            <a href="#" class="button-navy round">연간회원 가입하기</a>
+            <ol>
+                <%
+                const join = [
+                    {
+                        icon: 'computer',
+                        width: 44,
+                        height: 43,
+                        title: '연간회원 가입하기 클릭',
+                        desc: '예약시스템에서<br>연간회원 가입하기를 클릭합니다.',
+                    },
+                    {
+                        icon: 'lock',
+                        width: 50,
+                        height: 50,
+                        title: '본인인증 및 정보 입력',
+                        desc: '휴대폰 본인인증 및 가입에<br>필요한 정보를 입력합니다.',
+                    },
+                    {
+                        icon: 'id',
+                        width: 45,
+                        height: 39,
+                        title: '약관 및 개인정보 동의',
+                        desc: '가입약관과 개인정보 관련<br>규정에 동의합니다.',
+                    },
+                    {
+                        icon: 'profile',
+                        width: 46,
+                        height: 46,
+                        title: '회원권 유형 선택',
+                        desc: '모바일 QR 카드 또는 실물 카드 중<br>발급받을 카드를 선택합니다.',
+                    },
+                    {
+                        icon: 'window-check',
+                        width: 45,
+                        height: 40,
+                        title: '가입완료',
+                        desc: '연간회원 가입이 완료됩니다.<br><strong>(실물 카드는 현장 수령)</strong>',
+                    },
+                ]
+                %>
+                <% join.map(j => { %>
+                <li>
+                    <span class="icon-wrap">
+                         <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                         width: j.width,
+                         height: j.height,
+                         isSimply: true,
+                         source: `${imgPath}/icon-${j.icon}.png`,
+                         alt: '',
+                         }); %>
+                    </span>
+                    <strong class="title"><%= j.title %></strong>
+                    <p><%- j.desc %></p>
+                </li>
+                <% }) %>
+            </ol>
+            <ul class="how">
+                <li class="how-payment">
+                    <strong>연회비 납부방법</strong>
+                    <p>신용카드, 가상계좌</p>
+                </li>
+                <li class="how-pic">
+                    <strong>가입 준비물</strong>
+                    <p>가입자 본인 증명사진 파일(JPG, JPEG, PNG, GIF)</p>
+                </li>
+            </ul>
+        </div>
+        <div id="panel2" role="tabpanel" hidden>
+            <strong>현장 방문 가입</strong>
+            <p>방문하신 수목원·식물원의 방문자센터에서 직원에게 요청해 주세요.</p>
+            <a href="#" class="button-navy round">수목원·식물원 위치찾기</a>
+            <ol>
+                <%
+                const join2 = [
+                    {
+                        icon: 'bus',
+                        width: 47,
+                        height: 40,
+                        title: '수목원 또는 식물원 방문',
+                        desc: '방문하신 수목원·식물원의<br>방문자센터를 찾아주세요.'
+                    },
+                    {
+                        icon: 'lock',
+                        width: 50,
+                        height: 50,
+                        title: '본인인증 및 정보 입력',
+                        desc: '휴대폰 본인인증 및 가입에<br>필요한 정보를 입력합니다.'
+                    },
+                    {
+                        icon: 'id',
+                        width: 45,
+                        height: 39,
+                        title: '약관 및 개인정보 동의',
+                        desc: '가입약관과 개인정보 관련<br>규정에 동의합니다.'
+                    },
+                    {
+                        icon: 'profile',
+                        width: 46,
+                        height: 46,
+                        title: '회원권 유형 선택',
+                        desc: '모바일 QR 카드 또는 실물 카드 중<br>발급받을 카드를 선택합니다.'
+                    },
+                    {
+                        icon: 'window-check',
+                        width: 45,
+                        height: 40,
+                        title: '가입완료',
+                        desc: '연간회원 가입이 완료됩니다.<br><strong>(실물 카드는 현장 수령)</strong>'
+                    },
+                ]
+                %>
+                <% join2.map(j2 => { %>
+                    <li>
+                    <span class="icon-wrap">
+                         <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                         width: j2.width,
+                         height: j2.height,
+                         isSimply: true,
+                         source: `${imgPath}/icon-${j2.icon}.png`,
+                         alt: '',
+                         }); %>
+                    </span>
+                        <strong class="title"><%= j2.title %></strong>
+                        <p><%- j2.desc %>
+                    </li>
+                <% }) %>
+            </ol>
+            <ul class="how">
+                <li class="how-payment">
+                    <strong>연회비 납부방법</strong>
+                    <p>신용카드, 가상계좌</p>
+                </li>
+                <li class="how-docs">
+                    <strong>가입 준비물</strong>
+                    <p>신분증, 주민등록등본 혹은 가족관계증명서 등 증명서류</p>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <article class="benefit-detail">
+        <strong>신청 시 유의사항</strong>
+        <%
+        const cautions = [
+            {
+                icon: 'year',
+                width: 27,
+                height: 18,
+                desc: '유효기간은 회원증 발급일로부터 1년<br>(평생회원 제외)',
+            },
+            {
+                icon: 'user',
+                width: 26,
+                height: 25,
+                desc: '예약시스템 홈페이지 또는 현장에서<br>유효기간 갱신 및 재발급 가능',
+            },
+            {
+                icon: 'camera-green',
+                width: 25,
+                height: 22,
+                desc: '현장 신청 시 당일 촬영한 사진으로<br>회원증 발급',
+            },
+            {
+                icon: 'card',
+                width: 25,
+                height: 22,
+                desc: '실물 카드는 발급 당일 또는<br>차후 방문 시 수령 가능<br>(별도 우편발송 불가)',
+            },
+            {
+                icon: 'doc-green',
+                width: 24,
+                height: 22,
+                desc: '지역 및 무료입장 대상자는<br>가입신청 시 증명서류 필수 지참',
+            },
+            {
+                icon: 'cell',
+                width: 24,
+                height: 27,
+                desc: '모바일 카드는 발급 즉시 사용 가능',
+            },
+        ]
+        %>
+        <ul class="caution">
+            <% cautions.map(c => { %>
+                <li>
+                    <span class="icon-wrap">
+                         <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                         width: c.width,
+                         height: c.height,
+                         isSimply: true,
+                         source: `${imgPath}/icon-${c.icon}.png`,
+                         alt: '',
+                         }); %>
+                    </span>
+                    <p><%- c.desc %>
+                </li>
+            <% }) %>
+        </ul>
+        <strong>회원제 유의사항</strong>
+        <ul class="dot-caution">
+            <%
+            const dotCautions = [
+                '회원증은 본인만 사용할 수 있으며, 타인이 사용할 경우 회원기간에 관계없이 효력상실과 동시에 환불이 되지 않습니다.',
+                '일부시설 및 교육 · 해설프로그램은 무료이용에서 제외됩니다.',
+                '소지하지 않고 방문하셨을 경우 회원 혜택에 제한이 있을 수 있습니다.',
+                '회원증의 분실 및 파손 시에는 수목원에 재발급 신청을 하여 회원증을 재발급 받으셔야 합니다.',
+                '회원 가입과 관련된 세부사항은 신청서에 명시된 약관을 참고하여 주시기 바랍니다.',
+                '단체회원 입장교환권은 타인에게 영리 목적의 양도, 매매를 할 수 없습니다.',
+            ]
+            %>
+            <% dotCautions.map(c => { %>
+                <li>
+                    <%- c %>
+                </li>
+            <% }) %>
+        </ul>
+        <strong>문의</strong>
+        <ul class="dot-caution">
+            <li>전화 문의 : <a href="tel:032-5648-5599">032-5648-5599</a></li>
+            <li>방문 문의 : (해당 소속기관명) 소속기관 주소</li>
+        </ul>
+    </article>
+</section>

@@ -15,6 +15,7 @@
 @use "./../partials/board" as board;
 @use "./../partials/cardItems" as cardItems;
 @use "./../partials/boardItems" as boardItems;
+@use "./../partials/benefit" as benefit;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -1250,6 +1251,64 @@ input[type="radio"] {
             padding: 10px;
             border-radius: 0 0 10px 10px;
             text-align: center;
+        }
+    }
+}
+
+@include benefit.benefit;
+.icon-info {
+    li {
+        display: flex;
+        width: 100%;
+
+        &:not(:first-of-type) {
+            margin-top: -20px;
+
+        }
+
+        &:last-of-type {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-bottom: -30px;
+            }
+        }
+    }
+
+    strong {
+        flex: 0 0 56px;
+        padding: 0 20px 0 21px;
+        background-repeat: no-repeat;
+        background-position: 0 4px;
+        text-align: justify;
+        font-size: 15px;
+        line-height: 25px;
+        color: #000;
+        font-weight: 500;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    span {
+        flex: 1;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 600;
+    }
+
+    .location {
+        strong {
+            background-image: url("#{$imgPath}/icon-mark.png");
+            background-size: 14px auto;
+        }
+    }
+
+    .clock {
+        strong {
+            background-image: url("#{$imgPath}/icon-clock.png");
+            background-size: 15px auto;
         }
     }
 }

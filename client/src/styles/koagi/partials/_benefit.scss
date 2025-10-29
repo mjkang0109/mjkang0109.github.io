@@ -1,0 +1,285 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin benefit {
+    .benefits {
+        display: flex;
+        gap: 38px;
+
+        > li {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-self: stretch;
+
+            strong {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 24px;
+                background-color: #314883;
+                color: #fff;
+                border-radius: 0 0 20px 20px;
+                text-align: center;
+                font-size: 15px;
+                line-height: 25px;
+                font-weight: 500;
+            }
+        }
+
+        .icon-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            border: 1px solid #e2e2e3;
+            border-bottom: none;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+    .benefit-detail {
+        + .benefit-detail {
+            margin-top: 120px;
+        }
+
+        > strong {
+            display: flex;
+            align-items: center;
+            padding-left: 34px;
+            background: url("#{$imgPath}/icon-leaves.png") no-repeat 0 0;
+            margin-bottom: 20px;
+            font-size: 23px;
+            line-height: 33px;
+            color: #333;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: 18px;
+                line-height: 28px;
+                padding-left: 22px;
+                margin-bottom: 15px;
+                background-size: 15px;
+            }
+
+            ~ strong {
+                margin-top: 105px;
+            }
+        }
+
+        [role="tabpanel"] {
+            border-bottom: 1px solid #dfdfdf;
+            padding-bottom: 66px;
+
+            > strong {
+                display: block;
+                margin-top: 92px;
+                text-align: center;
+                font-size: 30px;
+                line-height: 52px;
+                color: #333;
+                font-weight: 700;
+            }
+
+            > p {
+                margin-top: 27px;
+                font-size: 16px;
+                line-height: 30px;
+                text-align: center;
+                color: #000;
+                font-weight: 500;
+
+                + a {
+                    display: block;
+                    width: 260px;
+                    margin: 50px auto 0;
+                }
+            }
+
+            > ol {
+                display: flex;
+                justify-content: space-between;
+                gap: 97px;
+                margin-top: 84px;
+                counter-reset: section;
+
+                li {
+                    flex: 1;
+                    position: relative;
+
+                    &:not(:first-of-type) {
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 60px;
+                            left: -60px;
+                            width: 18px;
+                            height: 32px;
+                            background: url("#{$imgPath}/icon-triangle-right.png") no-repeat 0 0;
+                        }
+                    }
+                }
+
+                .icon-wrap {
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+                    position: relative;
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 100%;
+                    margin: 0 auto;
+                    padding-top: 90px;
+                    box-sizing: border-box;
+
+                    &:before {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        counter-increment: section;
+                        content: "STEP 0" counter(section);
+                        background-color: #299b8c;
+                        height: 62px;
+                        width: 180px;
+                        color: #fff;
+                        font-weight: 800;
+                        transform: translateX(-50%);
+                        z-index: 1;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 100%;
+                        border: 1px solid #dcdcdc;
+                        box-sizing: border-box;
+                    }
+                }
+
+                .title {
+                    display: block;
+                    text-align: center;
+                    margin-top: 35px;
+                    font-size: 18px;
+                    color: #333;
+                    line-height: 30px;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #333;
+                    font-weight: 500;
+                    text-align: center;
+
+                    strong {
+                        color: #ec0303;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .how {
+                display: flex;
+                gap: 44px;
+                margin-top: 76px;
+
+                li {
+                    display: flex;
+                    gap: 19px;
+                    align-items: center;
+                    flex: 1;
+                    border-radius: 20px;
+                    padding: 40px 40px 40px 95px;
+                    border: 1px solid #dfdfdf;
+                }
+
+                .how-payment {
+                    background: #f9f9f9 url("#{$imgPath}/icon-wallet.png") no-repeat 40px 50%;
+                }
+
+                .how-pic {
+                    background: #f9f9f9 url("#{$imgPath}/icon-camera.png") no-repeat 40px 50%;
+                }
+
+                .how-docs {
+                    background: #f9f9f9 url("#{$imgPath}/icon-computer-color.png") no-repeat 40px 50%;
+                }
+
+                strong {
+                    font-size: 18px;
+                    color: #333;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: 15px;
+                    color: #333;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .caution {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 22px;
+                padding: 34px;
+                border: 1px solid #e5e5e5;
+                border-radius: 20px;
+            }
+
+            .icon-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 55px;
+                height: 55px;
+                border-radius: 100%;
+                border: 4px solid #13a45a;
+                box-sizing: border-box;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 25px;
+                color: #000;
+                font-weight: 600;
+            }
+        }
+
+        .dot-caution {
+            li {
+                position: relative;
+                padding-left: 16px;
+                font-size: 16px;
+                color: #595959;
+                line-height: 34px;
+                font-weight: 500;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                    width: 6px;
+                    height: 6px;
+                    background-color: #69a94e;
+                }
+            }
+        }
+    }
+}

@@ -70,6 +70,11 @@ $imgPath: "./../../images/koagi";
             gap: 50px 20px;
         }
 
+        &:first-child {
+            border-top: none;
+            padding-top: 20px;
+        }
+
         a {
             &:before {
                 content: "";
@@ -103,6 +108,10 @@ $imgPath: "./../../images/koagi";
             text-align: left;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 padding: 9px 15px 15px;
+            }
+
+            &:has(.icon-info) {
+                padding-bottom: 20px;
             }
         }
 
@@ -389,6 +398,10 @@ $imgPath: "./../../images/koagi";
 
             strong {
                 font-weight: 600;
+            }
+
+            + .icon-info {
+                margin-top: 30px;
             }
         }
 

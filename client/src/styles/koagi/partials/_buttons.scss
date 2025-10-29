@@ -48,6 +48,10 @@ $imgPath: "./../../images/koagi";
             padding: 15px 20px;
             font-size: 15px;
         }
+
+        &.round {
+            border-radius: 50px;
+        }
     }
     .button-gray {
         min-width: 150px;

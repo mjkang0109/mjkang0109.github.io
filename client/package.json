@@ -102,9 +102,9 @@
     },
     "dependencies": {
         "autoprefixer": "^10.4.21",
-        "chalk": "^5.4.1",
+        "chalk": "^5.6.2",
         "cssnano": "^5.1.15",
-        "dotenv": "^16.5.0",
+        "dotenv": "^16.6.1",
         "ejs": "^3.1.10",
         "express": "^4.21.2",
         "express-dart-sass": "^1.0.4",
@@ -118,11 +118,11 @@
         "postcss-nested": "^6.2.0",
         "postcss-sort-media-queries": "^5.2.0",
         "rimraf": "^3.0.2",
-        "sass-migrator": "^2.3.2",
+        "sass-migrator": "^2.4.2",
         "sharp": "^0.32.6",
         "stylelint": "^15.11.0",
         "stylelint-config-recommended-scss": "^10.0.0",
         "stylelint-scss": "^4.7.0",
-        "terser": "^5.43.0"
+        "terser": "^5.44.0"
     }
 }

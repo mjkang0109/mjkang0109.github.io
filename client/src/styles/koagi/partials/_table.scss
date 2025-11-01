@@ -67,11 +67,11 @@ $imgPath: "./../../images/koagi";
         td {
             border: 1px solid #e7e7e7;
             width: 100%;
-            padding: 20px 0;
+            padding: 20px;
             font-size: 16px;
             line-height: 26px;
             @include m.respond-to(map.get(m.$max, 1199)) {
-                padding: 15px 0;
+                padding: 15px 5px;
                 font-size: 14px;
                 line-height: 24px;
             }
@@ -94,6 +94,22 @@ $imgPath: "./../../images/koagi";
         td {
             font-weight: 400;
             text-align: center;
+
+            &.bold {
+                font-weight: 600;
+            }
+
+            &.bg-blue {
+                background-color: #f3f9ff;
+            }
+
+            &.text-blue {
+                color: #1c7ee3;
+            }
+
+            &.align-left {
+                text-align: left;
+            }
         }
     }
     .table-horizon {

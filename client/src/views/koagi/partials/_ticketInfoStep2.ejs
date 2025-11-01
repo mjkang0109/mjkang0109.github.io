@@ -1,0 +1,124 @@
+<div class="ticket-info">
+    <strong class="title-box green">
+        <span class="icon-wrap">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: 34,
+        height: 40,
+        isSimply: true,
+        source: `${imgPath}/icon-calculator.png`,
+        alt: '',
+        }); %>
+        </span>
+        할인·무료대상 인증
+    </strong>
+    <%
+    const items = [
+        {
+            title: '할인대상 1',
+            sub  : [
+                {
+                    title: '대상선택',
+                    label: '어른 (4,000원)',
+                },
+                {
+                    title: '할인선택',
+                    label: '봉화군민',
+                }
+            ]
+        },
+        {
+            title: '할인대상 2',
+            sub  : [
+                {
+                    title: '대상선택',
+                    label: '어른 (4,000원)',
+                },
+                {
+                    title: '할인선택',
+                    label: '봉화군민',
+                }
+            ]
+        },
+        {
+            title: '무료대상 1',
+            sub  : [
+                {
+                    title: '대상선택',
+                    label: '어른 (4,000원)',
+                },
+                {
+                    title: '할인선택',
+                    label: '만 65세 이상 경로대상자',
+                }
+            ]
+        }
+    ]
+    %>
+    <% items.map((item, i) => { %>
+        <div class="box outline-round">
+            <strong class="title"><%= item.title %></strong>
+            <ul class="select-options">
+                <% item.sub.map((s, j) => { %>
+                    <li>
+                        <strong class="title"><%= s.title %></strong>
+                        <label for="select<%= i + 1 %>-<%= j + 1 %>">
+                            <select id="select<%= i + 1 %>-<%= j + 1 %>"
+                                    class="select">
+                                <option value=""><%= s.label %></option>
+                            </select>
+                        </label>
+                        <% if (i === 0 && j === 1) { %>
+                            <div class="buttons">
+                                <button type="button"
+                                        class="button-darkgray">인증하기
+                                </button>
+                            </div>
+                        <% } %>
+                        <% if (i > 0 && j === 1) { %>
+                            <div class="buttons">
+                                <button type="button"
+                                        class="button-gray square">인증완료
+                                </button>
+                                <button type="button"
+                                        class="button-gray-outline">초기화
+                                </button>
+                            </div>
+                        <% } %>
+                    </li>
+                    <% if (i > 0 && j === 1) { %>
+                        <li class="discount">
+                            <span>50% 할인적용</span>
+                            <strong>-4,000<span>원</span></strong>
+                        </li>
+                    <% } %>
+                <% }) %>
+            </ul>
+        </div>
+    <% }) %>
+    <div class="total-price">
+        <span class="left">
+            할인·무료대상 <strong>25</strong>명
+        </span>
+        <span class="middle">
+            <span class="left">
+            선택상품 금액
+                <strong>12,000</strong>원
+            </span>
+            <span class="right">
+                무료 적용 금액
+                <strong>8,000</strong>원
+            </span>
+        </span>
+        <span class="right">
+            최종금액<strong>4,000</strong>원
+        </span>
+    </div>
+    <div class="buttons">
+        <button type="button"
+                class="button-navy">이전
+        </button>
+        <button type="button"
+                class="button-navy">다음
+        </button>
+    </div>
+</div>

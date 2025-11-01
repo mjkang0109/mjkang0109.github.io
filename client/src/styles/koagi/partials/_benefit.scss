@@ -7,6 +7,9 @@ $imgPath: "./../../images/koagi";
     .benefits {
         display: flex;
         gap: 38px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+        }
 
         > li {
             display: flex;
@@ -96,101 +99,14 @@ $imgPath: "./../../images/koagi";
                 }
             }
 
-            > ol {
-                display: flex;
-                justify-content: space-between;
-                gap: 97px;
-                margin-top: 84px;
-                counter-reset: section;
-
-                li {
-                    flex: 1;
-                    position: relative;
-
-                    &:not(:first-of-type) {
-                        &:after {
-                            content: "";
-                            position: absolute;
-                            top: 60px;
-                            left: -60px;
-                            width: 18px;
-                            height: 32px;
-                            background: url("#{$imgPath}/icon-triangle-right.png") no-repeat 0 0;
-                        }
-                    }
-                }
-
-                .icon-wrap {
-                    display: flex;
-                    justify-content: center;
-                    overflow: hidden;
-                    position: relative;
-                    width: 180px;
-                    height: 180px;
-                    border-radius: 100%;
-                    margin: 0 auto;
-                    padding-top: 90px;
-                    box-sizing: border-box;
-
-                    &:before {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: absolute;
-                        top: 0;
-                        left: 50%;
-                        counter-increment: section;
-                        content: "STEP 0" counter(section);
-                        background-color: #299b8c;
-                        height: 62px;
-                        width: 180px;
-                        color: #fff;
-                        font-weight: 800;
-                        transform: translateX(-50%);
-                        z-index: 1;
-                    }
-
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 100%;
-                        border: 1px solid #dcdcdc;
-                        box-sizing: border-box;
-                    }
-                }
-
-                .title {
-                    display: block;
-                    text-align: center;
-                    margin-top: 35px;
-                    font-size: 18px;
-                    color: #333;
-                    line-height: 30px;
-                    font-weight: 600;
-                }
-
-                p {
-                    font-size: 15px;
-                    line-height: 25px;
-                    color: #333;
-                    font-weight: 500;
-                    text-align: center;
-
-                    strong {
-                        color: #ec0303;
-                        font-weight: 500;
-                    }
-                }
-            }
-
             .how {
                 display: flex;
                 gap: 44px;
                 margin-top: 76px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: 20px;
+                    flex-direction: column;
+                }
 
                 li {
                     display: flex;
@@ -200,18 +116,33 @@ $imgPath: "./../../images/koagi";
                     border-radius: 20px;
                     padding: 40px 40px 40px 95px;
                     border: 1px solid #dfdfdf;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 20px 20px 20px 75px;
+                        gap: 5px;
+                    }
                 }
 
                 .how-payment {
                     background: #f9f9f9 url("#{$imgPath}/icon-wallet.png") no-repeat 40px 50%;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        background-position: 20px 50%;
+                    }
                 }
 
                 .how-pic {
                     background: #f9f9f9 url("#{$imgPath}/icon-camera.png") no-repeat 40px 50%;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        background-position: 20px 50%;
+                    }
                 }
 
                 .how-docs {
                     background: #f9f9f9 url("#{$imgPath}/icon-computer-color.png") no-repeat 40px 50%;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        background-position: 20px 50%;
+                    }
                 }
 
                 strong {
@@ -232,6 +163,9 @@ $imgPath: "./../../images/koagi";
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr;
+            }
 
             li {
                 display: flex;

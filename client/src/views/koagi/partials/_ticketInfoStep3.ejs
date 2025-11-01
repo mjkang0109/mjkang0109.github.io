@@ -1,0 +1,106 @@
+<div class="ticket-info">
+    <div class="left">
+        <strong class="title-box green">
+        <span class="icon-wrap">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: 30,
+        height: 30,
+        isSimply: true,
+        source: `${imgPath}/icon-purchaser.png`,
+        alt: '',
+        }); %>
+        </span>
+            구매자 정보
+        </strong>
+        <table class="table-horizon">
+            <caption class="essential">* 필수입력항목</caption>
+            <colgroup>
+                <col style="width: auto">
+                <col style="width: auto">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>제공기관</th>
+                <td><%= currentName %></td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td>홍길동</td>
+            </tr>
+            <tr>
+                <th>연락처</th>
+                <td>010-0000-0000</td>
+            </tr>
+            <tr>
+                <th>이메일<span class="essential">*</span></th>
+                <td>
+                    <label for="email">
+                        <input type="email"
+                               id="email"
+                               placeholder="apple15489@korea.com"
+                               class="it">
+                    </label>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <strong class="title-leaf">유의사항</strong>
+        <ul class="dot-caution">
+            <%
+            const dotCautions = [
+                '결제 후, 알림톡이 오지않는다면 [마이페이지 > 나의 신청내역]에서 확인하시길 바랍니다.',
+                '온라인 구매한 입장권은 현장에서 키오스크로 발권되지 않습니다. 알림톡의 QR코드를 제시해주세요.',
+            ];
+            %>
+            <% dotCautions.map(c => { %>
+                <li>
+                    <%- c; %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="box-title">
+            <strong class="title">이용약관 동의</strong>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_terms`, {
+            }) %>
+        </div>
+        <div class="box-title">
+            <strong class="title">총 결제금액</strong>
+            <%
+            const priceItems = [
+                {
+                    age  : '어른',
+                },
+                {
+                    age  : '할인',
+                },
+                {
+                    age  : '무료',
+                },
+            ];
+            %>
+            <ul class="member-count">
+                <% priceItems.map((item, i) => { %>
+                    <li>
+                        <strong><%- item.age; %></strong>
+                        <span class="count">1개</span>
+                    </li>
+                <% }); %>
+            </ul>
+            <div class="member-total">
+                <span>총 <strong>4</strong>개</span>
+                <strong>8,000</strong>
+                <span>원</span>
+            </div>
+            <div class="buttons">
+            <button type="button"
+                    class="button-navy-outline">이전
+            </button>
+            <button type="button"
+                    class="button-navy">결제하기
+            </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -100,7 +100,7 @@ randomNumber = (min, max) => {
                                         if (currentSubItems) {
                                             const subItemsLength = currentPages[j].subItems.length;
                                         for (let k = 0; k < subItemsLength; k++) {
-                                            if (currentSubItems[k].title.includes('상세') || currentSubItems[k].title.includes('등록')) {
+                                            if (currentSubItems[k].title.includes(':')) {
                                                 continue;
                                             }
                                         %>

@@ -1,0 +1,265 @@
+<div class="ticket-info">
+    <div class="left">
+        <strong class="title-box green">
+        <span class="icon-wrap">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: 36,
+        height: 30,
+        isSimply: true,
+        source: `${imgPath}/icon-price.png`,
+        alt: '',
+        }); %>
+        </span>
+            이용요금 및 할인 혜택 적용 안내
+        </strong>
+        <strong class="title-leaf">요금안내</strong>
+        <table class="table-gray">
+            <colgroup>
+                <col style="width: 200px">
+                <col>
+                <col style="width: 200px">
+                <col style="width: 200px">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>대상</th>
+                <th>기준</th>
+                <th>개인</th>
+                <th>단체(20인 이상)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>어른</td>
+                <td>만 19세 이상</td>
+                <td class="bold">5,000원</td>
+                <td class="bold">4,000원</td>
+            </tr>
+            <tr>
+                <td>청소년</td>
+                <td>만13세 이상~만 18세 이하</td>
+                <td class="bold">4,000원</td>
+                <td class="bold">3,000원</td>
+            </tr>
+            <tr>
+                <td>어린이</td>
+                <td>만7세 이상~만12세 이하</td>
+                <td class="bold">3,000원</td>
+                <td class="bold">2,000원</td>
+            </tr>
+            <tr>
+                <td>인솔자</td>
+                <td>단체 인솔자</td>
+                <td class="bold">해당없음</td>
+                <td class="bold">무료</td>
+            </tr>
+            </tbody>
+        </table>
+        <strong class="title-leaf">할인대상 안내</strong>
+        <table class="table-gray">
+            <colgroup>
+                <col style="width: 195px">
+                <col style="width: 100px">
+                <col>
+                <col style="width: 180px">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>대상</th>
+                <th>할인</th>
+                <th>적용방법</th>
+                <th>온라인 구매 가능여부</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>봉화군민</td>
+                <td>50%</td>
+                <td class="align-left">주민등록지 봉화군</td>
+                <td class="bg-blue text-blue bold">가능</td>
+            </tr>
+            <tr>
+                <td>다문화가정</td>
+                <td>50%</td>
+                <td class="align-left">외국인 등록증</td>
+                <td class="bg-blue bold">현장구매</td>
+            </tr>
+            <tr>
+                <td>다문화가정</td>
+                <td>50%</td>
+                <td class="align-left">국적취득자의 경우 주민등록증</td>
+                <td class="bg-blue text-blue bold">가능</td>
+            </tr>
+            <tr>
+                <td>국세청<br>세금포인트</td>
+                <td>20%</td>
+                <td class="align-left">
+                    국세청 홈텍스(
+                    <a href="https://www.hometax.go.kr">www.hometax.go.kr</a>
+                    ) 세금포인트
+                    <br>할인 종이쿠폰(인쇄)
+                    <br>* 세금포인트 3포인트 차감
+                </td>
+                <td class="bg-blue bold">현장구매</td>
+            </tr>
+            <tr>
+                <td>강원랜드 이용객<br>및 임직원</td>
+                <td>20%</td>
+                <td class="align-left">이용객 : 영수증, 예약 내역 증빙,
+                    <br>임직원 : 사원증, 명함
+                </td>
+                <td class="bg-blue bold">현장구매</td>
+            </tr>
+            <tr>
+                <td>영주 선비세상 <br>이용객</td>
+                <td>20%</td>
+                <td class="align-left">선비세상 입장권, 영수증</td>
+                <td class="bg-blue bold">현장구매</td>
+            </tr>
+            <tr>
+                <td>국립미래환경청소년센터 <br>이용객</td>
+                <td>20%</td>
+                <td class="align-left">영수증, 예약 내역 증빙</td>
+                <td class="bg-blue bold">현장구매</td>
+            </tr>
+            </tbody>
+        </table>
+        <strong class="title-leaf">무료대상 안내</strong>
+        <table class="table-gray">
+            <colgroup>
+                <col style="width: 286px">
+                <col>
+                <col style="width: 205px">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>대상</th>
+                <th>적용방법</th>
+                <th>온라인 구매 가능여부</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>만 6세이하 어린이</td>
+                <td>건강보험증, 가족관계증명서</td>
+                <td class="bg-blue text-blue bold">가능</td>
+            </tr>
+            <tr>
+                <td>만 65세 이상 경로대상자</td>
+                <td>신분증</td>
+                <td class="bg-blue text-blue bold">가능</td>
+            </tr>
+            <tr>
+                <td>장애인</td>
+                <td>장애인증, 장애인 복지카드</td>
+                <td class="bg-blue text-blue bold">가능</td>
+            </tr>
+            <tr>
+                <td>국가유공자 및 유족</td>
+                <td>국가유공자증, 국가유공자유족증</td>
+                <td class="bg-blue text-blue bold">가능</td>
+            </tr>
+            </tbody>
+        </table>
+        <strong class="title-leaf">입장권 이용안내</strong>
+        <ul class="dot-caution">
+            <%
+            const dotCautions = [
+                '알림톡(문자)를 받지 못한 경우, 통합예약시스템 홈페이지 > 마이페이지 > 신청내역의 상세보기를 조회하면, QR코드와<br>이용안내/유의사항을 확인할 수 있습니다.',
+                '방문예정일 기준 30일 전부터 방문일 전날까지 구매 가능합니다.',
+                '구매 완료 후에는 날짜/인원/결제수단 등 구매사항의 변경은 불가합니다.',
+            ];
+            %>
+            <% dotCautions.map(c => { %>
+                <li>
+                    <%- c; %>
+                </li>
+            <% }); %>
+        </ul>
+        <strong class="title-leaf">취소 및 환불</strong>
+        <ul class="dot-caution">
+            <%
+            const dotCautions2 = [
+                '방문예정일 및 인원을 변경하려면 구매 취소 후 재구매하여 주십시오. (변경 및 부분취소 불가)',
+                '방문예정일 전날까지 결제취소 가능하며, 미이용시 방문예정일 다음날 자동 취소됩니다. (위약금없음)',
+            ];
+            %>
+            <% dotCautions2.map(c => { %>
+                <li>
+                    <%- c; %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="box-title">
+            <strong class="title">방문예정일 선택</strong>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_calendar`, {
+            }) %>
+        </div>
+        <div class="box-title">
+            <strong class="title">방문인원 선택</strong>
+            <%
+            const priceItems = [
+                {
+                    age  : '<strong>성인</strong><p>만19세 이상 ~ 만64세 미만</p>',
+                    price: '5,000원',
+                    count: true,
+                    total: '',
+                },
+                {
+                    age  : '<strong>고등</strong><p>만16세 이상 ~ 만19세 미만</p>',
+                    price: '4,000원',
+                    count: true,
+                    total: '',
+                },
+                {
+                    age  : '<strong>중등</strong><p>만14세 이상 ~ 만16세 미만 </p>',
+                    price: '3,000원',
+                    count: true,
+                    total: '',
+                },
+                {
+                    age  : '<strong>초등</strong><p>만6세 이상 ~ 만 4세 미만</p>',
+                    price: '2,000원',
+                    count: true,
+                    total: '',
+                },
+                {
+                    age  : '<strong>유아</strong><p>만6세 미만</p>',
+                    price: '2,000원',
+                    count: true,
+                    total: '',
+                },
+            ];
+            %>
+            <ul class="member-count">
+                <% priceItems.map((item, i) => { %>
+                    <li>
+                        <div>
+                            <%- item.age; %>
+                            <strong><%= item.price; %></strong>
+                        </div>
+                        <div class="count">
+                            <button type="button"
+                                    class="button-increase">
+                                <span class="sound-only">인원 증가</span>
+                            </button>
+                            <span id="jsCount<%= i + 1; %>">1</span>
+                            <button type="button"
+                                    class="button-decrease">
+                                <span class="sound-only">인원 감소</span>
+                            </button>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+            <div class="member-total">
+                <span>총</span>
+                <strong>25</strong>
+                <span>명</span>
+            </div>
+            <button type="button" class="button-navy">다음</button>
+        </div>
+    </div>
+</div>

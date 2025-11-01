@@ -1,0 +1,104 @@
+<div class="ticket-info">
+    <strong class="title">온라인 입장권 이용절차</strong>
+    <p class="desc">한국수목원정원관리원 회원가입 또는 본인인증 후 가입하실 수 있습니다.</p>
+    <ol class="step-items">
+        <%
+        const join = [
+            {
+                icon  : 'ticket-hand',
+                width : 59,
+                height: 69,
+                title : '입장권 구매<br>버튼 클릭',
+            },
+            {
+                icon  : 'payment-hand',
+                width : 64,
+                height: 58,
+                title : '옵션 선택 후<br>입장권 결제',
+            },
+            {
+                icon  : 'plant',
+                width : 51,
+                height: 64,
+                title : '알림톡 QR코드<br>링크 수신',
+            },
+            {
+                icon  : 'bench',
+                width : 63,
+                height: 59,
+                title : '수목원·식물원<br>입장 시 제시',
+            },
+            {
+                icon  : 'book',
+                width : 70,
+                height: 53,
+                title : '수목원·식물원<br>입장',
+            },
+        ];
+        %>
+        <% join.map(j => { %>
+            <li>
+                <span class="icon-wrap">
+                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                     width: j.width,
+                     height: j.height,
+                     isSimply: true,
+                     source: `${imgPath}/icon-${j.icon}.png`,
+                     alt: '',
+                     }); %>
+                </span>
+                <strong class="title"><%- j.title; %></strong>
+                <% if (j.desc) { %>
+                    <p><%- j.desc; %></p>
+                <% } %>
+            </li>
+        <% }); %>
+    </ol>
+</div>
+<div class="ticket-info">
+    <strong class="title">온라인 입장권 사용방법</strong>
+    <p class="desc">한국수목원정원관리원 회원가입 또는 본인인증 후 가입하실 수 있습니다.</p>
+    <div class="box-wrap">
+        <div class="box-title flex3">
+            <strong class="title">온라인 입장권 확인</strong>
+            <ul class="ticket-way">
+                <%
+                const items = [
+                    '카카오톡 알림톡',
+                    '문자메시지<span>(카카오톡 미사용시)</span>',
+                    '마이페이지 입장권 구매내역<a href="#" class="button-navy small">QR링크보기</a>',
+                ];
+                %>
+                <% for (let i = 0; i < 3; i++) { %>
+                    <li class="vertical-item">
+                        <strong class="title"><%- items[i]; %></strong>
+                        <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 250,
+                    height: 325,
+                    isSimply: true,
+                    source: `${imgPath}/dummy-ticket-info.png`,
+                    alt: '',
+                    }); %>
+                    </span>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="box-title">
+            <strong class="title">입장 시 QR코드 제시</strong>
+            <div class="vertical-item">
+                <strong class="title">링크 클릭 후 QR코드 제시</strong>
+                <span class="imt-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 250,
+                height: 325,
+                isSimply: true,
+                source: `${imgPath}/dummy-ticket-info.png`,
+                alt: '',
+                }); %>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -260,6 +260,10 @@ $imgPath: "./../../images/koagi";
         }
 
         &.gallery-grid {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr;
+            }
+
             .title {
                 justify-content: space-between;
 
@@ -278,6 +282,7 @@ $imgPath: "./../../images/koagi";
             @include m.respond-to(map.get(m.$max, 1199)) {
                 grid-template-columns: 1fr;
             }
+
             .title {
                 justify-content: flex-start;
                 text-align: left;

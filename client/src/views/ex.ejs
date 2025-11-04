@@ -1,0 +1,19 @@
+---
+group: ex
+state:
+    default: 예제
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include(`${process.env.INCLUDE_PATH}/components/_head`, {
+        title: 'ex'
+    }); %>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH %>/styles/ex/ex<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+</head>
+<body>
+    <script src="<%= process.env.BASE_PATH; %>/scripts/ex/ex<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
+            defer></script>
+</body>
+</html>

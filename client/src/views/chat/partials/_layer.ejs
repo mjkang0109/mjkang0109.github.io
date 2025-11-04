@@ -1,0 +1,230 @@
+<% if (state !== 'client') { %>
+    <div id="jsLayer"
+         class="layer-chat"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="layerHead">
+        <div class="layer-wrap"
+             tabindex="-1">
+            <div id="layerHead"
+                 class="layer-head">
+                <div class="left">
+                    <strong class="logo-white">
+                        <span class="a11y">한국도로공사</span>
+                    </strong>
+                    <span class="name">전자조달시스템 AI 챗봇</span>
+                </div>
+                <div class="right">
+                    <strong class="title">안녕하세요. 전자조달시스템 챗봇입니다.</strong>
+                    <p class="description">문의하시면 성실히 답변드리겠습니다.</p>
+                    <div class="controller">
+                        <%
+                            const buttons = [
+                                ['font', '글자 크기 조절'],
+                                ['hide-black', '최소화'],
+                                ['full-black', '최대화'],
+                                ['close-black button-close', '닫기'],
+                            ];
+                        %>
+                        <% buttons.map(button => { %>
+                            <button type="button"
+                                    class="button-controller button-<%= button[0]; %>">
+                                <span class="a11y"><%= button[1]; %></span>
+                            </button>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-body">
+                <div class="left">
+                    <button type="button"
+                            class="button-chat">
+                        새채팅 생성하기
+                    </button>
+                    <strong class="inquire-title">챗봇에 문의할 메류를 선택하세요</strong>
+                    <%
+                        const items = [
+                            ['입찰', 'bidding'],
+                            ['계약', 'document'],
+                            ['사후관리', 'follow'],
+                            ['실적증명', 'performance'],
+                            ['마이페이지', 'my'],
+                            ['고객광장', 'customer'],
+                            ['통게정보', 'statistics'],
+                            ['관리자', 'admin'],
+                        ];
+                    %>
+                    <div class="inquires">
+                        <% items.map(item => { %>
+                            <button type="button"
+                                    class="button-inquire button-<%= item[1] %>">
+                                <%= item[0] %>
+                            </button>
+                        <% }); %>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="ai-chat">
+                        <% for (let i = 0; i < 5; i++) { %>
+                            <div class="chat-admin">
+                        <span class="profile">
+                            <span class="a11y">
+                                한국도로공사 전자조달시스템 챗봇
+                            </span>
+                        </span>
+                                <p class="text-wrap">
+                                    <% if (i === 1) { %>
+                                        정보공개요청을 선택하셨습니다. 세부 항목을 선택하세요. 정보공개요청을 선택하셨습니다. 세부 항목을 선택하세요. 정보공개요청을 선택하셨습니다.
+                                        세부 항목을 선택하세요.
+                                    <% } %>
+                                    <% if (i !== 1) { %>
+                                        정보공개요청을 선택하셨습니다. 세부 항목을 선택하세요.
+                                    <% } %>
+                                </p>
+                                <span class="timestamp">오후 12:00</span>
+                            </div>
+                            <div class="chat-client">
+                                <p class="text-wrap">
+                                    <% if (i === 1) { %>
+                                        정보공개 작성 방법 문의 정보공개 작성 방법 문의 정보공개 작성 방법 문의 정보공개 작성 방법 문의 정보공개 작성 방법 문의
+                                    <% } %>
+                                    <% if (i !== 1) { %>
+                                        정보공개 작성 방법 문의
+                                    <% } %>
+                                </p>
+                                <span class="timestamp">오후 12:00</span>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="ai-input">
+                        <label for="input-chat">
+                            <input type="text"
+                                   id="input-chat"
+                                   placeholder="전자조달시스템 관련은 무엇이든 물어보세요.">
+                        </label>
+                        <button type="button"
+                                class="button-send">
+                            <span class="a11y">전송</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+<% if (state === 'client') { %>
+    <div id="jsLayer"
+         class="layer-client"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="layerHead">
+        <div class="layer-wrap"
+             tabindex="-1">
+            <div id="layerHead"
+                 class="layer-head">
+                <strong class="logo-color">
+                    <span class="a11y">한국도로공사</span>
+                </strong>
+                <span class="name">전자조달시스템 AI 챗봇</span>
+                <div class="controller">
+                    <%
+                        const buttons = [
+                            ['hide', '최소화'],
+                            ['full', '최대화'],
+                            ['close', '닫기'],
+                                ['more', '더보기'],
+                        ];
+                    %>
+                    <% buttons.map(button => { %>
+                        <button type="button"
+                                class="button-controller button-<%= button[0]; %>">
+                            <span class="a11y"><%= button[1]; %></span>
+                        </button>
+                    <% }); %>
+                </div>
+            </div>
+            <div class="layer-body">
+                <div class="ai-chat">
+                    <span class="timestamp">2025년 8월 26일 오후 12:00</span>
+                    <% for (let i = 0; i < 5; i++) { %>
+                        <div class="chat-admin">
+                            <span class="profile">
+                                <span class="a11y">
+                                    한국도로공사 전자조달시스템 챗봇
+                                </span>
+                            </span>
+                            <p class="text-wrap">
+                                <% if (i === 1) { %>
+                                    안녕하세요. 자주 이용하는 메뉴를 이용하세요! 안녕하세요. 자주 이용하는 메뉴를 이용하세요! 안녕하세요. 자주 이용하는 메뉴를 이용하세요! 안녕하세요.
+                                    자주 이용하는 메뉴를 이용하세요! 안녕하세요. 자주 이용하는 메뉴를 이용하세요!
+                                <% } %>
+                                <% if (i !== 1) { %>
+                                    안녕하세요. 자주 이용하는 메뉴를 이용하세요!
+                                <% } %>
+                            </p>
+                            <% if (i === 0) { %>
+                                <div class="inquire-wrap">
+                                    <strong class="inquire-title">자주 이용하는 메뉴</strong>
+                                    <%
+                                        const items = [
+                                            ['입찰관리', 'bidding'],
+                                            ['계약관리', 'document'],
+                                            ['사후관리', 'follow'],
+                                            ['월간일정관리', 'calendar'],
+                                            ['실적증명서', 'performance'],
+                                            ['정보공개요청', 'information'],
+                                        ];
+                                    %>
+                                    <div class="inquires">
+                                        <% items.map(item => { %>
+                                            <button type="button"
+                                                    class="button-inquire button-<%= item[1] %>">
+                                                <%= item[0] %>
+                                            </button>
+                                        <% }); %>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                        <div class="chat-client">
+                            <p class="text-wrap">
+                                <% if (i === 1) { %>
+                                    발주계획요청서 작성 방법을 설명해주세요. 발주계획요청서 작성 방법을 설명해주세요. 발주계획요청서 작성 방법을 설명해주세요. 발주계획요청서 작성 방법을
+                                    설명해주세요. 발주계획요청서 작성 방법을 설명해주세요. 발주계획요청서 작성 방법을 설명해주세요.
+                                <% } %>
+                                <% if (i !== 1) { %>
+                                    발주계획요청서 작성 방법을 설명해주세요.
+                                <% } %>
+                            </p>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="ai-input">
+                    <label for="input-chat">
+                        <input type="text"
+                               id="input-chat"
+                               placeholder="질문을 입력해보세요">
+                    </label>
+                    <button type="button"
+                            class="button-send">
+                        <span class="a11y">전송</span>
+                    </button>
+                    <div class="actions">
+                        <% const actions = [
+                            ['좋아요', 'good'],
+                            ['싫어요', 'bad'],
+                            ['복사하기', 'copy'],
+                            ['코멘트', 'chat'],
+                        ]; %>
+                        <% actions.map(action => { %>
+                            <button type="button"
+                                    class="button-action button-<%= action[1] %>">
+                                <span class="a11y"><%= action[0] %></span>
+                            </button>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>

@@ -1,0 +1,33 @@
+---
+group: ex
+state:
+    default: 챗봇
+    client: 챗봇-클라이언트
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>한국도로공사 전자조달시스템</title>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH; %>/styles/chat/chat<%= process.env.MINIFY; %>.css<%= `?${setTimestamp()}`; %>">
+</head>
+<body>
+    <button type="button"
+            id="jsLayerButton"
+            class="button-layer"
+            style="display: block; margin: 300px auto; width: 200px; height: 80px; border: 1px solid #000;"
+            aria-controls="jsLayer"
+            aria-haspopup="true">
+        도로공사 조달 AI 챗봇
+    </button>
+    
+    <%- include(`${process.env.INCLUDE_PATH}/chat/partials/_layer`, {
+        
+    }) %>
+    <script src="<%= process.env.BASE_PATH; %>/scripts/chat/chat<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
+            defer></script>
+</body>
+</html>
+
+

@@ -1,0 +1,715 @@
+$imgPath: "./../../images/chat";
+@font-face {
+    font-display: swap;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 400;
+    src: url("./../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("./../fonts/NotoSansKR-Regular.otf") format("opentype")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 500;
+    src: url("./../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("./../fonts/NotoSansKR-Medium.otf") format("opentype")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 700;
+    src: url("./../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("./../fonts/NotoSansKR-Bold.otf") format("opentype")
+}
+
+@font-face {
+    font-family: "SCoreDream";
+    font-weight: 700;
+    font-style: normal;
+    src: url("./../fonts/SCoreDream7.woff2") format("woff2"),
+    url("./../fonts/SCoreDream7.woff") format("woff");
+    font-display: swap;
+}
+
+/* EliceDigitalBaeum */
+@font-face {
+    font-family: "EliceDigitalBaeum";
+    font-weight: 700;
+    font-style: normal;
+    src: url("./../fonts/EliceDigitalBaeumBold.woff2") format("woff2"),
+    url("./../fonts/EliceDigitalBaeumBold.woff") format("woff"),
+    url("./../fonts/EliceDigitalBaeumBold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SBAggro";
+    font-weight: 400;
+    font-style: normal;
+    src: url("./../fonts/SBAggroL.woff") format("woff"),
+    url("./../fonts/SBAggroL.otf") format("opentype");
+    font-display: swap;
+}
+
+body,
+div,
+strong,
+p,
+span,
+button,
+input,
+label {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Noto Sans KR, serif;
+    color: #141414;
+}
+
+input,
+button {
+    appearance: none;
+}
+
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.a11y {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: -1px !important;
+}
+
+.layer-chat,
+.layer-client {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+
+    &:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / .5);
+    }
+
+    &.show {
+        pointer-events: auto;
+        opacity: 1;
+        transition: opacity .2s ease-in-out;
+
+        .layer-wrap {
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.layer-chat {
+    .layer-wrap {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1200px;
+        height: 900px;
+        margin-left: -600px;
+        border-radius: 20px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-40%);
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    }
+
+    .layer-head,
+    .layer-body {
+        display: flex;
+
+        > .left {
+            overflow: hidden;
+            flex: 0 0 340px;
+            background-color: #0569c3;
+        }
+
+        > .right {
+            flex: 1;
+            background-color: #fff;
+        }
+    }
+
+    .layer-head {
+        flex: 0 0 146px;
+
+        > .left,
+        > .right {
+            position: relative;
+            box-shadow: 0 10px 5px 0 rgb(0 0 0 / .1);
+        }
+
+        > .left {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            padding: 45px 26px 40px 110px;
+            background: #0569c3 url("#{$imgPath}/ex-profile.png") no-repeat 26px 36px;
+        }
+
+        > .right {
+            padding: 44px 125px 37px;
+            background: #fff url("#{$imgPath}/profile-hong.png") no-repeat 21px 21px;
+
+            .title {
+                font-family: SCoreDream, serif;
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+            .description {
+                margin-top: 14px;
+                font-family: Noto Sans KR, serif;
+                font-size: 17.5px;
+            }
+        }
+
+        .name {
+            font-family: "EliceDigitalBaeum", serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+
+    .layer-body {
+        flex: 1;
+        height: calc(100% - 146px);
+
+        > .left {
+            padding: 0 25px;
+        }
+
+        > .right {
+            display: flex;
+            flex-direction: column;
+            background: #fff url("#{$imgPath}/bg-chat-gray.png") no-repeat 568px 371px fixed;
+        }
+    }
+
+    .logo-white {
+        display: inline-flex;
+        width: 135px;
+        height: 15px;
+        background: url("#{$imgPath}/logo.png") no-repeat 50% 50%;
+        background-size: 100% auto;
+    }
+
+    .controller {
+        position: absolute;
+        top: 24px;
+        right: 26px;
+
+        .button-controller {
+            width: 32px;
+            height: 32px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        .button-font {
+            background-size: 32px auto;
+        }
+
+        .button-hide {
+            background-size: 16px auto;
+        }
+
+        .button-full {
+            background-size: 16px auto;
+        }
+
+        .button-close {
+            background-size: 15px auto;
+        }
+
+        $controllers: font, hide-black, full-black, close-black;
+        @each $controller in $controllers {
+            .button-#{$controller} {
+                background-image: url("#{$imgPath}/icon-#{$controller}.png");
+            }
+        }
+    }
+
+    .button-chat {
+        height: 30px;
+        margin-top: 45px;
+        padding-left: 44px;
+        background: url("#{$imgPath}/icon-plus-circle.png") no-repeat 0 50%;
+        font-size: 18px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .inquire-title {
+        display: block;
+        margin-top: 92px;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .inquires {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+
+        .button-inquire {
+            border-radius: 15px;
+            padding: 64px 10px 10px 10px;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: 50% 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        $inquires: bidding, document, follow, performance, my, customer, statistics, admin;
+        @each $inquire in $inquires {
+            .button-#{$inquire} {
+                background-image: url("#{$imgPath}/icon-#{$inquire}.png");
+            }
+        }
+    }
+
+    .ai-chat {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 22px;
+        flex: 1;
+        padding: 31px;
+    }
+
+    .ai-input {
+        display: flex;
+        position: sticky;
+        bottom: 0;
+        padding: 20px 31px 94px;
+        background-color: #fff;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -220px;
+            right: -39px;
+            width: 312px;
+            height: 183px;
+            pointer-events: none;
+        }
+
+        label {
+            display: flex;
+            width: 100%;
+            padding-right: 84px;
+            border-radius: 15px;
+            background-color: #f5f5f5;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 26px 24px 26px 30px;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .button-send {
+            position: absolute;
+            top: 38px;
+            right: 55px;
+            width: 40px;
+            height: 40px;
+            background: url("#{$imgPath}/icon-send-blue.png") no-repeat 50% 50%;
+        }
+    }
+
+    .text-wrap {
+        position: relative;
+        max-width: 70%;
+        padding: 20px 26px;
+        border-radius: 15px;
+        font-size: 16px;
+        font-weight: 400;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 25px;
+            width: 16px;
+            height: 13px;
+        }
+    }
+
+    .timestamp {
+        align-self: flex-end;
+        padding-bottom: 10px;
+        font-size: 13px;
+        color: #8e8e8e;
+        font-weight: 400;
+    }
+
+    .chat-admin {
+        display: flex;
+        gap: 21px;
+
+        .profile {
+            display: inline-flex;
+            flex: 0 0 43px;
+            height: 43px;
+            margin-top: 8px;
+            background: url("#{$imgPath}/profile.png") no-repeat 50% 50%;
+        }
+
+        .text-wrap {
+            background-color: #0971ce;
+            color: #fff;
+
+            &:before {
+                left: -15px;
+                background: url("#{$imgPath}/icon-triangle-blue.png") no-repeat 50% 50%;
+            }
+        }
+
+        .timestamp {
+            margin-left: -11px;
+        }
+    }
+
+    .chat-client {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+
+        .text-wrap {
+            background-color: #0098ab;
+            color: #fff;
+
+            &:before {
+                right: -15px;
+                background: url("#{$imgPath}/icon-triangle-cyan.png") no-repeat 50% 50%;
+            }
+        }
+
+        .timestamp {
+            order: -1;
+        }
+    }
+}
+
+.layer-client {
+    .layer-wrap {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 470px;
+        height: 870px;
+        margin-left: -235px;
+        border-radius: 20px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-40%);
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    }
+
+    .layer-head {
+        position: relative;
+        flex: 0 0 158px;
+        background: url("#{$imgPath}/bg-top.png") no-repeat 0 0;
+        padding: 47px 21px 37px 144px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 26px;
+            left: 35px;
+            width: 103px;
+            height: 123px;
+            background: url("#{$imgPath}/profile-hong-shadow.png") no-repeat 50% 50%;
+        }
+    }
+
+    .layer-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: calc(100% - 158px);
+        background: #fff url("#{$imgPath}/bg-chat.png") no-repeat -48px 315px fixed;
+    }
+
+    .logo-color {
+        display: inline-flex;
+        width: 98px;
+        height: 29px;
+        background: url("#{$imgPath}/logo-color.png") no-repeat 50% 50%;
+    }
+
+    .name {
+        display: flex;
+        margin-top: 18px;
+        font-size: 18px;
+        font-family: SBAggro, serif;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(25, 118, 197, 1);
+    }
+
+    .controller {
+        position: absolute;
+        top: 21px;
+        right: 25px;
+
+        .button-controller {
+            width: 32px;
+            height: 32px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        .button-font {
+            background-size: 32px auto;
+        }
+
+        .button-hide {
+            background-size: 16px auto;
+        }
+
+        .button-full {
+            background-size: 16px auto;
+        }
+
+        .button-close {
+            background-size: 15px auto;
+        }
+
+        .button-more {
+            position: absolute;
+            top: 77px;
+            right: 0;
+            background-size: 6px auto;
+        }
+
+        $controllers: hide, full, close, more;
+        @each $controller in $controllers {
+            .button-#{$controller} {
+                background-image: url("#{$imgPath}/icon-#{$controller}.png");
+            }
+        }
+    }
+
+    .timestamp {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 31px 0 4px;
+        background-color: #fff;
+        font-size: 14px;
+        color: #889098;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 1px;
+            margin-left: -25px;
+            background-color: #e9ecef;
+            transform: translate(-128px, -50%);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 1px;
+            margin-left: -25px;
+            background-color: #e9ecef;
+            transform: translate(128px, -50%);
+        }
+    }
+
+    .ai-chat {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 18px;
+        padding: 0 19px 0 19px;
+    }
+
+    .ai-input {
+        position: sticky;
+        bottom: 0;
+        padding: 20px 34px 24px;
+
+        label {
+            display: flex;
+            width: 100%;
+            padding-right: 60px;
+            border: 1px solid #c7c7c7;
+            border-radius: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            border: none;
+            padding: 23px 24px;
+            background-color: transparent;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .button-send {
+            position: absolute;
+            top: 30px;
+            right: 44px;
+            width: 50px;
+            height: 50px;
+            background: url("#{$imgPath}/icon-arrow.png") no-repeat 50% 50%;
+        }
+    }
+
+    .chat-admin {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        .profile {
+            flex: 0 0 33px;
+            display: inline-flex;
+            width: 33px;
+            height: 33px;
+            background: url("#{$imgPath}/profile-client.png") no-repeat 0 0;
+        }
+
+        .text-wrap {
+            flex: 0 0 auto;
+            max-width: 86%;
+            padding: 22px 24px;
+            background-color: #f1f3f5;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .inquire-wrap {
+        width: 100%;
+        padding-left: 45px;
+        margin-top: 10px;
+
+        .inquire-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .inquires {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 11px;
+            margin-top: 17px;
+        }
+
+        .button-inquire {
+            text-align: left;
+            padding: 20px 0 18px 60px;
+            background-repeat: no-repeat;
+            background-position: 24px 50%;
+            border: 1px solid #dce5ee;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #fff;
+
+            &:hover {
+                border-color: #007ad7;
+                background-color: #007ad7;
+                color: #fff;
+            }
+        }
+
+        $inquires: bidding ,document ,follow ,calendar ,performance ,information;
+        @each $inquire in $inquires {
+            .button-#{$inquire} {
+                background-image: url("#{$imgPath}/icon-#{$inquire}-client.png");
+            }
+        }
+    }
+
+    .chat-client {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+
+        .text-wrap {
+            position: relative;
+            max-width: 86%;
+            padding: 22px 24px;
+            background-color: #0053a3;
+            border-radius: 15px;
+            font-size: 16px;
+            color: #fff;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 25px;
+                right: -15px;
+                width: 16px;
+                height: 13px;
+                    background: url("#{$imgPath}/icon-triangle-navy.png") no-repeat 50% 50%;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 21px;
+        margin-top: 24px;
+
+        .button-action {
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        $actions: good ,bad ,copy ,chat;
+        @each $action in $actions {
+            .button-#{$action} {
+                background-image: url("#{$imgPath}/icon-#{$action}.png");
+            }
+        }
+    }
+}

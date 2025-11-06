@@ -294,9 +294,11 @@ button {
 }
 .layer-chat .ai-input {
   display: flex;
+  flex-direction: column;
+  gap: 18px;
   position: sticky;
   bottom: 0;
-  padding: 20px 31px 94px;
+  padding: 20px 31px 30px;
   background-color: #fff;
 }
 .layer-chat .ai-input:before {
@@ -330,6 +332,27 @@ button {
   width: 40px;
   height: 40px;
   background: url("./../../images/chat/icon-send-blue.png") no-repeat 50% 50%;
+}
+.layer-chat .ai-input .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  padding-right: 20px;
+}
+.layer-chat .ai-input .button-action {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.layer-chat .ai-input .button-good {
+  background-image: url("./../../images/chat/icon-good.png");
+}
+.layer-chat .ai-input .button-bad {
+  background-image: url("./../../images/chat/icon-bad.png");
+}
+.layer-chat .ai-input .button-file {
+  background-image: url("./../../images/chat/icon-file.png");
 }
 .layer-chat .text-wrap {
   position: relative;
@@ -657,14 +680,14 @@ button {
   background-position: 50% 50%;
 }
 .layer-client .actions .button-good {
-  background-image: url("./../../images/chat/icon-good.png");
+  background-image: url("./../../images/chat/icon-good-client.png");
 }
 .layer-client .actions .button-bad {
-  background-image: url("./../../images/chat/icon-bad.png");
+  background-image: url("./../../images/chat/icon-bad-client.png");
 }
 .layer-client .actions .button-copy {
-  background-image: url("./../../images/chat/icon-copy.png");
+  background-image: url("./../../images/chat/icon-copy-client.png");
 }
 .layer-client .actions .button-chat {
-  background-image: url("./../../images/chat/icon-chat.png");
+  background-image: url("./../../images/chat/icon-chat-client.png");
 }

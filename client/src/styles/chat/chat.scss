@@ -308,9 +308,11 @@ button {
 
     .ai-input {
         display: flex;
+        flex-direction: column;
+        gap: 18px;
         position: sticky;
         bottom: 0;
-        padding: 20px 31px 94px;
+        padding: 20px 31px 30px;
         background-color: #fff;
 
         &:before {
@@ -347,6 +349,27 @@ button {
             width: 40px;
             height: 40px;
             background: url("#{$imgPath}/icon-send-blue.png") no-repeat 50% 50%;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 14px;
+            padding-right: 20px;
+        }
+
+        .button-action {
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        $actions: good ,bad ,file;
+        @each $action in $actions {
+            .button-#{$action} {
+                background-image: url("#{$imgPath}/icon-#{$action}.png");
+            }
         }
     }
 
@@ -708,7 +731,7 @@ button {
         $actions: good ,bad ,copy ,chat;
         @each $action in $actions {
             .button-#{$action} {
-                background-image: url("#{$imgPath}/icon-#{$action}.png");
+                background-image: url("#{$imgPath}/icon-#{$action}-client.png");
             }
         }
     }

@@ -5875,6 +5875,11 @@ table + table {
   display: flex;
   gap: 38px;
 }
+@media (max-width: 1199px) {
+  .benefits {
+    flex-direction: column;
+  }
+}
 .benefits > li {
   display: flex;
   flex-direction: column;
@@ -5961,6 +5966,12 @@ table + table {
   gap: 44px;
   margin-top: 76px;
 }
+@media (max-width: 1199px) {
+  .benefit-detail [role=tabpanel] .how {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
 .benefit-detail [role=tabpanel] .how li {
   display: flex;
   gap: 19px;
@@ -5970,14 +5981,37 @@ table + table {
   padding: 40px 40px 40px 95px;
   border: 1px solid #dfdfdf;
 }
+@media (max-width: 1199px) {
+  .benefit-detail [role=tabpanel] .how li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 20px 75px;
+    gap: 5px;
+  }
+}
 .benefit-detail [role=tabpanel] .how .how-payment {
   background: #f9f9f9 url("./../../images/koagi/icon-wallet.png") no-repeat 40px 50%;
+}
+@media (max-width: 1199px) {
+  .benefit-detail [role=tabpanel] .how .how-payment {
+    background-position: 20px 50%;
+  }
 }
 .benefit-detail [role=tabpanel] .how .how-pic {
   background: #f9f9f9 url("./../../images/koagi/icon-camera.png") no-repeat 40px 50%;
 }
+@media (max-width: 1199px) {
+  .benefit-detail [role=tabpanel] .how .how-pic {
+    background-position: 20px 50%;
+  }
+}
 .benefit-detail [role=tabpanel] .how .how-docs {
   background: #f9f9f9 url("./../../images/koagi/icon-computer-color.png") no-repeat 40px 50%;
+}
+@media (max-width: 1199px) {
+  .benefit-detail [role=tabpanel] .how .how-docs {
+    background-position: 20px 50%;
+  }
 }
 .benefit-detail [role=tabpanel] .how strong {
   font-size: 18px;
@@ -5993,6 +6027,11 @@ table + table {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+@media (max-width: 1199px) {
+  .benefit-detail .caution {
+    grid-template-columns: 1fr;
+  }
 }
 .benefit-detail .caution li {
   display: flex;
@@ -6039,7 +6078,7 @@ table + table {
 .step-items {
   display: flex;
   justify-content: space-between;
-  gap: 97px;
+  gap: 54px;
   margin-top: 84px;
   counter-reset: section;
 }
@@ -6193,6 +6232,11 @@ table + table {
 @media (max-width: 1199px) {
   .ticket-info:has(> .left, > .right) {
     flex-direction: column;
+  }
+}
+@media (max-width: 1199px) {
+  .ticket-info:has(> .left, > .right).reverse-column {
+    flex-direction: column-reverse;
   }
 }
 .ticket-info > .left {

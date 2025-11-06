@@ -7,11 +7,18 @@ $imgPath: "./../../images/koagi";
     .ticket-info {
         margin-top: 107px;
 
+
         &:has(> .left, > .right) {
             display: flex;
             gap: 60px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 flex-direction: column;
+            }
+
+            &.reverse-column {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex-direction: column-reverse;
+                }
             }
         }
 

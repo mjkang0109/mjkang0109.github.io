@@ -1,0 +1,75 @@
+---
+group: system
+state:
+    default: 입장권구매-개인-결제-백두
+    sejong: 입장권구매-개인-결제-세종
+    garden: 입장권구매-개인-결제-정원
+    native: 입장권구매-개인-결제-자생
+    baekduOrganization: 입장권구매-단채-결제-백두
+    sejongOrganization: 입장권구매-단채-결제-세종
+    gardenOrganization: 입장권구매-단채-결제-정원
+    nativeOrganization: 입장권구매-단채-결제-자생
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_constants`, {
+
+}) %>
+<head>
+    <%
+    currentName = CATEGORY_KO.get(state);
+    currentCategory = 'system';
+    currentNav = CATEGORY_EN.get(state);
+    imgPath = `${process.env.IMG_PATH}/koagi`;
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory ;%>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: `${state.includes('Organization') ? '단체' : '개인'} 입장권 구매`,
+        depths: [
+        CATEGORY_KO.get(state),
+        '입장권 구매',
+        `${state.includes('Organization') ? '단체' : '개인'} 입장권 구매`,
+        ],
+        }) %>
+        <!-- // title -->
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_ticketInfoStep3`, {
+
+            }) %>
+
+        </div>
+        <!-- // contents -->
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentName,
+        currentCategory,
+        }) %>
+        <!-- // footer -->
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

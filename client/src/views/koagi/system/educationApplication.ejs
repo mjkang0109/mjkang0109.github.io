@@ -1,0 +1,99 @@
+---
+group: system
+state:
+    default: 교육프로그램신청-백두
+    sejong: 교육프로그램신청-세종
+    garden: 교육프로그램신청-정원
+    native: 교육프로그램신청-자생
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_constants`, {
+    
+}) %>
+<head>
+    <%
+    currentName = CATEGORY_KO.get(state);
+    currentCategory = 'system';
+    currentNav = CATEGORY_EN.get(state);
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+        title: currentName,
+        currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+            currentCategory,
+            currentNav,
+            currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+            title: '교육신청',
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_searchEdu`, {
+            }) %>
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
+                hideSearch: true
+            }) %>
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+                type: 'poster-edu',
+                badges: [
+                    {
+                        text: '접수중',
+                        color: 'orange',
+                    },
+                    {
+                        text: '교육',
+                        color: 'outline',
+                    },
+                    {
+                        text: '학교 교육',
+                        color: 'outline',
+                    },
+                ],
+                title: '[개인] 백두대간 숲싹 실험실 (선착마감)',
+                desc: 'hide',
+                dummy: 'poster-edu',
+                dummyType: 'png',
+                count: 3,
+                info: include(`${process.env.INCLUDE_PATH}/koagi/partials/_eduInfo`),
+            }) %>
+
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+            currentName,
+            currentCategory,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+            currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

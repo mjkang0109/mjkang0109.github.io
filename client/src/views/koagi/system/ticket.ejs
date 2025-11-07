@@ -1,0 +1,77 @@
+---
+group: system
+state:
+    default: 입장권구매-백두
+    sejong: 입장권구매-세종
+    garden: 입장권구매-정원
+    native: 입장권구매-자생
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_constants`, {
+
+}) %>
+<head>
+    <%
+    currentName = CATEGORY_KO.get(state);
+    currentCategory = 'system';
+    currentNav = CATEGORY_EN.get(state);
+    imgPath = `${process.env.IMG_PATH}/koagi`;
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory ;%>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: '입장권 구매',
+        depths: [
+        CATEGORY_KO.get(state),
+        '입장권 구매',
+        ],
+        }) %>
+        <!-- // title -->
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
+            title: `<span>${CATEGORY_KO.get(state)}</span><br><strong>온라인 입장권</strong>`,
+            desc: '입장 게이트에서 구매하신 <strong>입장권 QR코드</strong>를 찍고 바로 입장하세요.',
+            button: '<div class="buttons"><a href="#" class="button-navy">개인 입장권 구매</a><a href="#" class="button-navy">단체 입장권 구매</a></div>',
+            img: 'qr',
+            }) %>
+            
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_ticketInfo`, {
+                
+            }) %>
+
+        </div>
+        <!-- // contents -->
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentName,
+        currentCategory,
+        }) %>
+        <!-- // footer -->
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

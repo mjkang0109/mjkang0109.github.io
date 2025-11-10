@@ -194,14 +194,6 @@ $imgPath: "./../../images/koagi";
                     }
                 }
             }
-
-            .button-delete {
-                flex: 0 0 auto;
-                width: 18px;
-                height: 18px;
-                margin-top: 2px;
-                background: url("#{$imgPath}/icon-delete.png") no-repeat 50% 50%;
-            }
         }
 
         .buttons {
@@ -308,6 +300,13 @@ $imgPath: "./../../images/koagi";
                         select {
                             width: 100%;
                         }
+
+                        &.middle {
+                            min-width: 267px;
+                            @include m.respond-to(map.get(m.$max, 1199)) {
+                                min-width: auto;
+                            }
+                        }
                     }
                 }
 
@@ -376,9 +375,11 @@ $imgPath: "./../../images/koagi";
 
             .caution {
                 font-size: 15px;
+                line-height: 25px;
                 color: #ec1010;
                 font-weight: 400;
                 margin-left: 17px;
+                opacity: 1;
                 @include m.respond-to(map.get(m.$max, 1199)) {
                     margin-left: 0;
                     margin-top: 5px;
@@ -388,6 +389,14 @@ $imgPath: "./../../images/koagi";
 
                 &.gray {
                     color: #000;
+                }
+
+                &.block {
+                    display: flex;
+                    width: 100%;
+                    margin-top: 12px;
+                    margin-left: 0;
+                    color: #4e4e4e;
                 }
             }
         }
@@ -531,13 +540,21 @@ $imgPath: "./../../images/koagi";
                     }
                 }
             }
+        }
 
-            .button-delete {
-                flex: 0 0 auto;
-                width: 18px;
-                height: 18px;
-                margin-top: 2px;
-                background: url("#{$imgPath}/icon-delete.png") no-repeat 50% 50%;
+        .button-navy.small {
+            + .file-wrap {
+                margin-left: 20px;
+            }
+        }
+
+        .file-wrap {
+            display: flex;
+            align-items: baseline;
+            gap: 11px;
+
+            + .caution {
+                margin-left: 40px;
             }
         }
     }
@@ -707,4 +724,5 @@ $imgPath: "./../../images/koagi";
             }
         }
     }
+
 }

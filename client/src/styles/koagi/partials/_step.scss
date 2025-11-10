@@ -22,6 +22,10 @@ $imgPath: "./../../images/koagi";
             margin-top: 98px;
         }
 
+        + .title-box {
+            margin-top: 90px;
+        }
+
         li {
             width: 100px;
             position: relative;
@@ -29,6 +33,7 @@ $imgPath: "./../../images/koagi";
             font-weight: 500;
             text-align: center;
             @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 72px;
                 padding-top: 90px;
                 font-size: 14px;
                 font-weight: 500;
@@ -82,6 +87,18 @@ $imgPath: "./../../images/koagi";
                     background-color: #fff;
                     background-size: 40%;
                     background-position: 50% 50%;
+                }
+            }
+
+            &.term {
+                &:before {
+                    background-image: url("#{$imgPath}/icon-term-off.png");
+                }
+
+                &.current {
+                    &:before {
+                        background-image: url("#{$imgPath}/icon-term-on.png");
+                    }
                 }
             }
 

@@ -1,0 +1,66 @@
+<ol class="info-step">
+    <li class="term">약관동의</li>
+    <li class="info">신청정보</li>
+    <li class="payment current">결제</li>
+    <li class="finish">신청완료</li>
+</ol>
+
+<section class="detail-info">
+    <article class="detail-section">
+        <strong class="detail-title">
+            <span class="sub">연회비 결제</span>
+            회원유형 및 발급 형태
+        </strong>
+        <ul class="box-desc cyan">
+            <li>
+                <strong>회원유형</strong>
+                <span><%= membershipName.get(state) %>회원</span>
+            </li>
+            <li>
+                <strong>발급형태</strong>
+                <span>실물카드 (수령기관 : 국립백두대간수목원)</span>
+            </li>
+        </ul>
+        <table class="table-gray">
+            <colgroup>
+                <col width="236px">
+                <col width="236px">
+                <col width="*">
+                <col width="236px">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>구분</th>
+                <th>인원</th>
+                <th></th>
+                <th>합계</th>
+            </tr>
+            <tr>
+                <td>본인</td>
+                <td>1명</td>
+                <td></td>
+                <td>15,000원</td>
+            </tr>
+            <tr>
+                <td>가족구성원</td>
+                <td>2명</td>
+                <td></td>
+                <td>15,000원</td>
+            </tr>
+            </thead>
+        </table>
+        <div class="total">
+            <span class="left">총 결제금액</span>
+            <span>합계</span>
+            <strong>67,000원</strong>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button-navy">
+                이전
+            </button>
+            <button type="button" class="button-navy">
+                결제하기
+            </button>
+        </div>
+    </article>
+</section>

@@ -1623,6 +1623,23 @@ body.scrolling #header {
   background-image: url("./../../images/koagi/ui-icons_555555_256x240.png");
 }
 
+.terms.reverse-column .term {
+  display: flex;
+  flex-direction: column-reverse;
+  border-top: none;
+}
+.terms.reverse-column .term + .term {
+  margin-top: 34px;
+}
+.terms.reverse-column label {
+  margin: 0 0 32px 0;
+}
+.terms.reverse-column .box.outline {
+  border-top: 1px solid #000;
+  font-size: 16px;
+  line-height: 30px;
+  color: #111;
+}
 .terms label {
   padding-left: 38px;
 }
@@ -4896,6 +4913,9 @@ table + table {
 .info-step + .box.outline {
   margin-top: 98px;
 }
+.info-step + .title-box {
+  margin-top: 90px;
+}
 .info-step li {
   width: 100px;
   position: relative;
@@ -4960,6 +4980,12 @@ table + table {
     background-size: 40%;
     background-position: 50% 50%;
   }
+}
+.info-step li.term:before {
+  background-image: url("./../../images/koagi/icon-term-off.png");
+}
+.info-step li.term.current:before {
+  background-image: url("./../../images/koagi/icon-term-on.png");
 }
 .info-step li.info:before {
   background-image: url("./../../images/koagi/icon-info-off.png");
@@ -6234,6 +6260,11 @@ table + table {
     flex-direction: column;
   }
 }
+@media (max-width: 1199px) {
+  .ticket-info:has(> .left, > .right).reverse-column {
+    flex-direction: column-reverse;
+  }
+}
 .ticket-info > .left {
   flex: 1;
 }
@@ -6266,29 +6297,6 @@ table + table {
     margin-bottom: 15px;
     background-size: 15px;
   }
-}
-.ticket-info .title-box {
-  display: flex;
-  align-items: baseline;
-  padding: 30px 34px;
-  font-size: 25px;
-  font-weight: 600;
-  border-radius: 20px;
-}
-.ticket-info .title-box + .title-leaf {
-  margin-top: 60px;
-}
-.ticket-info .title-box + .outline-round {
-  margin-top: 48px;
-}
-.ticket-info .title-box + .table-horizon {
-  margin-top: 40px;
-}
-.ticket-info .title-box.green {
-  border: 3px solid #3eaa36;
-}
-.ticket-info .title-box .icon-wrap {
-  margin-right: 11px;
 }
 .ticket-info > .desc {
   margin-top: 25px;
@@ -6740,6 +6748,46 @@ table + table {
 }
 .total-price > .right > strong {
   margin-left: 10px;
+}
+
+.title-box {
+  display: flex;
+  align-items: baseline;
+  padding: 30px 34px;
+  font-size: 25px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+.title-box + .title-leaf {
+  margin-top: 60px;
+}
+.title-box + .outline-round {
+  margin-top: 48px;
+}
+.title-box + .table-horizon {
+  margin-top: 40px;
+}
+.title-box + .terms {
+  margin-top: 40px;
+}
+.title-box + .terms ~ .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 60px;
+}
+.title-box.green {
+  border: 3px solid #3eaa36;
+}
+.title-box.small {
+  font-size: 18px;
+  line-height: 28px;
+}
+.title-box.small label {
+  padding-left: 40px;
+}
+.title-box .icon-wrap {
+  margin-right: 11px;
 }
 
 @media all and (max-width: 1199px) {

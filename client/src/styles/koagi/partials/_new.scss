@@ -507,6 +507,11 @@ input[type="radio"] {
     @include m.respond-to(map.get(m.$max, 1199)) {
         padding-top: 37px;
     }
+
+    &.border-none {
+        border-top: none;
+        padding-top: 0;
+    }
 }
 
 @include detailSection.detailSection;

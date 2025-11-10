@@ -154,4 +154,12 @@ $imgPath: "./../../images/koagi";
             padding: 8px 20px;
         }
     }
+
+    .button-delete {
+        flex: 0 0 auto;
+        width: 18px;
+        height: 18px;
+        margin-top: 2px;
+        background: url("#{$imgPath}/icon-delete.png") no-repeat 50% 50%;
+    }
 }

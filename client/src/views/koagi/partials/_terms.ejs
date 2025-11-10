@@ -1,8 +1,17 @@
 <%
 var onlyPolicy = onlyPolicy || false;
 var isFold = isFold || false;
+var isReverse = isReverse || false;
+var termsLength = termsLength || 0;
+
+const titles = [
+    '한국수목정원관리원 회원제 약관 (필수)',
+    '개인정보 수집·이용 동의 (필수)',
+    '개인정보를 제3자에 제공·이용 (필수)',
+    '수목원 각종 행사 정보 제공 동의 (선택)'
+];
 %>
-<div class="terms">
+<div class="terms<%= isReverse ? ' reverse-column' : '' %>">
     <% if (!onlyPolicy) { %>
         <input type="checkbox"
                id="checkAll">
@@ -35,7 +44,7 @@ var isFold = isFold || false;
             </details>
         </div>
     <% } %>
-    <% if (onlyPolicy && !isFold) { %>
+    <% if (onlyPolicy && !isFold && termsLength === 0) { %>
         <div class="term">
             <div class="box outline">
                 <strong>개인정보 수집 · 이용 목적</strong>
@@ -50,6 +59,24 @@ var isFold = isFold || false;
                    id="policy">
             <label for="policy">개인정보 수집·처리 (필수)</label>
         </div>
+    <% } %>
+    <% if (onlyPolicy && !isFold && termsLength > 0) { %>
+        <% for (let i = 0; i < termsLength; i++) { %>
+            <div class="term">
+                <div class="box outline">
+                    <strong>개인정보 수집 · 이용 목적</strong>
+                    <br>. 작성하시는 내용에 따른 본인식별, 실명확인 이용
+                    <br>. 불만처리 의사소통 경로 확보
+                    <br>. 기타 원활한 양실의 서비스 제공 등
+                    <br><br><strong>개인정보의 보유 및 이용기간</strong>
+                    <br>. 원칙적으로 개인정보의 수집 또는 제공받은 목적 달성 및 요청 시 지체없이 파기합니다.
+                    <br>. 작성자의 내용 재확인을 위해 다른 삭제요청이 없을 시 일정기간 보존합니다.
+                </div>
+                <input type="checkbox"
+                       id="policy<%= i + 1 %>">
+                <label for="policy<%= i + 1 %>"><%= titles[i] %></label>
+            </div>
+        <% }; %>
     <% } %>
 
     <% if (onlyPolicy && isFold) { %>
@@ -66,11 +93,9 @@ var isFold = isFold || false;
                     <br>. 작성하시는 내용에 따른 본인식별, 실명확인 이용
                     <br>. 불만처리 의사소통 경로 확보
                     <br>. 기타 원활한 양실의 서비스 제공 등
-
                     <br><br><strong>개인정보의 보유 및 이용기간</strong>
                     <br>. 원칙적으로 개인정보의 수집 또는 제공받은 목적 달성 및 요청 시 지체없이 파기합니다.
                     <br>. 작성자의 내용 재확인을 위해 다른 삭제요청이 없을 시 일정기간 보존합니다.
-
                 </p>
             </details>
         </div>

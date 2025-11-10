@@ -7,7 +7,6 @@ $imgPath: "./../../images/koagi";
     .ticket-info {
         margin-top: 107px;
 
-
         &:has(> .left, > .right) {
             display: flex;
             gap: 60px;
@@ -54,35 +53,6 @@ $imgPath: "./../../images/koagi";
                 padding-left: 22px;
                 margin-bottom: 15px;
                 background-size: 15px;
-            }
-        }
-
-        .title-box {
-            display: flex;
-            align-items: baseline;
-            padding: 30px 34px;
-            font-size: 25px;
-            font-weight: 600;
-            border-radius: 20px;
-
-            + .title-leaf {
-                margin-top: 60px;
-            }
-
-            + .outline-round {
-                margin-top: 48px;
-            }
-
-            + .table-horizon {
-                margin-top: 40px;
-            }
-
-            &.green {
-                border: 3px solid #3eaa36;
-            }
-
-            .icon-wrap {
-                margin-right: 11px;
             }
         }
 
@@ -565,6 +535,54 @@ $imgPath: "./../../images/koagi";
             > strong {
                 margin-left: 10px;
             }
+        }
+    }
+    .title-box {
+        display: flex;
+        align-items: baseline;
+        padding: 30px 34px;
+        font-size: 25px;
+        font-weight: 600;
+        border-radius: 20px;
+
+        + .title-leaf {
+            margin-top: 60px;
+        }
+
+        + .outline-round {
+            margin-top: 48px;
+        }
+
+        + .table-horizon {
+            margin-top: 40px;
+        }
+
+        + .terms {
+            margin-top: 40px;
+
+            ~ .buttons {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                margin-top: 60px;
+            }
+        }
+
+        &.green {
+            border: 3px solid #3eaa36;
+        }
+
+        &.small {
+            font-size: 18px;
+            line-height: 28px;
+
+            label {
+                padding-left: 40px;
+            }
+        }
+
+        .icon-wrap {
+            margin-right: 11px;
         }
     }
 }

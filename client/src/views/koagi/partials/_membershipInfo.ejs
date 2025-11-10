@@ -1,0 +1,62 @@
+<ol class="info-step">
+    <li class="term">약관동의</li>
+    <li class="info current">신청정보</li>
+    <li class="payment">결제</li>
+    <li class="finish">신청완료</li>
+</ol>
+<section class="detail-info border-none">
+    <%
+    const memberInfo = [
+        ['회원유형<span class="essential">*</span>', ['radio', ['일반회원 (30,000원)', '지역회원 (15,000원)', '평생회원 (1,000,000원)', '어울림회원 (무료)'],], '<p class="caution block gray">※ 가족구성원 추가 : 인당 10,000원의 연회비</p>'],
+        ['발급형태<span class="essential">*</span>', ['select', ['실물카드'], 'middle'], '<p class="caution block gray">※ 실물카드 선택 시 카드를 수령할 소속기관을 선택해주세요. 우편으로 보내드리지 않습니다.</p>'],
+        ['수령할 소속기관<span class="essential">*</span>', ['select', ['국립백두대간수목원'], 'middle'], '<p class="caution block gray">※ 실물카드 선택 시 카드를 수령할 소속기관을 선택해주세요. 우편으로 보내드리지 않습니다.<br>※ 선택한 소속기관은 변경 불가합니다.</p>'],
+    ];
+    const basicInfo = [
+        ['한국 이름<span class="essential">*</span>', '홍길동', '영문 이름', ['input', '']],
+        ['생년월일<span class="essential">*</span>', ['input', '1990-01-01'], '이메일<span class="essential">*</span>', ['input', 'sample123@korea.com']],
+        ['연락처', '010-24570-7788'],
+        ['주소', 'address'],
+        ['얼굴사진<span class="essential">*</span>', 'singleFile'],
+    ];
+    const addMemberInfo = [
+        ['한국 이름<span class="essential">*</span>', ['input', ''], '가족구성원 인증<span class="essential">*</span>', ['button', '인증하기', 'button-black']],
+        ['영문 이름<span class="essential">*</span>', ['input', ''], '생년월일<span class="essential">*</span>', ['input', '']],
+        ['이메일<span class="essential">*</span>', ['input', 'sample123@korea.com'], '연락처<span class="essential">*</span>', ['input', '- 없이 입력해주세요']],
+        ['얼굴사진<span class="essential">*</span>', 'singleFile'],
+    ];
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+    category: 'member',
+    title: '신청자 정보<span class="caution">* 필수입력항목</span>',
+    items: memberInfo,
+    }) %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+    required: true,
+    category: 'essential',
+    title: '신청자 정보',
+    items: basicInfo,
+    }) %>
+    <button type="button"
+            class="button-navy">가족구성원 추가
+    </button>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+    required: true,
+    category: 'member1',
+    title: '가족구성원 1',
+    items: addMemberInfo,
+    }) %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tableForm`, {
+    required: true,
+    category: 'member2',
+    title: '가족구성원 2',
+    items: addMemberInfo,
+    }) %>
+    <div class="buttons">
+        <button type="button"
+                class="button-navy-outline">취소
+        </button>
+        <button type="button"
+                class="button-navy">다음
+        </button>
+    </div>
+</section>

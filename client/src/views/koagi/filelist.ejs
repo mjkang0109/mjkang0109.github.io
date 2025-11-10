@@ -110,6 +110,28 @@ state:
                                     </a>
                                 </td>
                             </tr>
+                            <%
+                            if (subItem.tinyItems) {
+                            subItem.tinyItems.map((tinyItem) => {
+                            %>
+                                <tr class="v3<%= tinyItem.ui ? ' done' : '' ;%><%= tinyItem.design ? ' design' : '' ;%>">
+                                    <td class="depth1"></td>
+                                    <td class="depth2"></td>
+                                    <td class="depth3"></td>
+                                    <td class="depth4"><%= tinyItem.title ;%></td>
+                                    <td class="design"><%= tinyItem.design ? 'O' : '' ;%></td>
+                                    <td class="ui"><%= tinyItem.ui ? 'O' : '' ;%></td>
+                                    <td class="fileName"><%= tinyItem.name ;%>.html</td>
+                                    <td class="view">
+                                        <a href="./<%= item.name ;%>/<%= tinyItem.name ;%>.html"
+                                           target="_blank">View
+                                        </a>
+                                    </td>
+                                </tr>
+                            <%
+                            });
+                            }
+                            %>
                         <%
                         });
                         }

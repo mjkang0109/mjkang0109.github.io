@@ -1,0 +1,101 @@
+---
+group: system
+state:
+    default: 회원신청-일반-약관
+    local: 회원신청-지역-약관
+    eternal: 회원신청-평생-약관
+    youth: 회원신청-어울림-약관
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_constants`, {
+}) %>
+<head>
+    <%
+    currentName = '한국수목원정원관리원';
+    currentCategory = 'system';
+    currentNav = 'koagi';
+    imgPath = `${process.env.IMG_PATH}/koagi`;
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory; %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+        <!-- title -->
+        <%
+        membershipName = new Map([
+            ['default', '일반'],
+            ['local', '지역'],
+            ['eternal', '평생'],
+            ['youth', '어울림'],
+        ])
+        %>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: `${membershipName.get(state)}회원 신청`,
+        depths: [
+        '한국수목원정원관리원',
+        '연간회원',
+        `${membershipName.get(state)}회원신청`,
+        ],
+        }) %>
+        <!-- // title -->
+        <!-- contents -->
+        <div id="body">
+            <ol class="info-step">
+                <li class="term current">약관동의</li>
+                <li class="info">신청정보</li>
+                <li class="payment">결제</li>
+                <li class="finish">신청완료</li>
+            </ol>
+            <strong class="title-box green small">
+                <input type="checkbox"
+                       id="allCheck">
+                <label for="allCheck"
+                       class="">
+                    아래의 모든 약관에 동의합니다.
+                </label>
+            </strong>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_terms`, {
+            onlyPolicy: true,
+            termsLength: 4,
+            isReverse: true,
+            }) %>
+            <div class="buttons">
+                <button type="button"
+                        class="button-navy-outline">취소
+                </button>
+                <button type="button"
+                        class="button-navy">다음
+                </button>
+            </div>
+        </div>
+        <!-- // contents -->
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentName,
+        currentCategory,
+        }) %>
+        <!-- // footer -->
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

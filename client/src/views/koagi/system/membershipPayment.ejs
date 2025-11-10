@@ -1,0 +1,82 @@
+---
+group: system
+state:
+    default: 회원신청-일반-결제
+    local: 회원신청-지역-결제
+    eternal: 회원신청-평생-결제
+    youth: 회원신청-어울림-결제
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_constants`, {
+
+}) %>
+<head>
+    <%
+    currentName = '한국수목원정원관리원';
+    currentCategory = 'system';
+    currentNav = 'koagi';
+    imgPath = `${process.env.IMG_PATH}/koagi`;
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+            currentCategory,
+            currentNav,
+            currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- title -->
+        <%
+        membershipName = new Map([
+            ['default', '일반'],
+            ['local', '지역'],
+            ['eternal', '평생'],
+            ['youth', '어울림'],
+        ])
+        %>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: `${membershipName.get(state)}회원 신청`,
+        depths: [
+            '한국수목원정원관리원',
+            '연간회원',
+            `${membershipName.get(state)}회원신청`,
+        ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_membershipPayment`, {
+            }) %>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+            currentName,
+            currentCategory,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+            currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

@@ -292,6 +292,9 @@ $imgPath: "./../../images/koagi";
         }
     }
     .total {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         padding: 35px;
         text-align: right;
         border: 5px solid #e4e4e4;
@@ -313,6 +316,11 @@ $imgPath: "./../../images/koagi";
 
         > span {
             padding-right: 16px;
+
+            &.left {
+                margin-right: auto;
+                font-size: 18px;
+            }
         }
     }
     .detail-desc {
@@ -343,6 +351,29 @@ $imgPath: "./../../images/koagi";
 }
 
 .terms {
+    &.reverse-column {
+        .term {
+            display: flex;
+            flex-direction: column-reverse;
+            border-top: none;
+
+            + .term {
+                margin-top: 34px;
+            }
+        }
+
+        label {
+            margin: 0 0 32px 0;
+        }
+
+        .box.outline {
+            border-top: 1px solid #000;
+            font-size: 16px;
+            line-height: 30px;
+            color: #111;
+        }
+    }
+
     label {
         padding-left: 38px;
     }
@@ -388,6 +419,7 @@ $imgPath: "./../../images/koagi";
             details {
                 border-top: 1px solid #000;
                 margin-top: 32px;
+
                 summary {
                     &:after {
                         top: -10px;
@@ -396,6 +428,7 @@ $imgPath: "./../../images/koagi";
                         }
                     }
                 }
+
                 p {
                     border-top: none;
                     margin-top: 0;

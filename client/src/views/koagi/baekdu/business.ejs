@@ -1,0 +1,97 @@
+---
+group: baekdu
+state:
+    default: 연구사업-현지내보전
+    outer: 연구사업-현지외보전
+    forest: 연구사업-산림생물자원활용
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립백두대간수목원';
+    currentCategory = 'baekdu';
+    currentNav = 'research';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+        title: currentName,
+        currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <%
+    const titleObj = new Map([
+        ['default', 0],
+        ['outer', 1],
+        ['forest', 2],
+    ]);
+    const titles = ['현지 내 보전', '현지 외 보전', '산림생물자원 활용'];
+    const currentIndex = titleObj.get(state);
+    %>
+    
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_businessItems`, {
+        
+    }) %>
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+            currentCategory,
+            currentNav,
+            currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+            type: 'plant',
+            currentNav: '산림연구',
+            key: '국민이 행복한 수목원',
+            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+            title: '연구사업',
+            depths: [
+                '산림연구',
+                '연구사업',
+                titles[currentIndex]
+            ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+            items: titles,
+            current: currentIndex
+            }) %>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_listGreenBox`, {
+                
+            }) %>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+            currentName,
+            currentCategory,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+            currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

@@ -1,0 +1,145 @@
+<% if (state === 'default') { %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
+    title: `<strong>식물 서식지<br>생육환경 조사 </strong>`,
+    desc: '현장 조사를 통해 <strong>식물의 종류, 분포, 서식지 특성</strong> 파악',
+    img: 'conservation3',
+    type: 'conservation',
+    }) %>
+
+    <%
+        const items = [
+            {
+                title: '정밀식생조사',
+                desc: '조사구 내 주요 지표종 중심의<br>식생 및 매목 조사 수행',
+                desc2: '조사 시기별 출현식물 변이 및<br>추가 식물 추적 조사',
+            },
+            {
+                title: '계절성 모니터링',
+                desc: '대표성 있는 조사구 선정 및<br>조사 주기 설정',
+                desc2: '잎 · 꽃 · 열매 변화와<br>특이사항 기록',
+            },
+            {
+                title: '기상조사',
+                desc: '조사지역에 기상장비 설치 후<br>기상정보 자동 기록',
+                desc2: '기상변화 추이 분석을 통한<br>생태계 보존 기초자료 활용',
+            },
+            {
+                title: '식물 계절현상의 분석',
+                desc: '기온, 수분, 일사량 등<br>환경인자에 따른 생육 영향 분석',
+                desc2: '지수화된 온도자료를 활용한<br>개화시기 및 미기후변화 분석',
+            },
+        ];
+    %>
+
+    <strong class="title-line">산림 식물의 계절성 조사·연구</strong>
+    <ul class="darkgreen-box-items">
+        <% items.map((item, i) => { %>
+            <li>
+                <div class="desc-wrap">
+                    <strong class="title"><%= item.title ;%></strong>
+                    <p class="desc"><%- item.desc; %></p>
+                    <p class="desc"><%- item.desc2; %></p>
+                </div>
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 325,
+                    height: 252,
+                    isSimply: true,
+                    source: `${imgPath}/visual-conservation${i + 5}.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+            </li>
+        <% }); %>
+    </ul>
+<% } %>
+
+<% if (state === 'conservation2') { %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
+    title: `<strong>서식지외<br>연구 · 증식</strong>`,
+    desc: '<strong>멸종위기식물</strong>을 <strong>안전하게 보전</strong>하고 개체수를 늘려<br>자연으로 되돌리기 위한 활동 ',
+    img: 'conservation2',
+    type: 'conservation',
+    }) %>
+
+    <%
+        const items = [
+            {
+                title: '자생지 조사',
+                desc : '멸종위기식물의 서식 환경 파악을 위한<br>기초환경·식생·토양·기후 조사',
+                desc2: '서식지 특성 분석을 통한<br>보전 기초자료 확보',
+            },
+            {
+                title: '번식방법연구',
+                desc : '자연 번식이 어려운 멸종위기식물의<br>인공 번식기술 연구',
+                desc2: '유성·무성 번식 연구를 통한<br>종 보존 기반 마련',
+            },
+            {
+                title: '종자은행·유전자 저장',
+                desc : '멸종위기식물의 씨앗이나 조직을<br>저온 저장',
+                desc2: '장기적 유전다양성 확보를 위한<br>보전 기반 마련',
+            },
+            {
+                title: '대체서식지 조성',
+                desc : '유사 환경을 활용한<br>대체 서식지 구축',
+                desc2: '멸종위기식물의 지속적 보전을 위한<br>서식지 다변화',
+            },
+        ];
+    %>
+
+    <strong class="title-line">산림 식물의 계절성 조사·연구</strong>
+    <ul class="darkgreen-box-items">
+        <% items.map((item, i) => { %>
+            <li>
+                <div class="desc-wrap">
+                    <strong class="title"><%= item.title ;%></strong>
+                    <p class="desc"><%- item.desc; %></p>
+                    <p class="desc"><%- item.desc2; %></p>
+                </div>
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 325,
+                    height: 252,
+                    isSimply: true,
+                    source: `${imgPath}/visual-conservation${i + 1}.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+            </li>
+        <% }); %>
+    </ul>
+<% } %>
+
+
+<% if (state === 'conservation3') { %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
+    title: `<strong>서식지외 보전</strong>`,
+    desc: '서식지(자생지) 외의 시설에서 <strong>인위적으로 증식</strong>하여 <br>이를 다시 <strong>야생에 복원</strong>',
+    img: 'conservation1',
+    type: 'conservation',
+    }) %>
+    <%
+        const items = [
+            '종의 특성을 온전하게 보전할 수 있는 증식기술 개발 및 증식',
+            '서식지의 보전을 충족할 수 있는 적정한 개체의 보유관리',
+            '증식 개체를 이용한 서식지 복원',
+            '공익목적의 증식 개체보급',
+            '멸종위기종 자생지 조사 및 모니터링',
+            '야생 동식물 조사지원',
+            '인공증식개체의 분양',
+            '종 보전사업 계획 및 실적관리',
+            '멸종위기종 보전 교육ᆞ홍보 등',
+            '멸종위기종 관련업무 추진 시 자문 등 업무지원 및 협조',
+        ];
+    %>
+    <ul class="green-items">
+        <% items.map(item => { %>
+            <li><%= item ;%></li>
+        <% }); %>
+    </ul>
+<% } %>
+<div class="buttons">
+    <a href="#"
+       class="button-navy">목록
+    </a>
+</div>

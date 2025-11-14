@@ -51,7 +51,13 @@ navItems = [
                             {
                                 title : '가든샵',
                                 name  : 'gardenShop',
-                                design: false,
+                                design: true,
+                                ui    : false,
+                            },
+                            {
+                                title : '가든샵: 입점안내',
+                                name  : 'gardenShopEntry',
+                                design: true,
                                 ui    : false,
                             },
                             {
@@ -231,10 +237,84 @@ navItems = [
                 ui    : false,
                 pages : [
                     {
-                        title : '연구사업',
-                        name  : 'business',
-                        design: false,
-                        ui    : false,
+                        title   : '연구사업',
+                        name    : 'business',
+                        design  : false,
+                        ui      : false,
+                        subItems: [
+                            {
+                                title    : '현지 내 보전',
+                                name     : 'business',
+                                design   : true,
+                                ui       : true,
+                                tinyItems: [
+                                    {
+                                        title : '산림생물자원 조사: 상세',
+                                        name  : 'businessDetail',
+                                        design: false,
+                                        ui    : false,
+                                    },
+                                    {
+                                        title : '산림생물자원 보전 연구: 상세',
+                                        name  : 'businessDetail.business2',
+                                        design: false,
+                                        ui    : false,
+                                    },
+                                    {
+                                        title : '산림복원 연구: 상세',
+                                        name  : 'businessDetail.business3',
+                                        design: false,
+                                        ui    : false,
+                                    },
+                                ],
+                            },
+                            {
+                                title    : '현지 외 보전',
+                                name     : 'business.outer',
+                                design   : true,
+                                ui       : true,
+                                tinyItems: [
+                                    {
+                                        title : '수집: 상세',
+                                        name  : 'businessDetail.outer1',
+                                        design: false,
+                                        ui    : false,
+                                    },
+                                    {
+                                        title : '시드뱅크: 상세',
+                                        name  : 'businessDetail.outer2',
+                                        design: false,
+                                        ui    : false,
+                                    },
+                                    {
+                                        title : '증식: 상세',
+                                        name  : 'businessDetail.outer3',
+                                        design: false,
+                                        ui    : false,
+                                    },
+                                ],
+                            },
+                            {
+                                title    : '산림생물자원 활용',
+                                name     : 'business.forest',
+                                design   : true,
+                                ui       : true,
+                                tinyItems: [
+                                    {
+                                        title : '종자연구',
+                                        name  : 'businessDetail.forest',
+                                        design: false,
+                                        ui    : false,
+                                    },
+                                    {
+                                        title : '산업화 연구',
+                                        name  : 'businessDetail.forest',
+                                        design: false,
+                                        ui    : false,
+                                    },
+                                ],
+                            },
+                        ],
                     },
                     {
                         title : '연구장비 공동활용',
@@ -303,7 +383,13 @@ navItems = [
                             {
                                 title : '가든샵',
                                 name  : 'gardenShop',
-                                design: false,
+                                design: true,
+                                ui    : false,
+                            },
+                            {
+                                title : '가든샵: 입점안내',
+                                name  : 'gardenShopEntry',
+                                design: true,
                                 ui    : false,
                             },
                             {
@@ -509,7 +595,7 @@ navItems = [
                             {
                                 title : '운영현황',
                                 name  : 'fairOperate',
-                                design: false,
+                                design: true,
                                 ui    : false,
                             },
                             {
@@ -527,7 +613,13 @@ navItems = [
                             {
                                 title : '올해의 정원식물',
                                 name  : 'fairYear',
-                                design: false,
+                                design: true,
+                                ui    : false,
+                            },
+                            {
+                                title : '올해의 정원식물: 상세',
+                                name  : 'fairYearDetail',
+                                design: true,
                                 ui    : false,
                             },
                         ],
@@ -555,7 +647,7 @@ navItems = [
                             {
                                 title : '클리닉 소개',
                                 name  : 'clinicIntro',
-                                design: false,
+                                design: true,
                                 ui    : false,
                             },
                             {
@@ -627,6 +719,12 @@ navItems = [
                         ui    : true,
                     },
                     {
+                        title : '이동형 반려식물 클리닉: 출동일정',
+                        name  : 'visitingClinicSchedule',
+                        design: true,
+                        ui    : false,
+                    },
+                    {
                         title : '산업계 지원',
                         name  : 'plantKit',
                         design: true,
@@ -681,7 +779,13 @@ navItems = [
                             {
                                 title : '가든샵',
                                 name  : 'gardenShop',
-                                design: false,
+                                design: true,
+                                ui    : false,
+                            },
+                            {
+                                title : '가든샵: 입점안내',
+                                name  : 'gardenShopEntry',
+                                design: true,
                                 ui    : false,
                             },
                             {
@@ -817,8 +921,8 @@ navItems = [
                     {
                         title : '서식지외보전기관',
                         name  : 'conservationOrganization',
-                        design: false,
-                        ui    : false,
+                        design: true,
+                        ui    : true,
                     },
                     {
                         title : '지정식물',
@@ -827,10 +931,30 @@ navItems = [
                         ui    : true,
                     },
                     {
-                        title : '보전활동',
-                        name  : 'conservationActivity',
-                        design: false,
-                        ui    : false,
+                        title   : '보전활동',
+                        name    : 'conservationActivity',
+                        design  : true,
+                        ui      : true,
+                        subItems: [
+                            {
+                                title : '식물 서식지 생육환경 조사: 상세',
+                                name  : 'conservationActivityDetail',
+                                design: true,
+                                ui    : true,
+                            },
+                            {
+                                title : '서식지외 연구·증식: 상세',
+                                name  : 'conservationActivityDetail.conservation2',
+                                design: true,
+                                ui    : true,
+                            },
+                            {
+                                title : '서식지외 보전: 상세',
+                                name  : 'conservationActivityDetail.conservation3',
+                                design: true,
+                                ui    : true,
+                            },
+                        ],
                     },
                 ],
             },
@@ -887,7 +1011,13 @@ navItems = [
                             {
                                 title : '가든샵',
                                 name  : 'gardenShop',
-                                design: false,
+                                design: true,
+                                ui    : false,
+                            },
+                            {
+                                title : '가든샵: 입점안내',
+                                name  : 'gardenShopEntry',
+                                design: true,
                                 ui    : false,
                             },
                             {
@@ -1031,19 +1161,19 @@ navItems = [
                     {
                         title : '정원관광',
                         name  : 'gardenViewing',
-                        design: false,
+                        design: true,
                         ui    : false,
                     },
                     {
                         title : '정원치유',
                         name  : 'gardenCure',
-                        design: false,
+                        design: true,
                         ui    : false,
                     },
                     {
                         title : '해외한국정원',
                         name  : 'gardenOversea',
-                        design: false,
+                        design: true,
                         ui    : false,
                     },
                     {
@@ -1061,88 +1191,28 @@ navItems = [
                 ui    : false,
                 pages : [
                     {
-                        title : '정원소개',
+                        title : '공모전 소개',
                         name  : 'kGardenIntro',
-                        design: false,
+                        design: true,
                         ui    : false,
                     },
                     {
-                        title   : '정원산업',
-                        name    : 'industry',
-                        design  : false,
-                        ui      : false,
-                        subItems: [
-                            {
-                                title : '정원작가',
-                                name  : 'author',
-                                design: false,
-                                ui    : false,
-                            },
-                            {
-                                title : '정원식물',
-                                name  : 'gardenPlant',
-                                design: false,
-                                ui    : false,
-                            },
-                            {
-                                title : '식물검색',
-                                name  : 'search',
-                                design: false,
-                                ui    : false,
-                            },
-                            {
-                                title : '정원산업 업체정보',
-                                name  : 'company',
-                                design: false,
-                                ui    : false,
-                            },
-                        ],
+                        title : '올해의 가든쇼',
+                        name  : 'kGardenYear',
+                        design: true,
+                        ui    : false,
                     },
                     {
-                        title   : '정원문화',
-                        name    : 'culture',
-                        design  : false,
-                        ui      : false,
-                        subItems: [
-                            {
-                                title : '교육기관 및 프로그램',
-                                name  : 'educationProgram',
-                                design: false,
-                                ui    : false,
-                            },
-                            {
-                                title : '정원문화 관련기관',
-                                name  : 'organ',
-                                design: false,
-                                ui    : false,
-                            },
-                        ],
+                        title : '올해의 가든쇼: 공모전 접수 팝업',
+                        name  : '/popup/applyPopup',
+                        design: true,
+                        ui    : false,
                     },
                     {
-                        title   : '정원소식',
-                        name    : 'news',
-                        design  : false,
-                        ui      : false,
-                        subItems: [
-                            {
-                                title : '공지사항',
-                                name  : 'notice',
-                                design: false,
-                                ui    : false,
-                            },
-                            {
-                                title : '정원소통방',
-                                name  : 'conversation',
-                                design: false,
-                                ui    : false,
-                            },
-                            {
-                                title : '발간물',
-                                name  : 'publication',
-                                design: false,
-                                ui    : false,
-                            },
-                        ],
+                        title : '역대 수상작',
+                        name  : 'kGardenAwards',
+                        design: true,
+                        ui    : false,
                     },
                 ],
             },
@@ -1179,10 +1249,10 @@ navItems = [
                                 ui    : false,
                             },
                             {
-                                title : '연간회원: 일반회원',
-                                name  : '#',
-                                design: false,
-                                ui    : false,
+                                title    : '연간회원: 일반회원',
+                                name     : '#',
+                                design   : false,
+                                ui       : false,
                                 tinyItems: [
                                     {
                                         title : '일반회원: 신청',
@@ -1208,7 +1278,7 @@ navItems = [
                                         design: true,
                                         ui    : true,
                                     },
-                                ]
+                                ],
                             },
                             {
                                 title    : '연간회원: 지역회원',
@@ -1240,13 +1310,13 @@ navItems = [
                                         design: false,
                                         ui    : false,
                                     },
-                                ]
+                                ],
                             },
                             {
-                                title : '연간회원: 평생회원',
-                                name  : 'membershipApplication.eternal',
-                                design: false,
-                                ui    : false,
+                                title    : '연간회원: 평생회원',
+                                name     : 'membershipApplication.eternal',
+                                design   : false,
+                                ui       : false,
                                 tinyItems: [
                                     {
                                         title : '평생회원: 신청',
@@ -1272,13 +1342,13 @@ navItems = [
                                         design: false,
                                         ui    : false,
                                     },
-                                ]
+                                ],
                             },
                             {
-                                title : '연간회원: 어울림',
-                                name  : 'membershipApplication.youth',
-                                design: false,
-                                ui    : false,
+                                title    : '연간회원: 어울림',
+                                name     : 'membershipApplication.youth',
+                                design   : false,
+                                ui       : false,
                                 tinyItems: [
                                     {
                                         title : '어울림: 신청',
@@ -1304,8 +1374,8 @@ navItems = [
                                         design: false,
                                         ui    : false,
                                     },
-                                ]
-                            }
+                                ],
+                            },
                         ],
                     },
                     {
@@ -1390,7 +1460,7 @@ navItems = [
                                 design: true,
                                 ui    : true,
                             },
-                        ]
+                        ],
                     },
                     {
                         title   : '교육프로그램 신청',
@@ -1422,7 +1492,7 @@ navItems = [
                                 design: true,
                                 ui    : true,
                             },
-                        ]
+                        ],
                     },
                     {
                         title : '이용안내',
@@ -1461,7 +1531,7 @@ navItems = [
                                 ui    : true,
                             },
                         ],
-                    }
+                    },
                 ],
             },
             {
@@ -1524,7 +1594,7 @@ navItems = [
                                 design: true,
                                 ui    : true,
                             },
-                        ]
+                        ],
                     },
                     {
                         title   : '교육프로그램 신청',
@@ -1556,7 +1626,7 @@ navItems = [
                                 design: true,
                                 ui    : true,
                             },
-                        ]
+                        ],
                     },
                     {
                         title : '이용안내',
@@ -1595,7 +1665,7 @@ navItems = [
                                 ui    : true,
                             },
                         ],
-                    }
+                    },
 
                 ],
             },
@@ -1659,7 +1729,7 @@ navItems = [
                                 design: true,
                                 ui    : true,
                             },
-                        ]
+                        ],
                     },
                     {
                         title   : '교육프로그램 신청',
@@ -1691,7 +1761,7 @@ navItems = [
                                 design: true,
                                 ui    : true,
                             },
-                        ]
+                        ],
                     },
                     {
                         title : '이용안내',
@@ -1730,7 +1800,7 @@ navItems = [
                                 ui    : true,
                             },
                         ],
-                    }
+                    },
                 ],
             },
             {
@@ -1793,7 +1863,7 @@ navItems = [
                                 design: true,
                                 ui    : true,
                             },
-                        ]
+                        ],
                     },
                     {
                         title   : '교육프로그램 신청',
@@ -1825,7 +1895,7 @@ navItems = [
                                 design: true,
                                 ui    : true,
                             },
-                        ]
+                        ],
                     },
                     {
                         title : '이용안내',
@@ -1864,7 +1934,7 @@ navItems = [
                                 ui    : true,
                             },
                         ],
-                    }
+                    },
 
                 ],
             },

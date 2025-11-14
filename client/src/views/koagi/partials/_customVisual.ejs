@@ -3,9 +3,10 @@ var title = title || '';
 var desc = desc || '';
 var button = button || undefined;
 var img = img || '';
+var type = type || false;
 %>
 
-<div class="custom-visual">
+<div class="custom-visual<%= type ? ` ${type}` : '' %>">
     <div class="left">
         <div class="title"><%- title %></div>
         <p class="desc"><%- desc %></p>

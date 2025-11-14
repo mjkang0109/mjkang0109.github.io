@@ -17,6 +17,7 @@
 @use "./../partials/boardItems" as boardItems;
 @use "./../partials/benefit" as benefit;
 @use "./../partials/ticketInfo" as ticketInfo;
+@use "./../partials/items" as items;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -559,6 +560,13 @@ input[type="radio"] {
         + .box {
             margin-top: 36px;
         }
+
+        .desc {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 500;
+            color: #595959;
+        }
     }
 }
 
@@ -1032,8 +1040,27 @@ input[type="radio"] {
         flex-direction: column;
     }
 
+    &.conservation {
+        .left {
+            background-image: url("#{$imgPath}/background-banner-conservation.png");
+        }
+
+        ~ .buttons {
+            margin: 105px auto 0;
+            text-align: center;
+        }
+    }
+
     + .ticket-info {
         margin-top: 127px;
+    }
+
+    + .title-line {
+        margin-top: 122px;
+    }
+
+    + .detail-section {
+        margin-top: 100px;
     }
 
     .left {
@@ -1461,3 +1488,54 @@ input[type="radio"] {
 }
 
 @include ticketInfo.ticketInfo;
+@include items.items;
+
+.title-line {
+    display: block;
+    position: relative;
+    padding-top: 35px;
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    font-family: "SBAggro", serif;
+    font-weight: 500;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -26px;
+        width: 53px;
+        height: 1px;
+        background-color: #000;
+    }
+
+    + .darkgreen-box-items {
+        margin-top: 80px;
+    }
+}
+
+.green-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 26px 20px;
+        border-radius: 20px;
+        background-color: #223927;
+        font-size: 16px;
+        line-height: 26px;
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+    }
+}

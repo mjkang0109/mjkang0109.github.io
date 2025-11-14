@@ -1,0 +1,188 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin items {
+    .green-box-items {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        li {
+            flex: 0 0 430px;
+            align-self: stretch;
+            border-radius: 20px;
+            overflow: hidden;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .desc-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            align-items: center;
+            background-color: #1f632a;
+            padding: 42px 20px 55px;
+        }
+
+        .title {
+            display: inline-flex;
+            margin-top: 32px;
+            padding-right: 26px;
+            background: url("#{$imgPath}/icon-arrow-right-green.png") no-repeat 100% 50%;
+            font-size: 24px;
+            color: #54d74a;
+            font-weight: 600;
+        }
+
+        .desc {
+            display: block;
+            margin-top: 22px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 25px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .img-wrap {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .darkgreen-box-items {
+        display: flex;
+        gap: 50px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+
+        li {
+            flex: 0 0 325px;
+            overflow: hidden;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+
+        .desc-wrap {
+            padding: 50px 42px 60px;
+            background-color: #223927;
+        }
+
+        .title {
+            display: block;
+            padding-top: 44px;
+            background: url("#{$imgPath}/icon-leaves-green.png") no-repeat 50% 0;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            color: #a5e549;
+
+            + .desc {
+                margin-top: 28px;
+            }
+        }
+
+        .desc {
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            font-weight: 500;
+            color: #fff;
+
+            + .desc {
+                margin-top: 30px;
+                padding-top: 30px;
+                border-top: 1px solid #708274;
+            }
+        }
+
+        .img-wrap {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .gray-box-items {
+        display: flex;
+        gap: 50px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+            flex: 0 0 450px;
+            overflow: hidden;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 100%;
+            }
+        }
+
+        .desc-wrap {
+            flex: 1;
+            padding: 40px 20px 60px;
+            border: 1px solid #e5e5e5;
+            border-top: none;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .title {
+            display: block;
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 700;
+        }
+
+        .color-purple {
+            color: #ea126e;
+        }
+
+        .desc {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 15px;
+            color: #333;
+            line-height: 25px;
+            font-weight: 500;
+        }
+
+        .img-wrap {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<%
+const greenItems = businessItems[currentCategory][state];
+const businessCategoryName = businessCategory[currentCategory][state];
+%>
+<ul class="green-box-items">
+    <% greenItems.map((item, i) => { %>
+        <li>
+            <a href="./<%= businessCategoryName %>Detail<%= state === 'default' && i === 0 ? `` : `.${businessCategoryName}${i + 1}` %>.html">
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 430,
+                    height: 350,
+                    isSimply: true,
+                    source: `${imgPath}/visual-${currentCategory}-${businessCategoryName}${i + 1}.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+                <div class="desc-wrap">
+                    <span class="icon-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: item.icon.width,
+                        height: item.icon.height,
+                        isSimply: true,
+                        source: `${imgPath}/icon-${currentCategory}-${businessCategoryName}${i + 1}.png`,
+                        alt: '',
+                        }); %>
+                    </span>
+                    <strong class="title"><%- item.title %></strong>
+                    <p class="desc"><%- item.desc %></p>
+                </div>
+            </a>
+        </li>
+    <% }); %>
+</ul>

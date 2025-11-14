@@ -5691,8 +5691,18 @@ table + table {
     flex-direction: column;
   }
 }
+.custom-visual.conservation .left {
+  background-image: url("./../../images/koagi/background-banner-conservation.png");
+}
+.custom-visual.conservation ~ .buttons {
+  margin: 105px auto 0;
+  text-align: center;
+}
 .custom-visual + .ticket-info {
   margin-top: 127px;
+}
+.custom-visual + .title-line {
+  margin-top: 122px;
 }
 .custom-visual .left {
   display: flex;
@@ -6822,6 +6832,154 @@ table + table {
 }
 .title-box .icon-wrap {
   margin-right: 11px;
+}
+
+.green-box-items {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+@media (max-width: 1199px) {
+  .green-box-items {
+    gap: 35px;
+    flex-wrap: wrap;
+  }
+}
+.green-box-items li {
+  flex: 0 0 430px;
+  align-self: stretch;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .green-box-items li {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+.green-box-items a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.green-box-items .desc-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+  background-color: #1f632a;
+  padding: 42px 20px 55px;
+}
+.green-box-items .title {
+  display: inline-flex;
+  margin-top: 32px;
+  padding-right: 26px;
+  background: url("./../../images/koagi/icon-arrow-right-green.png") no-repeat 100% 50%;
+  font-size: 24px;
+  color: #54d74a;
+  font-weight: 600;
+}
+.green-box-items .desc {
+  display: block;
+  margin-top: 22px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+.green-box-items .img-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.darkgreen-box-items {
+  display: flex;
+  gap: 50px;
+}
+.darkgreen-box-items li {
+  flex: 0 0 325px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.darkgreen-box-items .desc-wrap {
+  padding: 50px 42px 60px;
+  background-color: #223927;
+}
+.darkgreen-box-items .title {
+  display: block;
+  padding-top: 44px;
+  background: url("./../../images/koagi/icon-leaves-green.png") no-repeat 50% 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #a5e549;
+}
+.darkgreen-box-items .title + .desc {
+  margin-top: 28px;
+}
+.darkgreen-box-items .desc {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+}
+.darkgreen-box-items .desc + .desc {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #708274;
+}
+
+.title-line {
+  display: block;
+  position: relative;
+  padding-top: 35px;
+  text-align: center;
+  font-size: 40px;
+  color: #333;
+  font-family: "SBAggro", serif;
+  font-weight: 500;
+}
+.title-line:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 53px;
+  height: 1px;
+  background-color: #000;
+}
+.title-line + .darkgreen-box-items {
+  margin-top: 80px;
+}
+
+.green-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .green-items {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+.green-items li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26px 20px;
+  border-radius: 20px;
+  background-color: #223927;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
 }
 
 @media all and (max-width: 1199px) {

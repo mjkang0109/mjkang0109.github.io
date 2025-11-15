@@ -1,0 +1,44 @@
+<div class="fold-wrap">
+    <strong class="title-line">입점업체 리스트</strong>
+    <ul class="fold-items">
+        <% for(let i = 0; i < 5; i++) { %>
+            <li class="fold-item">
+                <span class="img-wrap">
+                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                     width: 270,
+                     height: 220,
+                     isSimply: true,
+                     source: `${imgPath}/dummy-edu.jpg`,
+                     alt: '',
+                     }); %>
+                </span>
+                <strong>입점업체입점업체입점업체입점업체입점업체</strong>
+                <p>회원증은 본인만 사용할 수 있으며, 타인이 사용할 경우 회원기간에 관계없이 효력상실과 동시에 환불이 되지 않습니다.
+                    <br>일부시설 및 교육 · 해설프로그램은 무료이용에서 제외됩니다.</p>
+                <input type="checkbox" id="fold<%= i + 1 %>" checked>
+                <label for="fold<%= i + 1 %>">판매물품
+                    <span class="sound-only">펼치기</span>
+                </label>
+                <div class="detail-items">
+                    <ul>
+                        <% for(let j = 0; j < 10; j++) { %>
+                            <li>
+                                <span class="img-wrap">
+                                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                     width: 270,
+                                     height: 220,
+                                     isSimply: true,
+                                     source: `${imgPath}/dummy-cafe.jpg`,
+                                     alt: '',
+                                     }); %>
+                                </span>
+                                <strong>아메리카노</strong>
+                                <p>23,100원</p>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </li>
+        <% } %>
+    </ul>
+</div>

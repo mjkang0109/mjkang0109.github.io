@@ -1,0 +1,60 @@
+<div class="box outline-cyan">
+    <strong>가든샵에서 함께할 파트너를 모집합니다. 입점 절차와 자격요건을 확인하시고 온라인으로 간편하게 신청하세요.</strong>
+    <a href="#"
+       class="button-navy round">온라인 입점 신청 바로가기
+    </a>
+</div>
+<article class="detail-section">
+    <strong class="title-leaves">입점절차</strong>
+    <%
+    const steps = [
+        {
+            title: '입점신청',
+        },
+        {
+            title: '1차 평가',
+            desc : '(신청서류 평가)',
+        },
+        {
+            title: '2차 평가',
+            desc : '(업체방문 또는 견본 평가)',
+        },
+        {
+            title: '최종발표',
+        },
+        {
+            title: '계약채결',
+        },
+        {
+            title: '입점완료',
+        },
+    ];
+    %>
+    <div class="box outline-round">
+        <ol class="step-number">
+            <% steps.map(step => { %>
+                <li>
+                    <strong><%= step.title; %></strong>
+                    <% if (step.desc) { %>
+                        <p><%= step.desc; %></p>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ol>
+    </div>
+    <strong class="caution gray">
+        ※ 통상적인 입점 절차이며 자세한 사항은 공고를 확인해주세요.
+        <br>※ 평가가 시작되면 신청서류 수정이 불가능합니다.
+    </strong>
+</article>
+<article class="detail-section">
+    <strong class="title-leaves">FAQ</strong>
+    <strong class="title-bold">Q. 신청 자격은 어떻게 되나요?</strong>
+    <div class="box bg-gray">
+        사업자등록증, 통신판매업신고증이 있는 판매자는 누구나 신청 가능합니다.
+    </div>
+    <strong class="title-bold">Q. 입점 결과는 언제 알 수 있나요?</strong>
+    <div class="box bg-gray">
+        공고에 안내된 일정대로 진행되며, 신청 시 등록한 계정의 이메일, 휴대폰 번호로 알림 메일/톡으로 알려드립니다.
+    </div>
+</article>

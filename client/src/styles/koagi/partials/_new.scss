@@ -18,6 +18,7 @@
 @use "./../partials/benefit" as benefit;
 @use "./../partials/ticketInfo" as ticketInfo;
 @use "./../partials/items" as items;
+@use "./../partials/foldItems" as foldItems;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -513,6 +514,26 @@ input[type="radio"] {
         border-top: none;
         padding-top: 0;
     }
+
+    .underline-info {
+        li {
+            display: flex;
+            margin-bottom: 10px;
+            font-size: 17px;
+            line-height: 27px;
+
+
+            strong {
+                flex-shrink: 0;
+                width: 80px;
+                text-decoration: underline;
+            }
+
+            span {
+                flex: 1;
+            }
+        }
+    }
 }
 
 @include detailSection.detailSection;
@@ -567,6 +588,24 @@ input[type="radio"] {
             font-weight: 500;
             color: #595959;
         }
+    }
+
+    &.outline-cyan {
+        border: 2px solid #50aaa8;
+
+        + .detail-section {
+            margin-top: 80px;
+        }
+    }
+
+    &.bg-gray {
+        border: none;
+        background-color: #f7f7f7;
+        padding: 30px 32px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #000;
+        font-weight: 400;
     }
 }
 
@@ -1031,7 +1070,6 @@ input[type="radio"] {
 @include board.board;
 @include cardItems.cardItems;
 @include boardItems.boardItems;
-
 .custom-visual {
     display: flex;
     width: 100%;
@@ -1048,6 +1086,33 @@ input[type="radio"] {
         ~ .buttons {
             margin: 105px auto 0;
             text-align: center;
+        }
+    }
+
+    &.kGarden {
+        flex-direction: row-reverse;
+
+        .left {
+            background: #f9f9f9;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-right: -15px;
+                margin-left: 0;
+            }
+        }
+
+        .right {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-right: 0;
+                margin-left: -15px;
+            }
+
+        }
+
+        .title {
+            strong {
+                font-size: 30px;
+                line-height: 40px;
+            }
         }
     }
 
@@ -1411,6 +1476,7 @@ input[type="radio"] {
         }
     }
 }
+
 .dot-caution {
     li {
         position: relative;
@@ -1431,6 +1497,7 @@ input[type="radio"] {
         }
     }
 }
+
 .icon-info {
     li {
         display: flex;
@@ -1489,7 +1556,6 @@ input[type="radio"] {
 
 @include ticketInfo.ticketInfo;
 @include items.items;
-
 .title-line {
     display: block;
     position: relative;
@@ -1539,3 +1605,5 @@ input[type="radio"] {
         text-align: center;
     }
 }
+
+@include foldItems.foldItems;

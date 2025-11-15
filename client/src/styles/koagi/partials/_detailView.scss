@@ -16,6 +16,10 @@ $imgPath: "./../../images/koagi";
             gap: 46px;
         }
 
+        + .fold-wrap {
+            margin-top: 100px;
+        }
+
         .left-top {
             position: relative;
         }
@@ -50,6 +54,7 @@ $imgPath: "./../../images/koagi";
                 strong {
                     flex-shrink: 0;
                     width: 80px;
+                    text-decoration: underline;
                 }
 
                 span {

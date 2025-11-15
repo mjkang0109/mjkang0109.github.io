@@ -27,6 +27,48 @@ $imgPath: "./../../images/koagi";
             }
         }
 
+        &.kGarden {
+            > .left {
+                width: 496px;
+                padding: 0 0 0 30px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+
+            > .right {
+                > strong {
+                    font-size: 38px;
+                    font-weight: 600;
+                }
+            }
+
+            .underline-info {
+                margin-top: 44px;
+                border-bottom: none;
+
+                + .button-green {
+                    margin-top: 40px;
+                }
+            }
+
+            + .description {
+                margin-top: -41px;
+                font-size: 16px;
+                line-height: 26px;
+                color: #000;
+                font-weight: 400;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: 40px;
+                }
+
+                + .detail-section {
+                    margin-top: 78px;
+                }
+            }
+        }
+
         > strong {
             display: flex;
             align-items: center;
@@ -77,6 +119,13 @@ $imgPath: "./../../images/koagi";
                 line-height: 25px;
                 color: #ec1010;
                 font-weight: 400;
+
+                &.gray {
+                    justify-content: flex-start;
+                    margin-top: 43px;
+                    color: #595959;
+                    font-size: 16px;
+                }
             }
 
             &.title-leaves {
@@ -149,7 +198,15 @@ $imgPath: "./../../images/koagi";
                 }
             }
 
-            &.title-none {
+            &.title-bold {
+                background: none;
+                padding-left: 0;
+                margin-bottom: 30px;
+                font-size: 20px;
+
+                ~ .title-bold {
+                    margin-top: 65px;
+                }
             }
 
             .caution {
@@ -287,6 +344,69 @@ $imgPath: "./../../images/koagi";
                 margin-top: 222px;
                 @include m.respond-to(map.get(m.$max, 1199)) {
                     margin-top: 50px;
+                }
+            }
+        }
+
+        .files {
+            display: flex;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 39px 55px 33px 40px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            strong {
+                flex: 0 0 auto;
+                width: 160px;
+                text-align: center;
+                font-size: 18px;
+                line-height: 32px;
+                color: #000;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    padding-bottom: 20px;
+                    text-align: left;
+                }
+            }
+
+            ul {
+                display: grid;
+                gap: 12px 30px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    grid-template-columns: 1fr;
+                    gap: 10px;
+                }
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+            }
+
+            a {
+                display: block;
+                padding-left: 27px;
+                background: url("#{$imgPath}/icon-clip.png") no-repeat 0 50%;
+                background-size: auto 20px;
+                margin-right: 23px;
+                font-size: 16px;
+                color: #000;
+                line-height: 26px;
+            }
+
+            + .buttons {
+                display: flex;
+
+                button,
+                a {
+                    margin: 0;
                 }
             }
         }

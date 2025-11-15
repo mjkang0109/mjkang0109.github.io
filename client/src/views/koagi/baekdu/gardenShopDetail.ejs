@@ -1,15 +1,15 @@
 ---
-group: sejong
+group: baekdu
 state:
-    default: 사연나무
+    default: 가든샵-상세
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립세종수목원';
-    currentCategory = 'sejong';
-    currentNav = 'application';
+    currentName = '국립백두대간수목원';
+    currentCategory = 'baekdu';
+    currentNav = 'viewing';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -35,7 +35,7 @@ state:
         <!-- visual sub -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
             type: 'plant',
-            currentNav: '참여하기',
+            currentNav: '관람안내',
             key: '국민이 행복한 수목원',
             info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
         }) %>
@@ -43,30 +43,25 @@ state:
 
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '사연나무',
+            title: '가든샵',
+            desc: '우리 수목원은 방문자에게 좀 더 편리하고 유익한 환경을 제공하고자 노력하고 있습니다.',
             depths: [
-                '참여하기',
-                '행사 프로그램',
-                '사연나무'
+                '관람안내',
+                '시설안내',
+                '가든샵'
             ],
         }) %>
         <!-- // title -->
 
         <!-- contents -->
         <div id="body">
-
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
-
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+            items: ['가든샵 소개', '입점안내'],
+                current: 1,
             }) %>
 
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
-                dummy: 'story-tree',
-                states: [{text: '박람회', color: 'green'}, {text: '교육 및 컨설팅', color: 'green'}],
-                title: '2025년 야간개장 6월 사연나무',
-                count: 8,
-                titleOverflow: true,
-                date: '2025-06-29',
-                desc: 'hide'
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_gardenShopDetail`, {
+
             }) %>
 
         </div>

@@ -1,0 +1,190 @@
+---
+group: garden
+state:
+    default: 공모전소개
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립정원문화원';
+    currentCategory = 'garden';
+    currentNav = 'koreaGarden';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_businessItems`, {
+
+    }) %>
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+        type: 'plant',
+        currentNav: '코리아가든쇼',
+        key: '국민이 행복한 수목원',
+        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: '공모전 소개',
+        depths: [
+        '코리아가든쇼',
+        '공모전 소개',
+        ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
+            title: `<strong>정원소재 가늠터(Trial Garden)는 </strong><br><strong>새로운 정원소재를 찾아내기 위해 </strong><br><strong>다양한 식물을 시험하고 평가하는 정원입니다. </strong>`,
+            desc: '국립세종수목원은 국민과 함께하는 <strong>반려식물프로젝트</strong>를 통해 행복을 더하고 <br><strong>사회적 가치 실현과 정원문화 확산</strong>을 위해 노력합니다. ',
+            img: 'k-garden',
+            type: 'kGarden',
+            }) %>
+            <section class="detail-section">
+                <strong class="title-leaves">행사 목적</strong>
+                <ul class="intro-items">
+                    <%
+                    const items = [
+                        {
+                            title: '자생식물',
+                            desc : '정원과 어울리는 우리 산과 들에서 자라는 식물',
+                        },
+                        {
+                            title: '신품종',
+                            desc : '우리나라의 꽃과 나무로 만든 새로운 품종',
+                        },
+                        {
+                            title: '재배품종',
+                            desc : '오랫동안 정원식물로 사랑받아 온 재배품종',
+                        },
+                    ];
+                    %>
+                    <% items.map((item, i) => { %>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 450,
+                            height: 253,
+                            isSimply: true,
+                            source: `${imgPath}/kgarden-intro${i + 1}.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <div class="desc-wrap">
+                            <strong class="title"><%- item.title ;%></strong>
+                            <p class="desc"><%- item.desc; %></p>
+                        </div>
+                    </li>
+                    <% }); %>
+                </ul>
+            </section>
+            <section class="detail-section">
+                <strong class="title-leaves">행사 연혁</strong>
+                <%
+                const history = [
+                    {
+                        year: 2014,
+                        title: '주제 : 도시민들의 상처받은 몸과 마음에 휴식을 주는 정원',
+                        desc: '당선작가 : 17명',
+                    },
+                    {
+                        year: 2015,
+                        title: '주제 : 내 삶에 들어온 정원',
+                        desc: '당선작가 : 15명',
+                    },
+                    {
+                        year: 2016,
+                        title: '주제 : 가장 한국적인 멋을 담 신한류 정원',
+                        desc: '당선작가 : 10명',
+                    },
+                    {
+                        year: 2017,
+                        title: '주제 : 토닥토닥, 내 삶에 위로를 주는 정원',
+                        desc: '당선작가 : 10명',
+                    },
+                    {
+                        year: 2020,
+                        title: '주제 : 사람과 자연을 이어주는 공간, 정원',
+                        desc: '당선작가 : 10명',
+                    },
+                    {
+                        year: 2021,
+                        title: '주제 : 정원, 그 안에 자연을 담다',
+                        desc: '당선작가 : 12명',
+                    },
+                    {
+                        year: 2022,
+                        title: '주제 : 사람과 자연을 이어주는 공간, 정원',
+                        desc: '당선작가 : 10명',
+                    },
+                    {
+                        year: 2023,
+                        title: '주제 : 정원, 그 안에 자연을 담다',
+                        desc: '당선작가 : 12명',
+                    },
+                    {
+                        year: 2024,
+                        title: '주제 : ‘통섭(統攝)’ 정원, 그 경계를 허물다.',
+                        desc: '당선작가 : 6명',
+                    },
+                    {
+                        year: 2025,
+                        title: '주제 : 한국의 멋을 담은 정원',
+                        desc: '당선작가 : 6명',
+                    },
+                ]
+                %>
+                <ul class="flag-item">
+                    <% history.map(h => { %>
+                    <li>
+                        <strong><%= h.year %></strong>
+                        <ul class="dot-caution">
+                            <li><%= h.title %></li>
+                            <li><%= h.desc %></li>
+                        </ul>
+                    </li>
+                    <% }) %>
+                </ul>
+            </section>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentName,
+        currentCategory,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

@@ -1,20 +1,20 @@
 ---
-group: sejong
+group: garden
 state:
-    default: 사연나무
+    default: 정원관광
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립세종수목원';
-    currentCategory = 'sejong';
-    currentNav = 'application';
+    currentName = '국립정원문화원';
+    currentCategory = 'garden';
+    currentNav = 'gardenTour';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
         title: currentName,
-        currentCategory: currentCategory
+        currentCategory
     }); %>
 </head>
 <body class="<%= currentCategory %>">
@@ -35,50 +35,49 @@ state:
         <!-- visual sub -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
             type: 'plant',
-            currentNav: '참여하기',
+            currentNav: '정원여행',
             key: '국민이 행복한 수목원',
             info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
         }) %>
         <!-- // visual sub -->
-
+        
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '사연나무',
+            title: '해외한국정원',
             depths: [
-                '참여하기',
-                '행사 프로그램',
-                '사연나무'
+                '정원여행',
+                '해외한국정원'
             ],
         }) %>
         <!-- // title -->
 
         <!-- contents -->
         <div id="body">
-
+            
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
-
+                
             }) %>
 
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
-                dummy: 'story-tree',
-                states: [{text: '박람회', color: 'green'}, {text: '교육 및 컨설팅', color: 'green'}],
-                title: '2025년 야간개장 6월 사연나무',
+                type: 'photos',
                 count: 8,
-                titleOverflow: true,
-                date: '2025-06-29',
-                desc: 'hide'
+                title: '10월의 정원관광 추천코스 ',
+                dummy: 'story-tree',
+            titleOverflow: true,
+            date: '2025-06-29',
+            desc: 'hide'
             }) %>
 
         </div>
         <!-- // contents -->
-
+        
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
-            currentCategory,
             currentName,
+            currentCategory,
         }) %>
         <!-- // footer -->
-
+        
         <!-- navigation -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
             currentCategory: currentCategory

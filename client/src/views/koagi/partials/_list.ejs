@@ -49,9 +49,17 @@ var hidePagination = hidePagination || false;
                         <% if (badges.length > 0) { %>
                             <div class="badges">
                                 <% badges.map((badge, k) => { %>
+                                    <% if (dummy !== 'vr') { %>
                                     <span class="badge <%= i === 0 && k === 0 ? badge.color : i === 1 && k === 0 ? 'green' : i === 2 && k === 0 ? 'gray' : 'outline' %>">
                                         <%= i === 0 && k === 0 ? '접수중' : i === 1 && k === 0 ? '접수대기' : i === 2 && k === 0 ? '접수마감' : badge.text %>
                                     </span>
+                                    <% } %>
+
+                                    <% if (dummy === 'vr') { %>
+                                        <span class="badge <%= badge.color%>">
+                                            <%= badge.text %>
+                                        </span>
+                                    <% } %>
                                 <% }); %>
                             </div>
                         <% } %>

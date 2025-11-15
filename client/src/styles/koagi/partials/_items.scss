@@ -75,7 +75,6 @@ $imgPath: "./../../images/koagi";
             gap: 25px;
         }
 
-
         li {
             flex: 0 0 325px;
             overflow: hidden;
@@ -127,7 +126,6 @@ $imgPath: "./../../images/koagi";
             }
         }
     }
-
     .gray-box-items {
         display: flex;
         gap: 50px;
@@ -182,6 +180,94 @@ $imgPath: "./../../images/koagi";
             img {
                 width: 100%;
                 height: auto;
+            }
+        }
+    }
+    .intro-items {
+        display: flex;
+        gap: 40px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+        }
+
+        > li {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
+        }
+
+        .img-wrap {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .title {
+            display: block;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 28px;
+            line-height: 38px;
+            color: #279c2f;
+            font-weight: 600;
+        }
+
+        .desc {
+            margin-top: 22px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            text-align: center;
+        }
+    }
+    .flag-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 50px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        > li {
+            display: flex;
+            padding: 22px 0;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                padding: 0;
+            }
+        }
+
+        strong {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 145px;
+            background-color: #013569;
+            font-size: 22px;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 20px 0 0 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                border-radius: 20px 20px 0 0;
+                padding: 20px;
+            }
+        }
+
+        .dot-caution {
+            flex: 1;
+            padding: 22px 36px;
+            border: 1px solid #e5e5e5;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                border: 1px solid #e5e5e5;
+                border-top: none;
+                border-radius: 0 0 20px 20px;
+                padding: 20px;
             }
         }
     }

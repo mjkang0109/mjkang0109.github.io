@@ -1,0 +1,150 @@
+<section class="detail-info">
+    <article class="detail-section division kGarden">
+        <div class="left">
+            <span class="img-wrap">
+                 <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                 width: 400,
+                 height: 565,
+                 isSimply: true,
+                 source: `${imgPath}/dummy-poster-garden.png`,
+                 alt: '',
+                 }); %>
+            </span>
+        </div>
+        <div class="right">
+            <div class="badges">
+                <span class="badge green">접수대기</span>
+                <span class="badge orange">접수중</span>
+                <span class="badge gray">마감</span>
+            </div>
+            <strong>2025 코리아가든쇼</strong>
+            <%
+            const dotItems = [
+                {
+                    title: '접수기간',
+                    desc : '2025-08-01 (09:00) ~ 2025-08-31 (23:59)',
+                },
+                {
+                    title: '작품접수',
+                    desc : '2025-08-01 (09:00) ~ 2025-08-31 (23:59)',
+                },
+                {
+                    title: '접수장소',
+                    desc : '초전공원 내 (경상남도 진주시 초전동 1583-40)',
+                },
+                {
+                    title: '작품규모',
+                    desc : '6개소, 100~150m2 (현장상황을 고려하여 자유롭게 구성)',
+                },
+                {
+                    title: '지원금',
+                    desc : '개소당 50,000,000원 (부가세 별도)',
+                },
+                {
+                    title: '담당자',
+                    desc : '국립정원문화원 코리아가든쇼 담당자',
+                },
+                {
+                    title: '문의처',
+                    desc : '<a href="mailto:sample123@koagi.or.ke">sample123@koagi.or.kr</a>',
+                },
+            ];
+            %>
+
+            <ul class="underline-info">
+                <%
+                dotItems.map((item) => { %>
+                    <li>
+                        <strong><%= item.title; %></strong>
+                        <p><%- item.desc; %></p>
+                    </li>
+                <% }); %>
+            </ul>
+            <button type="button"
+                    class="button-green"
+                    onclick="window.open('./popup/applyPopup.html','_blank','width=800,height=600,top=50,left=50,scrollbars=yes')">
+                공모전 접수
+            </button>
+        </div>
+    </article>
+    <p class="description">
+        한국의 멋을 담은 정원' 주제로 4월 16일까지 정원작품 공모
+        <br>산림청이 주최하고 국립정원문화원, 경상남도, 진주시가 공동 주관하는 '2025 코리아가든쇼’ 실제 정원조성이 가능한 정원전문가는 누구나 참여 가능
+        <br>작품 규모는 총 6개소, 개소당 100~150㎡ 규모로 현장 대상지 상황을 고려해 자유롭게 구성
+        <br>박람회 이후에는 작가정원이 공원에 남아 시민들이 지속적으로 정원문화에 참여할 수 있는 공간으로 활용 예정
+    </p>
+    <article class="detail-section">
+        <strong class="title-leaves">참가비</strong>
+        <table class="table-gray fixed">
+            <thead>
+            <tr>
+                <th>시상명</th>
+                <th>훈격</th>
+                <th>작품</th>
+                <th>상금 및 부상</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>대상</td>
+                <td>농림축산식품부 장관상</td>
+                <td>1</td>
+                <td>5백만원</td>
+            </tr>
+            <tr>
+                <td>최고작가상</td>
+                <td>산림청장상</td>
+                <td>1</td>
+                <td>4백만원</td>
+            </tr>
+            <tr>
+                <td>2025 올해의 작가상</td>
+                <td>경남도지사상</td>
+                <td>1</td>
+                <td>3백만원</td>
+            </tr>
+            <tr>
+                <td>진주시가 주목하는 작가상</td>
+                <td>진주시장상</td>
+                <td>1</td>
+                <td>2백만원</td>
+            </tr>
+            <tr>
+                <td>우수작가상</td>
+                <td>국립수목원장상</td>
+                <td>1</td>
+                <td>2백만원</td>
+            </tr>
+            <tr>
+                <td>인기작가상</td>
+                <td>한국수목원정원관리원 이사장상</td>
+                <td>1</td>
+                <td>2백만원</td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaves">출품 신청서</strong>
+        <div class="files">
+            <ul>
+                <li>
+                    <a href="#">사업자등록 및 인·허가 관련 통합 폐업신고서.hwpx</a>
+                    <button type="button" class="button-cyan">다운로드</button>
+                </li>
+                <li>
+                    <a href="#">사업자등록 및 인·허가 관련 통합.hwpx</a>
+                    <button type="button" class="button-cyan">다운로드</button>
+                </li>
+                <li>
+                    <a href="#">사업자등록 및 인·허가 관련 통합 폐업신고서.hwpx</a>
+                    <button type="button" class="button-cyan">다운로드</button>
+                </li>
+                <li>
+                    <a href="#">사업자등록 및 인·허가 관련 통합.hwpx</a>
+                    <button type="button" class="button-cyan">다운로드</button>
+                </li>
+            </ul>
+        </div>
+    </article>
+</section>

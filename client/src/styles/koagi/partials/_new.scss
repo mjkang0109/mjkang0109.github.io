@@ -1078,14 +1078,18 @@ input[type="radio"] {
         flex-direction: column;
     }
 
+    ~ .buttons {
+        margin: 105px auto 0;
+        text-align: center;
+
+        a {
+            display: inline-block;
+        }
+    }
+
     &.conservation {
         .left {
             background-image: url("#{$imgPath}/background-banner-conservation.png");
-        }
-
-        ~ .buttons {
-            margin: 105px auto 0;
-            text-align: center;
         }
     }
 
@@ -1504,12 +1508,12 @@ input[type="radio"] {
         width: 100%;
 
         &:not(:first-of-type) {
-            margin-top: -20px;
+            //margin-top: -20px;
         }
 
         &:last-of-type {
             @include m.respond-to(map.get(m.$max, 1199)) {
-                margin-bottom: -30px;
+                //margin-bottom: -30px;
             }
         }
     }
@@ -1526,7 +1530,7 @@ input[type="radio"] {
         font-weight: 500;
 
         &:after {
-            content: "";
+            //content: "";
             display: inline-block;
             width: 100%;
         }

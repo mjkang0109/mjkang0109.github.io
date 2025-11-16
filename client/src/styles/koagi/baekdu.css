@@ -1992,6 +1992,20 @@ body.scrolling #header {
 .gallery-box .education-info {
   margin-top: 35px;
 }
+.gallery-box .education-info.gray li strong {
+  width: 74px;
+  color: #393939;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .gallery-box .education-info.gray li strong {
+    width: 100%;
+  }
+}
+.gallery-box .education-info.gray li span {
+  font-weight: 600;
+  color: #000000;
+}
 .gallery-box .education-info li {
   display: flex;
   margin-bottom: 10px;
@@ -2370,14 +2384,15 @@ body.scrolling #header {
   display: flex;
   width: 100%;
   gap: 96px;
+  padding-top: 78px;
   border-top: 2px solid #444;
-  padding-top: 35px;
 }
 @media (max-width: 1199px) {
   .detail-view {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 46px;
+    padding-top: 35px;
   }
 }
 .detail-view + .fold-wrap {
@@ -3140,6 +3155,12 @@ input[type=radio] + label:after {
   width: 496px;
   padding: 0 0 0 30px;
 }
+@media (max-width: 1199px) {
+  .detail-section.kGarden > .left {
+    width: 100%;
+    padding: 0;
+  }
+}
 .detail-section.kGarden > .right > strong {
   font-size: 38px;
   font-weight: 600;
@@ -3157,6 +3178,11 @@ input[type=radio] + label:after {
   line-height: 26px;
   color: #000;
   font-weight: 400;
+}
+@media (max-width: 1199px) {
+  .detail-section.kGarden + .description {
+    margin-top: 40px;
+  }
 }
 .detail-section.kGarden + .description + .detail-section {
   margin-top: 78px;
@@ -3434,6 +3460,70 @@ input[type=radio] + label:after {
   .detail-section .map-wrap + strong {
     margin-top: 50px;
   }
+}
+.detail-section .files {
+  display: flex;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 39px 55px 33px 40px;
+}
+@media (max-width: 1199px) {
+  .detail-section .files {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+.detail-section .files strong {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 32px;
+  color: #000;
+}
+@media (max-width: 1199px) {
+  .detail-section .files strong {
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+}
+.detail-section .files ul {
+  display: grid;
+  gap: 12px 30px;
+}
+@media (max-width: 1199px) {
+  .detail-section .files ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+.detail-section .files li {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1199px) {
+  .detail-section .files li {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+.detail-section .files a {
+  display: block;
+  padding-left: 27px;
+  background: url("./../../images/koagi/icon-clip.png") no-repeat 0 50%;
+  background-size: auto 20px;
+  margin-right: 23px;
+  font-size: 16px;
+  color: #000;
+  line-height: 26px;
+}
+.detail-section .files + .buttons {
+  display: flex;
+}
+.detail-section .files + .buttons button,
+.detail-section .files + .buttons a {
+  margin: 0;
 }
 
 .total {
@@ -4812,6 +4902,18 @@ table + table {
   background: url("./../../images/koagi/icon-delete.png") no-repeat 50% 50%;
 }
 
+.button-cyan {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 17px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #3baf89;
+}
+
 .schedule {
   flex: 0 0 auto;
   width: 794px;
@@ -5850,12 +5952,15 @@ table + table {
     flex-direction: column;
   }
 }
-.custom-visual.conservation .left {
-  background-image: url("./../../images/koagi/background-banner-conservation.png");
-}
-.custom-visual.conservation ~ .buttons {
+.custom-visual ~ .buttons {
   margin: 105px auto 0;
   text-align: center;
+}
+.custom-visual ~ .buttons a {
+  display: inline-block;
+}
+.custom-visual.conservation .left {
+  background-image: url("./../../images/koagi/background-banner-conservation.png");
 }
 .custom-visual.kGarden {
   flex-direction: row-reverse;
@@ -7087,6 +7192,32 @@ table + table {
     flex-wrap: wrap;
     gap: 25px;
   }
+}
+.darkgreen-box-items.leaf {
+  gap: 38px;
+}
+.darkgreen-box-items.leaf li {
+  flex: 0 0 260px;
+}
+@media (max-width: 1199px) {
+  .darkgreen-box-items.leaf li {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+.darkgreen-box-items.leaf .title {
+  padding-top: 42px;
+  background-image: url("./../../images/koagi/icon-leaf-green.png");
+  color: #fff;
+}
+.darkgreen-box-items.leaf .title + .desc {
+  margin-top: 22px;
+}
+.darkgreen-box-items.leaf .desc-wrap {
+  padding: 50px 30px 60px;
+}
+.darkgreen-box-items.leaf .desc {
+  font-size: 15px;
 }
 .darkgreen-box-items li {
   flex: 0 0 325px;

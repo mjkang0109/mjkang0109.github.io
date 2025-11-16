@@ -75,6 +75,36 @@ $imgPath: "./../../images/koagi";
             gap: 25px;
         }
 
+        &.leaf {
+            gap: 38px;
+
+            li {
+                flex: 0 0 260px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 auto;
+                    width: 100%;
+                }
+            }
+
+            .title {
+                padding-top: 42px;
+                background-image: url("#{$imgPath}/icon-leaf-green.png");
+                color: #fff;
+
+                + .desc {
+                    margin-top: 22px;
+                }
+            }
+
+            .desc-wrap {
+                padding: 50px 30px 60px;
+            }
+
+            .desc {
+                font-size: 15px;
+            }
+        }
+
         li {
             flex: 0 0 325px;
             overflow: hidden;

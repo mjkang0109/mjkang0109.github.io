@@ -37,15 +37,15 @@
                     desc : '6개소, 100~150m2 (현장상황을 고려하여 자유롭게 구성)',
                 },
                 {
-                    title: '지원금',
+                    title: '지&nbsp; 원&nbsp; 금',
                     desc : '개소당 50,000,000원 (부가세 별도)',
                 },
                 {
-                    title: '담당자',
+                    title: '담&nbsp; 당&nbsp; 자',
                     desc : '국립정원문화원 코리아가든쇼 담당자',
                 },
                 {
-                    title: '문의처',
+                    title: '문&nbsp; 의&nbsp; 처',
                     desc : '<a href="mailto:sample123@koagi.or.ke">sample123@koagi.or.kr</a>',
                 },
             ];
@@ -55,7 +55,7 @@
                 <%
                 dotItems.map((item) => { %>
                     <li>
-                        <strong><%= item.title; %></strong>
+                        <strong><%- item.title; %></strong>
                         <p><%- item.desc; %></p>
                     </li>
                 <% }); %>

@@ -1992,6 +1992,20 @@ body.scrolling #header {
 .gallery-box .education-info {
   margin-top: 35px;
 }
+.gallery-box .education-info.gray li strong {
+  width: 74px;
+  color: #393939;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .gallery-box .education-info.gray li strong {
+    width: 100%;
+  }
+}
+.gallery-box .education-info.gray li span {
+  font-weight: 600;
+  color: #000000;
+}
 .gallery-box .education-info li {
   display: flex;
   margin-bottom: 10px;
@@ -2370,14 +2384,15 @@ body.scrolling #header {
   display: flex;
   width: 100%;
   gap: 96px;
+  padding-top: 78px;
   border-top: 2px solid #444;
-  padding-top: 35px;
 }
 @media (max-width: 1199px) {
   .detail-view {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 46px;
+    padding-top: 35px;
   }
 }
 .detail-view + .fold-wrap {
@@ -5937,12 +5952,15 @@ table + table {
     flex-direction: column;
   }
 }
-.custom-visual.conservation .left {
-  background-image: url("./../../images/koagi/background-banner-conservation.png");
-}
-.custom-visual.conservation ~ .buttons {
+.custom-visual ~ .buttons {
   margin: 105px auto 0;
   text-align: center;
+}
+.custom-visual ~ .buttons a {
+  display: inline-block;
+}
+.custom-visual.conservation .left {
+  background-image: url("./../../images/koagi/background-banner-conservation.png");
 }
 .custom-visual.kGarden {
   flex-direction: row-reverse;
@@ -7174,6 +7192,32 @@ table + table {
     flex-wrap: wrap;
     gap: 25px;
   }
+}
+.darkgreen-box-items.leaf {
+  gap: 38px;
+}
+.darkgreen-box-items.leaf li {
+  flex: 0 0 260px;
+}
+@media (max-width: 1199px) {
+  .darkgreen-box-items.leaf li {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+.darkgreen-box-items.leaf .title {
+  padding-top: 42px;
+  background-image: url("./../../images/koagi/icon-leaf-green.png");
+  color: #fff;
+}
+.darkgreen-box-items.leaf .title + .desc {
+  margin-top: 22px;
+}
+.darkgreen-box-items.leaf .desc-wrap {
+  padding: 50px 30px 60px;
+}
+.darkgreen-box-items.leaf .desc {
+  font-size: 15px;
 }
 .darkgreen-box-items li {
   flex: 0 0 325px;

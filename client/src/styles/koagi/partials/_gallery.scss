@@ -109,14 +109,28 @@ $imgPath: "./../../images/koagi";
             @include m.respond-to(map.get(m.$max, 1199)) {
                 padding: 9px 15px 15px;
             }
-
-            &:has(.icon-info) {
-                padding-bottom: 20px;
-            }
         }
 
         .education-info {
             margin-top: 35px;
+
+            &.gray {
+                li {
+                    strong {
+                        width: 74px;
+                        color: #393939;
+                        font-weight: 500;
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            width: 100%;
+                        }
+                    }
+
+                    span {
+                        font-weight: 600;
+                        color: #000000;
+                    }
+                }
+            }
 
             li {
                 display: flex;

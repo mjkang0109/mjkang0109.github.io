@@ -1986,9 +1986,6 @@ body.scrolling #header {
     padding: 9px 15px 15px;
   }
 }
-.gallery-box .info-wrap:has(.icon-info) {
-  padding-bottom: 20px;
-}
 .gallery-box .education-info {
   margin-top: 35px;
 }
@@ -6542,14 +6539,6 @@ table + table {
   display: flex;
   width: 100%;
 }
-.icon-info li:not(:first-of-type) {
-  margin-top: -20px;
-}
-@media (max-width: 1199px) {
-  .icon-info li:last-of-type {
-    margin-bottom: -30px;
-  }
-}
 .icon-info strong {
   flex: 0 0 56px;
   padding: 0 20px 0 21px;
@@ -6562,7 +6551,6 @@ table + table {
   font-weight: 500;
 }
 .icon-info strong:after {
-  content: "";
   display: inline-block;
   width: 100%;
 }

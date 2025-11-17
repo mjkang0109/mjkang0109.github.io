@@ -15,7 +15,7 @@ state:
     <div id="wrap">
         <div id="header">
             <h1>
-                한국수목원정원관리<span class="cntTotal">(<span class="total"></span>pages)</span>
+                <%= pageFm.state === 'default' ? '한국수목원정원관리' : pageFm.state[state] %><span class="cntTotal">(<span class="total"></span>pages)</span>
             </h1>
         </div>
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_sitemap`, {}); %>
@@ -59,62 +59,82 @@ state:
                 if (item.items) {
                 item.items.map((depth) => {
                 %>
-                    <tr class="v3<%= depth.ui ? ' done' : '' ;%><%= depth.design ? ' design' : '' ;%>">
+                    <tr class="v3<%= depth.ui || depth.notLink ? ' done' : '' ;%><%= depth.design ? ' design' : '' ;%>">
                         <td class="depth1"><%= depth.title ;%></td>
                         <td class="depth2"></td>
                         <td class="depth3"></td>
                         <td class="depth4"></td>
                         <td class="design"><%= depth.design ? 'O' : '' ;%></td>
                         <td class="ui"><%= depth.ui ? 'O' : '' ;%></td>
-                        <td class="fileName"><%= depth.name ;%>.html</td>
+                        <td class="fileName">
+                            <% if (!depth.notLink) { %>
+                                <%= depth.name ;%>.html
+                            <% } %>
+                        </td>
                         <td class="view">
-                            <a href="./<%= item.name ;%>/<%= depth.name ;%>.html"
-                               target="_blank">View
-                            </a>
+                            <% if (!depth.notLink) { %>
+                                <a href="./<%= item.name ;%>/<%= depth.name ;%>.html"
+                                   target="_blank">View
+                                </a>
+                            <% } %>
                         </td>
                     </tr>
                     <%
                     if (depth.pages) {
                     depth.pages.map((page) => {
                     %>
-                        <tr class="v3<%= page.ui ? ' done' : '' ;%><%= page.design ? ' design' : '' ;%>">
+                        <tr class="v3<%= page.ui || page.notLink ? ' done' : '' ;%><%= page.design ? ' design' : '' ;%>">
                             <td class="depth1"></td>
                             <td class="depth2"><%= page.title ;%></td>
                             <td class="depth3"></td>
                             <td class="depth4"></td>
                             <td class="design"><%= page.design ? 'O' : '' ;%></td>
                             <td class="ui"><%= page.ui ? 'O' : '' ;%></td>
-                            <td class="fileName"><%= page.name ;%>.html</td>
+                            <td class="fileName">
+                                <% if (!page.notLink) { %>
+                                <%= page.name ;%>.html
+                                <% } %>
+                            </td>
                             <td class="view">
+                                <% if (!page.notLink) { %>
                                 <a href="./<%= item.name ;%>/<%= page.name ;%>.html"
                                    target="_blank">View
                                 </a>
+                                <% } %>
                             </td>
                         </tr>
 
                         <%
                         if (page.subItems) {
                         page.subItems.map((subItem) => {
+                            let tinyLength = 0;
+
                         %>
-                            <tr class="v3<%= subItem.ui ? ' done' : '' ;%><%= subItem.design ? ' design' : '' ;%>">
+                            <tr class="v3<%= subItem.ui || subItem.notLink ? ' done' : '' ;%><%= subItem.design ? ' design' : '' ;%>">
                                 <td class="depth1"></td>
                                 <td class="depth2"></td>
                                 <td class="depth3"><%= subItem.title ;%></td>
                                 <td class="depth4"></td>
                                 <td class="design"><%= subItem.design ? 'O' : '' ;%></td>
                                 <td class="ui"><%= subItem.ui ? 'O' : '' ;%></td>
-                                <td class="fileName"><%= subItem.name ;%>.html</td>
+                                <td class="fileName">
+                                    <% if (!subItem.notLink) { %>
+                                    <%= subItem.name ;%>.html
+                                    <% } %>
+                                </td>
                                 <td class="view">
+                                    <% if (!subItem.notLink) { %>
                                     <a href="./<%= item.name ;%>/<%= subItem.name ;%>.html"
                                        target="_blank">View
                                     </a>
+                                    <% } %>
                                 </td>
                             </tr>
                             <%
                             if (subItem.tinyItems) {
                             subItem.tinyItems.map((tinyItem) => {
                             %>
-                                <tr class="v3<%= tinyItem.ui ? ' done' : '' ;%><%= tinyItem.design ? ' design' : '' ;%>">
+                                <tr class="v3<%= tinyItem.ui || tinyItem.notLink ? ' done' : '' ;%><%= tinyItem.design ? ' design' : '' ;%>">
                                     <td class="depth1"></td>
                                     <td class="depth2"></td>
                                     <td class="depth3"></td>

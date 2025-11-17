@@ -19,11 +19,12 @@ navItems = [
                 ui    : false,
             },
             {
-                title : '관람안내',
-                name  : 'viewing',
-                design: false,
-                ui    : false,
-                pages : [
+                title  : '관람안내',
+                name   : 'viewing',
+                notLink: true,
+                design : false,
+                ui     : false,
+                pages  : [
                     {
                         title : '이용안내',
                         name  : 'information',
@@ -31,10 +32,11 @@ navItems = [
                         ui    : false,
                     },
                     {
-                        title : '이용권 구매',
-                        name  : 'ticket',
-                        design: false,
-                        ui    : false,
+                        title  : '입장권 구매',
+                        name   : 'ticket',
+                        notLink: true,
+                        design : false,
+                        ui     : false,
                     },
                     {
                         title : '종합안내도',
@@ -45,6 +47,7 @@ navItems = [
                     {
                         title   : '시설안내',
                         name    : 'facility',
+                        notLink : true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -89,11 +92,12 @@ navItems = [
                 ],
             },
             {
-                title : '둘러보기',
-                name  : 'tour',
-                design: false,
-                ui    : false,
-                pages : [
+                title  : '둘러보기',
+                name   : 'tour',
+                notLink: true,
+                design : false,
+                ui     : false,
+                pages  : [
                     {
                         title : '추천코스',
                         name  : 'recommendCourse',
@@ -127,7 +131,7 @@ navItems = [
                     {
                         title : '이달의 식물',
                         name  : 'thisMonth',
-                        design: false,
+                        design: true,
                         ui    : false,
                     },
                     {
@@ -149,6 +153,12 @@ navItems = [
                         ui    : true,
                     },
                     {
+                        title : '호랑이숲 소개',
+                        name  : 'tigerForest.html',
+                        design: true,
+                        ui    : true,
+                    },
+                    {
                         title : '수목원이야기',
                         name  : 'story',
                         design: true,
@@ -157,14 +167,16 @@ navItems = [
                 ],
             },
             {
-                title : '참여하기',
-                name  : 'application',
-                design: false,
-                ui    : false,
-                pages : [
+                title  : '참여하기',
+                name   : 'application',
+                notLink: true,
+                design : false,
+                ui     : false,
+                pages  : [
                     {
                         title   : '교육 프로그램',
                         name    : 'educationProgram',
+                        notLink : true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -185,12 +197,13 @@ navItems = [
                     {
                         title   : '전시 프로그램',
                         name    : 'exhibition',
+                        notLink : true,
                         design  : true,
                         ui      : true,
                         subItems: [
                             {
                                 title : '기획전시',
-                                name  : 'planningExhibition',
+                                name  : 'exhibition',
                                 design: false,
                                 ui    : false,
                             },
@@ -205,6 +218,7 @@ navItems = [
                     {
                         title   : '행사 프로그램',
                         name    : 'event',
+                        notLink : true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -231,14 +245,16 @@ navItems = [
                 ],
             },
             {
-                title : '산림연구',
-                name  : 'research',
-                design: false,
-                ui    : false,
-                pages : [
+                title  : '산림연구',
+                name   : 'research',
+                notLink: true,
+                design : false,
+                ui     : false,
+                pages  : [
                     {
                         title   : '연구사업',
                         name    : 'business',
+                        notLink : true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -351,11 +367,12 @@ navItems = [
                 ui    : false,
             },
             {
-                title : '관람안내',
-                name  : 'viewing',
-                design: false,
-                ui    : false,
-                pages : [
+                title  : '관람안내',
+                name   : 'viewing',
+                notLink: true,
+                design : false,
+                ui     : false,
+                pages  : [
                     {
                         title : '이용안내',
                         name  : 'information',
@@ -363,10 +380,11 @@ navItems = [
                         ui    : false,
                     },
                     {
-                        title : '이용권 구매',
-                        name  : 'ticket',
-                        design: false,
-                        ui    : false,
+                        title  : '입장권 구매',
+                        name   : 'ticket',
+                        notLink: true,
+                        design : false,
+                        ui     : false,
                     },
                     {
                         title : '종합안내도',
@@ -377,6 +395,7 @@ navItems = [
                     {
                         title   : '시설안내',
                         name    : 'facility',
+                        notLink : true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -421,11 +440,12 @@ navItems = [
                 ],
             },
             {
-                title : '둘러보기',
-                name  : 'tour',
-                design: false,
-                ui    : false,
-                pages : [
+                title  : '둘러보기',
+                name   : 'tour',
+                notLink: true,
+                design : false,
+                ui     : false,
+                pages  : [
                     {
                         title : '추천코스',
                         name  : 'recommendCourse',
@@ -459,13 +479,14 @@ navItems = [
                     {
                         title   : '이달의 식물',
                         name    : 'thisMonth',
+                        notLink : true,
                         design  : false,
                         ui      : false,
                         subItems: [
                             {
                                 title : '소개',
-                                name  : 'thisMonthIntro',
-                                design: false,
+                                name  : 'thisMonth',
+                                design: true,
                                 ui    : false,
                             },
                             {
@@ -499,12 +520,14 @@ navItems = [
             {
                 title : '참여하기',
                 name  : 'application',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
                     {
                         title   : '교육 프로그램',
                         name    : 'educationProgram',
+                        notLink: true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -531,6 +554,7 @@ navItems = [
                     {
                         title   : '행사 프로그램',
                         name    : 'event',
+                        notLink: true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -565,6 +589,7 @@ navItems = [
             {
                 title : '식물연구',
                 name  : 'research',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
@@ -583,13 +608,14 @@ navItems = [
                     {
                         title   : '정원식물 전시·품평회',
                         name    : 'fair',
+                        notLink: true,
                         design  : false,
                         ui      : false,
                         subItems: [
                             {
                                 title : '사업소개',
                                 name  : 'fairIntro',
-                                design: false,
+                                design: true,
                                 ui    : false,
                             },
                             {
@@ -624,23 +650,19 @@ navItems = [
                             },
                         ],
                     },
-                    {
-                        title : '연구자료실',
-                        name  : 'researchData',
-                        design: false,
-                        ui    : false,
-                    },
                 ],
             },
             {
                 title : '반려식물',
                 name  : 'companion',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
                     {
                         title   : '식물관리&상담',
                         name    : '#',
+                        notLink: true,
                         design  : true,
                         ui      : false,
                         subItems: [
@@ -685,7 +707,7 @@ navItems = [
                     {
                         title : '이동형 반려식물 클리닉',
                         name  : 'visitingClinic',
-                        design: true,
+                        design: false,
                         ui    : false,
                     },
                     {
@@ -749,6 +771,7 @@ navItems = [
             {
                 title : '관람안내',
                 name  : 'viewing',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
@@ -761,6 +784,7 @@ navItems = [
                     {
                         title : '입장권 구매',
                         name  : 'ticket',
+                        notLink: true,
                         design: false,
                         ui    : false,
                     },
@@ -773,6 +797,7 @@ navItems = [
                     {
                         title   : '시설안내',
                         name    : 'facility',
+                        notLink: true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -819,9 +844,16 @@ navItems = [
             {
                 title : '둘러보기',
                 name  : 'tour',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
+                    {
+                        title : '추천코스',
+                        name  : 'recommendCourse',
+                        design: false,
+                        ui    : false,
+                    },
                     {
                         title : '테마별 공간 탐방',
                         name  : 'theme',
@@ -843,7 +875,7 @@ navItems = [
                     {
                         title : '이달의 식물',
                         name  : 'thisMonth',
-                        design: false,
+                        design: true,
                         ui    : false,
                     },
                     {
@@ -869,12 +901,14 @@ navItems = [
             {
                 title : '참여하기',
                 name  : 'application',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
                     {
                         title   : '교육 프로그램',
                         name    : 'educationProgram',
+                        notLink: true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -938,19 +972,19 @@ navItems = [
                         subItems: [
                             {
                                 title : '식물 서식지 생육환경 조사: 상세',
-                                name  : 'conservationActivityDetail',
+                                name  : 'conservationDetail',
                                 design: true,
                                 ui    : true,
                             },
                             {
                                 title : '서식지외 연구·증식: 상세',
-                                name  : 'conservationActivityDetail.conservation2',
+                                name  : 'conservationDetail.conservation2',
                                 design: true,
                                 ui    : true,
                             },
                             {
                                 title : '서식지외 보전: 상세',
-                                name  : 'conservationActivityDetail.conservation3',
+                                name  : 'conservationDetail.conservation3',
                                 design: true,
                                 ui    : true,
                             },
@@ -981,6 +1015,7 @@ navItems = [
             {
                 title : '관람안내',
                 name  : 'viewing',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
@@ -991,8 +1026,9 @@ navItems = [
                         ui    : false,
                     },
                     {
-                        title : '이용권 구매',
+                        title : '입장권 구매',
                         name  : 'ticket',
+                        notLink: true,
                         design: false,
                         ui    : false,
                     },
@@ -1005,6 +1041,7 @@ navItems = [
                     {
                         title   : '시설안내',
                         name    : 'facility',
+                        notLink: true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -1051,9 +1088,16 @@ navItems = [
             {
                 title : '둘러보기',
                 name  : 'tour',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
+                    {
+                        title : '추천코스',
+                        name  : 'recommendCourse',
+                        design: false,
+                        ui    : false,
+                    },
                     {
                         title : '테마별 공간 탐방',
                         name  : 'theme',
@@ -1075,7 +1119,7 @@ navItems = [
                     {
                         title : '이달의 식물',
                         name  : 'thisMonth',
-                        design: false,
+                        design: true,
                         ui    : false,
                     },
                     {
@@ -1101,12 +1145,14 @@ navItems = [
             {
                 title : '참여하기',
                 name  : 'application',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
                     {
                         title   : '교육 프로그램',
                         name    : 'educationProgram',
+                        notLink: true,
                         design  : false,
                         ui      : false,
                         subItems: [
@@ -1135,14 +1181,6 @@ navItems = [
                         name    : 'event',
                         design  : false,
                         ui      : false,
-                        subItems: [
-                            {
-                                title : '문화행사',
-                                name  : 'culture',
-                                design: false,
-                                ui    : false,
-                            },
-                        ],
                     },
                     {
                         title : '전시·행사 캘린더',
@@ -1155,6 +1193,7 @@ navItems = [
             {
                 title : '정원여행',
                 name  : 'gardenTour',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
@@ -1176,17 +1215,12 @@ navItems = [
                         design: true,
                         ui    : true,
                     },
-                    {
-                        title : '갤러리',
-                        name  : 'gallery',
-                        design: false,
-                        ui    : false,
-                    },
                 ],
             },
             {
                 title : '코리아가든쇼',
                 name  : 'koreaGarden',
+                notLink: true,
                 design: false,
                 ui    : false,
                 pages : [
@@ -1194,7 +1228,7 @@ navItems = [
                         title : '공모전 소개',
                         name  : 'kGardenIntro',
                         design: true,
-                        ui    : true,
+                        ui    : false,
                     },
                     {
                         title : '올해의 가든쇼',
@@ -1204,7 +1238,7 @@ navItems = [
                     },
                     {
                         title : '올해의 가든쇼: 공모전 접수 팝업',
-                        name  : '/popup/applyPopup',
+                        name  : 'popup/applyPopup',
                         design: true,
                         ui    : true,
                     },
@@ -1495,12 +1529,6 @@ navItems = [
                         ],
                     },
                     {
-                        title : '이용안내',
-                        name  : 'baekduInformation',
-                        design: false,
-                        ui    : false,
-                    },
-                    {
                         title   : '가든샵 판매 신청',
                         name    : 'shopApplication',
                         design  : true,
@@ -1526,7 +1554,7 @@ navItems = [
                             },
                             {
                                 title : '가든샵 신청: 견본신청 팝업',
-                                name  : '/popup/samplePopup',
+                                name  : 'popup/samplePopup',
                                 design: true,
                                 ui    : true,
                             },
@@ -1629,12 +1657,6 @@ navItems = [
                         ],
                     },
                     {
-                        title : '이용안내',
-                        name  : 'sejongInformation',
-                        design: false,
-                        ui    : false,
-                    },
-                    {
                         title   : '가든샵 판매 신청',
                         name    : 'shopApplication.sejong',
                         design  : false,
@@ -1660,7 +1682,7 @@ navItems = [
                             },
                             {
                                 title : '가든샵 신청: 견본신청 팝업',
-                                name  : '/popup/samplePopup',
+                                name  : 'popup/samplePopup',
                                 design: true,
                                 ui    : true,
                             },
@@ -1764,12 +1786,6 @@ navItems = [
                         ],
                     },
                     {
-                        title : '이용안내',
-                        name  : 'gardenInformation',
-                        design: false,
-                        ui    : false,
-                    },
-                    {
                         title   : '가든샵 판매 신청',
                         name    : 'shopApplication.garden',
                         design  : true,
@@ -1795,7 +1811,7 @@ navItems = [
                             },
                             {
                                 title : '가든샵 신청: 견본신청 팝업',
-                                name  : '/popup/samplePopup',
+                                name  : 'popup/samplePopup',
                                 design: true,
                                 ui    : true,
                             },
@@ -1898,12 +1914,6 @@ navItems = [
                         ],
                     },
                     {
-                        title : '이용안내',
-                        name  : 'nativeInformation',
-                        design: false,
-                        ui    : false,
-                    },
-                    {
                         title   : '가든샵 판매 신청',
                         name    : 'shopApplication.native',
                         design  : true,
@@ -1929,7 +1939,7 @@ navItems = [
                             },
                             {
                                 title : '가든샵 신청: 견본신청 팝업',
-                                name  : '/popup/samplePopup',
+                                name  : 'popup/samplePopup',
                                 design: true,
                                 ui    : true,
                             },

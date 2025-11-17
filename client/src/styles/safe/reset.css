@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* reset 절대 수정금지*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Pretendard", "Montserrat", "나눔고딕", "Nanum Gothic", "돋움", "dotum", sans-serif;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: keep-all;
+}
+
+.english {
+  font-family: "Montserrat";
+}
+
+.korean {
+  font-family: "Pretendard";
+}
+
+.koreanA1 {
+  font-family: "";
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, strong, span, button, a, li {
+  color: #222;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button, textarea, select {
+  font-size: 16px;
+  box-shadow: none;
+  border-radius: 0;
+  outline-style: none;
+  font-family: inherit;
+  font-weight: 300;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  color: #818181;
+}
+
+a {
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  color: #222;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul, ol, li, dl, dt, dd {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  word-break: break-all;
+  word-wrap: break-word;
+  table-layout: fixed;
+}
+
+caption, legend {
+  visibility: hidden;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}

@@ -1,0 +1,100 @@
+<%
+const locations = [
+    '강남구',
+    '강동구',
+    '강북구',
+    '강서구',
+    '관악구',
+    '광진구',
+    '구로구',
+    '금천구',
+    '노원구',
+    '도봉구',
+    '동대문구',
+    '동작구',
+    '마포구',
+    '서대문구',
+    '서초구',
+    '성동구',
+    '성북구',
+    '송파구',
+    '양천구',
+    '영등포구',
+    '용산구',
+    '은평구',
+    '종로구',
+    '중구',
+    '중랑구',
+];
+%>
+<div class="search-wrap">
+    <label for="search-loc">피해자지원기관</label>
+    <input type="search"
+           id="search-loc"
+           placeholder="직접 검색어를 입력하세요">
+</div>
+<div class="buttons"
+     role="tablist">
+    <%
+    locations.map((loc, i) => {
+    %>
+        <button type="button"
+                class="loc<%= i + 1 %>"
+                role="tab"
+                aria-selected="<%= i === 0; %>"
+                aria-controls="panel<%= i + 1; %>">
+            <%= loc; %>
+        </button>
+    <%
+    });
+    %>
+</div>
+<div class="panel-title">
+    <strong>서울세이프ON: 피해지원기관</strong>
+    <p>좌측 지도에서 해당 지역을 검색해보세요</p>
+</div>
+<%
+const topItems = [
+    '복합', '성폭력', '가정폭력', '성희롱', '디지털성범죄', '스토킹', '성매매/성착취', '아동학대', '성차별'
+];
+
+const bottomItems = [
+    '통합지원', '교육지원', '법률지원', '경제적지원', '상담지원'
+];
+
+const random = () => {
+    return Math.floor(Math.random() * 1001);
+};
+%>
+<div class="panels">
+    <%
+    locations.map((loc, i) => {
+    %>
+        <div id="panel<%= i + 1 %>"
+                <%- i !== 0 ? 'hidden' : '' %>
+                class="panel"
+             role="tabpanel">
+            <ul class="items">
+                <% topItems.map(top => { %>
+                    <li>
+                        <strong><%= top %></strong>
+                        <span><%= random(); %></span>
+                    </li>
+                <% }) %>
+            </ul>
+            <div class="bottom">
+                <strong>지원서비스</strong>
+                <ul class="items">
+                    <% bottomItems.map(bottom => { %>
+                        <li>
+                            <strong><%= bottom %></strong>
+                            <span><%= random(); %></span>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    <%
+    });
+    %>
+</div>

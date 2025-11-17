@@ -1,0 +1,45 @@
+---
+group: safe
+state:
+    default: 서울세이프
+---
+<%
+imgPath = `/images/safe`;
+%>
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes"/>
+        <title>On Safe Seoul</title>
+        <link rel="icon" href="<%= imgPath %>/common/fvc.png" type="image/x-icon">
+        <link rel="stylesheet"
+              href="<%= process.env.BASE_PATH %>/styles/safe/default<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+        <link rel="stylesheet"
+              href="<%= process.env.BASE_PATH %>/styles/safe/common<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+        <link rel="stylesheet"
+              href="<%= process.env.BASE_PATH %>/styles/safe/main<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+        <script src="<%= process.env.BASE_PATH %>/scripts/safe/lib/jquery-1.11.0.js"></script>
+        <script src="<%= process.env.BASE_PATH %>/scripts/safe/lib/gsap.min.js"></script>
+        <script src="<%= process.env.BASE_PATH %>/scripts/safe/common.js"></script>
+        <script src="<%= process.env.BASE_PATH %>/scripts/safe/main.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="mask"></div>
+            <%- include(`${process.env.INCLUDE_PATH}/safe/partials/_header`, {
+                
+            }) %>
+            <!--메뉴전체보기-->
+            <main id="MainCon">
+                <%- include(`${process.env.INCLUDE_PATH}/safe/partials/_main`, {
+                    
+                }) %>
+            </main><!--//mainContainer-->
+            <%- include(`${process.env.INCLUDE_PATH}/safe/partials/_footer`, {
+                
+            }) %>
+<!--//footer-->
+        </div>
+    </body>
+</html>

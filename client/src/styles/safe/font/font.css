@@ -1,0 +1,49 @@
+/* font */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: url("Pretendard-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: url("Pretendard-Regular.woff") format("woff"), url("Pretendard-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: url("Pretendard-Medium.woff") format("woff"), url("Pretendard-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: url("Pretendard-Bold.woff") format("woff"), url("Pretendard-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: url("Pretendard-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-display: swap;
+  src: url("Montserrat-Medium.woff") format("woff"), url("Montserrat-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-display: swap;
+  src: url("Montserrat-ExtraBold.woff") format("woff"), url("Montserrat-ExtraBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "SokchoSeaDotum";
+  font-display: swap;
+  font-weight: normal;
+  src: url("SokchoBadaDotum.woff") format("woff"), url("SokchoBadaDotum.otf") format("truetype");
+}

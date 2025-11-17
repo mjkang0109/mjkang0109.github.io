@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 100;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream1.woff2") format("woff2"), url("./../fonts/SCoreDream1.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 200;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream2.woff2") format("woff2"), url("./../fonts/SCoreDream2.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 300;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream3.woff2") format("woff2"), url("./../fonts/SCoreDream3.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream4.woff2") format("woff2"), url("./../fonts/SCoreDream4.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream5.woff2") format("woff2"), url("./../fonts/SCoreDream5.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 600;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream6.woff2") format("woff2"), url("./../fonts/SCoreDream6.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream7.woff2") format("woff2"), url("./../fonts/SCoreDream7.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 800;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream8.woff2") format("woff2"), url("./../fonts/SCoreDream8.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SCoreDream";
+  font-weight: 900;
+  font-style: normal;
+  src: url("./../fonts/SCoreDream9.woff2") format("woff2"), url("./../fonts/SCoreDream9.woff") format("woff");
+  font-display: swap;
+}
+/* EliceDigitalBaeum */
+@font-face {
+  font-family: "EliceDigitalBaeum";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./../fonts/EliceDigitalBaeumRegular.woff2") format("woff2"), url("./../fonts/EliceDigitalBaeumRegular.woff") format("woff"), url("./../fonts/EliceDigitalBaeumRegular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "EliceDigitalBaeum";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./../fonts/EliceDigitalBaeumBold.woff2") format("woff2"), url("./../fonts/EliceDigitalBaeumBold.woff") format("woff"), url("./../fonts/EliceDigitalBaeumBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SBAggro";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./../fonts/SBAggroL.woff") format("woff"), url("./../fonts/SBAggroL.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SBAggro";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./../fonts/SBAggroM.woff") format("woff"), url("./../fonts/SBAggroM.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SBAggro";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./../fonts/SBAggroB.woff") format("woff"), url("./../fonts/SBAggroB.otf") format("opentype");
+  font-display: swap;
+}
+.visual {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./../../images/safe/main/main_v1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+@media (max-width: 1199px) {
+  .visual {
+    background-image: url("./../../images/safe/main/visual-mobile.jpg");
+  }
+}
+.visual-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1872px;
+  margin: 0 auto;
+  padding: 0 170px;
+}
+.visual-content > p {
+  margin-top: 40px;
+  letter-spacing: -1px;
+  font-size: 67px;
+  line-height: 86px;
+  color: #23382b;
+  font-weight: 300;
+  font-family: "Noto Sans KR", serif;
+}
+.visual-content > strong {
+  margin-top: 45px;
+  font-size: 24px;
+  color: #23382b;
+  font-weight: 700;
+}
+.visual-content > strong + .button-round {
+  margin-top: 72px;
+}
+.visual-content .button-round {
+  align-self: flex-start;
+}
+
+.button-round {
+  display: inline-flex;
+  align-items: center;
+  padding: 25px 33px;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.button-round.arrow {
+  min-width: 300px;
+  color: #fff;
+  background: #df1f7e url("./../../images/safe/main/icon-arrow-right.png") no-repeat right 38px top 50%;
+}
+
+.content {
+  padding: 102px 0 96px;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+.content > strong {
+  display: block;
+  text-align: center;
+  font-family: "SCoreDream", serif;
+  font-size: 60px;
+  color: #1d1c1c;
+  line-height: 80px;
+  font-weight: 800;
+}
+.content > strong > span {
+  margin-left: 12px;
+  font-family: "Noto Sans KR", serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  color: #222;
+}
+.content .content-wrap {
+  display: flex;
+  gap: 40px;
+  margin-top: 70px;
+}
+.content .content-wrap a {
+  display: block;
+}
+.content .left strong,
+.content .right strong {
+  display: block;
+  margin-bottom: 35px;
+  font-size: 26px;
+  line-height: 65px;
+  font-weight: 800;
+}
+.content .left p,
+.content .right p {
+  margin-top: 37px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  color: #222;
+  font-weight: bold;
+}
+.content .right {
+  flex: 1;
+  display: block;
+}
+.content .items {
+  display: flex;
+  gap: 40px;
+}
+
+.map {
+  display: grid;
+  grid-template-columns: 696px auto;
+  position: relative;
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 135px 122px 89px 50px;
+  background: url("./../../images/safe/main/bg-location.png") no-repeat 100% 100%;
+}
+.map:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  height: 1px;
+  background-color: #e4e4e4;
+}
+.map .search-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+.map .search-wrap label {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
+.map .search-wrap input[type=search] {
+  flex: 1;
+  width: 100%;
+  appearance: none;
+  max-width: 470px;
+  padding: 22px 25px;
+  border-radius: 20px;
+  font-size: 16px;
+  background: #f8f8f8 url("./../../images/safe/main/icon-search.png") no-repeat top 50% right 25px;
+}
+.map .search-wrap input[type=search]::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.map .panel-title {
+  position: relative;
+  margin-top: 188px;
+  padding-left: 56px;
+}
+.map .panel-title:before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  left: 56px;
+  width: 126px;
+  height: 98px;
+  background: url("./../../images/safe/main/icon-seoul.png") no-repeat 0 0;
+}
+.map .panel-title strong {
+  font-size: 22px;
+  line-height: 32px;
+  color: #fff;
+  font-family: "SBAggro", serif;
+  font-weight: 700;
+}
+.map .panel-title p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+}
+.map .panels {
+  margin-top: 35px;
+  padding-left: 56px;
+}
+.map .panel .items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 19px;
+}
+.map .panel li {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  height: 58px;
+  border-radius: 100px;
+  background-color: #fff;
+  padding: 0 20px;
+}
+.map .panel li strong {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;
+}
+.map .panel li span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #eb4a1f;
+}
+.map .bottom > strong {
+  display: block;
+  margin: 36px 0 20px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  font-family: "Noto Sans KR", serif;
+  font-weight: 700;
+}
+.map .buttons {
+  position: relative;
+  grid-row: 1/4;
+  background: url("./../../images/safe/main/map.png") no-repeat 0 0;
+}
+.map .buttons:has(.loc22[aria-selected=true]):before {
+  content: "";
+  position: absolute;
+  top: 83px;
+  left: 213px;
+  width: 159px;
+  height: 211px;
+  background: url("./../../images/safe/main/loc22.png") no-repeat 50% 50%;
+}
+.map .buttons button {
+  position: absolute;
+  font-family: "EliceDigitalBaeum", serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.map .buttons button[aria-selected=true] {
+  padding-top: 39px;
+  background: url("./../../images/safe/main/icon-loc.png") no-repeat 50% 0;
+  color: #fff;
+}
+.map .buttons button[aria-selected=true].loc22 {
+  top: 150px;
+}
+.map .buttons .loc1 {
+  top: 485px;
+  left: 504px;
+}
+.map .buttons .loc2 {
+  top: 335px;
+  left: 631px;
+}
+.map .buttons .loc3 {
+  top: 103px;
+  left: 411px;
+}
+.map .buttons .loc4 {
+  top: 318px;
+  left: 78px;
+}
+.map .buttons .loc5 {
+  top: 544px;
+  left: 298px;
+}
+.map .buttons .loc6 {
+  top: 310px;
+  left: 522px;
+}
+.map .buttons .loc7 {
+  top: 466px;
+  left: 160px;
+}
+.map .buttons .loc8 {
+  top: 579px;
+  left: 210px;
+}
+.map .buttons .loc9 {
+  top: 102px;
+  left: 508px;
+}
+.map .buttons .loc10 {
+  top: 52px;
+  left: 431px;
+}
+.map .buttons .loc11 {
+  top: 264px;
+  left: 465px;
+}
+.map .buttons .loc12 {
+  top: 458px;
+  left: 316px;
+}
+.map .buttons .loc13 {
+  top: 303px;
+  left: 239px;
+}
+.map .buttons .loc14 {
+  top: 277px;
+  left: 306px;
+}
+.map .buttons .loc15 {
+  top: 513px;
+  left: 413px;
+}
+.map .buttons .loc16 {
+  top: 334px;
+  left: 469px;
+}
+.map .buttons .loc17 {
+  top: 189px;
+  left: 440px;
+}
+.map .buttons .loc18 {
+  top: 427px;
+  left: 575px;
+}
+.map .buttons .loc19 {
+  top: 416px;
+  left: 130px;
+}
+.map .buttons .loc20 {
+  top: 430px;
+  left: 215px;
+}
+.map .buttons .loc21 {
+  top: 355px;
+  left: 372px;
+}
+.map .buttons .loc22 {
+  top: 189px;
+  left: 264px;
+}
+.map .buttons .loc23 {
+  top: 222px;
+  left: 356px;
+}
+.map .buttons .loc24 {
+  top: 289px;
+  left: 405px;
+}
+.map .buttons .loc25 {
+  top: 212px;
+  left: 537px;
+}

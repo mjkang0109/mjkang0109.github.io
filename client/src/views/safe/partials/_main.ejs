@@ -1,0 +1,211 @@
+<section class="visual">
+    <div class="visual-content">
+        <span class="logo-wrap">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 528,
+            height: 74,
+            isSimply: true,
+            source: `${imgPath}/main/visual-logo.png`,
+            alt: '서울세이프 ON',
+            }); %>
+        </span>
+        <p>폭력피해 시민을 위한
+            <br>통합지원 플랫폼입니다.</p>
+        <strong>도움이 필요할 때, 서울세이프ON:이 합께합니다.</strong>
+        <a href="#"
+           class="button-round arrow">피해자지원안내
+        </a>
+    </div>
+</section>
+<section class="content">
+    <strong>Contents<span>폭력예방</span></strong>
+    <div class="content-wrap">
+        <div class="left">
+            <strong>영상</strong>
+            <a href="#">
+                <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 650,
+                height: 365,
+                isSimply: true,
+                source: `${imgPath}/main/video-poster.png`,
+                alt: '오늘도 로그인 했습니다',
+                }); %>
+                </span>
+                <p class="desc">오늘도 로그인했습니다 1부</p>
+            </a>
+        </div>
+        <div class="right">
+            <strong>카드뉴스</strong>
+            <ul class="items">
+                <li>
+                    <a href="#">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 358,
+                            height: 365,
+                            isSimply: true,
+                            source: `${imgPath}/main/card-news1.png`,
+                            alt: '인스타그램',
+                            }); %>
+                        </span>
+                        <p class="desc">인스타그램</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 358,
+                            height: 365,
+                            isSimply: true,
+                            source: `${imgPath}/main/card-news2.png`,
+                            alt: '네이버 블로그',
+                            }); %>
+                        </span>
+                        <p class="desc">네이버 블로그</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="map">
+    <%- include(`${process.env.INCLUDE_PATH}/safe/partials/_map`, {
+    }) %>
+</section>
+<section class="service">
+    <div class="left">
+        <strong>서울세이프 ON :<br>피해 지원서비스</strong>
+    </div>
+    <%
+    const items = [
+        '경제적 지원',
+        '교육지원',
+        '구조보호',
+        '상담지원',
+        '의료지원',
+        '자립자활지원',
+    ];
+    const icons = [
+        {
+            name  : 'economic',
+            width : 70,
+            height: 69,
+        },
+        {
+            name  : 'edu',
+            width : 70,
+            height: 67,
+        },
+        {
+            name  : 'protection',
+            width : 68,
+            height: 57,
+        },
+        {
+            name  : 'consultation',
+            width : 74,
+            height: 62,
+        },
+        {
+            name  : 'health',
+            width : 75,
+            height: 68,
+        },
+        {
+            name  : 'independence',
+            width : 78,
+            height: 58,
+        },
+    ];
+    %>
+    <ul class="right">
+        <% items.map((item, i) => { %>
+            <li>
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: icons[i].width,
+                    height: icons[i].height,
+                    isSimply: true,
+                    source: `${imgPath}/main/icon-${icons[i].name}.png`,
+                    alt: item,
+                    }); %>
+                </span>
+                <strong><%= item; %></strong>
+            </li>
+        <% }); %>
+    </ul>
+</section>
+<section class="archive">
+    <div class="left">
+        <strong>
+            아카이브+
+            <a href="#"
+               class="link-more">
+                <span class="a11y">더보기</span></a>
+        </strong>
+        <p>양성평등과 관련된 통계자료 • 정책연구자료 • 기증자료를 제공합니다.</p>
+
+        <% const archiveItems = [
+            {
+                title: '성인지 통계',
+                desc : '성별로 불평등한 사회를 보여주고<br>이를 개선하기 위해 만들어지는<br>모든 통계를 모았습니다.',
+            },
+            {
+                title: '젠더 아카이브',
+                desc : '서울시여성가족재단의<br>연구보고서와 원자료를 모았습니다.',
+            },
+            {
+                title: '기증자료 전시관',
+                desc : '양성평등과 관련된 자료들을<br>유형별, 주제별로 모았습니다.',
+            },
+        ]; %>
+
+        <ul class="items">
+            <% archiveItems.map((item, i) => { %>
+                <li>
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 290,
+                        height: 230,
+                        isSimply: true,
+                        source: `${imgPath}/main/archive${i + 1}.jpg`,
+                        alt: item.desc,
+                        }); %>
+                    </span>
+                    <strong><%= item.title %></strong>
+                    <p><%- item.desc %></p>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <%
+                const banners = [
+                    '서울세이프ON 오픈 퀴즈 이벤트: 퀴즈 풀면 100분께 선물 / 기간: 2025. 11. 25부터 2025. 12. 1까지',
+                    'NO EXCUSE 멈추는 지금, 안전한 내일. 2025년 아동학대예방의날 및 폭력추방주간 기념행사 / 2025년 11우얼 27일 (목) 서울여성플라자 1층 피움서울 외',
+                    '양성평등 역량강화 교육. 일상 속 성인지 감수성부터 정책의 양성평등 실현까지! 양성평등 역량강화 교육으로 함께 만들어가요. 서울시 여성가족재단 온라인학습지원센터 주최'
+                ];
+                %>
+                <% banners.map((banner, i) => { %>
+                    <li>
+                        <a href="#">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 650,
+                            height: 650,
+                            isSimply: true,
+                            source: `${imgPath}/main/event_banner${i + 1}.png`,
+                            alt: banner,
+                            }); %>
+                        </span>
+                        </a>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</section>

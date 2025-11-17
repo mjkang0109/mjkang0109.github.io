@@ -58,27 +58,27 @@ state:
         <!-- contents -->
         <div id="body">
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
-            title: `<strong>정원소재 가늠터(Trial Garden)는 </strong><br><strong>새로운 정원소재를 찾아내기 위해 </strong><br><strong>다양한 식물을 시험하고 평가하는 정원입니다. </strong>`,
-            desc: '국립세종수목원은 국민과 함께하는 <strong>반려식물프로젝트</strong>를 통해 행복을 더하고 <br><strong>사회적 가치 실현과 정원문화 확산</strong>을 위해 노력합니다. ',
+            title: `<strong>코리아가든쇼</strong>`,
+            desc: '정원문화 대중화 및 생활 가드닝에 대한 <strong>관심 고취</strong>와 <br><strong>정원산업 발전을 도모</strong>하고 국민들에게 홍보 ',
             img: 'k-garden',
             type: 'kGarden',
             }) %>
             <section class="detail-section">
-                <strong class="title-leaves">행사 목적</strong>
+                <strong class="title-leaves">사용절차</strong>
                 <ul class="intro-items">
                     <%
                     const items = [
                         {
-                            title: '자생식물',
-                            desc : '정원과 어울리는 우리 산과 들에서 자라는 식물',
+                            desc : '전 국민의 정원문화 참여와<br>가드닝에 대한 관심 고취',
                         },
                         {
-                            title: '신품종',
-                            desc : '우리나라의 꽃과 나무로 만든 새로운 품종',
+                            desc : '정원산업 발전을 위한<br>수준 높은 정원 작품 전시',
                         },
                         {
-                            title: '재배품종',
-                            desc : '오랫동안 정원식물로 사랑받아 온 재배품종',
+                            desc : '우수한 정원 디자이너를<br>발굴·육성하고 국민들에게 홍보',
+                        },
+                        {
+                            desc : '국내 최고 권위 가든쇼로서<br>지역 정원박람회 활성화를 견인',
                         },
                     ];
                     %>
@@ -86,7 +86,7 @@ state:
                     <li>
                         <span class="img-wrap">
                             <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                            width: 450,
+                            width: 330,
                             height: 253,
                             isSimply: true,
                             source: `${imgPath}/kgarden-intro${i + 1}.jpg`,
@@ -94,7 +94,6 @@ state:
                             }); %>
                         </span>
                         <div class="desc-wrap">
-                            <strong class="title"><%- item.title ;%></strong>
                             <p class="desc"><%- item.desc; %></p>
                         </div>
                     </li>

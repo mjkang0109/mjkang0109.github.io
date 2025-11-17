@@ -262,8 +262,8 @@ $imgPath: "./../../images/koagi";
 
         > li {
             display: flex;
-            padding: 22px 0;
             border-radius: 20px;
+            border: 1px solid #e5e5e5;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 flex-direction: column;
                 padding: 0;
@@ -275,14 +275,11 @@ $imgPath: "./../../images/koagi";
             justify-content: center;
             align-items: center;
             flex: 0 0 145px;
-            background-color: #013569;
             font-size: 22px;
-            color: #fff;
+            color: #000;
             font-weight: 700;
-            border-radius: 20px 0 0 20px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 flex: 0 0 auto;
-                border-radius: 20px 20px 0 0;
                 padding: 20px;
             }
         }
@@ -290,13 +287,9 @@ $imgPath: "./../../images/koagi";
         .dot-caution {
             flex: 1;
             padding: 22px 36px;
-            border: 1px solid #e5e5e5;
             border-left: none;
-            border-radius: 0 20px 20px 0;
             @include m.respond-to(map.get(m.$max, 1199)) {
-                border: 1px solid #e5e5e5;
                 border-top: none;
-                border-radius: 0 0 20px 20px;
                 padding: 20px;
             }
         }

@@ -1,0 +1,105 @@
+---
+group: native
+state:
+    default: 이달의 식물
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립한국자생식물원';
+    currentCategory = 'native';
+    currentNav = 'tour';
+    imgPath = `${process.env.IMG_PATH}/koagi`;
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory ;%>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+        type: 'plant',
+        currentNav: '둘러보기',
+        key: '국민이 행복한 수목원',
+        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: '이달의 식물',
+        desc: '수목원의 이달에 선정된 식물을 소개합니다. 많은 관람객분이 추천해주셨습니다.',
+        depths: [
+        '둘러보기',
+        '이달의 식물',
+        ],
+        }) %>
+        <!-- // title -->
+        <!-- contents -->
+        <div id="body">
+            <div class="recent-item">
+                <a href="#">
+                    <div class="left">
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 434,
+                        height: 330,
+                        isSimply: true,
+                        source: `${imgPath}/dummy-this-month.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                    </div>
+                    <div class="right">
+                        <strong class="title-underline">
+                            <strong>[2025.08.14.] 국립백두대간수목원 개화 현황</strong>
+                            <span class="badges">
+                            <span class="badge small cherry">NEW</span>
+                        </span>
+                        </strong>
+                        <p class="desc">21일 한국수목원정원관리원 대회의실에서 한국수목원정원관리원 노동조합과 ‘2025년단체협약’을 기관 최초로 체결한
+                            후 기념사진을 찍고 있다. 왼쪽에서 네 번째 심상택이사장, 오른쪽에서 네 번째 윤홍균 노동조합 위원장.
+                        </p>
+                        <p class="date">2025-06-29</p>
+                    </div>
+                </a>
+            </div>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
+            }) %>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+            dummy: 'month',
+            title: '[‘25.08.14.] 국립백두대간수목원 개화 현황 ',
+            titleOverflow: true,
+            date: '2025-06-29',
+            desc: 'hide'
+            }) %>
+        </div>
+        <!-- // contents -->
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentName,
+        currentCategory,
+        }) %>
+        <!-- // footer -->
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

@@ -1986,9 +1986,6 @@ body.scrolling #header {
     padding: 9px 15px 15px;
   }
 }
-.gallery-box .info-wrap:has(.icon-info) {
-  padding-bottom: 20px;
-}
 .gallery-box .education-info {
   margin-top: 35px;
 }
@@ -5962,27 +5959,43 @@ table + table {
 .custom-visual.conservation .left {
   background-image: url("./../../images/koagi/background-banner-conservation.png");
 }
-.custom-visual.kGarden {
+.custom-visual.fair {
   flex-direction: row-reverse;
 }
-.custom-visual.kGarden .left {
+@media (max-width: 1199px) {
+  .custom-visual.fair {
+    flex-direction: column-reverse;
+  }
+}
+.custom-visual.fair .left {
   background: #f9f9f9;
 }
 @media (max-width: 1199px) {
-  .custom-visual.kGarden .left {
-    margin-right: -15px;
-    margin-left: 0;
+  .custom-visual.fair .right {
+    margin-right: 0;
+    margin-left: -15px;
   }
+}
+.custom-visual.fair .title strong {
+  font-size: 30px;
+  line-height: 40px;
+}
+.custom-visual.kGarden {
+  flex-direction: row-reverse;
+}
+@media (max-width: 1199px) {
+  .custom-visual.kGarden {
+    flex-direction: column-reverse;
+  }
+}
+.custom-visual.kGarden .left {
+  background: #f9f9f9;
 }
 @media (max-width: 1199px) {
   .custom-visual.kGarden .right {
     margin-right: 0;
     margin-left: -15px;
   }
-}
-.custom-visual.kGarden .title strong {
-  font-size: 30px;
-  line-height: 40px;
 }
 .custom-visual + .ticket-info {
   margin-top: 127px;
@@ -6044,7 +6057,7 @@ table + table {
   content: "”";
   position: absolute;
   right: -43px;
-  top: -1px;
+  bottom: -1px;
   font-size: 65px;
   font-weight: 500;
   font-family: "SBAggro", serif;
@@ -6542,14 +6555,6 @@ table + table {
   display: flex;
   width: 100%;
 }
-.icon-info li:not(:first-of-type) {
-  margin-top: -20px;
-}
-@media (max-width: 1199px) {
-  .icon-info li:last-of-type {
-    margin-bottom: -30px;
-  }
-}
 .icon-info strong {
   flex: 0 0 56px;
   padding: 0 20px 0 21px;
@@ -6562,7 +6567,6 @@ table + table {
   font-weight: 500;
 }
 .icon-info strong:after {
-  content: "";
   display: inline-block;
   width: 100%;
 }
@@ -7366,8 +7370,8 @@ table + table {
 }
 .flag-item > li {
   display: flex;
-  padding: 22px 0;
   border-radius: 20px;
+  border: 1px solid #e5e5e5;
 }
 @media (max-width: 1199px) {
   .flag-item > li {
@@ -7380,31 +7384,24 @@ table + table {
   justify-content: center;
   align-items: center;
   flex: 0 0 145px;
-  background-color: #013569;
   font-size: 22px;
-  color: #fff;
+  color: #000;
   font-weight: 700;
-  border-radius: 20px 0 0 20px;
 }
 @media (max-width: 1199px) {
   .flag-item strong {
     flex: 0 0 auto;
-    border-radius: 20px 20px 0 0;
     padding: 20px;
   }
 }
 .flag-item .dot-caution {
   flex: 1;
   padding: 22px 36px;
-  border: 1px solid #e5e5e5;
   border-left: none;
-  border-radius: 0 20px 20px 0;
 }
 @media (max-width: 1199px) {
   .flag-item .dot-caution {
-    border: 1px solid #e5e5e5;
     border-top: none;
-    border-radius: 0 0 20px 20px;
     padding: 20px;
   }
 }
@@ -7563,6 +7560,172 @@ table + table {
 .fold-item .detail-items > ul {
   margin-top: 0;
   gap: 62px 25px;
+}
+
+.division-number {
+  display: flex;
+  gap: 50px;
+  counter-reset: number 0;
+  margin-top: 100px;
+  padding-top: 100px;
+  border-top: 1px solid #e5e5e5;
+}
+@media (max-width: 1199px) {
+  .division-number {
+    flex-direction: column;
+    gap: 150px;
+    padding-top: 150px;
+  }
+}
+.division-number > div {
+  flex: 1;
+}
+.division-number > div > strong {
+  position: relative;
+  padding-left: 122px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .division-number > div > strong {
+    padding-left: 0;
+  }
+}
+.division-number > div > strong:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  counter-increment: number;
+  content: "0" counter(number);
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1199px) {
+  .division-number > div > strong:before {
+    top: -100%;
+    margin-top: -50px;
+  }
+}
+.division-number > div > p {
+  padding-left: 122px;
+  margin-bottom: 55px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .division-number > div > p {
+    padding-left: 0;
+  }
+}
+.division-number > div > .img-wrap {
+  display: block;
+}
+.division-number > div > .img-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.recent-item + .gCount1 {
+  margin-top: 90px;
+}
+.recent-item > a {
+  display: flex;
+}
+@media (max-width: 1199px) {
+  .recent-item > a {
+    flex-direction: column;
+  }
+}
+.recent-item .left {
+  flex: 0 0 434px;
+}
+@media (max-width: 1199px) {
+  .recent-item .left {
+    flex: 0 0 auto;
+  }
+}
+.recent-item .right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid #dfdfdf;
+  border-left: none;
+  padding: 58px 45px;
+}
+@media (max-width: 1199px) {
+  .recent-item .right {
+    border: 1px solid #dfdfdf;
+    border-top: none;
+    padding: 15px;
+  }
+}
+.recent-item .img-wrap img {
+  width: 100%;
+  height: auto;
+}
+.recent-item .title-underline {
+  font-size: 0;
+}
+.recent-item .title-underline strong {
+  margin-right: 13px;
+  font-size: 23px;
+  text-decoration: underline;
+  font-weight: 600;
+  line-height: 36px;
+  vertical-align: middle;
+}
+@media (max-width: 1199px) {
+  .recent-item .title-underline strong {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.recent-item .badges {
+  display: inline-flex !important;
+  width: auto !important;
+  vertical-align: middle;
+}
+.recent-item .desc {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #595959;
+}
+@media (max-width: 1199px) {
+  .recent-item .desc {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 23px;
+  }
+}
+.recent-item .date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: auto;
+  color: #727272;
+}
+@media (max-width: 1199px) {
+  .recent-item .date {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 22px;
+    background-position: 0 2px;
+  }
+}
+.recent-item .date:before {
+  content: "";
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+  background: url("./../../images/koagi/icon-calendar.png") no-repeat 50% 50%;
 }
 
 @media all and (max-width: 1199px) {

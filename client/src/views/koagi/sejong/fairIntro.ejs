@@ -1,0 +1,150 @@
+---
+group: sejong
+state:
+    default: 전시/품평회 소개
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립세종수목원';
+    currentCategory = 'sejong';
+    currentNav = 'research';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_businessItems`, {
+
+    }) %>
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+        type: 'plant',
+        currentNav: '코리아가든쇼',
+        key: '국민이 행복한 수목원',
+        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: '정원식물 전시·품평회',
+        depths: [
+        '식물연구',
+        '정원식물 전시·품평회',
+        '사업소개',
+        ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
+            title: `<strong>정원소재 가늠터(Trial Garden)는 </strong><br><strong>새로운 정원소재를 찾아내기 위해 </strong><br><strong>다양한 식물을 시험하고 평가하는 정원입니다. </strong>`,
+            desc: '국립세종수목원은 국민과 함께하는 <strong>반려식물프로젝트</strong>를 통해 행복을 더하고 <br><strong>사회적 가치 실현과 정원문화 확산</strong>을 위해 노력합니다. ',
+            img: 'sejong-fair',
+            type: 'fair',
+            }) %>
+            <section class="detail-section">
+                <ul class="intro-items">
+                    <%
+                    const items = [
+                        {
+                            title: '자생식물',
+                            desc : '정원과 어울리는 우리 산과 들에서 자라는 식물',
+                        },
+                        {
+                            title: '신품종',
+                            desc : '우리나라의 꽃과 나무로 만든 새로운 품종',
+                        },
+                        {
+                            title: '재배품종',
+                            desc : '오랫동안 정원식물로 사랑받아 온 재배품종',
+                        },
+                    ];
+                    %>
+                    <% items.map((item, i) => { %>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 450,
+                            height: 253,
+                            isSimply: true,
+                            source: `${imgPath}/sejong-fair${i + 1}.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <div class="desc-wrap">
+                            <strong class="title"><%- item.title ;%></strong>
+                            <p class="desc"><%- item.desc; %></p>
+                        </div>
+                    </li>
+                    <% }); %>
+                </ul>
+            </section>
+            <div class="division-number">
+                <div class="left">
+                    <strong>어디서 볼 수 있나요?</strong>
+                    <p>국립세종수목원 정원식물 가늠터 위치 및 공간 살펴보기</p>
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 690,
+                        height: 490,
+                        isSimply: true,
+                        source: `${imgPath}/visual-sejong-fair1.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                </div>
+                <div class="right">
+                    <strong>어떻게 참가하나요?</strong>
+                    <p>국립세종수목원 정원식물 가늠터 위치 및 공간 살펴보기</p>
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 690,
+                        height: 490,
+                        isSimply: true,
+                        source: `${imgPath}/visual-sejong-fair2.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentName,
+        currentCategory,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

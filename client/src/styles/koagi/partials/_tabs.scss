@@ -1,5 +1,8 @@
-$imgPath: "./../../images/koagi";
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
 
+$imgPath: "./../../images/koagi";
 @mixin tabs {
     .tabs {
         display: flex;
@@ -7,6 +10,10 @@ $imgPath: "./../../images/koagi";
         flex-wrap: wrap;
         gap: 20px;
         margin: 80px 0 82px;
+        @include m.respond-to(map.get(m.$max, 767)) {
+            gap: m.m(21) m.m(23);
+            margin: m.m(10) 0 m.m(58);
+        }
 
         a {
             display: flex;
@@ -21,8 +28,12 @@ $imgPath: "./../../images/koagi";
             border: 1px solid #d1d1d1;
             font-size: 18px;
             line-height: 28px;
-
             font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 767)) {
+                font-size: m.m(24);
+                line-height: m.m(34);
+                padding: m.m(20) m.m(44);
+            }
         }
 
         .active {
@@ -40,6 +51,13 @@ $imgPath: "./../../images/koagi";
                     height: 41px;
                     background: url("#{$imgPath}/icon-leaf-border.png") no-repeat 50% 50%;
                     pointer-events: none;
+                    @include m.respond-to(map.get(m.$max, 767)) {
+                        top: m.m(-21);
+                        right: m.m(-9);
+                        width: m.m(42);
+                        height: m.m(42);
+                        background-size: 100% auto;
+                    }
                 }
             }
         }
@@ -58,7 +76,6 @@ $imgPath: "./../../images/koagi";
             }
         }
     }
-
     .full-tabs {
         display: flex;
         width: 100%;
@@ -67,7 +84,7 @@ $imgPath: "./../../images/koagi";
         > button {
             flex: 1;
             padding: 23px;
-            border: 1px solid #dddddd;
+            border: 1px solid #ddd;
             border-bottom: 2px solid #279c2f;
             font-size: 17px;
             color: #000;

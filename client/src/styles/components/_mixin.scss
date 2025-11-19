@@ -42,6 +42,9 @@ $min: (
     }
 }
 
+@function m($val) {
+    @return math.div($val, 2) + px;
+}
 
 @mixin respond-to($valMin, $valMax: false) {
     @if ($valMax) {

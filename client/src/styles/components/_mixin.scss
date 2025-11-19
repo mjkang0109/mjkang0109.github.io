@@ -42,6 +42,17 @@ $min: (
     }
 }
 
+@function m($val) {
+    @return math.div($val, 2) + px;
+}
+
+@mixin positionSet($top: 0, $left: 0, $width: 0, $height: 0) {
+    top: $top + px;
+    left: $left + px;
+    width: $width + px;
+    height: $height + px;
+}
+
 
 @mixin respond-to($valMin, $valMax: false) {
     @if ($valMax) {

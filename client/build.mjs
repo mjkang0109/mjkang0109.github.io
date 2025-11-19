@@ -67,10 +67,12 @@ const scripts = glob.sync(`${SCRIPTS}/*[^example|^plugins]*/**/*.js`, {
     nosort: true,
 });
 
-const styles = glob.sync(`${STYLES}/*[^example|^plugins|^fonts]*/**/*.css`, {
+const styles = glob.sync(`${STYLES}/*[safe|^example|^plugins|^fonts]*/**/*.css`, {
     cwd   : SRC,
     nosort: true,
 });
+
+console.log(styles)
 
 const images = await glob.sync(`${IMAGES}/*[^example|^favicon]*/**/*[^.min].{jpg,jpeg,png,svg,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}`, {
     cwd   : SRC,

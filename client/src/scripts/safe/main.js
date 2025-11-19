@@ -34,6 +34,7 @@ const scripts = (() => {
     const setTabs = () => {
         const tabs = document.querySelectorAll('[role="tab"]');
         const tabList = document.querySelector('[role="tablist"]');
+        const select = $('.mobile-select select');
 
         if (tabs.length === 0) {
             return;
@@ -45,34 +46,10 @@ const scripts = (() => {
 
         let tabFocus = 0;
 
-        const onChangeElement = ({
-            target,
-        }) => {
-            if (!target) {
-                return;
-            }
-
-            const targetEl = document.getElementById(target);
-
-            if (!targetEl) {
-                return;
-            }
-
-            const parent = targetEl.parentElement;
-            const prev = parent.querySelector(`${targetEl.tagName}:not([hidden])`);
-            prev.setAttribute('hidden', true);
-            targetEl.removeAttribute('hidden');
-
-            console.log(prev, targetEl);
-
-        };
-
         const onChangeTab = (e) => {
             const target = e.target;
             const parent = target.parentElement;
             const grand = parent.parentElement;
-            const visual = target.dataset.visual;
-            const marker = target.dataset.marker;
 
             grand
                 .querySelectorAll('[aria-selected="true"]')
@@ -102,7 +79,8 @@ const scripts = (() => {
             grandParent.querySelectorAll('[role="tabpanel"]:not([hidden]), [role="tabpanel"].show')
                 .forEach(p => {
                     Object.assign(p, {
-                        hidden: 'true', tabIndex: '-1',
+                        hidden  : 'true',
+                        tabIndex: '-1',
                     });
 
                     p.classList.remove('show');
@@ -118,12 +96,9 @@ const scripts = (() => {
                 .classList
                 .add('show');
 
-            if (visual) {
-                onChangeElement({target: visual});
-            }
-
-            if (marker) {
-                onChangeElement({target: marker});
+            if (select) {
+                const index = target.getAttribute('aria-controls').replace('panel', '');
+                select.options[index].selected = true;
             }
         };
 
@@ -159,12 +134,65 @@ const scripts = (() => {
 
         tabs.forEach(tab => tab.addEventListener('click', onChangeTab));
         tabList.addEventListener('keydown', kbdNavigation);
+
+        if (select) {
+            select.addEventListener('input', () => {
+                const target = select.options[select.selectedIndex].getAttribute('aria-controls');
+                const tab = $(`button[aria-controls="${target}"`);
+
+                const obj = {
+                    target: tab,
+                };
+
+                onChangeTab(obj);
+            });
+        }
     };
 
     const stopSwiper = () => {
-        const swiper = new Swiper('.swiper')
+        const swiperEl = $('.safe-archive .swiper');
+        const parent = swiperEl.parentElement;
 
+        if (!swiperEl) {
+            return;
+        }
+
+        const slides = parent.querySelectorAll('.swiper-slide');
+        const controls = parent.querySelector('.controls');
+        const currentIndex = controls.querySelector('.current');
+        const total = controls.querySelector('.total');
+        const buttons = controls.querySelector('.buttons');
+        const buttonStop = controls.querySelector('.button-stop');
+        const buttonPlay = controls.querySelector('.button-play');
+
+        total.textContent = slides.length;
+
+        const swiper = new Swiper('.swiper', {
+            pagination: {
+                el       : '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay  : true,
+            on        : {
+                slideChangeTransitionEnd: () => {
+                    currentIndex.textContent = swiper.activeIndex + 1;
+                },
+            },
+        });
+
+        buttonStop.addEventListener('click', () => {
+            swiper.autoplay.stop();
+            buttons.dataset.state = 'stop';
+        });
+
+        buttonPlay.addEventListener('click', () => {
+            swiper.autoplay.start();
+            buttons.dataset.state = 'play';
+        });
+
+        swiper.init();
     };
+
 
     const init = () => {
         setTabs();

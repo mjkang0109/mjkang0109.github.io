@@ -1,30 +1,10 @@
 @use "sass:map";
 @use "sass:math";
+@use "./../components/mixin" as m;
+
 @use "./partials/main" as main;
 
-@import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
-
-@font-face {
-    font-family: "SCoreDream";
-    font-weight: 100;
-    font-style: normal;
-    src: url("./../fonts/SCoreDream1.woff2") format("woff2"), url("./../fonts/SCoreDream1.woff") format("woff");
-    font-display: swap;
-}
-@font-face {
-    font-family: "SCoreDream";
-    font-weight: 200;
-    font-style: normal;
-    src: url("./../fonts/SCoreDream2.woff2") format("woff2"), url("./../fonts/SCoreDream2.woff") format("woff");
-    font-display: swap;
-}
-@font-face {
-    font-family: "SCoreDream";
-    font-weight: 300;
-    font-style: normal;
-    src: url("./../fonts/SCoreDream3.woff2") format("woff2"), url("./../fonts/SCoreDream3.woff") format("woff");
-    font-display: swap;
-}
+$imgPath: "./../../images/safe/main";
 @font-face {
     font-family: "SCoreDream";
     font-weight: 400;
@@ -32,6 +12,7 @@
     src: url("./../fonts/SCoreDream4.woff2") format("woff2"), url("./../fonts/SCoreDream4.woff") format("woff");
     font-display: swap;
 }
+
 @font-face {
     font-family: "SCoreDream";
     font-weight: 500;
@@ -39,13 +20,7 @@
     src: url("./../fonts/SCoreDream5.woff2") format("woff2"), url("./../fonts/SCoreDream5.woff") format("woff");
     font-display: swap;
 }
-@font-face {
-    font-family: "SCoreDream";
-    font-weight: 600;
-    font-style: normal;
-    src: url("./../fonts/SCoreDream6.woff2") format("woff2"), url("./../fonts/SCoreDream6.woff") format("woff");
-    font-display: swap;
-}
+
 @font-face {
     font-family: "SCoreDream";
     font-weight: 700;
@@ -53,6 +28,7 @@
     src: url("./../fonts/SCoreDream7.woff2") format("woff2"), url("./../fonts/SCoreDream7.woff") format("woff");
     font-display: swap;
 }
+
 @font-face {
     font-family: "SCoreDream";
     font-weight: 800;
@@ -60,13 +36,7 @@
     src: url("./../fonts/SCoreDream8.woff2") format("woff2"), url("./../fonts/SCoreDream8.woff") format("woff");
     font-display: swap;
 }
-@font-face {
-    font-family: "SCoreDream";
-    font-weight: 900;
-    font-style: normal;
-    src: url("./../fonts/SCoreDream9.woff2") format("woff2"), url("./../fonts/SCoreDream9.woff") format("woff");
-    font-display: swap;
-}
+
 /* EliceDigitalBaeum */
 @font-face {
     font-family: "EliceDigitalBaeum";
@@ -75,6 +45,7 @@
     src: url("./../fonts/EliceDigitalBaeumRegular.woff2") format("woff2"), url("./../fonts/EliceDigitalBaeumRegular.woff") format("woff"), url("./../fonts/EliceDigitalBaeumRegular.ttf") format("truetype");
     font-display: swap;
 }
+
 @font-face {
     font-family: "EliceDigitalBaeum";
     font-weight: 700;
@@ -82,6 +53,7 @@
     src: url("./../fonts/EliceDigitalBaeumBold.woff2") format("woff2"), url("./../fonts/EliceDigitalBaeumBold.woff") format("woff"), url("./../fonts/EliceDigitalBaeumBold.ttf") format("truetype");
     font-display: swap;
 }
+
 @font-face {
     font-family: "SBAggro";
     font-weight: 400;
@@ -89,6 +61,7 @@
     src: url("./../fonts/SBAggroL.woff") format("woff"), url("./../fonts/SBAggroL.otf") format("opentype");
     font-display: swap;
 }
+
 @font-face {
     font-family: "SBAggro";
     font-weight: 500;
@@ -96,6 +69,7 @@
     src: url("./../fonts/SBAggroM.woff") format("woff"), url("./../fonts/SBAggroM.otf") format("opentype");
     font-display: swap;
 }
+
 @font-face {
     font-family: "SBAggro";
     font-weight: 700;
@@ -105,4 +79,184 @@
 }
 
 @include main.main;
+footer {
+    background: linear-gradient(180deg, #f7f7f7 119px, rgb(255 255 255 / 1) 120px, rgb(255 255 255 / 1) 100%);
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        background: linear-gradient(180deg, #f7f7f7 m.m(130), rgb(255 255 255 / 1) m.m(131), rgb(255 255 255 / 1) 100%);
+    }
+
+    .footer-top {
+        display: flex;
+        align-items: center;
+        gap: 53px;
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 24px 57px 24px 22px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(30) 0;
+        }
+
+        strong {
+            font-size: 20px;
+            color: #222;
+            font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 27px;
+            flex: 1;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(27);
+                scroll-snap-type: x proximity;
+                scroll-padding-left: m.m(42);
+            }
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            height: 69px;
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                width: m.m(226);
+                height: m.m(70);
+                scroll-snap-align: start;
+                &:first-of-type {
+                    margin-left: m.m(42);
+                }
+                &:last-of-type {
+                    margin-right: m.m(42);
+                }
+            }
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            height: 100%;
+        }
+
+        .img-wrap {
+            display: inline-flex;
+
+            img {
+                display: block;
+                height: 100%;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    transform: scale(.5);
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 60px 0 130px 264px;
+        background: url("#{$imgPath}/logo-gray.png") no-repeat 10px 107px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(125) m.m(42) m.m(370);
+            background-position: m.m(42) m.m(60);
+            background-size: m.m(221) auto;
+        }
+
+        .terms {
+            display: flex;
+            gap: 12px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(12);
+            }
+
+            li {
+                font-size: 16px;
+                color: #3a3a3a;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(20);
+                }
+
+                &:not(:last-of-type):after {
+                    content: "\00B7";
+                    margin-left: 12px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-left: m.m(12);
+                    }
+                }
+            }
+        }
+
+        address {
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 26px;
+            color: #3a3a3a;
+            font-style: normal;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(30);
+                font-size: m.m(20);
+            }
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: 0 m.m(8);
+                flex-wrap: wrap;
+            }
+
+            li {
+                font-size: 16px;
+                line-height: 26px;
+                color: #3a3a3a;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(20);
+                    line-height: m.m(36);
+                }
+
+                &:not(:last-of-type):after {
+                    content: "|";
+                    margin-left: 8px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-left: m.m(8);
+                    }
+                }
+            }
+
+            a {
+                font-size: 16px;
+                line-height: 26px;
+                color: #3a3a3a;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(20);
+                    line-height: m.m(36);
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 16px;
+            line-height: 26px;
+            color: #3a3a3a;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(20);
+                line-height: m.m(36);
+            }
+        }
+    }
+}
 

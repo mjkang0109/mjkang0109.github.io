@@ -4,7 +4,7 @@ state:
     default: 서울세이프
 ---
 <%
-imgPath = `/images/safe`;
+imgPath = `./../../images/safe`;
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -14,14 +14,14 @@ imgPath = `/images/safe`;
         <title>On Safe Seoul</title>
         <link rel="icon" href="<%= imgPath %>/common/fvc.png" type="image/x-icon">
         <link rel="stylesheet"
-              href="<%= process.env.BASE_PATH %>/styles/safe/default<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+              href="http://211.56.247.94/resources/seoulsafe/css/default.css">
         <link rel="stylesheet"
-              href="<%= process.env.BASE_PATH %>/styles/safe/common<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+              href="http://211.56.247.94/resources/seoulsafe/css/common.css">
         <link rel="stylesheet"
               href="<%= process.env.BASE_PATH %>/styles/safe/main<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
-        <script src="<%= process.env.BASE_PATH %>/scripts/safe/lib/jquery-1.11.0.js"></script>
-        <script src="<%= process.env.BASE_PATH %>/scripts/safe/lib/gsap.min.js"></script>
-        <script src="<%= process.env.BASE_PATH %>/scripts/safe/common.js"></script>
+        <script src="http://211.56.247.94/resources/seoulsafe/js/lib/jquery-1.11.0.js"></script>
+        <script src="http://211.56.247.94/resources/seoulsafe/js/lib/gsap.min.js"></script>
+        <script src="http://211.56.247.94/resources/seoulsafe/js/lib/common.js"></script>
         <script src="<%= process.env.BASE_PATH %>/scripts/safe/main.js"></script>
     </head>
     <body>

@@ -1,31 +1,91 @@
-<footer id="footer">
-    <div class="footerWrap">
-        <div class="terms">
-            <ul class="service">
-                <li><a href="">개인정보처리방침</a></li>
-                <li><a href="">이용약관</a></li>
-            </ul>
-            <ul class="coll">
-                <li><p>사업자등록번호 : 108-82-05343</p></li>
-                <li><p>전화 : 02-810-5000</p></li>
-                <li><p>팩스 : 02-810-5490</p></li>
-                <li><p>메일 : archive@seoulwomen.or.kr</p></li>
-            </ul>
-        </div>
-        <div class="site">
-            <ul>
-                <li><img src="<%= imgPath %>/common/ico_logo-seoul.png" alt="서울특별시"></li>
-                <li><img src="<%= imgPath %>/common/ico_logo-women.png" alt="서울시여성가족재단"></li>
-            </ul>
-        </div>
-        <div class="copy">
-            <ul>
-                <li><p><img src="<%= imgPath %>/common/ico_logo.png" alt="양성평등아카이브여기모아"></p></li>
-                <li class="address">
-                    <p>(우)06939 서울특별시 동작구 여의대방로 54길 18(대방동)</p>
-                    <p>© SEOUL FOUNDATION OF WOMEN AND FAMILY. All Rights Reserved.</p>
+<footer>
+    <%
+    const items = [
+        {
+            logo  : 'seoul',
+            name  : '서울',
+            width : 107,
+            height: 27,
+        },
+        {
+            logo  : 'family',
+            name  : '서울여성가족재단',
+            width : 168,
+            height: 45,
+        },
+        {
+            logo  : 'gender',
+            name  : '성평등가족부',
+            width : 144,
+            height: 49,
+        },
+        {
+            logo  : 'korea-gender',
+            name  : '한국양성평등교육진흥원',
+            width : 172,
+            height: 27,
+        },
+        {
+            logo  : 'safe',
+            name  : '서울디지털성범죄 안심지원센터',
+            width : 121,
+            height: 40,
+        },
+    ];
+    %>
+    <div class="footer-top">
+        <strong>관련사이트</strong>
+        <ul>
+            <% items.map((item) => { %>
+                <li>
+                    <a href="#"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: item.width,
+                            height: item.height,
+                            isSimply: true,
+                            source: `${imgPath}/main/logo-${item.logo}.png`,
+                            alt: item.name,
+                            }); %>
+                        </span>
+                    </a>
                 </li>
-            </ul>
-        </div>
-    </div><!-- //footerWrap -->
+            <% }); %>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <%
+        const terms = [
+            '개인정보처리방침',
+            '이용약관',
+            '이메일무단수집거부',
+            '홈페이지 개선 의견',
+        ];
+        %>
+        <ul class="terms">
+            <% terms.map(term => { %>
+                <li>
+                    <a href="#">
+                        <%= term ;%>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+        <address>(우)06939 서울특별시 동작구 여의대방로 54길 18(대방동)</address>
+        <ul class="info">
+            <li>사업자등록번호 : 108-82-05343</li>
+            <li>전화 :
+                <a href="tel:02-810-5000">02-810-5000</a>
+            </li>
+            <li>팩스 :
+                <a href="tel:02-810-5490">02-810-5490</a>
+            </li>
+            <li>메일 :
+                <a href="mailto:archive@seoulwomen.or.kr">archive@seoulwomen.or.kr</a>
+            </li>
+        </ul>
+        <p class="copyright">© SEOUL FOUNDATION OF WOMEN AND FAMILY. All Rights Reserved.</p>
+    </div>
 </footer>

@@ -1,4 +1,4 @@
-<section class="visual">
+<section class="safe-visual">
     <div class="visual-content">
         <span class="logo-wrap">
             <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
@@ -17,7 +17,7 @@
         </a>
     </div>
 </section>
-<section class="content">
+<section class="safe-content">
     <strong>Contents<span>폭력예방</span></strong>
     <div class="content-wrap">
         <div class="left">
@@ -70,11 +70,11 @@
         </div>
     </div>
 </section>
-<section class="map">
+<section class="safe-map">
     <%- include(`${process.env.INCLUDE_PATH}/safe/partials/_map`, {
     }) %>
 </section>
-<section class="service">
+<section class="safe-service">
     <div class="left">
         <strong>서울세이프 ON :<br>피해 지원서비스</strong>
     </div>
@@ -137,7 +137,7 @@
         <% }); %>
     </ul>
 </section>
-<section class="archive">
+<section class="safe-archive">
     <div class="left">
         <strong>
             아카이브+
@@ -210,6 +210,25 @@
                     </li>
                 <% }); %>
             </ul>
+        </div>
+        <div class="controls">
+            <div class="index">
+                <span class="current">1</span>
+                <span>/</span>
+                <span class="total"></span>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="buttons"
+                 data-state="play">
+                <button type="button"
+                        class="button-stop">
+                    <span class="a11y">배너 정지</span>
+                </button>
+                <button type="button"
+                        class="button-play">
+                    <span class="a11y">배너 재생</span>
+                </button>
+            </div>
         </div>
     </div>
 </section>

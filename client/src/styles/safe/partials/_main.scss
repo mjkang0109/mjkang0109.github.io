@@ -15,17 +15,29 @@ $imgPath: "./../../images/safe/main";
         white-space: nowrap;
         border: 0;
     }
-    .visual {
+    .safe-visual {
         display: flex;
         align-items: center;
         min-height: 100vh;
         background: url("#{$imgPath}/main_v1.jpg") no-repeat 50% 50%;
         background-size: cover;
         @include m.respond-to(map.get(m.$max, 1199)) {
-            background-image: url("#{$imgPath}/visual-mobile.jpg");
+            background: url("#{$imgPath}/visual-mobile.jpg") no-repeat 50% 100%;
+            background-size: cover;
         }
 
-        &-content {
+        .logo-wrap {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                max-width: m.m(466);
+                height: auto;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .visual-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -34,6 +46,8 @@ $imgPath: "./../../images/safe/main";
             margin: 0 auto;
             padding: 0 170px;
             @include m.respond-to(map.get(m.$max, 1199)) {
+                max-width: 100%;
+                padding: 0 m.m(66) 0;
             }
 
             > p {
@@ -44,6 +58,11 @@ $imgPath: "./../../images/safe/main";
                 color: #23382b;
                 font-weight: 300;
                 font-family: "Noto Sans KR", serif;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(32);
+                    font-size: m.m(60);
+                    line-height: m.m(80);
+                }
             }
 
             > strong {
@@ -51,9 +70,16 @@ $imgPath: "./../../images/safe/main";
                 font-size: 24px;
                 color: #23382b;
                 font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(32);
+                    margin-top: m.m(26);
+                }
 
                 + .button-round {
                     margin-top: 72px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-top: m.m(46);
+                    }
                 }
             }
 
@@ -69,17 +95,33 @@ $imgPath: "./../../images/safe/main";
         border-radius: 50px;
         font-size: 22px;
         font-weight: 700;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(24) m.m(37);
+            font-size: m.m(28);
+            line-height: m.m(31);
+        }
 
         &.arrow {
             min-width: 300px;
             color: #fff;
             background: #df1f7e url("#{$imgPath}/icon-arrow-right.png") no-repeat right 38px top 50%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                min-width: m.m(300);
+                background-size: auto m.m(12);
+                background-position: right m.m(37) top 50%;
+            }
         }
     }
-    .content {
+    .safe-content {
         padding: 102px 0 96px;
         max-width: 1450px;
         margin: 0 auto;
+        @media (max-width: 1449px) {
+            padding: m.vw(102, 1450) 0 m.vw(96, 1450);
+        }
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(82) m.m(25) m.m(50);
+        }
 
         > strong {
             display: block;
@@ -89,6 +131,10 @@ $imgPath: "./../../images/safe/main";
             color: #1d1c1c;
             line-height: 80px;
             font-weight: 800;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(55);
+                line-height: m.m(80);
+            }
 
             > span {
                 margin-left: 12px;
@@ -97,6 +143,10 @@ $imgPath: "./../../images/safe/main";
                 font-size: 22px;
                 line-height: 30px;
                 color: #222;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-left: m.m(11);
+                    font-size: m.m(26);
+                }
             }
         }
 
@@ -104,6 +154,15 @@ $imgPath: "./../../images/safe/main";
             display: flex;
             gap: 40px;
             margin-top: 70px;
+            @media (max-width: 1449px) {
+                gap: m.vw(40, 1450);
+                margin-top: m.vw(70, 1450);
+            }
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                gap: m.m(60);
+                margin-top: m.m(43);
+            }
 
             a {
                 display: block;
@@ -118,6 +177,14 @@ $imgPath: "./../../images/safe/main";
                 font-size: 26px;
                 line-height: 65px;
                 font-weight: 800;
+                @media (max-width: 1449px) {
+                    margin-bottom: m.vw(35, 1450);
+                }
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-bottom: m.m(30);
+                    font-size: m.m(35);
+                    line-height: m.m(65);
+                }
             }
 
             p {
@@ -127,10 +194,25 @@ $imgPath: "./../../images/safe/main";
                 line-height: 30px;
                 color: #222;
                 font-weight: bold;
+                @media (max-width: 1449px) {
+                    margin-top: m.vw(37, 1450);
+                }
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(30);
+                    font-size: m.m(28);
+                    line-height: m.m(30);
+                }
             }
         }
 
         .left {
+            width: 650px;
+            @media (max-width: 1449px) {
+                width: m.vw(650, 1450);
+            }
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
         }
 
         .right {
@@ -141,9 +223,35 @@ $imgPath: "./../../images/safe/main";
         .items {
             display: flex;
             gap: 40px;
+            @media (max-width: 1449px) {
+                gap: m.vw(40, 1450);
+            }
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                gap: m.m(40);
+            }
+
+            li {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 1;
+                }
+            }
+        }
+
+        .img-wrap {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: block;
+                width: 100%;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
         }
     }
-    .map {
+    .safe-map {
         display: grid;
         grid-template-columns: 696px auto;
         grid-template-rows: 64px auto 1fr;
@@ -159,6 +267,14 @@ $imgPath: "./../../images/safe/main";
         @media (max-width: 1456px) {
             padding-right: 30px;
         }
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+            padding: m.m(227) m.m(25) 0;
+            background: #16b58f url("#{$imgPath}/bg-wave-mobile.png") no-repeat 0 0;
+            background-size: 100% m.m(130);
+        }
 
         &:before {
             content: "";
@@ -169,6 +285,9 @@ $imgPath: "./../../images/safe/main";
             margin-left: -50vw;
             height: 1px;
             background-color: #e4e4e4;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
         }
 
         .search-wrap {
@@ -182,11 +301,19 @@ $imgPath: "./../../images/safe/main";
                 justify-content: flex-start;
                 padding-left: 20px;
             }
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                padding-left: 0;
+                margin-top: m.m(23);
+            }
 
             label {
                 font-size: 18px;
                 color: #000;
                 font-weight: bold;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
             }
 
             input[type="search"] {
@@ -198,11 +325,41 @@ $imgPath: "./../../images/safe/main";
                 border-radius: 20px;
                 font-size: 16px;
                 background: #f8f8f8 url("#{$imgPath}/icon-search.png") no-repeat top 50% right 25px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    max-width: 100%;
+                    padding: m.m(26) m.m(39 + 36) m.m(26) m.m(27);
+                    font-size: m.m(28);
+                    border-radius: 10px;
+                    background: #f8f8f8 url("#{$imgPath}/icon-search-m.png") no-repeat top 50% right m.m(29);
+                    background-size: m.m(36) auto;
+                }
 
                 &::placeholder {
                     color: rgb(0 0 0 / .6);
                 }
             }
+        }
+
+        .mobile-select {
+            display: none;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: block;
+                margin-top: m.m(35);
+
+                select {
+                    appearance: none;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: none;
+                    padding: m.m(26) 0 m.m(26) m.m(27);
+                    background: #f8f8f8 url("#{$imgPath}/icon-select.png") no-repeat right m.m(31) top 50%;
+                    background-size: m.m(26) auto;
+                    font-size: m.m(28);
+                    font-weight: 600;
+                    font-family: "Pretendard", serif;
+                }
+            }
+
         }
 
         .panel-title {
@@ -218,6 +375,12 @@ $imgPath: "./../../images/safe/main";
             @media (max-width: 1371px) {
                 display: none;
             }
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: flex;
+                order: -1;
+                margin-top: m.m(98);
+                padding-left: 0;
+            }
 
             &:before {
                 content: "";
@@ -229,6 +392,13 @@ $imgPath: "./../../images/safe/main";
                 background: url("#{$imgPath}/icon-seoul.png") no-repeat 0 0;
                 @media (max-width: 1456px) {
                     left: 20px;
+                }
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    top: m.m(-98 + -31);
+                    left: 0;
+                    width: m.m(126);
+                    height: m.m(98);
+                    background-size: 100% auto;
                 }
             }
 
@@ -244,6 +414,9 @@ $imgPath: "./../../images/safe/main";
                 font-size: 15px;
                 color: #fff;
                 font-weight: 400;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
             }
 
             .button-refresh {
@@ -252,6 +425,11 @@ $imgPath: "./../../images/safe/main";
                 height: 37px;
                 background: transparent url("#{$imgPath}/icon-refresh.png") no-repeat 50% 50%;
                 margin-left: auto;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: m.m(47);
+                    height: m.m(47);
+                    background-size: 100% auto;
+                }
             }
         }
 
@@ -265,13 +443,35 @@ $imgPath: "./../../images/safe/main";
             @media (max-width: 1371px) {
                 margin-top: 50px;
             }
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                position: relative;
+                margin-top: m.m(47);
+                padding: m.m(42) 0 m.m(72);
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: m.m(-24);
+                    width: 100vw;
+                    height: 1px;
+                    background-color: #a0f2de;
+                }
+            }
         }
 
         .panel {
+            position: relative;
+            z-index: 1;
+
             .items {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 14px 18px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: m.m(30) m.m(20);
+                }
             }
 
             li {
@@ -283,18 +483,30 @@ $imgPath: "./../../images/safe/main";
                 border-radius: 100px;
                 background-color: #fff;
                 padding: 0 20px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 1;
+                    width: auto;
+                    height: m.m(64);
+                    padding: m.m(20) m.m(43);
+                }
 
                 strong {
                     font-size: 18px;
                     font-weight: bold;
                     color: #000;
                     white-space: nowrap;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: m.m(26);
+                    }
                 }
 
                 span {
                     font-size: 20px;
                     font-weight: 700;
                     color: #eb4a1f;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: m.m(32);
+                    }
                 }
             }
         }
@@ -308,6 +520,11 @@ $imgPath: "./../../images/safe/main";
                 color: #fff;
                 font-family: "Noto Sans KR", serif;
                 font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin: m.m(80) 0 m.m(36);
+                    font-size: m.m(35);
+                    line-height: m.m(54);
+                }
             }
         }
 
@@ -316,16 +533,91 @@ $imgPath: "./../../images/safe/main";
             grid-row: 1 / 4;
             height: 656px;
             background: url("#{$imgPath}/map.png") no-repeat 0 0;
-
-            &:has(.loc22[aria-selected="true"]) {
-                &:before {
-                    content: "";
-                    position: absolute;
-                    top: 83px;
-                    left: 213px;
-                    width: 159px;
-                    height: 211px;
-                    background: url("#{$imgPath}/loc22.png") no-repeat 50% 50%;
+            @for $i from 1 to 26 {
+                &:has(.loc#{$i}[aria-selected="true"]) {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background: url("#{$imgPath}/loc#{$i}.png") no-repeat 50% 50%;
+                        @if ($i == 1) {
+                            @include m.positionSet(379, 430, 232, 229);
+                        }
+                        @if ($i == 2) {
+                            @include m.positionSet(288, 592, 118, 148);
+                        }
+                        @if ($i == 3) {
+                            @include m.positionSet(59, 379, 115, 107);
+                        }
+                        @if ($i == 4) {
+                            @include m.positionSet(209, -9, 237, 215);
+                        }
+                        @if ($i == 5) {
+                            @include m.positionSet(485, 247, 164, 166);
+                        }
+                        @if ($i == 6) {
+                            @include m.positionSet(257, 510, 98, 148);
+                        }
+                        @if ($i == 7) {
+                            @include m.positionSet(424, 73, 196, 153);
+                        }
+                        @if ($i == 8) {
+                            @include m.positionSet(519, 174, 120, 134);
+                        }
+                        @if ($i == 9) {
+                            @include m.positionSet(-3, 473, 128, 190);
+                        }
+                        @if ($i == 10) {
+                            @include m.positionSet(-10, 393, 124, 168);
+                        }
+                        @if ($i == 11) {
+                            @include m.positionSet(220, 436, 124, 112);
+                        }
+                        @if ($i == 12) {
+                            @include m.positionSet(407, 274, 138, 151);
+                        }
+                        @if ($i == 13) {
+                            @include m.positionSet(233, 165, 210, 174);
+                        }
+                        @if ($i == 14) {
+                            @include m.positionSet(213, 257, 134, 135);
+                        }
+                        @if ($i == 15) {
+                            @include m.positionSet(402, 377, 214, 274);
+                        }
+                        @if ($i == 16) {
+                            @include m.positionSet(293, 440, 128, 129);
+                        }
+                        @if ($i == 17) {
+                            @include m.positionSet(101, 380, 159, 171);
+                        }
+                        @if ($i == 18) {
+                            @include m.positionSet(329, 525, 151, 217);
+                        }
+                        @if ($i == 19) {
+                            @include m.positionSet(351, 84, 142, 123);
+                        }
+                        @if ($i == 20) {
+                            @include m.positionSet(349, 188, 125, 183);
+                        }
+                        @if ($i == 21) {
+                            @include m.positionSet(314, 328, 144, 125);
+                        }
+                        @if ($i == 22) {
+                            @include m.positionSet(89, 223, 155, 209);
+                        }
+                        @if ($i == 23) {
+                            @include m.positionSet(137, 335, 135, 171);
+                        }
+                        @if ($i == 24) {
+                            @include m.positionSet(260, 357, 127, 95);
+                        }
+                        @if ($i == 25) {
+                            @include m.positionSet(136, 501, 115, 162);
+                        }
+                    }
+                }
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
                 }
             }
 
@@ -340,85 +632,7 @@ $imgPath: "./../../images/safe/main";
                 }
 
                 &:not(.loc0)[aria-selected="true"] {
-                    padding-top: 39px;
-                    background: url("#{$imgPath}/icon-loc.png") no-repeat 50% 0;
                     color: #fff;
-
-                    &.loc1 {
-                    }
-
-                    &.loc2 {
-                    }
-
-                    &.loc3 {
-                    }
-
-                    &.loc4 {
-                    }
-
-                    &.loc5 {
-                    }
-
-                    &.loc6 {
-                    }
-
-                    &.loc7 {
-                    }
-
-                    &.loc8 {
-                    }
-
-                    &.loc9 {
-                    }
-
-                    &.loc10 {
-                    }
-
-                    &.loc11 {
-                    }
-
-                    &.loc12 {
-                    }
-
-                    &.loc13 {
-                    }
-
-                    &.loc14 {
-                    }
-
-                    &.loc15 {
-                    }
-
-                    &.loc16 {
-                    }
-
-                    &.loc17 {
-                    }
-
-                    &.loc18 {
-                    }
-
-                    &.loc19 {
-                    }
-
-                    &.loc20 {
-                    }
-
-                    &.loc21 {
-                    }
-
-                    &.loc22 {
-                        top: 150px;
-                    }
-
-                    &.loc23 {
-                    }
-
-                    &.loc24 {
-                    }
-
-                    &.loc25 {
-                    }
                 }
             }
 
@@ -433,8 +647,8 @@ $imgPath: "./../../images/safe/main";
             }
 
             .loc3 {
-                top: 103px;
-                left: 411px;
+                top: 104px;
+                left: 412px;
             }
 
             .loc4 {
@@ -448,8 +662,8 @@ $imgPath: "./../../images/safe/main";
             }
 
             .loc6 {
-                top: 310px;
-                left: 522px;
+                top: 313px;
+                left: 530px;
             }
 
             .loc7 {
@@ -458,8 +672,8 @@ $imgPath: "./../../images/safe/main";
             }
 
             .loc8 {
-                top: 579px;
-                left: 210px;
+                top: 572px;
+                left: 214px;
             }
 
             .loc9 {
@@ -518,8 +732,8 @@ $imgPath: "./../../images/safe/main";
             }
 
             .loc20 {
-                top: 430px;
-                left: 215px;
+                top: 424px;
+                left: 225px;
             }
 
             .loc21 {
@@ -528,13 +742,13 @@ $imgPath: "./../../images/safe/main";
             }
 
             .loc22 {
-                top: 189px;
-                left: 264px;
+                top: 184px;
+                left: 272px;
             }
 
             .loc23 {
-                top: 222px;
-                left: 356px;
+                top: 179px;
+                left: 354px;
             }
 
             .loc24 {
@@ -548,17 +762,33 @@ $imgPath: "./../../images/safe/main";
             }
         }
     }
-    .service {
+    .safe-service {
         display: flex;
         justify-content: center;
         padding: 114px 0 90px;
         margin: 0 auto;
         background-color: #f7fcfb;
+        @media (max-width: 1449px) {
+            padding: m.vw(114, 1450) 0 m.vw(90, 1450);
+        }
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: m.m(68);
+            flex-direction: column;
+            padding: m.m(105) m.m(25) m.m(105);
+        }
 
         .left {
             flex: 0 0 445px;
             position: relative;
             text-align: right;
+            @media (max-width: 1449px) {
+                flex: 0 0 m.vw(445, 1450);
+            }
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                padding-left: m.m(16);
+                text-align: left;
+            }
 
             &:before {
                 content: "";
@@ -567,7 +797,13 @@ $imgPath: "./../../images/safe/main";
                 left: -66px;
                 width: 560px;
                 height: 360px;
-                background: url("#{$imgPath}/visual-cell.png") no-repeat
+                background: url("#{$imgPath}/visual-cell.png") no-repeat;
+                @media (max-width: 1449px) {
+                    top: m.vw(315 - 114, 1450);
+                }
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
             }
 
             strong {
@@ -585,6 +821,12 @@ $imgPath: "./../../images/safe/main";
             flex: 0 0 1005px;
             padding-left: 206px;
             gap: 90px 0;
+            @media (max-width: 1449px) {
+                flex: 0 0 m.vw(1005, 1450);
+            }
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-left: 0;
+            }
 
             li {
                 display: flex;
@@ -602,40 +844,92 @@ $imgPath: "./../../images/safe/main";
                 box-shadow: 0 0 10px 5px rgb(151 223 209 / .35);
                 border-radius: 100px;
                 background-color: #fff;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 m.m(180);
+                    width: m.m(180);
+                    img {
+                        width: 40%;
+                        height: auto;
+                    }
+                }
             }
 
             strong {
                 font-size: 22px;
                 color: #333;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(47);
+                }
             }
         }
     }
-    .archive {
+    .safe-archive {
         display: flex;
         align-items: flex-end;
         gap: 66px;
         max-width: 1450px;
         margin: 0 auto;
-        padding-top: 114px;
+        padding: 114px 0 66px + 77px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: m.m(63);
+            padding: m.m(82) m.m(25) m.m(160 + 66);
+        }
 
         .left {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
+
             > strong {
                 display: flex;
+                align-items: center;
                 gap: 22px;
                 font-size: 44px;
                 font-family: "SBAggro", serif;
                 font-weight: 500;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: m.m(33);
+                    font-size: m.m(44);
+                }
             }
 
             .link-more {
                 flex: 0 0 45px;
                 width: 45px;
+                height: 45px;
+                background: url("#{$imgPath}/icon-more.png") no-repeat 50% 50%;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 m.m(45);
+                    width: m.m(45);
+                    height: m.m(45);
+                    background-size: 100% auto;
+                }
+            }
+
+            > p {
+                margin-top: 29px;
+                font-size: 19px;
+                line-height: 28px;
+                color: #222;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(24);
+                    font-size: m.m(26);
+                    line-height: m.m(35);
+                }
             }
         }
 
         .items {
             display: flex;
             gap: 50px;
+            margin-top: 42px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                gap: m.m(45);
+                margin-top: m.m(62);
+            }
 
             li {
                 flex: 1;
@@ -654,22 +948,34 @@ $imgPath: "./../../images/safe/main";
                 flex: 1;
                 text-align: center;
                 gap: 17px;
-                padding: 36px 30px 66px;
+                padding: 26px 30px 37px;
                 border: 1px solid #dbdbdb;
                 border-top: none;
                 border-radius: 0 0 20px 20px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: m.m(16);
+                    padding: m.m(39) m.m(20) m.m(44);
+                }
             }
 
             strong {
                 font-size: 23px;
                 color: #000;
                 line-height: 33px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(42);
+                    line-height: m.m(65);
+                }
             }
 
             p {
                 font-size: 15px;
                 line-height: 22px;
                 color: #222;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(28);
+                    line-height: m.m(35);
+                }
             }
 
             .img-wrap {
@@ -683,11 +989,20 @@ $imgPath: "./../../images/safe/main";
 
         .right {
             flex: 0 0 410px;
+            position: relative;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                width: 100%;
+            }
         }
 
         .swiper {
             overflow: hidden;
             width: 410px;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
 
             ul {
                 display: flex;
@@ -704,6 +1019,92 @@ $imgPath: "./../../images/safe/main";
                 img {
                     width: 100%;
                     height: auto;
+                }
+            }
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            overflow: hidden;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-top: 31px;
+            border: 1px solid #dcdcdc;
+            border-radius: 50px;
+            transform: translateX(-50%);
+
+            .index {
+                display: flex;
+                padding-left: 20px;
+
+                > span {
+                    font-size: 14px;
+                    color: #313131;
+                    font-weight: 700;
+                }
+            }
+
+            .swiper-pagination {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                .swiper-pagination-bullet {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 20px;
+                    background-color: #cbcbcb;
+                }
+
+                .swiper-pagination-bullet-active {
+                    width: 46px;
+                    background-color: #df1f7e;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                height: 100%;
+
+                &[data-state="stop"] {
+                    .button-stop {
+                        display: none;
+                    }
+                }
+
+                &[data-state="play"] {
+                    .button-play {
+                        display: none;
+                    }
+                }
+
+                button {
+                    position: relative;
+                    width: 36px;
+                    height: 36px;
+                    background-color: #df1f7e;
+                }
+
+                .button-stop {
+                    background: #df1f7e url("#{$imgPath}/icon-pause.png") no-repeat 50% 50%;
+                }
+
+                .button-play {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 0;
+                        height: 0;
+                        border-top: 7px solid transparent;
+                        border-bottom: 7px solid transparent;
+                        border-left: 10px solid #fff;
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
         }

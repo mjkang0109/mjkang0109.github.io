@@ -28,6 +28,21 @@ const locations = [
     '중랑구',
 ];
 %>
+<div class="mobile-select">
+    <label for="loc-select">
+        <select id="loc-select">
+            <%
+            for(let i = 0; i < locations.length; i++) {
+            %>
+                <option aria-selected="<%= i === 0 %>"
+                        aria-controls="panel<%= i %>"
+                        ><%= locations[i]; %></option>
+            <%
+            };
+            %>
+        </select>
+    </label>
+</div>
 <div class="search-wrap">
     <label for="search-loc">피해자지원기관</label>
     <input type="search"
@@ -40,7 +55,7 @@ const locations = [
     for(let i = 0; i < locations.length; i++) {
     %>
         <button type="button"
-                class="loc<%= i %>"
+                class="loc<%= i; %>"
                 role="tab"
                 aria-selected="<%= i === 0; %>"
                 aria-controls="panel<%= i; %>">
@@ -53,7 +68,8 @@ const locations = [
 <div class="panel-title">
     <strong>서울세이프ON: 피해지원기관</strong>
     <p>좌측 지도에서 해당 지역을 검색해보세요</p>
-    <button type="button" class="button-refresh">
+    <button type="button"
+            class="button-refresh">
         <span class="a11y">새로고침</span>
     </button>
 </div>
@@ -69,16 +85,14 @@ const bottomItems = [
 const random = () => {
     return Math.floor(Math.random() * 1001);
 };
-
-
 %>
 <div class="panels">
     <%
-        for(let i = 0; i < locations.length; i++) {
+    for(let i = 0; i < locations.length; i++) {
     %>
         <div id="panel<%= i %>"
                 <%- i !== 0 ? 'hidden' : '' %>
-                class="panel"
+             class="panel"
              role="tabpanel">
             <ul class="items">
                 <% topItems.map(top => { %>

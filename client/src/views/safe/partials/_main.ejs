@@ -165,17 +165,21 @@
         <ul class="items">
             <% archiveItems.map((item, i) => { %>
                 <li>
-                    <span class="img-wrap">
-                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                        width: 290,
-                        height: 230,
-                        isSimply: true,
-                        source: `${imgPath}/main/archive${i + 1}.jpg`,
-                        alt: item.desc,
-                        }); %>
-                    </span>
-                    <strong><%= item.title %></strong>
-                    <p><%- item.desc %></p>
+                    <a href="#">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 290,
+                            height: 230,
+                            isSimply: true,
+                            source: `${imgPath}/main/archive${i + 1}.jpg`,
+                            alt: item.desc,
+                            }); %>
+                        </span>
+                        <div class="desc-wrap">
+                            <strong><%= item.title %></strong>
+                            <p><%- item.desc %></p>
+                        </div>
+                    </a>
                 </li>
             <% }); %>
         </ul>
@@ -191,7 +195,7 @@
                 ];
                 %>
                 <% banners.map((banner, i) => { %>
-                    <li>
+                    <li class="swiper-slide">
                         <a href="#">
                         <span class="img-wrap">
                             <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {

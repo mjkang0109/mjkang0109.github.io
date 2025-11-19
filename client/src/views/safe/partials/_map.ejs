@@ -1,5 +1,6 @@
 <%
 const locations = [
+    '전체',
     '강남구',
     '강동구',
     '강북구',
@@ -36,22 +37,25 @@ const locations = [
 <div class="buttons"
      role="tablist">
     <%
-    locations.map((loc, i) => {
+    for(let i = 0; i < locations.length; i++) {
     %>
         <button type="button"
-                class="loc<%= i + 1 %>"
+                class="loc<%= i %>"
                 role="tab"
                 aria-selected="<%= i === 0; %>"
-                aria-controls="panel<%= i + 1; %>">
-            <%= loc; %>
+                aria-controls="panel<%= i; %>">
+            <%= locations[i]; %>
         </button>
     <%
-    });
+    };
     %>
 </div>
 <div class="panel-title">
     <strong>서울세이프ON: 피해지원기관</strong>
     <p>좌측 지도에서 해당 지역을 검색해보세요</p>
+    <button type="button" class="button-refresh">
+        <span class="a11y">새로고침</span>
+    </button>
 </div>
 <%
 const topItems = [
@@ -65,12 +69,14 @@ const bottomItems = [
 const random = () => {
     return Math.floor(Math.random() * 1001);
 };
+
+
 %>
 <div class="panels">
     <%
-    locations.map((loc, i) => {
+        for(let i = 0; i < locations.length; i++) {
     %>
-        <div id="panel<%= i + 1 %>"
+        <div id="panel<%= i %>"
                 <%- i !== 0 ? 'hidden' : '' %>
                 class="panel"
              role="tabpanel">
@@ -95,6 +101,6 @@ const random = () => {
             </div>
         </div>
     <%
-    });
+    };
     %>
 </div>

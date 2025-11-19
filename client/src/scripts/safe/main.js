@@ -161,8 +161,14 @@ const scripts = (() => {
         tabList.addEventListener('keydown', kbdNavigation);
     };
 
+    const stopSwiper = () => {
+        const swiper = new Swiper('.swiper')
+
+    };
+
     const init = () => {
         setTabs();
+        stopSwiper();
     };
 
     return {

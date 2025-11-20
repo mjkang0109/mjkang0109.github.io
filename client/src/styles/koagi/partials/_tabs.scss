@@ -10,7 +10,7 @@ $imgPath: "./../../images/koagi";
         flex-wrap: wrap;
         gap: 20px;
         margin: 80px 0 82px;
-        @include m.respond-to(map.get(m.$max, 767)) {
+        @include m.respond-to(map.get(m.$max, 1199)) {
             gap: m.m(21) m.m(23);
             margin: m.m(10) 0 m.m(58);
         }
@@ -29,7 +29,7 @@ $imgPath: "./../../images/koagi";
             font-size: 18px;
             line-height: 28px;
             font-weight: 700;
-            @include m.respond-to(map.get(m.$max, 767)) {
+            @include m.respond-to(map.get(m.$max, 1199)) {
                 font-size: m.m(24);
                 line-height: m.m(34);
                 padding: m.m(20) m.m(44);
@@ -51,7 +51,7 @@ $imgPath: "./../../images/koagi";
                     height: 41px;
                     background: url("#{$imgPath}/icon-leaf-border.png") no-repeat 50% 50%;
                     pointer-events: none;
-                    @include m.respond-to(map.get(m.$max, 767)) {
+                    @include m.respond-to(map.get(m.$max, 1199)) {
                         top: m.m(-21);
                         right: m.m(-9);
                         width: m.m(42);

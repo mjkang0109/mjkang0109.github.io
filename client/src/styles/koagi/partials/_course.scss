@@ -1,0 +1,310 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin course {
+    .arrangement-left {
+        .gTitle1 {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-bottom: m.m(226);
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                right: -5px;
+                bottom: -80px;
+                width: 1142px;
+                height: 278px;
+                background: url("#{$imgPath}/visual-course.png") no-repeat 100% 0;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: m.m(226);
+                    background: url("#{$imgPath}/visual-course-m.png") no-repeat 100% 100%;
+                    background-size: auto 100%;
+                }
+            }
+
+            > .title {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-top: 95px;
+                z-index: 1;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    grid-template-columns: 1fr;
+                    gap: m.m(50);
+                    margin-top: m.m(80);
+                }
+
+                h4 {
+                    justify-content: flex-start;
+                }
+
+                .desc {
+                    order: 1;
+                    grid-column: 1 / 3;
+                    margin-top: 60px;
+                    text-align: left;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        grid-column: 1 / 2;
+                        margin-top: m.m(28);
+                    }
+
+                    strong {
+                        display: block;
+                        color: #000;
+                        font-size: 28px;
+                        font-weight: 700;
+                    }
+
+                    .color-green {
+                        color: #3eaa36;
+                    }
+                }
+
+                .subDescription {
+                    display: block;
+                    margin-top: 30px;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #000;
+                    font-weight: 400;
+                }
+            }
+
+            .tabs {
+                justify-content: flex-end;
+                margin: 0;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        .mBc1.forW {
+            grid-column: 1 / 3;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        #body {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: 0;
+                padding-top: 0;
+            }
+        }
+
+        .map-wrap {
+            width: auto;
+            height: auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100vw;
+                margin-left: -15px;
+                padding-top: 0;
+            }
+
+            + .swiper-scroll {
+                margin-top: 68px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(71);
+                }
+            }
+
+            img {
+                position: relative;
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+    .map-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 66px 168px 66px 118px;
+        border-radius: 100px 0 0 0;
+        background-color: #223927;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+            gap: m.m(36);
+            border-radius: 0;
+            padding: m.m(50);
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(17);
+            }
+        }
+
+        .icon {
+            flex: 0 0 auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: m.m(25);
+            }
+        }
+
+        .title {
+            font-size: 22px;
+            color: #fff;
+            font-weight: 500;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 m.m(120);
+                font-size: m.m(25);
+            }
+
+            + strong,
+            + span {
+                margin-left: 15px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-left: m.m(13);
+                }
+            }
+
+            + strong {
+                display: flex;
+                align-items: baseline;
+                font-size: 38px;
+                color: #fff;
+                font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(38);
+                }
+
+                span {
+                    font-size: 30px;
+                    color: #fff;
+                    font-weight: 700;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: m.m(30);
+                    }
+
+                    + .large {
+                        margin-left: 4px;
+                    }
+
+                    &.large {
+                        font-size: 38px;
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            font-size: m.m(38);
+                        }
+                    }
+                }
+            }
+        }
+
+        .score {
+            display: block;
+            position: relative;
+            width: 216px;
+            height: 40px;
+            background: url("#{$imgPath}/icon-star-empty.png") repeat-x 0 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: m.m(216);
+                height: m.m(40);
+                background-size: auto 100%;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: url("#{$imgPath}/icon-star-fill.png") repeat-x 0 0;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    background-size: auto 100%;
+                }
+            }
+
+            $width: 57;
+            @for $i from 1 through 4 {
+                &[data-score="#{$i}"] {
+                    &:after {
+                        width: $width * $i + px;
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            width: $width / 2 * $i + px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .course-detail {
+        padding: 72px 60px 55px;
+        background-color: #fafafa;
+        counter-reset: course 0;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(75) m.m(50);
+        }
+
+        > strong {
+            display: block;
+            font-size: 23px;
+            color: #000;
+            font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(23);
+            }
+
+            + ol {
+                margin-top: 35px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(33);
+                }
+            }
+        }
+
+        ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px 36px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(24) 36px;
+            }
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-weight: 500;
+
+            &:not(:last-of-type) {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -24px;
+                    width: 9px;
+                    height: 14px;
+                    background: url("#{$imgPath}/icon-triangle-yellow.png") no-repeat 0 0;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &:before {
+                counter-increment: course;
+                content: counter(course);
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 21px;
+                height: 21px;
+                margin-right: 10px;
+                border-radius: 100%;
+                background-color: #3d3d3d;
+                font-size: 12px;
+                font-weight: 700;
+                color: #fff;
+            }
+        }
+    }
+}

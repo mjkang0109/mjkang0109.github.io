@@ -2,6 +2,7 @@
 var title = title || '';
 var desc = desc || '';
 var depths = depths || [];
+var tab = tab || [];
 const depthLength = depths.length;
 %>
 <div class="gTitle1">
@@ -36,5 +37,12 @@ const depthLength = depths.length;
         <% if (desc) { %>
             <p class="desc"><%- desc %></p>
         <% } %>
+
+        <% if (tab.length > 0) { %>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+            items: tab,
+            }) %>
+        <% } %>
     </div>
+
 </div>

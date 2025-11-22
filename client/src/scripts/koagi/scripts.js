@@ -81,10 +81,28 @@ const scripts = (() => {
             }
 
             if (scrollbar) {
-                console.log(swiper);
                 optsSwiper.scrollbar = {
                     el: swiper.parentElement.querySelector('.scrollbar'), draggable: true, dragSize: 80,
                 };
+
+                Object.assign(optsSwiper, {
+                    breakpoints: {
+                        1200: {
+                            spaceBetween: 25,
+                            scrollbar : {
+                                dragSize: 80,
+                            }
+                        },
+                        0: {
+                            spaceBetween: 12,
+                            scrollbar : {
+                                dragSize: 40,
+                            },
+                        },
+                    },
+                });
+                console.log(optsSwiper)
+
             }
 
             objSwiper[id] = new Swiper(swiper, {

@@ -3119,6 +3119,129 @@ input[type=radio] + label:after {
   cursor: pointer;
 }
 
+@media (max-width: 1199px) {
+  .swiper-scroll {
+    width: 100vw;
+    margin-left: -15px;
+  }
+}
+.swiper-scroll > p {
+  margin-bottom: 42px;
+  text-align: right;
+  font-size: 16px;
+  color: #595959;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .swiper-scroll > p {
+    margin-bottom: 20px;
+    padding: 0 15px;
+    text-align: left;
+    font-size: 11.5px;
+  }
+}
+.swiper-scroll .swiper {
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .swiper-scroll .swiper {
+    padding: 0 15px;
+  }
+}
+.swiper-scroll .swiper-slide {
+  flex: 0 0 auto;
+  position: relative;
+  width: 270px;
+}
+@media (max-width: 1199px) {
+  .swiper-scroll .swiper-slide {
+    width: 37.5%;
+  }
+}
+.swiper-scroll .swiper-slide img,
+.swiper-scroll .swiper-slide .img-wrap,
+.swiper-scroll .swiper-slide strong {
+  pointer-events: none;
+}
+.swiper-scroll .swiper-slide .img-wrap {
+  display: block;
+  position: relative;
+}
+.swiper-scroll .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.swiper-scroll [role=tab] {
+  position: relative;
+  cursor: pointer;
+}
+.swiper-scroll [role=tab] strong {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .swiper-scroll [role=tab] strong {
+    font-size: 11.5px;
+    margin-top: 13px;
+  }
+}
+.swiper-scroll [role=tab][aria-selected=true] .img-wrap:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) url("./../../images/koagi/icon-plus.png") no-repeat 50% 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1199px) {
+  .swiper-scroll [role=tab][aria-selected=true] .img-wrap:before {
+    background-size: 24.5px auto;
+  }
+}
+.swiper-scroll .scrollbar {
+  position: relative;
+  margin-top: 50px;
+  cursor: pointer;
+}
+@media (max-width: 1199px) {
+  .swiper-scroll .scrollbar {
+    margin-top: 25px;
+  }
+}
+.swiper-scroll .scrollbar:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #696969;
+  transform: translateY(-50%);
+}
+@media (max-width: 1199px) {
+  .swiper-scroll .scrollbar:before {
+    height: 1.5px;
+  }
+}
+.swiper-scroll .scrollbar .swiper-scrollbar-drag {
+  height: 31px;
+  background: url("./../../images/koagi/icon-scroll.png") no-repeat 50% 50%;
+  cursor: pointer;
+}
+@media (max-width: 1199px) {
+  .swiper-scroll .scrollbar .swiper-scrollbar-drag {
+    height: 15.5px;
+    background-size: auto 100%;
+  }
+}
+
 .detail-info {
   border-top: 2px solid #444;
   padding-top: 67px;
@@ -7750,6 +7873,342 @@ table + table {
   background: url("./../../images/koagi/icon-calendar.png") no-repeat 50% 50%;
 }
 
+@media (max-width: 1199px) {
+  .arrangement-left .gTitle1 {
+    padding-bottom: 113px;
+  }
+}
+.arrangement-left .gTitle1:before {
+  content: "";
+  position: absolute;
+  right: -5px;
+  bottom: -80px;
+  width: 1142px;
+  height: 278px;
+  background: url("./../../images/koagi/visual-course.png") no-repeat 100% 0;
+}
+@media (max-width: 1199px) {
+  .arrangement-left .gTitle1:before {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 113px;
+    background: url("./../../images/koagi/visual-course-m.png") no-repeat 100% 100%;
+    background-size: auto 100%;
+  }
+}
+.arrangement-left .gTitle1 > .title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 95px;
+  z-index: 1;
+}
+@media (max-width: 1199px) {
+  .arrangement-left .gTitle1 > .title {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 40px;
+  }
+}
+.arrangement-left .gTitle1 > .title h4 {
+  justify-content: flex-start;
+}
+.arrangement-left .gTitle1 > .title .desc {
+  order: 1;
+  grid-column: 1/3;
+  margin-top: 60px;
+  text-align: left;
+}
+@media (max-width: 1199px) {
+  .arrangement-left .gTitle1 > .title .desc {
+    grid-column: 1/2;
+    margin-top: 14px;
+  }
+}
+.arrangement-left .gTitle1 > .title .desc strong {
+  display: block;
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+}
+.arrangement-left .gTitle1 > .title .desc .color-green {
+  color: #3eaa36;
+}
+.arrangement-left .gTitle1 > .title .subDescription {
+  display: block;
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000;
+  font-weight: 400;
+}
+.arrangement-left .gTitle1 .tabs {
+  justify-content: flex-end;
+  margin: 0;
+}
+@media (max-width: 1199px) {
+  .arrangement-left .gTitle1 .tabs {
+    justify-content: flex-start;
+  }
+}
+.arrangement-left .mBc1.forW {
+  grid-column: 1/3;
+}
+@media (max-width: 1199px) {
+  .arrangement-left .mBc1.forW {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .arrangement-left #body {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+.arrangement-left .map-wrap {
+  width: auto;
+  height: auto;
+}
+@media (max-width: 1199px) {
+  .arrangement-left .map-wrap {
+    width: 100vw;
+    margin-left: -15px;
+    padding-top: 0;
+  }
+}
+.arrangement-left .map-wrap + .swiper-scroll {
+  margin-top: 68px;
+}
+@media (max-width: 1199px) {
+  .arrangement-left .map-wrap + .swiper-scroll {
+    margin-top: 35.5px;
+  }
+}
+.arrangement-left .map-wrap img {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+
+.map-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 66px 168px 66px 118px;
+  border-radius: 100px 0 0 0;
+  background-color: #223927;
+}
+@media (max-width: 1199px) {
+  .map-info {
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 0;
+    padding: 25px;
+  }
+}
+.map-info li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+@media (max-width: 1199px) {
+  .map-info li {
+    gap: 8.5px;
+  }
+}
+.map-info .icon {
+  flex: 0 0 auto;
+}
+@media (max-width: 1199px) {
+  .map-info .icon {
+    width: 12.5px;
+  }
+}
+.map-info .title {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+  .map-info .title {
+    flex: 0 0 60px;
+    font-size: 12.5px;
+  }
+}
+.map-info .title + strong,
+.map-info .title + span {
+  margin-left: 15px;
+}
+@media (max-width: 1199px) {
+  .map-info .title + strong,
+  .map-info .title + span {
+    margin-left: 6.5px;
+  }
+}
+.map-info .title + strong {
+  display: flex;
+  align-items: baseline;
+  font-size: 38px;
+  color: #fff;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .map-info .title + strong {
+    font-size: 19px;
+  }
+}
+.map-info .title + strong span {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .map-info .title + strong span {
+    font-size: 15px;
+  }
+}
+.map-info .title + strong span + .large {
+  margin-left: 4px;
+}
+.map-info .title + strong span.large {
+  font-size: 38px;
+}
+@media (max-width: 1199px) {
+  .map-info .title + strong span.large {
+    font-size: 19px;
+  }
+}
+.map-info .score {
+  display: block;
+  position: relative;
+  width: 216px;
+  height: 40px;
+  background: url("./../../images/koagi/icon-star-empty.png") repeat-x 0 0;
+}
+@media (max-width: 1199px) {
+  .map-info .score {
+    width: 108px;
+    height: 20px;
+    background-size: auto 100%;
+  }
+}
+.map-info .score:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: url("./../../images/koagi/icon-star-fill.png") repeat-x 0 0;
+}
+@media (max-width: 1199px) {
+  .map-info .score:after {
+    background-size: auto 100%;
+  }
+}
+.map-info .score[data-score="1"]:after {
+  width: 57px;
+}
+@media (max-width: 1199px) {
+  .map-info .score[data-score="1"]:after {
+    width: 28.5px;
+  }
+}
+.map-info .score[data-score="2"]:after {
+  width: 114px;
+}
+@media (max-width: 1199px) {
+  .map-info .score[data-score="2"]:after {
+    width: 57px;
+  }
+}
+.map-info .score[data-score="3"]:after {
+  width: 171px;
+}
+@media (max-width: 1199px) {
+  .map-info .score[data-score="3"]:after {
+    width: 85.5px;
+  }
+}
+.map-info .score[data-score="4"]:after {
+  width: 228px;
+}
+@media (max-width: 1199px) {
+  .map-info .score[data-score="4"]:after {
+    width: 114px;
+  }
+}
+
+.course-detail {
+  padding: 72px 60px 55px;
+  background-color: #fafafa;
+  counter-reset: course 0;
+}
+@media (max-width: 1199px) {
+  .course-detail {
+    padding: 37.5px 25px;
+  }
+}
+.course-detail > strong {
+  display: block;
+  font-size: 23px;
+  color: #000;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .course-detail > strong {
+    font-size: 11.5px;
+  }
+}
+.course-detail > strong + ol {
+  margin-top: 35px;
+}
+@media (max-width: 1199px) {
+  .course-detail > strong + ol {
+    margin-top: 16.5px;
+  }
+}
+.course-detail ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 36px;
+}
+@media (max-width: 1199px) {
+  .course-detail ol {
+    gap: 12px 36px;
+  }
+}
+.course-detail li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+}
+.course-detail li:not(:last-of-type):after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  width: 9px;
+  height: 14px;
+  background: url("./../../images/koagi/icon-triangle-yellow.png") no-repeat 0 0;
+  transform: translateY(-50%);
+}
+.course-detail li:before {
+  counter-increment: course;
+  content: counter(course);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 21px;
+  height: 21px;
+  margin-right: 10px;
+  border-radius: 100%;
+  background-color: #3d3d3d;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
 @media all and (max-width: 1199px) {
   .mUtil1 .attach,
   .mUtil1 .print,
@@ -7931,10 +8390,29 @@ table + table {
     height: 140px;
   }
   .mKeysub1 .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    padding: 0;
+  }
+  .mKeysub1 .left span {
+    font-family: "SBAggro", serif;
+    font-size: 23.5px;
+  }
+  .mKeysub1 .left span:before {
     display: none;
   }
-  .mKeysub1 .cell {
-    text-align: center;
+  .mKeysub1 .left:before, .mKeysub1 .left:after {
+    display: none;
+  }
+  .mKeysub1 .text-wrap {
+    display: none;
   }
   .mKeysub1 h3 {
     font-size: 18px;
@@ -7969,7 +8447,7 @@ table + table {
     margin-top: 10px;
   }
   .gTitle1 .title h4 {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 31px;
     letter-spacing: 0;
     text-align: center;

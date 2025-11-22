@@ -27,6 +27,20 @@ const scripts = (() => {
         return elements;
     };
 
+    const throttling = (callback = () => {
+    }, timing = 100) => {
+        let timer;
+
+        return (...args) => {
+            if (!timer) {
+                timer = setTimeout(() => {
+                    callback(...args);
+                    timer = null;
+                }, timing);
+            }
+        };
+    };
+
     const KEY = {
         RIGHT: 39, LEFT: 37,
     };
@@ -193,10 +207,27 @@ const scripts = (() => {
         swiper.init();
     };
 
+    let tempScroll = window.scrollY;
+
+    const bindScrollEvent = (e) => {
+        const header = $('#header');
+
+        if (!header) {
+            return;
+        }
+
+        const scrollTop = window.scrollY;
+        const isUp = tempScroll > window.scrollY;
+
+        header.classList[scrollTop <= 0 ? 'remove' : 'add']('minimize');
+        header.classList[!isUp ? 'add' : 'remove']('hide');
+        tempScroll = window.scrollY;
+    };
 
     const init = () => {
         setTabs();
         stopSwiper();
+        window.addEventListener('scroll', throttling(bindScrollEvent, 50));
     };
 
     return {

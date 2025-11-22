@@ -1,45 +1,102 @@
-<header id="header">
+<!--
+* sub pages
+ㄴ `#header` element add class `sub`
+-->
+<header id="header" onmouseleave="this.classList.remove('on')" class="">
     <div class="headerWrap">
         <div class="headerMenu">
             <div class="topMenu">
                 <div class="logo">
-                    <a href="#" title="메인으로">
-                        <img src="<%= imgPath %>/common/logo_d.png">
+                    <a href="#"
+                       title="메인으로">
+                        <span class="a11y">서울세이프</span>
                     </a>
                 </div>
-                <nav role="navigation" class="gnbWrap"><!--nav role="navigation" -->
+                <nav role="navigation"
+                     class="gnbWrap"><!--nav role="navigation" -->
                     <div class="gnbMenu">
+                        <%
+                        const items = [
+                            {
+                                title   : '소개',
+                                subItems: [
+                                    {
+                                        title: '',
+                                    },
+                                ],
+                            },
+                            {
+                                title   : '피해지원정보',
+                                subItems: [
+                                    {
+                                        title: '피해자지원서비스',
+                                    },
+                                    {
+                                        title: '지원기관',
+                                    },
+                                    {
+                                        title: '폭력대응정보',
+                                    },
+                                ],
+                            },
+                            {
+                                title   : '폭력예방콘텐츠',
+                                subItems: [
+                                    {
+                                        title: '동영상',
+                                    },
+                                    {
+                                        title: '카드뉴스',
+                                    },
+                                    {
+                                        title: '정책자료',
+                                    },
+                                ],
+                            },
+                            {
+                                title   : '아카이브',
+                                subItems: [
+                                    {
+                                        title: '젠더아카이브',
+                                    },
+                                    {
+                                        title: '성인지통계',
+                                    },
+                                    {
+                                        title: '기증자료 전시관',
+                                    },
+                                ],
+                            },
+                            {
+                                title   : '소식알림',
+                                subItems: [
+                                    {
+                                        title: '',
+                                    },
+                                ],
+                            },
+                        ];
+                        %>
                         <ul class="gnb">
-                            <li>
-                                <a href="#" class="gnb1dep">맞춤형정보검색</a>
-                                <ul class="gnb2dep">
-                                    <li><a href="#" class="mOn">sub</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="gnb1dep">피해지원</a>
-                                <ul class="gnb2dep">
-                                    <li><a href="#">sub</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="gnb1dep">폭력예방</a>
-                                <ul class="gnb2dep">
-                                    <li><a href="#">sub</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="gnb1dep">정책/통계</a>
-                                <ul class="gnb2dep">
-                                    <li><a href="#">sub</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="gnb1dep">알림정보</a>
-                                <ul class="gnb2dep">
-                                    <li><a href="#">sub</a></li>
-                                </ul>
-                            </li>
+                            <% items.map(item => { %>
+                                <li>
+                                    <a href="#"
+                                       class="gnb1dep"
+                                       onmouseenter="document.getElementById('header').classList.add('on')"><%= item.title %>
+                                    </a>
+                                    <% if (item.subItems.length > 1) { %>
+                                        <ul class="gnb2dep">
+                                            <% item.subItems.map(sub => { %>
+                                                <li>
+                                                    <a href="#"
+                                                       class="mOn"><%= sub.title %>
+                                                    </a>
+                                                </li>
+                                            <% }); %>
+                                        </ul>
+                                    <% } %>
+                                </li>
+                            <% }); %>
                         </ul>
                     </div>
                 </nav><!--//gnbWrap-->
@@ -48,55 +105,64 @@
                 <div class="menuBtn">
                     <ul>
                         <li class="search">
-                            <button type="submit"><img src="<%= imgPath %>/common/ico_search.svg" alt="검색"></button>
+                            <button type="submit" class="button-search">
+                                <span class="a11y">검색</span>
+                            </button>
                         </li>
                         <li class="allmenu">
-                            <button type="submit"><img src="<%= imgPath %>/common/ico_allmenu.svg" alt="전체메뉴보기"></button>
+                            <button type="submit" class="button-nav" onclick="document.getElementById('jsNav').classList.toggle('on')">
+                                <span class="a11y">전체 메뉴</span>
+                            </button>
                         </li>
                     </ul>
                 </div>
-                <div class="menuToggle">
+                <div id="jsNav"
+                     class="menuToggle">
                     <div class="inside">
-                        <a href=""><img src="<%= imgPath %>/common/logo_w.png" alt="로고"></a>
-                        <button type="submit" class="close"><img src="<%= imgPath %>/common/ico_closemenu.svg" alt="전체메뉴닫기"></button>
+                        <a href="">
+                            <img src="<%= imgPath; %>/common/logo_w.png"
+                                 alt="로고">
+                        </a>
+                        <button type="submit"
+                                class="close"
+                                onclick="document.getElementById('jsNav').classList.remove('on')">
+                            <img src="<%= imgPath; %>/common/ico_closemenu.svg"
+                                 alt="전체메뉴닫기">
+                        </button>
                     </div>
-                    <nav role="navigation" class="toggleNavi">
+                    <nav role="navigation"
+                         class="toggleNavi">
                         <ul>
+                            <% items.map(item => { %>
                             <li>
-                                <a href="#" class="toggle1dep">맞춤형정보검색</a>
+                                <a href="#"
+                                   class="toggle1dep"><%= item.title %>
+                                </a>
+                                <% if (item.subItems.length > 1) { %>
                                 <ul class="toggle2dep">
-                                    <li><a href="#">sub</a></li>
+                            <% item.subItems.map(sub => { %>
+                                    <li>
+                                        <a href="#"><%= sub.title %></a>
+                                    </li>
+                            <% }); %>
                                 </ul>
+                                <% } %>
                             </li>
-                            <li>
-                                <a href="#" class="toggle1dep">피해지원</a>
-                                <ul class="toggle2dep">
-                                    <li><a href="#">sub</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="toggle1dep">폭력예방</a>
-                                <ul class="toggle2dep">
-                                    <li><a href="#">sub</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="toggle1dep">정책/통계</a>
-                                <ul class="toggle2dep">
-                                    <li><a href="#">sub</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="toggle1dep">알림정보</a>
-                                <ul class="toggle2dep">
-                                    <li><a href="#">sub</a></li>
-                                </ul>
-                            </li>
+                            <% }); %>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div><!-- //headerMenu -->
+        <div class="family-sites">
+            <ul>
+                <li>
+                    <a href="#">서울특별시</a>
+                </li>
+                <li>
+                    <a href="#">서울시여성가족재단</a>
+                </li>
+            </ul>
+        </div>
     </div><!-- //headerWrap -->
-    <div class="gnb2depBG"></div>
 </header><!--// header -->

@@ -232,15 +232,14 @@ $imgPath: "./../../images/safe/main";
             }
 
             li {
-                @include m.respond-to(map.get(m.$max, 1199)) {
-                    flex: 1;
-                }
+                flex: 1;
             }
         }
 
         .img-wrap {
+            display: block;
+            border-radius: 20px;
             @include m.respond-to(map.get(m.$max, 1199)) {
-                display: block;
                 width: 100%;
             }
 
@@ -616,9 +615,6 @@ $imgPath: "./../../images/safe/main";
                         }
                     }
                 }
-                @include m.respond-to(map.get(m.$max, 1199)) {
-                    display: none;
-                }
             }
 
             button {
@@ -759,6 +755,10 @@ $imgPath: "./../../images/safe/main";
             .loc25 {
                 top: 212px;
                 left: 537px;
+            }
+
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
             }
         }
     }

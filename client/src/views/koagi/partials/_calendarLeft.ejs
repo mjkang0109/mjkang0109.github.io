@@ -1,0 +1,90 @@
+<%
+var isSimple = isSimple || false;
+%>
+<div class="calendar-controls">
+    <% if (!isSimple) { %>
+        <button type="button"
+                class="button-prev">
+            <span class="sound-only">이전달</span>
+        </button>
+    <% } %>
+    <strong class="year">
+        <%= isSimple ? '2025. 10' : '2025년'; %>
+    </strong>
+    <% if (!isSimple) { %>
+        <label for="selectMonth">
+            <select id="selectMonth"
+                    title="월">
+                <% for(let i = 0; i < 12; i++) { %>
+                    <option value="<%= i + 1; %>"><%= i + 1; %>월</option>
+                <% } %>
+            </select>
+        </label>
+        <button type="button"
+                class="button-next">
+            <span class="sound-only">다음달</span>
+        </button>
+    <% } %>
+</div>
+<div class="calendar-select">
+    <ul class="days">
+        <li>일</li>
+        <li>월</li>
+        <li>화</li>
+        <li>수</li>
+        <li>목</li>
+        <li>금</li>
+        <li>토</li>
+    </ul>
+    <ul class="dates">
+        <% if (isSimple) { %>
+            <% for(let i = 0; i < 31; i++) { %>
+                <li>
+                    <span class="num"><%= i + 1; %></span>
+                    <% if (i === 3 || i === 10 || i === 26) { %>
+                        <span class="red">대한민국<br>정원산업박람회</span>
+                    <% } %>
+                </li>
+            <% } %>
+            <% for(let i = 0; i < 4; i++) { %>
+                <li>
+                    <span class="num"><%= i + 1; %></span>
+                </li>
+            <% } %>
+        <% } %>
+        <% if(!isSimple) { %>
+            <% for(let i = 0; i < 31; i++) { %>
+                <li class="<%= i === 11 ? 'selected' : '' %>">
+                    <button type="button"
+                            class="button-date"
+                            <%- i % 7 === 0 ? 'disabled' : '' %>>
+                        <span class="num"><%= i + 1; %></span>
+                        <% if (i === 3 || i === 10 || i === 26) { %>
+                            <ul class="state">
+                                <li>
+                                    <span class="badge small blue">전시</span>
+                                    <strong>1건</strong>
+                                </li>
+                                <li>
+                                    <span class="badge small green">행사</span>
+                                    <strong>1건</strong>
+                                </li>
+                            </ul>
+                        <% } %>
+                        <% if (i % 7 === 1) { %>
+                            <span class="red">휴관일</span>
+                        <% } %>
+                    </button>
+                </li>
+            <% } %>
+            <% for(let i = 0; i < 4; i++) { %>
+                <li>
+                    <button type="button"
+                            class="button-date">
+                        <span class="num"><%= i + 1; %></span>
+                    </button>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+</div>

@@ -20,6 +20,8 @@
 @use "./../partials/items" as items;
 @use "./../partials/foldItems" as foldItems;
 @use "./../partials/course" as course;
+@use "./../partials/membershipWrap" as membership;
+@use "./../partials/calendarDivision" as calendarDivision;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -1920,3 +1922,5 @@ input[type="radio"] {
 }
 
 @include course.course;
+@include membership.membership;
+@include calendarDivision.calendarDivision;

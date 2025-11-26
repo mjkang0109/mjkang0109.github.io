@@ -1,0 +1,288 @@
+<%
+const items = {
+    default     : {
+        items: [
+            {
+                title  : '일반회원',
+                price  : '30,000원',
+                age    : '만 7세이상 65세 미만',
+                period : '1년',
+                benefit: [
+                    '한국수목원정원관리원 소속 수목원 무료입장',
+                    '행사, 전시 등 정보 제공',
+                    '회원의 날 행사 초청',
+                    '가든샵 및 카페할인 (10%)',
+                    '교육 및 해설 등 순수교육비 할인 (20%)',
+                ],
+            },
+            {
+                title  : '지역회원',
+                price  : '15,000원',
+                age    : '한국수목원정원관리원에서 운영하는 수목원/식물원이 위치한 지역 거주민',
+                period : '1년',
+                benefit: [
+                    '한국수목원정원관리원 소속 수목원 무료입장',
+                    '행사, 전시 등 정보 제공',
+                    '회원의 날 행사 초청',
+                    '가든샵 및 카페할인 (10%)',
+                    '교육 및 해설 등 순수교육비 할인 (20%)',
+                ],
+            },
+            {
+                title  : '평생회원',
+                price  : '1,000,000원',
+                age    : '평생 1회 납부하며, 한국수목원정원관리원의 모든 혜택 적용',
+                period : '회원 탈퇴 시까지',
+                benefit: [
+                    '한국수목원정원관리원 소속 수목원 무료입장 (본인 포함 동반 4인)',
+                    '행사, 전시 등 정보 제공',
+                    '회원의 날 행사 초청',
+                    '가든샵 및 카페할인 (10%)',
+                    '교육 및 해설 등 순수교육비 할인 (50%)',
+                    '교육연수동 할인 (50%)',
+                ],
+            },
+            {
+                title  : '어울림회원',
+                price  : '무료',
+                age    : '만 65세 이상 또는 만6세 이하',
+                period : '1년',
+                benefit: [
+                    '한국수목원정원관리원 소속 수목원 무료입장',
+                    '행사, 전시 등 정보 제공',
+                ],
+            },
+        ],
+    },
+    organization: {
+        items: [
+            {
+                title  : '기관회원',
+                price  : '1인당 10,000원',
+                age    : '20인 이상 재직직원 대상 기업',
+                period : '1년',
+                benefit: [
+                    '한국수목원정원관리원 소속 수목원 무료입장',
+                    '행사, 전시 등 정보 제공',
+                    '가든샵 및 카페할인 (10%)',
+                ],
+            },
+        ],
+    },
+    donation    : {
+        items: [
+            {
+                title  : '기부회원',
+                price  : '무료',
+                age    : '한국수목원정원관리원 기부금품 업무처리 절차에 따름',
+                period : '1년 또는 평생 (기부규모에 차등적용)',
+                benefit: [
+                    '한국수목원정원관리원 소속 수목원 무료입장 (본인 포함 동반 4인)',
+                    '한국수목원정원관리원 달력 및 기념품 증정',
+                    '홍보물 및 간행물 발송',
+                    '행사, 전시 등 정보 제공',
+                    '가든샵 및 카페할인 (10%)',
+                ],
+            },
+        ],
+    },
+};
+%>
+<ul class="memberships">
+    <%
+    items[state].items.map(item => {
+    %>
+        <li>
+            <div class="left">
+                <strong><%= item.title; %></strong>
+                <span class="img-wrap">
+                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                     width: 179,
+                     height: 170,
+                     isSimply: true,
+                     source: `${imgPath}/dummy-membership-qr.png`,
+                     alt: '',
+                     }); %>
+                </span>
+            </div>
+            <div class="right">
+                <%
+                    const titles = ['가&nbsp;&nbsp;입&nbsp;&nbsp;비', '가입대상', '기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;간'];
+                    const titleKey = [
+                        'price', 'age', 'period',
+                    ];
+                %>
+                <ul>
+                    <% titles.map((title, i) => { %>
+                        <li>
+                            <strong><%- title; %></strong>
+                            <p><%= item[titleKey[i]]; %></p>
+                        </li>
+                    <% }); %>
+                    <li>
+                        <strong>
+                            회원혜택
+                        </strong>
+                        <ul class="benefit">
+                            <% item.benefit.map(b => { %>
+                                <li><%= b %></li>
+                            <% }); %>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="button-wrap">
+                <button type="button"
+                        class="button-navy-circle">
+                    <span><%= state === 'donation' ? '기부안내' : '신청하기' %></span>
+                </button>
+            </div>
+        </li>
+    <% }); %>
+</ul>
+<% if (state === 'default') { %>
+    <article class="detail-section">
+        <strong class="title-leaf">연간회원 가입방법 및 발급 안내</strong>
+        <ul class="dot-caution">
+            <li>홈페이지 가입 또는 소속기관 방문 가입</li>
+            <li>실물카드 또는 모바일 회원카드 발급 선택</li>
+            <li>홈페이지 가입 후 실물카드 발급 선택 시 소속기관 방문 수령<br>※ 발급된 실물카드는 우편으로 발송되지 않습니다. 가까운 소속기관을 방문하셔서 수령해 주시기 바랍니다.</li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaf">연간회원 갱신 신청</strong>
+        <ul class="dot-caution">
+            <li>만료 한달 전부터 갱신할 수 있습니다.</li>
+            <li>연간회원 이용기간 만료 시 신규 신청을 하셔야 합니다.</li>
+            <li>실물카드를 모바일 회원카드로 변경하여 발급하신 경우 갱신 발급 즉시 사용이 가능합니다.</li>
+            <li>유효기간 확인<br>실물카드 내 유효기간 확인
+                <br>홈페이지 : 로그인 > 마이페이지 > 연간회원 갱신 신청
+            </li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaf">연간회원 분실 재발급 신청</strong>
+        <ul class="dot-caution">
+            <li>카드 분실 또는 카드 유형변경, 개인정보(전화번호 등) 변경 시 재발급 신청하셔야 합니다.</li>
+            <li>재발급 신청
+                <br>현장 방문 : 소속기관 수목원·식물원 방문하여 재발급 신청서 작성
+                <br>홈페이지 : 로그인 > 마이페이지 > 연간회원 재발급 신청
+            </li>
+            <li>재발급 회원카드 유형
+                <br>실물카드 : 현장 방문 신청 시 즉시 발급, 온라인 신청 시 수 일 소요
+                <br>모바일 회원카드 : 신청 후 즉시 발급
+            </li>
+        </ul>
+    </article>
+<% } %>
+<% if (state === 'organization') { %>
+    <article class="detail-section">
+        <strong class="title-leaf">기관회원 가입안내</strong>
+        <ul class="dot-caution">
+            <li>한국수목원정원관리원 [회원가입 > 기업회원 가입] 후 기관회원 신청이 가능합니다.</li>
+            <li>온라인 가입 시 가입대상자 목록은 미리 준비해주세요.</li>
+            <li>가입대상자 중 이미 한국수목원정원관리원 일반회원이어도 기업회원으로 분류되어 개별 계정이 생성됩니다.</li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaf">연간회원 가입방법 및 발급 안내</strong>
+        <ul class="dot-caution">
+            <li>홈페이지 가입 또는 소속기관 방문 가입</li>
+            <li>실물카드 또는 모바일 회원증 발급 선택</li>
+            <li>홈페이지 가입 후 실물카드 발급 선택 시 소속기관 방문 수령<br>※ 발급된 실물카드는 우편으로 발송되지 않습니다. 가까운 소속기관을 방문하셔서 수령해 주시기 바랍니다.</li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaf">연간회원 갱신 신청</strong>
+        <ul class="dot-caution">
+            <li>만료 한달 전부터 갱신할 수 있습니다.</li>
+            <li>연간회원 이용기간 만료 시 신규 신청을 하셔야 합니다.</li>
+            <li>실물카드를 모바일 회원카드로 변경하여 발급하신 경우 갱신 발급 즉시 사용이 가능합니다.</li>
+            <li>유효기간 확인
+                <br>&middot; 실물카드 내 유효기간 확인
+                <br>&middot; 홈페이지 : 로그인 > 마이페이지 > 연간회원 갱신 신청
+                <div class="buttons">
+                    <a href="#"
+                       class="button-icon-outline">갱신 신청 바로가기
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaf">연간회원 분실 재발급 신청</strong>
+        <ul class="dot-caution">
+            <li>카드 분실 또는 카드 유형변경, 개인정보(전화번호 등) 변경 시 재발급 신청하셔야 합니다.</li>
+            <li><strong>재발급 신청</strong>
+                <br>&middot; 현장 방문 : 소속기관 수목원·식물원 방문하여 재발급 신청서 작성
+                <br>&middot; 홈페이지 : 로그인 > 마이페이지 > 연간회원 재발급 신청
+            </li>
+            <li><strong>재발급 회원카드 유형</strong>
+                <br>&middot; 실물카드 : 현장 방문 신청 시 즉시 발급, 온라인 신청 시 수 일 소요
+                <br>&middot; 모바일 회원증 : 신청 후 즉시 발급
+                <div class="buttons">
+                    <a href="#"
+                       class="button-icon-outline">재발급 신청 바로가기
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaf">연간회원 환불 신청</strong>
+        <ul class="dot-caution">
+            <li>환불 신청은 [마이페이지] 또는 [현장 방문]하여 각 회원유형별 기간 내 가능하며, 환불 신청 기간이 지난 뒤 환불이 불가합니다.
+                <br>&middot; 일반회원, 지역회원, 기관회원 : 신청 후 30일 이내
+                <br>&middot; 평생회원 : 신청 후 90일 이내
+                <br>&middot; 어울림회원 : 연회비 무료이므로 환불 대상 제외
+                <div class="buttons">
+                    <a href="#"
+                       class="button-icon-outline">재발급 신청 바로가기
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaf">문의사항</strong>
+        <ul class="dot-caution">
+            <li>전화 문의 :
+                <a href="tel:000-0000-0000">000-0000-0000</a>
+                (화~금 09:00~17:00 / 점심시간 12:00~13:00)
+            </li>
+        </ul>
+    </article>
+<% } %>
+<% if (state === 'donation') { %>
+    <article class="detail-section">
+        <strong class="title-leaf">기부회원 카드 온라인 조회 안내</strong>
+        <ul class="dot-caution">
+            <li>한국수목원정원관리원 [회원가입 > 일반회원 가입] 후 아이디를 담당자에게 알려주시면 카드를 연동해 드립니다.</li>
+            <li>기부회원이 미성년자인 경우 법정대리인이 가입하셔야 합니다.
+                <div class="buttons">
+                    <a href="#"
+                       class="button-icon-outline">재발급 신청 바로가기
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </article>
+    <article class="detail-section">
+        <strong class="title-leaf">재발급 및 갱신 안내</strong>
+        <ul class="dot-caution">
+            <li>카드 분실 또는 카드 유형변경, 개인정보(전화2025<번호 등) 변경 시, 카드 연동이 완료된 상태에서 재발급 신청</li>
+            <li>실물카드 또는 모바일 회원카드 발급 선택</li>
+            <li>홈페이지 가입 후 실물카드 발급 선택 시 소속기관 방문 수령
+                <br>※ 발급된 실물카드는 우편으로 발송되지 않습니다. 가까운 본원을 방문하셔서 수령해 주시기 바랍니다.
+            </li>
+            <li>갱신은 별도 신청 없이, 한국수목원정원관리원 담당자 적용
+                <br>※ 갱신 적용이 되지 않은 경우 담당자에게 연락주세요.
+                <div class="buttons">
+                    <a href="#"
+                       class="button-icon-outline">재발급 신청 바로가기
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </article>
+<% } %>

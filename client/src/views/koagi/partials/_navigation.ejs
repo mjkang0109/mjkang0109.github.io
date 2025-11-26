@@ -50,16 +50,17 @@ var currentCategory = currentCategory || 'baekdu';
                 const currentItems = navItems[currentIndex].items;
                 const currentItemsLength = currentItems.length;
                 for (let i = 0; i < currentItemsLength; i++) {
-                    if (currentItems[i].title === '메인') {
+                    if (currentItems[i].title === '메인' && currentItems[i].title.includes(': ')) {
                         continue;
                     }
                 %>
                 <li class="m1">
                     <% if (!currentItems[i].pages) { %>
-                        <a href="./../<%= currentCategory %>/<%= currentItems[i].name %>.html" class="link"><%= currentItems[i].title %></a>
+                        <a href="./../<%= currentCategory ;%>/<%= currentItems[i].name ;%>.html"
+                           class="link"><%= currentItems[i].title ;%></a>
                     <% } %>
                     <% if (currentItems[i].pages) { %>
-                        <a href="#jsDep2_<%= i %>_m"><%= currentItems[i].title %></a>
+                        <a href="#jsDep2_<%= i ;%>_m"><%= currentItems[i].title ;%></a>
                     <% } %>
                 </li>
                 <%
@@ -70,53 +71,67 @@ var currentCategory = currentCategory || 'baekdu';
         <!-- //dep1 -->
         <%
         for (let i = 0; i < currentItemsLength; i++) {
-            if (currentItems[i].title === '메인') {
+            if (currentItems[i].title === '메인' || currentItems[i].title.includes(': ')) {
                 continue;
             }
         %>
-        <!-- <%=currentItems[i].title %> -->
-        <div id="jsDep2_<%= i %>_m"
-             class="dep2<%= i !== 1 ? ' hidden' : '' %>"
+        <!-- <%= currentItems[i].title ;%> -->
+        <div id="jsDep2_<%= i ;%>_m"
+             class="dep2<%= i !== 1 ? ' hidden' : '' ;%>"
              aria-expanded="false"
-             aria-controls="jsDep2_<%= i + 1 %>_m">
+             aria-controls="jsDep2_<%= i + 1 ;%>_m">
             <ul>
                 <%
-                const currentPages = currentItems[i]?.pages;
+                    const currentPages = currentItems[i]?.pages;
                 if (currentPages) {
                     const currentPagesLength = currentPages.length;
-                    for (let j = 0; j < currentPagesLength; j++) {
+                for (let j = 0; j < currentPagesLength; j++) {
+                    if (currentPages[j].title.includes(': ')) {
+                        continue;
+                    }
                 %>
-                    <li>
-                        <%
+                <li>
+                    <%
                         const currentSubItems = currentPages[j]?.subItems;
-                        if (currentSubItems) {
-                        %>
-                            <button type="button"
-                                    class="t"><%= currentPages[j].title %>
-                            </button>
-                            <div class="dep3"
-                                 style="">
-                                <%
-                                    const currentSubItemsLength = currentSubItems.length;
-                                for (let k = 0; k < currentSubItemsLength; k++) {
-                                %>
-                                    <a href="#"><%= currentSubItems[k].title %></a>
-                                <% } %>
-                            </div>
-                        <% } %>
-                        <% if (!currentSubItems) { %>
-                            <a href="#"
-                               class="t"><%= currentPages[j].title %>
-                            </a>
-                        <% } %>
-                    </li>
+                        const subLength = currentSubItems?.reduce((acc, curr) => {
+                            if (curr.title.includes(': ')) {
+                                acc++;
+                            }
+
+                            return acc;
+                        }, 0);
+
+                    if (currentSubItems && currentSubItems.length !== subLength) {
+                    %>
+                        <button type="button"
+                                class="t"><%= currentPages[j].title ;%>
+                        </button>
+                        <div class="dep3"
+                             style="">
+                            <%
+                                const currentSubItemsLength = currentSubItems.length;
+                            for (let k = 0; k < currentSubItemsLength; k++) {
+                                if (currentSubItems[k].title.includes(': ')) {
+                                    continue;
+                                }
+                            %>
+                            <a href="#"><%= currentSubItems[k].title ;%></a>
+                            <% } %>
+                        </div>
+                    <% } %>
+                    <% if (!currentSubItems || currentSubItems && currentSubItems.length === subLength) { %>
+                        <a href="#"
+                           class="t"><%= currentPages[j].title ;%>
+                        </a>
+                    <% } %>
+                </li>
                 <%
                 }
-                    }
+                }
                 %>
             </ul>
         </div>
-        <!-- <%=currentItems[i].title %> -->
+        <!-- <%= currentItems[i].title ;%> -->
         <%
         }
         %>

@@ -1,0 +1,22 @@
+<div class="calendar-division">
+    <div class="left">
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_calendarLeft`, {
+            
+        }) %>
+    </div>
+    <div class="right">
+        <div class="box-title">
+            <strong class="title">2025-12-12</strong>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
+            type: 'poster thumb',
+            states: [{text: '진행', color: 'green'}, {text: '특별', color: 'gray'}],
+            title: '그 여름, 반짝이는 수련',
+            desc: 'hide',
+            dummy: 'exhibition',
+            hidePagination:true,
+            count: 8,
+            info: include(`${process.env.INCLUDE_PATH}/koagi/partials/_exhibitionInfo`),
+            }) %>
+        </div>
+    </div>
+</div>

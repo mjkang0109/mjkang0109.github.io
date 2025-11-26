@@ -1,0 +1,227 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin calendarDivision {
+    .calendar-division {
+        display: flex;
+        gap: 66px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+        }
+
+        > .left {
+            flex: 1;
+        }
+
+        > .right {
+            flex: 0 0 500px;
+            align-self: stretch;
+
+            .gallery-items.thumb {
+                align-content: flex-start;
+                overscroll-behavior: auto;
+                overflow-y: auto;
+                height: calc(850px - 71px);
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    height: auto;
+                }
+            }
+        }
+
+        .box-title {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            height: 100%;
+        }
+    }
+    .calendar-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+
+        .button-prev,
+        .button-next {
+            width: 32px;
+            height: 32px;
+            background: url("#{$imgPath}/icon-arrow-left-round.png") no-repeat 50% 50%;
+        }
+
+        .button-prev {
+            margin-right: 28px;
+        }
+
+        .button-next {
+            margin-left: 28px;
+            transform: rotate(180deg);
+        }
+
+        .year {
+            font-size: 40px;
+            font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: 20px;
+            }
+        }
+
+        select {
+            display: inline-flex;
+            appearance: none;
+            border: none;
+            padding: 0 32px 0 0;
+            background: transparent url("#{$imgPath}/icon-arrow-down.png") no-repeat 100% 50%;
+            font-size: 40px;
+            font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: 20px;
+            }
+        }
+    }
+    .calendar-select {
+        margin-top: 33px;
+
+        .days,
+        .dates {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+
+            > li {
+                &:nth-of-type(7n+1) {
+                    color: #dc3232;
+
+                    .num {
+                        color: #dc3232;
+                    }
+
+                    button:disabled {
+                        .num {
+                            color: #dc3232;
+                        }
+                    }
+                }
+            }
+        }
+
+        .days {
+            border-top: 2px solid #000;
+
+            > li {
+                padding: 17px 0;
+                background-color: #f8f8f8;
+                font-size: 15px;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        .dates {
+            > li {
+                border-left: 1px solid #e6e6e6;
+                border-top: 1px solid #e6e6e6;
+
+                &:has(.button-date) {
+                    padding: 0;
+                    min-height: auto;
+                }
+
+                &:has(:not(button)) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                    width: 100%;
+                    height: 100%;
+                    min-height: 142px;
+                    padding: 12px;
+                    box-sizing: border-box;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        padding: 5px 3px;
+                    }
+
+                    &:nth-last-of-type(-n+7) {
+                        border-bottom: 1px solid #e6e6e6;
+                    }
+                }
+
+                &:nth-of-type(7n+1) {
+                    border-left: none;
+                }
+
+                &:nth-of-type(-n+7) {
+                    border-top: none;
+                }
+
+                &.selected {
+                    background-color: #feeeee;
+                }
+            }
+
+            .button-date {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                width: 100%;
+                height: 100%;
+                min-height: 142px;
+                padding: 12px 15px;
+                box-sizing: border-box;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding: 5px 3px;
+                }
+
+                &:disabled {
+                    .num {
+                        color: #000;
+                    }
+                }
+            }
+
+            .num {
+                color: #000;
+                font-size: 15px;
+                font-weight: 700;
+            }
+
+            .red {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                margin-top: 15px;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 700;
+                color: #dc3232;
+            }
+        }
+
+        .state {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: 10px;
+            }
+
+            > li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+        }
+    }
+
+    .calendar-wrap {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 884px;
+    }
+}

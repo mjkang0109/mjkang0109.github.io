@@ -109,14 +109,21 @@ var content = content || 'clinic';
         <% if (content === 'qna') { %>
             <p class="desc">
                 예산군농업기술센터는 지난 9월 15일부터 10월 14일까지 한 달간 관내 아파트 3개소를 대상으로 총 6회에 걸쳐 ‘찾아가는 반려식물 돌봄치유 사업’을 운영했다.
-                <br>이번 사업은 공동주택 거주 어르신 20명을 대상으로 반려식물 교육과 치유활동을 결합해 정서적 안정과 실내 식물 관리 능력 향상을 돕기 위해 추진됐다.
-                <br>예산군농업기술센터는 지난 9월 15일부터 10월 14일까지 한 달간 관내 아파트 3개소를 대상으로 총 6회에 걸쳐 ‘찾아가는 반려식물 돌봄치유 사업’을 운영했다.
-                <br>이번 사업은 공동주택 거주 어르신 20명을 대상으로 반려식물 교육과 치유활동을 결합해 정서적 안정과 실내 식물 관리 능력 향상을 돕기 위해 추진됐다.
-
-                <br><br>센터는 전문 강사를 아파트 단지로 직접 파견해 화분 관리법, 병해충 방제법 등 생활 속 실천 가능한 식물 돌봄 요령을 교육했다.
-                <br>이와 함께 ‘꽃 화분 만들기’, ‘접시정원 만들기’ 등 실습 중심의 프로그램을 운영해 어르신들의 참여와 호응을 이끌어냈다.
-                <br>특히 식물을 직접 심고 가꾸며 대화를 나누는 시간이 치유의 매개가 되면서, 참여 어르신들은 “식물을 키우며 외로움이 줄고 집안 분위기도 한층 밝아졌다”,
-                <br>“화분 관리법을 배우니 식물이 훨씬 잘 자라서 뿌듯하다”는 소감을 전했다.
+                <br>
+                이번 사업은 공동주택 거주 어르신 20명을 대상으로 반려식물 교육과 치유활동을 결합해 정서적 안정과 실내 식물 관리 능력 향상을 돕기 위해 추진됐다.
+                <br>
+                예산군농업기술센터는 지난 9월 15일부터 10월 14일까지 한 달간 관내 아파트 3개소를 대상으로 총 6회에 걸쳐 ‘찾아가는 반려식물 돌봄치유 사업’을 운영했다.
+                <br>
+                이번 사업은 공동주택 거주 어르신 20명을 대상으로 반려식물 교육과 치유활동을 결합해 정서적 안정과 실내 식물 관리 능력 향상을 돕기 위해 추진됐다.
+                <br>
+                <br>
+                센터는 전문 강사를 아파트 단지로 직접 파견해 화분 관리법, 병해충 방제법 등 생활 속 실천 가능한 식물 돌봄 요령을 교육했다.
+                <br>
+                이와 함께 ‘꽃 화분 만들기’, ‘접시정원 만들기’ 등 실습 중심의 프로그램을 운영해 어르신들의 참여와 호응을 이끌어냈다.
+                <br>
+                특히 식물을 직접 심고 가꾸며 대화를 나누는 시간이 치유의 매개가 되면서, 참여 어르신들은 “식물을 키우며 외로움이 줄고 집안 분위기도 한층 밝아졌다”,
+                <br>
+                “화분 관리법을 배우니 식물이 훨씬 잘 자라서 뿌듯하다”는 소감을 전했다.
             </p>
             <span class="img-wrap">
             <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
@@ -145,6 +152,13 @@ var content = content || 'clinic';
                 </ul>
             </div>
         <% } %>
+        <% if (content === 'schedule') { %>
+            <div class="calendar-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_calendarLeft`, {
+                isSimple: true
+                }) %>
+            </div>
+        <% } %>
     </div>
     <% if (content !== 'qna') { %>
         <button type="button"
@@ -154,9 +168,15 @@ var content = content || 'clinic';
     <% } %>
     <% if (content === 'qna') { %>
         <div class="buttons">
-            <button type="button" class="button-navy">수정</button>
-            <button type="button" class="button-gray">삭제</button>
-            <a href="#" class="button-navy">목록</a>
+            <button type="button"
+                    class="button-navy">수정
+            </button>
+            <button type="button"
+                    class="button-gray">삭제
+            </button>
+            <a href="#"
+               class="button-navy">목록
+            </a>
         </div>
     <% } %>
 </div>

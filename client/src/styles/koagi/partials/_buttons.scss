@@ -70,6 +70,16 @@ $imgPath: "./../../images/koagi";
                 font-size: 15px;
             }
         }
+        &-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 100px;
+            padding-top: 44px;
+            background: #013569 url("#{$imgPath}/icon-apply.png") no-repeat 50% 37px;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 700;
+        }
     }
     .button-gray {
         min-width: 150px;
@@ -171,5 +181,15 @@ $imgPath: "./../../images/koagi";
         color: #fff;
         border-radius: 5px;
         background-color: #3baf89;
+    }
+
+    .button-icon-outline {
+        display: inline-flex;
+        padding: 16px 126px 16px 32px;
+        border-radius: 100px;
+        border: 1px solid #919191;
+        background: url("#{$imgPath}/icon-arrow-right-line.png") no-repeat top 50% right 27px;
+        font-size: 16px;
+        color: #000;
     }
 }

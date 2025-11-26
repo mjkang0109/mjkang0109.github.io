@@ -127,7 +127,7 @@ $imgPath: "./../../images/koagi";
 
                     span {
                         font-weight: 600;
-                        color: #000000;
+                        color: #000;
                     }
                 }
             }
@@ -176,6 +176,48 @@ $imgPath: "./../../images/koagi";
         @include m.respond-to(map.get(m.$max, 1199)) {
             grid-template-columns: 1fr 1fr;
             gap: 55px 20px;
+        }
+
+        &.thumb {
+            grid-template-columns: 1fr;
+            gap: 54px;
+            padding: 48px 0;
+            box-sizing: border-box;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: 20px;
+                padding: 20px 0;
+            }
+
+            > li {
+                width: 100%;
+                padding: 0 38px;
+                box-sizing: border-box;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding: 0 20px;
+                }
+
+                > a {
+                    display: flex;
+                    gap: 30px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        gap: 20px;
+                    }
+                }
+            }
+
+            .img-wrap {
+                flex: 0 0 130px;
+                width: 130px;
+                height: 185px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    height: 0;
+                    padding-top: math.div(130, 185) * 100%;
+                }
+            }
+
+            .states {
+                margin-top: 0;
+            }
         }
 
         .img-wrap {

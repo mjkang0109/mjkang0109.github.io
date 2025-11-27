@@ -1833,6 +1833,11 @@ body.scrolling #header {
   background-color: #d64169;
   color: #fff;
 }
+#body .badge.blue,
+#body .link.blue {
+  background-color: #1883d0;
+  color: #fff;
+}
 #body .states {
   display: flex;
   flex-wrap: wrap;
@@ -2001,7 +2006,7 @@ body.scrolling #header {
 }
 .gallery-box .education-info.gray li span {
   font-weight: 600;
-  color: #000000;
+  color: #000;
 }
 .gallery-box .education-info li {
   display: flex;
@@ -2049,6 +2054,51 @@ body.scrolling #header {
     grid-template-columns: 1fr 1fr;
     gap: 55px 20px;
   }
+}
+.gallery-poster.thumb {
+  grid-template-columns: 1fr;
+  gap: 54px;
+  padding: 48px 0;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .gallery-poster.thumb {
+    gap: 20px;
+    padding: 20px 0;
+  }
+}
+.gallery-poster.thumb > li {
+  width: 100%;
+  padding: 0 38px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .gallery-poster.thumb > li {
+    padding: 0 20px;
+  }
+}
+.gallery-poster.thumb > li > a {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .gallery-poster.thumb > li > a {
+    gap: 20px;
+  }
+}
+.gallery-poster.thumb .img-wrap {
+  flex: 0 0 130px;
+  width: 130px;
+  height: 185px;
+}
+@media (max-width: 1199px) {
+  .gallery-poster.thumb .img-wrap {
+    height: 0;
+    padding-top: 70.2702702703%;
+  }
+}
+.gallery-poster.thumb .states {
+  margin-top: 0;
 }
 .gallery-poster .img-wrap {
   width: 305px;
@@ -8395,6 +8445,212 @@ table + table {
 
 .detail-section .dot-caution .buttons {
   margin-top: 33px;
+}
+
+.calendar-division {
+  display: flex;
+  gap: 66px;
+}
+@media (max-width: 1199px) {
+  .calendar-division {
+    flex-direction: column;
+  }
+}
+.calendar-division > .left {
+  flex: 1;
+}
+.calendar-division > .right {
+  flex: 0 0 500px;
+  align-self: stretch;
+}
+.calendar-division > .right .gallery-items.thumb {
+  align-content: flex-start;
+  overscroll-behavior: auto;
+  overflow-y: auto;
+  height: 779px;
+}
+@media (max-width: 1199px) {
+  .calendar-division > .right .gallery-items.thumb {
+    height: auto;
+  }
+}
+.calendar-division .box-title {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.calendar-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.calendar-controls .button-prev,
+.calendar-controls .button-next {
+  width: 32px;
+  height: 32px;
+  background: url("./../../images/koagi/icon-arrow-left-round.png") no-repeat 50% 50%;
+}
+.calendar-controls .button-prev {
+  margin-right: 28px;
+}
+.calendar-controls .button-next {
+  margin-left: 28px;
+  transform: rotate(180deg);
+}
+.calendar-controls .year {
+  font-size: 40px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .calendar-controls .year {
+    font-size: 20px;
+  }
+}
+.calendar-controls select {
+  display: inline-flex;
+  appearance: none;
+  border: none;
+  padding: 0 32px 0 0;
+  background: transparent url("./../../images/koagi/icon-arrow-down.png") no-repeat 100% 50%;
+  font-size: 40px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .calendar-controls select {
+    font-size: 20px;
+  }
+}
+
+.calendar-select {
+  margin-top: 33px;
+}
+.calendar-select .days,
+.calendar-select .dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calendar-select .days > li:nth-of-type(7n+1),
+.calendar-select .dates > li:nth-of-type(7n+1) {
+  color: #dc3232;
+}
+.calendar-select .days > li:nth-of-type(7n+1) .num,
+.calendar-select .dates > li:nth-of-type(7n+1) .num {
+  color: #dc3232;
+}
+.calendar-select .days > li:nth-of-type(7n+1) button:disabled .num,
+.calendar-select .dates > li:nth-of-type(7n+1) button:disabled .num {
+  color: #dc3232;
+}
+.calendar-select .days {
+  border-top: 2px solid #000;
+}
+.calendar-select .days > li {
+  padding: 17px 0;
+  background-color: #f8f8f8;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+.calendar-select .dates > li {
+  border-left: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+}
+.calendar-select .dates > li:has(.button-date) {
+  padding: 0;
+  min-height: auto;
+}
+.calendar-select .dates > li:has(:not(button)) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 142px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .calendar-select .dates > li:has(:not(button)) {
+    padding: 5px 3px;
+  }
+}
+.calendar-select .dates > li:has(:not(button)):nth-last-of-type(-n+7) {
+  border-bottom: 1px solid #e6e6e6;
+}
+.calendar-select .dates > li:nth-of-type(7n+1) {
+  border-left: none;
+}
+.calendar-select .dates > li:nth-of-type(-n+7) {
+  border-top: none;
+}
+.calendar-select .dates > li.selected {
+  background-color: #feeeee;
+}
+.calendar-select .dates .button-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 142px;
+  padding: 12px 15px;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .calendar-select .dates .button-date {
+    padding: 5px 3px;
+  }
+}
+.calendar-select .dates .button-date:disabled .num {
+  color: #000;
+}
+.calendar-select .dates .num {
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+}
+.calendar-select .dates .red {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #dc3232;
+}
+.calendar-select .state {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 1199px) {
+  .calendar-select .state {
+    gap: 10px;
+  }
+}
+.calendar-select .state > li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 1199px) {
+  .calendar-select .state > li {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.calendar-wrap {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 884px;
 }
 
 @media all and (max-width: 1199px) {

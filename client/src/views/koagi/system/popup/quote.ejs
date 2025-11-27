@@ -1,0 +1,139 @@
+---
+group: system
+state:
+    default: 팝업-견적서
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>견적서</title>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH; %>/styles/koagi/popup<%= process.env.MINIFY; %>.css<%= `?${setTimestamp()}`; %>">
+</head>
+<body>
+    <%
+    imgPath = `${process.env.IMG_PATH}/koagi`
+
+    const data = {
+        default: {
+            title: '견적서',
+            body : `
+            `,
+        }
+    }
+    %>
+    <div class="popup">
+        <strong class="header">
+            <%= data[state].title %>
+            <button type="button"
+                    class="button-close">
+                <span class="a11y">닫기</span>
+            </button>
+        </strong>
+        <div class="body">
+            <%- data[state].body %>
+            <table class="table-horizon">
+                <caption>
+                    <strong>견적서</strong>
+                    <span class="logo-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 234,
+                        height: 33,
+                        isSimply: true,
+                        source: `${imgPath}/logo-baekdu.png`,
+                        alt: '',
+                        }); %>
+                    </span>
+                </caption>
+                <tr>
+                    <th>기관명</th>
+                    <td>국립백두대간수목원</td>
+                    <th>대표자</th>
+                    <td>국립백두대간수목원장</td>
+                </tr>
+                <tr>
+                    <th>전화번호</th>
+                    <td>
+                        <a href="tel:054-1568-4896">054-1568-4896</a>
+                    </td>
+                    <th>사업자번호</th>
+                    <td>835-82-00095</td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td colspan="3">36256 경상북도 봉화군 춘양면 춘양로 1501 국립백두대간수목원</td>
+                </tr>
+            </table>
+            <table class="table-horizon">
+                <tr>
+                    <th>신청자명</th>
+                    <td>홍길동</td>
+                    <th>단체명</th>
+                    <td>역곡초등학교</td>
+                </tr>
+                <tr>
+                    <th>견적일</th>
+                    <td>2025-01-20</td>
+                    <th>이용일</th>
+                    <td>2025-02-04</td>
+                </tr>
+                <tr>
+                    <th>프로그램명</th>
+                    <td colspan="3">[단체] 백두대간 숲싹 실험실 (선착마감)</td>
+                </tr>
+            </table>
+            <table class="table-horizon">
+                <tr>
+                    <th>항목</th>
+                    <th>단가</th>
+                    <th>수량</th>
+                    <th>합계</th>
+                </tr>
+                <tr>
+                    <td>성인</td>
+                    <td align="right">10,000</td>
+                    <td align="right">2</td>
+                    <td align="right">30,000</td>
+                </tr>
+                <tr>
+                    <td>초등</td>
+                    <td align="right">10,000</td>
+                    <td align="right">2</td>
+                    <td align="right">30,000</td>
+                </tr>
+                <tr>
+                    <td>인솔자</td>
+                    <td align="right">10,000</td>
+                    <td align="right">2</td>
+                    <td align="right">30,000</td>
+                </tr>
+                <tr>
+                    <th colspan="2"
+                        class="gray">합계
+                    </th>
+                    <td align="right"><strong>14</strong></td>
+                    <td align="right"><strong>145,000</strong></td>
+                </tr>
+            </table>
+            <div class="box">
+                봉화군 지역학교 할인 적용됩니다.봉화군 지역학교 할인 적용됩니다.
+                봉화군 지역학교 할인 적용됩니다.봉화군 지역학교 할인 적용됩니다.봉화군 지역학교 할인 적용됩니다.
+            </div>
+            <strong class="name">국립백두대간수목원</strong>
+        </div>
+        <div class="footer">
+            <button type="button"
+                    class="button-black">다운로드
+            </button>
+            <button type="button"
+                    class="button-outline-black">닫기
+            </button>
+        </div>
+    </div>
+</body>
+</html>

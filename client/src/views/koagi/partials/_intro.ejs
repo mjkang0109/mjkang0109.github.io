@@ -1,0 +1,179 @@
+<section class="intro-visual">
+    <strong class="title"><%= currentName; %>
+        <br>
+        방문을 환영합니다
+    </strong>
+    <p class="desc">
+        <%= currentName; %>은 기후 및 식생대별 수목유전 자원의 보존 및 자원화를
+        <br>
+        위한 국가수목원 확충계획에 따라 국립백두대간수목원<2017.5.>에 이어
+        <br>
+        <strong>2020년 7월에 설립</strong>
+        된 또 하나의 국립수목원입니다.
+    </p>
+    <span class="img-wrap">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: 807,
+        height: 487,
+        isSimply: true,
+        source: `${imgPath}/intro-${currentCategory}-visual.png`,
+        alt: '',
+        }); %>
+    </span>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">수목원 개요</strong>
+    <ul class="overviews">
+        <%
+        const icons = [
+            {
+                name  : 'loc',
+                width : 22,
+                height: 26
+            },
+            {
+                name  : 'layer',
+                width : 23,
+                height: 25,
+            },
+            {
+                name  : 'calendar',
+                width : 22,
+                height: 23,
+            },
+            {
+                name  : 'clover',
+                width : 24,
+                height: 24,
+            },
+            {
+                name  : 'target',
+                width : 26,
+                height: 26,
+            },
+            {
+                name  : 'magnifier',
+                width : 27,
+                height: 25,
+            },
+        ]
+        const items = [
+            {
+                title: '위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;치',
+                desc : '세종특별자치시 연기면 수목원로 136',
+            },
+            {
+                title: '면&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;적',
+                desc : '65ha(649,997㎡)',
+            },
+            {
+                title: '조 성 기 간',
+                desc : '2012년~2020년 (준공: 2020.5.29. / 설립: 2020.7.1.)',
+            },
+            {
+                title: '식 물 식 재',
+                desc : '4,367종 2,488,070본',
+            },
+            {
+                title: '주 요 시 설',
+                desc : '전시원 26개소',
+            },
+            {
+                title   : '세 부 현 황',
+                subItems: [
+                    {
+                        title: '정원전시관람지구 (9개소)',
+                        desc : '한국전통정원, 분재원, 야생화원, 단풍정원, 양서류관찰원, 습지형생태숲, 청류지원, 붓꽃원, 담장정원',
+                    },
+                    {
+                        title: '식물교육체험지구 (11개소)',
+                        desc : '민속식물원, 사계절전시원, 희귀·특산식물원, 숲정원, 정원식물가늠터, 치산녹화원, 치유정원, 무궁화원, <br>유아숲체험원, 폴리네이터가든, IFLA세계조경가대회 기념정원',
+                    },
+                    {
+                        title: '커뮤니티참여활동지구 (6개소)',
+                        desc : '어린이정원, 축제마당, 생활정원, 후계목정원, 감각정원, 공유정원',
+                    },
+                ]
+            },
+        ];
+        %>
+        <% items.map((item, i) => { %>
+            <li>
+                <strong class="title<%= item.title === '세 부 현 황' ? ' mobile-hidden' : '' %>">
+                    <span class="icon-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: icons[i].width,
+                        height: icons[i].height,
+                        isSimply: true,
+                        source: `${imgPath}/icon-${icons[i].name}-gray.png`,
+                        alt: '',
+                        }); %>
+                    </span>
+                    <%- item.title %>
+                </strong>
+                <% if (item.desc) { %>
+                    <p class="desc"><%- item.desc %></p>
+                <% } %>
+                <% if (item.subItems) { %>
+                    <ul class="sub">
+                        <% item.subItems.map(sub => { %>
+                            <li>
+                                <strong class="subTitle">
+                                    <%= sub.title %>
+                                </strong>
+                                <p class="subDesc"><%- sub.desc %></p>
+                            </li>
+                        <% }); %>
+                    </ul>
+                <% } %>
+            </li>
+        <% }); %>
+    </ul>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">수목원 특징</strong>
+    <ul class="picture-items">
+        <%
+        const pictureItems = [
+            {
+                sub  : '대한민국 녹색도시의 심장,',
+                title: '생활 속 수목원 문화를 <span class="color-cyan">선도하는 수목원</span>',
+                desc : '국립세종수목원은 도시 한가운데에서 자연과 일상이 조화를 이루는 도심형 수목원으로, 국민 누구나 ‘자생식물’을 일상 문화로<br>향유할 수 있도록 다양한 전시·교육서비스를 제공하고 있습니다.',
+            },
+            {
+                sub  : '대한민국 대표 도심 생태플랫폼, ',
+                title: '도시숲·생물다양성 보전의 <span class="color-cyan">핵심 거점 수목원</span>',
+                desc : '도심 한가운데서 생태계 보전·녹색복지·도시숲 서비스를 실현하는 대한민국 대표 도심형 도시숲 수목원으로 자리매김하고 있습니다.<br>도시 내 열섬 완화, 생태네트워크 복원, 도시 생물다양성 증진을 목표로 도심 생활권에서 시민이 자연을 직접 경험·관찰할 수 있는 생태 기반의 공공녹색 인프라 모델을 제시하고 있습니다.',
+            },
+            {
+                sub  : '아이부터 어른까지,',
+                title: '365일 체험하고 배우는 <span class="color-cyan">정원배움터</span>',
+                desc : '국립세종수목원은 생활정원교육, 어린이 숲·정원놀이, 원예치유 프로그램 등 연령·세대·경험 수준에 맞춘 전문 정원교육 콘텐츠를 운영하고 있습니다.<br>정원을 통해 느끼고 배우는 ‘자연 기반 학습(NBL)’의 중심지로서 녹색복지와 정원문화 확산을 선도하고 있습니다.',
+            },
+            {
+                sub  : '세종시와 함께 성장하는 수목원, ',
+                title: '지역사회와 상생하는 <span class="color-cyan">공공기관</span>',
+                desc : '세종시를 대표하는 세록세록 꽃축제, 지역 재배식물 기반 플랜테리어·자생식물 체험 등을 통해 지역경제 활성화와 자생식물산업 생태계 조성에 기여하고 있습니다.또한 산림·정원 분야 전문인력 양성, 공공조경·정원관리 기술지원, 지역사회 봉사활동 등을 통해 공공기관으로서 사회적 책임을 실천하고 있습니다.',
+            },
+        ];
+        %>
+        <% pictureItems.map((pic, i) => { %>
+            <li>
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 350,
+                    height: 250,
+                    isSimply: true,
+                    source: `${imgPath}/intro-${currentCategory}${i + 1}.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+                <div class="desc-wrap">
+                    <span class="sub"><%= pic.sub %></span>
+                    <strong class="title"><%- pic.title %></strong>
+                    <p class="desc"><%- pic.desc %></p>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+</section>

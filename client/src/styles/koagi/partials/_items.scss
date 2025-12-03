@@ -116,8 +116,16 @@ $imgPath: "./../../images/koagi";
         }
 
         .desc-wrap {
-            padding: 50px 42px 60px;
+            padding: 50px 42px 42px;
             background-color: #223927;
+
+            &:has(.desc) {
+                padding: 50px 42px 60px;
+            }
+
+            &:only-of-type {
+                padding: 34px 42px 38px;
+            }
         }
 
         .title {
@@ -291,6 +299,69 @@ $imgPath: "./../../images/koagi";
             @include m.respond-to(map.get(m.$max, 1199)) {
                 border-top: none;
                 padding: 20px;
+            }
+        }
+    }
+    .picture-items {
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+
+        > li {
+            display: flex;
+            gap: 63px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;;
+                gap: m.m(63);
+            }
+        }
+
+        .img-wrap {
+            img {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .desc-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 34px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-top: 0;
+                gap: 10px;
+            }
+        }
+
+        .sub {
+            display: block;
+            font-size: 23px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .title {
+            font-size: 28px;
+            line-height: 38px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .color-cyan {
+            color: #299b8c;
+        }
+
+        .desc {
+            margin-top: 28px;
+            font-size: 16px;
+            color: #000;
+            font-weight: 500;
+            line-height: 30px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(28);
             }
         }
     }

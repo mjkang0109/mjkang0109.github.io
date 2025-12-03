@@ -1,0 +1,272 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin information {
+    .cyan-division {
+        display: flex;
+        gap: 50px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+            gap: m.m(50);
+        }
+
+        + .detail-section {
+            margin-top: 103px;
+        }
+
+        > div {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+            }
+        }
+
+        .cyan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            align-self: stretch;
+            flex: 0 0 216px;
+            height: 100%;
+            border-radius: 20px 0 0 20px;
+            background-color: #299b8c;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                gap: m.m(30);
+                border-radius: 20px 20px 0 0;
+                padding: m.m(20);
+            }
+
+            .title {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .icon-wrap {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                img {
+                    width: m.m(56);
+                    height: auto;
+                }
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            align-self: stretch;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 43px 38px;
+            border: 1px solid #e5e5e5;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                border: 1px solid #e5e5e5;
+                border-top: none;
+                border-radius: 0 0 20px 20px;
+                padding: m.m(43) m.m(38);
+            }
+
+            .title {
+                font-size: 19px;
+                color: #333;
+                font-weight: 700;
+
+                ~ .title {
+                    margin-top: 27px;
+                }
+            }
+
+            .desc {
+                margin-top: 13px;
+                font-size: 16px;
+                color: #272727;
+                font-weight: 500;
+            }
+        }
+    }
+    .box-division {
+        display: flex;
+        gap: 50px;
+        width: 100%;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+            gap: m.m(50);
+        }
+
+        &.division3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr;
+                gap: m.m(30);
+            }
+        }
+
+        .cell {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 22px;
+            flex: 1;
+            border: 1px solid #e5e5e5;
+            border-radius: 20px;
+            padding: 57px 20px 64px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(22);
+                padding: m.m(57) m.m(20) m.m(64);
+            }
+
+            .title {
+                font-size: 28px;
+                color: #333;
+                font-weight: 700;
+            }
+
+            .desc {
+                margin-top: 29px;
+                font-size: 20px;
+                color: #333;
+                font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(29);
+                }
+            }
+
+            .subDesc {
+                font-size: 15px;
+                color: #333;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        .tiny-cell {
+            display: flex;
+            align-items: center;
+            gap: 21px;
+            border: 1px solid #e5e5e5;
+            border-radius: 20px;
+            padding: 34px 34px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: m.m(34);
+                border-radius: m.m(20);
+            }
+
+            &.center {
+                .title {
+                    text-align: center;
+                }
+            }
+
+            .title {
+                flex: 1;
+                font-size: 16px;
+                color: #000;
+                font-weight: 600;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            margin-top: 15px;
+            gap: 14px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(15);
+            }
+        }
+    }
+    .table-grid.grid5 {
+        + .dot-caution {
+            margin-top: 32px;
+        }
+    }
+    .box-tree {
+        display: flex;
+        align-items: center;
+        min-height: 240px;
+        padding: 0 80px 0 306px;
+        background: #f9fff9 url("#{$imgPath}/visual-tree.png") no-repeat 31px 50%;
+        border: 1px solid #d7e6d7;
+        border-radius: 20px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+            padding: 200px m.m(20) m.m(80) m.m(20);
+            background-position: 50% m.m(20);
+        }
+
+        .text {
+            flex: 1;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                text-align: center;
+            }
+
+            .green {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 34px;
+                color: #359d38;
+            }
+
+            .desc {
+                margin-top: 6px;
+                font-size: 16px;
+                font-weight: 500;
+                color: #595959;
+            }
+        }
+    }
+
+    .navy-items {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 27px 56px;
+        border: 1px solid #e5e5e5;
+        border-radius: 20px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: m.m(50) m.m(20);
+            padding: m.m(60) m.m(27) m.m(56);
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            flex: 1;
+        }
+
+        .icon-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+            background-color: #314883;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 15px;
+            color: #000;
+            font-weight: 500;
+            line-height: 25px;
+        }
+    }
+}

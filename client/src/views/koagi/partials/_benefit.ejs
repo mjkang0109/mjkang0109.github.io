@@ -1,0 +1,56 @@
+<%
+const benefit = [
+    {
+        icon  : 'ticket',
+        text  : '한국수목원정원관리원<br>소속 수목원·식물원<br>무료입장',
+        width : 68,
+        height: 68,
+    },
+    {
+        icon  : 'tree',
+        text  : '교육 · 행사 · 전시<br>최신 관람정보 제공',
+        width : 67,
+        height: 65,
+    },
+    {
+        icon  : 'doc',
+        text  : '회원의 날<br>행사 초청',
+        width : 72,
+        height: 64,
+    },
+    {
+        icon  : 'fence',
+        text  : '수목원·식물원 내<br>카페 10% 할인',
+        width : 79,
+        height: 58,
+    },
+    {
+        icon  : 'tree-apple',
+        text  : '수목원·식물원 내<br>카페 10% 할인',
+        width : 65,
+        height: 66,
+    },
+    {
+        icon  : 'books',
+        text  : '교육 및 해설 프로그램<br>교육비 20% 할인<br>(재료비 제외)',
+        width : 69,
+        height: 73,
+    },
+];
+%>
+<ul class="benefits">
+    <% benefit.map(b => { %>
+        <li>
+            <span class="icon-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: b.width,
+                height: b.height,
+                isSimply: true,
+                source: `${imgPath}/icon-${b.icon}.png`,
+                alt: '',
+                }); %>
+            </span>
+            <strong><%- b.text; %></strong>
+        </li>
+    <% }); %>
+</ul>

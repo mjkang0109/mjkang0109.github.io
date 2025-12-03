@@ -139,14 +139,15 @@ $imgPath: "./../../images/koagi";
                 }
             }
         }
-    }
-    .step-items {
-        padding: 80px 85px;
-        border-radius: 20px;
-        border: 1px solid #e5e5e5;
 
-        > li:not(:first-of-type):after {
-            display: none;
+        .step-items {
+            padding: 80px 85px;
+            border-radius: 20px;
+            border: 1px solid #e5e5e5;
+
+            > li:not(:first-of-type):after {
+                display: none;
+            }
         }
     }
     .box-wrap {

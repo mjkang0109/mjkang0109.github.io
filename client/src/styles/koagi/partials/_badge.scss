@@ -135,4 +135,37 @@ $imgPath: "./../../images/koagi";
             }
         }
     }
+    .circles {
+        display: flex;
+        gap: 19px;
+    }
+    [class*="circle-"] {
+        position: relative;
+        padding-left: 26px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            transform: translateY(-50%);
+        }
+    }
+    .circle-green {
+        &:before {
+            background-color: #3eaa36;
+        }
+    }
+
+    .circle-gray {
+        &:before {
+            background-color: #e3e3e3;
+        }
+    }
 }

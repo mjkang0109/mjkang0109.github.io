@@ -1,0 +1,88 @@
+---
+group: sejong
+state:
+    default: 이동형클리닉
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립세종수목원';
+    currentCategory = 'sejong';
+    currentNav = 'companion';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+        type: 'plant',
+        currentNav: '반려식물',
+        key: '국민이 행복한 수목원',
+        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: '이동형 반려식물 클리닉',
+        depths: [
+        '반려식물',
+        '이동형 반려식물 클리닉',
+        ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+            items: ['소개', '신청안내', '출동일정',],
+            }) %>
+
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
+            title: `<span>반려식물 </span><strong>고민해</strong><br><span>지금 </span><strong>출발합니다!</strong>`,
+            desc: '내가 키우는 반려식물의 <strong>궁금증을 해소</strong>하고 <strong>치료가 필요한 식물들을 진단, 처방</strong>해<br>드리기 위해 한국수목원정원관리원·국립세종수목원이 직접 찾아갑니다. ',
+            img: 'clinic-intro',
+            }) %>
+            
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_clinic`, {
+                
+            }) %>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentCategory,
+        currentName,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

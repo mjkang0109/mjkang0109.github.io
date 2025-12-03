@@ -42,6 +42,15 @@ $imgPath: "./../../images/koagi";
             font-size: 15px;
         }
 
+        &.tiny {
+            border-radius: 5px;
+            padding: 12px 21px;
+            min-width: 0;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 600;
+        }
+
         &.small {
             min-width: 94px;
             border-radius: 5px;

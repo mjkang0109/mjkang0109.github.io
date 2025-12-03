@@ -9,7 +9,7 @@ randomNumber = (min, max) => {
     const minNum = min ?? 0;
     const maxNum = max ?? 1000;
     return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
-}
+};
 %>
 <div id="header"
      class="<%= currentCategory === 'system' ? 'system' : ''; %>">
@@ -20,6 +20,9 @@ randomNumber = (min, max) => {
                 <a href="./../<%= currentCategory %>/<%= currentCategory %>.html"
                    class="type2"><%= currentName; %>
                 </a>
+                <% if (currentCategory === 'system') { %>
+                    <a href="#">한국수목원정원관리원</a>
+                <% } %>
                 <%
                 const length = navItems.length;
                 for (let h = 0; h < length; h++) {
@@ -126,12 +129,10 @@ randomNumber = (min, max) => {
             <!-- //gnb -->
             <div class="util">
                 <!-- forWeb -->
-                <% if (currentCategory !== 'system') { %>
-                    <span class="forW">
-                        <a href="#"
-                           class="iFind1">검색</a>
-                    </span>
-                <% } %>
+                <span class="forW">
+                    <a href="#"
+                       class="iFind1">검색</a>
+                </span>
                 <a href="#jsSitemap1"
                    class="iMenu1 jsBtnMenu1">전체메뉴
                 </a>

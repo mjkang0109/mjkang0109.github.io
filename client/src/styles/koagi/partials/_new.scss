@@ -22,6 +22,9 @@
 @use "./../partials/course" as course;
 @use "./../partials/membershipWrap" as membership;
 @use "./../partials/calendarDivision" as calendarDivision;
+@use "./../partials/information" as information;
+@use "./../partials/nighttime" as nighttime;
+@use "./../partials/intro" as intro;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -511,6 +514,7 @@ input[type="radio"] {
         width: 100vw;
         margin-left: -15px;
     }
+
     > p {
         margin-bottom: 42px;
         text-align: right;
@@ -686,6 +690,14 @@ input[type="radio"] {
         padding: 38px 30px;
         border: 1px solid #e5e5e5;
         border-radius: 0;
+
+        &4 {
+            padding: 30px 38px;
+            border: 4px solid #e7e7e7;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: m.m(30) m.m(38);
+            }
+        }
     }
 
     &.medium {
@@ -988,6 +1000,17 @@ input[type="radio"] {
 
     &-wrap {
         width: 100%;
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 60px;
+
+            .button-apply {
+                margin: 0;
+            }
+        }
     }
 
     input[type="checkbox"] {
@@ -1545,8 +1568,8 @@ input[type="radio"] {
             &:after {
                 content: "";
                 position: absolute;
-                top: 60px;
-                left: -60px;
+                top: 73px;
+                left: -36px;
                 width: 18px;
                 height: 32px;
                 background: url("#{$imgPath}/icon-triangle-right.png") no-repeat 0 0;
@@ -1622,6 +1645,14 @@ input[type="radio"] {
 }
 
 .dot-caution {
+    + .navy-items {
+        margin-top: 41px;
+    }
+
+    + .box-division.division3 {
+        margin-top: 51px;
+    }
+
     li {
         position: relative;
         padding-left: 16px;
@@ -1709,6 +1740,10 @@ input[type="radio"] {
     color: #333;
     font-family: "SBAggro", serif;
     font-weight: 500;
+
+    ~ .title-line {
+        margin-top: 103px;
+    }
 
     &:before {
         content: "";
@@ -1924,3 +1959,6 @@ input[type="radio"] {
 @include course.course;
 @include membership.membership;
 @include calendarDivision.calendarDivision;
+@include information.information;
+@include nighttime.nighttime;
+@include intro.intro;

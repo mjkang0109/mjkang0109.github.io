@@ -1,0 +1,225 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin nighttime {
+    .square-check {
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 43px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                justify-content: center;
+                gap: m.m(43);
+            }
+
+            .date {
+                font-size: 33px;
+                font-weight: 700;
+                color: #000;
+            }
+
+            [class*="button-"] {
+                width: 41px;
+                height: 41px;
+                background: url("#{$imgPath}/icon-arrow-round.png") no-repeat 50% 50%;
+            }
+
+            .button-next {
+                transform: rotate(180deg);
+            }
+        }
+
+        .swiper-wrap {
+            position: relative;
+            margin-top: 31px;
+            padding: 0 107px;
+            border: 5px solid #dbdbdb;
+            background-color: #fbfbfb;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 0;
+            }
+
+            + .box-title {
+                margin-top: 67px;
+            }
+
+            [class*="button-"] {
+                position: absolute;
+                top: 114px;
+                width: 37px;
+                height: 37px;
+                background: url("#{$imgPath}/icon-arrow-left.png") no-repeat 50% 0;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
+            }
+
+            .button-prev {
+                left: 42px;
+            }
+
+            .button-next {
+                right: 42px;
+                transform: rotate(180deg);
+            }
+
+            input[type="radio"] {
+                display: none;
+
+                &:checked {
+                    + label {
+                        box-shadow: 0 0 0 4px #299b8c inset;
+                        box-sizing: border-box;
+
+                        &:before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 35px;
+                            height: 35px;
+                            border: none;
+                            border-radius: 0;
+                            background: #299b8c url("#{$imgPath}/icon-check.png") no-repeat 50% 50%;
+                            box-sizing: border-box;
+                            transform: none;
+                        }
+                    }
+                }
+
+                + label {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 23px;
+                    position: relative;
+                    height: auto;
+                    padding: 31px 40px 27px;
+                    box-shadow: 0 0 0 1px #b9b9b9 inset;
+                    box-sizing: border-box;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        padding: 40px m.m(20) m.m(20);
+                    }
+
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            .date {
+                display: flex;
+                justify-content: center;
+                font-size: 18px;
+                font-weight: 700;
+                color: #000;
+                text-align: center;
+            }
+
+            .badge {
+                height: 55px !important;
+                font-size: 26px !important;
+                font-weight: 700 !important;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    height: 30px;
+                }
+
+                .unit {
+                    font-size: 20px;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .swiper {
+            overflow: hidden;
+            padding: 54px 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: m.m(30);
+            }
+        }
+
+        .swiper-wrapper {
+            display: flex;
+        }
+
+        .swiper-slide {
+            flex: 0 0 218px;
+            position: relative;
+            box-shadow: 2px 2px 7px 7px rgb(210 210 210 / .3);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 180px;
+            }
+        }
+
+        .box-title {
+            + .buttons {
+                margin-top: 89px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(89);
+                }
+            }
+
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 17px;
+                font-size: 23px;
+            }
+
+            .yellow {
+                color: #ffc000;
+            }
+
+            > ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 63px;
+                    width: 100%;
+                    padding: 34px 49px;
+                    box-sizing: border-box;
+                    border-bottom: solid 1px #e2e2e2;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: m.m(20);
+                        padding: m.m(34) m.m(49);
+                    }
+
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .time {
+                font-size: 17px;
+                color: #333;
+                font-weight: 700;
+            }
+
+            .name {
+                font-size: 17px;
+                color: #333;
+                font-weight: 500;
+            }
+
+            .badge {
+                margin-left: auto;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 19px;
+        }
+    }
+}

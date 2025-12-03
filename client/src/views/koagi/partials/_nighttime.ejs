@@ -1,0 +1,101 @@
+<div class="square-check">
+    <div class="controls">
+        <button type="button"
+                class="button-prev">
+            <span class="sound-only">이전</span>
+        </button>
+        <strong class="date">2025년 12월</strong>
+        <button type="button"
+                class="button-next">
+            <span class="sound-only">다음</span>
+        </button>
+    </div>
+    <div class="swiper-wrap">
+        <div id="checkSwiper"
+             class="swiper"
+            data-per-view="auto"
+             data-gap="34">
+
+
+            <ul class="checks swiper-wrapper">
+                <%
+                const days = [
+                    '월', '화', '수', '목', '금', '토', '일',
+                ];
+                %>
+                <% for(let i = 0; i < 31; i++) { %>
+                    <li class="swiper-slide">
+                        <input type="radio"
+                               id="check<%= i + 1; %>"
+                                <%- i === 0 ? 'checked' : '' %>
+                               name="check">
+                        <label for="check<%= i + 1; %>">
+                            <strong class="date">
+                                07/<%= (i + 1).toString().length === 1 ? `0${i + 1}` : i + 1; %>
+                                    <%= days[i % 7]; %>
+                            </strong>
+                            <span class="badge cyan">
+                                <%= randomNumber(1, 10); %>
+                                <span class="unit">건</span>
+                            </span>
+                        </label>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <button type="button"
+                class="button-prev">
+            <span class="sound-only">이전</span>
+        </button>
+        <button type="button"
+                class="button-next">
+            <span class="sound-only">다음</span>
+        </button>
+    </div>
+    <div class="box-title">
+        <strong class="title">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 24,
+                height: 23,
+                isSimply: true,
+                source: `${imgPath}/icon-calendar4.png`,
+                alt: '',
+                }); %>
+            </span>
+            2025-12-12
+            <span class="yellow">24건</span>
+        </strong>
+        <ul>
+            <%
+            const times = [
+                '17:00 ~ 18:00',
+                '19:30 ~ 20:00',
+                '20:10 ~ 20:40',
+                '20:10 ~ 20:40',
+            ];
+            const titles = [
+                '세종예술고등학교 음악과 클래식 공연',
+                '세종예술고등학교 교사밴드팀',
+                '싱어송라이터 이왁',
+                '세종예술고등학교 음악과 클래식 공연',
+            ];
+            %>
+            <% times.map((time, i) => { %>
+                <li>
+                    <span class="time"><%= time %></span>
+                    <span class="name"><%= titles[i] %></span>
+                    <span class="badge cyan">사계절온실</span>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="buttons">
+        <button type="button"
+                class="button-navy">자세히보기
+        </button>
+        <a href="#"
+           class="button-navy">종합안내도
+        </a>
+    </div>
+</div>

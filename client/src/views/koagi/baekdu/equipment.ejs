@@ -1,0 +1,78 @@
+---
+group: baekdu
+state:
+    default: 연구장비 공동활용
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    currentName = '국립백두대간수목원';
+    currentCategory = 'baekdu';
+    currentNav = 'research';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- visual sub -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
+        type: 'plant',
+        currentNav: '산림연구',
+        key: '국민이 행복한 수목원',
+        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        }) %>
+        <!-- // visual sub -->
+
+        <!-- title -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
+        title: '연구장비 공동활용',
+        desc: '국립백두대간수목원 공동기기센터는 보유 기기 공동 활용을 통한 전국 대학 및 연구기관의 연구 활성화에 기여하고, <br>연구기기의 효율적 관리 및 운영을 통한 본 기관의 전문성과 신뢰성을 확보하고자 노력하고 있습니다. ',
+        depths: [
+        '산림연구',
+        '연구장비 공동활용'
+        ],
+        }) %>
+        <!-- // title -->
+
+        <!-- contents -->
+        <div id="body">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_equipment`, {
+                
+            }) %>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentCategory,
+        currentName,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

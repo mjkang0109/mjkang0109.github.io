@@ -1,0 +1,325 @@
+<section class="cyan-division">
+    <%
+    const items = [
+        {
+            title : '관람시간',
+            width : 56,
+            height: 61,
+            img   : 'clock2',
+        },
+        {
+            title : '휴관일',
+            width : 59,
+            height: 62,
+            img   : 'calendar3',
+        },
+    ];
+    %>
+    <% items.map((item, i) => { %>
+        <div class="<%= i === 0 ? 'left' : 'right'; %>">
+            <div class="cyan">
+                <span class="icon-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: item.width,
+                    height: item.height,
+                    isSimply: true,
+                    source: `${imgPath}/icon-${item.img}.png`,
+                    alt: '',
+                    }); %>
+                </span>
+                <strong class="title"><%= item.title; %></strong>
+            </div>
+            <div class="text">
+                <% if (i === 0) { %>
+                    <strong class="title">
+                        하절기(3~10월)
+                    </strong>
+                    <p class="desc">
+                        화~일요일 09:00~18:00 (입장마감 17:00)
+                    </p>
+                    <strong class="title">
+                        동절기(11~2월)
+                    </strong>
+                    <p class="desc">
+                        화~일요일 09:00~17:00 (입장마감 16:00)
+                    </p>
+                <% } %>
+                <% if (i === 1) { %>
+                    <strong class="title">
+                        월요일, 1월 1일, 설/추석 당일, 보수 기간
+                    </strong>
+                    <p class="desc">
+                        (월요일이 공휴일인 경우 그 다음날 휴관)
+                    </p>
+                <% } %>
+            </div>
+        </div>
+    <% }); %>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">예매 및 입장방법</strong>
+    <div class="box-division">
+        <div class="cell">
+            <strong class="title">현장 예매</strong>
+            <p class="desc">방문자센터 매표소, 무인 키오스크</p>
+            <span class="subDesc">※ 무료, 할인 대상자는 증빙서류를 지참하여 매표소에서 예매</span>
+        </div>
+        <div class="cell">
+            <strong class="title">온라인 예매</strong>
+            <div class="buttons">
+                <a href="#"
+                   class="button-navy tiny">개인 이용객 예매
+                </a>
+                <a href="#"
+                   class="button-navy tiny">단체 이용객 예매
+                </a>
+            </div>
+            <span class="subDesc">※ 온라인 예매 시 현장에서 모바일 티켓으로 바로 입장</span>
+        </div>
+    </div>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">요금안내</strong>
+    <div class="table-grid grid5">
+        <%
+        const tableHead = ['대상', '개인', '단체 (20인 이상)', '할인', '무료'];
+        const type = [
+            '<strong>어른</strong><span>(만 19세 이상)</span>',
+            '<strong>청소년</strong><span>(만13세 이상~만 18세 이하)</span>',
+            '<strong>어린이</strong><span>(만7세 이상~만 12세 이하)</span>',
+        ];
+        const price = [
+            '5,000원',
+            '4,000원',
+            '3,000원',
+        ];
+
+        const price2 = [
+            '4,000원',
+            '3,000원',
+            '2,000원',
+        ];
+        %>
+        <% tableHead.map((head, i)=> { %>
+            <div class="head<%= i === tableHead.length - 1 ? ' border-right-none' : '' %>">
+                <strong><%= head %></strong>
+            </div>
+        <% }); %>
+
+        <div><%- type[0] %></div>
+        <div><%- price[0] %></div>
+        <div><%- price2[0] %></div>
+        <div class="row2-5 col4">
+            지역주민 및
+            <br>
+            할인대상 기준 참고
+            <br>
+            <a href="#"
+               class="button-navy tiny">할인대상 보기
+            </a>
+        </div>
+        <div class="row2-5 col5 border-right-none">
+            연간회원 및
+            <br>
+            무료대상자 기준 참고
+            <br>
+            <a href="#"
+               class="button-navy tiny">무료대상 보기
+            </a>
+        </div>
+        <div><%- type[1] %></div>
+        <div class=""><%- price[1] %></div>
+        <div class=""><%- price2[1] %></div>
+        <div><%- type[2] %></div>
+        <div><%- price[2] %></div>
+        <div><%- price2[2] %></div>
+    </div>
+    <ul class="dot-caution">
+        <li>입장권은 당일에 한하여 유효</li>
+        <li>단체는 입장권 1장으로 발급</li>
+        <li>단체 인솔자 무료 [단, 교사자격증(보육교사자격증, 재직증명서 등) 지참한 경우에 한함]</li>
+        <li>일부 무료/할인 입장권은 유인 매표소에서 발권 가능</li>
+        <li>할인·무료대상자는 신분증 등 증명자료가 필요하며, 미지참시 정상입장료 발생</li>
+    </ul>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">
+        연간회원 혜택
+    </strong>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_benefit`, {
+    }) %>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">
+        방문안내
+    </strong>
+    <div class="box-division">
+        <% const items2 = [
+            '시설안내', '오시는 길', '종합안내도',
+        ]
+        %>
+        <% items2.map(item2 => { %>
+            <div class="cell">
+                <strong class="title"><%= item2 %></strong>
+                <a href="#"
+                   class="button-navy tiny">바로가기
+                </a>
+            </div>
+        <% }); %>
+    </div>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">전시해설</strong>
+    <div class="box-tree">
+        <div class="text">
+            <strong class="green">
+                정해진 시간에 진행되는 전시해설은 관람객에게 전시 내용을 알기 쉽게 안내합니다.
+                <br>
+                전시해설 프로그램은 홈페이지에서 사전접수 가능합니다.
+            </strong>
+            <p class="desc">※ 프로그램 일정은 수목원의 관람 환경에 따라 변동될 수 있습니다.</p>
+        </div>
+        <a href="#"
+           class="button-navy tiny">전시해설 예약하기
+        </a>
+    </div>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">반입금지 물품</strong>
+    <ul class="dot-caution">
+        <li>쾌적하고 안전한 관람 환경을 위해 아래와 같은 물품은 반입이 제한됩니다.
+            <br>
+            ※ 장애인 보조견은 「장애인복지법」 제40조에 따라 예외적으로 동반 가능합니다.
+        </li>
+    </ul>
+    <%
+    const items3 = [
+        {
+            title : '안내견 외<br>애완동물',
+            width : 56,
+            height: 48,
+            img   : 'dog',
+        },
+        {
+            title : '과일·국물<br>음식류',
+            width : 45,
+            height: 56,
+            img   : 'apple',
+        },
+        {
+            title : '삼각대/채집도구',
+            width : 71,
+            height: 45,
+            img   : 'picking',
+        },
+        {
+            title : '운동기구<br>(공, 배드민턴 등)',
+            width : 51,
+            height: 51,
+            img   : 'ball',
+        },
+        {
+            title : '악기·확성기',
+            width : 50,
+            height: 52,
+            img   : 'megaphone',
+        },
+        {
+            title : '자전거·킥보드',
+            width : 56,
+            height: 47,
+            img   : 'cycle',
+        },
+        {
+            title : '전동자동차<br>완구',
+            width : 57,
+            height: 41,
+            img   : 'car',
+        },
+        {
+            title : '화기·폭죽',
+            width : 52,
+            height: 53,
+            img   : 'firecracker2',
+        },
+    ]
+    %>
+    <ul class="navy-items">
+        <% items3.map(item3 => { %>
+            <li>
+            <span class="icon-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: item3.width,
+                height: item3.height,
+                isSimply: true,
+                source: `${imgPath}/icon-${item3.img}.png`,
+                alt: '',
+                }); %>
+            </span>
+                <strong class="title"><%- item3.title %></strong>
+            </li>
+        <% }); %>
+    </ul>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">관람 시 유의사항</strong>
+    <ul class="dot-caution">
+        <li>모두가 즐거운 시간을 보낼 수 있도록 관람 예절을 지켜주세요.</li>
+    </ul>
+    <%
+    const items4 = [
+        {
+            title: '어린이·노약자는 보호자 동반',
+            img  : 'protector',
+        },
+        {
+            title: '시설물·동식물 보호',
+            img  : 'foot',
+        },
+        {
+            title: '위험 동식물 주의 (뱀, 벌, 버섯)',
+            img  : 'snake',
+        },
+        {
+            title: '전 구역 금연·금주',
+            img  : 'smoke',
+        },
+        {
+            title: '취사·야영 금지',
+            img  : 'fire',
+        },
+        {
+            title: '지정 장소 음식 섭취',
+            img  : 'signs',
+        },
+        {
+            title: '종교의식·집단오락 금지',
+            img  : 'firecracker',
+        },
+        {
+            title: '비개방 구역 출입 금지',
+            img  : 'feet',
+        },
+        {
+            title: '쓰레기 되가져가기·자율 정리',
+            img  : 'trash',
+        },
+    ]
+    %>
+    <ul class="box-division division3">
+        <% items4.map(item => { %>
+            <li class="tiny-cell">
+            <span class="icon-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 54,
+                height: 54,
+                isSimply: true,
+                source: `${imgPath}/icon-${item.img}.png`,
+                alt: '',
+                }); %>
+            </span>
+                <strong class="title"><%- item.title %></strong>
+            </li>
+        <% }); %>
+    </ul>
+</section>

@@ -8,7 +8,92 @@ $imgPath: "./../../images/koagi";
         display: flex;
         gap: 38px;
         @include m.respond-to(map.get(m.$max, 1199)) {
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        &.step {
+            gap: 75px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: flex;
+                flex-wrap: wrap;
+                gap: m.m(66) 0;
+            }
+
+            > li {
+                position: relative;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 calc(50% - 33px);
+                    margin-right: 33px;
+                }
+
+                &:not(:last-of-type) {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 126px;
+                        right: -48px;
+                        width: 17px;
+                        height: 31px;
+                        background: url("#{$imgPath}/icon-triangle-right.png") no-repeat 0 0;
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            top: 90px;
+                            right: m.m(-46);
+                            width: m.m(22);
+                            height: m.m(38);
+                            background-size: 100% auto;
+                        }
+                    }
+                }
+
+                .icon-wrap {
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        height: m.m(175);
+                    }
+
+                    img {
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            width: m.m(90);
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                flex: 1;
+                padding: 24px;
+                background-color: #314883;
+                color: #fff;
+                border-radius: 0 0 20px 20px;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: center;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: m.m(15);
+                    border-radius: 0 0 m.m(20) m.m(20);
+                    padding: m.m(30) m.m(10);
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+
+                strong {
+                    padding: 0;
+                    border-radius: 0;
+                    font-size: 17px;
+                    font-weight: 800;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
 
         > li {
@@ -30,6 +115,9 @@ $imgPath: "./../../images/koagi";
                 font-size: 15px;
                 line-height: 25px;
                 font-weight: 500;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    border-radius: 0 0 m.m(20) m.m(20);
+                }
             }
         }
 
@@ -41,6 +129,42 @@ $imgPath: "./../../images/koagi";
             border: 1px solid #e2e2e3;
             border-bottom: none;
             border-radius: 20px 20px 0 0;
+            background-color: #fafafa;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                border-radius: m.m(20) m.m(20) 0 0;
+            }
+        }
+
+        + .box.outline4 {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 51px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                gap: m.m(16);
+            }
+
+            strong {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                font-size: 18px;
+                color: #333;
+                font-weight: 600;
+            }
+
+            .dot-caution {
+                margin-left: 46px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    align-self: flex-start;
+                    margin-left: 0;
+                }
+
+                > li {
+                    font-weight: 600;
+                }
+            }
         }
     }
     .benefit-detail {

@@ -1,0 +1,53 @@
+<%
+const items = [
+    {
+        title: '반려식물 클리닉 상담',
+    },
+    {
+        title: '반려식물 소개',
+    },
+    {
+        title: '식물 물주기',
+    },
+    {
+        title: '분갈이 방법',
+    },
+];
+%>
+<strong class="title-line">상시 프로그램</strong>
+<ul class="darkgreen-box-items">
+    <% items.map((item, i) => { %>
+        <li>
+            <div class="desc-wrap">
+                <strong class="title"><%= item.title; %></strong>
+            </div>
+            <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 325,
+                    height: 252,
+                    isSimply: true,
+                    source: `${imgPath}/visual-clinic${i + 1}.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+        </li>
+    <% }); %>
+</ul>
+<%
+const items2 = [
+    '나만의 반려식물 만들기',
+    '탄소 저감 실내 가드닝',
+    '정원 유지관리 교육',
+    '식물 전지·전정 교육',
+]
+%>
+<strong class="title-line">특별 프로그램</strong>
+<ul class="darkgreen-box-items">
+    <% items2.map((item, i) => { %>
+        <li>
+            <div class="desc-wrap">
+                <strong class="title"><%= item; %></strong>
+            </div>
+        </li>
+    <% }); %>
+</ul>

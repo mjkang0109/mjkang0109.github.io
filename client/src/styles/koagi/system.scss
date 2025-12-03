@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:math";
 @use "./../components/mixin" as m;
 @use "./partials/fonts" as fonts;
 @use "./partials/reset" as reset;
@@ -6,6 +7,7 @@
 @use "./partials/new" as new;
 @use "./partials/common1200" as common1200;
 
+$imgPath: "./../../images/koagi";
 #header.system {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.06);
 
@@ -18,9 +20,9 @@
         }
 
         h1 {
-            width: 215px;
+            flex: 0 0 295px;
             @include m.respond-to(map.get(m.$max, 1199)) {
-                width: auto;
+                flex: 0 0 auto;
             }
         }
     }
@@ -31,13 +33,12 @@
         display: flex;
 
         .dep1 {
-            padding: 0 20px
+            padding: 0 10px
         }
 
         li .dep2 .ti .t {
             font-size: 30px;
         }
-
     }
 
     .gTitle1 {
@@ -58,6 +59,404 @@
         .mBc1 {
             order: 1;
             justify-content: center;
+        }
+    }
+
+    #body.main {
+        margin: 0 auto;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding-top: 0;
+        }
+    }
+}
+
+.main {
+    .category-search {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        position: relative;
+        height: 370px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: m.m(26);
+            height: m.m(630);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100vw;
+            min-width: 1520px;
+            height: 100%;
+            transform: translateX(-50%);
+            background: url("#{$imgPath}/system-bg.png") no-repeat 50% 0;
+            pointer-events: none;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                min-width: 0;
+                background: url("#{$imgPath}/system-bg-m.png") no-repeat 50% 50%;
+                background-size: 100% auto;
+            }
+        }
+
+        > .title {
+            display: block;
+            position: relative;
+            font-size: 40px;
+            color: #fff;
+            font-family: "SBAggro", serif;
+            font-weight: 500;
+            text-align: center;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(46);
+            }
+        }
+
+        > .desc {
+            position: relative;
+            font-size: 16px;
+            color: #fff;
+            font-weight: bold;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        .category-wrap {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            margin-top: 25px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-wrap: wrap;
+                width: 100%;
+                gap: m.m(26);
+                margin-top: m.m(40);
+            }
+
+            > label {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    $gap: m.m(13);
+                    width: calc(50% - $gap);
+                    &:last-of-type {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .select-round {
+            appearance: none;
+            width: 300px;
+            border: none;
+            padding: 27px 50px 27px 28px;
+            background: #fff url("#{$imgPath}/icon-triangle-down.png") no-repeat top 50% right 33px;
+            border-radius: 20px;
+            box-shadow: 0 6px 6px 0 rgb(51 51 51 / .4);
+            font-size: 18px;
+            color: #363636;
+            font-weight: 700;
+            text-align: left;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                padding: m.m(30) m.m(50) m.m(30) m.m(32);
+                font-size: m.m(26);
+                border-radius: m.m(20);
+                background-position: top 50% right m.m(25);
+                background-size: auto m.m(12);
+            }
+        }
+
+        [class*="button-main-"] {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            padding: 28px 48px;
+            border-radius: 20px;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                $gap: m.m(13);
+                width: calc(50% - $gap);
+                padding: m.m(29);
+                border-radius: m.m(20);
+                font-size: m.m(30);
+            }
+        }
+
+        .button-main-cyan {
+            background-color: #299b8c;
+        }
+
+        .button-main-green {
+            background-color: #1aaa37;
+        }
+    }
+
+    .white-boxes {
+        display: flex;
+        gap: 27px;
+        margin-top: 108px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+            gap: m.m(40) m.m(45);
+            margin-top: m.m(66);
+        }
+
+        li {
+            flex: 1;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                $gap: m.m(22.5);
+                flex: 0 0 calc(50% - $gap);
+            }
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                border-radius: m.m(10);
+            }
+        }
+
+        .img-wrap {
+            width: 100%;
+            height: 150px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                height: auto;
+            }
+
+            img {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .desc-wrap {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            padding: 37px 20px 50px;
+            border-radius: 0 0 20px 20px;
+            border: 1px solid #e9e9e9;
+            border-top: none;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(18);
+                padding: m.m(36) m.m(20) m.m(50);
+                border-radius: 0 0 m.m(20) m.m(20);
+            }
+        }
+
+        .icon-wrap {
+            padding-bottom: 2px;
+        }
+
+        .title {
+            font-size: 25px;
+            font-weight: 700;
+            color: #333;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(28);
+            }
+        }
+
+        .en {
+            font-size: 13px;
+            color: rgb(92 92 92 / .7);
+            font-weight: 500;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(13);
+            }
+        }
+    }
+
+    .division {
+        display: flex;
+        gap: 48px;
+        margin-top: 46px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            display: block;
+            margin-top: m.m(60);
+        }
+
+        .left {
+            flex: 0 0 730px;
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            overflow: hidden;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                border-radius: m.m(20);
+            }
+
+            img {
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin-top: 30px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(18);
+                margin-top: m.m(30);
+            }
+
+            .swiper-pagination-bullet {
+                width: 19px;
+                height: 19px;
+                border-radius: 50px;
+                background-color: #e3e3e3;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: m.m(19);
+                    height: m.m(19);
+                }
+
+                &.swiper-pagination-bullet-active {
+                    background-color: #1e8e87;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            flex: 1;
+            height: 390px;
+            overflow: hidden;
+            border: 1px solid #e9e9e9;
+            border-radius: 20px;
+            box-sizing: border-box;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                height: auto;
+                margin-top: m.m(66);
+                border-radius: m.m(20);
+            }
+        }
+
+        .cyan-items {
+            display: flex;
+            justify-content: space-between;
+            padding: 47px 70px 50px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: m.m(39) 0 m.m(65);
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: m.m(26);
+                }
+            }
+
+            li {
+                flex: 1;
+            }
+
+            .img-wrap {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 81px;
+                height: 81px;
+                background-color: #3d807c;
+                border-radius: 100px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: m.m(81);
+                    height: m.m(81);
+                }
+
+                img {
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: m.m(31);
+                        height: auto;
+                    }
+                }
+            }
+
+            .title {
+                font-size: 17px;
+                color: #333;
+                font-weight: 600;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(24);
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            flex: 1;
+            background-color: #f8f8f8;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                padding: m.m(48) m.m(15) m.m(44)
+            }
+
+            .title {
+                font-size: 19px;
+                color: #333;
+                font-weight: 600;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(26);
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 14px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(20);
+            }
+
+            a {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 140px;
+                height: 46px;
+                border-radius: 10px;
+                background-color: #013569;
+                font-size: 15px;
+                color: #fff;
+                font-weight: 600;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: m.m(202);
+                    height: m.m(70);
+                    border-radius: m.m(10);
+                    font-size: m.m(24);
+                }
+            }
         }
     }
 }

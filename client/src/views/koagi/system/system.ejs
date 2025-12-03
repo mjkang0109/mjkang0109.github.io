@@ -1,0 +1,61 @@
+---
+group: system
+state:
+    default: 메인
+---
+<!DOCTYPE html>
+<html lang="ko">
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_constants`, {
+
+}) %>
+<head>
+    <%
+    currentName = '통합예약시스템';
+    currentCategory = 'system';
+    currentNav = '통합예약시스템';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
+</head>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="body" class="main">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_systemMain`, {
+                
+            }) %>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentName,
+        currentCategory,
+        }) %>
+        <!-- // footer -->
+
+        <!-- navigation -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
+        currentCategory: currentCategory
+        }) %>
+        <!-- // navigation -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

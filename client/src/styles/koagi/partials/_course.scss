@@ -99,26 +99,28 @@ $imgPath: "./../../images/koagi";
             }
         }
 
-        .map-wrap {
-            width: auto;
-            height: auto;
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                width: 100vw;
-                margin-left: -15px;
-                padding-top: 0;
-            }
-
-            + .swiper-scroll {
-                margin-top: 68px;
+        .detail-section {
+            .map-wrap {
+                width: auto;
+                height: auto;
                 @include m.respond-to(map.get(m.$max, 1199)) {
-                    margin-top: m.m(71);
+                    width: 100vw;
+                    margin-left: -15px;
+                    padding-top: 0;
                 }
-            }
 
-            img {
-                position: relative;
-                top: auto;
-                left: auto;
+                + .swiper-scroll {
+                    margin-top: 68px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-top: m.m(71);
+                    }
+                }
+
+                img {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
             }
         }
     }

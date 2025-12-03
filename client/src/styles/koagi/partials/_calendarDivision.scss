@@ -42,6 +42,11 @@ $imgPath: "./../../images/koagi";
         justify-content: center;
         align-items: center;
         gap: 4px;
+        position: relative;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+            gap: 20px 4px;
+        }
 
         .button-prev,
         .button-next {
@@ -75,8 +80,20 @@ $imgPath: "./../../images/koagi";
             background: transparent url("#{$imgPath}/icon-arrow-down.png") no-repeat 100% 50%;
             font-size: 40px;
             font-weight: 700;
+            text-align: right;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 font-size: 20px;
+            }
+        }
+
+        .circles {
+            position: absolute;
+            right: 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                width: 100%;
             }
         }
     }

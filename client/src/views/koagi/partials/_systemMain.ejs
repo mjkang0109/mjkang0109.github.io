@@ -1,0 +1,194 @@
+<div class="category-search">
+    <strong class="title">빠르고 간편하게! 빠른예약</strong>
+    <p class="desc">한국수목정원관리원의 모든 수목원서비스의 교육 숙박 프로그램을 예약해보세요.</p>
+    <div class="category-wrap">
+        <label for="select1">
+            <select id="select1"
+                    class="select-round">
+                <option>수목원 선택</option>
+            </select>
+        </label>
+        <label for="select2">
+            <select id="select2"
+                    class="select-round">
+                <option>프로그램 선택</option>
+            </select>
+        </label>
+        <label for="select3">
+            <select id="select3"
+                    class="select-round">
+                <option>서비스 선택</option>
+            </select>
+        </label>
+        <button type="button"
+                class="button-main-cyan">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 22,
+            height: 22,
+            isSimply: true,
+            source: `${imgPath}/icon-search-white.png`,
+            alt: '',
+            }); %>
+            검색
+        </button>
+        <button type="button"
+                class="button-main-green">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 19,
+            height: 22,
+            isSimply: true,
+            source: `${imgPath}/icon-my.png`,
+            alt: '',
+            }); %>
+            나의예약
+        </button>
+    </div>
+</div>
+<%
+const whiteItems = [
+    {
+        title : '국립백두대간수목원',
+        en    : 'Baekdudaegan National Arboretum',
+        width : 50,
+        height: 54,
+        img   : 'pinwheel',
+    },
+    {
+        title : '국립세종수목원',
+        en    : 'Sejong National Arboretum',
+        width : 44,
+        height: 48,
+        img   : 'tree2',
+    },
+    {
+        title : '국립한국자생식물원',
+        en    : 'National Botanic Garden of Korea',
+        width : 51,
+        height: 51,
+        img   : 'flower',
+    },
+    {
+        title : '국립정원문화원',
+        en    : 'National Garden Culture Center',
+        width : 48,
+        height: 43,
+        img   : 'fence2',
+    },
+];
+%>
+<ul class="white-boxes">
+    <% whiteItems.map((w, i) => { %>
+        <li class="white-box">
+            <a href="#">
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 340,
+                    height: 150,
+                    isSimply: true,
+                    source: `${imgPath}/white-box${i + 1}.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+                <div class="desc-wrap">
+                    <span class="icon-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: w.width,
+                    height: w.height,
+                    isSimply: true,
+                    source: `${imgPath}/icon-${w.img}.png`,
+                    alt: '',
+                    }); %>
+                    </span>
+                    <strong class="title"><%= w.title; %></strong>
+                    <p class="en"><%= w.en; %></p>
+                </div>
+            </a>
+        </li>
+    <% }); %>
+</ul>
+<div class="division">
+    <div class="left">
+        <div id="banner"
+             class="swiper-wrap swiper">
+            <ul class="swiper-wrapper">
+                <% for(let i = 0; i < 3; i++) { %>
+                    <li class="swiper-slide" data-gap="10">
+                        <a href="#">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 730,
+                            height: 390,
+                            isSimply: true,
+                            source: `${imgPath}/system-banner${i + 1}.png`,
+                            alt: '',
+                            }); %>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+            <div class="pagination"></div>
+        </div>
+    </div>
+    <div class="right">
+        <%
+        const links = [
+            {
+                title : '위촉강사 신청',
+                width : 31,
+                height: 31,
+                img   : 'lecturer',
+            },
+            {
+                title : '연간회원 신청',
+                width : 31,
+                height: 31,
+                img   : 'calendar2',
+            },
+            {
+                title : '교육자료실',
+                width : 33,
+                height: 30,
+                img   : 'chart2',
+            },
+            {
+                title : '자주묻는 질문',
+                width : 28,
+                height: 33,
+                img   : 'doc2',
+            },
+        ];
+        %>
+        <ul class="top cyan-items">
+            <% links.map(l => { %>
+                <li>
+                    <a href="#">
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: l.width,
+                        height: l.height,
+                        isSimply: true,
+                        source: `${imgPath}/icon-${l.img}.png`,
+                        alt: '',
+                        }); %>
+                    </span>
+                        <strong class="title"><%= l.title %></strong>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+        <div class="bottom">
+            <strong class="title">통합예약서비스가 처음이신가요? 도와드리겠습니다</strong>
+            <ul class="links">
+                <li>
+                    <a href="#"
+                       class="link-navy">동영상가이드
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="link-navy">챗봇
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,135 @@
+<%
+const benefit = [
+    {
+        text  : '<strong>사용신청</strong>전화상담 후 신청서<br>제출 (사용 3일전)',
+        width : 74,
+        height: 70,
+    },
+    {
+        text  : '<strong>사용승인</strong>담당부서 확인 후<br>승인처리',
+        width : 74,
+        height: 61,
+    },
+    {
+        text  : '<strong>기기사용</strong>분석의뢰 또는<br>직접 사용',
+        width : 68,
+        height: 61,
+    },
+    {
+        text  : '<strong>사용료 청구</strong>사용비용 또는<br>분석의뢰 비용 청구',
+        width : 58,
+        height: 65,
+    },
+    {
+        text  : '<strong>사용료 납부</strong>발행된 계산서의<br>금액 납부',
+        width : 72,
+        height: 62,
+    },
+];
+%>
+<section class="detail-section">
+    <strong class="title-leaves">사용절차</strong>
+    <ul class="benefits step">
+        <% benefit.map((b, i) => { %>
+            <li>
+            <span class="icon-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: b.width,
+                height: b.height,
+                isSimply: true,
+                source: `${imgPath}/icon-equipment${i + 1}.png`,
+                alt: '',
+                }); %>
+            </span>
+                <div class="text"><%- b.text; %></div>
+            </li>
+        <% }); %>
+    </ul>
+    <div class="box outline4">
+        <strong>
+            <span class="icon-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 37,
+                height: 32,
+                isSimply: true,
+                source: `${imgPath}/icon-wallet.png`,
+                alt: '',
+                }); %>
+            </span>
+            문의 및 제출처
+        </strong>
+        <ul class="dot-caution">
+            <li>전화 상담 :
+                <a href="tel:000-0000-0000">000-0000-0000</a>
+            </li>
+            <li>신청서 제출 :
+                <a href="mailto:jmseo3@koagi.or.kr">jmseo3@koagi.or.kr</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">보유기기 목록</strong>
+    <ul class="box-division division3">
+        <li class="tiny-cell center">
+            <strong class="title">고성능액체크로마토그래피 (HPLC)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">가스크로마토그래피 (GC-MS)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">주사전자현미경 (SEM)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">광디지털현미경 (Digital Microscope)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">동결건조기</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">씨앗분석용 자기공명분광분석기 (NMR)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">미세온도발아구배기 (TGP)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">발아챔버 (Germination Chamber)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">광학현미경 (DM4B)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">스펙트럼 이미지 분석기 (Videometer)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">마이크로플레이트 분광광도계 (Epoch2)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">분취 액체크로마토그래피 (Prep LC)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">실체현미경 (쌍안, SMZ800N)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">실체현미경 (삼안, 카메라, SMZ800N)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">뿌리분석 프로그램 (WinRHIZO)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">고속회전농축기(V-10)</strong>
+        </li>
+        <li class="tiny-cell center">
+            <strong class="title">질량분석기(TSQ ALTIS)</strong>
+        </li>
+    </ul>
+</section>
+<section class="detail-section">
+    <strong class="title-leaves">장비사용 유의사항</strong>
+    <ul class="dot-caution">
+        <li>사용자는 관련 규정 및 안전수칙을 준수하여야 합니다.</li>
+        <li>사용자는 기기 사용 후 사용대장에 반드시 기록하여야 합니다.</li>
+        <li>직접 사용자의 경우, 기기의 손상 및 고장에 대한 책임은 사용자에게 있습니다.</li>
+        <li>직접 사용자의 경우, 기기의 이상 유무를 확인하여 원상복구하여야 합니다.</li>
+    </ul>
+</section>

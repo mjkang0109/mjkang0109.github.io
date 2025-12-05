@@ -149,6 +149,36 @@ $imgPath: "./../../images/koagi";
         border: 2px solid #3cad39;
         font-weight: 700;
     }
+    .button-green-middle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 11px;
+        padding: 19px 32px;
+        background-color: #3cad39;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(19) m.m(32);
+        }
+    }
+    .button-brown-middle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 11px;
+        padding: 19px 32px;
+        background-color: #361f1f;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(19) m.m(32);
+        }
+    }
     .button-darkgray {
         padding: 15px 28px;
         background-color: #242424;
@@ -190,6 +220,17 @@ $imgPath: "./../../images/koagi";
         color: #fff;
         border-radius: 5px;
         background-color: #3baf89;
+    }
+    .button-cyan-round {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 13px 31px;
+        border-radius: 50px;
+        background-color: #33a497;
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
     }
 
     .button-icon-outline {

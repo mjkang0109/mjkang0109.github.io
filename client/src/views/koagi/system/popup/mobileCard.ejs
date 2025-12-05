@@ -1,0 +1,101 @@
+---
+group: system
+state:
+    default: 팝업-모바일카드
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>모바일카드</title>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH; %>/styles/koagi/popup<%= process.env.MINIFY; %>.css<%= `?${setTimestamp()}`; %>">
+</head>
+<body>
+    <%
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <header class="card-top">
+        <h1>모바일카드</h1>
+        <button type="button"
+                class="button-close">
+            <span class="a11y">닫기</span>
+        </button>
+    </header>
+    <main class="card-middle">
+        <span class="profile-image">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 320,
+            height: 320,
+            isSimply: true,
+            source: `${imgPath}/dummy-edu.jpg`,
+            alt: '',
+            }); %>
+        </span>
+        <ul class="profile">
+            <%
+            const profiles = [
+                {
+                    title: '회원이름',
+                    desc : '김대한',
+                },
+                {
+                    title: '회원번호',
+                    desc : '6784789455',
+                },
+                {
+                    title: '회원유형',
+                    desc : '일반회원',
+                },
+                {
+                    title: '유효기간',
+                    desc : '2025.10.01 ~2026.10.01',
+                },
+            ]
+            %>
+            <% profiles.map(pro => { %>
+                <li>
+                    <strong class="type">
+                        <%= pro.title %>
+                    </strong>
+                    <span class="text">
+                        <%= pro.desc %>
+                    </span>
+                </li>
+            <% }); %>
+        </ul>
+        <div class="qrcode">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 182,
+                height: 168,
+                isSimply: true,
+                source: `${imgPath}/dummy-qr.png`,
+                alt: '',
+                }); %>
+            </span>
+            <strong class="limit">유효시간<span class="color-red">24초</span></strong>
+        </div>
+        <button type="button" class="button-green">입장확인</button>
+    </main>
+    <footer class="card-bottom">
+        <strong class="title">한국수목원정원관리원장</strong>
+        <ul class="caution">
+            <%
+            const caution = [
+                '회원카드는 타인에게 대여 또는 양도할 수 없습니다.',
+                '회원카드를 제시하여야 혜택을 받으실 수 있습니다.',
+                '유효기간 만료 시 홈페이지에서 갱신할 수 있습니다.',
+            ]
+            %>
+            <% caution.map(c => { %>
+                <li><%= c %></li>
+            <% }); %>
+        </ul>
+    </footer>
+</body>
+</html>

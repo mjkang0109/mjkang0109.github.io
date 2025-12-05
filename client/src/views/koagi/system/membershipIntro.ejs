@@ -2,8 +2,6 @@
 group: system
 state:
     default: 연간회원소개
-    organization: 기괸화원
-    donation: 기부회원
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -12,9 +10,9 @@ state:
 }) %>
 <head>
     <%
-    currentName = CATEGORY_KO.get(state);
+    currentName = '한국수목원정원관리원';
     currentCategory = 'system';
-    currentNav = CATEGORY_EN.get(state);
+    currentNav = 'koagi';
     imgPath = `${process.env.IMG_PATH}/koagi`;
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -37,29 +35,26 @@ state:
         <!-- // header -->
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-        title: `${state.includes('Organization') ? '단체' : '개인'} 입장권 구매`,
+        title: '연간회원 소개',
         depths: [
-        '한국수목원정원관리원',
-        '연간회원',
+        '연간회원 신청',
         '연간회원 소개',
         ],
         }) %>
         <!-- // title -->
         <!-- contents -->
-        <% const index = {
-            default: 0,
-            organization: 1,
-            donation: 2,
-        }
-        %>
         <div id="body">
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
-                items: ['개인회원', '기관회원', '기부회원'],
-                current: index[state]
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_customVisual`, {
+            title: `<strong>연간회원 서비스 안내</strong>`,
+            desc: '자연과 가까워지는 가장 아름다운 방법, 한국수목원정원관리원 연간회원. <br>사계절 정원의 초대와 다양한 회원 전용 혜택으로 매 순간 새로운 감동을 만나보세요. ',
+            button: '<div class="buttons"><a href="#" class="button-navy">개인회원 신청</a><a href="#" class="button-navy">기관회원 신청</a></div>',
+            img: 'membership',
+            }) %>
+            
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_membershipIntro`, {
+                
             }) %>
 
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_membershipType`, {
-            }) %>
         </div>
         <!-- // contents -->
         <!-- footer -->

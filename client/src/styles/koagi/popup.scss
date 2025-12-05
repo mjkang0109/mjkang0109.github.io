@@ -2,6 +2,7 @@
 @use "sass:math";
 @use "./../components/mixin" as m;
 @use "./partials/fonts" as fonts;
+@use "./partials/mobileCard" as mobileCard;
 
 $imgPath: "./../../images/koagi";
 @font-face {
@@ -112,8 +113,21 @@ $imgPath: "./../../images/koagi";
     font-display: swap;
 }
 
+@font-face {
+    font-family: "EliceDigitalBaeum";
+    font-weight: 700;
+    font-style: normal;
+    src: url("./../fonts/EliceDigitalBaeumBold.woff2") format("woff2"),
+    url("./../fonts/EliceDigitalBaeumBold.ttf") format("truetype");
+    font-display: swap;
+}
+
 body,
+h1,
+ul,
+li,
 div,
+p,
 strong,
 button,
 table,
@@ -130,11 +144,10 @@ a {
     text-decoration: none;
 }
 
-body,
 button {
-}
-
-button {
+    appearance: none;
+    border: none;
+    padding: 0;
     cursor: pointer;
 }
 
@@ -293,3 +306,5 @@ button {
     border: 1px solid #242424;
     background-color: #fff;
 }
+
+@include mobileCard.mobileCard;

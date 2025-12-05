@@ -1,0 +1,40 @@
+<section class="greeting-visual">
+    <strong class="title">
+        안녕하십니까? <%= currentName %> 홈페이지를
+        <br>찾아주신 여러분을 진심으로 환영합니다.
+    </strong>
+    <p class="desc">
+        국민 누구나 정원의 매력을 경험할 수 있는 문화 확산을 위해 다양한 프로그램과 콘텐츠를 운영하고 있습니다.
+        <br>자연과 일상이 가까워지는 정원 문화를 만들어가기 위해 더욱 노력하겠습니다.
+    </p>
+</section>
+<section class="greeting-text">
+    <span class="img-wrap">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: 440,
+        height: 550,
+        isSimply: true,
+        source: `${imgPath}/profile-${currentCategory}.jpg`,
+        alt: '',
+        }); %>
+    </span>
+    <div class="text-wrap">
+        국립정원문화원은 정원의 조성 및 관리 기술을 개발·보급하고, 전문인력을 양성하며, 지역사회와 주민이 참여하는 새로운 정원문화를 창출하는 살아있는 플랫폼이 되고자 2025년 9월 18일 개원하였습니다.
+        <br><br>국민 누구나 정원의 가치를 직접 체험하고 일상에서 정원문화를 누릴 수 있는 기회를 제공하겠습니다. 또한 이곳이 국내를 넘어 세계와 소통하며 한국 정원문화의 독창성과 아름다움을 널리 알리는 교류의 장이 되기를 기대합니다.
+        <br><br>미래 세대가 정원 속에서 자연과 사람의 공존 가치를 배우고, 지속가능한 사회를 만들어 나가는 힘을 기를 수 있도록 든든한 토대가 되도록 노력하겠습니다.
+        <br><br>앞으로도 국립정원문화원의 밝은 미래를 위해 관심과 응원 부탁드립니다. 감사합니다.
+
+        <div class="signature-wrap">
+            <strong class="name"><%= currentName %> 이사장 한동길</strong>
+            <span class="signature">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 177,
+                height: 82,
+                isSimply: true,
+                source: `${imgPath}/signature-${currentCategory}.png`,
+                alt: '',
+                }); %>
+            </span>
+        </div>
+    </div>
+</section>

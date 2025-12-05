@@ -57,8 +57,10 @@ var items = items || [];
                 <%- i !== 0 ? 'hidden' : ''; %>>
             <strong><%= item.title; %></strong>
             <p>먹거리나 볼거리로 활용되는 식물을 키우고 수확하는 과정을 직접 참여하고 체험할 수 있는 정원입니다.
-                <br>생활정원은 채소 씨앗을 뿌려서 어린 식물을 생산하는 온실, 사과나무 벽면장식정원, 블루베리 정원, 유실수 정원,
-                <br>산나물정원 등 다양한 형태의 정원이 있습니다.
+                <br>
+                생활정원은 채소 씨앗을 뿌려서 어린 식물을 생산하는 온실, 사과나무 벽면장식정원, 블루베리 정원, 유실수 정원,
+                <br>
+                산나물정원 등 다양한 형태의 정원이 있습니다.
             </p>
             <ul class="tags">
                 <li># 사과나무</li>
@@ -77,16 +79,18 @@ var items = items || [];
     <div class="map">
         <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
         width: 1450,
-        height: 728,
+        height: 896,
         isSimply: true,
-        source: `${imgPath}/map-${currentCategory}.jpg`,
+        source: `${imgPath}/map-${currentCategory}.png`,
         alt: '',
         }); %>
         <div class="markers">
             <% items.map((item, i) => { %>
                 <span <%= i === 0 ? '' : 'hidden'; %>
-            id="marker<%= i + 1; %>">
-            마커 <%= i + 1; %>
+            id="marker<%= i + 1; %>"
+            class="marker"
+            style="top:0; left: 0;">
+                    <span class="sound-only">위치 이름</span>
             </span>
             <% }); %>
         </div>

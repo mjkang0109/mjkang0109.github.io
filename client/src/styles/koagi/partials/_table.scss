@@ -5,7 +5,6 @@
 $imgPath: "./../../images/koagi";
 @mixin table {
     table {
-        table-layout: fixed;
         width: 100%;
         border-collapse: collapse;
 
@@ -60,13 +59,12 @@ $imgPath: "./../../images/koagi";
         width: 100%;
 
         &.fixed {
-            table-layout: fixed
+            table-layout: fixed;
         }
 
         th,
         td {
             border: 1px solid #e7e7e7;
-            width: 100%;
             padding: 20px;
             font-size: 16px;
             line-height: 26px;
@@ -686,10 +684,25 @@ $imgPath: "./../../images/koagi";
             @include m.respond-to(map.get(m.$max, 1199)) {
                 grid-template-columns: repeat(5, 1fr);
             }
+
+            &-2 {
+                grid-template-columns: repeat(4, 170px) 1fr;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+            }
+        }
+
+        &.grid8 {
+            grid-template-columns: repeat(8, 1fr);
         }
 
         .col1-3 {
             grid-column: 1 / 3;
+        }
+
+        .col3 {
+            grid-column: 3;
         }
 
         .col4 {
@@ -712,6 +725,10 @@ $imgPath: "./../../images/koagi";
             grid-row: 2 / 5;
         }
 
+        .row2-8 {
+            grid-row: 2/8;
+        }
+
         .head {
             background-color: #fafafa;
             border-top: 2px solid #707070;
@@ -729,6 +746,9 @@ $imgPath: "./../../images/koagi";
             font-size: 16px;
             line-height: 25px;
             color: #000;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 5px;
+            }
 
             &:not(.border-right-none) {
                 border-right: 1px solid #e7e7e7;
@@ -739,5 +759,4 @@ $imgPath: "./../../images/koagi";
             }
         }
     }
-
 }

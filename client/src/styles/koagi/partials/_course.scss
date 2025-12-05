@@ -232,7 +232,8 @@ $imgPath: "./../../images/koagi";
                     &:after {
                         width: $width * $i + px;
                         @include m.respond-to(map.get(m.$max, 1199)) {
-                            width: $width / 2 * $i + px;
+                            $mobileWidth: math.div($width, 2);
+                            width: $mobileWidth * $i + px;
                         }
                     }
                 }

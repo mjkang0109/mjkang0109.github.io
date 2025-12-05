@@ -12,6 +12,10 @@ $imgPath: "./../../images/koagi";
             }
         }
 
+        + .title-caution {
+            margin-top: 87px;
+        }
+
         .gallery-items {
             padding-top: 10px;
         }
@@ -152,6 +156,7 @@ $imgPath: "./../../images/koagi";
 
                     &.gray {
                         color: #595959;
+                        text-align: left;
                     }
 
                     &.red {
@@ -344,6 +349,15 @@ $imgPath: "./../../images/koagi";
                 margin-top: 222px;
                 @include m.respond-to(map.get(m.$max, 1199)) {
                     margin-top: 50px;
+                }
+            }
+
+            .markers {
+                .marker {
+                    position: absolute;
+                    width: 41px;
+                    height: 52px;
+                    background: url("#{$imgPath}/icon-mark-red.png") no-repeat 50% 50%;
                 }
             }
         }

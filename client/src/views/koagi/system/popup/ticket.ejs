@@ -1,0 +1,145 @@
+---
+group: system
+state:
+    default: 팝업-온라인 입장권
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>온라인 입장권</title>
+    <link rel="stylesheet"
+          href="<%= process.env.BASE_PATH; %>/styles/koagi/popup<%= process.env.MINIFY; %>.css<%= `?${setTimestamp()}`; %>">
+</head>
+<body>
+    <%
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <header class="card-top">
+        <h1>온라인 입장권</h1>
+        <button type="button"
+                class="button-close">
+            <span class="a11y">닫기</span>
+        </button>
+        <span class="logo">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 399,
+            height: 56,
+            isSimply: true,
+            source: `${imgPath}/logo-baekdu-white.png`,
+            alt: '',
+            }); %>
+        </span>
+    </header>
+    <main class="card-middle">
+        <span class="date">
+            2025-12-12
+        </span>
+        <div class="qrcode">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 182,
+                height: 168,
+                isSimply: true,
+                source: `${imgPath}/dummy-qr.png`,
+                alt: '',
+                }); %>
+            </span>
+            <strong class="limit">유효시간
+                <span class="color-red">24초</span>
+            </strong>
+        </div>
+        <button type="button"
+                class="button-green">입장확인
+        </button>
+        <ul class="pax">
+            <li class="total">
+                <strong class="type">개인</strong>
+                <span class="count">총 <span class="color-red">5</span>인</span>
+            </li>
+            <%
+            const count = [
+                {
+                    type : '어른',
+                    count: '4개',
+                },
+
+                {
+                    type : '할인',
+                    count: '2개',
+                },
+
+                {
+                    type : '무료',
+                    count: '5개',
+                },
+            ]
+            %>
+            <% count.map(c => { %>
+            <li>
+                <strong class="type"><%= c.type %></strong>
+                <span class="count"><%= c.count %></span>
+            </li>
+            <% }) %>
+            <li>
+                <strong class="type">
+                    총<span class="color-red">12</span>개
+                </strong>
+                <span class="count">
+                    <span class="color-red">8,600</span>
+                    원
+                </span>
+            </li>
+        </ul>
+        <ul class="box-caution">
+            <%
+            const caution = [
+                'QR코드는 방문일 당일에 나타납니다.',
+                '입장권은 타인에게 양도할 수 없습니다.',
+                '입장 시 입장권을 제시하여야 입장이 가능합니다.',
+            ].map(c => {
+            %>
+                <li><%= c %></li>
+            <% });%>
+        </ul>
+        <strong class="title center">입장방법</strong>
+        <div class="division-box">
+            <div class="left">
+                <span class="icon-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 48,
+                    height: 66,
+                    isSimply: true,
+                    source: `${imgPath}/icon-cell-orange.png`,
+                    alt: '',
+                    }); %>
+                </span>
+                <p class="desc">마이 > 예약내역 >
+                    <br>모바일 입장권 보기</p>
+            </div>
+            <div class="right">
+                <span class="icon-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 56,
+                    height: 56,
+                    isSimply: true,
+                    source: `${imgPath}/icon-qr-orange.png`,
+                    alt: '',
+                    }); %>
+                </span>
+                <p class="desc">
+                    입장권 QR / 바코드
+                    <br>찍고 입장
+                </p>
+            </div>
+        </div>
+        <button type="button" class="button-gradient">입장권 환불</button>
+    </main>
+</body>
+</html>
+
+

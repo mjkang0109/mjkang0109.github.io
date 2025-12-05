@@ -1,0 +1,362 @@
+<strong class="title-line">
+    연간회원 유형
+</strong>
+<ul class="cyan-box-items">
+    <%
+    const items = [
+        {
+            title  : '일반회원',
+            benefit: 5,
+            desc   : '만 7세 이상 ~ 65세 미만',
+        },
+        {
+            title  : '지역회원',
+            benefit: 5,
+            desc   : '한국수목원정원관리원에서<br>운영하는 수목원/식물원이<br>위치한 지역 거주민',
+        },
+        {
+            title  : '평생회원',
+            benefit: 6,
+            desc   : '평생 1회 납부하며,<br>한국수목원정원관리원의<br>모든 혜택 적용',
+        },
+        {
+            title  : '어울림회원',
+            benefit: 2,
+            desc   : '만 65세 이상<br>또는 만6세 이하',
+        },
+        {
+            title  : '기관회원',
+            benefit: 3,
+            desc   : '20인 이상<br>재직직원 대상 기업',
+        },
+    ];
+    %>
+    <% items.map(item => { %>
+        <li>
+            <strong class="type"><%= item.title; %></strong>
+            <div class="desc-wrap">
+                <strong class="color-pink"><%= item.benefit; %>가지 혜택!</strong>
+                <p class="desc"><%- item.desc; %></p>
+            </div>
+        </li>
+    <% }); %>
+</ul>
+<section class="detail-section">
+    <strong class="title-leaf">연간회원 혜택</strong>
+    <div class="table-grid grid8">
+        <%
+        const tableHead = [
+            '회원유형',
+            '소속 수목원<br>무료입장',
+            '행사, 전시<br>정보 제공',
+            '회원의 날<br>행사 초청',
+            '가든샵, 카페<br>10% 할인',
+            '교육, 해설 등<br>교육비 할인',
+            '교육 연수동<br>50% 할인',
+        ];
+        const type = [
+            '개인회원',
+            '기업회원',
+            '기부회원',
+        ];
+
+        const type2 = [
+            '일반회원',
+            '지역회원',
+            '평생회원',
+            '어울림회원',
+            '기관회원',
+            '기부회원',
+            '기관회원',
+            '기부회원',
+        ];
+
+        const percent = [
+            '20%',
+            '20%',
+            '50%',
+            '',
+            '',
+            '50%',
+        ];
+
+        const percent2 = [
+            '',
+            '',
+            '50%',
+            '',
+            '',
+            '50%',
+        ];
+        %>
+        <% tableHead.map((head, i)=> { %>
+            <div class="head<%= i === 0 ? ' col1-3' : ''; %><%= i === tableHead.length - 1 ? ' border-right-none' : ''; %>">
+                <strong><%- head; %></strong>
+            </div>
+        <% }); %>
+
+        <div class="row2-6"><%= type[0]; %></div>
+        <div><%= type2[0]; %></div>
+        <div class="row2-8 col3">공통 적용</div>
+        <div class="row2-8 col4">공통 적용</div>
+        <div>○</div>
+        <div>○</div>
+        <div><%= percent[0]; %></div>
+        <div class="border-right-none"><%= percent2[0]; %></div>
+        <div><%= type2[1]; %></div>
+        <div>○</div>
+        <div>○</div>
+        <div><%= percent[1]; %></div>
+        <div class="border-right-none"><%= percent2[1]; %></div>
+        <div><%= type2[2]; %></div>
+        <div>○</div>
+        <div>○</div>
+        <div><%= percent[2]; %></div>
+        <div class="border-right-none"><%= percent2[2]; %></div>
+        <div><%= type2[3]; %></div>
+        <div></div>
+        <div></div>
+        <div><%= percent[3]; %></div>
+        <div class="border-right-none"><%= percent2[3]; %></div>
+        <div><%= type[1]; %></div>
+        <div><%= type2[4]; %></div>
+        <div></div>
+        <div>○</div>
+        <div><%= percent[4]; %></div>
+        <div class="border-right-none"><%= percent2[4]; %></div>
+        <div><%= type[2]; %></div>
+        <div><%= type2[5]; %></div>
+        <div>○</div>
+        <div>○</div>
+        <div><%= percent[5]; %></div>
+        <div class="border-right-none"><%= percent2[5]; %></div>
+    </div>
+</section>
+<section class="detail-section">
+    <strong class="title-leaf">연간회원 가입비용</strong>
+    <div class="table-grid grid5-2">
+        <%
+        const tableHead2 = [
+            '회원유형',
+            '가입비',
+            '기간',
+            '비고',
+        ];
+
+        const price = [
+            '30,000원',
+            '15,000원',
+            '1,000,000원',
+            '무료',
+            '10,000원',
+            '무료',
+        ];
+
+        const period = [
+            '1년',
+            '1년',
+            '회원 탈퇴 시까지',
+            '1년',
+            '1년',
+            '기타',
+        ];
+        %>
+        <% tableHead2.map((head, i)=> { %>
+            <div class="head<%= i === 0 ? ' col1-3' : ''; %><%= i === tableHead.length - 1 ? ' border-right-none' : ''; %>">
+                <strong><%- head; %></strong>
+            </div>
+        <% }); %>
+
+        <div class="row2-6"><%= type[0]; %></div>
+        <div><%= type2[0]; %></div>
+        <div><%= price[0]; %></div>
+        <div><%= period[0]; %></div>
+        <div class="border-right-none"></div>
+        <div><%= type2[1]; %></div>
+        <div><%= price[1]; %></div>
+        <div><%= period[1]; %></div>
+        <div class="border-right-none"></div>
+        <div><%= type2[2]; %></div>
+        <div><%= price[2]; %></div>
+        <div><%= period[2]; %></div>
+        <div class="border-right-none"></div>
+        <div><%= type2[3]; %></div>
+        <div><%= price[3]; %></div>
+        <div><%= period[3]; %></div>
+        <div class="border-right-none"></div>
+        <div><%= type[1]; %></div>
+        <div><%= type2[4]; %></div>
+        <div><%= price[4]; %></div>
+        <div><%= period[4]; %></div>
+        <div class="border-right-none"></div>
+        <div><%= type[2]; %></div>
+        <div><%= type2[5]; %></div>
+        <div><%= price[5]; %></div>
+        <div><%= period[5]; %></div>
+        <div class="border-right-none"></div>
+    </div>
+</section>
+<section class="detail-section">
+    <strong class="title-leaf">온라인 신청 절차</strong>
+    <div class="box outline-round-division">
+        <ol class="step-items">
+            <%
+            const join = [
+                {
+                    icon  : 'ticket-hand',
+                    width : 50,
+                    height: 50,
+                    title : '회원 또는 비회원<br>로그인',
+                },
+                {
+                    icon  : 'payment-hand',
+                    width : 49,
+                    height: 43,
+                    title : '연간회원 유형<br>선택 후 신청',
+                },
+                {
+                    icon  : 'plant',
+                    width : 40,
+                    height: 46,
+                    title : '신청서 작성 및<br>발급유형 선택',
+                },
+                {
+                    icon  : 'bench',
+                    width : 36,
+                    height: 46,
+                    title : '가입비<br>결제',
+                },
+                {
+                    icon  : 'book',
+                    width : 45,
+                    height: 40,
+                    title : '연간회원<br>가입완료',
+                },
+            ];
+            %>
+            <% join.map((j, i) => { %>
+                <li>
+                <span class="icon-wrap">
+                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                     width: j.width,
+                     height: j.height,
+                     isSimply: true,
+                     source: `${imgPath}/icon-membership${i + 1}.png`,
+                     alt: '',
+                     }); %>
+                </span>
+                    <strong class="title"><%- j.title; %></strong>
+                    <% if (j.desc) { %>
+                        <p><%- j.desc; %></p>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ol>
+        <div class="bottom">
+            <span class="icon-wrap">
+                 <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                 width: 28,
+                 height: 31,
+                 isSimply: true,
+                 source: `${imgPath}/icon-caution.png`,
+                 alt: '',
+                 }); %>
+            </span>
+            <strong class="title">유의사항</strong>
+            <p class="desc">실물카드 선택 시 카드를 우편으로 발송해드리지 않습니다. 가까운 소속기관 수목원에 방문하셔서 수령해주시기 바랍니다.</p>
+        </div>
+    </div>
+</section>
+<section class="detail-section">
+    <strong class="title-leaf">현장 방문 신청 절차</strong>
+    <div class="box outline-round-division">
+        <ol class="step-items">
+            <%
+            const join2 = [
+                {
+                    icon  : 'ticket-hand',
+                    width : 34,
+                    height: 47,
+                    title : '소속기관 수목원<br>방문',
+                },
+                {
+                    icon  : 'payment-hand',
+                    width : 40,
+                    height: 46,
+                    title : '연간회원 신청서<br>작성',
+                },
+                {
+                    icon  : 'plant',
+                    width : 48,
+                    height: 41,
+                    title : '사진 촬영 및<br>가입비 결제',
+                },
+                {
+                    icon  : 'bench',
+                    width : 45,
+                    height: 40,
+                    title : '연간회원<br>가입완료',
+                },
+                {
+                    icon  : 'book',
+                    width : 46,
+                    height: 38,
+                    title : '실물카드<br>수령',
+                },
+            ];
+            %>
+            <% join2.map((j, i) => { %>
+                <li>
+                <span class="icon-wrap">
+                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                     width: j.width,
+                     height: j.height,
+                     isSimply: true,
+                     source: `${imgPath}/icon-membership${i + 6}.png`,
+                     alt: '',
+                     }); %>
+                </span>
+                    <strong class="title"><%- j.title; %></strong>
+                    <% if (j.desc) { %>
+                        <p><%- j.desc; %></p>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ol>
+        <div class="bottom">
+            <span class="icon-wrap">
+                 <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                 width: 28,
+                 height: 31,
+                 isSimply: true,
+                 source: `${imgPath}/icon-caution.png`,
+                 alt: '',
+                 }); %>
+            </span>
+            <strong class="title">유의사항</strong>
+            <p class="desc">현장 방문 신청 시 실물카드 발급만 가능합니다. 모바일 카드 발급을 원하실 경우 온라인에서 신청해주세요.</p>
+        </div>
+    </div>
+</section>
+<strong class="title-caution">꼭 알아두세요!</strong>
+<div class="box outline-round">
+    <ul class="dot-caution">
+        <li>한국수목원정원관리원 소속기관 입장 및 이용 시 항상 <strong class="color-red">연간회원카드를 소지</strong>하셔야 합니다.
+            <br>
+            - 실물카드 : 입장 및 이용 전 제시
+            <br>
+            - 모바일 회원증 : 입장 및 이용 전 QR코드 제시 (카카오 알림톡 또는 마이페이지에서 조회)
+        </li>
+        <li>연간회원카드 분실 및 개인정보 변경 시 [마이페이지] 또는 [현장 방문] 재발급 신청을 통해 발급이 가능합니다.
+            <br>
+            - 실물카드 : 신청 후 수 일 소요
+            <br>
+            - 모바일 회원증 : 신청 후 즉시 발급
+        </li>
+        <li>분실/재발급 신고된 연간회원카드는 자동적으로 사용 불가 처리됩니다.</li>
+        <li><strong class="color-red">연간회원증은 본인 사용이 원칙이며, 타인 양도 및 사용이 불가</strong>합니다.</li>
+        <li>환불 신청은 [마이페이지] 또는 [현장 방문]하여 각 회원유형별 기간 내 가능하며, 환불 신청 기간이 지난 뒤 환불이 불가합니다.
+        <br>- 일반회원, 지역회원 : 신청 후 30일 이내
+            <br>- 평생회원 : 신청 후 90일 이내</li>
+    </ul>
+</div>

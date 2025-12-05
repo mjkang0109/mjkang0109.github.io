@@ -27,7 +27,8 @@ const length = items.length;
                 <li class="swiper-slide">
                     <div role="tab"
                          aria-controls="panel<%= i + 1; %>"
-                         aria-selected="<%= i === 0; %>">
+                         aria-selected="<%= i === 0; %>"
+                         data-marker="marker<%= i + 1; %>">
                         <span class="img-wrap">
                             <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
                             width: 650,

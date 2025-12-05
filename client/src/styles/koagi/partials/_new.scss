@@ -25,6 +25,8 @@
 @use "./../partials/information" as information;
 @use "./../partials/nighttime" as nighttime;
 @use "./../partials/intro" as intro;
+@use "./../partials/location" as location;
+@use "./../partials/greeting" as greeting;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -496,15 +498,19 @@ input[type="radio"] {
             height: 3px;
             background-color: #696969;
             transform: translateY(-50%);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                height: m.m(3);
+            }
         }
 
         .swiper-scrollbar-drag {
-            &:before {
-            }
-
             height: 31px;
             background: url("#{$imgPath}/icon-scroll.png") no-repeat 50% 50%;
             cursor: pointer;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                height: m.m(31);
+                background-size: auto 100%;
+            }
         }
     }
 }
@@ -742,6 +748,16 @@ input[type="radio"] {
         line-height: 26px;
         color: #000;
         font-weight: 400;
+    }
+
+    &.outline-round-division {
+        display: flex;
+        flex-direction: column;
+        gap: 87px;
+        overflow: hidden;
+        padding: 0;
+        border-radius: 20px;
+        border: 1px solid #dfdfdf;
     }
 }
 
@@ -1156,12 +1172,22 @@ input[type="radio"] {
     }
 
     .map {
+        position: relative;
         margin-top: 108px;
 
         img {
             @include m.respond-to(map.get(m.$max, 1199)) {
                 width: 100%;
                 height: auto;
+            }
+        }
+
+        .markers {
+            .marker {
+                position: absolute;
+                width: 41px;
+                height: 52px;
+                background: url("#{$imgPath}/icon-mark-red.png") no-repeat 50% 50%;
             }
         }
     }
@@ -1670,6 +1696,10 @@ input[type="radio"] {
             height: 6px;
             background-color: #69a94e;
         }
+
+        .color-red {
+            color: #f00a0a;
+        }
     }
 }
 
@@ -1741,6 +1771,10 @@ input[type="radio"] {
     font-family: "SBAggro", serif;
     font-weight: 500;
 
+    + .cyan-box-items {
+        margin-top: 60px;
+    }
+
     ~ .title-line {
         margin-top: 103px;
     }
@@ -1758,6 +1792,22 @@ input[type="radio"] {
 
     + .darkgreen-box-items {
         margin-top: 80px;
+    }
+}
+
+.title-caution {
+    display: block;
+    padding-left: 34px;
+    background: url("#{$imgPath}/icon-warning.png") no-repeat 0 50%;
+    font-size: 23px;
+    font-weight: 700;
+    color: #333;
+
+    + .box.outline-round {
+        margin-top: 36px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            margin-top: m.m(36);
+        }
     }
 }
 
@@ -1962,3 +2012,49 @@ input[type="radio"] {
 @include information.information;
 @include nighttime.nighttime;
 @include intro.intro;
+.outline-round-division {
+    .step-items {
+        padding: 0 45px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            li {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    > .bottom {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 26px 44px;
+        border-top: 1px solid #dfdfdf;
+        background-color: #f9f9f9;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-wrap: wrap;
+            padding: m.m(26) m.m(44);
+        }
+
+        .title {
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .desc {
+            margin-left: 11px;
+            font-size: 15px;
+            line-height: 25px;
+            color: #333;
+            font-weight: 500;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: flex;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+}
+@include location.location;
+@include greeting.greeting;

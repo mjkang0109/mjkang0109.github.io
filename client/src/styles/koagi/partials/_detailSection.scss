@@ -328,7 +328,7 @@ $imgPath: "./../../images/koagi";
         .map-wrap {
             display: block;
             position: relative;
-            width: 1450px;
+            width: 1500px;
             height: 728px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 width: 100%;

@@ -94,6 +94,13 @@ $imgPath: "./../../images/koagi";
             background-color: #1883d0;
             color: #fff;
         }
+
+        &.outline-cyan {
+            height: 26px;
+            color: #48b1a3;
+            border: 1px solid #48b1a3;
+            border-radius: 40px;
+        }
     }
     .states {
         display: flex;

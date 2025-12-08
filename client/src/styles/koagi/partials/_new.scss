@@ -27,6 +27,7 @@
 @use "./../partials/intro" as intro;
 @use "./../partials/location" as location;
 @use "./../partials/greeting" as greeting;
+@use "./../partials/main" as main;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -2058,3 +2059,4 @@ input[type="radio"] {
 }
 @include location.location;
 @include greeting.greeting;
+@include main.main;

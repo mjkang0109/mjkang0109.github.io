@@ -60,7 +60,7 @@ $imgPath: "./../../images/koagi";
 #wrap .bg {
     position: relative;
     margin: 0 auto;
-    width: 1450px;
+    width: 1500px;
     zoom: 1;
 }
 
@@ -248,7 +248,7 @@ body.scrolling #header {
         left: 50%;
         width: 100vw;
         margin-left: -24px;
-        min-width: 1450px;
+        min-width: 1500px;
         height: 100%;
         background-color: #fff;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
@@ -524,7 +524,7 @@ body.scrolling #header {
 
 #body {
     margin: 80px auto 0;
-    width: min(1450px, 100%);
+    width: min(1500px, 100%);
 }
 
 #body .bg {

@@ -79,6 +79,7 @@ $imgPath: "./../../images/koagi";
                 font-size: 15px;
             }
         }
+
         &-circle {
             width: 140px;
             height: 140px;
@@ -232,7 +233,6 @@ $imgPath: "./../../images/koagi";
         font-weight: 700;
         color: #fff;
     }
-
     .button-icon-outline {
         display: inline-flex;
         padding: 16px 126px 16px 32px;
@@ -241,5 +241,17 @@ $imgPath: "./../../images/koagi";
         background: url("#{$imgPath}/icon-arrow-right-line.png") no-repeat top 50% right 27px;
         font-size: 16px;
         color: #000;
+    }
+    .button-blue {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 26px 36px;
+        border-radius: 100px;
+        background-color: #0a67c2;
+        font-size: 19px;
+        color: #fff;
+        font-weight: 600;
     }
 }

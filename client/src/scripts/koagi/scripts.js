@@ -1,4 +1,4 @@
-const scripts = (() => {
+const JS = (() => {
     const $ = (el) => {
         if (!el) {
             return;
@@ -27,6 +27,8 @@ const scripts = (() => {
         return elements;
     };
 
+    let objSwiper = {};
+
     const bindSwiper = () => {
         const swipers = $$('.swiper');
         const thumbSwipers = $$('.thumb-swiper');
@@ -35,7 +37,7 @@ const scripts = (() => {
             return;
         }
 
-        const objSwiper = {};
+
         const objThumb = {};
 
         if (thumbSwipers) {
@@ -56,6 +58,10 @@ const scripts = (() => {
             const id = swiper.getAttribute('id');
             const hideNavigation = swiper.dataset.hideNavi;
             const scrollbar = swiper.dataset.scrollbar;
+            const change = swiper.dataset.change;
+            const loop = swiper.dataset.loop;
+            const autoplay = swiper.dataset.autoplay;
+            const theme = swiper.dataset.theme;
             const optsSwiper = {};
 
             optsSwiper.spaceBetween = swiper.dataset.gap ?? 30;
@@ -89,26 +95,83 @@ const scripts = (() => {
                     breakpoints: {
                         1200: {
                             spaceBetween: 25,
-                            scrollbar : {
+                            scrollbar   : {
                                 dragSize: 80,
-                            }
+                            },
                         },
-                        0: {
+                        0   : {
                             spaceBetween: 12,
-                            scrollbar : {
+                            scrollbar   : {
                                 dragSize: 40,
                             },
                         },
                     },
                 });
-                console.log(optsSwiper)
+            }
 
+            if (id === 'mainPoster') {
+                Object.assign(optsSwiper, {
+                    breakpoints: {
+                        1200: {
+                            spaceBetween : 30,
+                            slidesPerView: 5,
+                        },
+                        0   : {
+                            spaceBetween : 20,
+                            slidesPerView: 2,
+                        },
+                    },
+                });
+            }
+
+            if (change) {
+                Object.assign(optsSwiper, {
+                    effect    : 'fade',
+                    fadeEffect: {
+                        crossFade: true,
+                    },
+                });
+            }
+
+            if (loop) {
+                optsSwiper.loop = true;
+            }
+
+            if (autoplay) {
+                optsSwiper.autoplay = {
+                    speed: Number.isInteger(autoplay) ? autoplay : 5000,
+                };
             }
 
             objSwiper[id] = new Swiper(swiper, {
                 ...optsSwiper,
+                observer: true,
             });
+
+            if (theme) {
+                const target = $(`#${swiper.dataset.themeTarget}`);
+
+                objSwiper[id].on('slideChangeTransitionEnd', () => {
+                    const currentSlide = objSwiper[id].slides[objSwiper[id].activeIndex];
+                    target.dataset.theme = currentSlide.dataset.theme;
+                });
+            }
         });
+    };
+
+    const updateSwiper = (id) => {
+        if (!id) {
+            return;
+        }
+
+        const target = $(`#${id}`);
+
+        if (!target) {
+            return;
+        }
+
+        objSwiper[id].update();
+        objSwiper[id].slideTo(0);
     };
 
     const KEY = {
@@ -251,15 +314,18 @@ const scripts = (() => {
     };
 
     return {
-        init, bindSwiper,
+        init,
+        bindSwiper,
+        updateSwiper,
     };
 })();
 
 if (document.readyState === 'complete') {
-    scripts.init();
+    JS.init();
 } else if (document.addEventListener) {
-    document.addEventListener('DOMContentLoaded', scripts.init);
+    document.addEventListener('DOMContentLoaded', JS.init);
 }
+
 
 $(document).ready(function () {
     /* show popup when load */

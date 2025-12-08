@@ -1,6 +1,6 @@
 <% if (state !== 'client') { %>
     <div id="jsLayer"
-         class="layer-chat"
+         class="layer-chat show"
          role="dialog"
          aria-modal="true"
          aria-labelledby="layerHead">
@@ -67,11 +67,11 @@
                     <div class="ai-chat">
                         <% for (let i = 0; i < 5; i++) { %>
                             <div class="chat-admin">
-                        <span class="profile">
-                            <span class="a11y">
-                                한국도로공사 전자조달시스템 챗봇
-                            </span>
-                        </span>
+                                <span class="profile">
+                                    <span class="a11y">
+                                        한국도로공사 전자조달시스템 챗봇
+                                    </span>
+                                </span>
                                 <p class="text-wrap">
                                     <% if (i === 1) { %>
                                         정보공개요청을 선택하셨습니다. 세부 항목을 선택하세요. 정보공개요청을 선택하셨습니다. 세부 항목을 선택하세요. 정보공개요청을 선택하셨습니다.
@@ -83,6 +83,33 @@
                                 </p>
                                 <span class="timestamp">오후 12:00</span>
                             </div>
+                            <% if (i === 1) { %>
+                                <div class="quick-question">
+                                    <button type="button"
+                                            class="question active"
+                                            autofocus>
+                                        주관부서에서
+                                        실적증명 발급대장
+                                        상세 확인 방법을
+                                        알려주세요.
+                                    </button>
+                                    <button type="button"
+                                            class="question">
+                                        계약부서에서
+                                        실적증명
+                                        확인 방법을
+                                        알려주세요.
+                                    </button>
+                                    <button type="button"
+                                            class="question">
+                                        계약부서에서
+                                        실적증명
+                                        발급대장 확인
+                                        방법을 알려주세요.
+                                    </button>
+                                </div>
+
+                            <% } %>
                             <div class="chat-client">
                                 <p class="text-wrap">
                                     <% if (i === 1) { %>
@@ -106,20 +133,10 @@
                                 class="button-send">
                             <span class="a11y">전송</span>
                         </button>
-                        <div class="actions">
-                            <% const actions = [
-                                ['좋아요', 'good'],
-                                ['싫어요', 'bad'],
-                                ['파일첨부', 'file'],
-                            ]; %>
-                            <% actions.map(action => { %>
-                                <button type="button"
-                                        class="button-action button-<%= action[1] %>">
-                                    <span class="a11y"><%= action[0] %></span>
-                                </button>
-                            <% }); %>
-                        </div>
-
+                        <button type="button"
+                                class="button-copy">
+                            <span class="a11y">복사</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -146,7 +163,7 @@
                             ['hide', '최소화'],
                             ['full', '최대화'],
                             ['close', '닫기'],
-                                ['more', '더보기'],
+                            ['more', '더보기'],
                         ];
                     %>
                     <% buttons.map(button => { %>

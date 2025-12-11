@@ -1,0 +1,45 @@
+<div id="jsLayerSticky" class="layer-sticky">
+    <div class="wrap1500">
+        <div class="title-wrap">
+            <span class="icon-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 68,
+                height: 68,
+                isSimply: true,
+                source: `${imgPath}/icon-emergency.png`,
+                alt: '',
+                }); %>
+            </span>
+            <strong class="title">
+                <span class="sub">2025년 전국(장애인)체전 철인3종 경기 관련</span>
+                도로 전면 통제 및 버스 임시 우회 안내
+            </strong>
+        </div>
+        <div class="text-wrap">
+            <strong class="title">일시</strong>
+            <ul class="texts">
+                <%
+                const texts = [
+                    '10.17.(금) 07:00~13:00<br>10.18.(토) 07:00~13:00<br>10.19.(일) 07:00~13:00',
+                    '통제구간<br>000 앞 사거리~한국대학교 입구<br>000 앞 사거리~한국대학교 입구',
+                ];
+                %>
+                <% texts.map(t => { %>
+                    <li><%- t; %></li>
+                <% }); %>
+            </ul>
+        </div>
+        <div class="close-wrap">
+            <input type="checkbox"
+                   id="todayClose">
+            <label for="todayClose">
+                오늘 하루 열지 않기
+            </label>
+            <button type="button"
+                    class="button-close"
+                    onclick="document.getElementById('jsLayerSticky').classList.add('hide')">
+                닫기
+            </button>
+        </div>
+    </div>
+</div>

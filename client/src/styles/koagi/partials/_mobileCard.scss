@@ -133,17 +133,46 @@ $imgPath: "./../../images/koagi";
             box-shadow: 0 0 10px 0 rgb(118 118 118 / .08);
             border-radius: 20px;
 
+            &.left-days {
+                padding: m.m(56) 0 m.m(71);
+                gap: m.m(32);
+            }
+
             .img-wrap {
                 display: block;
                 position: relative;
-                justify-content: center;
-                align-items: center;
                 width: m.m(180);
                 height: m.m(180);
 
                 img {
                     width: 100%;
                     height: auto;
+                }
+            }
+
+            .icon-wrap {
+                display: block;
+                width: m.m(83);
+                height: m.m(83);
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .say-hello {
+                display: block;
+                font-size: m.m(28);
+                color: #242424;
+                font-weight: 700;
+                text-align: center;
+
+                .days {
+                    display: block;
+                    margin-top: m.m(23);
+                    text-align: center;
+                    font-size: m.m(60);
                 }
             }
 

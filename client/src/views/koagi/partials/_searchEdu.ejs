@@ -84,8 +84,12 @@
             inputs: [
                 {
                     input: '검색어를 입력하세요',
-                    id   : 'seach'
+                    id   : 'search'
                 },
+                {
+                    button: '검색',
+                    class: 'button-cyan'
+                }
             ]
 
         },
@@ -106,6 +110,12 @@
                                        class="it"
                                        placeholder="<%= input.input %>">
                             </label>
+                        <% } %>
+
+                        <% if (input.button) { %>
+                            <button type="button" class="<%= input.class %>">
+                                <%= input.button %>
+                            </button>
                         <% } %>
 
                         <% if (input.select) { %>

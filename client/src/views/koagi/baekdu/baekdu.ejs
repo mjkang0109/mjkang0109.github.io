@@ -2,6 +2,8 @@
 group: baekdu
 state:
     default: 메인
+    emergency: 메인-긴급팝업
+    popup: 메인-팝업존
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -9,7 +11,7 @@ state:
     <%
     currentName = '국립백두대간수목원';
     currentCategory = 'baekdu';
-    currentNav = 'tour';
+    currentNav = '';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -24,45 +26,24 @@ state:
 
     <!-- wrap -->
     <div id="wrap">
+        <% if (state === 'emergency') { %>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_emergency`, {
+                
+            }) %>
+        <% } %>
         <!-- header -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
-            currentCategory,
-            currentNav,
-            currentName
+        currentCategory,
+        currentNav,
+        currentName
         }) %>
         <!-- // header -->
 
-        <!-- visual sub -->
-        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
-        type: 'plant',
-        currentNav: '둘러보기',
-        key: '국민이 행복한 수목원',
-        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
-        }) %>
-        <!-- // visual sub -->
-
-        <!-- title -->
-        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-        title: '식물현황',
-        desc: '유아부터 성인까지 즐길 수 있는 다양한 교육 프로그램을 소개합니다. 관심 있는 프로그램을 확인하고 신청해 보세요. ',
-        depths: [
-        '둘러보기',
-        '식물현황'
-        ],
-        }) %>
-        <!-- // title -->
-
         <!-- contents -->
-        <div id="body">
-
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_counter`, {
-
+        <div id="body" class="main">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_main`, {
+                
             }) %>
-
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_list`, {
-
-            }) %>
-
         </div>
         <!-- // contents -->
 
@@ -72,12 +53,8 @@ state:
         currentCategory,
         }) %>
         <!-- // footer -->
-
-        <!-- navigation -->
-        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
-        currentCategory: currentCategory
-        }) %>
-        <!-- // navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_layers`, {
+    }) %>
     </div>
     <!-- // wrap -->
 </body>

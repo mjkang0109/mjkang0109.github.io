@@ -24,6 +24,12 @@ $imgPath: "./../../images/koagi";
             width: auto;
         }
 
+        > thead {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
         th,
         td {
             padding: 18px 0;
@@ -52,6 +58,35 @@ $imgPath: "./../../images/koagi";
                 &:first-of-type {
                     color: #f00a0a;
                 }
+            }
+        }
+
+        .button-underline {
+            font-size: 16px;
+            text-decoration: underline;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: 14px;
+            }
+        }
+
+        .table-gray {
+            th,
+            td {
+                padding: 12px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            th {
+                color: #000;
+            }
+        }
+
+        .schedule-detail {
+            display: none;
+
+            &.show {
+                display: table-row;
             }
         }
     }
@@ -136,7 +171,6 @@ $imgPath: "./../../images/koagi";
         td {
             padding: 18px 24px;
             border: 1px solid #e7e7e7;
-            width: 100%;
             font-size: 16px;
             line-height: 26px;
             @include m.respond-to(map.get(m.$max, 1199)) {
@@ -148,7 +182,6 @@ $imgPath: "./../../images/koagi";
 
         th {
             background-color: #fafafa;
-            width: 30%;
 
             &:first-of-type {
                 border-left: none;

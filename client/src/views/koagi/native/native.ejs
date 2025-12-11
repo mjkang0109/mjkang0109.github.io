@@ -2,20 +2,60 @@
 group: native
 state:
     default: 메인
+    emergency: 메인-긴급팝업
+    popup: 메인-팝업존
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <link rel="stylesheet"
-          href="<%= process.env.BASE_PATH %>/styles/koagi/styles<%= process.env.MINIFY %>.css<%= `?${setTimestamp()}`; %>">
+    <%
+    currentName = '국립한국자생식물원';
+    currentCategory = 'native';
+    currentNav = '';
+    imgPath = `${process.env.IMG_PATH}/koagi`
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
+    title: currentName,
+    currentCategory: currentCategory
+    }); %>
 </head>
-<body>
-    <div style="padding: 100px; border: 1px solid #333; display: flex; align-items: center; justify-content: center;">
-        <h1>EXAMPLE</h1>
-        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {}); %>
+<body class="<%= currentCategory %>">
+    <!-- skip navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
+    <!-- // skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <% if (state === 'emergency') { %>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_emergency`, {
+                
+            }) %>
+        <% } %>
+        <!-- header -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
+        currentCategory,
+        currentNav,
+        currentName
+        }) %>
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="body" class="main">
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_main`, {
+                
+            }) %>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
+        currentName,
+        currentCategory,
+        }) %>
+        <!-- // footer -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_layers`, {
+    }) %>
     </div>
-    <script src="<%= process.env.BASE_PATH; %>/scripts/koagi/scripts<%= process.env.MINIFY %>.js<%= `?${setTimestamp()}`; %>"
-            type="module"
-            defer></script>
+    <!-- // wrap -->
 </body>
 </html>

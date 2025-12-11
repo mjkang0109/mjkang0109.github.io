@@ -74,6 +74,9 @@ $imgPath: "./../../images/koagi";
         .text-wrap {
             padding: 104px 0 70px;
             border-bottom: 1px solid #e0e0e0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: m.m(104) 0 m.m(70);
+            }
 
             &.border-none {
                 border-bottom: 0;
@@ -93,12 +96,18 @@ $imgPath: "./../../images/koagi";
             .box.green {
                 + .detail-section {
                     margin-top: 63px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-top: m.m(63);
+                    }
                 }
             }
 
             table {
-                col {
-                    width: auto !important;
+                + .desc {
+                    margin-top: 94px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-top: m.m(94);
+                    }
                 }
             }
         }
@@ -108,11 +117,17 @@ $imgPath: "./../../images/koagi";
             justify-content: center;
             gap: 18px;
             margin-top: 90px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(90);
+            }
         }
 
         .button-navy {
             display: block;
             margin: 87px auto 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin: m.m(87) auto 0;
+            }
         }
 
         .box.green {

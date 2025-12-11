@@ -1,0 +1,103 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin sitemap {
+    .sitemap {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        padding: 82px 0;
+        background-color: #f9f9f9;
+
+        &.active {
+            display: block;
+        }
+
+        .wrap1500 {
+            position: relative;
+            width: 1500px;
+            margin: 0 auto;
+
+            .button-close {
+                position: absolute;
+                top: -50px;
+                right: -120px;
+                width: 42px;
+                height: 42px;
+                background: url("#{$imgPath}/icon-close-big.png") no-repeat 50% 50%;
+            }
+        }
+
+        .main-item {
+            flex: 1;
+
+            > a {
+                display: flex;
+                justify-self: flex-start;
+                font-size: 23px;
+                color: #272626;
+                font-weight: 600;
+
+                &:hover {
+                    color: #289d30;
+                }
+            }
+
+            &s {
+                display: flex;
+                gap: 30px;
+            }
+        }
+
+        .sub-item {
+            &:hover {
+                > a {
+                    color: #fff;
+                    background-color: #289d30;
+                    border-color: #289d30;
+                }
+            }
+
+            > a {
+                display: flex;
+                box-sizing: border-box;
+                padding: 23px 21px;
+                font-size: 17px;
+                color: #222;
+                font-weight: 500;
+                border: 1px solid #7c7c7c;
+            }
+
+            &s {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                margin-top: 38px;
+            }
+        }
+
+        .item {
+            > a {
+                padding-left: 4px;
+                font-size: 15px;
+                color: #222;
+                font-weight: 400;
+                &:hover {
+                    color: #289d30;
+                    text-decoration: underline;
+                }
+            }
+
+            &s {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 22px;
+            }
+        }
+    }
+}

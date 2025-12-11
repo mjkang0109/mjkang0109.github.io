@@ -29,6 +29,17 @@ $imgPath: "./../../images/koagi";
 }
 
 .system {
+    #body {
+        &.main {
+            width: min(1500px, 100%);
+            margin-top: 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                min-width: 100%;
+                padding: 15px;
+            }
+        }
+    }
+
     .mGnb .list {
         display: flex;
 

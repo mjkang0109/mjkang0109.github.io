@@ -1,0 +1,74 @@
+<div id="jsLayerPopup"
+     class="layer-wrap layer-popup<%= state === 'popup' ? ' show' : '' %>">
+    <div class="layer">
+        <div class="left">
+            <strong class="title">팝업존</strong>
+            <div id="popupSwiper"
+                 class="swiper popup-swiper"
+                 data-autoplay="5000"
+                 data-per-view="1">
+                <ul class="swiper-wrapper">
+                    <% for (let i = 0; i < 3; i++) { %>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <span class="img-wrap">
+                                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                    width: 650,
+                                    height: 420,
+                                    isSimply: true,
+                                    source: `${imgPath}/dummy-popup-rectangle.png`,
+                                    alt: '',
+                                    }); %>
+                                </span>
+                            </a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="pagination"></div>
+            <div class="buttons">
+                <button type="button"
+                        class="button-stop">
+                    <span class="sound-only">정지</span>
+                </button>
+            </div>
+        </div>
+        <div class="right">
+            <strong class="title">진행중인 프로그램</strong>
+            <ul class="items">
+                <% for (let i = 0; i < 2; i++) { %>
+                    <li class="item">
+                        <a href="#">
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: 262,
+                                height: 365,
+                                isSimply: true,
+                                source: `${imgPath}/dummy-program.png`,
+                                alt: '',
+                                }); %>
+                            </span>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="bottom">
+            <input type="checkbox"
+                   id="weekClose">
+            <label for="weekClose">
+                일주일동안 열지 않기
+            </label>
+            <input type="checkbox"
+                   id="todayClose2">
+            <label for="todayClose2">
+                오늘 하루 열지 않기
+            </label>
+            <button type="button"
+                    class="button-close"
+                    onclick="document.getElementById('jsLayerPopup').classList.remove('show')">
+                닫기
+            </button>
+        </div>
+    </div>
+</div>

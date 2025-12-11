@@ -18,18 +18,18 @@ var content = content || 'clinic';
         <% } %>
     </ul>
     <%
-    const borderNone = ['fair', 'qna'].some(a => a === content);
+    const borderNone = ['fair', 'qna', 'story'].some(a => a === content);
     %>
     <div class="text-wrap<%= borderNone ? ' border-none' : '' %>">
         <% if (content === 'clinic') { %>
             <span class="img-wrap">
-            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-            width: 960,
-            height: 1340,
-            isSimply: true,
-            source: `${imgPath}/dummy-poster-companion.png`,
-            alt: '이동형 반려식물 클리닉 안내',
-            }); %>
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 960,
+                height: 1340,
+                isSimply: true,
+                source: `${imgPath}/dummy-poster-companion.png`,
+                alt: '이동형 반려식물 클리닉 안내',
+                }); %>
             </span>
             <div class="buttons">
                 <a href="#"
@@ -106,7 +106,42 @@ var content = content || 'clinic';
                 </table>
             </div>
         <% } %>
-        <% if (content === 'qna') { %>
+        <% if (content === 'qna' || content === 'story') { %>
+            <% if (content === 'story') { %>
+                <table class="table-horizon">
+                    <colgroup>
+                        <col style="width: 20%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>요약글</th>
+                        <td>예산군농업기술센터는 지난 9월 15일부터 10월 14일까지 한 달간 관내 아파트 3개소를 대상으로 총 6회에 걸쳐 ‘찾아가는 반려식물 돌봄치유 사업’을 운영했다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>관찰대상</th>
+                        <td>예산군농업기술센터는 지난 9월 15일부터 10월 14일까지 한 달간 관내 아파트 3개소를 대상으로 총 6회에</td>
+                    </tr>
+                    <tr>
+                        <th>관찰장소</th>
+                        <td>예산군농업기술센터는 지난 9월 15일부터 10월 14일까지 한 달간 관내 아파트 3개소를 대상으로</td>
+                    </tr>
+                    <tr>
+                        <th>학명</th>
+                        <td>dsgsdgsdgsdfgsdgsdgffd</td>
+                    </tr>
+                    <tr>
+                        <th>개화시기</th>
+                        <td>2026년 3월 개화</td>
+                    </tr>
+                    <tr>
+                        <th>관련정보</th>
+                        <td>예산군농업기술센터는 지난 9월 15일부터 10월 14일까지 한 달간 관내 아파트 3개소를 대상으로</td>
+                    </tr>
+                    </tbody>
+                </table>
+            <% } %>
             <p class="desc">
                 예산군농업기술센터는 지난 9월 15일부터 10월 14일까지 한 달간 관내 아파트 3개소를 대상으로 총 6회에 걸쳐 ‘찾아가는 반려식물 돌봄치유 사업’을 운영했다.
                 <br>
@@ -125,15 +160,17 @@ var content = content || 'clinic';
                 <br>
                 “화분 관리법을 배우니 식물이 훨씬 잘 자라서 뿌듯하다”는 소감을 전했다.
             </p>
-            <span class="img-wrap">
-            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-            width: 966,
-            height: 659,
-            isSimply: true,
-            source: `${imgPath}/dummy-qna.png`,
-            alt: '이동형 반려식물 Q&A',
-            }); %>
-            </span>
+            <% if (content !== 'story') { %>
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 966,
+                    height: 659,
+                    isSimply: true,
+                    source: `${imgPath}/dummy-qna.png`,
+                    alt: '이동형 반려식물 Q&A',
+                    }); %>
+                </span>
+            <% } %>
             <div class="files">
                 <strong>첨부파일</strong>
                 <ul>

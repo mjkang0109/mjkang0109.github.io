@@ -1,5 +1,6 @@
 <%
 var buttonText = buttonText || '신청하기';
+var hasDetail = hasDetail || false;
 const head = [
     '선택',
     '이용일시',
@@ -39,12 +40,48 @@ const body = [
                                        id="inputSchedule<%= j + 1; %>"
                                        name="input-schedule">
                                 <label for="inputSchedule<%= j + 1; %>"></label>
-
                             <% } %>
-                            <%- b; %>
+                            <% if (i === 1 && hasDetail) { %>
+                                <button type="button"
+                                        class="button-underline"
+                                        onclick="JS.toggleTable(this);"><%= b; %></button>
+                            <% } %>
+                            <% if (i !== 1 || !hasDetail) { %>
+                                <%- b; %>
+                            <% } %>
                         </td>
                     <% }); %>
                 </tr>
+                <% if (hasDetail) { %>
+                    <tr class="schedule-detail">
+                        <td colspan="7">
+                            <table class="table-gray">
+                                <colgroup>
+                                    <col style="width:18%">
+                                    <col style="width:30%">
+                                    <col style="width:10%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>이용일시</th>
+                                    <th>진행기간</th>
+                                    <th>회차</th>
+                                    <th>회차명</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>2025-12-31</td>
+                                    <td>오전 10시 ~ 오전 10시 30분</td>
+                                    <td>5회</td>
+                                    <td>1강 숲을 거닐며 친해져요</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                <% } %>
             <% } %>
             </tbody>
         </table>

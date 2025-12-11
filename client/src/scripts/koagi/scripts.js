@@ -37,7 +37,6 @@ const JS = (() => {
             return;
         }
 
-
         const objThumb = {};
 
         if (thumbSwipers) {
@@ -60,8 +59,10 @@ const JS = (() => {
             const scrollbar = swiper.dataset.scrollbar;
             const change = swiper.dataset.change;
             const loop = swiper.dataset.loop;
+            const center = swiper.dataset.center;
             const autoplay = swiper.dataset.autoplay;
             const theme = swiper.dataset.theme;
+            const controller = swiper.parentElement.querySelector('.button-stop, .button-play');
             const optsSwiper = {};
 
             optsSwiper.spaceBetween = swiper.dataset.gap ?? 30;
@@ -94,14 +95,11 @@ const JS = (() => {
                 Object.assign(optsSwiper, {
                     breakpoints: {
                         1200: {
-                            spaceBetween: 25,
-                            scrollbar   : {
+                            spaceBetween: 25, scrollbar: {
                                 dragSize: 80,
                             },
-                        },
-                        0   : {
-                            spaceBetween: 12,
-                            scrollbar   : {
+                        }, 0: {
+                            spaceBetween: 12, scrollbar: {
                                 dragSize: 40,
                             },
                         },
@@ -113,12 +111,9 @@ const JS = (() => {
                 Object.assign(optsSwiper, {
                     breakpoints: {
                         1200: {
-                            spaceBetween : 30,
-                            slidesPerView: 5,
-                        },
-                        0   : {
-                            spaceBetween : 20,
-                            slidesPerView: 2,
+                            spaceBetween: 30, slidesPerView: 5,
+                        }, 0: {
+                            spaceBetween: 20, slidesPerView: 2,
                         },
                     },
                 });
@@ -126,8 +121,7 @@ const JS = (() => {
 
             if (change) {
                 Object.assign(optsSwiper, {
-                    effect    : 'fade',
-                    fadeEffect: {
+                    effect: 'fade', fadeEffect: {
                         crossFade: true,
                     },
                 });
@@ -137,15 +131,46 @@ const JS = (() => {
                 optsSwiper.loop = true;
             }
 
+            if (center) {
+                optsSwiper.centeredSlides = true;
+            }
+
             if (autoplay) {
                 optsSwiper.autoplay = {
                     speed: Number.isInteger(autoplay) ? autoplay : 5000,
                 };
             }
 
+            if (id === 'swiperLarge') {
+                Object.assign(optsSwiper, {
+                    breakpoints: {
+                        1200: {
+                            spaceBetween: 40, slidesPerView: 5,
+                        }, 0: {
+                            spaceBetween: 28, slidesPerView: 3,
+                        },
+                    },
+                });
+            }
+
+            if (id === 'swiperLives') {
+                Object.assign(optsSwiper, {
+                    breakpoints: {
+                        1200: {
+                            spaceBetween: 40,
+                        }, 0: {
+                            spaceBetween: 20,
+                        },
+                    },
+                });
+            }
+
+            if (id === 'guideSwiper') {
+                console.log(optsSwiper);
+            }
+
             objSwiper[id] = new Swiper(swiper, {
                 ...optsSwiper,
-                observer: true,
             });
 
             if (theme) {
@@ -154,6 +179,20 @@ const JS = (() => {
                 objSwiper[id].on('slideChangeTransitionEnd', () => {
                     const currentSlide = objSwiper[id].slides[objSwiper[id].activeIndex];
                     target.dataset.theme = currentSlide.dataset.theme;
+                });
+            }
+
+            if (controller) {
+                let isStop = controller.classList.contains('button-stop');
+
+                controller.addEventListener('click', () => {
+                    controller.setAttribute('class', isStop ? 'button-play' : 'button-stop');
+
+                    objSwiper[id].autoplay[isStop ? 'stop' : 'start']();
+
+                    isStop = !isStop;
+
+                    controller.querySelector('.sound-only').textContent = isStop ? '정지' : '재생';
                 });
             }
         });
@@ -308,15 +347,33 @@ const JS = (() => {
         tabList.addEventListener('keydown', kbdNavigation);
     };
 
+    const toggleTable = (thisEl) => {
+        const _this = thisEl;
+        let currentElement = _this.parentElement;
+
+        while (currentElement.tagName !== 'TR') {
+            currentElement = currentElement.parentElement;
+        }
+
+        const nextElement = currentElement.nextElementSibling;
+        const grandElement = currentElement.parentElement;
+
+        if (!nextElement) {
+            return;
+        }
+
+        grandElement.querySelector('.show')?.classList.remove('show');
+        nextElement.classList.add('show');
+
+    };
+
     const init = () => {
         bindSwiper();
         setTabs();
     };
 
     return {
-        init,
-        bindSwiper,
-        updateSwiper,
+        init, bindSwiper, updateSwiper, toggleTable,
     };
 })();
 
@@ -325,7 +382,6 @@ if (document.readyState === 'complete') {
 } else if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', JS.init);
 }
-
 
 $(document).ready(function () {
     /* show popup when load */

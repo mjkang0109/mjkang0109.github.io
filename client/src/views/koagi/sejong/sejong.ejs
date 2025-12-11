@@ -2,6 +2,8 @@
 group: sejong
 state:
     default: 메인
+    emergency: 메인-긴급팝업
+    popup: 메인-팝업존
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -9,7 +11,7 @@ state:
     <%
     currentName = '국립세종수목원';
     currentCategory = 'sejong';
-    currentNav = 'introduction';
+    currentNav = '';
     imgPath = `${process.env.IMG_PATH}/koagi`
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
@@ -24,6 +26,11 @@ state:
 
     <!-- wrap -->
     <div id="wrap">
+        <% if (state === 'emergency') { %>
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_emergency`, {
+                
+            }) %>
+        <% } %>
         <!-- header -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
         currentCategory,
@@ -46,12 +53,8 @@ state:
         currentCategory,
         }) %>
         <!-- // footer -->
-
-        <!-- navigation -->
-        <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
-        currentCategory: currentCategory
-        }) %>
-        <!-- // navigation -->
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_layers`, {
+    }) %>
     </div>
     <!-- // wrap -->
 </body>

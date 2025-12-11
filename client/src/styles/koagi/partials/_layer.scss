@@ -1,0 +1,426 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin layer {
+    .layer {
+        &-sticky {
+            position: sticky;
+            top: 0;
+            background-color: #434343;
+            z-index: 501;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
+
+            &.hide {
+                display: none;
+
+                + #header {
+                    top: -48px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        top: 0;
+                    }
+                }
+            }
+
+            + #header {
+                top: 99px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    top: 118px;
+                }
+            }
+
+            .wrap1500 {
+                display: flex;
+                justify-content: space-between;
+                width: 1500px;
+                margin: 0 auto;
+                padding: 42px 0 27px;
+                box-sizing: border-box;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex-direction: column;
+                    gap: m.m(35);
+                    width: 100%;
+                    padding: m.m(38) m.m(47) m.m(30);
+                }
+            }
+
+            .title-wrap {
+                display: flex;
+                align-items: center;
+                gap: 29px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: m.m(29);
+                }
+
+                .icon-wrap {
+                    display: block;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: m.m(68);
+                    }
+
+                    img {
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+
+                .title {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    font-size: 27px;
+                    color: #04ffde;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        gap: m.m(16);
+                        font-size: m.m(27);
+                        line-height: m.m(37);
+                    }
+                }
+
+                .sub {
+                    font-size: 20px;
+                    color: #fff;
+                    font-weight: 500;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: m.m(20);
+                        line-height: m.m(30);
+                    }
+                }
+            }
+
+            .text-wrap {
+                display: flex;
+                gap: 14px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
+
+                .title {
+                    font-size: 16px;
+                    color: #fff;
+                    font-weight: 600;
+                }
+
+                .texts {
+                    display: flex;
+                    gap: 82px;
+
+                    > li {
+                        font-size: 16px;
+                        color: #fff;
+                        font-weight: 600;
+                        line-height: 26px;
+                    }
+                }
+            }
+
+            .close-wrap {
+                display: flex;
+                align-items: center;
+                align-self: flex-end;
+                gap: 14px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: m.m(13);
+                }
+
+                input[type="checkbox"] {
+                    display: inline-block;
+                    width: 22px;
+                    height: 22px;
+                    margin: 0;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: m.m(22);
+                        height: m.m(22);
+                    }
+
+                    + label {
+                        &:before,
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                label {
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #fff;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: m.m(16);
+                    }
+                }
+
+                .button-close {
+                    padding: 6px 11px;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    margin-left: 5px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        padding: m.m(6) m.m(11);
+                        border-radius: m.m(5);
+                        margin-left: m.m(6);
+                        font-size: m.m(15);
+                    }
+                }
+            }
+        }
+
+        &-wrap {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0 0 0 / .6);
+            z-index: 11;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-wrap: wrap;
+            }
+
+            &.show {
+                display: flex;
+            }
+        }
+    }
+    .layer-popup {
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            height: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            z-index: 501;
+        }
+
+        .left,
+        .right {
+            > .title {
+                display: block;
+                margin-bottom: 30px;
+                font-family: "GMarketSans", serif;
+                font-size: 32px;
+                color: #fff;
+                font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-bottom: m.m(30);
+                    font-size: m.m(48);
+                }
+            }
+        }
+
+        .layer {
+            display: grid;
+            grid-template-columns: 566px 1fr;
+            gap: 29px 44px;
+            max-width: 1500px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: m.m(30);
+            }
+        }
+
+        .left {
+            position: relative;
+            width: 566px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: m.m(550);
+            }
+        }
+
+        .popup-swiper {
+            width: 566px;
+            overflow: hidden;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
+
+            > ul {
+                display: flex;
+            }
+
+            li {
+                flex: 0 0 auto;
+            }
+
+            a {
+                display: block;
+            }
+
+            .img-wrap {
+                display: block;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .pagination {
+            display: flex;
+            gap: 11px;
+            position: absolute;
+            top: 14px;
+            right: 33px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(12);
+                top: 12px;
+                right: 24px;
+            }
+
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                background-color: #fff;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: m.m(12);
+                    height: m.m(12);
+                }
+
+                &-active {
+                    background-color: #3cc31c;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                top: m.m(10);
+            }
+
+            button {
+                width: 20px;
+                height: 20px;
+            }
+
+            .button-stop {
+                background: url("#{$imgPath}/icon-stop-white.png") no-repeat 50% 50%;
+                background-size: 13px auto;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    background-size: m.m(13) auto;
+                }
+            }
+
+            .button-play {
+                background: url("#{$imgPath}/icon-play-white.png") no-repeat 50% 50%;
+                background-size: 12px auto;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    background-size: m.m(12) auto;
+                }
+            }
+        }
+
+        .right {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+            }
+
+            .items {
+                display: flex;
+                gap: 24px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: m.m(24);
+                }
+            }
+
+            .item {
+                flex: 0 0 262px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 m.m(262);
+                }
+            }
+
+            a {
+                display: block;
+            }
+
+            .img-wrap {
+                display: block;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 14px;
+            grid-column: 1 / 3;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(14);
+                margin-left: auto;
+            }
+
+            input[type="checkbox"] {
+                appearance: auto;
+                display: block;
+                width: 22px;
+                height: 22px;
+                margin: 0;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: m.m(22);
+                    height: m.m(22);
+                }
+
+                + label {
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 600;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: m.m(16);
+                    }
+
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+
+                    ~ input[type="checkbox"] {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .button-close {
+                padding: 6px 11px;
+                border-radius: 5px;
+                background-color: #fff;
+                margin-left: 7px;
+                font-size: 15px;
+                font-weight: 600;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding: m.m(6) m.m(11);
+                    border-radius: m.m(5);
+                    margin-left: m.m(6);
+                    font-size: m.m(15);
+                }
+            }
+        }
+    }
+}

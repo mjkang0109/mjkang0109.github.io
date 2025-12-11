@@ -8,15 +8,19 @@
         <strong class="detail-title">한여름밤의 초대 꽃마숲 가든스테이</strong>
         <p class="detail-desc">
             <strong>유의사항</strong>
-            <span>예약 신청 후, 알림톡이 오지않는다면 <strong>[마이페이지 > 나의 신청내역]</strong>에서 신청완료 여부를 확인하시길 바랍니다.</span>
+            <span>예약 신청 후, 알림톡이 오지않는다면
+                <strong>[마이페이지 > 나의 신청내역]</strong>
+                에서 신청완료 여부를 확인하시길 바랍니다.
+            </span>
         </p>
     </article>
     <article class="detail-section">
         <strong>이용일 선택</strong>
-        <div class="box green division">
+        <div class="box green division scroll">
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_calendar`, {
             }) %>
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_schedule`, {
+            hasDetail: true,
             buttonText: '선택'
             }) %>
         </div>
@@ -88,7 +92,8 @@
                     </div>
                     <p class="caution">
                         ※ 첨부파일 제한용량 : 50 MB
-                        <br>※ 허용파일 유형 : gif, jpg, png, jpeg
+                        <br>
+                        ※ 허용파일 유형 : gif, jpg, png, jpeg
                     </p>
                 </td>
             </tr>
@@ -179,7 +184,10 @@
         </div>
         <p class="detail-desc">
             <strong>안내사항</strong>
-            <span>참가비는 무료이며, 원활한 운영을 위해 <strong>참여자 유형별 인원을 반드시 체크</strong>해 주세요.</span>
+            <span>참가비는 무료이며, 원활한 운영을 위해
+                <strong>참여자 유형별 인원을 반드시 체크</strong>
+                해 주세요.
+            </span>
         </p>
     </article>
     <article class="detail-section">

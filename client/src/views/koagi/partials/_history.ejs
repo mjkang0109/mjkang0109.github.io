@@ -1,0 +1,46 @@
+<%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_historyItems`, {
+}) %>
+<%
+const currentItem = items[currentCategory];
+const logo = {
+    baekdu: [178, 78],
+    sejong: [147, 83],
+    garden: [151, 88],
+    native: [168, 76],
+};
+%>
+<section class="history">
+    <strong class="logo-wrap">
+        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+        width: logo[currentCategory][0],
+        height: logo[currentCategory][1],
+        isSimply: true,
+        source: `${imgPath}/logo-vertical-${currentCategory}.png`,
+        alt: '',
+        }); %>
+    </strong>
+    <ul class="history-items">
+        <% currentItem.map(ci => { %>
+            <li class="history-year">
+                <strong class="year">
+                    <%= ci.year ;%>
+                </strong>
+                <ul>
+                    <% ci.subItems.map(si => {
+                        const month = si.month+'';
+                        const monthString = month.length < 2 ? `0${month}` : month;
+                    %>
+                        <li class="history-month">
+                            <strong class="month"><%= monthString %></strong>
+                            <ul class="items">
+                            <% si.tinyItems.map(ti => { %>
+                                <li><%- ti %></li>
+                            <% }); %>
+                            </ul>
+                        </li>
+                    <% }); %>
+                </ul>
+            </li>
+        <% }); %>
+    </ul>
+</section>

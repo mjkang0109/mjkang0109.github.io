@@ -105,6 +105,24 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
   font-family: "SCoreDream";
   font-weight: 100;
   font-style: normal;
@@ -490,17 +508,41 @@ button {
   box-shadow: 0 0 10px 0 rgba(118, 118, 118, 0.08);
   border-radius: 20px;
 }
+.card-middle .qrcode.left-days {
+  padding: 28px 0 35.5px;
+  gap: 16px;
+}
 .card-middle .qrcode .img-wrap {
   display: block;
   position: relative;
-  justify-content: center;
-  align-items: center;
   width: 90px;
   height: 90px;
 }
 .card-middle .qrcode .img-wrap img {
   width: 100%;
   height: auto;
+}
+.card-middle .qrcode .icon-wrap {
+  display: block;
+  width: 41.5px;
+  height: 41.5px;
+}
+.card-middle .qrcode .icon-wrap img {
+  width: 100%;
+  height: auto;
+}
+.card-middle .qrcode .say-hello {
+  display: block;
+  font-size: 14px;
+  color: #242424;
+  font-weight: 700;
+  text-align: center;
+}
+.card-middle .qrcode .say-hello .days {
+  display: block;
+  margin-top: 11.5px;
+  text-align: center;
+  font-size: 30px;
 }
 .card-middle .qrcode .limit {
   display: flex;

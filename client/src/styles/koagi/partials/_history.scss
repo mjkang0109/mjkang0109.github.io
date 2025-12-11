@@ -1,0 +1,245 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin history {
+    .history {
+        position: relative;
+        padding-bottom: 233px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding-bottom: m.m(100);
+        }
+
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 239px;
+            left: 50%;
+            width: 9px;
+            height: calc(100% - 239px);
+            background-color: #389506;
+            margin-left: -4.5px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 37px;
+            height: 37px;
+            margin-left: -18.5px;
+            border-radius: 100%;
+            background-color: #389506;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        .logo-wrap {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            justify-content: center;
+            width: 230px;
+            height: 230px;
+            border: 9px solid #389506;
+            border-radius: 100%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        .history-items {
+            display: flex;
+            flex-direction: column;
+            gap: 54px;
+            margin-top: 90px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: 0;
+                gap: 0;
+            }
+        }
+
+        .year {
+            position: relative;
+            font-size: 32px;
+            color: #389506;
+            font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: 30px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 70px;
+                height: 1px;
+                background-color: #389506;
+                transform: translateY(-50%);
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                background-color: #389506;
+                transform: translateY(-50%);
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
+            }
+        }
+
+        .history-month {
+            display: flex;
+            gap: 22px;
+            margin-top: 37px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(37);
+            }
+        }
+
+        .month {
+            line-height: 26px;
+            font-size: 18px;
+            color: #299b8c;
+            font-weight: 800;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+
+        .items {
+            display: flex;
+            flex-direction: column;
+
+            > li {
+                position: relative;
+                font-size: 16px;
+                color: #4d4d4d;
+                font-weight: 500;
+                line-height: 26px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;
+                    margin-right: 7px;
+                    margin-bottom: 3px;
+                    background-color: #a7a7a7;
+                }
+            }
+        }
+
+        &-year {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            box-sizing: border-box;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                border-top: 1px solid #e5e5e5;
+                padding: m.m(54) 0;
+            }
+
+            &:nth-of-type(even) {
+                align-items: flex-end;
+                padding-right: 85px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    align-items: flex-start;
+                    padding-right: 0;
+                }
+
+                .year {
+                    &:before {
+                        right: -85px;
+                    }
+
+                    &:after {
+                        right: -26px;
+                    }
+                }
+
+                .history-month {
+                    justify-content: flex-end;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        justify-content: flex-start;
+                    }
+                }
+
+                .month {
+                    order: 1;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        order: -1;
+                    }
+                }
+
+                .items {
+                    > li {
+                        text-align: right;
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            display: flex;
+                            text-align: left;
+
+                            &:before {
+                                align-self: baseline;
+                                margin-bottom: 0;
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-of-type(odd) {
+                align-self: flex-end;
+                padding-left: 85px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    align-self: flex-start;
+                    padding-left: 0;
+                }
+
+                .year {
+                    &:before {
+                        left: -85px;
+                    }
+
+                    &:after {
+                        left: -26px;
+                    }
+                }
+
+                .items {
+                    > li {
+                        display: flex;
+
+                        &:before {
+                            align-self: baseline;
+                            margin-bottom: 0;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

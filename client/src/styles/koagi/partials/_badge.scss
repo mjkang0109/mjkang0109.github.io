@@ -100,6 +100,10 @@ $imgPath: "./../../images/koagi";
             color: #48b1a3;
             border: 1px solid #48b1a3;
             border-radius: 40px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                height: m.m(37);
+                font-size: m.m(18);
+            }
         }
     }
     .states {
@@ -116,7 +120,6 @@ $imgPath: "./../../images/koagi";
             padding: 7px 20px;
             font-size: 13px;
             font-weight: 500;
-            line-height: 23px;
             border-radius: 50px;
             border: 2px solid;
 

@@ -1,0 +1,34 @@
+---
+group: bgsv
+state:
+    default: 메인
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_sitemap`, {
+    }) %>
+    <%
+    currentCategory = 'bgsv';
+    imgPath = `${process.env.IMG_PATH}/koagi`;
+    %>
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/bgsv/partials/_head`, {
+    }) %>
+</head>
+<body>
+    <div id="skipNavigation">
+        <ul class="skip">
+            <li><a href="#gnb">메인메뉴 바로가기</a></li>
+            <li><a href="#body">본문내용 바로가기</a></li>
+        </ul>
+    </div>
+    <div id="wrap">
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/bgsv/partials/_header`, {
+        }) %>
+
+        <div id="body"></div>
+
+        <footer></footer>
+    </div>
+</body>
+</html>

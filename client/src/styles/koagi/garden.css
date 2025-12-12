@@ -123,6 +123,12 @@
   font-weight: 700;
   font-display: swap;
 }
+@font-face {
+  font-family: "JoyfulStory";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
 body,
 header,
 section,
@@ -2821,13 +2827,11 @@ body.scrolling #header {
   border-radius: 100px;
   border: 1px solid #d1d1d1;
   font-size: 18px;
-  line-height: 28px;
   font-weight: 700;
 }
 @media (max-width: 1199px) {
   .tabs a {
     font-size: 12px;
-    line-height: 17px;
     padding: 10px 22px;
   }
 }
@@ -3171,10 +3175,14 @@ input[type=radio] + label:after {
 .swiper-tabs .swiper-slide strong {
   pointer-events: none;
 }
+.swiper-tabs .swiper-slide .img-wrap {
+  width: 270px;
+  height: 220px;
+}
 .swiper-tabs .swiper-slide img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .swiper-tabs [role=tab] {
   position: relative;
@@ -3293,11 +3301,19 @@ input[type=radio] + label:after {
 .swiper-scroll .swiper-slide .img-wrap {
   display: block;
   position: relative;
+  width: 270px;
+  height: 220px;
+}
+@media (max-width: 1199px) {
+  .swiper-scroll .swiper-slide .img-wrap {
+    width: 210px;
+    height: 170px;
+  }
 }
 .swiper-scroll .swiper-slide img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .swiper-scroll [role=tab] {
   position: relative;
@@ -5400,7 +5416,7 @@ table + table {
   align-self: stretch;
   position: relative;
   width: 350px;
-  height: 575px;
+  max-height: 767px;
   padding-left: 20px;
   margin-left: -20px;
   overflow-y: auto;
@@ -5458,17 +5474,6 @@ table + table {
 }
 .detail-theme .visual {
   flex: 0 0 auto;
-}
-@media (max-width: 1199px) {
-  .detail-theme .visual {
-    flex: 0 0 auto;
-  }
-}
-@media (max-width: 1199px) {
-  .detail-theme .visual img {
-    width: 100%;
-    height: auto;
-  }
 }
 .detail-theme .panel {
   margin-top: 114px;
@@ -5532,15 +5537,23 @@ table + table {
   }
 }
 .detail-theme .visuals .visual {
+  display: flex;
   width: 100%;
 }
 .detail-theme .visuals .img-wrap {
-  display: block;
+  display: flex;
+  align-self: stretch;
+  width: 100%;
 }
 .detail-theme .visuals .img-wrap img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals .img-wrap img {
+    height: auto;
+  }
 }
 .detail-theme .visuals .button-next,
 .detail-theme .visuals .button-prev {
@@ -8520,69 +8533,35 @@ table + table {
   background: url("./../../images/koagi/icon-calendar.png") no-repeat 50% 50%;
 }
 
-@media (max-width: 1199px) {
-  .arrangement-left .gTitle1 {
-    padding-bottom: 113px;
-  }
-}
-.arrangement-left .gTitle1:before {
-  content: "";
-  position: absolute;
-  right: -5px;
-  bottom: -80px;
-  width: 1142px;
-  height: 278px;
+.arrangement-left .description-course {
+  padding-bottom: 109px;
   background: url("./../../images/koagi/visual-course.png") no-repeat 100% 0;
+  box-sizing: border-box;
 }
 @media (max-width: 1199px) {
-  .arrangement-left .gTitle1:before {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 113px;
+  .arrangement-left .description-course {
+    width: 100vw;
+    margin-left: -15px;
+    padding: 0 30px 113px;
     background: url("./../../images/koagi/visual-course-m.png") no-repeat 100% 100%;
-    background-size: auto 100%;
+    background-size: auto 113px;
   }
 }
-.arrangement-left .gTitle1 > .title {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 95px;
-  z-index: 1;
-}
-@media (max-width: 1199px) {
-  .arrangement-left .gTitle1 > .title {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    margin-top: 40px;
-  }
-}
-.arrangement-left .gTitle1 > .title h4 {
-  justify-content: flex-start;
-}
-.arrangement-left .gTitle1 > .title .desc {
-  order: 1;
-  grid-column: 1/3;
-  margin-top: 60px;
-  text-align: left;
-}
-@media (max-width: 1199px) {
-  .arrangement-left .gTitle1 > .title .desc {
-    grid-column: 1/2;
-    margin-top: 14px;
-  }
-}
-.arrangement-left .gTitle1 > .title .desc strong {
+.arrangement-left .description-course > .title {
   display: block;
   color: #000;
   font-size: 28px;
   font-weight: 700;
 }
-.arrangement-left .gTitle1 > .title .desc .color-green {
+@media (max-width: 1199px) {
+  .arrangement-left .description-course > .title {
+    font-size: 17px;
+  }
+}
+.arrangement-left .description-course .color-green {
   color: #3eaa36;
 }
-.arrangement-left .gTitle1 > .title .subDescription {
+.arrangement-left .description-course > .desc {
   display: block;
   margin-top: 30px;
   font-size: 15px;
@@ -8590,26 +8569,15 @@ table + table {
   color: #000;
   font-weight: 400;
 }
-.arrangement-left .gTitle1 .tabs {
-  justify-content: flex-end;
-  margin: 0;
-}
 @media (max-width: 1199px) {
-  .arrangement-left .gTitle1 .tabs {
-    justify-content: flex-start;
-  }
-}
-.arrangement-left .mBc1.forW {
-  grid-column: 1/3;
-}
-@media (max-width: 1199px) {
-  .arrangement-left .mBc1.forW {
-    display: none;
+  .arrangement-left .description-course > .desc {
+    margin-top: 19px;
+    font-size: 11.5px;
+    line-height: 20px;
   }
 }
 @media (max-width: 1199px) {
   .arrangement-left #body {
-    margin-top: 0;
     padding-top: 0;
   }
 }
@@ -10779,7 +10747,7 @@ table + table {
   }
 }
 .today-info .weather .icon-wrap {
-  width: 118px;
+  width: 78px;
   height: 78px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -10787,23 +10755,63 @@ table + table {
 }
 @media (max-width: 1199px) {
   .today-info .weather .icon-wrap {
-    width: 59px;
+    width: 39px;
+    width: 39px;
   }
 }
 .today-info .weather .icon-wrap.weather1 {
-  background-image: url("./../../images/koagi/weather1.png");
+  background-image: url("./../../images/koagi/icon-weather1.png");
 }
 .today-info .weather .icon-wrap.weather2 {
-  background-image: url("./../../images/koagi/weather2.png");
+  background-image: url("./../../images/koagi/icon-weather2.png");
 }
 .today-info .weather .icon-wrap.weather3 {
-  background-image: url("./../../images/koagi/weather3.png");
+  background-image: url("./../../images/koagi/icon-weather3.png");
 }
 .today-info .weather .icon-wrap.weather4 {
-  background-image: url("./../../images/koagi/weather4.png");
+  background-image: url("./../../images/koagi/icon-weather4.png");
 }
 .today-info .weather .icon-wrap.weather5 {
-  background-image: url("./../../images/koagi/weather5.png");
+  background-image: url("./../../images/koagi/icon-weather5.png");
+}
+.today-info .weather .icon-wrap.weather6 {
+  background-image: url("./../../images/koagi/icon-weather6.png");
+}
+.today-info .weather .icon-wrap.weather7 {
+  background-image: url("./../../images/koagi/icon-weather7.png");
+}
+.today-info .weather .icon-wrap.weather8 {
+  background-image: url("./../../images/koagi/icon-weather8.png");
+}
+.today-info .weather .icon-wrap.weather9 {
+  background-image: url("./../../images/koagi/icon-weather9.png");
+}
+.today-info .weather .icon-wrap.weather10 {
+  background-image: url("./../../images/koagi/icon-weather10.png");
+}
+.today-info .weather .icon-wrap.weather11 {
+  background-image: url("./../../images/koagi/icon-weather11.png");
+}
+.today-info .weather .icon-wrap.weather12 {
+  background-image: url("./../../images/koagi/icon-weather12.png");
+}
+.today-info .weather .icon-wrap.weather13 {
+  background-image: url("./../../images/koagi/icon-weather13.png");
+}
+.today-info .weather .icon-wrap.weather14 {
+  background-image: url("./../../images/koagi/icon-weather14.png");
+}
+.today-info .weather .icon-wrap.weather15 {
+  background-image: url("./../../images/koagi/icon-weather15.png");
+}
+.today-info .weather .icon-wrap.weather16 {
+  background-image: url("./../../images/koagi/icon-weather16.png");
+}
+.today-info .weather .icon-wrap.weather17 {
+  background-image: url("./../../images/koagi/icon-weather17.png");
+}
+.today-info .weather .icon-wrap.weather18 {
+  background-image: url("./../../images/koagi/icon-weather18.png");
 }
 .today-info .weather .degree {
   display: flex;

@@ -1,0 +1,174 @@
+<section class="tiger-forest">
+    <div class="visual">
+        <strong class="title">
+            백두산호랑이
+            <span class="sub">와</span>
+            호랑이숲
+        </strong>
+        <div class="left">
+            <strong class="title">
+                자연 속에 숨 쉬는 백두산호랑이의
+                <br>
+                보금자리 호랑이숲
+            </strong>
+            <p class="desc">
+                우리 땅에서 사라진 지 100년 된 멸종위기 종 백두산호랑이의 종보전과
+                <br>
+                백두산호랑이의 야생성을 지키기 위해 자연서식지와 유사한 환경을 조성하고
+                <br>
+                종 보전과 체계적 관리를 위한 지속적인 연구를 수행하고 있습니다.
+            </p>
+        </div>
+        <div class="right">
+            <strong class="title">
+                백두대간의 산군,
+                <br>
+                백두산 호랑이
+            </strong>
+            <p class="desc">
+                우리나라 선조에게 호랑이는 두려움의 대상이면서 한편으로는 경외 받는 동물이었습니다.
+                <br>
+                그래서 호랑이를 '산군' 즉, 숲의 주인이라 칭하며 숭배해왔습니다. 이렇게 우리는 먼 옛날부터 호랑이에 대한 큰 관심을 이어나가 88올림픽에서는 국민응모 1위로 호랑이가 투표되어 올림픽
+                마스코트로 선정되었고,"한반도의 모양은 호랑이가 포효하는모습이다", "국민성이 호랑이의 기상을 닮았다"라는 말이 있을 정도로 우리의 생활 곳곳에서 사랑받는 호랑이를 볼 수 있습니다.
+            </p>
+        </div>
+    </div>
+    <div class="bottom">
+        호랑이숲은
+        <strong>동절기 10:00 ~ 16:00, 하절기 10:00 ~ 17:00</strong>
+        까지 운영됩니다.
+        <br>
+        이동시간(30분)을 고려하여 호랑이숲
+        <strong>마감 1시간 전</strong>
+        까지
+        <br>
+        수목원에 방문해주시기 바랍니다.
+    </div>
+</section>
+<section class="tiger-tree">
+    <strong class="title-line">
+        <span class="sub">국립백두대간수목원의 자랑</span>
+        백두산호랑이를 말하다
+    </strong>
+    <%
+    const tigers = [
+        [
+            {
+                name  : '우리',
+                gender: 1,
+                birth : '2011년 9월 23일 생',
+                desc  : '다툼, 투쟁을 싫어하는<br>평화주의자지만 한청이에게만큼은<br>장난꾸러기',
+            },
+            {
+                name  : '미령',
+                gender: 2,
+                birth : '2021년 5월 19일 생',
+                desc  : '조심스러운 성격이지만<br>사람을 보면 금세 마음을 여는<br>다정다감한 호랑이',
+            },
+        ],
+        [
+            {
+                name  : '한',
+                gender: 1,
+                birth : '2011년 9월 23일 생',
+                desc  : '가장 뛰어난 야생 본능을 가진 호랑이<br>머리도 크고 식욕도 뛰어난<br>건강한 대식가',
+            },
+            {
+                name  : '도',
+                gender: 2,
+                birth : '2013년 10월 29일 생',
+                desc  : '조심성이 많고 소심하지만<br>가장 뛰어난 미모를 자랑하는<br>미스호랑이',
+            },
+        ],
+        [
+            {
+                name  : '태범',
+                gender: 1,
+                birth : '2020년 2월 20일 생',
+                desc  : '장난감에 진심인편<br>동생의 짖궂은 장난도<br>잘 받아주는 착한 오빠',
+            },
+            {
+                name  : '무궁',
+                gender: 2,
+                birth : '2020년 2월 20일 생',
+                desc  : '호기심이 왕성하고<br>일단 움직이는 행동파<br>수목원 대표 말괄량이 호랑이',
+            },
+        ],
+    ];
+    %>
+    <ul class="tigers">
+        <% tigers.map((t, i) => { %>
+            <li>
+                <% t.map((a, j) => { %>
+                    <div class="<%= j === 0 ? 'left' : 'right'; %>">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 240,
+                            height: 240,
+                            isSimply: true,
+                            source: `${imgPath}/tiger${i + j + 1}.png`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="name">
+                            <%= a.name; %>
+                            <span class="gender <%= a.gender === 1 ? 'male' : 'female' %>">
+                                <span class="sound-only"><%= a.gender === 1 ? '수컷' : '암컷'; %></span>
+                            </span>
+                        </strong>
+                        <span class="birth">
+                            <%= a.birth; %>
+                        </span>
+                        <p class="desc">
+                            <%- a.desc; %>
+                        </p>
+                    </div>
+                    <% if (j === 0) { %>
+                        <span class="relationship"><% if (i !== 0) { %>남매<% } %></span>
+                    <% } %>
+                <% }); %>
+            </li>
+        <% }); %>
+    </ul>
+</section>
+<section class="about-tiger">
+    <strong class="title">궁금한
+        <br>
+        호랑이
+        <br>
+        이야기
+    </strong>
+    <%
+    const about = [
+        {
+            index: '첫',
+            title: '여기의 호랑이는 무얼 먹고 살아요?',
+            desc : '닭고기와 소고기를 주로 먹고 있어요.<br>하루에 약 3~5kg정도의 고기를 섭취하는 대식가들이에요.',
+        },
+        {
+            index: '두',
+            title: '호랑이는 어떻게 구별하나요?',
+            desc : '호랑이의 줄무늬를 보면 호랑이를 구별할 수 있어요.<br>사람의 지문과 같은 역할을 한답니다.',
+        },
+        {
+            index: '세',
+            title: '호랑이들은 왜 가끔 풀을 뜯어요?',
+            desc : '입으로 털갈이를 하는 중 털이 목에 걸리거나<br>속이 안 좋을때 소화시키기 위해 풀을 먹어서 같이 토해내요.',
+        },
+        {
+            index: '네',
+            title: '호랑이똥을 사슴과 멧돼지가 겁내하나요?',
+            desc : '최상위 포식자(호랑이)에 대한 공포는<br>대를 이어 학습이 되어야 하는 부분인데,<br>호랑이를 만난 적이 없는 동물에게는 효과가 없답니다.',
+        },
+    ];
+    %>
+    <ul class="about">
+        <% about.map((a, i) => { %>
+        <li class="item<%= i + 1 %>">
+            <span class="index"><%= a.index %>번째</span>
+            <strong class="title"><%= a.title %></strong>
+            <p class="desc"><%- a.desc %></p>
+        </li>
+        <% }) %>
+    </ul>
+</section>

@@ -1,0 +1,64 @@
+<header id="gnb"
+        class="header">
+    <div class="wrap1500">
+        <a href="#"
+           class="logo">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 43,
+            height: 41,
+            isSimply: true,
+            source: `${imgPath}/icon-bgsv.png`,
+            alt: '',
+            }); %>
+            BGSV
+        </a>
+        <a href="#"
+           class="logo-koagi">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 281,
+            height: 38,
+            isSimply: true,
+            source: `${imgPath}/logo-koagi-en.png`,
+            alt: '',
+            }); %>
+        </a>
+        <button type="button"
+                class="button-category">
+            <span class="a11y">menu</span>
+        </button>
+        <ul class="categories">
+            <%
+            const current = navItems[nav[currentCategory]];
+            const items = current.items;
+            const length = items.length;
+
+            for (let index = 0; index < length; index++) {
+                const item = items[index];
+                if (item.name === 'bgsv') {
+                    continue;
+                }
+            %>
+            <li class="category">
+                <%
+                if (item.pages) {
+                %>
+                    <a href="./<%= item.pages[0].name; %>.html"><%= item.title; %></a>
+                    <ul class="sub-categories">
+                        <% item.pages.map((page, i) => { %>
+                            <li class="sub-category">
+                                <a href="./<%= page.name; %>.html">
+                                    <%= page.title; %>
+                                </a>
+                            </li>
+                        <%
+                        });
+                        %>
+                    </ul>
+                <%
+                }
+                %>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</header>

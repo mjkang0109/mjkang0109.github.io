@@ -1,0 +1,11 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+
+@mixin main {
+    body {
+        background: url("#{$imgPath}/visual-bgsv-main.jpg") no-repeat;
+    }
+}

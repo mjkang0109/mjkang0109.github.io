@@ -436,10 +436,15 @@ input[type="radio"] {
             pointer-events: none;
         }
 
+        .img-wrap {
+            width: 270px;
+            height: 220px;
+        }
+
         img {
             display: block;
             width: 100%;
-            height: auto;
+            height: 100%;
         }
     }
 
@@ -563,12 +568,18 @@ input[type="radio"] {
         .img-wrap {
             display: block;
             position: relative;
+            width: 270px;
+            height: 220px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 210px;
+                height: 170px;
+            }
         }
 
         img {
             display: block;
             width: 100%;
-            height: auto;
+            height: 100%;
         }
     }
 
@@ -1063,7 +1074,7 @@ input[type="radio"] {
         align-self: stretch;
         position: relative;
         width: 350px;
-        height: 575px;
+        max-height: 767px;
         padding-left: 20px;
         margin-left: -20px;
         overflow-y: auto;
@@ -1130,16 +1141,6 @@ input[type="radio"] {
 
     .visual {
         flex: 0 0 auto;
-        @include m.respond-to(map.get(m.$max, 1199)) {
-            flex: 0 0 auto;
-        }
-
-        img {
-            @include m.respond-to(map.get(m.$max, 1199)) {
-                width: 100%;
-                height: auto;
-            }
-        }
     }
 
     .panel {
@@ -1213,16 +1214,22 @@ input[type="radio"] {
         }
 
         .visual {
+            display: flex;
             width: 100%;
         }
 
         .img-wrap {
-            display: block;
+            display: flex;
+            align-self: stretch;
+            width: 100%;
 
             img {
                 display: block;
                 width: 100%;
-                height: auto;
+                height: 100%;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    height: auto;
+                }
             }
         }
 

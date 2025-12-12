@@ -1,7 +1,7 @@
 ---
 group: baekdu
 state:
-    default: 추천코스
+    default: 호랑이숲소개
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -10,71 +10,60 @@ state:
     currentName = '국립백두대간수목원';
     currentCategory = 'baekdu';
     currentNav = 'tour';
-    imgPath = `${process.env.IMG_PATH}/koagi`
+    imgPath = `${process.env.IMG_PATH}/koagi`;
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
-        title: currentName,
-        currentCategory: currentCategory
+    title: currentName,
+    currentCategory: currentCategory
     }); %>
 </head>
-<body class="<%= currentCategory %>">
+<body class="<%= currentCategory ;%>">
     <!-- skip navigation -->
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
     <!-- // skip navigation -->
-
     <!-- wrap -->
-    <div id="wrap" class="arrangement-left">
+    <div id="wrap">
         <!-- header -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_header`, {
-            currentCategory,
-            currentNav,
-            currentName
+        currentCategory,
+        currentNav,
+        currentName
         }) %>
         <!-- // header -->
-
         <!-- visual sub -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
-            type: 'plant',
-            currentNav: '둘러보기',
-            key: '국민이 행복한 수목원',
-            info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
+        type: 'plant',
+        currentNav: '둘러보기',
+        key: '국민이 행복한 수목원',
+        info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
         }) %>
         <!-- // visual sub -->
-
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '추천코스',
-            depths: [
-                '둘러보기',
-                '추천코스'
-            ],
+        title: '호랑이숲 소개',
+        desc: '자연 속에 숨 쉬는 백두산호랑이의 보금자리 호랑이숲을 소개합니다.',
+        depths: [
+        '둘러보기',
+        '호랑이숲 소개',
+        ],
         }) %>
-         <!-- // title -->
-
+        <!-- // title -->
         <!-- contents -->
         <div id="body">
-
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
-            items: ['추천코스1', '추천코스2', '추천코스3'],
-            }) %>
-
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_course`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tigerForest`, {
                 
             }) %>
-
         </div>
         <!-- // contents -->
-
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
-            currentCategory,
-            currentName,
+        currentName,
+        currentCategory,
         }) %>
         <!-- // footer -->
-
         <!-- navigation -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
-            currentCategory: currentCategory
+        currentCategory: currentCategory
         }) %>
         <!-- // navigation -->
     </div>

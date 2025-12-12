@@ -1,0 +1,39 @@
+@use "./partials/fonts2" as fonts2;
+@use "./partials/reset" as reset;
+@use "./partials/bgsvHeader" as header;
+@use "./partials/bgsvMain" as main;
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+#skipNavigation {
+    position: relative;
+    z-index: 1100;
+
+    .skip {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    a {
+        display: block;
+        height: 1px;
+        width: 1px;
+        margin-bottom: -1px;
+        overflow: hidden;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        white-space: nowrap;
+
+        &:focus,
+        &:active {
+            height: auto;
+            width: auto;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@include header.header;
+@include main.main;

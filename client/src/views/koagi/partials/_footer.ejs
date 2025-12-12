@@ -12,7 +12,7 @@ var currentName = currentName || '';
             <%
             const length = navItems.length;
             for (let h = 0; h < length; h++) {
-                if (navItems[h].name === currentCategory || navItems[h].name === 'system') {
+                if (navItems[h].name === currentCategory || navItems[h].name === 'system' || navItems[h].name === 'bgsv') {
                     continue;
                 }
             %>

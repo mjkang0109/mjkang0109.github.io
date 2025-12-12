@@ -37,12 +37,6 @@ const depthLength = depths.length;
         <% if (desc) { %>
             <p class="desc"><%- desc %></p>
         <% } %>
-
-        <% if (tab.length > 0) { %>
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
-            items: tab,
-            }) %>
-        <% } %>
     </div>
 
 </div>

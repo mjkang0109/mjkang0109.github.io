@@ -123,6 +123,12 @@
   font-weight: 700;
   font-display: swap;
 }
+@font-face {
+  font-family: "JoyfulStory";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
 body,
 header,
 section,
@@ -2821,13 +2827,11 @@ body.scrolling #header {
   border-radius: 100px;
   border: 1px solid #d1d1d1;
   font-size: 18px;
-  line-height: 28px;
   font-weight: 700;
 }
 @media (max-width: 1199px) {
   .tabs a {
     font-size: 12px;
-    line-height: 17px;
     padding: 10px 22px;
   }
 }
@@ -3171,10 +3175,14 @@ input[type=radio] + label:after {
 .swiper-tabs .swiper-slide strong {
   pointer-events: none;
 }
+.swiper-tabs .swiper-slide .img-wrap {
+  width: 270px;
+  height: 220px;
+}
 .swiper-tabs .swiper-slide img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .swiper-tabs [role=tab] {
   position: relative;
@@ -3293,11 +3301,19 @@ input[type=radio] + label:after {
 .swiper-scroll .swiper-slide .img-wrap {
   display: block;
   position: relative;
+  width: 270px;
+  height: 220px;
+}
+@media (max-width: 1199px) {
+  .swiper-scroll .swiper-slide .img-wrap {
+    width: 210px;
+    height: 170px;
+  }
 }
 .swiper-scroll .swiper-slide img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .swiper-scroll [role=tab] {
   position: relative;
@@ -5400,7 +5416,7 @@ table + table {
   align-self: stretch;
   position: relative;
   width: 350px;
-  height: 575px;
+  max-height: 767px;
   padding-left: 20px;
   margin-left: -20px;
   overflow-y: auto;
@@ -5458,17 +5474,6 @@ table + table {
 }
 .detail-theme .visual {
   flex: 0 0 auto;
-}
-@media (max-width: 1199px) {
-  .detail-theme .visual {
-    flex: 0 0 auto;
-  }
-}
-@media (max-width: 1199px) {
-  .detail-theme .visual img {
-    width: 100%;
-    height: auto;
-  }
 }
 .detail-theme .panel {
   margin-top: 114px;
@@ -5532,15 +5537,23 @@ table + table {
   }
 }
 .detail-theme .visuals .visual {
+  display: flex;
   width: 100%;
 }
 .detail-theme .visuals .img-wrap {
-  display: block;
+  display: flex;
+  align-self: stretch;
+  width: 100%;
 }
 .detail-theme .visuals .img-wrap img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+@media (max-width: 1199px) {
+  .detail-theme .visuals .img-wrap img {
+    height: auto;
+  }
 }
 .detail-theme .visuals .button-next,
 .detail-theme .visuals .button-prev {
@@ -8520,69 +8533,35 @@ table + table {
   background: url("./../../images/koagi/icon-calendar.png") no-repeat 50% 50%;
 }
 
-@media (max-width: 1199px) {
-  .arrangement-left .gTitle1 {
-    padding-bottom: 113px;
-  }
-}
-.arrangement-left .gTitle1:before {
-  content: "";
-  position: absolute;
-  right: -5px;
-  bottom: -80px;
-  width: 1142px;
-  height: 278px;
+.arrangement-left .description-course {
+  padding-bottom: 109px;
   background: url("./../../images/koagi/visual-course.png") no-repeat 100% 0;
+  box-sizing: border-box;
 }
 @media (max-width: 1199px) {
-  .arrangement-left .gTitle1:before {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 113px;
+  .arrangement-left .description-course {
+    width: 100vw;
+    margin-left: -15px;
+    padding: 0 30px 113px;
     background: url("./../../images/koagi/visual-course-m.png") no-repeat 100% 100%;
-    background-size: auto 100%;
+    background-size: auto 113px;
   }
 }
-.arrangement-left .gTitle1 > .title {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 95px;
-  z-index: 1;
-}
-@media (max-width: 1199px) {
-  .arrangement-left .gTitle1 > .title {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    margin-top: 40px;
-  }
-}
-.arrangement-left .gTitle1 > .title h4 {
-  justify-content: flex-start;
-}
-.arrangement-left .gTitle1 > .title .desc {
-  order: 1;
-  grid-column: 1/3;
-  margin-top: 60px;
-  text-align: left;
-}
-@media (max-width: 1199px) {
-  .arrangement-left .gTitle1 > .title .desc {
-    grid-column: 1/2;
-    margin-top: 14px;
-  }
-}
-.arrangement-left .gTitle1 > .title .desc strong {
+.arrangement-left .description-course > .title {
   display: block;
   color: #000;
   font-size: 28px;
   font-weight: 700;
 }
-.arrangement-left .gTitle1 > .title .desc .color-green {
+@media (max-width: 1199px) {
+  .arrangement-left .description-course > .title {
+    font-size: 17px;
+  }
+}
+.arrangement-left .description-course .color-green {
   color: #3eaa36;
 }
-.arrangement-left .gTitle1 > .title .subDescription {
+.arrangement-left .description-course > .desc {
   display: block;
   margin-top: 30px;
   font-size: 15px;
@@ -8590,26 +8569,15 @@ table + table {
   color: #000;
   font-weight: 400;
 }
-.arrangement-left .gTitle1 .tabs {
-  justify-content: flex-end;
-  margin: 0;
-}
 @media (max-width: 1199px) {
-  .arrangement-left .gTitle1 .tabs {
-    justify-content: flex-start;
-  }
-}
-.arrangement-left .mBc1.forW {
-  grid-column: 1/3;
-}
-@media (max-width: 1199px) {
-  .arrangement-left .mBc1.forW {
-    display: none;
+  .arrangement-left .description-course > .desc {
+    margin-top: 19px;
+    font-size: 11.5px;
+    line-height: 20px;
   }
 }
 @media (max-width: 1199px) {
   .arrangement-left #body {
-    margin-top: 0;
     padding-top: 0;
   }
 }
@@ -12963,6 +12931,359 @@ table + table {
   flex-direction: column;
   gap: 10px;
   margin-top: 22px;
+}
+
+.tiger-forest + .tiger-tree {
+  margin-top: 117px;
+}
+@media (max-width: 1199px) {
+  .tiger-forest + .tiger-tree {
+    margin-top: 58.5px;
+  }
+}
+.tiger-forest .visual {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 135px 74px 125px;
+  background: url("./../../images/koagi/bg-tiger.png") no-repeat 50% 50%;
+  background-size: 100% auto;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .tiger-forest .visual {
+    flex-direction: column;
+    padding: 67.5px 37px 62.5px;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.tiger-forest .visual > .title {
+  display: block;
+  width: 100%;
+  padding-bottom: 128px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-size: 58px;
+  font-family: "SBAggro", serif;
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 1199px) {
+  .tiger-forest .visual > .title {
+    padding-bottom: 64px;
+  }
+}
+.tiger-forest .visual > .title .sub {
+  font-size: 45px;
+}
+.tiger-forest .visual > div {
+  flex: 1;
+  padding-top: 107px;
+}
+@media (max-width: 1199px) {
+  .tiger-forest .visual > div {
+    padding-top: 53.5px;
+  }
+}
+.tiger-forest .visual > div > .title {
+  font-size: 26px;
+  color: #e9e606;
+  line-height: 42px;
+  font-weight: 600;
+}
+.tiger-forest .visual > div > .desc {
+  margin-top: 39px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 29px;
+  font-weight: 400;
+}
+@media (max-width: 1199px) {
+  .tiger-forest .visual > div > .desc {
+    margin-top: 19.5px;
+  }
+}
+.tiger-forest .bottom {
+  padding: 45px 15px 47px;
+  border-radius: 0 0 20px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  line-height: 30px;
+  font-weight: 400;
+}
+@media (max-width: 1199px) {
+  .tiger-forest .bottom {
+    padding: 22.5px 12.5px 23.5px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+.tiger-forest .bottom strong {
+  font-weight: 700;
+}
+
+.tiger-tree + .about-tiger {
+  margin-top: 70px;
+}
+@media (max-width: 1199px) {
+  .tiger-tree + .about-tiger {
+    margin-top: 35px;
+  }
+}
+.tiger-tree > .title-line .sub {
+  display: block;
+  margin-bottom: 19px;
+  font-size: 19px;
+  color: #000;
+  font-weight: 500;
+}
+.tiger-tree .tigers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px 50px;
+}
+@media (max-width: 1199px) {
+  .tiger-tree .tigers {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+.tiger-tree .tigers li {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  box-sizing: border-box;
+  padding: 74px 70px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  .tiger-tree .tigers li {
+    gap: 7.5px;
+    padding: 37px 35px;
+  }
+}
+.tiger-tree .tigers li:first-of-type {
+  justify-self: center;
+  grid-column: 1/3;
+  margin-top: 54px;
+}
+.tiger-tree .tigers .relationship {
+  align-self: flex-start;
+  flex: 0 0 56px;
+  padding: 25px 0 32px;
+  background: url("./../../images/koagi/icon-arrow-horizontal.png") no-repeat 0 100%;
+  font-family: "JoyfulStory", "SCoreDream", serif;
+  font-size: 40px;
+  white-space: nowrap;
+  color: #c81414;
+}
+.tiger-tree .tigers .relationship:empty {
+  background: transparent;
+}
+.tiger-tree .tigers .left,
+.tiger-tree .tigers .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 1199px) {
+  .tiger-tree .tigers .left,
+  .tiger-tree .tigers .right {
+    gap: 5px;
+  }
+}
+.tiger-tree .tigers .img-wrap {
+  align-self: center;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+}
+@media (max-width: 1199px) {
+  .tiger-tree .tigers .img-wrap {
+    width: 120px;
+    height: 120px;
+  }
+}
+.tiger-tree .tigers .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tiger-tree .tigers .name {
+  align-self: center;
+  position: relative;
+  margin-top: 23px;
+  font-size: 35px;
+  color: #333;
+  font-weight: 700;
+}
+.tiger-tree .tigers .gender {
+  position: absolute;
+  top: -4px;
+  left: 100%;
+  margin-left: 17px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+@media (max-width: 1199px) {
+  .tiger-tree .tigers .gender {
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    margin-left: 8.5px;
+  }
+}
+.tiger-tree .tigers .gender.male {
+  background: url("./../../images/koagi/icon-gender-male.png") no-repeat 0 0;
+}
+@media (max-width: 1199px) {
+  .tiger-tree .tigers .gender.male {
+    background-size: 100% auto;
+  }
+}
+.tiger-tree .tigers .gender.female {
+  background: url("./../../images/koagi/icon-gender-female.png") no-repeat 0 0;
+}
+@media (max-width: 1199px) {
+  .tiger-tree .tigers .gender.female {
+    background-size: 100% auto;
+  }
+}
+.tiger-tree .tigers .birth {
+  align-self: center;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+.tiger-tree .tigers .desc {
+  text-align: center;
+  font-size: 16px;
+  color: #6e6e6e;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.about-tiger {
+  position: relative;
+  background-color: #149951;
+  border-radius: 20px;
+}
+@media (max-width: 1199px) {
+  .about-tiger {
+    border-radius: 10px;
+    padding: 12.5px;
+  }
+}
+.about-tiger > .title {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  width: 270px;
+  box-sizing: border-box;
+  padding: 46px 0 54px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 58px;
+  line-height: 70px;
+  color: #149951;
+  font-family: "SBAggro", serif;
+  font-weight: 500;
+  transform: translateX(-50%);
+}
+@media (max-width: 1199px) {
+  .about-tiger > .title {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 153px auto 0;
+  }
+}
+.about-tiger > .title:before {
+  content: "";
+  position: absolute;
+  top: -153px;
+  left: 0;
+  width: 270px;
+  height: 153px;
+  background: url("./../../images/koagi/icon-tiger2.png") no-repeat 0 0;
+  background-size: 100% auto;
+}
+.about-tiger .about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 370px;
+  padding: 0 70px;
+}
+@media (max-width: 1199px) {
+  .about-tiger .about {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 12.5px;
+  }
+}
+.about-tiger .about > li {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 80px 0;
+}
+@media (max-width: 1199px) {
+  .about-tiger .about > li {
+    gap: 9px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .about-tiger .about > li:first-of-type {
+    border-top: none;
+  }
+}
+.about-tiger .about > li:nth-of-type(even) {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.about-tiger .about > li:nth-of-type(1n+3) {
+  text-align: right;
+}
+@media (max-width: 1199px) {
+  .about-tiger .about > li:nth-of-type(1n+3) {
+    text-align: left;
+  }
+}
+.about-tiger .about .index {
+  font-size: 17px;
+  color: #f6ff00;
+  font-weight: 600;
+}
+.about-tiger .about .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+.about-tiger .about .desc {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 26px;
+}
+.about-tiger .item2 {
+  order: 1;
+}
+.about-tiger .item4 {
+  order: 2;
 }
 
 @media all and (max-width: 1199px) {

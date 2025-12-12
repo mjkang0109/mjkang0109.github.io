@@ -27,11 +27,9 @@ $imgPath: "./../../images/koagi";
             border-radius: 100px;
             border: 1px solid #d1d1d1;
             font-size: 18px;
-            line-height: 28px;
             font-weight: 700;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 font-size: m.m(24);
-                line-height: m.m(34);
                 padding: m.m(20) m.m(44);
             }
         }

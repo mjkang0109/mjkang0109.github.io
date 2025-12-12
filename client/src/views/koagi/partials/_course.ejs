@@ -1,4 +1,15 @@
 <div class="detail-section">
+    <div class="description-course">
+        <strong class="title">쉬엄쉬엄
+            <span class="color-green">산책코스</span>
+        </strong>
+        <p class="desc">아시아 최대 수목원이자, 산림생물다양성 보전과 활용의 중심인
+            <br>
+            국립백두대간수목원에서 산림가치 증진을 통해 국민이 행복한
+            <br>
+            수목원을 만들어 나가겠습니다.
+        </p>
+    </div>
     <div class="map-wrap">
         <ul class="map-info">
             <li>
@@ -54,8 +65,8 @@
         <span class="img-wrap">
             <picture>
                 <source media="all and (max-width: 1199px)"
-                        srcset="<%= imgPath %>/map-m.png">
-                <img src="<%= imgPath %>/map-<%= currentCategory %>.png"
+                        srcset="<%= imgPath ;%>/map-m.png">
+                <img src="<%= imgPath ;%>/map-<%= currentCategory ;%>.png"
                      width="1450"
                      height="728"
                      alt="">
@@ -116,15 +127,15 @@
                         <div role="tab"
                              aria-controls="panel<%= i + 1; %>"
                              aria-selected="<%= i === 0; %>">
-                        <span class="img-wrap">
-                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                            width: 650,
-                            height: 488,
-                            isSimply: true,
-                            source: `${imgPath}/dummy-guide.jpg`,
-                            alt: '',
-                            }); %>
-                        </span>
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: 650,
+                                height: 488,
+                                isSimply: true,
+                                source: `${imgPath}/dummy-guide.jpg`,
+                                alt: '',
+                                }); %>
+                            </span>
                             <strong>
                                 <%= items[i]; %><%= i + 1; %>
                             </strong>

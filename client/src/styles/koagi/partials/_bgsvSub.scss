@@ -1,0 +1,225 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+
+@mixin sub {
+    .sub-visual {
+        width: 100%;
+        height: 430px;
+        background: url("#{$imgPath}/visual-bgsv-sub.jpg") no-repeat 50% 0;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            height: m.m(430);
+        }
+
+        .wrap1500 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 37px;
+            max-width: 1500px;
+            margin: 0 auto;
+            height: 100%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                justify-content: center;
+                gap: m.m(37);
+                padding-top: 61px;
+                box-sizing: border-box;
+            }
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            font-size: 41px;
+            color: #fff;
+            font-family: "Jalnan", "SCoreDream", serif;
+            text-transform: uppercase;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                font-size: m.m(41);
+            }
+
+            .color-green {
+                color: #84c90a;
+            }
+        }
+
+        .desc {
+            width: 50%;
+            padding-bottom: 90px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                padding-bottom: 0;
+                font-size: m.m(24);
+            }
+        }
+    }
+
+    .content-title {
+        display: block;
+        padding: 113px 0 77px;
+        font-size: 50px;
+        color: #000;
+        font-family: "Jalnan", "SCoreDream", serif;
+        text-align: center;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(113) 0 m.m(77);
+            font-size: m.m(60);
+        }
+
+        &2 {
+            display: block;
+            font-size: 48px;
+            color: #333;
+            font-family: "Pretendard", "SCoreDream", serif;
+            font-weight: 800;
+            text-align: center;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(50);
+            }
+
+            + .desc {
+                margin-top: 70px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(70);
+                }
+            }
+        }
+    }
+
+    .histories {
+        display: flex;
+        flex-direction: column;
+        gap: 63px;
+        max-width: 1500px;
+        margin: 0 auto 100px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: m.m(63);
+            padding: m.m(25);
+            margin-bottom: m.m(50);
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 33px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(33);
+            }
+        }
+
+        .date {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            align-self: flex-start;
+            padding: 16px 38px;
+            border-radius: 50px;
+            border: 1px solid #3da59a;
+            font-size: 20px;
+            color: #33a497;
+            font-family: "Jalnan", "SCoreDream", serif;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: m.m(16) m.m(38);
+                font-size: m.m(40);
+            }
+        }
+
+        .desc {
+            font-size: 20px;
+            line-height: 33px;
+            color: #4b4b4b;
+            font-family: Pretendard, "SCoreDream", serif;
+            font-weight: 600;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(30);
+                line-height: m.m(40);
+            }
+        }
+    }
+
+    .detail-wrap {
+        max-width: 1500px;
+        margin: 0 auto 100px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(25);
+            margin-bottom: m.m(100);
+        }
+
+        .section {
+            + .section {
+                margin-top: 128px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(128);
+                }
+            }
+        }
+
+        .desc {
+            font-size: 18px;
+            color: #4b4b4b;
+            line-height: 35px;
+            font-family: "Pretendard", "SCoreDream", serif;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(30);
+                line-height: m.m(40);
+            }
+
+            + .img-wrap {
+                margin-top: 85px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(85)
+                }
+            }
+        }
+
+        .img-wrap {
+            display: block;
+            border-radius: 20px;
+            overflow: hidden;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                border-radius: m.m(10);
+            }
+
+            + .img-wrap {
+                margin-top: 100px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(100);
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .icon-seed {
+            display: block;
+            height: 89px;
+            background: url("#{$imgPath}/icon-seed.png") no-repeat 50% 50%;
+            background-size: auto 100%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                height: m.m(89);
+            }
+
+            + .content-title2 {
+                margin-top: 39px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(39);
+                }
+            }
+        }
+    }
+}

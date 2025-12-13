@@ -3,9 +3,336 @@
 @use "./../../components/mixin" as m;
 
 $imgPath: "./../../images/koagi";
-
 @mixin main {
-    body {
-        background: url("#{$imgPath}/visual-bgsv-main.jpg") no-repeat;
+    .visual-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 1900px;
+        min-width: 1500px;
+        height: 899px;
+        overflow: hidden;
+        margin: 0 auto;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            min-width: 100%;
+            height: m.m(1148);
+        }
+
+        .items-wrap {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-left: auto;
+            width: 50%;
+            margin-top: 180px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+                margin-top: m.m(256);
+            }
+
+            > .title {
+                display: block;
+                width: 700px;
+                text-align: center;
+                font-size: 63px;
+                font-family: "Jalnan", "SCoreDream", serif;
+                color: #fff;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    font-size: m.m(50);
+                    line-height: m.m(70);
+                }
+
+                .color-green {
+                    color: #84c90a;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: block;
+                    }
+                }
+            }
+
+            > .desc {
+                width: 700px;
+                margin: 41px 0 105px;
+                text-align: center;
+                font-size: 22px;
+                color: #fff;
+                font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    margin: m.m(27) 0 m.m(65);
+                    font-size: m.m(21);
+                }
+            }
+        }
+
+        .visual-items {
+            display: flex;
+            justify-content: flex-end;
+            gap: 11px;
+            position: relative;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                justify-content: center;
+                gap: m.m(32);
+                padding-bottom: 0;
+            }
+
+            li {
+                &:first-of-type {
+                    margin-top: -50px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-top: 0;
+                    }
+                }
+
+                &:last-of-type {
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: none;
+                    }
+                }
+
+                .img-wrap {
+                    display: block;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: m.m(270);
+                        height: m.m(217);
+                    }
+
+                    img {
+                        display: block;
+                        @include m.respond-to(map.get(m.$max, 1199)) {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .link-green {
+                display: block;
+                width: 210px;
+                height: 228px;
+                box-sizing: border-box;
+                padding: 48px;
+                background: #47a700 url("#{$imgPath}/icon-arrow-right2.png") no-repeat 50% 160px;
+                text-align: center;
+                font-size: 20px;
+                font-family: "Jalnan", "SCoreDream", serif;
+                color: #fff;
+                line-height: 30px;
+            }
+        }
+    }
+    .swiper-visual {
+        overflow: hidden;
+        width: 1900px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            width: 100%;
+            height: m.m(1148);
+        }
+
+        > ul {
+            display: flex;
+        }
+
+        li {
+            flex: 0 0 100%;
+        }
+
+        .img-wrap {
+            display: block;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                position: relative;
+                width: 100%;
+                height: m.m(1148);
+            }
+
+            img {
+                display: block;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .main-information {
+        padding: 140px 0 43px;
+        background-color: #eef8ff;
+        min-width: 1500px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(110) 0 m.m(38);
+            min-width: 0;
+        }
+
+        > .title {
+            display: block;
+            margin-bottom: 91px;
+            text-align: center;
+            font-size: 44px;
+            font-family: "Jalnan", "SCoreDream", serif;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-bottom: m.m(90);
+                font-size: m.m(44);
+            }
+        }
+
+        .wrap1500 {
+            width: 1500px;
+            margin: 0 auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
+        }
+
+        .swiper-info {
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                justify-self: flex-start;
+                margin: 0 auto;
+                box-sizing: border-box;
+                max-width: 100%;
+                overflow: hidden;
+                padding: 0 m.m(68);
+            }
+
+            > ul {
+                display: flex;
+                justify-content: center;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    justify-content: flex-start;
+                }
+            }
+
+            li {
+                align-self: stretch;
+                display: flex;
+                flex-direction: column;
+                flex: 0 0 400px;
+                padding-right: 68px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 m.m(400);
+                    padding-right: 30px;
+                }
+
+                &:last-of-type {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .img-wrap {
+            display: block;
+            width: 400px;
+            height: 252px;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: m.m(400);
+                height: m.m(252);
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .desc-wrap {
+            flex: 1;
+            display: flex;
+            justify-self: stretch;
+            flex-direction: column;
+            padding: 56px 37px 46px;
+            border-radius: 0 0 20px 20px;
+            overflow: hidden;
+            background-color: #fff;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: m.m(52) m.m(40) m.m(45);
+            }
+
+            > .title {
+                font-size: 24px;
+                color: #000;
+                font-weight: 800;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: m.m(24);
+                }
+            }
+
+            > .desc {
+                margin-top: 31px;
+                font-size: 14px;
+                color: #5e5e5e;
+                line-height: 22px;
+                font-weight: 400;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(31);
+                    font-size: m.m(14);
+                    line-height: m.m(22);
+                }
+            }
+
+            .button-green {
+                align-self: center;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 23px;
+                padding: 14px 30px;
+                border-radius: 100px;
+                background-color: #47a700;
+                font-size: 16px;
+                color: #fff;
+                font-weight: 800;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding: m.m(14) m.m(30);
+                    font-size: m.m(16);
+                }
+            }
+        }
+    }
+    .main-anniversary {
+        min-width: 1500px;
+        padding-top: 128px;
+        height: 719px;
+        text-align: center;
+        box-sizing: border-box;
+        background: url("#{$imgPath}/main-visual-bottom.jpg") no-repeat 50% 100%;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            min-width: 100%;
+            padding: m.m(90) m.m(25) 0;
+            height: m.m(718);
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+
+        > .title {
+            display: block;
+            font-size: 30px;
+            font-family: "Jalnan", "SCoreDream", serif;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(34);
+            }
+        }
+
+        > .desc {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 26px;
+            font-family: "Jalnan", "SCoreDream", serif;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(20);
+                font-size: m.m(20);
+                line-height: m.m(30);
+            }
+        }
     }
 }

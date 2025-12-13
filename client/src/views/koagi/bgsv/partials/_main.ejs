@@ -1,0 +1,124 @@
+<section class="visual-wrap">
+    <div id="swiperVisual"
+         class="swiper swiper-visual"
+         data-per-view="auto"
+         data-autoplay="5000"
+         data-gap="0">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <picture class="img-wrap">
+                    <source media="all and (max-width: 1199px)"
+                            srcset="<%= imgPath ;%>/visual-bgsv-main-m.jpg">
+                    <img src="<%= imgPath ;%>/visual-bgsv-main.jpg"
+                         width="1900"
+                         height="899"
+                         alt="">
+                </picture>
+            </li>
+            <li class="swiper-slide">
+                <picture class="img-wrap">
+                    <source media="all and (max-width: 1199px)"
+                            srcset="<%= imgPath ;%>/visual-bgsv-main-m.jpg">
+                    <img src="<%= imgPath ;%>/visual-bgsv-main.jpg"
+                         width="1900"
+                         height="899"
+                         alt="">
+                </picture>
+            </li>
+        </ul>
+    </div>
+    <div class="items-wrap">
+        <strong class="title">
+            Baekdudaegan
+            <span class="color-green">Global Seed Vault</span>
+        </strong>
+        <p class="desc">BGSV : Banking Genes, Sustaining Vitality</p>
+        <ul class="visual-items">
+            <li>
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 350,
+                    height: 280,
+                    isSimply: true,
+                    source: `${imgPath}/visual-img1.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+            </li>
+            <li>
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 350,
+                    height: 280,
+                    isSimply: true,
+                    source: `${imgPath}/visual-img2.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+            </li>
+            <li>
+                <a href="#"
+                   class="link-green">
+                    GLOBAL SEED VAULT
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="main-information">
+    <strong class="title">INFORMATION</strong>
+    <div class="wrap1500">
+        <div id="infoSwiper"
+             class="swiper swiper-info"
+             data-gap="0"
+             data-per-view="auto">
+            <ul class="swiper-wrapper">
+                <%
+                const items = [
+                    {
+                        title: 'PURPOSE',
+                        desc : 'The Baekdudaegan Global Seed Vault in the Republic of Korea stores seeds of wild plants collected from around the world.',
+                    },
+                    {
+                        title: 'FOR DEPOSITORS',
+                        desc : 'The Baekdudaegan Global Seed Vault stores and manages deposited seeds free of charge.',
+                    },
+                    {
+                        title: 'NEWS',
+                        desc : 'KoAGI-Led Resolution on Wild Plant Conservation in SIDS Officially Adopted by IUCN',
+                    },
+                ];
+                %>
+                <% items.map((item, i) => { %>
+                    <li class="swiper-slide">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 400,
+                            height: 252,
+                            isSimply: true,
+                            source: `${imgPath}/main-visual${i + 1}.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <div class="desc-wrap">
+                            <strong class="title"><%= item.title; %></strong>
+                            <p class="desc"><%= item.desc; %></p>
+                            <a href="#"
+                               class="button-green">READ ME
+                            </a>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="main-anniversary">
+    <strong class="title">
+        BGSV Day : May 30
+    </strong>
+    <p class="desc">Symbolizing our mission to conserve seeds from 30% of the world’s wild plant species by 2050
+        <br>
+        with the ‘5’ from 2050 representing May, and the ‘30’ from 30% representing the 30th
+    </p>
+</section>

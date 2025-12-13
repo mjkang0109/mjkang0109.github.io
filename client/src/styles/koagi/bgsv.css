@@ -156,6 +156,103 @@ li {
   list-style: none;
 }
 
+.footer {
+  padding: 40px 0 30px;
+  width: 100%;
+  min-width: 1500px;
+  box-sizing: border-box;
+  font-family: Open Sans, sans-serif;
+  border-top: 1px solid #dbdbdb;
+}
+@media (max-width: 1199px) {
+  .footer {
+    min-width: 100%;
+  }
+}
+.footer .wrap1500 {
+  display: flex;
+  gap: 77px;
+  width: 1500px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+@media (max-width: 1199px) {
+  .footer .wrap1500 {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+}
+.footer .logo-koagi {
+  align-self: center;
+}
+@media (max-width: 1199px) {
+  .footer .logo-koagi {
+    align-self: flex-start;
+    width: 180px;
+    height: auto;
+  }
+  .footer .logo-koagi img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1199px) {
+  .footer .address-wrap {
+    order: 1;
+  }
+}
+.footer address {
+  font-style: normal;
+}
+.footer address > .title {
+  font-size: 18px;
+  line-height: 1.618;
+}
+.footer address .address {
+  font-size: 16px;
+  line-height: 1.618;
+  font-weight: 400;
+}
+.footer .copyright {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 19px;
+}
+.footer .contact-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 55px;
+}
+@media (max-width: 1199px) {
+  .footer .contact-wrap {
+    margin-left: 0;
+  }
+}
+.footer .contact-wrap > .title {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer .contact-wrap a {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.a11y {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
 #skipNavigation {
   position: relative;
   z-index: 1100;
@@ -184,11 +281,17 @@ li {
 }
 
 .header {
-  position: sticky;
-  top: 0;
+  position: absolute;
   width: 100%;
   min-width: 1500px;
   height: 121px;
+  z-index: 100;
+}
+@media (max-width: 1199px) {
+  .header {
+    min-width: 100%;
+    height: auto;
+  }
 }
 .header.expended:before {
   content: "";
@@ -211,8 +314,42 @@ li {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 1199px) {
+  .header:after {
+    top: 61px;
+  }
+}
 .header .button-category {
   display: none;
+}
+@media (max-width: 1199px) {
+  .header .button-category {
+    order: -1;
+    display: block;
+    position: absolute;
+    left: 20px;
+    width: 19px;
+    height: 17px;
+    background: url("./../../images/koagi/icon-hamberger2.png") no-repeat 50% 50%;
+    background-size: 100% auto;
+  }
+}
+.header .button-close {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .header .button-close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='40' height='40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='m31.666 10.683-2.35-2.35L20 17.65l-9.317-9.317-2.35 2.35L17.65 20l-9.317 9.317 2.35 2.35L20 22.35l9.316 9.317 2.35-2.35L22.35 20l9.316-9.317Z' fill='%23449D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h40v40H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-size: 100% auto;
+  }
 }
 .header .wrap1500 {
   display: flex;
@@ -220,6 +357,16 @@ li {
   width: 1500px;
   height: 121px;
   margin: 0 auto;
+}
+@media (max-width: 1199px) {
+  .header .wrap1500 {
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 }
 .header .logo {
   display: inline-flex;
@@ -230,10 +377,23 @@ li {
   font-family: "Noto Sans KR", serif;
   font-weight: 400;
 }
+@media (max-width: 1199px) {
+  .header .logo {
+    gap: 7.5px;
+    font-size: 13px;
+    font-family: "Jalnan", "SCoreDream", serif;
+  }
+}
 .header .logo img {
   display: block;
   width: 43px;
   height: 41px;
+}
+@media (max-width: 1199px) {
+  .header .logo img {
+    width: 21.5px;
+    height: 20.5px;
+  }
 }
 .header .logo-koagi {
   display: inline-flex;
@@ -245,14 +405,66 @@ li {
   width: 281px;
   height: 38px;
 }
-.header .categories {
+@media (max-width: 1199px) {
+  .header .logo-koagi img {
+    width: 140.5px;
+    height: 19px;
+  }
+}
+.header .category-wrap {
+  flex: 1;
+}
+@media (max-width: 1199px) {
+  .header .category-wrap {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #fff;
+    visibility: hidden;
+    transform: translateY(100px);
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .header .category-wrap.show {
+    visibility: visible;
+    align-items: center;
+    pointer-events: auto;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.categories {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 1;
   margin-left: 113px;
 }
-.header .category > a {
+@media (max-width: 1199px) {
+  .categories {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .category {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+.category > a {
   display: block;
   text-align: center;
   font-size: 18px;
@@ -261,7 +473,17 @@ li {
   font-family: "SCoreDream", serif;
   text-transform: uppercase;
 }
-.header .sub-categories {
+@media (max-width: 1199px) {
+  .category > a {
+    width: 140px;
+    color: #000;
+    text-align: left;
+    text-transform: none;
+    font-size: 22px;
+  }
+}
+
+.sub-categories {
   display: none;
   flex-direction: column;
   gap: 30px;
@@ -269,7 +491,17 @@ li {
   top: 121px;
   padding: 43px 0 48px;
 }
-.header .sub-category a {
+@media (max-width: 1199px) {
+  .sub-categories {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 0;
+    padding: 0;
+  }
+}
+
+.sub-category a {
   display: block;
   max-width: 180px;
   word-break: break-word;
@@ -280,10 +512,607 @@ li {
   line-height: 22px;
   text-transform: uppercase;
 }
-.header .sub-category a:hover {
+@media (max-width: 1199px) {
+  .sub-category a {
+    color: #000;
+    max-width: 100%;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+.sub-category a:hover {
   color: #5ad400;
 }
 
-body {
-  background: url("./../../images/koagi/visual-bgsv-main.jpg") no-repeat;
+.visual-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1900px;
+  min-width: 1500px;
+  height: 899px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media (max-width: 1199px) {
+  .visual-wrap {
+    min-width: 100%;
+    height: 574px;
+  }
+}
+.visual-wrap .items-wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+  width: 50%;
+  margin-top: 180px;
+}
+@media (max-width: 1199px) {
+  .visual-wrap .items-wrap {
+    width: 100%;
+    margin-top: 128px;
+  }
+}
+.visual-wrap .items-wrap > .title {
+  display: block;
+  width: 700px;
+  text-align: center;
+  font-size: 63px;
+  font-family: "Jalnan", "SCoreDream", serif;
+  color: #fff;
+}
+@media (max-width: 1199px) {
+  .visual-wrap .items-wrap > .title {
+    width: 100%;
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+.visual-wrap .items-wrap > .title .color-green {
+  color: #84c90a;
+}
+@media (max-width: 1199px) {
+  .visual-wrap .items-wrap > .title .color-green {
+    display: block;
+  }
+}
+.visual-wrap .items-wrap > .desc {
+  width: 700px;
+  margin: 41px 0 105px;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .visual-wrap .items-wrap > .desc {
+    width: 100%;
+    margin: 13.5px 0 32.5px;
+    font-size: 10.5px;
+  }
+}
+.visual-wrap .visual-items {
+  display: flex;
+  justify-content: flex-end;
+  gap: 11px;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .visual-wrap .visual-items {
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 0;
+  }
+}
+.visual-wrap .visual-items li:first-of-type {
+  margin-top: -50px;
+}
+@media (max-width: 1199px) {
+  .visual-wrap .visual-items li:first-of-type {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1199px) {
+  .visual-wrap .visual-items li:last-of-type {
+    display: none;
+  }
+}
+.visual-wrap .visual-items li .img-wrap {
+  display: block;
+}
+@media (max-width: 1199px) {
+  .visual-wrap .visual-items li .img-wrap {
+    width: 135px;
+    height: 108.5px;
+  }
+}
+.visual-wrap .visual-items li .img-wrap img {
+  display: block;
+}
+@media (max-width: 1199px) {
+  .visual-wrap .visual-items li .img-wrap img {
+    width: 100%;
+    height: auto;
+  }
+}
+.visual-wrap .visual-items .link-green {
+  display: block;
+  width: 210px;
+  height: 228px;
+  box-sizing: border-box;
+  padding: 48px;
+  background: #47a700 url("./../../images/koagi/icon-arrow-right2.png") no-repeat 50% 160px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Jalnan", "SCoreDream", serif;
+  color: #fff;
+  line-height: 30px;
+}
+
+.swiper-visual {
+  overflow: hidden;
+  width: 1900px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1199px) {
+  .swiper-visual {
+    width: 100%;
+    height: 574px;
+  }
+}
+.swiper-visual > ul {
+  display: flex;
+}
+.swiper-visual li {
+  flex: 0 0 100%;
+}
+.swiper-visual .img-wrap {
+  display: block;
+}
+@media (max-width: 1199px) {
+  .swiper-visual .img-wrap {
+    position: relative;
+    width: 100%;
+    height: 574px;
+  }
+}
+.swiper-visual .img-wrap img {
+  display: block;
+}
+@media (max-width: 1199px) {
+  .swiper-visual .img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.main-information {
+  padding: 140px 0 43px;
+  background-color: #eef8ff;
+  min-width: 1500px;
+}
+@media (max-width: 1199px) {
+  .main-information {
+    padding: 55px 0 19px;
+    min-width: 0;
+  }
+}
+.main-information > .title {
+  display: block;
+  margin-bottom: 91px;
+  text-align: center;
+  font-size: 44px;
+  font-family: "Jalnan", "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .main-information > .title {
+    margin-bottom: 45px;
+    font-size: 22px;
+  }
+}
+.main-information .wrap1500 {
+  width: 1500px;
+  margin: 0 auto;
+}
+@media (max-width: 1199px) {
+  .main-information .wrap1500 {
+    width: 100%;
+  }
+}
+@media (max-width: 1199px) {
+  .main-information .swiper-info {
+    justify-self: flex-start;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 34px;
+  }
+}
+.main-information .swiper-info > ul {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1199px) {
+  .main-information .swiper-info > ul {
+    justify-content: flex-start;
+  }
+}
+.main-information .swiper-info li {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 400px;
+  padding-right: 68px;
+}
+@media (max-width: 1199px) {
+  .main-information .swiper-info li {
+    flex: 0 0 200px;
+    padding-right: 30px;
+  }
+}
+.main-information .swiper-info li:last-of-type {
+  padding-right: 0;
+}
+.main-information .img-wrap {
+  display: block;
+  width: 400px;
+  height: 252px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .main-information .img-wrap {
+    width: 200px;
+    height: 126px;
+  }
+}
+.main-information .img-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main-information .desc-wrap {
+  flex: 1;
+  display: flex;
+  justify-self: stretch;
+  flex-direction: column;
+  padding: 56px 37px 46px;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+@media (max-width: 1199px) {
+  .main-information .desc-wrap {
+    padding: 26px 20px 22.5px;
+  }
+}
+.main-information .desc-wrap > .title {
+  font-size: 24px;
+  color: #000;
+  font-weight: 800;
+}
+@media (max-width: 1199px) {
+  .main-information .desc-wrap > .title {
+    font-size: 12px;
+  }
+}
+.main-information .desc-wrap > .desc {
+  margin-top: 31px;
+  font-size: 14px;
+  color: #5e5e5e;
+  line-height: 22px;
+  font-weight: 400;
+}
+@media (max-width: 1199px) {
+  .main-information .desc-wrap > .desc {
+    margin-top: 15.5px;
+    font-size: 7px;
+    line-height: 11px;
+  }
+}
+.main-information .desc-wrap .button-green {
+  align-self: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 23px;
+  padding: 14px 30px;
+  border-radius: 100px;
+  background-color: #47a700;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 800;
+}
+@media (max-width: 1199px) {
+  .main-information .desc-wrap .button-green {
+    padding: 7px 15px;
+    font-size: 8px;
+  }
+}
+
+.main-anniversary {
+  min-width: 1500px;
+  padding-top: 128px;
+  height: 719px;
+  text-align: center;
+  box-sizing: border-box;
+  background: url("./../../images/koagi/main-visual-bottom.jpg") no-repeat 50% 100%;
+}
+@media (max-width: 1199px) {
+  .main-anniversary {
+    min-width: 100%;
+    padding: 45px 12.5px 0;
+    height: 359px;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
+.main-anniversary > .title {
+  display: block;
+  font-size: 30px;
+  font-family: "Jalnan", "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .main-anniversary > .title {
+    font-size: 17px;
+  }
+}
+.main-anniversary > .desc {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Jalnan", "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .main-anniversary > .desc {
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+.sub-visual {
+  width: 100%;
+  height: 430px;
+  background: url("./../../images/koagi/visual-bgsv-sub.jpg") no-repeat 50% 0;
+}
+@media (max-width: 1199px) {
+  .sub-visual {
+    height: 215px;
+  }
+}
+.sub-visual .wrap1500 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 37px;
+  max-width: 1500px;
+  margin: 0 auto;
+  height: 100%;
+}
+@media (max-width: 1199px) {
+  .sub-visual .wrap1500 {
+    justify-content: center;
+    gap: 18.5px;
+    padding-top: 61px;
+    box-sizing: border-box;
+  }
+}
+.sub-visual .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  font-size: 41px;
+  color: #fff;
+  font-family: "Jalnan", "SCoreDream", serif;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .sub-visual .title {
+    width: 100%;
+    font-size: 20.5px;
+  }
+}
+.sub-visual .title .color-green {
+  color: #84c90a;
+}
+.sub-visual .desc {
+  width: 50%;
+  padding-bottom: 90px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .sub-visual .desc {
+    width: 100%;
+    padding-bottom: 0;
+    font-size: 12px;
+  }
+}
+
+.content-title {
+  display: block;
+  padding: 113px 0 77px;
+  font-size: 50px;
+  color: #000;
+  font-family: "Jalnan", "SCoreDream", serif;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  .content-title {
+    padding: 56.5px 0 38.5px;
+    font-size: 30px;
+  }
+}
+.content-title2 {
+  display: block;
+  font-size: 48px;
+  color: #333;
+  font-family: "Pretendard", "SCoreDream", serif;
+  font-weight: 800;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  .content-title2 {
+    font-size: 25px;
+  }
+}
+.content-title2 + .desc {
+  margin-top: 70px;
+}
+@media (max-width: 1199px) {
+  .content-title2 + .desc {
+    margin-top: 35px;
+  }
+}
+
+.histories {
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+  max-width: 1500px;
+  margin: 0 auto 100px;
+}
+@media (max-width: 1199px) {
+  .histories {
+    gap: 31.5px;
+    padding: 12.5px;
+    margin-bottom: 25px;
+  }
+}
+.histories li {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+@media (max-width: 1199px) {
+  .histories li {
+    gap: 16.5px;
+  }
+}
+.histories .date {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 16px 38px;
+  border-radius: 50px;
+  border: 1px solid #3da59a;
+  font-size: 20px;
+  color: #33a497;
+  font-family: "Jalnan", "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .histories .date {
+    padding: 8px 19px;
+    font-size: 20px;
+  }
+}
+.histories .desc {
+  font-size: 20px;
+  line-height: 33px;
+  color: #4b4b4b;
+  font-family: Pretendard, "SCoreDream", serif;
+  font-weight: 600;
+}
+@media (max-width: 1199px) {
+  .histories .desc {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.detail-wrap {
+  max-width: 1500px;
+  margin: 0 auto 100px;
+}
+@media (max-width: 1199px) {
+  .detail-wrap {
+    padding: 12.5px;
+    margin-bottom: 50px;
+  }
+}
+.detail-wrap .section + .section {
+  margin-top: 128px;
+}
+@media (max-width: 1199px) {
+  .detail-wrap .section + .section {
+    margin-top: 64px;
+  }
+}
+.detail-wrap .desc {
+  font-size: 18px;
+  color: #4b4b4b;
+  line-height: 35px;
+  font-family: "Pretendard", "SCoreDream", serif;
+}
+@media (max-width: 1199px) {
+  .detail-wrap .desc {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.detail-wrap .desc + .img-wrap {
+  margin-top: 85px;
+}
+@media (max-width: 1199px) {
+  .detail-wrap .desc + .img-wrap {
+    margin-top: 42.5px;
+  }
+}
+.detail-wrap .img-wrap {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .detail-wrap .img-wrap {
+    border-radius: 5px;
+  }
+}
+.detail-wrap .img-wrap + .img-wrap {
+  margin-top: 100px;
+}
+@media (max-width: 1199px) {
+  .detail-wrap .img-wrap + .img-wrap {
+    margin-top: 50px;
+  }
+}
+.detail-wrap .img-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.detail-wrap .icon-seed {
+  display: block;
+  height: 89px;
+  background: url("./../../images/koagi/icon-seed.png") no-repeat 50% 50%;
+  background-size: auto 100%;
+}
+@media (max-width: 1199px) {
+  .detail-wrap .icon-seed {
+    height: 44.5px;
+  }
+}
+.detail-wrap .icon-seed + .content-title2 {
+  margin-top: 39px;
+}
+@media (max-width: 1199px) {
+  .detail-wrap .icon-seed + .content-title2 {
+    margin-top: 19.5px;
+  }
 }

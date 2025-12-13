@@ -3,6 +3,7 @@ group: system
 state:
     default: 팝업-온라인입장권
     leftDays: 팝업-온라인입장권-디데이
+    expired: 팝업-온라인입장권-만료
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -40,37 +41,42 @@ state:
         <span class="date">
             2025-12-12
         </span>
-        <div class="qrcode<%= state === 'leftDays' ? ' left-days' : '' %>">
+        <div class="qrcode<%= state === 'leftDays' ? ' left-days' : state === 'expired' ? ' expired' : '' %>">
             <% if (state === 'leftDays') { %>
                 <span class="icon-wrap">
-                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                width: 83,
-                height: 83,
-                isSimply: true,
-                source: `${imgPath}/icon-smile.png`,
-                alt: '',
-                }); %>
-            </span>
-            <strong class="say-hello">
-                우리 만나요!
-                <span class="days">
-                    D-365
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 83,
+                    height: 83,
+                    isSimply: true,
+                    source: `${imgPath}/icon-smile.png`,
+                    alt: '',
+                    }); %>
                 </span>
-            </strong>
+                <strong class="say-hello">
+                    우리 만나요!
+                    <span class="days">
+                        D-365
+                    </span>
+                </strong>
             <% } %>
             <% if (state !== 'leftDays') { %>
-            <span class="img-wrap">
-                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                width: 182,
-                height: 168,
-                isSimply: true,
-                source: `${imgPath}/dummy-qr.png`,
-                alt: '',
-                }); %>
-            </span>
-            <strong class="limit">유효시간
-                <span class="color-red">24초</span>
-            </strong>
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 182,
+                    height: 168,
+                    isSimply: true,
+                    source: `${imgPath}/dummy-qr.png`,
+                    alt: '',
+                    }); %>
+                </span>
+                <strong class="limit">유효시간
+                    <span class="color-red">24초</span>
+                </strong>
+                <% if (state === 'expired') { %>
+                    <strong class="expired-cover">
+                        QR코드가 만료되었습니다.
+                    </strong>
+                <% } %>
             <% } %>
         </div>
         <button type="button"
@@ -79,7 +85,10 @@ state:
         <ul class="pax">
             <li class="total">
                 <strong class="type">개인</strong>
-                <span class="count">총 <span class="color-red">5</span>인</span>
+                <span class="count">총
+                    <span class="color-red">5</span>
+                    인
+                </span>
             </li>
             <%
             const count = [
@@ -100,14 +109,16 @@ state:
             ]
             %>
             <% count.map(c => { %>
-            <li>
-                <strong class="type"><%= c.type %></strong>
-                <span class="count"><%= c.count %></span>
-            </li>
+                <li>
+                    <strong class="type"><%= c.type %></strong>
+                    <span class="count"><%= c.count %></span>
+                </li>
             <% }) %>
             <li>
                 <strong class="type">
-                    총<span class="color-red">12</span>개
+                    총
+                    <span class="color-red">12</span>
+                    개
                 </strong>
                 <span class="count">
                     <span class="color-red">8,600</span>
@@ -124,7 +135,7 @@ state:
             ].map(c => {
             %>
                 <li><%= c %></li>
-            <% });%>
+            <% }); %>
         </ul>
         <strong class="title center">입장방법</strong>
         <div class="division-box">
@@ -139,7 +150,9 @@ state:
                     }); %>
                 </span>
                 <p class="desc">마이 > 예약내역 >
-                    <br>모바일 입장권 보기</p>
+                    <br>
+                    모바일 입장권 보기
+                </p>
             </div>
             <div class="right">
                 <span class="icon-wrap">
@@ -153,11 +166,14 @@ state:
                 </span>
                 <p class="desc">
                     입장권 QR / 바코드
-                    <br>찍고 입장
+                    <br>
+                    찍고 입장
                 </p>
             </div>
         </div>
-        <button type="button" class="button-gradient">입장권 환불</button>
+        <button type="button"
+                class="button-gradient">입장권 환불
+        </button>
     </main>
 </body>
 </html>

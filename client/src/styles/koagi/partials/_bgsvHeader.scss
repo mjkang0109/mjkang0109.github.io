@@ -5,11 +5,15 @@
 $imgPath: "./../../images/koagi";
 @mixin header {
     .header {
-        position: sticky;
-        top: 0;
+        position: absolute;
         width: 100%;
         min-width: 1500px;
         height: 121px;
+        z-index: 100;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            min-width: 100%;
+            height: auto;
+        }
 
         &.expended {
             &:before {
@@ -35,10 +39,39 @@ $imgPath: "./../../images/koagi";
             width: 100%;
             height: 1px;
             background-color: rgb(255 255 255 / .2);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                top: 61px;
+            }
         }
 
         .button-category {
             display: none;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                order: -1;
+                display: block;
+                position: absolute;
+                left: m.m(40);
+                width: m.m(38);
+                height: m.m(34);
+                background: url("#{$imgPath}/icon-hamberger2.png") no-repeat 50% 50%;
+                background-size: 100% auto;
+            }
+        }
+
+        .button-close {
+            display: none;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: block;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 40px;
+                height: 40px;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='40' height='40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='m31.666 10.683-2.35-2.35L20 17.65l-9.317-9.317-2.35 2.35L17.65 20l-9.317 9.317 2.35 2.35L20 22.35l9.316 9.317 2.35-2.35L22.35 20l9.316-9.317Z' fill='%23449D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h40v40H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                background-size: 100% auto;
+            }
         }
 
         .wrap1500 {
@@ -47,6 +80,14 @@ $imgPath: "./../../images/koagi";
             width: 1500px;
             height: 121px;
             margin: 0 auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                justify-content: center;
+                gap: m.m(28);
+                width: 100%;
+                height: auto;
+                padding: m.m(40);
+                box-sizing: border-box;
+            }
         }
 
         .logo {
@@ -57,11 +98,20 @@ $imgPath: "./../../images/koagi";
             color: #fff;
             font-family: "Noto Sans KR", serif;
             font-weight: 400;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(15);
+                font-size: m.m(26);
+                font-family: "Jalnan", "SCoreDream", serif;
+            }
 
             img {
                 display: block;
                 width: 43px;
                 height: 41px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: m.m(43);
+                    height: m.m(41);
+                }
             }
         }
 
@@ -74,54 +124,204 @@ $imgPath: "./../../images/koagi";
                 display: block;
                 width: 281px;
                 height: 38px;
-            }
-        }
-
-        .categories {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex: 1;
-            margin-left: 113px;
-        }
-
-        .category {
-            > a {
-                display: block;
-                text-align: center;
-                font-size: 18px;
-                color: #fff;
-                font-weight: 800;
-                font-family: "SCoreDream", serif;
-                text-transform: uppercase;
-            }
-        }
-
-        .sub-categories {
-            display: none;
-            flex-direction: column;
-            gap: 30px;
-            position: absolute;
-            top: 121px;
-            padding: 43px 0 48px;
-        }
-
-        .sub-category {
-            a {
-                display: block;
-                max-width: 180px;
-                word-break: break-word;
-                font-size: 14px;
-                font-family: "SCoreDream", serif;
-                font-weight: 700;
-                color: #fff;
-                line-height: 22px;
-                text-transform: uppercase;
-
-                &:hover {
-                    color: #5ad400;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: m.m(281);
+                    height: m.m(38);
                 }
             }
+        }
+
+        .category-wrap {
+            flex: 1;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: flex;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                box-sizing: border-box;
+                padding: 20px;
+                background-color: #fff;
+                visibility: hidden;
+                transform: translateY(100px);
+                pointer-events: none;
+                opacity: 0;
+                transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+                &.show {
+                    visibility: visible;
+                    align-items: center;
+                    pointer-events: auto;
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .categories {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        margin-left: 113px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            align-items: flex-start;
+            flex-direction: column;
+            margin-left: 0;
+        }
+    }
+    .category {
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            display: flex;
+            gap: 24px;
+            width: 100%;
+            padding: 30px 0;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        > a {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 800;
+            font-family: "SCoreDream", serif;
+            text-transform: uppercase;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 140px;
+                color: #000;
+                text-align: left;
+                text-transform: none;
+                font-size: 22px;
+            }
+        }
+    }
+    .sub-categories {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 121px;
+        padding: 43px 0 48px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            display: flex;
+            gap: 10px;
+            position: relative;
+            top: 0;
+            padding: 0;
+        }
+    }
+    .sub-category {
+        a {
+            display: block;
+            max-width: 180px;
+            word-break: break-word;
+            font-size: 14px;
+            font-family: "SCoreDream", serif;
+            font-weight: 700;
+            color: #fff;
+            line-height: 22px;
+            text-transform: uppercase;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                color: #000;
+                max-width: 100%;
+                text-transform: none;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            &:hover {
+                color: #5ad400;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 40px 0 30px;
+    width: 100%;
+    min-width: 1500px;
+    box-sizing: border-box;
+    font-family: Open Sans, sans-serif;
+    border-top: 1px solid #dbdbdb;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        min-width: 100%;
+    }
+
+    .wrap1500 {
+        display: flex;
+        gap: 77px;
+        width: 1500px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+        }
+    }
+
+    .logo-koagi {
+        align-self: center;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            align-self: flex-start;
+            width: 180px;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .address-wrap {
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            order: 1;
+        }
+    }
+
+    address {
+        font-style: normal;
+
+        > .title {
+            font-size: 18px;
+            line-height: 1.618;
+        }
+
+        .address {
+            font-size: 16px;
+            line-height: 1.618;
+            font-weight: 400;
+        }
+    }
+
+    .copyright {
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .contact-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 55px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            margin-left: 0;
+        }
+
+        > .title {
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        a {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
         }
     }
 }

@@ -1,5 +1,6 @@
 const JS = (() => {
-    const throttling = (callback = () => {}, timing = 100) => {
+    const throttling = (callback = () => {
+    }, timing = 100) => {
         let timer;
 
         return (...args) => {
@@ -64,10 +65,11 @@ const JS = (() => {
 
         const categories = $$('.header .category');
         const subCategories = $$('.header .sub-categories');
+        header.removeAttribute('style');
         const headerHeight = header.clientHeight;
+        const isSmall = window.innerWidth < 1200;
 
-        if (window.innerWidth < 1200) {
-            console.log('small');
+        if (isSmall) {
             header.classList.remove('expended');
             return header.style.height = `${headerHeight}px`;
         }
@@ -100,6 +102,18 @@ const JS = (() => {
         });
     };
 
+    const toggleCategory = () => {
+        const category = $('#jsCategory');
+
+        if (!category) {
+            return;
+        }
+
+        const isVisible = category.classList.contains('show');
+
+        category.classList[isVisible ? 'remove' : 'add']('show');
+    };
+
     const bindSwiper = () => {
         const swipers = $$('.swiper');
 
@@ -112,6 +126,7 @@ const JS = (() => {
         swipers.forEach((swiper, i) => {
             const id = swiper.getAttribute('id');
             const optsSwiper = {};
+            const autoplay = swiper.dataset.autoplay;
 
             optsSwiper.spaceBetween = swiper.dataset.gap ?? 30;
             optsSwiper.slidesPerView = swiper.dataset.perView ?? 1;
@@ -120,6 +135,12 @@ const JS = (() => {
                 el       : swiper.parentElement.querySelector('.pagination'),
                 clickable: true,
             };
+
+            if (autoplay) {
+                optsSwiper.autoplay = {
+                    speed: Number.isInteger(autoplay) ? autoplay : 5000,
+                };
+            }
 
             objSwiper[id] = new Swiper(swiper, {
                 ...optsSwiper,
@@ -138,6 +159,7 @@ const JS = (() => {
 
     return {
         init,
+        toggleCategory,
     };
 })();
 

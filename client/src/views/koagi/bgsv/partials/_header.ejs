@@ -23,42 +23,48 @@
             }); %>
         </a>
         <button type="button"
-                class="button-category">
+                class="button-category"
+                onclick="JS.toggleCategory()">
             <span class="a11y">menu</span>
         </button>
-        <ul class="categories">
-            <%
-            const current = navItems[nav[currentCategory]];
-            const items = current.items;
-            const length = items.length;
+        <div id="jsCategory" class="category-wrap">
+            <button type="button" class="button-close" onclick="JS.toggleCategory()">
+                <span class="a11y">닫기</span>
+            </button>
+            <ul class="categories">
+                <%
+                const current = navItems[nav[currentCategory]];
+                const items = current.items;
+                const length = items.length;
 
-            for (let index = 0; index < length; index++) {
-                const item = items[index];
-                if (item.name === 'bgsv') {
-                    continue;
-                }
-            %>
-            <li class="category">
-                <%
-                if (item.pages) {
+                for (let index = 0; index < length; index++) {
+                    const item = items[index];
+                    if (item.name === 'bgsv') {
+                        continue;
+                    }
                 %>
-                    <a href="./<%= item.pages[0].name; %>.html"><%= item.title; %></a>
-                    <ul class="sub-categories">
-                        <% item.pages.map((page, i) => { %>
-                            <li class="sub-category">
-                                <a href="./<%= page.name; %>.html">
-                                    <%= page.title; %>
-                                </a>
-                            </li>
-                        <%
-                        });
-                        %>
-                    </ul>
-                <%
-                }
-                %>
-            </li>
-            <% } %>
-        </ul>
+                <li class="category">
+                    <%
+                    if (item.pages) {
+                    %>
+                        <a href="./<%= item.pages[0].name; %>.html"><%= item.title; %></a>
+                        <ul class="sub-categories">
+                            <% item.pages.map((page, i) => { %>
+                                <li class="sub-category">
+                                    <a href="./<%= page.name; %>.html">
+                                        <%= page.title; %>
+                                    </a>
+                                </li>
+                            <%
+                            });
+                            %>
+                        </ul>
+                    <%
+                    }
+                    %>
+                </li>
+                <% } %>
+            </ul>
+        </div>
     </div>
 </header>

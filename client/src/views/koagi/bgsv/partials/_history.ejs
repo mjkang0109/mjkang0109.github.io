@@ -1,0 +1,61 @@
+<%
+const items = [
+    {
+        title: 'May 2018',
+        desc : 'The Korea Arboreta and Gardens Institute (KoAGI) established the Baekdudaegan Global Seed Vault (BGSV).',
+    },
+    {
+        title: 'June 2019',
+        desc : 'BGSV signed the Memorandum of Understanding (MoU) with the Nordic Genetic Resource Center (NordGen) and the Memorandum of Agreement (MoA) with the Svalbard Global Seed Vault (SGSV).',
+    },
+    {
+        title: 'September 2019',
+        desc: 'BGSV signed the MoU with the National Botanical Garden of Georgia.',
+    },
+    {
+        title: 'May 2020',
+        desc : 'BGSV signed the MoU with the National Institute of Agricultural Sciences (NAS), Republic of Korea.',
+    },
+    {
+        title: 'October 2020',
+        desc: 'BGSV signed the MoU with the Asian Forest Cooperation Organization (AFoCO).',
+    },
+    {
+        title: 'May 2021',
+        desc : 'BGSV was selected as one of the ‘Success Stories’ in ‘The Global Forest Goals Report 2021’ published by the United Nations.',
+    },
+    {
+        title: 'February 2023',
+        desc : 'BGSV was designated as a Competent National Authority of the Republic of Korea.<br><br>* Competent National Authority (CNA) : Under the Article 13 of the Nagoya Protocol, each Party shall designate one or more Competent National Authorities (CNAs). CNAs are responsible for exercising the administrative functions required by the Protocol.',
+    },
+    {
+        title: 'May 2023',
+        desc: 'BGSV signed the MoU with Vietnamese Academy of Forest Sciences (VAFS).',
+    },
+    {
+        title: 'January 2024',
+        desc: 'BGSV signed the MoU with Kunming Institute of Botany (KIB), Chinese Academy of Sciences.',
+    },
+];
+%>
+<ol class="histories">
+    <% items.map(item => { %>
+    <li>
+        <strong class="date"><%= item.title %></strong>
+        <p class="desc"><%- item.desc %></p>
+    </li>
+    <% }) %>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+

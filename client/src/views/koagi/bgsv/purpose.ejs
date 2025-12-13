@@ -1,7 +1,7 @@
 ---
 group: bgsv
 state:
-    default: 메인
+    default: purpose
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -25,11 +25,17 @@ state:
     <div id="wrap">
         <%- include(`${process.env.INCLUDE_PATH}/koagi/bgsv/partials/_header`, {
         }) %>
+        <%- include(`${process.env.INCLUDE_PATH}/koagi/bgsv/partials/_visual`, {
+            
+        }) %>
 
         <div id="body">
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/bgsv/partials/_main`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/bgsv/partials/_title`, {
+                title: 'Purpose',
             }) %>
-
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/bgsv/partials/_purpose`, {
+                
+            }) %>
         </div>
 
         <%- include(`${process.env.INCLUDE_PATH}/koagi/bgsv/partials/_footer`, {

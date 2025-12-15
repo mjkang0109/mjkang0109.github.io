@@ -20,12 +20,28 @@ $imgPath: "./../../images/koagi";
         }
 
         h1 {
-            flex: 0 0 295px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 flex: 0 0 auto;
             }
         }
+
+        .util {
+            display: none;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: block;
+            }
+        }
     }
+
+    .mGnb {
+        flex: 1;
+
+        .list {
+            justify-content: space-between;
+        }
+    }
+
+
 }
 
 .system {

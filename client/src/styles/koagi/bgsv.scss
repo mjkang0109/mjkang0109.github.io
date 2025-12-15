@@ -1,10 +1,14 @@
+@use "sass:map";
+
 @use "./partials/fonts2" as fonts2;
 @use "./partials/reset" as reset;
+@use "./../components/mixin" as m;
 @use "./partials/bgsvHeader" as header;
 @use "./partials/bgsvMain" as main;
 @use "./partials/bgsvSub" as sub;
 @import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
 
+$imgPath: "./../../images/koagi";
 .a11y {
     position: absolute !important;
     width: 1px !important;
@@ -43,6 +47,23 @@
             width: auto;
             padding: 5px;
             margin-bottom: 10px;
+        }
+    }
+}
+
+#body {
+    &.main {
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 899px;
+            background-color: #110d0c;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
         }
     }
 }

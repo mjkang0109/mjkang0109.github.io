@@ -1,0 +1,539 @@
+<% if (state === 'default') { %>
+    <section class="detail-content">
+        <div class="goal-wrap add-dot">
+            <strong class="title">목표</strong>
+            <p class="desc">
+                <strong class="title">
+                    백두대간 생물종 정보 구축
+                </strong>
+                백두대간 산림생물종의 종합 정보 구축
+            </p>
+        </div>
+        <div class="box-tree2 add-arrow">
+            <ul>
+                <li>&middot; 현장 조사를 통한 백두대간 보호지역 일대 생물상 분포 현황 파악</li>
+                <li>&middot; 확보된 증거표본에 기반한 백두대간 생물종 목록 구축</li>
+                <li>&middot; 백두대간 보호지역 일대 식생 구조 및 기능 분석을 통한 생물종 정보 체계화</li>
+            </ul>
+        </div>
+        <ul class="tree-wrap">
+            <li class="tree-parent">
+                <strong class="title">백두대간 산림생물자원의 실증적 생물종 정보 구축</strong>
+            </li>
+        </ul>
+        <div class="images-wrap">
+            <ul>
+                <%
+                    const items4 = [
+                        {
+                            width : 500,
+                            height: 340,
+                        },
+                        {
+                            width : 680,
+                            height: 340,
+                        },
+                        {
+                            width : 680,
+                            height: 340,
+                        },
+                        {
+                            width : 500,
+                            height: 340,
+                        },
+                    ];
+                %>
+                <% for (let i = 0; i < 4; i++) { %>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: items4[i].width,
+                            height: items4[i].height,
+                            isSimply: true,
+                            source: `${imgPath}/business1-${i + 1}.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="buttons">
+            <a href="#"
+               class="button-navy">리스트 보기
+            </a>
+        </div>
+    </section>
+<% } %>
+<% if (state === 'business2') { %>
+    <section class="detail-content">
+        <div class="division add-arrow">
+            <div class="left">
+                <div class="goal-wrap add-dot">
+                    <strong class="title">목표</strong>
+                    <p class="desc">
+                        <strong class="title">
+                            아고산 중점보전종 보전 방안 연구
+                        </strong>
+                        백두대간 아고산 식물의 보전 관리 방안 마련
+                    </p>
+                </div>
+                <div class="box-tree2">
+                    <ul>
+                        <li>&middot; 백두대간 중점 보전 대상종 평가를 통한 보전 우선 순위 파악</li>
+                        <li>&middot; 중점 보전 대상종의 생물학적 생태학적 위협 요인 분석</li>
+                        <li>&middot; 아고산 중점 보전종의 맞춤형 보전 방안 마련</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="goal-wrap add-dot">
+                    <strong class="title">목표</strong>
+                    <p class="desc">
+                        <strong class="title">
+                            기후변화 대응 산림생태계 영향 평가
+                        </strong>
+                        신기후체제에 대비한 산림생태계 영향 평가
+                    </p>
+                </div>
+                <div class="box-tree2">
+                    <ul>
+                        <li>&middot; 특이서식지 산림생태계 생태데이터베이스 축적</li>
+                        <li>&middot; 신기후체제에 급격히 쇠퇴하고 있는 침엽수종의 종합적 상관관계 분석 연구</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="tree-wrap">
+            <li class="tree-parent">
+                <strong class="title">백두대간 산림생물자원의 맞춤형 보전 관리 체계 마련</strong>
+            </li>
+        </ul>
+        <div class="images-wrap">
+            <ul>
+                <% for (let i = 0; i < 5; i++) { %>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: i === 1 || i === 2 ? 640 : i === 4 ? 1200 : 500,
+                            height: i === 4 ? 576 : 340,
+                            isSimply: true,
+                            source: `${imgPath}/business2-${i + 1}.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="buttons">
+            <a href="#"
+               class="button-navy">리스트 보기
+            </a>
+        </div>
+    </section>
+<% } %>
+<% if (state === 'business3') { %>
+    <section class="detail-content">
+        <div class="goal-wrap add-dot">
+            <strong class="title">목표</strong>
+            <p class="desc">
+                백두대간산림복원지원실은 훼손된 산림을 생태적으로 복원하기 위하여 백두대간을 중심으로 훼손지 조사 · 분석 및 정보를 구축하고
+                <br>
+                산림복원 관련 정책 개발, 기술의 표준화와 연구개발 및 지원을 통하여 산림생태계의 연속성과 건강성 확보에 기여하고자 합니다.
+            </p>
+        </div>
+        <div class="box-tree2">
+            <div class="text-wrap">
+                <strong class="title">백두대간산림복원지원실</strong>
+                <p class="desc">산림생태계 복원 연구에 대한 전문 인력을 갖추고 있으며, 「산림자원의 조성 및 관리에 관한 법률」에 따라
+                    <br>
+                    산림복원지원센터와 산림복원지 사후 모니터링기관으로 지정되어 역할을 수행하고 있습니다.
+                </p>
+            </div>
+        </div>
+        <ul class="tree-wrap tree3 add-arrow">
+            <%
+                const items = [
+                    {
+                        title   : '산림복원지원센터 업무',
+                        subItems: [
+                            '산림복원 정책의 개발·지원',
+                            '백두대간보호구역 훼손지 조사·분석·관리 및 정보 구축·운영',
+                            '산림복원 관련 기술의 표준화, 매뉴얼 개발 등<br>연구개발 및 지원 등',
+                        ],
+                    },
+                    {
+                        title   : '산림복원소재공급센터 업무',
+                        subItems: [
+                            '산림복원 대상지별·목적별 자생식물 종자 확보',
+                            '산림복원용 자생식물 공급을 위한 대량생산체계 구축·운영',
+                            '자생식물 증식·재배 기술 개발 및 지역협의체 자문·교육',
+                        ],
+                    },
+                    {
+                        title   : '산림복원지 사후모니터링 기관 업무',
+                        subItems: [
+                            '산림복원 대상지별·목적별 자생식물 종자 확보',
+                            '산림복원용 자생식물 공급을 위한 대량생산체계 구축·운영',
+                            '자생식물 증식·재배 기술 개발 및 지역협의체 자문·교육',
+                        ],
+                    },
+                ];
+            %>
+            <% items.map(item => { %>
+                <li class="grid-child cyan-box">
+                    <strong class="title">
+                        <%= item.title; %>
+                    </strong>
+
+                    <% if (item.subItems) { %>
+                        <ul class="items">
+                            <% item.subItems.map(sub => { %>
+                                <li>&middot; <%- sub %></li>
+                            <% }); %>
+                        </ul>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ul>
+        <div class="box-darkgreen center">
+            <strong class="title">목표</strong>
+            <ul class="items">
+                <%
+                    const items3 = [
+                        '산림복원 정책·연구',
+                        '연구와 현장을 연계할 수 있는 산림복원 분야의 허브 역할 수행',
+                        '산림복원의 전략 개발·수행을 통한 산림생태계의<br>건강성 회복 및 산림생물다양성 증진',
+                    ]
+                %>
+                <% items3.map(item => { %>
+                    <li>&middot; <%- item %></li>
+                <% }) %>
+            </ul>
+        </div>
+        <ul class="tree-wrap">
+            <li class="tree-parent">
+                <strong class="title">산림생태계 건강성 확보</strong>
+            </li>
+        </ul>
+        <div class="secure_w">
+            <ul>
+                <li class="icon1">산림복원
+                    <span>국가정책 지원</span>
+                </li>
+                <li class="icon2">산림복원
+                    <span>기술표준화, 매뉴얼 개발</span>
+                </li>
+                <li class="icon3">산림복원용
+                    <span>자생식물 공급기반 마련</span>
+                </li>
+            </ul>
+        </div>
+        <strong class="title-leaves">백두대간 산림훼손지 복원 연구</strong>
+        <div class="border-wrap">
+            <ul class="step1_w">
+                <li class="st1">
+                    <span class="eng">01</span>
+                    <p>훼손지 유형분류 및
+                        <br>
+                        환경특성 규명
+                    </p>
+                </li>
+                <li class="st2">
+                    <span class="eng">02</span>
+                    <p>백두대간 훼손 실태 파악 및
+                        <br>
+                        참조생태계 조사
+                    </p>
+                </li>
+                <li class="st3">
+                    <span class="eng">03</span>
+                    <p>백두대간
+                        <br>
+                        산림 훼손지 및 참조생태계
+                        <br>
+                        데이터베이스 구축
+                    </p>
+                </li>
+                <li class="st4">
+                    <span class="eng">04</span>
+                    <p>진단평가를 통한 훼손
+                        <br>
+                        유형별 복원 모델 개발
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <strong class="title-leaves">대표사례 - 울진·삼척 산불피해지 (2022.03.)</strong>
+        <div class="border-wrap">
+            <div class="images-wrap">
+                <ul>
+                    <% for (let i = 0; i < 4; i++) { %>
+                        <li>
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: 590,
+                                height: 340,
+                                isSimply: true,
+                                source: `${imgPath}/business3-${i + 1}.jpg`,
+                                alt: '',
+                                }); %>
+                            </span>
+                        </li>
+                    <% } %>
+                </ul>
+                <strong class="title">울진·삼척 피해지 당시 현장 사진</strong>
+            </div>
+        </div>
+        <strong class="title-leaves">산불피해지 복원을 위한 이해 협력 기반 복원전략 수립</strong>
+        <div class="border-wrap">
+            <p class="desc">산불피해지 복원전략 수립을 위해 산림청 및 복원분야 전문가, NGO, 지역주민 등 수십 명이 거버넌스를 구성하여 의사결정 흐름도를 작성하였으며, 공동 조사단을 꾸려
+                산불피해지 실태조사 및 공간분석을 실시하였다. 이를 바탕으로 산불피해지 내 보호구역 4,789ha 복원을 위한 ‘울진ㆍ삼척 보호구역 산불피해지 산림생태복원 전략’ 및 ‘2022년 동해안
+                보호구역 산불피해지 산림생태복원 기본계획’을 도출하였다.
+            </p>
+            <div class="images-wrap">
+                <ul>
+                    <% for (let i = 0; i < 2; i++) { %>
+                        <li>
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: i === 0 ? 590 : 600,
+                                height: i === 0 ? 340 : 350,
+                                isSimply: true,
+                                source: `${imgPath}/business3-${i + 5}.png`,
+                                alt: '',
+                                }); %>
+                            </span>
+                            <strong class="title">
+                                <% if (i === 0) { %>
+                                    산불피해등급별 공간구획도(4,789ha)
+                                <% } %>
+                                <% if (i === 1) { %>
+                                    복원전략 수립
+                                <% } %>
+                            </strong>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <strong class="title-leaves">단계별 복원계획ㆍ전략 수립 및 타당성 평가</strong>
+        <div class="border-wrap">
+            <p class="desc">단계별 복원계획은 재해발생지 및 발생 우려가 있는 지역에서 주민 생활안전을 고려하여 4단계의 전략을 수립하였다.
+                2차 재해 예방을 최우선으로 시설물을 활용하는 응급복원, 지방도 등 훼손된 가시권 경관의 향상을 위한 복원으로 피해주민의 산불 트라우마 극복 돕는 생활권복원, 식생 회복이 어려운 지역은
+                토양 안정화 및 자생식물 식재로 산림생물다양성 회복을 목적으로 하는 비생활권복원, 자연회복력이 우수하여 모니터링 및 맹아 관리를 활용한 최소한의 조치를 수행하는 자연회복 복원전략을
+                바탕으로 울진군 북면 상당리 지역에 복원대상지를 선정하였고 사업 적합성을 확인하기 위해 대상지의 타당성 평가를 통해 복원계획 연계성, 사업 시급성, 효과성, 목표를 평가하고 생태복원
+                방향을 설정하였다.
+            </p>
+            <div class="images-wrap">
+                <ul>
+                    <% for (let i = 0; i < 2; i++) { %>
+                        <li>
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: 590,
+                                height: 340,
+                                isSimply: true,
+                                source: `${imgPath}/business3-${i + 7}.${i === 0 ? 'png' : 'jpg'}`,
+                                alt: '',
+                                }); %>
+                            </span>
+                            <strong class="title">
+                                <% if (i === 0) { %>
+                                    국민 참여형 복원대상지(25ha) 선정
+                                <% } %>
+                                <% if (i === 1) { %>
+                                    산불 피해지 타당성평가
+                                <% } %>
+                            </strong>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <strong class="title-leaves">산림생태복원 ‘기부자의 숲’ 조성</strong>
+        <div class="border-wrap">
+            <p class="desc">2023년 울진ㆍ삼척 산불피해지 내 산림생태복원 사업을 수행하였다. 사업 총괄인 산림청과 대한적십자사의 ’22년 「산불피해지 푸른 숲 만들기 캠페인」 기부금 모금을
+                통해 기부자와 산불피해지 지역주민, 일반국민 등 150여 명이 산림생태복원사업에 직접 참여하여 ‘기부자의 숲’을 조성였다. 복원사업은 산불 피해목을 활용한 편책, 돌골막이 등 자연재료를
+                활용하여 수행하였으며, 산림복원용 자생식물 94종 중 진달래, 신갈나무 뿐만 아니라 지역 자생식물인 꼬리진달래, 철쭉 등을 활용하여 산림생태복원을 위해 노력하였다.
+            </p>
+            <div class="images-wrap">
+                <ul>
+                    <% for (let i = 0; i < 2; i++) { %>
+                        <li>
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: 590,
+                                height: 340,
+                                isSimply: true,
+                                source: `${imgPath}/business3-${i + 9}.jpg`,
+                                alt: '',
+                                }); %>
+                            </span>
+                            <strong class="title">
+                                <% if (i === 0) { %>
+                                    기부자의 숲 행사
+                                <% } %>
+                                <% if (i === 1) { %>
+                                    복원용 소재 식재
+                                <% } %>
+                            </strong>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="images-wrap">
+                <ul>
+                    <% for (let i = 0; i < 4; i++) { %>
+                        <li>
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: 291,
+                                height: 200,
+                                isSimply: true,
+                                source: `${imgPath}/business3-${i + 11}.jpg`,
+                                alt: '',
+                                }); %>
+                            </span>
+                            <strong class="title">
+                                <% if (i === 0) { %>
+                                    철쭉
+                                <% } %>
+                                <% if (i === 1) { %>
+                                    신갈나무
+                                <% } %>
+                                <% if (i === 2) { %>
+                                    진달래
+                                <% } %>
+                                <% if (i === 3) { %>
+                                    꼬리진달래
+                                <% } %>
+                            </strong>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <strong class="title-leaves">백두대간 산림복원지 사후 모니터링 및 관리방안 연구</strong>
+        <div class="border-wrap">
+            <ul class="step2_w">
+                <li class="st1">
+                    <span class="eng">01</span>
+                    <ul>
+                        <li>복원지 내 생물상 변화 모니터링</li>
+                        <li>복원목표종 생장 변화 모니터링</li>
+                        <li>복원재료 및 시설물 현황 등 실태 파악</li>
+                    </ul>
+                </li>
+                <li class="st2">
+                    <span class="eng">02</span>
+                    <ul>
+                        <li>복원 목표 달성도 및 효과성 분석</li>
+                        <li>평가 결과에 따른 사후관리 방안 제시</li>
+                        <li>자료분석 및 DB 구축</li>
+                    </ul>
+                </li>
+                <li class="st3">
+                    <span class="eng">03</span>
+                    <ul>
+                        <li>산림복원기술의 체계화</li>
+                        <li>복원효과의 극대화</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <strong class="title-leaves">산림생태복원 대상지 사후 모니터링</strong>
+        <div class="border-wrap">
+            <p class="desc">
+                「산림자원의 조성 및 관리에 관한 법률」에 따라 산림생태복원 이후 10년간 모니터링을 수행하고 미흡한 부분에 대해서는 보식 등 유지·관리를 수행한다. 복원 목표, 식생 회복력, 생물다양성
+                변화 등을 조사하고 토양침식, 붕괴, 유출 등 기반환경을 관찰하여 재해 방지 여부를 정량적으로 평가하며 과학적 근거를 제시한다.
+            </p>
+            <div class="images-wrap">
+                <ul>
+                    <% for (let i = 0; i < 3; i++) { %>
+                        <li>
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: 385,
+                                height: 222,
+                                isSimply: true,
+                                source: `${imgPath}/business3-${i + 15}.jpg`,
+                                alt: '',
+                                }); %>
+                            </span>
+                            <strong class="title">
+                                <% if (i === 0) { %>
+                                    식생 및 토양 모니터링
+                                <% } %>
+                                <% if (i === 1) { %>
+                                    야생동물 흔적조사
+                                <% } %>
+                                <% if (i === 2) { %>
+                                    생태복원사업 직수 전경
+                                <% } %>
+                            </strong>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <strong class="title-leaves">산림복원용 자생식물 소재 체계적 확보 및 공급기반 마련</strong>
+        <div class="border-wrap">
+            <ul class="step3_w">
+                <li class="icon1">
+                    <dl>
+                        <dt>
+                            <span></span>
+                            <p>계획 수립</p>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>&middot; 산림복원용 자생식물 대상(94종)</li>
+                                <li>&middot; 종 분포 정보 및 종 특성 조사</li>
+                                <li>&middot; 종 특성에 따른 수집 계획 수립</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="icon2">
+                    <dl>
+                        <dt>
+                            <span></span>
+                            <p>현장 조사</p>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>&middot; 종자 채집</li>
+                                <li>&middot; 표본 및 화상 자료 확보</li>
+                                <li>&middot; 채집지 환경 정보 수집</li>
+                                <li>&middot; 이력관리</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="icon3">
+                    <dl>
+                        <dt>
+                            <span></span>
+                            <p>공급기반 마련</p>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>&middot; 종자 발아 특성 조사</li>
+                                <li>&middot; 현지 적응 실험</li>
+                                <li>&middot; 대량 생산 기술 개발</li>
+                                <li>&middot; Seed Mixture 개발</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <a href="#"
+               class="button-navy">리스트 보기
+            </a>
+        </div>
+    </section>
+<% } %>

@@ -167,6 +167,8 @@ $imgPath: "./../../images/koagi";
         padding: 140px 0 43px;
         background-color: #eef8ff;
         min-width: 1500px;
+        max-width: 1900px;
+        margin: 0 auto;
         @include m.respond-to(map.get(m.$max, 1199)) {
             padding: m.m(110) 0 m.m(38);
             min-width: 0;

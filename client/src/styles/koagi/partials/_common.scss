@@ -3,7 +3,6 @@
 @use "./../../components/mixin" as m;
 
 $imgPath: "./../../images/koagi";
-
 .hidden,
 .sound-only {
     position: absolute !important;
@@ -306,7 +305,6 @@ body.scrolling #header {
 
 .mGnb .list li .dep2 .ls {
     padding: 47px 0;
-
 }
 
 .mGnb .list li .dep2 .ls ul + ul {
@@ -1295,7 +1293,6 @@ body.scrolling #header {
     padding-bottom: 0;
     font-size: 15px;
     line-height: 25px;
-
 }
 
 .gCount1 .rt {
@@ -1466,4 +1463,343 @@ body.scrolling #header {
 
 .ui-widget-header .ui-icon {
     background-image: url("#{$imgPath}/ui-icons_555555_256x240.png");
+}
+
+.secure_w {
+    + .title-leaves {
+        margin-top: 141px;
+    }
+
+    ul {
+        position: relative;
+        padding-top: 191px;
+        margin: 0 auto;
+        width: 1030px;
+        clear: both;
+        overflow: hidden;
+        background: url("#{$imgPath}/icon-arrow-top.gif") no-repeat 50% 31px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-top: m.m(191);
+            width: auto;
+            background-size: m.m(272) auto;
+        }
+    }
+}
+
+.secure_w ul li {
+    padding: 125px 30px 30px;
+    width: 30%;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center 30px;
+    border-radius: 150px;
+    text-align: center;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        width: 100%;
+        padding: m.m(125) m.m(30) m.m(30);
+        box-sizing: border-box;
+        background-size: m.m(78) auto;
+        background-position: 50% 15px;
+    }
+}
+
+.secure_w ul li span {
+    font-weight: 500;
+}
+
+.secure_w ul li.icon1 {
+    float: left;
+    background-color: rgba(146, 187, 58, 0.8);
+    background-image: url("#{$imgPath}/icon-business3-1.png");
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        float: none;
+    }
+}
+
+.secure_w ul li.icon2 {
+    position: absolute;
+    left: 50%;
+    margin-left: -18%;
+    background-color: rgba(80, 152, 54, 0.8);
+    background-image: url("#{$imgPath}/icon-business3-2.png");
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        position: relative;
+        left: 0;
+        margin-left: 0;
+    }
+}
+
+.secure_w ul li.icon3 {
+    float: right;
+    background-color: rgba(13, 118, 58, 0.8);
+    background-image: url("#{$imgPath}/icon-business3-3.png");
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        float: none;
+    }
+}
+
+.step1_w {
+    display: flex;
+    justify-self: center;
+    margin: 40px 0;
+    clear: both;
+    overflow: hidden;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.step1_w li {
+    position: relative;
+    float: left;
+    display: table;
+    width: 312px;
+    height: 228px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.step1_w li.st1 {
+    background-image: url("#{$imgPath}/business3-bg1.gif");
+}
+
+.step1_w li.st2 {
+    background-image: url("#{$imgPath}/business3-bg2.gif");
+}
+
+.step1_w li.st3 {
+    background-image: url("#{$imgPath}/business3-bg3.gif");
+}
+
+.step1_w li.st4 {
+    width: 264px;
+    background-image: url("#{$imgPath}/business3-bg4.gif");
+}
+
+.step1_w li p {
+    padding: 10px 20% 0 0;
+    width: 80%;
+    display: table-cell;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.step1_w li.st4 p {
+    padding-right: 5%;
+}
+
+.step2_w {
+    display: flex;
+    justify-self: center;
+    margin: 40px 0;
+    clear: both;
+    overflow: hidden;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.step2_w > li {
+    position: relative;
+    float: left;
+    height: 175px;
+    margin-right: 68px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        margin-right: 0;
+    }
+}
+
+.step2_w li.st1 {
+    width: 370px;
+    background-image: url("#{$imgPath}/business3-bg5.gif");
+}
+
+.step2_w li.st2 {
+    width: 370px;
+    background-image: url("#{$imgPath}/business3-bg6.gif");
+}
+
+.step2_w li.st3 {
+    width: 324px;
+    margin-right: 0;
+    background-image: url("#{$imgPath}/business3-bg7.gif");
+}
+
+.step2_w li span {
+    position: absolute;
+    top: 25px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1;
+}
+
+.step2_w li.st1 span {
+    color: #9ed443;
+}
+
+.step2_w li.st2 span {
+    color: #43d1a1;
+}
+
+.step2_w li.st3 span {
+    color: #40d4e2;
+}
+
+.step2_w li ul {
+    padding: 40px 75px 0 60px;
+}
+
+.step2_w li ul li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #333;
+    letter-spacing: -0.075em;
+}
+
+.step1_w li span {
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1;
+}
+
+.step1_w li.st1 span {
+    color: #9ed443;
+}
+
+.step1_w li.st2 span {
+    color: #43d1a1;
+}
+
+.step1_w li.st3 span {
+    color: #40d4e2;
+}
+
+.step1_w li.st4 span {
+    color: #4dade3;
+}
+
+.step3_w {
+    margin: 40px 0;
+    clear: both;
+    overflow: hidden;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.step3_w > li {
+    float: left;
+    margin-right: 2%;
+    padding-right: 2%;
+    width: 30.3333%;
+    background-repeat: no-repeat;
+    background-position: right 45px;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.step3_w li.icon1 {
+    background-image: url("#{$imgPath}/icon-business3-arrow1.gif");
+}
+
+.step3_w li.icon2 {
+    background-image: url("#{$imgPath}/icon-business3-arrow2.gif");
+}
+
+.step3_w li.icon3 {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.step3_w li dl {
+    padding: 20px;
+}
+
+.step3_w li.icon1 dl {
+    background: #a8c961;
+}
+
+.step3_w li.icon2 dl {
+    background: #73ad5e;
+}
+
+.step3_w li.icon3 dl {
+    background: #3d9161;
+}
+
+.step3_w li dl dt {
+    display: inline-block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 85px;
+    color: #fff;
+}
+
+.step3_w li dl dt span {
+    float: left;
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    box-shadow: 7px 7px 16px rgba(0, 0, 0, 0.25);
+}
+
+.step3_w li.icon1 dl dt span {
+    background-image: url("#{$imgPath}/icon-business3-4.gif");
+}
+
+.step3_w li.icon2 dl dt span {
+    background-image: url("#{$imgPath}/icon-business3-5.gif");
+}
+
+.step3_w li.icon3 dl dt span {
+    background-image: url("#{$imgPath}/icon-business3-6.gif");
+}
+
+.step3_w li dl dt p {
+    margin-left: 20px;
+    float: left;
+}
+
+.step3_w li dl dd {
+    margin-top: 20px;
+    background: #fff;
+}
+
+.step3_w li dl dd ul {
+    padding: 20px 30px;
+    min-height: 105px;
+}
+
+.step3_w li dl dd ul li {
+    padding-left: 10px;
+    font-size: 17px;
+    line-height: 26px;
+    color: #333;
 }

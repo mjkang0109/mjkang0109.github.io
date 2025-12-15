@@ -31,6 +31,7 @@
 @use "./../partials/history" as history;
 @use "./../partials/layer" as layer;
 @use "./../partials/sitemap" as sitemap;
+@use "./../partials/content" as content;
 
 $imgPath: "./../../images/koagi";
 #body {
@@ -1840,6 +1841,22 @@ input[type="radio"] {
     }
 }
 
+.title-cyan-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+    padding: 21px 49px;
+    background-color: #229f8f;
+    font-size: 27px;
+    font-family: "SBAggro", "SCoreDream", serif;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+}
+
 .green-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2092,3 +2109,4 @@ input[type="radio"] {
 @include history.history;
 @include layer.layer;
 @include sitemap.sitemap;
+@include content.contents;

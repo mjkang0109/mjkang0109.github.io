@@ -56,6 +56,13 @@ $imgPath: "./../../images/koagi";
             border-radius: 5px;
             padding: 15px 20px;
             font-size: 15px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                min-width: 75px;
+                padding: 7px 5px;
+                border-radius: 7px;
+                font-size: 12px;
+                line-height: 20px;
+            }
         }
 
         &.round {
@@ -125,6 +132,11 @@ $imgPath: "./../../images/koagi";
         text-align: center;
         background-color: #242424;
         color: #fff;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: 10px 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
     }
     .button-green {
         display: inline-flex;

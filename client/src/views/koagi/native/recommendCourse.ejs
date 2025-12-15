@@ -43,19 +43,19 @@ state:
 
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-            title: '추천코스',
-            desc: `<strong>쉬엄쉬엄 <span class="color-green">산책코스</span></strong><span class="subDescription">아시아 최대 수목원이자, 산림생물다양성 보전과 활용의 중심인 <br>국립백두대간수목원에서 산림가치 증진을 통해 국민이 행복한 <br>수목원을 만들어 나가겠습니다.</span>`,
-            depths: [
-                '둘러보기',
-                '추천코스'
-            ],
-            tab: ['추천코스1', '추천코스2', '추천코스3'],
+        title: '추천코스',
+        depths: [
+        '둘러보기',
+        '추천코스'
+        ],
         }) %>
          <!-- // title -->
 
         <!-- contents -->
         <div id="body">
-
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_tab`, {
+            items: ['추천코스1', '추천코스2', '추천코스3'],
+            }) %>
             <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_course`, {
                 
             }) %>

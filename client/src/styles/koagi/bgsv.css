@@ -280,6 +280,21 @@ li {
   margin-bottom: 10px;
 }
 
+#body.main:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 899px;
+  background-color: #110d0c;
+}
+@media (max-width: 1199px) {
+  #body.main:before {
+    display: none;
+  }
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -698,6 +713,8 @@ li {
   padding: 140px 0 43px;
   background-color: #eef8ff;
   min-width: 1500px;
+  max-width: 1900px;
+  margin: 0 auto;
 }
 @media (max-width: 1199px) {
   .main-information {

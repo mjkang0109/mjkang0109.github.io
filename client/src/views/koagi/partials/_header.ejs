@@ -17,11 +17,15 @@ randomNumber = (min, max) => {
     <div class="uh">
         <div class="bg">
             <div class="link">
-                <a href="./../<%= currentCategory %>/<%= currentCategory %>.html"
-                   class="type2"><%= currentName; %>
-                </a>
+                <% if (currentCategory !== 'system') { %>
+                    <a href="./../<%= currentCategory %>/<%= currentCategory %>.html"
+                       class="type2"><%= currentName; %>
+                    </a>
+                <% } %>
                 <% if (currentCategory === 'system') { %>
-                    <a href="#">한국수목원정원관리원</a>
+                    <a href="#"
+                       class="type2">한국수목원정원관리원
+                    </a>
                 <% } %>
                 <%
                 const length = navItems.length;
@@ -34,6 +38,11 @@ randomNumber = (min, max) => {
                 <%
                 }
                 %>
+                <% if (currentCategory === 'system') { %>
+                    <a href="#">통합예약시스템</a>
+                    <a href="#">BGSV</a>
+                    <a href="#">정원누리</a>
+                <% } %>
             </div>
             <div class="util">
                 <a href="./login.html">로그인</a>
@@ -129,17 +138,21 @@ randomNumber = (min, max) => {
             <!-- //gnb -->
             <div class="util">
                 <!-- forWeb -->
-                <span class="forW">
-                    <a href="#"
-                       class="iFind1">검색
-                    </a>
-                </span>
+                <% if (currentCategory !== 'system') { %>
+                    <span class="forW">
+                        <a href="#"
+                           class="iFind1">검색
+                        </a>
+                    </span>
+                <% } %>
                 <a href="#jsSitemap1"
                    class="iMenu1 jsBtnMenu1">전체메뉴
                 </a>
-                <a href="#"
-                   class="iLog1 forM">로그인
-                </a>
+                <% if (currentCategory !== 'system') { %>
+                    <a href="#"
+                       class="iLog1 forM">로그인
+                    </a>
+                <% } %>
             </div>
         </div>
     </div>
@@ -213,7 +226,7 @@ randomNumber = (min, max) => {
             </ul>
             <button type="button"
                     class="button-close"
-            onclick="document.getElementById('jsSitemap1').classList.remove('active')">
+                    onclick="document.getElementById('jsSitemap1').classList.remove('active')">
                 <span class="sound-only">닫기</span>
             </button>
         </div>

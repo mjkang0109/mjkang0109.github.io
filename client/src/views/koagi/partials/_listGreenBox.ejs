@@ -5,7 +5,7 @@ const businessCategoryName = businessCategory[currentCategory][state];
 <ul class="green-box-items">
     <% greenItems.map((item, i) => { %>
         <li>
-            <a href="./<%= businessCategoryName %>Detail<%= state === 'default' && i === 0 ? `` : `.${businessCategoryName}${i + 1}` %>.html">
+            <a href="./<%= businessCategoryName %>Detail<%= i === 0 ? `` : `.${businessCategoryName}${i + 1}` %>.html">
                 <span class="img-wrap">
                     <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
                     width: 430,

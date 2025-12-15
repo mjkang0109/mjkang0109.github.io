@@ -1,0 +1,1005 @@
+@use "sass:map";
+@use "sass:math";
+@use "./../../components/mixin" as m;
+
+$imgPath: "./../../images/koagi";
+@mixin contents {
+    .detail-visual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 65px;
+        width: 100%;
+        height: 550px;
+        padding: 0 120px;
+        box-sizing: border-box;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: m.m(65);
+            height: auto;
+            padding: m.m(30);
+        }
+
+        + .detail-content {
+            margin-top: 114px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(114);
+            }
+        }
+
+        &.forest {
+            background: url("#{$imgPath}/bg-forest.jpg") no-repeat 50% 50%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                background-size: cover;
+            }
+        }
+
+        &.forest2 {
+            background: url("#{$imgPath}/bg-forest2.jpg") no-repeat 50% 50%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                background-size: cover;
+            }
+        }
+
+        &.temp {
+            gap: 32px;
+            height: 430px;
+            background: url("#{$imgPath}/bg-temp.jpg") no-repeat 50% 50%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(32);
+                height: auto;
+                background-size: cover;
+            }
+
+            > .title {
+                font-family: "SBAggro", "SCoreDream", serif;
+                font-size: 47px;
+                font-weight: 500;
+            }
+
+            > .desc {
+                margin-top: 24px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+        }
+
+        > .title {
+            font-size: 30px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(40);
+            }
+        }
+
+        > .desc {
+            text-align: center;
+            font-size: 19px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 38px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: m.m(30);
+                line-height: m.m(40);
+            }
+        }
+
+        > .sub {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+        }
+    }
+    .detail-content {
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 100px auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(15);
+                margin: m.m(100) auto;
+            }
+
+            [class*="button-"] {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        > .img-wrap {
+            display: block;
+
+            + .img-box {
+                margin-top: 103px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(103);
+                }
+            }
+
+            + .box-circle {
+                margin-top: 158px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(158);
+                }
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .title-leaves {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 34px;
+            margin-bottom: 20px;
+            font-size: 23px;
+            line-height: 33px;
+            color: #333;
+            background: url("#{$imgPath}/icon-leaves.png") no-repeat 0 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-wrap: wrap;
+            }
+        }
+
+        .border-wrap {
+            padding: 70px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 15px;
+            }
+
+            + .title-leaves {
+                margin-top: 109px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(109);
+                }
+            }
+
+            > .desc {
+                font-size: 17px;
+                color: #333;
+                line-height: 30px;
+                font-weight: 400;
+
+                + .images-wrap {
+                    margin-top: 90px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-top: 45px;
+                    }
+                }
+            }
+        }
+
+        .division {
+            display: flex;
+            gap: 90px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+            }
+
+            &.add-arrow {
+                padding-bottom: 207px;
+                background: url("#{$imgPath}/icon-arrow-bottom.gif") no-repeat left 50% bottom 40px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding-bottom: m.m(207);
+                    background-size: auto m.m(142);
+                    background-position: left 50% bottom 40px;
+                }
+            }
+
+            > .left,
+            > .right {
+                flex: 1;
+            }
+
+            .goal-wrap {
+                .desc {
+                    min-width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+
+            .box-tree2 {
+                width: 100%;
+
+                > ul {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .tree-wrap {
+        display: grid;
+        gap: 123px 50px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: m.m(50);
+        }
+
+        &.add-arrow {
+            padding-bottom: 122px;
+            background: url("#{$imgPath}/icon-arrow-bottom2.png") no-repeat left 50% bottom 27px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-bottom: m.m(122);
+                background-size: 25px auto;
+                background-position: left 50% bottom m.m(27);
+            }
+
+            + .box-darkgreen {
+                margin-top: 0;
+            }
+        }
+
+        + .box-darkgreen {
+            margin-top: 91px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(91);
+            }
+        }
+
+        + .images-wrap {
+            margin-top: 83px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(83);
+            }
+        }
+
+        &.tree3 {
+            grid-template-columns: 1fr 1fr 1fr;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr;
+            }
+
+            .tree-parent {
+                grid-column: auto / span 3;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    grid-column: 1;
+                }
+            }
+        }
+
+        .tree-parent {
+            position: relative;
+
+            &:only-child {
+                &:before {
+                    display: none;
+                }
+            }
+
+            ~ .grid-child {
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: -50px;
+                    background-color: #e6e6e6;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: none;
+                    }
+                }
+
+                &:before {
+                    left: -25px;
+                    width: 100%;
+                    height: 1px;
+                    padding: 0 25px;
+                }
+
+                &:after {
+                    width: 1px;
+                    height: 50px;
+                    left: 50%;
+                }
+
+                &:last-of-type {
+                    &:before {
+                        left: -50px;
+                        width: 50%;
+                    }
+                }
+            }
+
+            + .grid-child {
+                &:before {
+                    left: 50%;
+                    width: 50%;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 1px;
+                height: 123px;
+                background-color: #e6e6e6;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
+            }
+
+            > .title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                justify-self: center;
+                padding: 32px 94px;
+                background-color: #229f8f;
+                box-shadow: 0 0 0 1px #229f8f;
+                border-radius: 100px;
+                border: 5px solid #fff;
+                color: #fff;
+                text-align: center;
+                font-size: 22px;
+                font-weight: 600;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding: m.m(32) m.m(94);
+                    font-size: m.m(40);
+                }
+            }
+        }
+
+        > .grid-child {
+            position: relative;
+            align-self: stretch;
+        }
+
+        .cyan-box {
+            display: flex;
+            flex-direction: column;
+
+            > .title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px 20px 0 0;
+                padding: 23px;
+                background-color: #17a481;
+                font-size: 18px;
+                color: #fff;
+                font-weight: 600;
+                text-align: center;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    border-radius: 10px 10px 0 0;
+                    padding: m.m(23);
+                    font-size: m.m(30);
+                }
+            }
+
+            > .items {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                padding: 29px 25px;
+                border: 1px solid #dfdfdf;
+                border-top: none;
+                border-radius: 0 0 20px 20px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding: m.m(29) m.m(25);
+                    border-radius: 0 0 10px 10px;
+                }
+
+                > li {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #333;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: m.m(24);
+                    }
+                }
+            }
+        }
+    }
+    .box-darkgreen {
+        display: flex;
+        flex-direction: column;
+
+        &.center {
+            justify-self: center;
+
+            .items {
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                }
+            }
+        }
+
+        + .images-wrap {
+            margin-top: 86px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(86);
+            }
+        }
+
+        + .img-wrap {
+            margin-top: 111px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(111);
+            }
+        }
+
+        + .tree-wrap {
+            margin-top: 87px;
+        }
+
+        > .title {
+            padding: 23px;
+            border-radius: 20px 20px 0 0;
+            background-color: #223927;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                border-radius: 10px 10px 0 0;
+                padding: m.m(23);
+                font-size: m.m(30);
+            }
+        }
+
+        > .items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 0;
+            border: 1px solid #dfdfdf;
+            border-top: none;
+            padding: 43px 36px;
+            border-radius: 0 0 20px 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                gap: m.m(8);
+                padding: m.m(43) m.m(36);
+                border-radius: 0 0 10px 10px;
+            }
+
+            > li {
+                width: 50%;
+                padding-right: 20px;
+                box-sizing: border-box;
+                font-size: 16px;
+                line-height: 30px;
+                color: #333;
+                font-weight: 500;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    font-size: m.m(24);
+                    line-height: m.m(34);
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .images-wrap {
+        + .images-wrap {
+            margin-top: 75px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(75);
+            }
+        }
+
+        + .tree-wrap {
+            margin-top: 116px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(116);
+            }
+        }
+
+        > ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 0 auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                flex-wrap: nowrap;
+                gap: m.m(15);
+            }
+
+            li {
+                > .title {
+                    display: block;
+                    margin-top: 10px;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #333;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .img-wrap {
+            display: block;
+
+            img {
+                display: block;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        > .title {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(20);
+                font-size: m.m(28);
+            }
+        }
+    }
+    .img-box {
+        + .img-box {
+            margin-top: 102px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(102)
+            }
+        }
+
+        .img-wrap {
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 65px;
+            display: block;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 15px;
+                border-radius: 10px;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        > .title {
+            display: block;
+            margin-top: 29px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(29);
+                font-size: m.m(24);
+            }
+        }
+    }
+    .goal-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &.add-dot {
+            padding-bottom: 88px;
+            background: url("#{$imgPath}/icon-dots.png") no-repeat left 50% bottom 30px;
+        }
+
+        > .title {
+            display: flex;
+            justify-self: center;
+            padding: 29px 57px 16px;
+            border-radius: 100px 100px 0 0;
+            background-color: #2fa599;
+            color: #fff;
+            font-size: 26px;
+            font-weight: 600;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: m.m(29) m.m(57) m.m(16);
+                font-size: m.m(40);
+            }
+        }
+
+        > .desc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13px;
+            min-width: 700px;
+            background-color: #f0faf9;
+            border-radius: 200px;
+            border: 5px solid #2fa599;
+            padding: 37px 94px;
+            font-size: 19px;
+            line-height: 32px;
+            color: #000;
+            font-weight: 600;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(13);
+                min-width: 0;
+                box-sizing: border-box;
+                padding: m.m(37) m.m(50);
+                font-size: 15px;
+                line-height: 25px;
+            }
+
+            > .title {
+                font-size: 22px;
+                color: #149588;
+                font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .box-tree2 {
+        display: flex;
+        justify-self: center;
+
+        + .tree-wrap {
+            margin-top: 82px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(82);
+            }
+        }
+
+        &.add-arrow {
+            padding-bottom: 189px;
+            background: url("#{$imgPath}/icon-arrow-bottom.gif") no-repeat left 50% bottom 40px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-bottom: m.m(189);
+                background-size: m.m(275) auto;
+                background-position: left 50% bottom 20px;
+            }
+
+            + .tree-wrap {
+                margin-top: 0;
+            }
+        }
+
+        > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 140px 118px 50px;
+            background: #efefef url("#{$imgPath}/icon-trees.png") no-repeat 50% 40px;
+            border-radius: 20px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(8);
+                border-radius: 10px;
+                padding: m.m(140) m.m(30) m.m(30);
+                background-size: m.m(56) auto;
+                background-position: 50% 20px;
+            }
+        }
+
+        > .text-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            padding: 140px 118px 50px;
+            background: #efefef url("#{$imgPath}/icon-trees.png") no-repeat 50% 40px;
+            border-radius: 20px;
+            text-align: center;
+
+            .title {
+                font-size: 22px;
+                color: #2d2d2d;
+                font-weight: 600;
+            }
+
+            .desc {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 27px;
+                color: #2d2d2d;
+            }
+        }
+
+        li {
+            font-size: 16px;
+            color: #2d2d2d;
+            font-weight: 500;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                font-size: 14px;
+            }
+        }
+    }
+    .box-circle {
+        + .box-number {
+            margin-top: 184px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(184);
+            }
+        }
+
+        > .title {
+            display: block;
+            text-align: center;
+            font-size: 40px;
+            color: #333;
+            font-family: "SBAggro", "SCoreDream", serif;
+            font-weight: 500;
+        }
+
+        .circles-wrap {
+            display: flex;
+            gap: 70px;
+            margin-top: 59px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(auto, 244px));
+                justify-content: center;
+                gap: 35px;
+                margin-top: m.m(59);
+            }
+
+            > li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 0 0 244px;
+                height: 244px;
+                box-sizing: border-box;
+                border: 7px solid #83c2ba;
+                border-radius: 100%;
+                background: linear-gradient(180deg, rgba(252, 252, 252, 1) 0%, rgba(245, 245, 245, 1) 100%);
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 28px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    height: auto;
+                    aspect-ratio: 1;
+                }
+            }
+        }
+    }
+    .box-number {
+        display: flex;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+        }
+
+        + .box-number {
+            margin-top: 142px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(142);
+            }
+        }
+
+        > .left {
+            flex: 1;
+            padding-top: 16px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding-top: 0;
+            }
+
+            > .title {
+                display: block;
+                position: relative;
+                font-size: 24px;
+                line-height: 40px;
+                font-weight: 600;
+                padding-bottom: 43px;
+                margin-bottom: 43px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    padding-bottom: m.m(43);
+                    margin-bottom: m.m(43);
+                }
+
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background-color: #000;
+                }
+
+                &:before {
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                }
+
+                &:after {
+                    right: -6px;
+                    bottom: -6px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50px;
+                }
+            }
+        }
+
+        ol {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            counter-reset: number 0;
+
+            > li {
+                display: flex;
+                align-items: baseline;
+                gap: 15px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                color: #000;
+
+                &:before {
+                    counter-increment: number;
+                    content: counter(number);
+                    flex: 0 0 24px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50px;
+                    background-color: #000;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #fff;
+                }
+            }
+        }
+
+        > .right {
+            flex: 0 0 620px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+                margin-top: m.m(43);
+            }
+
+            .img-wrap {
+                display: block;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .grid-items {
+        .grid-item {
+            &:nth-of-type(even) {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 100vw;
+                    height: 100%;
+                    background-color: #f2fbf5;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+    .grid-item {
+        padding: 102px 0 117px;
+        position: relative;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: m.m(102) 0 m.m(117);
+        }
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+
+        > .title-line {
+            + ol {
+                margin-top: 62px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(62);
+                }
+            }
+        }
+
+        > .title-cyan-round {
+            + ol {
+                margin-top: 67px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(67);
+                }
+            }
+        }
+
+        > ol {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+            grid-auto-flow: column;
+            position: relative;
+            counter-reset: number 0;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                grid-template-columns: 1fr;
+                grid-auto-flow: row;
+                gap: m.m(36);
+            }
+
+            + .images-wrap {
+                margin-top: 70px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(70);
+                }
+            }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                padding-right: 36px;
+                box-sizing: border-box;
+                font-size: 16px;
+                color: #333;
+                font-weight: 600;
+                line-height: 30px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex-direction: row;
+                    gap: m.m(36);
+                    width: 100%;
+                    padding-right: 0;
+                }
+
+                &:before {
+                    counter-increment: number;
+                    content: "0" counter(number);
+                    padding-bottom: 21px;
+                    margin-bottom: 28px;
+                    border-bottom: 2px solid #000;
+                    font-size: 26px;
+                    color: #23951b;
+                    font-weight: 800;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        border-bottom: 0;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        > .images-wrap {
+            position: relative;
+
+            > ul {
+                justify-content: flex-start;
+                gap: 30px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: 15px;
+                }
+            }
+
+            .img-wrap {
+                img {
+                    height: 300px;
+                    width: auto;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

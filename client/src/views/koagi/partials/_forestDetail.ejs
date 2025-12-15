@@ -1,0 +1,268 @@
+<section class="detail-visual forest<%= state !== 'default' ? 2 : ''; %>">
+    <strong class="title">
+        <% if (state === 'default') { %>
+            국립백두대간수목원 야생식물종자연구 분야
+        <% } else { %>
+            국립백두대간수목원 산업화연구
+        <% } %>
+    </strong>
+    <p class="desc">
+        <% if (state === 'default') { %>
+            국립백두대간수목원은 시드볼트와 시드뱅크를 모두 보유한 세계 유일의 기관으로 산림생물종다양성 보전 및 증진을 위하여 설립된 국립수목원입니다.
+            <br>
+            재난에 대비하여 전 세계 종자를 안전하게 보존하겠다는 포부를 가진 만큼 그를 과학적으로 뒷받침하기 위하여 미래를 위한 산림생물자원의 보전강화 전략에 발맞춰 야생식물종자연구에 집중하고 있습니다.
+            우리원에서 수행하는 야생식물종자연구 사업은 크게 세가지가 있습니다.
+        <% } else { %>
+            “국립백두대간수목원은 백두대간의 수목유전자원을 수집 · 증식 · 보존 · 관리 및 전시하고 자원화를 위한 학술적 산업적 연구를
+            <br>하고자 설립된 기관으로, 산림생물자원의 보전과 가치창출을 선도하는 글로벌 수목원이 되고자 합니다.”
+            <br>
+            <br>이에 산업화연구실은 산림생물자원의 가치창출을 위한 산업화연구를 수행하고 있습니다.
+        <% } %>
+    </p>
+</section>
+<% if (state === 'default') { %>
+    <section class="detail-content">
+        <ul class="tree-wrap tree3">
+            <%
+                const items = [
+                    {
+                        title   : '한국 작물 야생근연종(KCWR) 현지외 보전',
+                        subItems: [
+                            '산림 내 작물 재래원종 활용 지원',
+                            '재래원종 종자 분포 조사 및 확보',
+                            '병 스트레스 저항성 관련 유용',
+                            '유전자 발굴',
+                        ],
+                    },
+                    {
+                        title   : '자생식물 종자 정보 IP 구축사업',
+                        subItems: [
+                            '자생식물종자 정보구축을 위한 종자 확보',
+                            '자생식물 종자정보 구축',
+                            '자생식물 종자정보(IP) 대국민 서비스',
+                        ],
+                    },
+                    {
+                        title   : '국가 종자클러스터 산림종자 품질관리',
+                        subItems: [
+                            '산림종자 종자검사방법 개발',
+                            '산림종자 품질관리 매뉴얼 개발',
+                            '산림종자 품질관리 정보구축',
+                        ],
+                    },
+                ];
+            %>
+            <li class="tree-parent">
+                <strong class="title">야생식물 종자연구 분야 사업</strong>
+            </li>
+            <% items.map(item => { %>
+                <li class="grid-child cyan-box">
+                    <strong class="title">
+                        <%= item.title; %>
+                    </strong>
+
+                    <% if (item.subItems) { %>
+                        <ul class="items">
+                            <% item.subItems.map(sub => { %>
+                                <li>&middot; <%= sub %></li>
+                            <% }); %>
+                        </ul>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ul>
+        <div class="buttons">
+            <a href="#"
+               class="button-navy">리스트 보기
+            </a>
+        </div>
+    </section>
+<% } else { %>
+    <section class="detail-content">
+        <div class="box-darkgreen">
+            <strong class="title">산림생물자원 산업적 수요 발굴 및 자원화 소재 연구</strong>
+            <ul class="items">
+                <%
+                    const items3 = [
+                        '산업화 수요 발굴을 위한 산·학·연 협력체계 구축',
+                        '야생식물·종자 추출물 제조 및 대사체, 유용성 연구',
+                        '산림마이크로바이옴 소재은행 DB 구축 및 기능성 연구',
+                        '식물생장조절·환경스트레스 저감 천연 소재 발굴 및 활용기술 개발',
+                    ]
+                %>
+                <% items3.map(item => { %>
+                    <li>&middot; <%= item %></li>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="images-wrap">
+            <ul>
+                <%
+                    const items4 = [
+                        {
+                            width : 500,
+                            height: 340,
+                        },
+                        {
+                            width : 335,
+                            height: 340,
+                        },
+                        {
+                            width : 335,
+                            height: 340,
+                        },
+                    ]
+                %>
+                <% for (let i = 0; i < 3; i++) { %>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: items4[i].width,
+                            height: items4[i].height,
+                            isSimply: true,
+                            source: `${imgPath}/forest2-${i + 1}.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                <% } %>
+            </ul>
+            <strong class="title">야생식물·종자 추출물 제조 및 대사체, 유용성 연구</strong>
+        </div>
+        <div class="images-wrap">
+            <ul>
+                <%
+                    const items5 = [
+                        {
+                            width : 460,
+                            height: 340,
+                        },
+                        {
+                            width : 350,
+                            height: 340,
+                        },
+                        {
+                            width : 350,
+                            height: 340,
+                        },
+                    ]
+                %>
+                <% for (let i = 0; i < 3; i++) { %>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: items5[i].width,
+                            height: items5[i].height,
+                            isSimply: true,
+                            source: `${imgPath}/forest2-${i + 4}.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                <% } %>
+            </ul>
+            <strong class="title">식물생장조절·환경스트레스 저감 천연 소재 발굴 및 활용기술 개발</strong>
+        </div>
+        <ul class="tree-wrap tree3">
+            <%
+                const items2 = [
+                    {
+                        title   : '식물 마이크로바이옴',
+                        subItems: [
+                            '근권 및 내생균 마이크로바이옴 분석',
+                            '마이크로바이옴 기능 분석',
+                            '유용 유전자 발굴',
+                        ],
+                    },
+                    {
+                        title   : '산림환경 마이크로바이옴',
+                        subItems: [
+                            '환경 마이크로바이옴 분석',
+                            '마이크로바이옴 기능 분석',
+                            '유용 유전자 발굴',
+                        ],
+                    },
+                    {
+                        title   : '산림마이크로바이옴DB',
+                        subItems: [
+                            '산림마이크로바이옴 동정',
+                            '기능, 특성 정보',
+                            '유용 미생물 및 유전자 정보',
+                        ],
+                    },
+                ];
+            %>
+            <li class="tree-parent">
+                <strong class="title">산림마이크로바이옴 연구기반 구축</strong>
+            </li>
+            <% items2.map(item => { %>
+                <li class="grid-child cyan-box">
+                    <strong class="title">
+                        <%= item.title; %>
+                    </strong>
+
+                    <% if (item.subItems) { %>
+                        <ul class="items">
+                            <% item.subItems.map(sub => { %>
+                                <li>&middot; <%= sub %></li>
+                            <% }); %>
+                        </ul>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ul>
+        <div class="box-darkgreen">
+            <strong class="title">수요 맞춤형 산업화 소재·기술 개발 및 산·학계 지원</strong>
+            <ul class="items">
+                <%
+                    const items6 = [
+                        '산·학계 지원을 위한 산림생물자원 통합 자원은행 구축 및 운영',
+                        '자원별 표준품질 관리 매뉴얼 개발로 신뢰성 확보',
+                        '그린바이오 기업체 표준화 원료 공급',
+                    ]
+                %>
+                <% items6.map(item => { %>
+                    <li>&middot; <%= item %></li>
+                <% }) %>
+            </ul>
+        </div>
+        <span class="img-wrap">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 1200,
+            height: 610,
+            isSimply: true,
+            source: `${imgPath}/forest2-7.jpg`,
+            alt: '',
+            }); %>
+        </span>
+        <div class="img-box">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 806,
+                height: 333,
+                isSimply: true,
+                source: `${imgPath}/forest2-8.jpg`,
+                alt: '',
+                }); %>
+            </span>
+            <strong class="title">지역상생을 위한 지역 기업 지원</strong>
+        </div>
+        <div class="img-box">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 990,
+                height: 240,
+                isSimply: true,
+                source: `${imgPath}/forest2-9.jpg`,
+                alt: '',
+                }); %>
+            </span>
+            <strong class="title">산∙학계 지원을 통한 제품 개발</strong>
+        </div>
+        <div class="buttons">
+            <a href="#"
+               class="button-navy">리스트 보기
+            </a>
+        </div>
+    </section>
+<% } %>

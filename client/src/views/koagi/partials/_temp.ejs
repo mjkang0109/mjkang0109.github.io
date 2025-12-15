@@ -1,0 +1,285 @@
+<section class="detail-visual temp">
+    <span class="sub">
+        <% if (state === 'default') { %>
+            숲과 도시를 잇는 지속가능한 생태 연구 중심 공간
+        <% } %>
+        <% if (state === 'conservation') { %>
+            미래 숲의 지속가능성을 위한 식물 보전 연구 공간
+        <% } %>
+        <% if (state === 'utilization') { %>
+            인간-도심과 정원의 생태적 관리기술 개발과 실용화 연구 공간
+        <% } %>
+    </span>
+    <strong class="title">
+        <% if (state === 'default') { %>
+            온대중부 산림생물 자원의 보전과 활용을 위한 연구 기반 공간
+        <% } %>
+        <% if (state === 'conservation') { %>
+            온대중부식물 보전
+        <% } %>
+        <% if (state === 'utilization') { %>
+            온대중부식물 활용
+        <% } %>
+    </strong>
+    <p class="desc">
+        <% if (state === 'default') { %>
+            온대중부 숲-식물-환경과의 가치 탐색과 미래 지속가능한 숲 관리 방안을 마련하기 위해 보전연구를 수행하며, 인간-도시-숲의 연결관계 분석으로
+            <br>도심과 정원의 생태적관리기술 연구·개발을 통해 실용화·활성화 방안 모색 및 전시연계 가능한 연구를 수행하고 있습니다.
+        <% } %>
+        <% if (state === 'conservation') { %>
+            온대중부 숲-식물-환경과의 가치 탐색과 미래 지속가능한 숲 관리 방안을 마련하기 위해 조사·수집·보전연구를 수행합니다.
+        <% } %>
+        <% if (state === 'utilization') { %>
+            인간-도시-숲의 연결관계 분석으로 도심과 정원의 생태적관리기술 연구·개발을 통해 실용화·활성화 방안 모색 및 전시연계 가능한 연구를 수행하고 있습니다.
+        <% } %>
+    </p>
+</section>
+<section class="detail-content">
+    <% if (state === 'default') { %>
+        <span class="img-wrap">
+            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+            width: 1100,
+            height: 658,
+            isSimply: true,
+            source: `${imgPath}/temp1.gif`,
+            alt: '',
+            }); %>
+        </span>
+        <div class="box-circle">
+            <strong class="title">우리는 아래 내용을 실천 하고자 합니다</strong>
+            <%
+                const circles = [
+                    '녹지공간 조성을 위한<br>전시가치 우수식물종<br>수집 및 도입',
+                    '정원산업 육성을 위한<br>소재발굴 및 시장형성<br>나침반 역할',
+                    '식물-인간-도시환경<br>네트워크 구축',
+                    '온대 숲·식물 통합정보<br>딥러닝 기반 구축',
+                    '온대중부식물 보전<br>관련 비즈니스<br>모델링 개발',
+                ];
+            %>
+            <ul class="circles-wrap">
+                <% circles.map(c => { %>
+                    <li><%- c; %></li>
+                <% }); %>
+            </ul>
+        </div>
+        <div class="box-number">
+            <div class="left">
+                <strong class="title">온대중부 숲-식물-환경과의 가치 탐색과
+                    <br>
+                    미래 지속가능한 숲 관리 방안을 마련하기 위해
+                    <br>
+                    조사·수집·보전연구를 수행
+                </strong>
+                <ol>
+                    <li>온대중부식물 조사·수집·보전연구계획 및 전략을 수립합니다.</li>
+                    <li>국내·외 식물의 자생지, 개체, 환경 등의 탐색·조사·수집·보전 연구를 수행합니다.</li>
+                    <li>정원 및 도시숲 소재식물의 조사 및 수집을 수행합니다.</li>
+                    <li>산림생물·비생물자원 보전 네트워크를 구축하고 교류합니다.</li>
+                    <li>핵심 유전자원보호구역 내 침입외래식물의 모니터링을 수행합니다.</li>
+                    <li>식물표본, 종자, 생물종을 수집 및 조사하여 확보·관리·DB구축을 수행합니다.</li>
+                </ol>
+            </div>
+            <div class="right">
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 620,
+                    height: 450,
+                    isSimply: true,
+                    source: `${imgPath}/temp2.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+            </div>
+        </div>
+        <div class="box-number">
+            <div class="left">
+                <strong class="title">인간-도시-숲의 연결관계 분석으로 도심과 정원의
+                    <br>
+                    생태적관리기술 연구·개발을 통해 실용화·활성화 방안
+                    <br>
+                    모색 및 전시연계 가능한 연구를 수행
+                </strong>
+                <ol>
+                    <li>정원, 도시숲, 도시환경 연구계획 및 전략을 수립합니다.</li>
+                    <li>정원산업 분석과 대응연구를 통해 정원소재 DB 및 플랫폼을 구축합니다.</li>
+                    <li>한국형·미래형 정원비지니스 모델 개발 및 보급을 수행합니다.</li>
+                    <li>도시숲, 도시환경, 정원의 모니터링과 건강성을 평가하며 시민참여형 네트워크를 구축합니다.</li>
+                    <li>기후환경, 도시환경 변화 등 현안 과제 해결 전략을 수립합니다.</li>
+                    <li>온대중부식물의 전시연계·보전가치 분석 및 평가를 수행합니다.</li>
+                </ol>
+            </div>
+            <div class="right">
+                <span class="img-wrap">
+                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                    width: 620,
+                    height: 450,
+                    isSimply: true,
+                    source: `${imgPath}/temp3.jpg`,
+                    alt: '',
+                    }); %>
+                </span>
+            </div>
+        </div>
+    <% } %>
+    <% if (state === 'conservation') { %>
+        <%
+            const gridItems = [
+                {
+                    title    : '희귀·특산식물 조사 및 수집',
+                    items    : [
+                        '온대중부식물 수집정책 수립과 전략마련을<br>통해 온대권역 희귀·특산식물 확보',
+                        '온대 숲·식물 통합정보 관리 가이드라인과<br>이력관리 및 식물 통합정보 플랫폼 구축',
+                        '온대중부식물 수집정책 수립과 전략마련을<br>통해 온대권역 희귀·특산식물 확보',
+                        '온대 숲·식물 통합정보 관리 가이드라인과<br>이력관리 및 식물 통합정보 플랫폼 구축',
+                    ],
+                    imgLength: 2,
+                },
+                {
+                    title    : '우리나라 자생식물의 서식지 환경 조사',
+                    items    : [
+                        '연구 및 기술동향, 논문, 사업, 관련 보고서 분석을<br>통한 환경분석',
+                        '온대 숲·식물 통합정보 관리 가이드라인과<br>이력관리 및 식물 통합정보 플랫폼 구축',
+                        '온대중부식물 수집정책 수립과 전략마련을<br>통해 온대권역 희귀·특산식물 확보',
+                    ],
+                    imgLength: 2,
+                },
+                {
+                    title    : '지역사회 생활밀착형 숲의 생태환경 조사',
+                    items    : [
+                        '도시내 녹지공간의 생태계 파악과 사회적 가치와 밀접한 온대중부 숲의 기능 발굴 및 국민보건 향상 마련',
+                        '문화·역사 속 온대식물 조사 및 연구를 통해 전시 연계방안 마련',
+                    ],
+                    imgLength: 3,
+                },
+                {
+                    title    : '자생식물 현지 외 보전 전략 마련',
+                    items    : [
+                        '온대중부식물 자생지 외 보전기술 개발, 전시 연계 전략<br>수립, 생태적 네트워크 분석',
+                        '온대중부식물 보전가치 우선 순위 설정 및<br>지속가능한 보전 기술 개발',
+                        '시민참여 온대중부식물 보전·전시 연구회 운영, 온대중부식물<br>보전 관련 국내외 심포지엄 개최 추진',
+                    ],
+                    imgLength: 3,
+                },
+                {
+                    title    : '도심 속 생물서식지 및 생태계 조성',
+                    items    : [
+                        '우리나라 자생식물로 구성된 화분 매개곤충 서식지 구성',
+                        '화분 매개곤충들의 생태환경을 조성하여 도심 속 다양하고 건강한 생태계를 구축',
+                    ],
+                    imgLength: 3,
+                },
+            ];
+
+            let startIndex = 4;
+        %>
+        <div class="grid-items">
+            <% gridItems.map((grid, i) => { %>
+                <div class="grid-item">
+                    <strong class="title-line"><%= grid.title; %></strong>
+                    <%
+                    if (grid.items) { %>
+                        <ol>
+                            <%
+                            grid.items.map((item) => {
+                            %>
+                                <li><%- item %></li>
+                            <%
+                            })
+                            %>
+                        </ol>
+                        <div class="images-wrap">
+                            <ul>
+                                <% for(let i = 0; i < grid.imgLength; i++) { %>
+                                    <li>
+                                        <span class="img-wrap">
+                                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                            isSimply: true,
+                                            source: `${imgPath}/temp${startIndex + i}.jpg`,
+                                            alt: '',
+                                            }); %>
+                                        </span>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    <%
+                        startIndex = grid.imgLength + startIndex;
+                    }
+                    %>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+    <% if (state === 'utilization') { %>
+        <%
+            const gridItems2 = [
+                {
+                    title    : '도시숲 · 도시환경 모니터링 및 미래대응 연구',
+                    items    : [
+                        '인간-도시-숲의 연결관계 분석 및 생태적 관리기술 개발',
+                        '도심녹색공간(가로수 등) 모니터링을 통한 연구·관리 기술 개발',
+                        '시민참여 기반의 정원 및 도시숲 네트워크 구축',
+                    ],
+                    imgLength: 3,
+                },
+                {
+                    title    : '국내·외 정원산업 분석 및 미래대응 연구',
+                    items    : [
+                        '한국형·미래형 정원비즈니스 모델 개발 및 보급',
+                        '지속가능한 정원소재 DB 및 플랫폼 구축',
+                    ],
+                    imgLength: 3,
+                },
+                {
+                    title    : '현지 내·외, 실내정원 등 식물건강도 점검 및 식물활력 평가',
+                    items    : [
+                        '도시숲 및 도심녹색공간 모니터링 및 식물의 건전성 증진 기술 개발',
+                        '기후환경, 도시환경 변화에 따른 식물 관리방안 규명',
+                        '온대중부식물의 전시연계·보전가치 분석 및 건전성 평가',
+                    ],
+                    imgLength: 3,
+                },
+            ];
+
+            let startIndex2 = 17;
+        %>
+        <div class="grid-items">
+            <% gridItems2.map((grid, i) => { %>
+                <div class="grid-item">
+                    <strong class="title-cyan-round"><%= grid.title; %></strong>
+                    <%
+                    if (grid.items) { %>
+                        <ol>
+                            <%
+                            grid.items.map((item) => {
+                            %>
+                                <li><%- item %></li>
+                            <%
+                            })
+                            %>
+                        </ol>
+                        <div class="images-wrap">
+                            <ul>
+                                <% for(let i = 0; i < grid.imgLength; i++) { %>
+                                    <li>
+                                        <span class="img-wrap">
+                                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                            isSimply: true,
+                                            source: `${imgPath}/temp${startIndex2 + i}.jpg`,
+                                            alt: '',
+                                            }); %>
+                                        </span>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    <%
+                        startIndex2 = grid.imgLength + startIndex2;
+                    }
+                    %>
+                </div>
+            <% }); %>
+        </div>
+
+    <% } %>
+</section>

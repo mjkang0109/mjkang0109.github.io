@@ -1,0 +1,77 @@
+<section class="main-swiper">
+    <div class="swiper-wrap"
+         data-index="1">
+        <div id="mainSwiper"
+             class="swiper swiper-top">
+            <ul class="swiper-wrapper">
+                <% for (let i = 0; i < 10; i++) { %>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width: 750,
+                                height: 530,
+                                isSimply: true,
+                                source: `${imgPath}/top-banner.png`,
+                                }); %>
+                            </span>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="thumb-wrap">
+            <ul class="text-items">
+                <% for (let i = 0; i < 10; i++) { %>
+                    <li>
+                        <a href="#">
+                            <span class="sub">원주시 다함께돌봄센터 동광뷰웰마을</span>
+                            <strong class="title">초등학생
+                                <% if (i === 0) { %>
+                                    초등학생 초등학생
+                                <% } %>
+                                <span class="color-cyan">아동모집<%= i + 1; %></span>
+                            </strong>
+                            <p class="period">모집기간&nbsp;&nbsp;2025.09.11 ~ 12.17</p>
+                            <p class="desc">안녕하세요. 행복사랑 원주종합사회복지관입니다.
+                                <br>
+                                초등학교 아동 15명을 대상으로, 방학 프로그램을 진행합니다.
+                                <br>
+                                관심있으신 분들은 많은 신청 부탁드립니다.
+                            </p>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+            <div id="mainSwiper"
+                 class="swiper swiper-thumb">
+                <ul class="swiper-wrapper">
+                    <% for (let i = 0; i < 10; i++) { %>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <span class="img-wrap">
+                                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                    width: 750,
+                                    height: 530,
+                                    isSimply: true,
+                                    source: `${imgPath}/top-banner.png`,
+                                    }); %>
+                                </span>
+                            </a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button type="button"
+                class="button-prev">
+            <span class="a11y">이전</span>
+        </button>
+        <button type="button"
+                class="button-next">
+            <span class="a11y">다음</span>
+        </button>
+    </div>
+</section>

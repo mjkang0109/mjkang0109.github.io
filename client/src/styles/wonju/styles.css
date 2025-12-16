@@ -1,0 +1,312 @@
+.a11y {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+.main {
+  font-family: "SCoreDream", serif;
+  background: url("./../../images/wonju/bg-visual.png") no-repeat 50% 0;
+}
+
+.main-swiper {
+  position: relative;
+  padding-top: 96px;
+  overflow: hidden;
+  min-width: 1500px;
+}
+.main-swiper .swiper-wrap {
+  display: flex;
+  gap: 73px;
+  position: relative;
+  width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main-swiper .swiper-wrap[data-index="1"] .text-items > li:nth-of-type(1) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="2"] .text-items > li:nth-of-type(2) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="3"] .text-items > li:nth-of-type(3) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="4"] .text-items > li:nth-of-type(4) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="5"] .text-items > li:nth-of-type(5) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="6"] .text-items > li:nth-of-type(6) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="7"] .text-items > li:nth-of-type(7) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="8"] .text-items > li:nth-of-type(8) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="9"] .text-items > li:nth-of-type(9) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="10"] .text-items > li:nth-of-type(10) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="11"] .text-items > li:nth-of-type(11) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="12"] .text-items > li:nth-of-type(12) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="13"] .text-items > li:nth-of-type(13) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="14"] .text-items > li:nth-of-type(14) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="15"] .text-items > li:nth-of-type(15) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="16"] .text-items > li:nth-of-type(16) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="17"] .text-items > li:nth-of-type(17) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="18"] .text-items > li:nth-of-type(18) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="19"] .text-items > li:nth-of-type(19) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="20"] .text-items > li:nth-of-type(20) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="21"] .text-items > li:nth-of-type(21) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="22"] .text-items > li:nth-of-type(22) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="23"] .text-items > li:nth-of-type(23) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="24"] .text-items > li:nth-of-type(24) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="25"] .text-items > li:nth-of-type(25) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="26"] .text-items > li:nth-of-type(26) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="27"] .text-items > li:nth-of-type(27) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="28"] .text-items > li:nth-of-type(28) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="29"] .text-items > li:nth-of-type(29) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap[data-index="30"] .text-items > li:nth-of-type(30) {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.main-swiper .swiper-wrap .text-items {
+  padding-top: 18px;
+}
+.main-swiper .swiper-wrap .text-items li {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100px);
+}
+.main-swiper .swiper-wrap .text-items a {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.main-swiper .swiper-wrap .text-items .sub {
+  font-size: 25px;
+  color: #333;
+  font-weight: 600;
+}
+.main-swiper .swiper-wrap .text-items .title {
+  margin-top: 2px;
+  font-size: 65px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.main-swiper .swiper-wrap .text-items .color-cyan {
+  color: #00a5ac;
+}
+.main-swiper .swiper-wrap .text-items .period {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 18px;
+}
+.main-swiper .swiper-wrap .text-items .desc {
+  font-size: 15px;
+  line-height: 26px;
+  color: #2d2d2d;
+  font-weight: 400;
+}
+.main-swiper .swiper-top {
+  flex: 0 0 750px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.main-swiper .swiper-thumb {
+  flex: 0 0 auto;
+  overflow: hidden;
+  margin-top: auto;
+}
+.main-swiper .swiper-thumb .img-wrap {
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.main-swiper .swiper-thumb .img-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.main-swiper .swiper-thumb .swiper-slide-thumb-active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 4px solid #00aa4c;
+  pointer-events: none;
+}
+.main-swiper .swiper > ul {
+  display: flex;
+}
+.main-swiper .swiper li {
+  flex: 0 0 auto;
+}
+.main-swiper .thumb-wrap {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.main-swiper .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  position: absolute;
+  bottom: 188px;
+  left: 50%;
+  width: 1500px;
+  transform: translateX(-50%);
+}
+.main-swiper .buttons [class*=button-] {
+  width: 62px;
+  height: 62px;
+  background: url("./../../images/wonju/icon-arrow-left.png");
+}
+.main-swiper .buttons .button-next {
+  transform: rotate(180deg);
+}

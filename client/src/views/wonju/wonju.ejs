@@ -1,0 +1,74 @@
+---
+group: wonju
+state:
+    default: 메인
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%- include(`${process.env.INCLUDE_PATH}/wonju/partials/_head`, {
+        
+    }) %>
+</head>
+<body>
+    <%
+    imgPath = `${process.env.IMG_PATH}/wonju`
+    %>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR9C5HZF"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- s:skip navigation -->
+    <div id="skipnavigation">
+        <ul class="skip">
+            <li><a href="#gnb" title="메인메뉴 바로가기">메인메뉴 바로가기</a></li>
+            <li><a href="#inner" title="본문내용 바로가기">본문내용 바로가기</a></li>
+        </ul>
+    </div>
+    <!-- e:skip navigation -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <div class="mTBanner1" id="mtPopupDiv" style="display:none;">
+        </div>
+
+        <!-- header -->
+        <%#- include(`${process.env.INCLUDE_PATH}/wonju/partials/_header`, {
+            
+        }) %>
+        <!-- //header -->
+
+        <main class="main">
+            <%- include(`${process.env.INCLUDE_PATH}/wonju/partials/_mainSwiper`, {
+                
+            }) %>
+            <%- include(`${process.env.INCLUDE_PATH}/wonju/partials/_quick`, {
+
+            }) %>
+            <%- include(`${process.env.INCLUDE_PATH}/wonju/partials/_items`, {
+
+            }) %>
+        </main>
+    </div>
+    <!-- //wrap -->
+
+    <!-- footer -->
+    <%- include(`${process.env.INCLUDE_PATH}/wonju/partials/_footer`, {
+        
+    }) %>
+    <!-- //footer -->
+
+    <!-- mobile menu -->
+    <%- include(`${process.env.INCLUDE_PATH}/wonju/partials/_mobileNav`, {
+        
+    }) %>
+    <!-- //mobile menu -->
+
+    <div class="mMBanner1" id="mbPopupDiv">
+        <div class="modalBg"></div>
+        <div class="popup" id="popupDiv">
+        </div>
+    </div>
+</body>
+</html>

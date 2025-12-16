@@ -1,0 +1,175 @@
+@use "sass:map";
+@use "sass:math";
+
+@use "./../components/mixin" as m;
+
+$imgPath: "./../../images/wonju";
+.a11y {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: -1px !important;
+}
+.main {
+    font-family: "SCoreDream", serif;
+    background: url("#{$imgPath}/bg-visual.png") no-repeat 50% 0;
+}
+
+.main-swiper {
+    position: relative;
+    padding-top: 96px;
+    overflow: hidden;
+    min-width: 1500px;
+
+    .swiper {
+        &-wrap {
+            display: flex;
+            gap: 73px;
+            position: relative;
+            width: 1500px;
+            margin: 0 auto;
+            overflow: hidden;
+            @for $i from 1 through 30 {
+                &[data-index="#{$i}"] {
+                    .text-items {
+                        > li {
+                            &:nth-of-type(#{$i}) {
+                                position: relative;
+                                opacity: 1;
+                                transform: translateX(0);
+                                transition: all .5s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .text-items {
+                padding-top: 18px;
+
+                li {
+                    position: absolute;
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 28px;
+                }
+
+                .sub {
+                    font-size: 25px;
+                    color: #333;
+                    font-weight: 600;
+                }
+
+                .title {
+                    margin-top: 2px;
+                    font-size: 65px;
+                    font-weight: 600;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+
+                .color-cyan {
+                    color: #00a5ac;
+                }
+
+                .period {
+                    font-size: 22px;
+                    font-weight: 700;
+                    margin-top: 18px;
+                }
+
+                .desc {
+                    font-size: 15px;
+                    line-height: 26px;
+                    color: #2d2d2d;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &-top {
+            flex: 0 0 750px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        &-thumb {
+            flex: 0 0 auto;
+            overflow: hidden;
+            margin-top: auto;
+
+            .img-wrap {
+                display: block;
+                overflow: hidden;
+                border-radius: 20px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .swiper-slide-thumb-active {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                    box-sizing: border-box;
+                    border: 4px solid #00aa4c;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        > ul {
+            display: flex;
+        }
+
+        li {
+            flex: 0 0 auto;
+        }
+    }
+
+    .thumb-wrap {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        position: absolute;
+        bottom: 188px;
+        left: 50%;
+        width: 1500px;
+        transform: translateX(-50%);
+
+        [class*="button-"] {
+            width: 62px;
+            height: 62px;
+            background: url("#{$imgPath}/icon-arrow-left.png");
+        }
+
+        .button-next {
+            transform: rotate(180deg);
+        }
+    }
+}

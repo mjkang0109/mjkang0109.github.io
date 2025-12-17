@@ -1,29 +1,28 @@
 ---
-group: baekdu
+group: sejong
 state:
-    default: 수집
-    outer2: 시드뱅크
-    outer3: 증식
+    default: 한반도 산림식생대
 ---
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <%
-    currentName = '국립백두대간수목원';
-    currentCategory = 'baekdu';
+    currentName = '국립세종수목원';
+    currentCategory = 'sejong';
     currentNav = 'research';
-    imgPath = `${process.env.IMG_PATH}/koagi`
+    imgPath = `${process.env.IMG_PATH}/koagi`;
     %>
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_head`, {
     title: currentName,
     currentCategory: currentCategory
     }); %>
 </head>
-<body class="<%= currentCategory %>">
+<body class="<%= currentCategory ;%>">
+    <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_businessItems`, {
+    }) %>
     <!-- skip navigation -->
     <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_skipNavigation`) %>
     <!-- // skip navigation -->
-
     <!-- wrap -->
     <div id="wrap">
         <!-- header -->
@@ -33,44 +32,36 @@ state:
         currentName
         }) %>
         <!-- // header -->
-
         <!-- visual sub -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_visualSub`, {
         type: 'plant',
-        currentNav: '산림연구',
+        currentNav: '식물연구',
         key: '국민이 행복한 수목원',
         info: '산림생물다양성 보전과 활용의 중심인 국립백두대간수목원에서<br>산림가치 증진을 통해 국민이 행복한 수목원을 만들어 나가겠습니다',
         }) %>
         <!-- // visual sub -->
-
         <!-- title -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_titleSub`, {
-        title: state === 'default' ? '수집' : state === 'outer2' ? '시드뱅크' : '증식',
-        desc: state === 'default' ? '백두대간 산림생물자원 수집' : state === 'outer2' ? '국립백두대간수목원에는 장기저장 목적의 시드볼트(vault)와 저장과 이용 목적의 시드뱅크(Bank)가 운영되고 있습니다.' : '국립백두대간수목원 산림생물자원의 대량증식기술 개발합니다.',
+        title: '한반도 산림식생대',
         depths: [
-        '산림연구',
-        '연구사업',
-        '현지 외 보전',
-        state === 'default' ? '수집' : state === 'outer2' ? '시드뱅크' : '증식',
+        '식물연구',
+        '한반도 산림식생대',
         ],
         }) %>
         <!-- // title -->
-
         <!-- contents -->
         <div id="body">
-            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_outerDetail`, {
+            <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_zone`, {
 
             }) %>
         </div>
         <!-- // contents -->
-
         <!-- footer -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_footer`, {
         currentName,
         currentCategory,
         }) %>
         <!-- // footer -->
-
         <!-- navigation -->
         <%- include(`${process.env.INCLUDE_PATH}/koagi/partials/_navigation`, {
         currentCategory: currentCategory

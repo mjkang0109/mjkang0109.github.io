@@ -41,6 +41,26 @@ $imgPath: "./../../images/koagi";
             }
         }
 
+        &.vegetation {
+            gap: 33px;
+            height: 430px;
+            background: url("#{$imgPath}/bg-vegetation2.jpg") no-repeat 50% 50%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                background-size: cover;
+            }
+
+            > .title {
+                font-size: 46px;
+                font-family: "SBAggro", "SCoreDream", serif;
+                font-weight: 500;
+            }
+
+            > .desc {
+                font-size: 22px;
+                font-weight: 600;
+            }
+        }
+
         &.temp {
             gap: 32px;
             height: 430px;
@@ -129,6 +149,10 @@ $imgPath: "./../../images/koagi";
                 }
             }
 
+            + .title-leaves {
+                margin-top: 114px;
+            }
+
             img {
                 display: block;
                 margin: 0 auto;
@@ -182,6 +206,15 @@ $imgPath: "./../../images/koagi";
                     }
                 }
             }
+
+            > .img-wrap {
+                display: block;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
         }
 
         .division {
@@ -189,6 +222,13 @@ $imgPath: "./../../images/koagi";
             gap: 90px;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 flex-direction: column;
+            }
+
+            + .images-wrap {
+                margin-top: 144px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(144);
+                }
             }
 
             &.add-arrow {
@@ -271,8 +311,33 @@ $imgPath: "./../../images/koagi";
             }
         }
 
+        &.division {
+            gap: 21px;
+
+            .tree-parent {
+                flex: 1;
+
+                > .title {
+                    width: 100%;
+                padding: 32px 0;
+                    box-sizing: border-box;
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
         .tree-parent {
             position: relative;
+
+            &.blue {
+                > .title {
+                    background-color: #0f87b1;
+                    box-shadow: 0 0 0 1px #0f87b1;
+                }
+            }
 
             &:only-child {
                 &:before {
@@ -488,6 +553,30 @@ $imgPath: "./../../images/koagi";
         }
     }
     .images-wrap {
+        &.division {
+            justify-self: center;
+            gap: 30px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                gap: m.m(30);
+            }
+
+            + .goal-wrap {
+                margin-top: 60px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-top: m.m(60);
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    gap: m.m(15);
+                }
+            }
+        }
+
         + .images-wrap {
             margin-top: 75px;
             @include m.respond-to(map.get(m.$max, 1199)) {
@@ -513,16 +602,35 @@ $imgPath: "./../../images/koagi";
                 flex-wrap: nowrap;
                 gap: m.m(15);
             }
+        }
 
-            li {
-                > .title {
-                    display: block;
-                    margin-top: 10px;
-                    text-align: center;
-                    font-size: 16px;
-                    color: #333;
-                    font-weight: 500;
+        li {
+            &.block {
+                width: 100%;
+
+                .img-wrap {
+                    img {
+                        margin: 0 auto;
+                    }
                 }
+            }
+
+            &.title {
+                width: 100%;
+                margin-bottom: 70px;
+                text-align: center;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    margin-bottom: m.m(70);
+                }
+            }
+
+            > .title {
+                display: block;
+                margin-top: 10px;
+                text-align: center;
+                font-size: 16px;
+                color: #333;
+                font-weight: 500;
             }
         }
 
@@ -631,6 +739,7 @@ $imgPath: "./../../images/koagi";
             line-height: 32px;
             color: #000;
             font-weight: 600;
+            text-align: center;
             @include m.respond-to(map.get(m.$max, 1199)) {
                 gap: m.m(13);
                 min-width: 0;
@@ -661,6 +770,14 @@ $imgPath: "./../../images/koagi";
             }
         }
 
+        + .images-wrap {
+            margin-top: 47px;
+        }
+
+        + .title-leaves {
+            margin-top: 122px;
+        }
+
         &.add-arrow {
             padding-bottom: 189px;
             background: url("#{$imgPath}/icon-arrow-bottom.gif") no-repeat left 50% bottom 40px;
@@ -675,7 +792,8 @@ $imgPath: "./../../images/koagi";
             }
         }
 
-        > ul {
+        > ul,
+        > .bg-wrap {
             display: flex;
             flex-direction: column;
             gap: 8px;
@@ -688,6 +806,39 @@ $imgPath: "./../../images/koagi";
                 padding: m.m(140) m.m(30) m.m(30);
                 background-size: m.m(56) auto;
                 background-position: 50% 20px;
+            }
+        }
+
+        .bg-wrap {
+            gap: 22px;
+
+            > .title {
+                text-align: center;
+                font-size: 22px;
+                color: #2d2d2d;
+                font-weight: 600;
+            }
+
+            > .desc {
+                text-align: center;
+                font-size: 16px;
+                color: #2d2d2d;
+            }
+
+            table {
+                border-top: 2px solid #000;
+
+                caption {
+                    display: none;
+                }
+
+                th,
+                td {
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    padding: 20px 40px;
+                    font-size: 15px;
+                }
             }
         }
 
@@ -998,6 +1149,100 @@ $imgPath: "./../../images/koagi";
                         width: 100%;
                         height: auto;
                     }
+                }
+            }
+        }
+    }
+    .info-section {
+        display: flex;
+        gap: 77px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            flex-direction: column;
+            gap: m.m(77);
+        }
+
+        + .section2 {
+            margin-top: 173px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                margin-top: m.m(173);
+            }
+        }
+
+        > .left {
+            flex: 0 0 650px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex: 0 0 auto;
+            }
+
+            .img-wrap {
+                display: block;
+
+                img {
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        > .right {
+            flex: 1;
+
+            .img-wrap {
+                display: block;
+
+                + .info-items {
+                    margin-top: 9px;
+                }
+
+                img {
+                    display: block;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .info-items {
+        li {
+            display: flex;
+            align-items: center;
+            gap: 23px;
+            padding: 25px 0;
+
+            + li {
+                border-top: 1px solid #e5e5e5;
+            }
+
+            > .title {
+                flex: 0 0 110px;
+                display: flex;
+                gap: 14px;
+                font-size: 17px;
+                font-weight: 600;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 m.m(110);
+                }
+            }
+
+            > .desc {
+                font-size: 17px;
+                font-weight: 500;
+            }
+
+            .icon-wrap {
+                flex: 0 0 33px;
+                margin-left: 12px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    display: none;
+                }
+
+                img {
+                    display: block;
+                    margin: 0 auto;
                 }
             }
         }

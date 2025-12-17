@@ -138,6 +138,9 @@ h2,
 h3,
 h4,
 div,
+dl,
+dt,
+dd,
 p,
 ul,
 ol,
@@ -661,12 +664,12 @@ body.scrolling #header {
   padding: 76px 0 0 65px;
   box-sizing: border-box;
   background: url("./../../images/koagi/sub-visual-left.png") no-repeat 50% 0;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 50px;
-  color: #252525;
-  font-weight: 500;
+  letter-spacing: -2px;
+  color: #333;
+  font-weight: 600;
   text-align: left;
-  text-decoration: underline;
 }
 .mKeysub1 .left:after {
   content: "";
@@ -1034,6 +1037,18 @@ body.scrolling #header {
   line-height: 25px;
   font-family: SCoreDream, serif;
   color: #333;
+}
+
+.desc_in {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #227369;
+  background: #f2fbfa;
+  padding: 28px 0;
+  border-radius: 15px;
 }
 
 .gTitle1 .title h4 {
@@ -2009,6 +2024,637 @@ body.scrolling #header {
   font-size: 17px;
   line-height: 26px;
   color: #333;
+}
+
+.section2 .tree_map_back {
+  height: 1100px;
+  padding-top: 100px;
+  background: url("./../../images/koagi/bg-vegetation.jpg") no-repeat 50% 0;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+.section2 .tree_map {
+  height: 1100px;
+  padding-top: 100px;
+}
+
+.section2 .tree_map .wsize {
+  position: relative;
+  min-height: 1068px;
+  background: url("./../../images/koagi/vegetation8.png") no-repeat 50% 95px;
+}
+
+.section2 .tree_map h3.tit {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section2 .tree_map ul.catelist {
+  position: absolute;
+  bottom: 0;
+}
+
+.section2 .tree_map ul.catelist li {
+  height: 20px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+}
+
+.section2 .tree_map ul.catelist li.c1 {
+  background-image: url("./../../images/koagi/icon-vegetation4.gif");
+}
+
+.section2 .tree_map ul.catelist li.c2 {
+  background-image: url("./../../images/koagi/icon-vegetation5.gif");
+}
+
+.section2 .tree_map ul.catelist li.c3 {
+  background-image: url("./../../images/koagi/icon-vegetation6.gif");
+}
+
+.section2 .tree_map ul.catelist li.c4 {
+  background-image: url("./../../images/koagi/icon-vegetation7.gif");
+}
+
+.section2 .tree_map ul.catelist li.c5 {
+  background-image: url("./../../images/koagi/icon-vegetation8.gif");
+}
+
+.section2 .wsize {
+  display: flex;
+  justify-self: center;
+  width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+@media (max-width: 1199px) {
+  .section2 .wsize {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.section2 .txt_box {
+  overflow: hidden;
+  margin-left: -60px;
+}
+
+.section2 .txt_box li {
+  float: left;
+  width: 500px;
+  padding: 0 10px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: 60px;
+  letter-spacing: -0.075em;
+}
+
+.section2 .txt_box li:last-child {
+  border-bottom: 0;
+}
+
+.section2 .txt_box li dl {
+  display: table;
+  width: 100%;
+  height: 130px;
+}
+
+.section2 .txt_box li dt {
+  display: table-cell;
+  width: 120px;
+  font-size: 22px;
+  vertical-align: middle;
+}
+
+.section2 .txt_box li dd {
+  display: table-cell;
+  color: #555;
+  line-height: 24px;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+
+.section3 .headline_back {
+  height: 220px;
+  padding: 100px 0;
+  background: url("./../../images/koagi/vegetation9.jpg") no-repeat 50% 0;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+.section3 .headline {
+  height: 220px;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.section3 .headline h3.tit {
+  padding-bottom: 70px;
+  line-height: 1;
+  background: url("./../../images/koagi/icon-vegetation10.gif") no-repeat 50% 100%;
+  background-size: 2px 40px;
+  text-align: center;
+  font-size: 35px;
+}
+@media (max-width: 1199px) {
+  .section3 .headline h3.tit {
+    font-size: 25px;
+  }
+}
+
+.section3 .headline p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.section3 .graph_cir {
+  overflow: hidden;
+  height: 200px;
+  padding: 75px 0;
+  letter-spacing: -0.05em;
+}
+
+.section3 .graph_cir dl {
+  float: left;
+  display: block;
+  width: 198px;
+  height: 198px;
+  background: #e3f5e9;
+  border: 1px solid #49bc85;
+  border-radius: 100%;
+  color: #222;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+}
+
+.section3 .graph_cir dt {
+  padding-top: 50px;
+  font-size: 18px;
+}
+
+.section3 .graph_cir dd {
+  padding-top: 10px;
+  font-size: 22px;
+}
+
+.section3 .graph_cir ul {
+  float: right;
+  height: 140px;
+  margin-left: 78px;
+  padding: 30px 0 30px 30px;
+}
+
+.section3 .graph_cir .graph_cir_img {
+  background: url("./../../images/koagi/icon-vegetation9.png") no-repeat 50%;
+  width: 133px;
+  top: 50px;
+  left: 182px;
+  position: relative;
+  height: 100px;
+  z-index: 1;
+}
+
+.section3 .graph_cir ul li {
+  float: left;
+  width: 181px;
+  height: 100px;
+  margin-left: 20px;
+  padding-top: 38px;
+  border-radius: 30px;
+  border: 1px solid #49bc85;
+  font-size: 22px;
+  text-align: center;
+}
+
+.section3 .graph_cir ul li:first-child {
+  margin-left: 0;
+}
+
+.section3 .graph_cir strong {
+  display: block;
+  padding-top: 10px;
+  font-size: 30px;
+  color: #316a49;
+  letter-spacing: 0;
+}
+
+.section3 .graph_cir .graph_cir_wrap {
+  display: flex;
+}
+
+.section3 .graph_bar {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.section3 .graph_bar li {
+  float: left;
+  text-align: center;
+}
+
+.section3 .graph_bar li span {
+  display: block;
+  background: #f5f5f5;
+  line-height: 80px;
+}
+
+.section3 .graph_bar li dl dt {
+  display: block;
+  height: 80px;
+  background: #4abf79;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #163a32;
+}
+
+.section3 .graph_bar li dl dd {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #316a49;
+  letter-spacing: -0.05em;
+}
+
+.section3 .graph_bar li.n1 {
+  width: 292px;
+}
+
+.section3 .graph_bar li.n1 dt {
+  font-size: 25px;
+  opacity: 1;
+}
+
+.section3 .graph_bar li.n1 dd {
+  font-size: 17px;
+}
+
+.section3 .graph_bar li.n2 {
+  width: 207px;
+}
+
+.section3 .graph_bar li.n2 dt { /* opacity:0.8; */
+  background: #71cc96;
+}
+
+.section3 .graph_bar li.n2 dd {
+  font-size: 17px;
+}
+
+.section3 .graph_bar li.n3 {
+  width: 70px;
+}
+
+.section3 .graph_bar li.n3 dt { /* opacity:0.6; */
+  background: #94d9b0;
+}
+
+.section3 .graph_bar li.n4 {
+  width: 63px;
+}
+
+.section3 .graph_bar li.n4 dt { /* opacity:0.4; */
+  background: #b8e5ca;
+}
+
+.section3 .graph_bar li.n5 {
+  width: 59px;
+}
+
+.section3 .graph_bar li.n5 dt { /* opacity:0.3; */
+  background: #caecd8;
+}
+
+.section3 .graph_bar li.n6 {
+  width: 57px;
+}
+
+.section3 .graph_bar li.n6 dt { /* opacity:0.2; */
+  background: #dcf2e4;
+}
+
+.section3 .graph_bar li.n7 {
+  width: 352px;
+  font-size: 17px;
+  color: #616161;
+}
+
+.section3 .paragraph {
+  overflow: hidden;
+}
+
+.section3 .paragraph .btxt {
+  float: left;
+  font-size: 30px;
+  line-height: 45px;
+  color: #6b6b6b;
+  letter-spacing: -0.05em;
+}
+
+.section3 .paragraph .btxt strong {
+  color: #333;
+}
+
+.section3 .paragraph .stxt {
+  float: right;
+  width: 620px;
+  padding-top: 10px;
+  border-top: 1px solid #000;
+}
+
+.section3 .paragraph .stxt p {
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #555;
+  letter-spacing: -0.05em;
+}
+
+.detail-content .steps {
+  display: flex;
+  justify-self: center;
+  margin: 20px 0 50px;
+}
+@media (max-width: 1199px) {
+  .detail-content .steps {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.detail-content .steps li {
+  display: table;
+  float: left;
+  width: 124px;
+  height: 122px;
+  padding-left: 29px;
+  background: url("./../../images/koagi/icon-outer2.gif") no-repeat 8px 50%;
+}
+
+.detail-content .steps li:first-child {
+  padding-left: 0;
+}
+
+.detail-content .steps li p {
+  display: table-cell;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  background: url("./../../images/koagi/icon-outer.gif") no-repeat 0 0;
+}
+
+.detail-content .steps li p span {
+  font-size: 15px;
+  color: #666;
+}
+
+.detail-content .check {
+  display: flex;
+  justify-self: center;
+  margin-bottom: 15px;
+}
+@media (max-width: 1199px) {
+  .detail-content .check {
+    flex-direction: column;
+  }
+}
+
+.detail-content .check li {
+  float: left;
+  width: 277px;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.detail-content .check li:first-child {
+  margin-left: 0;
+}
+
+.detail-content .check li span.num {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 50px;
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background: #2cd2e1;
+}
+
+.detail-content .check li p.mtit {
+  width: 100%;
+  height: 85px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: -25px;
+  padding: 50px 0 25px;
+  background: #d5f6f9;
+}
+
+.detail-content .check li p.mtit span.stxt {
+  display: inline-block;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+  margin-top: 10px;
+}
+
+.detail-content p.check_tit {
+  padding-top: 77px;
+  margin-bottom: 20px;
+  background: url("./../../images/koagi/icon-outer3.gif") no-repeat 50% 0;
+}
+
+.detail-content p.check_tit span {
+  display: inline-block;
+  width: 100%;
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  background: #2c74e1;
+}
+
+.detail-content .value_img {
+  text-align: center;
+}
+
+.detail-content .value_img ul {
+  display: inline-block;
+  margin: 90px 0;
+}
+
+.detail-content .value_img li {
+  float: left;
+  padding-left: 65px;
+  background: url("./../../images/koagi/icon-outer4.gif") no-repeat 17px 50%;
+}
+
+.detail-content .value_img li:first-child {
+  padding-left: 0;
+}
+
+.detail-content .value_img li.las {
+  padding-left: 124px;
+  background: url("./../../images/koagi/icon-outer5.gif") no-repeat 28px 50%;
+}
+
+.detail-content .value_img li p {
+  display: inline-block;
+  width: 112px;
+  height: 112px;
+  border-radius: 100%;
+  text-align: center;
+  background: #00b573;
+}
+
+.detail-content .value_img li.las p {
+  background: #c30579;
+}
+
+.detail-content .value_img li span {
+  display: inline-block;
+  width: 99px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding-top: 39px;
+  margin-top: 5px;
+}
+
+.detail-content .value_img li span br {
+  display: none;
+}
+
+.detail-content .value_step {
+  display: flex;
+  justify-self: center;
+}
+.detail-content .value_step + .images-wrap {
+  margin-top: 68px;
+}
+@media (max-width: 1199px) {
+  .detail-content .value_step + .images-wrap {
+    margin-top: 34px;
+  }
+}
+
+.detail-content .value_step li {
+  float: left;
+  width: 196px;
+  height: 310px;
+  margin-left: 4px;
+}
+
+.detail-content .value_step li:first-child {
+  margin-left: 0;
+}
+
+.detail-content .value_step li span.num {
+  display: inline-block;
+  width: 45px;
+  height: 33px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0;
+  border: 5px solid #fff;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 12px;
+  margin-left: 146px;
+  background: #00c5d0;
+}
+
+.detail-content .value_step li.icon02 span.num,
+.detail-content .value_step li.icon04 span.num,
+.detail-content .value_step li.icon06 span.num {
+  background: #3ae0ce;
+}
+
+.detail-content .value_step li div {
+  width: 177px;
+  height: 271px;
+  margin-top: -25px;
+  border: 4px solid #00c5d0;
+  background-size: 45px auto;
+  background-position: 50% 35px;
+  background-repeat: no-repeat;
+}
+
+.detail-content .value_step li.icon02 div,
+.detail-content .value_step li.icon04 div,
+.detail-content .value_step li.icon06 div {
+  border: 4px solid #3ae0ce;
+}
+
+.detail-content .value_step li div p {
+  font-size: 17px;
+  text-align: center;
+  line-height: 25px;
+  padding: 100px 30px 0;
+}
+
+.detail-content .value_step li div p span.italic {
+  font-style: italic;
+}
+
+.detail-content .value_step li div p span.st {
+  display: inline-block;
+  font-size: 15px;
+  color: #555;
+  line-height: 22px;
+  margin-top: 5px;
+}
+
+.detail-content .value_step li.icon01 div {
+  background-image: url("./../../images/koagi/icon-outer6.gif");
+}
+
+.detail-content .value_step li.icon02 div {
+  background-image: url("./../../images/koagi/icon-outer7.gif");
+}
+
+.detail-content .value_step li.icon03 div {
+  background-image: url("./../../images/koagi/icon-outer8.gif");
+}
+
+.detail-content .value_step li.icon04 div {
+  background-image: url("./../../images/koagi/icon-outer9.gif");
+}
+
+.detail-content .value_step li.icon05 div {
+  background-image: url("./../../images/koagi/icon-outer10.gif");
+}
+
+.detail-content .value_step li.icon06 div {
+  background-image: url("./../../images/koagi/icon-outer11.gif");
 }
 
 .terms.reverse-column .term {
@@ -5293,6 +5939,14 @@ table + table {
   .item-horizon .file-wrap + .caution {
     margin-left: 0;
   }
+}
+
+.caution_p {
+  display: block;
+  font-size: 15px;
+  margin-top: 22px;
+  font-weight: 400;
+  text-align: left;
 }
 
 .table-info {
@@ -8606,6 +9260,14 @@ table + table {
 }
 .title-line ~ .title-line {
   margin-top: 103px;
+}
+@media (max-width: 1199px) {
+  .title-line ~ .title-line {
+    margin-top: 51.5px;
+  }
+}
+.title-line + .info-section {
+  margin-top: 77px;
 }
 .title-line:before {
   content: "";
@@ -13394,6 +14056,25 @@ table + table {
     background-size: cover;
   }
 }
+.detail-visual.vegetation {
+  gap: 33px;
+  height: 430px;
+  background: url("./../../images/koagi/bg-vegetation2.jpg") no-repeat 50% 50%;
+}
+@media (max-width: 1199px) {
+  .detail-visual.vegetation {
+    background-size: cover;
+  }
+}
+.detail-visual.vegetation > .title {
+  font-size: 46px;
+  font-family: "SBAggro", "SCoreDream", serif;
+  font-weight: 500;
+}
+.detail-visual.vegetation > .desc {
+  font-size: 22px;
+  font-weight: 600;
+}
 .detail-visual.temp {
   gap: 32px;
   height: 430px;
@@ -13484,6 +14165,9 @@ table + table {
     margin-top: 79px;
   }
 }
+.detail-content > .img-wrap + .title-leaves {
+  margin-top: 114px;
+}
 .detail-content > .img-wrap img {
   display: block;
   margin: 0 auto;
@@ -13542,6 +14226,13 @@ table + table {
     margin-top: 45px;
   }
 }
+.detail-content .border-wrap > .img-wrap {
+  display: block;
+}
+.detail-content .border-wrap > .img-wrap img {
+  display: block;
+  margin: 0 auto;
+}
 .detail-content .division {
   display: flex;
   gap: 90px;
@@ -13549,6 +14240,14 @@ table + table {
 @media (max-width: 1199px) {
   .detail-content .division {
     flex-direction: column;
+  }
+}
+.detail-content .division + .images-wrap {
+  margin-top: 144px;
+}
+@media (max-width: 1199px) {
+  .detail-content .division + .images-wrap {
+    margin-top: 72px;
   }
 }
 .detail-content .division.add-arrow {
@@ -13632,8 +14331,26 @@ table + table {
     grid-column: 1;
   }
 }
+.tree-wrap.division {
+  gap: 21px;
+}
+.tree-wrap.division .tree-parent {
+  flex: 1;
+}
+.tree-wrap.division .tree-parent > .title {
+  width: 100%;
+  padding: 32px 0;
+  box-sizing: border-box;
+}
+.tree-wrap.division .tree-parent:before {
+  display: none;
+}
 .tree-wrap .tree-parent {
   position: relative;
+}
+.tree-wrap .tree-parent.blue > .title {
+  background-color: #0f87b1;
+  box-shadow: 0 0 0 1px #0f87b1;
 }
 .tree-wrap .tree-parent:only-child:before {
   display: none;
@@ -13840,6 +14557,33 @@ table + table {
   }
 }
 
+.images-wrap.division {
+  justify-self: center;
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .images-wrap.division {
+    gap: 15px;
+  }
+}
+.images-wrap.division + .goal-wrap {
+  margin-top: 60px;
+}
+@media (max-width: 1199px) {
+  .images-wrap.division + .goal-wrap {
+    margin-top: 30px;
+  }
+}
+.images-wrap.division ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 1199px) {
+  .images-wrap.division ul {
+    gap: 7.5px;
+  }
+}
 .images-wrap + .images-wrap {
   margin-top: 75px;
 }
@@ -13870,7 +14614,23 @@ table + table {
     gap: 7.5px;
   }
 }
-.images-wrap > ul li > .title {
+.images-wrap li.block {
+  width: 100%;
+}
+.images-wrap li.block .img-wrap img {
+  margin: 0 auto;
+}
+.images-wrap li.title {
+  width: 100%;
+  margin-bottom: 70px;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  .images-wrap li.title {
+    margin-bottom: 35px;
+  }
+}
+.images-wrap li > .title {
   display: block;
   margin-top: 10px;
   text-align: center;
@@ -13989,6 +14749,7 @@ table + table {
   line-height: 32px;
   color: #000;
   font-weight: 600;
+  text-align: center;
 }
 @media (max-width: 1199px) {
   .goal-wrap > .desc {
@@ -14023,6 +14784,12 @@ table + table {
     margin-top: 41px;
   }
 }
+.box-tree2 + .images-wrap {
+  margin-top: 47px;
+}
+.box-tree2 + .title-leaves {
+  margin-top: 122px;
+}
 .box-tree2.add-arrow {
   padding-bottom: 189px;
   background: url("./../../images/koagi/icon-arrow-bottom.gif") no-repeat left 50% bottom 40px;
@@ -14037,7 +14804,8 @@ table + table {
 .box-tree2.add-arrow + .tree-wrap {
   margin-top: 0;
 }
-.box-tree2 > ul {
+.box-tree2 > ul,
+.box-tree2 > .bg-wrap {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -14046,13 +14814,41 @@ table + table {
   border-radius: 20px;
 }
 @media (max-width: 1199px) {
-  .box-tree2 > ul {
+  .box-tree2 > ul,
+  .box-tree2 > .bg-wrap {
     gap: 4px;
     border-radius: 10px;
     padding: 70px 15px 15px;
     background-size: 28px auto;
     background-position: 50% 20px;
   }
+}
+.box-tree2 .bg-wrap {
+  gap: 22px;
+}
+.box-tree2 .bg-wrap > .title {
+  text-align: center;
+  font-size: 22px;
+  color: #2d2d2d;
+  font-weight: 600;
+}
+.box-tree2 .bg-wrap > .desc {
+  text-align: center;
+  font-size: 16px;
+  color: #2d2d2d;
+}
+.box-tree2 .bg-wrap table {
+  border-top: 2px solid #000;
+}
+.box-tree2 .bg-wrap table caption {
+  display: none;
+}
+.box-tree2 .bg-wrap table th,
+.box-tree2 .bg-wrap table td {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px 40px;
+  font-size: 15px;
 }
 .box-tree2 > .text-wrap {
   display: flex;
@@ -14360,6 +15156,99 @@ table + table {
     width: 100%;
     height: auto;
   }
+}
+
+.info-section {
+  display: flex;
+  gap: 77px;
+}
+@media (max-width: 1199px) {
+  .info-section {
+    flex-direction: column;
+    gap: 38.5px;
+  }
+}
+.info-section + .section2 {
+  margin-top: 173px;
+}
+@media (max-width: 1199px) {
+  .info-section + .section2 {
+    margin-top: 86.5px;
+  }
+}
+.info-section > .left {
+  flex: 0 0 650px;
+}
+@media (max-width: 1199px) {
+  .info-section > .left {
+    flex: 0 0 auto;
+  }
+}
+.info-section > .left .img-wrap {
+  display: block;
+}
+@media (max-width: 1199px) {
+  .info-section > .left .img-wrap img {
+    width: 100%;
+    height: auto;
+  }
+}
+.info-section > .right {
+  flex: 1;
+}
+.info-section > .right .img-wrap {
+  display: block;
+}
+.info-section > .right .img-wrap + .info-items {
+  margin-top: 9px;
+}
+.info-section > .right .img-wrap img {
+  display: block;
+}
+@media (max-width: 1199px) {
+  .info-section > .right .img-wrap img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.info-items li {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 25px 0;
+}
+.info-items li + li {
+  border-top: 1px solid #e5e5e5;
+}
+.info-items li > .title {
+  flex: 0 0 110px;
+  display: flex;
+  gap: 14px;
+  font-size: 17px;
+  font-weight: 600;
+}
+@media (max-width: 1199px) {
+  .info-items li > .title {
+    flex: 0 0 55px;
+  }
+}
+.info-items li > .desc {
+  font-size: 17px;
+  font-weight: 500;
+}
+.info-items li .icon-wrap {
+  flex: 0 0 33px;
+  margin-left: 12px;
+}
+@media (max-width: 1199px) {
+  .info-items li .icon-wrap {
+    display: none;
+  }
+}
+.info-items li .icon-wrap img {
+  display: block;
+  margin: 0 auto;
 }
 
 @media all and (max-width: 1199px) {
@@ -15830,5 +16719,393 @@ table + table {
   .mPag .prev,
   .mPag .next {
     background-size: auto 8px;
+  }
+  .section2 .tree_map {
+    height: auto;
+    padding: 50px 0;
+  }
+  .section2 .tree_map .wsize {
+    min-height: 850px;
+    background-size: auto 700px;
+    background-position: 50% 150px;
+  }
+  .section2 .tree_map h3.tit {
+    position: relative;
+  }
+  .section2 .tree_map h3.tit br {
+    display: none;
+  }
+  .section2 .tree_map ul.catelist {
+    position: relative;
+    text-align: center;
+  }
+  .section2 .tree_map ul.catelist li {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: left;
+  }
+  .section2 .txt_box {
+    margin-left: 0;
+  }
+  .section2 .txt_box li {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+  .section2 .txt_box li dl {
+    height: auto;
+    padding: 30px 0;
+  }
+  .section2 .txt_box li dt {
+    font-size: 17px;
+  }
+  .section3 .headline_back {
+    height: 220px;
+    padding: 100px 0;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+  }
+  .section3 .headline {
+    height: 220px;
+    padding: 100px 0;
+  }
+  .section3 .headline h3.tit {
+    margin-bottom: 30px;
+    padding-bottom: 0;
+    background: none;
+  }
+  .section3 .headline p {
+    font-size: 14px;
+    line-height: 24px;
+    word-break: keep-all;
+  }
+  .section3 .headline p br {
+    display: none;
+  }
+  .section3 .graph_cir {
+    height: auto;
+    padding: 50px 0 0 0;
+  }
+  .section3 .graph_cir dl {
+    float: none;
+    margin: 0 auto;
+    bottom: 50px;
+  }
+  .section3 .graph_cir dt {
+    font-size: 15px;
+  }
+  .section3 .graph_cir dd {
+    font-size: 19px;
+  }
+  .section3 .graph_cir strong {
+    font-size: 25px;
+  }
+  .section3 .graph_cir ul {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    background: none;
+  }
+  .section3 .graph_cir ul li {
+    width: 24%;
+    height: auto;
+    margin-left: -1px;
+    padding: 30px 0;
+    font-size: 19px;
+  }
+  .section3 .graph_cir .graph_cir_img {
+    visibility: hidden;
+  }
+  .section3 .graph_cir .graph_cir_wrap {
+    flex-direction: column;
+  }
+  .section3 .graph_bar {
+    display: table;
+    vertical-align: top;
+  }
+  .section3 .graph_bar li {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+  .section3 .graph_bar li.n1 {
+    width: 26.6%;
+  }
+  .section3 .graph_bar li.n2 {
+    width: 18.9%;
+  }
+  .section3 .graph_bar li.n3 {
+    width: 6.3%;
+  }
+  .section3 .graph_bar li.n4 {
+    width: 5.7%;
+  }
+  .section3 .graph_bar li.n5 {
+    width: 5.4%;
+  }
+  .section3 .graph_bar li.n6 {
+    width: 5.2%;
+  }
+  .section3 .graph_bar li.n7 {
+    width: auto;
+    font-size: 15px;
+  }
+  .section3 .graph_bar li dl dt {
+    font-size: 15px !important;
+  }
+  .section3 .graph_bar li dl dd {
+    margin-top: 10px;
+    font-size: 12px !important;
+    letter-spacing: -0.05em;
+  }
+  .section3 .paragraph .btxt {
+    float: none;
+    margin-bottom: 30px;
+    padding: 0 30px;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    word-break: keep-all;
+  }
+  .section3 .paragraph .btxt br {
+    display: none;
+  }
+  .section3 .paragraph .stxt {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .section3 .paragraph .stxt p {
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    word-break: keep-all;
+  }
+  .section2 .tree_map {
+    background-size: cover;
+  }
+  .section2 .tree_map .wsize {
+    min-height: 600px;
+    background-size: auto 450px;
+  }
+  .section2 .tree_map ul.catelist {
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  .section2 .tree_map ul.catelist li {
+    margin: 5px 10px;
+    font-size: 12px;
+  }
+  .section2 .txt_box li dt {
+    width: 30%;
+    font-size: 15px;
+  }
+  .section2 .txt_box li dd {
+    font-size: 13px;
+  }
+  .section3 .graph_cir dl {
+    width: 148px;
+    height: 148px;
+  }
+  .section3 .graph_cir dt {
+    padding-top: 35px;
+  }
+  .section3 .graph_cir dd {
+    padding-top: 0;
+  }
+  .section3 .graph_cir ul {
+    height: auto;
+  }
+  .section3 .graph_cir ul li {
+    float: none;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+  .section3 .graph_cir ul li:first-child {
+    margin-top: 0;
+  }
+  .section3 .graph_cir strong {
+    padding-top: 0;
+    font-size: 19px;
+  }
+  .section3 .graph_bar {
+    display: block;
+  }
+  .section3 .graph_bar li {
+    float: left;
+    display: block;
+    width: 50% !important;
+    padding-bottom: 20px;
+  }
+  .section3 .graph_bar li:nth-child(odd) {
+    clear: both;
+  }
+  .section3 .graph_bar li.n7 {
+    display: none;
+  }
+  .section3 .paragraph .btxt {
+    font-size: 19px;
+    line-height: 30px;
+  }
+  .detail-content .steps li {
+    width: 20%;
+    height: 100px;
+    background-size: 10px auto;
+    margin-bottom: 20px;
+  }
+  .detail-content .steps li:first-child {
+    padding-left: 29px;
+    background: none;
+  }
+  .detail-content .steps li p {
+    background-size: auto 100%;
+    background-position: 50% 0;
+  }
+  .detail-content .steps li {
+    width: 40%;
+  }
+  .detail-content .check {
+    margin-bottom: 0;
+  }
+  .detail-content .check li {
+    width: 48%;
+    margin: 0 0 15px 4%;
+  }
+  .detail-content .check li:nth-child(3) {
+    margin-left: 0;
+  }
+  .detail-content .check li {
+    width: 100%;
+    margin-left: 0;
+  }
+  .detail-content .check li span.num {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+    line-height: 40px;
+  }
+  .detail-content .check li p.mtit {
+    height: auto;
+    font-size: 16px;
+    padding: 40px 0 15px;
+  }
+  .detail-content .check li p.mtit span.stxt {
+    font-size: 14px;
+  }
+  .detail-content p.check_tit {
+    padding-top: 45px;
+    background-size: 30px auto;
+  }
+  .detail-content p.check_tit span {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+  }
+  .detail-content .value_step {
+    flex-direction: column;
+    margin: -3% 0 0 -3%;
+    width: 103%;
+  }
+  .detail-content .value_step li {
+    position: relative;
+    margin: 3% 0 0 3% !important;
+    width: 30.333%;
+    height: auto;
+  }
+  .detail-content .value_step li div {
+    margin-top: 0;
+    width: 95%;
+  }
+  .detail-content .value_step li span.num {
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    margin-left: 0;
+  }
+  .detail-content .value_img ul {
+    margin: 40px 0;
+  }
+  .detail-content .value_img li {
+    padding-left: 25px;
+    background-position: 4px center;
+    background-size: 16px;
+  }
+  .detail-content .value_img li.las {
+    padding-left: 35px;
+    background-position: 4px center;
+    background-size: 28px;
+  }
+  .detail-content .value_img li p {
+    width: 100px;
+    height: 100px;
+  }
+  .detail-content .value_img li span {
+    padding-top: 21px;
+    margin: 6%;
+    width: 88%;
+    height: 88%;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  .detail-content .value_img li span br {
+    display: block;
+  }
+  .detail-content .value_step {
+    margin: 0;
+    width: 100%;
+  }
+  .detail-content .value_step li {
+    float: none;
+    margin: 15px 10px 0 !important;
+    width: auto;
+  }
+  .detail-content .value_step li div {
+    width: 100%;
+    height: auto;
+    background-position: center 15px;
+    background-size: 34px;
+    box-sizing: border-box;
+  }
+  .detail-content .value_step li div p {
+    padding: 60px 15px 15px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .detail-content .value_step li div p br {
+    display: none;
+  }
+  .detail-content .value_step li div p span.st {
+    margin-top: 0;
+    font-size: 13px;
+    line-height: 1;
+  }
+  .detail-content .value_step li span.num {
+    padding-top: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 17px;
+    box-sizing: border-box;
+  }
+  .detail-content .value_step li:nth-child(odd) span.num {
+    right: auto;
+    left: -10px;
+  }
+}
+@media all and (max-width: 550px) {
+  .detail-content .value_img li p {
+    width: 80px;
+    height: 80px;
+  }
+  .detail-content .value_img li span {
+    padding-top: 12px;
   }
 }

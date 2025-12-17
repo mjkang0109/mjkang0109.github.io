@@ -1,0 +1,260 @@
+<section class="detail-visual vegetation">
+    <strong class="title">
+        한반도 산림식생대 소개
+    </strong>
+    <p class="desc">
+        한반도의 기후와 지형이 빚어낸 다양한 산림식생대의 이야기
+    </p>
+</section>
+<section class="detail-content">
+    <strong class="title-line">열대림</strong>
+    <div class="info-section">
+        <div class="left">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 550,
+                height: 330,
+                isSimply: true,
+                source: `${imgPath}/vegetation1.jpg`,
+                alt: '',
+                }); %>
+            </span>
+        </div>
+        <div class="right">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 603,
+                height: 279,
+                isSimply: true,
+                source: `${imgPath}/vegetation2.gif`,
+                alt: '',
+                }); %>
+            </span>
+            <ul class="info-items">
+                <%
+                const titles = [
+                    '분포',
+                    '강수량',
+                    '기온',
+                ];
+
+                const images = [
+                    [
+                        33,
+                        24,
+                    ],
+                    [
+                        27,
+                        29,
+                    ],
+                    [
+                        18,
+                        30,
+                    ],
+                ];
+
+                [
+                    '아마존, 아프리카 콩고강 유역 및 동남아시아',
+                    '연평균 2,400 mm이상',
+                    '18℃ 이상',
+                ].map((item, index) => {
+                %>
+                    <li>
+                        <span class="icon-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: images[index][0],
+                            height: images[index][1],
+                            isSimply: true,
+                            source: `${imgPath}/icon-vegetation${index + 1}.png`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title"><%= titles[index] %></strong>
+                        <span class="desc"><%= item; %></span>
+                    </li>
+                <% }); %>
+
+            </ul>
+        </div>
+    </div>
+    <strong class="title-line">온대림</strong>
+    <div class="info-section">
+        <div class="left">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 550,
+                height: 330,
+                isSimply: true,
+                source: `${imgPath}/vegetation3.jpg`,
+                alt: '',
+                }); %>
+            </span>
+        </div>
+        <div class="right">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 603,
+                height: 279,
+                isSimply: true,
+                source: `${imgPath}/vegetation4.gif`,
+                alt: '',
+                }); %>
+            </span>
+            <ul class="info-items">
+                <%
+                [
+                    '우리나라가 포함된 지구 중위도 지역으로 사계절 뚜렷',
+                    '연평균 400 mm이상',
+                    '-2 ~ 18℃ 미만',
+                ].map((item, index) => {
+                %>
+                    <li>
+                        <span class="icon-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: images[index][0],
+                            height: images[index][1],
+                            isSimply: true,
+                            source: `${imgPath}/icon-vegetation${index + 1}.png`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title"><%= titles[index] %></strong>
+                        <span class="desc"><%= item; %></span>
+                    </li>
+                <% }); %>
+
+            </ul>
+        </div>
+    </div><strong class="title-line">한대림</strong>
+    <div class="info-section">
+        <div class="left">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 550,
+                height: 330,
+                isSimply: true,
+                source: `${imgPath}/vegetation5.jpg`,
+                alt: '',
+                }); %>
+            </span>
+        </div>
+        <div class="right">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 603,
+                height: 279,
+                isSimply: true,
+                source: `${imgPath}/vegetation6.gif`,
+                alt: '',
+                }); %>
+            </span>
+            <ul class="info-items">
+                <%
+                [
+                    '우리나라가 포함된 지구 중위도 지역으로 사계절 뚜렷',
+                    '연평균 400 mm이상',
+                    '-2 ~ 18℃ 미만',
+                ].map((item, index) => {
+                %>
+                    <li>
+                        <span class="icon-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: images[index][0],
+                            height: images[index][1],
+                            isSimply: true,
+                            source: `${imgPath}/icon-vegetation${index + 1}.png`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title"><%= titles[index] %></strong>
+                        <span class="desc"><%= item; %></span>
+                    </li>
+                <% }); %>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="section2">
+        <div class="tree_map_back"></div><div class="tree_map">
+            <div class="wsize">
+                <h3 class="tit">한반도<br> 산림식생대</h3>
+                <ul class="catelist">
+                    <li class="c1">아한대</li>
+                    <li class="c2">온대 북부</li>
+                    <li class="c3">온대 중부</li>
+                    <li class="c4">온대 남부</li>
+                    <li class="c5">난대</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wsize">
+            <ul class="txt_box">
+                <li>
+                    <dl>
+                        <dt>난대</dt>
+                        <dd>제주도와 남해안 지역, 강수량이 많고 겨울 온도가 0도 이상, 상록활엽수림대가 분포</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>온대남부</dt>
+                        <dd>호남, 영남지역으로 곰솔, 단풍나무, 대나무류가 분포</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>온대중부</dt>
+                        <dd>백두대간을 제외한 경기도, 충청도, 강원도 지역 중심으로 신갈나무, 당단풍나무, 쪽동백나무 등이 분포</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>온대북부</dt>
+                        <dd>백두산과 개마고원을 제외한 평안도와 함경도 지역, 내한성이 강한 낙엽활엽수가 우점, 신갈나무, 서어나무, 피나무 등이 분포</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>냉대</dt>
+                        <dd>백두산과 개마고원지역으로 가문비나무, 분비나무, 잎갈나무, 전나무 등으로 이루어진 아한대 침엽수림대 분포</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="headline_back"></div><div class="headline">
+            <div class="wsize">
+                <h3 class="tit">기후변화와 산림 식생대</h3>
+                <p>IPCC 제 4차 평가 보고서에 따르면 지난 1세기 동안 지구 평균 온도는 0.76℃가 상승했고, 2100년대 평균 온도는 2000년대보다 1.1 - 6.4℃ 상승할 것으로 예측된다.<br> 기온이 상승하면 북반구의 식생대는 남쪽에서 북쪽으로, 저지대에서 고지대로 이동하게 된다.<br> 평균 기온이 1℃ 상승하면 중위도 지역의 식물은 북쪽으로 약 150km, 고도는 위쪽으로 150m 정도 이동해 할 것으로 예상된다. </p>
+            </div>
+        </div>
+        <div class="wsize">
+            <div class="graph_cir">
+                <div class="graph_cir_wrap">
+                    <div>
+                        <div class="graph_cir_img"></div>
+                        <dl>
+                            <dt>우리나라 숲</dt>
+                            <dd>국토면적의 <strong>62.7%</strong></dd>
+                        </dl>
+                    </div>
+                    <ul>
+                        <li>침엽수림 <strong>37%</strong></li>
+                        <li>활엽수림 <strong>32%</strong></li>
+                        <li>침활혼효림 <strong>26%</strong></li>
+                        <li>기타 <span style="font-size:16px">(죽림/무립목지)</span><strong>5%</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="paragraph">
+                <p class="btxt">기후 변화는 생물들의 생육 환경에도<br> 변화를 가져오게 되어<br> <strong>많은 생물종들이 멸종 위기</strong>에<br> 처해 있다.</p>
+                <div class="stxt">
+                    <p>특히 세계자연보전연맹(IUCN)은 21세기 세계 식물 자원의 약 30%가 멸종 위기에 직면할 것이라고 경고하고 있다.</p>
+                    <p>이에 따라 우리나라에서도 자생 식물 중 그 분포가 매우 제한되어 있는 희귀 식물의 보전을 위하여 다양한 연구와 기초 자료를 구축하고 있다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

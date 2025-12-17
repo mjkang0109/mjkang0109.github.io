@@ -661,12 +661,12 @@ body.scrolling #header {
   padding: 76px 0 0 65px;
   box-sizing: border-box;
   background: url("./../../images/koagi/sub-visual-left.png") no-repeat 50% 0;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 50px;
-  color: #252525;
-  font-weight: 500;
+  letter-spacing: -2px;
+  color: #333;
+  font-weight: 600;
   text-align: left;
-  text-decoration: underline;
 }
 .mKeysub1 .left:after {
   content: "";
@@ -1034,6 +1034,18 @@ body.scrolling #header {
   line-height: 25px;
   font-family: SCoreDream, serif;
   color: #333;
+}
+
+.desc_in {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #227369;
+  background: #f2fbfa;
+  padding: 28px 0;
+  border-radius: 15px;
 }
 
 .gTitle1 .title h4 {
@@ -4963,6 +4975,24 @@ table + table {
 .item-horizon {
   border-top: 1px solid #000;
 }
+.item-horizon.type2 li > div:only-of-type label {
+  width: 1200px;
+  max-width: 100%;
+}
+.item-horizon.type2 textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 48px;
+  border: solid 1px #ddd;
+  background-color: #fff;
+  color: #000;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .item-horizon li {
   display: flex;
   flex-wrap: wrap;
@@ -4989,7 +5019,7 @@ table + table {
 }
 @media (max-width: 1199px) {
   .item-horizon li > strong {
-    width: 100px;
+    width: 90px;
     font-size: 13px;
     line-height: 23px;
     min-height: 50px;
@@ -5008,11 +5038,11 @@ table + table {
 @media (max-width: 1199px) {
   .item-horizon li > div {
     flex: 0 0 auto;
-    width: calc(100% - 100px);
+    width: calc(100% - 90px);
     gap: 10px;
     padding: 10px;
     font-size: 13px;
-    line-height: 23px;
+    line-height: 18px;
     min-height: 50px;
   }
 }
@@ -5036,6 +5066,9 @@ table + table {
   .item-horizon li > div:only-of-type label[for*=select].middle {
     min-width: auto;
   }
+}
+.item-horizon li > div .file_add li {
+  padding: 5px 0;
 }
 .item-horizon li > div label {
   width: 100%;
@@ -5103,8 +5136,8 @@ table + table {
 @media (max-width: 1199px) {
   .item-horizon li .caution {
     margin-left: 0;
-    margin-top: 5px;
-    font-size: 13px;
+    margin-top: 0;
+    font-size: 12px;
     line-height: 20px;
   }
 }
@@ -5255,6 +5288,11 @@ table + table {
 .item-horizon .button-navy.small + .file-wrap {
   margin-left: 20px;
 }
+@media (max-width: 1199px) {
+  .item-horizon .button-navy.small + .file-wrap {
+    margin-left: 0;
+  }
+}
 .item-horizon .file-wrap {
   display: flex;
   align-items: baseline;
@@ -5262,6 +5300,11 @@ table + table {
 }
 .item-horizon .file-wrap + .caution {
   margin-left: 40px;
+}
+@media (max-width: 1199px) {
+  .item-horizon .file-wrap + .caution {
+    margin-left: 0;
+  }
 }
 
 .table-info {
@@ -5513,6 +5556,15 @@ table + table {
   padding: 15px 20px;
   font-size: 15px;
 }
+@media (max-width: 1199px) {
+  .button-navy.small {
+    min-width: 75px;
+    padding: 7px 5px;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
 .button-navy.round {
   border-radius: 50px;
 }
@@ -5584,6 +5636,13 @@ table + table {
   text-align: center;
   background-color: #242424;
   color: #fff;
+}
+@media (max-width: 1199px) {
+  .button-black {
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
 }
 
 .button-green {

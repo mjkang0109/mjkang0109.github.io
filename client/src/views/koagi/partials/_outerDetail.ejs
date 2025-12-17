@@ -1,0 +1,535 @@
+<% if (state === 'default') { %>
+    <section class="detail-content">
+        <div class="division">
+            <div class="left">
+                <div class="goal-wrap add-dot">
+                    <strong class="title">수집</strong>
+                    <p class="desc">
+                        백두대간 산림생물자원 체계적 수집 및 보전
+                    </p>
+                </div>
+                <div class="box-tree2">
+                    <ul>
+                        <li>&middot; 백두대간 5개 권역 전략적 수집을 통한 유전다양성 확보</li>
+                        <li>&middot; 백두대간 자생식물자원의 활용 기반 마련</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="goal-wrap add-dot">
+                    <strong class="title">수집</strong>
+                    <p class="desc">
+                        보전가치가 높은 산림생문자원 현지외 보전
+                    </p>
+                </div>
+                <div class="box-tree2">
+                    <ul>
+                        <li>&middot; 주요분류군별 자생식물 종자 및 수집 정보 구축</li>
+                        <li>&middot; 구축된 정보의 공유를 통한 산업화 등 활용 기반 마련</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="images-wrap division">
+            <div class="left">
+                <ul>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 590,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer1-1.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 590,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer1-2.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">산림생물자원 조사 및 수집</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 610,
+                            height: 600,
+                            isSimply: true,
+                            source: `${imgPath}/outer1-3.png`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">산림생물자원 조사 및 수집</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="goal-wrap add-dot">
+            <strong class="title">수집</strong>
+            <p class="desc">
+                아시아권역 산림생물자원 수집 및 현지외 보전
+            </p>
+        </div>
+        <span class="img-wrap">
+        </span>
+        <div class="box-tree2">
+            <ul>
+                <li>&middot; 중앙아시아 4개국* 현지외 식물다양성 증진 네트워크 구축</li>
+                <li>&nbsp;&nbsp;*4개국(카자흐스탄, 키르기즈스탄, 우즈베키스탄, 타지키스탄)</li>
+                <li>&middot; 중앙아시아 현지 인력 양성 지원 및 현지외 보전 기반 구축</li>
+            </ul>
+        </div>
+        <div class="images-wrap">
+            <ul>
+                <li class="block">
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 471,
+                        height: 266,
+                        isSimply: true,
+                        source: `${imgPath}/outer1-4.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                </li>
+                <li>
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 590,
+                        height: 340,
+                        isSimply: true,
+                        source: `${imgPath}/outer1-5.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                </li>
+                <li>
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 590,
+                        height: 340,
+                        isSimply: true,
+                        source: `${imgPath}/outer1-6.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                </li>
+                <li class="title">
+                    중앙아시아 자생식물 종자 수집
+                </li>
+                <li>
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 590,
+                        height: 340,
+                        isSimply: true,
+                        source: `${imgPath}/outer1-7.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                </li>
+                <li>
+                    <span class="img-wrap">
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width: 590,
+                        height: 340,
+                        isSimply: true,
+                        source: `${imgPath}/outer1-8.jpg`,
+                        alt: '',
+                        }); %>
+                    </span>
+                </li>
+                <li class="title">중앙아시아 현지 인력 양성</li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <a href="#"
+               class="button-navy">리스트 보기
+            </a>
+        </div>
+    </section>
+<% } %>
+<% if (state === 'outer2') { %>
+    <section class="detail-content">
+        <div class="goal-wrap add-dot">
+            <strong class="title">운영</strong>
+            <p class="desc">
+                국립백두대간수목원에는 장기저장 목적의 시드볼트(vault)와 저장과 이용 목적의 시드뱅크(Bank)가 운영되고 있습니다.
+                <br>
+                시드뱅크는 61m2 면적의 중기 저장고(-20℃, RH40%), 단기 저장고(4℃), 후숙실, 2개의 건조실로
+                <br>
+                구성되있으며 종자의 저장과 효율적인 이용을 위한 활력검정이 진행되고 있습니다.
+            </p>
+        </div>
+        <div class="box-tree2">
+            <div class="bg-wrap">
+                <strong class="title">보유 종 수 (2024년 9월 기준)</strong>
+                <p class="desc">2,135종 15,669점</p>
+                <table summary="시드뱅크 보유 종 수를 수집, 기증, 자생식물, 희귀식물, 특산식물로 나타낸 표입니다.">
+                    <caption class="hide">수집, 기증, 자생식물, 희귀식물, 특산식물 시드뱅크 보유 종 수</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">수집</th>
+                        <th scope="col">기증</th>
+                        <th scope="col">자생식물</th>
+                        <th scope="col">희귀식물</th>
+                        <th scope="col">특산식물</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>8,157점</td>
+                        <td>7,524점</td>
+                        <td>1,589종 (10,287점)</td>
+                        <td>261종 (1,044점)</td>
+                        <td>153종 (621점)</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <strong class="title-leaves">저장을 위한 작업 흐름도</strong>
+        <div class="border-wrap">
+            <ol class="steps">
+                <li>
+                    <p>도입</p>
+                </li>
+                <li>
+                    <p>1차 건조</p>
+                </li>
+                <li>
+                    <p>정선</p>
+                </li>
+                <li>
+                    <p>천립중 측정</p>
+                </li>
+                <li>
+                    <p>입병</p>
+                </li>
+                <li>
+                    <p>2차 건조
+                        <br>
+                        <span>(15℃, 15%)</span>
+                    </p>
+                </li>
+                <li>
+                    <p>라벨</p>
+                </li>
+                <li>
+                    <p>저장
+                        <br>
+                        <span>(-20℃, 40%)</span>
+                    </p>
+                </li>
+            </ol>
+            <div class="images-wrap">
+                <ul>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 386,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer2-1.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">종자 입병</strong>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 386,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer2-2.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">종자 라벨</strong>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 386,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer2-3.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">종자 저장</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <strong class="title-leaves">활력 검정</strong>
+        <div class="border-wrap">
+            <ol class="check">
+                <li>
+                    <span class="num">01</span>
+                    <p class="mtit">종자 기초정보 조사
+                        <span class="stxt">천립중, 예상립 수 추정,
+                            <br>
+                            현미경을 이용한 종자 형태
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <span class="num">02</span>
+                    <p class="mtit">충실률 측정(X-ray 검정)</p>
+                </li>
+                <li>
+                    <span class="num">03</span>
+                    <p class="mtit">종자 발아능 검정
+                        <span class="stxt">25립 * 4반복, 1% agar 배지</span>
+                    </p>
+                </li>
+                <li>
+                    <span class="num">04</span>
+                    <p class="mtit">테트라졸리움 종자 활력 검정
+                        <br>
+                        (Tetrazolium test)
+                        <span class="stxt">1% TZ 용액으로 종자 염색</span>
+                    </p>
+                </li>
+            </ol>
+            <p class="check_tit">
+                <span>산림종자 품질관리를 위한 종별 종자 검사방법 및 종자 저장방법 개발</span>
+            </p>
+            <div class="images-wrap">
+                <ul>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 285,
+                            height: 287,
+                            isSimply: true,
+                            source: `${imgPath}/outer2-4.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">현미경 형태 사진
+                        </strong>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 285,
+                            height: 287,
+                            isSimply: true,
+                            source: `${imgPath}/outer2-5.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">X-ray 촬영(충실률 검정)
+                        </strong>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 285,
+                            height: 287,
+                            isSimply: true,
+                            source: `${imgPath}/outer2-6.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">발아능 검정
+                        </strong>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 285,
+                            height: 287,
+                            isSimply: true,
+                            source: `${imgPath}/outer2-7.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                        <strong class="title">TZ-test(종자 활력검정)
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#"
+               class="button-navy">리스트 보기
+            </a>
+        </div>
+    </section>
+<% } %>
+<% if (state === 'outer3') { %>
+    <section class="detail-content">
+        <div class="goal-wrap add-dot">
+            <strong class="title">주요업무</strong>
+            <p class="desc">
+                <strong class="title">
+                    식물자원의 증식 특성 파악
+                </strong>
+                백두대간 고산식물, 희귀 특산 난발아, 기후변화취약종 등
+            </p>
+        </div>
+        <span class="img-wrap">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 1200,
+                height: 633,
+                isSimply: true,
+                source: `${imgPath}/outer3-1.jpg`,
+                alt: '',
+                }); %>
+            </span>
+        </span>
+        <strong class="title-leaves">수목원 양묘장</strong>
+        <div class="border-wrap">
+            <span class="img-wrap">
+                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                width: 1200,
+                height: 418,
+                isSimply: true,
+                source: `${imgPath}/outer3-2.jpg`,
+                alt: '',
+                }); %>
+            </span>
+        </div>
+        <strong class="title-leaves">전통육종 활용 고부가가치 신품종 육성</strong>
+        <div class="border-wrap">
+            <ul class="tree-wrap division">
+                <li class="tree-parent">
+                    <strong class="title">선발육종 및 교잡육종을 활용한 백두대간 자생 야생화 신품종 개발</strong>
+                </li>
+                <li class="tree-parent blue">
+                    <strong class="title">지역특화 수종 육성을 위한 신품종 개발</strong>
+                </li>
+            </ul>
+
+            <div class="value_img">
+                <ul>
+                    <li><p><span>관상용 <br>가치</span></p></li>
+                    <li><p><span>희소성 <br>가치</span></p></li>
+                    <li class="las"><p><span>고부가 <br>가치</span></p></li>
+                </ul>
+            </div>
+
+            <ol class="value_step">
+                <li class="icon01">
+                    <span class="num">01</span>
+                    <div>
+                        <p><span class="italic">Scutellaria sp.</span>
+                            분류군별
+                            living collection</p>
+                    </div>
+                </li>
+                <li class="icon02">
+                    <span class="num">02</span>
+                    <div>
+                        <p>증식체계 확립</p>
+                    </div>
+                </li>
+                <li class="icon03">
+                    <span class="num">03</span>
+                    <div>
+                        <p>모식물체 A, B, C에
+                            따른 인공교배</p>
+                    </div>
+                </li>
+                <li class="icon04">
+                    <span class="num">04</span>
+                    <div>
+                        <p>모식물체 종자
+                            성숙시기에 따른
+                            특성 조사와 채집
+                            <span class="st">(종자의 크기,
+                                종자의 성숙도,
+                                충해 여부)</span></p>
+                    </div>
+                </li>
+                <li class="icon05">
+                    <span class="num">05</span>
+                    <div>
+                        <p>증식법 확인 후,
+                            발아체의 형질 조사
+                            <span class="st">(신규성, 구별성 확인)</span></p>
+                    </div>
+                </li>
+                <li class="icon06">
+                    <span class="num">06</span>
+                    <div>
+                        <p>모식물체와
+                            증식개체의<br>
+                            변이 확인<br>
+                            <span class="st">(균일성, 안정성 확인)</span></p>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="images-wrap">
+                <ul>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 590,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer3-3.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 590,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer3-4.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 590,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer3-5.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width: 590,
+                            height: 340,
+                            isSimply: true,
+                            source: `${imgPath}/outer3-6.jpg`,
+                            alt: '',
+                            }); %>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#"
+               class="button-navy">리스트 보기
+            </a>
+        </div>
+    </section>
+<% } %>

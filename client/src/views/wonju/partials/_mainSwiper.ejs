@@ -1,9 +1,10 @@
 <section class="main-swiper">
     <div class="swiper-wrap"
          data-index="1">
+        <div class="top">
         <div id="mainSwiper"
              class="swiper swiper-top">
-            <ul class="swiper-wrapper">
+        <ul class="swiper-wrapper">
                 <% for (let i = 0; i < 10; i++) { %>
                     <li class="swiper-slide">
                         <a href="#">
@@ -19,6 +20,15 @@
                     </li>
                 <% } %>
             </ul>
+        </div>
+            <button type="button"
+                    class="button-prev">
+                <span class="a11y">이전</span>
+            </button>
+            <button type="button"
+                    class="button-next">
+                <span class="a11y">다음</span>
+            </button>
         </div>
         <div class="thumb-wrap">
             <ul class="text-items">

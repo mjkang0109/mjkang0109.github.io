@@ -1,5 +1,7 @@
 <section class="items">
-    <strong class="title">우리동네 돌봄시설</strong>
+    <strong class="title">우리동네
+        <span class="color-pink">돌봄시설</span>
+    </strong>
     <p class="desc">우리지역은 개개인별 연령대와 관심사에 따른 맞춤 정보도 제공한다.</p>
     <%
     const items = [
@@ -21,17 +23,17 @@
         },
     ];
     %>
-    <ul class="items">
+    <ul class="link-items">
         <% items.map((item, i) => { %>
             <li>
                 <a href="#">
                     <span class="img-wrap">
-                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                    width:328,
-                    height: 250,
-                    isSimply: true,
-                    source: `${imgPath}/dummy${i + 1}.jpg`,
-                    }); %>
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width:328,
+                        height: 250,
+                        isSimply: true,
+                        source: `${imgPath}/dummy${i + 1}.jpg`,
+                        }); %>
                     </span>
                     <% if (i === 0) { %>
                         <span class="badges">
@@ -57,21 +59,21 @@
                             <span class="badge outline">전연령</span>
                         </span>
                     <% } %>
-                    <strong class="title"><%= item.title %></strong>
-                    <p class="desc"><%= item. desc %></p>
+                    <strong class="title"><%= item.title; %></strong>
+                    <p class="desc"><%= item.desc; %></p>
                 </a>
             </li>
         <% }); %>
-            <% items.map((item, i) => { %>
+        <% items.map((item, i) => { %>
             <li>
                 <a href="#">
                     <span class="img-wrap">
-                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                    width:328,
-                    height: 250,
-                    isSimply: true,
-                    source: `${imgPath}/dummy${i + 1}.jpg`,
-                    }); %>
+                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                        width:328,
+                        height: 250,
+                        isSimply: true,
+                        source: `${imgPath}/dummy${i + 1}.jpg`,
+                        }); %>
                     </span>
                     <% if (i === 0) { %>
                         <span class="badges">
@@ -97,42 +99,66 @@
                             <span class="badge outline">전연령</span>
                         </span>
                     <% } %>
-                    <strong class="title"><%= item.title %></strong>
-                    <p class="desc"><%= item. desc %></p>
+                    <strong class="title"><%= item.title; %></strong>
+                    <p class="desc"><%= item.desc; %></p>
                 </a>
             </li>
         <% }); %>
     </ul>
 </section>
-
-<section class="items horizon">
+<section class="horizon-items">
     <div class="title-wrap">
-        <strong class="title">아동돌봄<br>활동사진</strong>
+        <strong class="title">아동돌봄
+            <span class="color-blue">활동사진</span>
+        </strong>
         <p class="desc">우리 아이들이 어떤 돌봄을 받고있을까요?
-        <span class="sub">
-            아동 돌봄 관련 정보를 한곳에, 한눈에, 한번에 제공할
-            <br>수 있는 아동 돌봄 포털시스템 구축
-        </span></p>
+            <span class="sub">
+                아동 돌봄 관련 정보를 한곳에, 한눈에, 한번에 제공할
+                <br>
+                수 있는 아동 돌봄 포털시스템 구축
+            </span>
+        </p>
     </div>
-    <ul class="items">
-        <% for (let i = 0; i < 4; i++) { %>
-        <li>
-            <a href="#">
-                <span class="img-wrap">
-                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                    width:398,
-                    height: 272,
-                    isSimply: true,
-                    source: `${imgPath}/dummy${i + 1}.jpg`,
-                    }); %>
-                </span>
-                <span class="badges">
-                    <span class="badge green"></span>
-                </span>
-                <strong class="title">동광뷰웰마을 아동활동을 소개합니다.</strong>
-                <span class="period">2025-05-26</span>
-            </a>
-        </li>
-        <% } %>
-    </ul>
+    <div class="items-wrap">
+        <ul class="link-items">
+            <% for (let i = 0; i < 4; i++) { %>
+                <li>
+                    <a href="#">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width:398,
+                            height: 272,
+                            isSimply: true,
+                            source: `${imgPath}/dummy${i + 1}.jpg`,
+                            }); %>
+                        </span>
+                        <span class="badges">
+                            <span class="badge green">다함께돌봄센터</span>
+                        </span>
+                        <strong class="title">동광뷰웰마을 아동활동을 소개합니다.</strong>
+                        <span class="period">2025-05-26</span>
+                    </a>
+                </li>
+            <% } %>
+            <% for (let i = 0; i < 4; i++) { %>
+                <li>
+                    <a href="#">
+                        <span class="img-wrap">
+                            <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                            width:398,
+                            height: 272,
+                            isSimply: true,
+                            source: `${imgPath}/dummy${i + 1}.jpg`,
+                            }); %>
+                        </span>
+                        <span class="badges">
+                            <span class="badge green">다함께돌봄센터</span>
+                        </span>
+                        <strong class="title">동광뷰웰마을 아동활동을 소개합니다.</strong>
+                        <span class="period">2025-05-26</span>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
 </section>

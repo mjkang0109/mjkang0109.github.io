@@ -1,13 +1,107 @@
 <div id="footer">
+    <div class="banner-wrap">
+        <strong class="title">유관기관배너</strong>
+        <div id="swiperFooter"
+             class="swiper swiper-footer">
+            <%
+            const items = [
+                [
+                    182,
+                    36,
+                ],
+                [
+                    177,
+                    37,
+                ],
+                [
+                    183,
+                    49,
+                ],
+                [
+                    183,
+                    54,
+                ],
+                [
+                    183,
+                    54,
+                ],
+            ];
+            %>
+            <ul class="swiper-wrapper">
+                <% items.map((item, i) => { %>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width:item[0],
+                                height: item[1],
+                                isSimply: true,
+                                source: `${imgPath}/footer-logo${i + 1}.png`,
+                                }); %>
+                            </span>
+                        </a>
+                    </li>
+                <% }); %>
+                <% items.map((item, i) => { %>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <span class="img-wrap">
+                                <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                width:item[0],
+                                height: item[1],
+                                isSimply: true,
+                                source: `${imgPath}/footer-logo${i + 1}.png`,
+                                }); %>
+                            </span>
+                        </a>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        <button type="button"
+                class="button-prev">
+            <span class="a11y">이전</span>
+        </button>
+        <button type="button"
+                class="button-next">
+            <span class="a11y">다음</span>
+        </button>
+    </div>
     <div class="bg">
-        <div class="log"><img src="https://www.wonju.go.kr/wjioncare/resources/user/home/images/logo_footer.png" alt="원주시 로고"></div>
+        <div class="log">
+            <img src="https://www.wonju.go.kr/wjioncare/resources/user/home/images/logo_footer.png"
+                 alt="원주시 로고">
+        </div>
         <div class="txt">
             <div class="link">
-                <a href="https://www.wonju.go.kr/www/contents.do?key=250" target="_blank" title="개인정보처리방침 새창열기" rel="noopener noreferrer" title="개인정보처리방침 새창열기">개인정보처리방침</a>
-                <a href="https://www.wonju.go.kr/www/sub.do?key=251" target="_blank" title="저작권정책 새창열기"" rel="noopener noreferrer" title="저작권정책 새창열기">저작권정책</a>
-                <a href="https://www.wonju.go.kr/www/sub.do?key=252" target="_blank" title="이메일무단수집거부 새창열기" rel="noopener noreferrer" title="이메일무단수집거부 새창열기">이메일무단수집거부</a>
-                <a href="https://www.wonju.go.kr/www/sub.do?key=3741" target="_blank" title="누리집개선의견 새창열기" rel="noopener noreferrer" title="누리집개선의견 새창열기">누리집개선의견</a>
-                <a href="https://www.wonju.go.kr/www/contents.do?key=245" target="_blank" title="찾아오시는길 새창열기" rel="noopener noreferrer" title="찾아오시는길 새창열기">찾아오시는길</a>
+                <a href="https://www.wonju.go.kr/www/contents.do?key=250"
+                   target="_blank"
+                   title="개인정보처리방침 새창열기"
+                   rel="noopener noreferrer"
+                   title="개인정보처리방침 새창열기">개인정보처리방침
+                </a>
+                <a href="https://www.wonju.go.kr/www/sub.do?key=251"
+                   target="_blank"
+                   title="저작권정책 새창열기"
+                " rel="noopener noreferrer" title="저작권정책 새창열기">저작권정책</a>
+                <a href="https://www.wonju.go.kr/www/sub.do?key=252"
+                   target="_blank"
+                   title="이메일무단수집거부 새창열기"
+                   rel="noopener noreferrer"
+                   title="이메일무단수집거부 새창열기">이메일무단수집거부
+                </a>
+                <a href="https://www.wonju.go.kr/www/sub.do?key=3741"
+                   target="_blank"
+                   title="누리집개선의견 새창열기"
+                   rel="noopener noreferrer"
+                   title="누리집개선의견 새창열기">누리집개선의견
+                </a>
+                <a href="https://www.wonju.go.kr/www/contents.do?key=245"
+                   target="_blank"
+                   title="찾아오시는길 새창열기"
+                   rel="noopener noreferrer"
+                   title="찾아오시는길 새창열기">찾아오시는길
+                </a>
             </div>
             <div class="addr">
                 [26384] 강원특별자치도 원주시 시청로1 (무실동)
@@ -17,12 +111,20 @@
             <div class="copy">Copyright (C) 2020 Wonju-si. All rights reserved.</div>
             <p class="info">본 홈페이지에 게시된 이메일 주소 자동수집을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
         </div>
-        <div class="wa"><img src="https://www.wonju.go.kr/wjioncare/resources/user/home/images/logo_wa_mark.png" alt="웹 접근성 품질마크"></div>
+        <div class="wa">
+            <img src="https://www.wonju.go.kr/wjioncare/resources/user/home/images/logo_wa_mark.png"
+                 alt="웹 접근성 품질마크">
+        </div>
         <div class="family">
-            <select id="familySite" name="familySite" class="select" title="관련기관 바로가기">
+            <select id="familySite"
+                    name="familySite"
+                    class="select"
+                    title="관련기관 바로가기">
                 <option value="">관련기관 바로가기</option>
                 <option value="https://ccei.creativekorea.or.kr/gangwon/">강원창조경제혁신센터</option>
-                <option value="https://www.safekorea.go.kr/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=28&amp;emgPage=Y&amp;menuSeq=734">국민재난안전포털</option>
+                <option value="https://www.safekorea.go.kr/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=28&amp;emgPage=Y&amp;menuSeq=734">
+                    국민재난안전포털
+                </option>
                 <option value="https://juminegov.go.kr/">주민e직접 플랫폼</option>
                 <option value="https://sotong.go.kr/front/main/index.do">소통24(구 온국민소통)</option>
                 <option value="https://www.give.go.kr">정치후원금센터</option>
@@ -42,7 +144,12 @@
                 <option value="https://www.foodsafetykorea.go.kr/minwon/complain/complainIntro.do">불량식품 신고</option>
                 <option value="https://www.culture.go.kr/wday/index.do">문화가 있는날</option>
             </select>
-            <button type="button" class="bt" target='_blank' onclick="opGoSite('familySite');" title="관련기관 홈페이지 새창열기">이동</button>
+            <button type="button"
+                    class="bt"
+                    target='_blank'
+                    onclick="opGoSite('familySite');"
+                    title="관련기관 홈페이지 새창열기">이동
+            </button>
         </div>
     </div>
 </div>

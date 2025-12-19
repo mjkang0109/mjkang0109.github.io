@@ -2,6 +2,7 @@
 @use "sass:math";
 
 @use "./../components/mixin" as m;
+@use "./partials/quick" as quick;
 
 $imgPath: "./../../images/wonju";
 .a11y {
@@ -14,25 +15,97 @@ $imgPath: "./../../images/wonju";
     padding: 0 !important;
     margin: -1px !important;
 }
+
 .main {
+    overflow-x: hidden;
     font-family: "SCoreDream", serif;
     background: url("#{$imgPath}/bg-visual.png") no-repeat 50% 0;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        background: transparent;
+    }
+
+    .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            gap: 6px;
+        }
+
+        .badge {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                padding: 4.5px 12px;
+                font-size: 10px;
+            }
+
+            &.orange {
+                color: #fff;
+                background-color: #f59c00;
+                font-weight: 600;
+            }
+
+            &.outline {
+                color: #494949;
+                border: 1px solid #494949;
+                font-weight: 400;
+            }
+
+            &.cyan {
+                color: #fff;
+                background-color: #30bcb8;
+                font-weight: 600;
+            }
+
+            &.pink {
+                color: #fff;
+                background-color: #ec729e;
+                font-weight: 600;
+            }
+
+            &.green {
+                border-radius: 5px;
+                padding: 7px 12px;
+                background-color: #5fad4f;
+                color: #fff;
+                font-size: 13px;
+                font-weight: 700;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    font-size: 9px;
+                    padding: 4.5px 8.5px;
+                }
+            }
+        }
+    }
 }
 
 .main-swiper {
     position: relative;
     padding-top: 96px;
     overflow: hidden;
-    min-width: 1500px;
+    max-width: 1500px;
+    margin: 0 auto;
+    @include m.respond-to(map.get(m.$max, 1199)) {
+        padding: m.m(84) 0 0;
+    }
 
     .swiper {
         &-wrap {
             display: flex;
             gap: 73px;
             position: relative;
-            width: 1500px;
             margin: 0 auto;
             overflow: hidden;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                flex-direction: column;
+                gap: m.m(50);
+                padding: 0 m.m(25);
+            }
             @for $i from 1 through 30 {
                 &[data-index="#{$i}"] {
                     .text-items {
@@ -48,25 +121,82 @@ $imgPath: "./../../images/wonju";
                 }
             }
 
+            > .top {
+                flex: 0 0 750px;
+                border-radius: 20px;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    flex: 0 0 auto;
+                    position: relative;
+                    width: 100%;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                }
+
+                > [class*="button-"] {
+                    display: none;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        width: 31px;
+                        height: 31px;
+                        background: #fff url("#{$imgPath}/icon-arrow-left.png") no-repeat 50% 50%;
+                        border-radius: 100%;
+                        background-size: 100% auto;
+                        z-index: 1;
+                    }
+
+                    &.button-prev {
+                        left: -7px;
+                        transform: translateY(-50%);
+                    }
+
+                    &.button-next {
+                        right: -7px;
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+
+            .img-wrap {
+                display: block;
+
+                img {
+                    display: block;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
             .text-items {
                 padding-top: 18px;
 
                 li {
                     position: absolute;
                     opacity: 0;
-                    transform: translateX(100px);
+                    transform: translateX(50px);
                 }
 
                 a {
                     display: flex;
                     flex-direction: column;
                     gap: 28px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        gap: m.m(27);
+                    }
                 }
 
                 .sub {
                     font-size: 25px;
                     color: #333;
                     font-weight: 600;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        font-size: m.m(28);
+                        line-height: m.m(37);
+                    }
                 }
 
                 .title {
@@ -77,6 +207,10 @@ $imgPath: "./../../images/wonju";
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 1;
                     overflow: hidden;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-top: 0;
+                        font-size: m.m(60);
+                    }
                 }
 
                 .color-cyan {
@@ -84,9 +218,13 @@ $imgPath: "./../../images/wonju";
                 }
 
                 .period {
+                    margin-top: 18px;
                     font-size: 22px;
                     font-weight: 700;
-                    margin-top: 18px;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        margin-top: 0;
+                        font-size: m.m(22);
+                    }
                 }
 
                 .desc {
@@ -94,20 +232,28 @@ $imgPath: "./../../images/wonju";
                     line-height: 26px;
                     color: #2d2d2d;
                     font-weight: 400;
+                    @include m.respond-to(map.get(m.$max, 1199)) {
+                        display: none;
+                    }
                 }
             }
         }
 
         &-top {
-            flex: 0 0 750px;
             overflow: hidden;
-            border-radius: 20px;
+            width: 750px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 100%;
+            }
         }
 
         &-thumb {
             flex: 0 0 auto;
             overflow: hidden;
             margin-top: auto;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
 
             .img-wrap {
                 display: block;
@@ -150,6 +296,9 @@ $imgPath: "./../../images/wonju";
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            order: -1;
+        }
     }
 
     .buttons {
@@ -161,6 +310,9 @@ $imgPath: "./../../images/wonju";
         left: 50%;
         width: 1500px;
         transform: translateX(-50%);
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            display: none;
+        }
 
         [class*="button-"] {
             width: 62px;
@@ -170,6 +322,108 @@ $imgPath: "./../../images/wonju";
 
         .button-next {
             transform: rotate(180deg);
+        }
+    }
+}
+
+@include quick.quick;
+/*
+** footer
+ */
+#footer {
+    overflow: hidden;
+
+    .banner-wrap {
+        display: flex;
+        align-items: center;
+        gap: 110px;
+        position: relative;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 26px 88px 26px 0;
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding: 0 40px 18px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100vw;
+            height: 1px;
+            background-color: #e8e8e8;
+            transform: translateX(-50%);
+        }
+
+        > .title {
+            padding: 0 50px;
+            font-size: 18px;
+            color: #3a3a3a;
+            font-weight: 700;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                display: none;
+            }
+        }
+
+        .swiper-footer {
+            flex: 1;
+            overflow: hidden;
+
+            .swiper-wrapper {
+                align-items: center;
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    box-sizing: border-box;
+                }
+            }
+
+            .swiper-slide {
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+
+                @include m.respond-to(map.get(m.$max, 1199)) {
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        [class*="button-"] {
+            position: absolute;
+            width: 31px;
+            height: 31px;
+            background: url("#{$imgPath}/icon-arrow-left2.png") no-repeat 50% 50%;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                width: 16.5px;
+                height: 16.5px;
+                background-size: 100% auto;
+            }
+        }
+
+        .button-prev {
+            left: 223px;
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                left: 12.5px;
+            }
+        }
+
+        .button-next {
+            right: 6px;
+            transform: rotate(180deg);
+            @include m.respond-to(map.get(m.$max, 1199)) {
+                right: 12.5px;
+            }
+        }
+    }
+
+    .bg {
+        @include m.respond-to(map.get(m.$max, 1199)) {
+            padding-top: 34px;
         }
     }
 }

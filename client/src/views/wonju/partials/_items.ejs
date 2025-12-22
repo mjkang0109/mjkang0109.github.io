@@ -23,93 +23,112 @@
         },
     ];
     %>
-    <ul class="link-items">
-        <% items.map((item, i) => { %>
-            <li>
-                <a href="#">
-                    <span class="img-wrap">
-                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                        width:328,
-                        height: 250,
-                        isSimply: true,
-                        source: `${imgPath}/dummy${i + 1}.jpg`,
-                        }); %>
-                    </span>
-                    <% if (i === 0) { %>
-                        <span class="badges">
-                            <span class="badge orange">관람시설</span>
-                            <span class="badge outline">0~18세</span>
-                        </span>
-                    <% } %>
-                    <% if (i === 1) { %>
-                        <span class="badges">
-                            <span class="badge cyan">체험시설</span>
-                            <span class="badge outline">전연령</span>
-                        </span>
-                    <% } %>
-                    <% if (i === 2) { %>
-                        <span class="badges">
-                            <span class="badge orange">관광시설</span>
-                            <span class="badge outline">전연령</span>
-                        </span>
-                    <% } %>
-                    <% if (i === 3) { %>
-                        <span class="badges">
-                            <span class="badge pink">의료시설</span>
-                            <span class="badge outline">전연령</span>
-                        </span>
-                    <% } %>
-                    <strong class="title"><%= item.title; %></strong>
-                    <p class="desc"><%= item.desc; %></p>
-                </a>
+    <div class="swiper-link swiper">
+        <ul class="swiper-wrapper">
+            <% for (let i = 0; i < 10; i++) { %>
+            <li class="swiper-slide">
+                <ul class="link-items">
+                    <% items.map((item, i) => { %>
+                        <li>
+                            <a href="#">
+                                <span class="img-wrap">
+                                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                    width:328,
+                                    height: 250,
+                                    isSimply: true,
+                                    source: `${imgPath}/dummy${i + 1}.jpg`,
+                                    }); %>
+                                </span>
+                                <% if (i === 0) { %>
+                                    <span class="badges">
+                                        <span class="badge orange">관람시설</span>
+                                        <span class="badge outline">0~18세</span>
+                                    </span>
+                                <% } %>
+                                <% if (i === 1) { %>
+                                    <span class="badges">
+                                        <span class="badge cyan">체험시설</span>
+                                        <span class="badge outline">전연령</span>
+                                    </span>
+                                <% } %>
+                                <% if (i === 2) { %>
+                                    <span class="badges">
+                                        <span class="badge orange">관광시설</span>
+                                        <span class="badge outline">전연령</span>
+                                    </span>
+                                <% } %>
+                                <% if (i === 3) { %>
+                                    <span class="badges">
+                                        <span class="badge pink">의료시설</span>
+                                        <span class="badge outline">전연령</span>
+                                    </span>
+                                <% } %>
+                                <strong class="title"><%= item.title; %></strong>
+                                <p class="desc"><%= item.desc; %></p>
+                            </a>
+                        </li>
+                    <% }); %>
+                    <% items.map((item, i) => { %>
+                        <li>
+                            <a href="#">
+                                <span class="img-wrap">
+                                    <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
+                                    width:328,
+                                    height: 250,
+                                    isSimply: true,
+                                    source: `${imgPath}/dummy${i + 1}.jpg`,
+                                    }); %>
+                                </span>
+                                <% if (i === 0) { %>
+                                    <span class="badges">
+                                        <span class="badge orange">관람시설</span>
+                                        <span class="badge outline">0~18세</span>
+                                    </span>
+                                <% } %>
+                                <% if (i === 1) { %>
+                                    <span class="badges">
+                                        <span class="badge cyan">체험시설</span>
+                                        <span class="badge outline">전연령</span>
+                                    </span>
+                                <% } %>
+                                <% if (i === 2) { %>
+                                    <span class="badges">
+                                        <span class="badge orange">관광시설</span>
+                                        <span class="badge outline">전연령</span>
+                                    </span>
+                                <% } %>
+                                <% if (i === 3) { %>
+                                    <span class="badges">
+                                        <span class="badge pink">의료시설</span>
+                                        <span class="badge outline">전연령</span>
+                                    </span>
+                                <% } %>
+                                <strong class="title"><%= item.title; %></strong>
+                                <p class="desc"><%= item.desc; %></p>
+                            </a>
+                        </li>
+                    <% }); %>
+                </ul>
             </li>
-        <% }); %>
-        <% items.map((item, i) => { %>
-            <li>
-                <a href="#">
-                    <span class="img-wrap">
-                        <%- include(`${process.env.INCLUDE_PATH}/components/_image`, {
-                        width:328,
-                        height: 250,
-                        isSimply: true,
-                        source: `${imgPath}/dummy${i + 1}.jpg`,
-                        }); %>
-                    </span>
-                    <% if (i === 0) { %>
-                        <span class="badges">
-                            <span class="badge orange">관람시설</span>
-                            <span class="badge outline">0~18세</span>
-                        </span>
-                    <% } %>
-                    <% if (i === 1) { %>
-                        <span class="badges">
-                            <span class="badge cyan">체험시설</span>
-                            <span class="badge outline">전연령</span>
-                        </span>
-                    <% } %>
-                    <% if (i === 2) { %>
-                        <span class="badges">
-                            <span class="badge orange">관광시설</span>
-                            <span class="badge outline">전연령</span>
-                        </span>
-                    <% } %>
-                    <% if (i === 3) { %>
-                        <span class="badges">
-                            <span class="badge pink">의료시설</span>
-                            <span class="badge outline">전연령</span>
-                        </span>
-                    <% } %>
-                    <strong class="title"><%= item.title; %></strong>
-                    <p class="desc"><%= item.desc; %></p>
-                </a>
-            </li>
-        <% }); %>
-    </ul>
+            <% } %>
+        </ul>
+        <button type="button"
+                class="button-prev">
+            <span class="a11y">이전</span>
+        </button>
+        <button type="button"
+                class="button-next">
+            <span class="a11y">다음</span>
+        </button>
+    </div>
 </section>
 <section class="horizon-items">
     <div class="title-wrap">
         <strong class="title">아동돌봄
             <span class="color-blue">활동사진</span>
+            <a href="#">
+                <span class="a11y">더보기</span>
+            </a>
         </strong>
         <p class="desc">우리 아이들이 어떤 돌봄을 받고있을까요?
             <span class="sub">

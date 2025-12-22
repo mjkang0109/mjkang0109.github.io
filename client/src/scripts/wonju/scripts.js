@@ -56,6 +56,14 @@ const JS = (() => {
             }
         });
 
+        const swiper2 = new Swiper('.items .swiper-link', {
+            navigation   : {
+                nextEl: '.button-next',
+                prevEl: '.button-prev',
+            },
+            slidesPerView: 1,
+        });
+
         const swiperQuick = new Swiper('.quick-nav .swiper-quick', {
             breakpoints: {
                 0   : {

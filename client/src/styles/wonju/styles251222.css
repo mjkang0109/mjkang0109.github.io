@@ -1,0 +1,49 @@
+#wrap {
+  min-width: 0;
+}
+
+.main-swiper .swiper-wrap .text-items .title {
+  -webkit-line-clamp: 2;
+}
+
+.swiper-quick .swiper-slide {
+  min-height: 146px;
+}
+@media (max-width: 1199px) {
+  .swiper-quick .swiper-slide {
+    min-height: 0;
+  }
+}
+
+.items {
+  position: relative;
+}
+
+.swiper-link {
+  overflow: hidden;
+}
+.swiper-link [class*=button-] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62px;
+  height: 62px;
+  background: url("./../../images/wonju/icon-arrow-left.png");
+}
+.swiper-link .button-next {
+  transform: rotate(180deg);
+}
+
+.round-section > a {
+  margin-left: auto;
+}
+
+.horizon-items > .title-wrap .title a {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 45px;
+  height: 45px;
+  background-image: url("./../../images/wonju/icon-more.png");
+}
